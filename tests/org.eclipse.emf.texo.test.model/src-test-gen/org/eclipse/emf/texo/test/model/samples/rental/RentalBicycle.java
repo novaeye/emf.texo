@@ -55,8 +55,8 @@ public class RentalBicycle extends RentalUnit {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalBicycle#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link RentalBicycle#getType() type}' feature.
    * @generated
    */
   public void setType(RentalBicycleType newType) {
@@ -80,8 +80,8 @@ public class RentalBicycle extends RentalUnit {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalBicycle#getRentalCar() rentalCar}' feature.
+   * @param newRentalCar
+   *          the new value of the '{@link RentalBicycle#getRentalCar() rentalCar}' feature.
    * @generated
    */
   public void setRentalCar(RentalCar newRentalCar) {

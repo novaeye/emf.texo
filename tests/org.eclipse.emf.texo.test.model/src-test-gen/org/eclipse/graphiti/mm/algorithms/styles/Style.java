@@ -186,8 +186,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Style#getId() id}' feature.
    * @generated
    */
   public void setId(String newId) {
@@ -211,8 +211,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link Style#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -236,8 +236,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getFont() font}' feature.
+   * @param newFont
+   *          the new value of the '{@link Style#getFont() font}' feature.
    * @generated
    */
   public void setFont(Font newFont) {
@@ -261,8 +261,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getHorizontalAlignment() horizontalAlignment}' feature.
+   * @param newHorizontalAlignment
+   *          the new value of the '{@link Style#getHorizontalAlignment() horizontalAlignment}' feature.
    * @generated
    */
   public void setHorizontalAlignment(Orientation newHorizontalAlignment) {
@@ -286,8 +286,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getVerticalAlignment() verticalAlignment}' feature.
+   * @param newVerticalAlignment
+   *          the new value of the '{@link Style#getVerticalAlignment() verticalAlignment}' feature.
    * @generated
    */
   public void setVerticalAlignment(Orientation newVerticalAlignment) {
@@ -311,8 +311,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getAngle() angle}' feature.
+   * @param newAngle
+   *          the new value of the '{@link Style#getAngle() angle}' feature.
    * @generated
    */
   public void setAngle(Integer newAngle) {
@@ -336,8 +336,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getStretchH() stretchH}' feature.
+   * @param newStretchH
+   *          the new value of the '{@link Style#getStretchH() stretchH}' feature.
    * @generated
    */
   public void setStretchH(Boolean newStretchH) {
@@ -361,8 +361,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getStretchV() stretchV}' feature.
+   * @param newStretchV
+   *          the new value of the '{@link Style#getStretchV() stretchV}' feature.
    * @generated
    */
   public void setStretchV(Boolean newStretchV) {
@@ -386,8 +386,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getProportional() proportional}' feature.
+   * @param newProportional
+   *          the new value of the '{@link Style#getProportional() proportional}' feature.
    * @generated
    */
   public void setProportional(Boolean newProportional) {
@@ -411,8 +411,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getStyleContainer() styleContainer}' feature.
+   * @param newStyleContainer
+   *          the new value of the '{@link Style#getStyleContainer() styleContainer}' feature.
    * @generated
    */
   public void setStyleContainer(StyleContainer newStyleContainer) {
@@ -436,8 +436,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getBackground() background}' feature.
+   * @param newBackground
+   *          the new value of the '{@link Style#getBackground() background}' feature.
    * @generated
    */
   public void setBackground(Color newBackground) {
@@ -461,8 +461,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getForeground() foreground}' feature.
+   * @param newForeground
+   *          the new value of the '{@link Style#getForeground() foreground}' feature.
    * @generated
    */
   public void setForeground(Color newForeground) {
@@ -486,8 +486,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getLineWidth() lineWidth}' feature.
+   * @param newLineWidth
+   *          the new value of the '{@link Style#getLineWidth() lineWidth}' feature.
    * @generated
    */
   public void setLineWidth(Integer newLineWidth) {
@@ -511,8 +511,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getLineStyle() lineStyle}' feature.
+   * @param newLineStyle
+   *          the new value of the '{@link Style#getLineStyle() lineStyle}' feature.
    * @generated
    */
   public void setLineStyle(LineStyle newLineStyle) {
@@ -536,8 +536,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getFilled() filled}' feature.
+   * @param newFilled
+   *          the new value of the '{@link Style#getFilled() filled}' feature.
    * @generated
    */
   public void setFilled(Boolean newFilled) {
@@ -561,8 +561,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getLineVisible() lineVisible}' feature.
+   * @param newLineVisible
+   *          the new value of the '{@link Style#getLineVisible() lineVisible}' feature.
    * @generated
    */
   public void setLineVisible(Boolean newLineVisible) {
@@ -586,8 +586,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getRenderingStyle() renderingStyle}' feature.
+   * @param newRenderingStyle
+   *          the new value of the '{@link Style#getRenderingStyle() renderingStyle}' feature.
    * @generated
    */
   public void setRenderingStyle(RenderingStyle newRenderingStyle) {
@@ -611,8 +611,8 @@ public class Style extends StyleContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Style#getTransparency() transparency}' feature.
+   * @param newTransparency
+   *          the new value of the '{@link Style#getTransparency() transparency}' feature.
    * @generated
    */
   public void setTransparency(Double newTransparency) {

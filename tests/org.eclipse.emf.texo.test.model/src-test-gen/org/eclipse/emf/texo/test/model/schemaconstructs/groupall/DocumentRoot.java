@@ -51,8 +51,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -76,8 +76,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * @param newXMLNSPrefixMap
+   *          the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -101,8 +101,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * @param newXSISchemaLocation
+   *          the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -127,8 +127,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAddress() address}' feature.
+   * @param newAddress
+   *          the new value of the '{@link DocumentRoot#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(AddressType newAddress) {
@@ -154,8 +154,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
+   * @param newAddressGroup
+   *          the new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
    * @generated
    */
   public void setAddressGroup(AddressGroupType newAddressGroup) {
@@ -181,8 +181,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
+   * @param newSimpleAll
+   *          the new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
    * @generated
    */
   public void setSimpleAll(SimpleAllType newSimpleAll) {
@@ -208,8 +208,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
+   * @param newSimpleAllMap
+   *          the new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
    * @generated
    */
   public void setSimpleAllMap(SimpleAllMapType newSimpleAllMap) {

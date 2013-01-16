@@ -46,8 +46,8 @@ public class Comment extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Comment#getWorkflow() workflow}' feature.
+   * @param newWorkflow
+   *          the new value of the '{@link Comment#getWorkflow() workflow}' feature.
    * @generated
    */
   public void setWorkflow(Workflow newWorkflow) {

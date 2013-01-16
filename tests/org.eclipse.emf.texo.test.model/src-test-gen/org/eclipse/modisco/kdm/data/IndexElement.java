@@ -79,8 +79,8 @@ public class IndexElement extends DataResource {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IndexElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link IndexElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<ItemUnit> newImplementation) {

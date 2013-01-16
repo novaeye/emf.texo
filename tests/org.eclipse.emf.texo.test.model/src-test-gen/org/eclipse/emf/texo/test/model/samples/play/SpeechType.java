@@ -50,8 +50,8 @@ public class SpeechType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link SpeechType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<SpeechTypeGroupFeatureGroup> newGroup) {
@@ -76,8 +76,8 @@ public class SpeechType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
+   * @param newSpeaker
+   *          the new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(List<String> newSpeaker) {
@@ -103,8 +103,8 @@ public class SpeechType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getLine() line}' feature.
+   * @param newLine
+   *          the new value of the '{@link SpeechType#getLine() line}' feature.
    * @generated
    */
   public void setLine(List<String> newLine) {
@@ -129,8 +129,8 @@ public class SpeechType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
+   * @param newStageDirections
+   *          the new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(List<String> newStageDirections) {

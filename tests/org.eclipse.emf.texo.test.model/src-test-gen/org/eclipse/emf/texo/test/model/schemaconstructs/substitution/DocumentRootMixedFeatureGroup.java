@@ -242,8 +242,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -268,8 +268,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -294,8 +294,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -318,10 +318,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getEven() <em>even</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEven
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getEven() even}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEven
+   *          the new value of the '{@link DocumentRoot#getEven() even}' feature.
    * @generated
    */
   public void setEven(EvenType newEven) {
@@ -344,10 +346,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMySimpleAbstract() <em>mySimpleAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMySimpleAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMySimpleAbstract() mySimpleAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMySimpleAbstract
+   *          the new value of the '{@link DocumentRoot#getMySimpleAbstract() mySimpleAbstract}' feature.
    * @generated
    */
   public void setMySimpleAbstract(BigInteger newMySimpleAbstract) {
@@ -370,10 +374,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getEvenComplexNumber() <em>evenComplexNumber</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEvenComplexNumber
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEvenComplexNumber
+   *          the new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
    * @generated
    */
   public void setEvenComplexNumber(EvenComplexNumberType newEvenComplexNumber) {
@@ -396,10 +402,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexNumber newMyComplexAbstract) {
@@ -422,10 +430,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMultiNumber() <em>multiNumber</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMultiNumber
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMultiNumber
+   *          the new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
    * @generated
    */
   public void setMultiNumber(MultiNumberType newMultiNumber) {
@@ -448,10 +458,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getNumber() <em>number</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newNumber
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getNumber() number}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newNumber
+   *          the new value of the '{@link DocumentRoot#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(NumberType newNumber) {
@@ -474,10 +486,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getOdd() <em>odd</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOdd
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOdd() odd}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOdd
+   *          the new value of the '{@link DocumentRoot#getOdd() odd}' feature.
    * @generated
    */
   public void setOdd(OddType newOdd) {
@@ -500,10 +514,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getOddComplexNumber() <em>oddComplexNumber</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOddComplexNumber
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOddComplexNumber
+   *          the new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
    * @generated
    */
   public void setOddComplexNumber(OddComplexNumberType newOddComplexNumber) {
@@ -552,8 +568,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

@@ -82,8 +82,8 @@ public class XMLDeviant extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLDeviant#getNumPosts() numPosts}' feature.
+   * @param newNumPosts
+   *          the new value of the '{@link XMLDeviant#getNumPosts() numPosts}' feature.
    * @generated
    */
   public void setNumPosts(BigInteger newNumPosts) {
@@ -107,8 +107,8 @@ public class XMLDeviant extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLDeviant#getSignature() signature}' feature.
+   * @param newSignature
+   *          the new value of the '{@link XMLDeviant#getSignature() signature}' feature.
    * @generated
    */
   public void setSignature(String newSignature) {
@@ -132,8 +132,8 @@ public class XMLDeviant extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLDeviant#getEmail() email}' feature.
+   * @param newEmail
+   *          the new value of the '{@link XMLDeviant#getEmail() email}' feature.
    * @generated
    */
   public void setEmail(String newEmail) {
@@ -157,8 +157,8 @@ public class XMLDeviant extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLDeviant#getFirstSubscribed() firstSubscribed}' feature.
+   * @param newFirstSubscribed
+   *          the new value of the '{@link XMLDeviant#getFirstSubscribed() firstSubscribed}' feature.
    * @generated
    */
   public void setFirstSubscribed(Date newFirstSubscribed) {
@@ -182,8 +182,8 @@ public class XMLDeviant extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLDeviant#getMailReader() mailReader}' feature.
+   * @param newMailReader
+   *          the new value of the '{@link XMLDeviant#getMailReader() mailReader}' feature.
    * @generated
    */
   public void setMailReader(String newMailReader) {

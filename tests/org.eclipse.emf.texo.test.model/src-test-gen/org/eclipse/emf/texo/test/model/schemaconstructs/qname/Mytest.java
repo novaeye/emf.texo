@@ -72,8 +72,8 @@ public class Mytest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mytest#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link Mytest#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -97,8 +97,8 @@ public class Mytest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mytest#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Mytest#getName() name}' feature.
    * @generated
    */
   public void setName(QName newName) {
@@ -122,8 +122,8 @@ public class Mytest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mytest#getNames() names}' feature.
+   * @param newNames
+   *          the new value of the '{@link Mytest#getNames() names}' feature.
    * @generated
    */
   public void setNames(List<QName> newNames) {

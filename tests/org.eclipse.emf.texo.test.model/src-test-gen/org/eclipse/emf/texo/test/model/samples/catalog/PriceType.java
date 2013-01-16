@@ -63,8 +63,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getPrice() price}' feature.
+   * @param newPrice
+   *          the new value of the '{@link PriceType#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(double newPrice) {
@@ -88,8 +88,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getQuantityTo() quantityTo}' feature.
+   * @param newQuantityTo
+   *          the new value of the '{@link PriceType#getQuantityTo() quantityTo}' feature.
    * @generated
    */
   public void setQuantityTo(double newQuantityTo) {
@@ -113,8 +113,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getSupplier() supplier}' feature.
+   * @param newSupplier
+   *          the new value of the '{@link PriceType#getSupplier() supplier}' feature.
    * @generated
    */
   public void setSupplier(SupplierType newSupplier) {

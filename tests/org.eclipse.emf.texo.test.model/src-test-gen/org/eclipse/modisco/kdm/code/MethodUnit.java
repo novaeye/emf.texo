@@ -54,8 +54,8 @@ public class MethodUnit extends ControlElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MethodUnit#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link MethodUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(MethodKind newKind) {
@@ -79,8 +79,8 @@ public class MethodUnit extends ControlElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MethodUnit#getExport() export}' feature.
+   * @param newExport
+   *          the new value of the '{@link MethodUnit#getExport() export}' feature.
    * @generated
    */
   public void setExport(ExportKind newExport) {

@@ -51,8 +51,8 @@ public class ConsumesEvent extends AbstractEventRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConsumesEvent#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ConsumesEvent#getTo() to}' feature.
    * @generated
    */
   public void setTo(Event newTo) {
@@ -76,8 +76,8 @@ public class ConsumesEvent extends AbstractEventRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConsumesEvent#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ConsumesEvent#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(Transition newFrom) {

@@ -78,8 +78,8 @@ public class DataContainer extends DataResource {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataContainer#getDataElement() dataElement}' feature.
+   * @param newDataElement
+   *          the new value of the '{@link DataContainer#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<DataResource> newDataElement) {

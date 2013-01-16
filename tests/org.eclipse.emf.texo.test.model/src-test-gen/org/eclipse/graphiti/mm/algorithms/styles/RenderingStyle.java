@@ -46,8 +46,8 @@ public class RenderingStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RenderingStyle#getAdaptedGradientColoredAreas() adaptedGradientColoredAreas}'
+   * @param newAdaptedGradientColoredAreas
+   *          the new value of the '{@link RenderingStyle#getAdaptedGradientColoredAreas() adaptedGradientColoredAreas}'
    *          feature.
    * @generated
    */

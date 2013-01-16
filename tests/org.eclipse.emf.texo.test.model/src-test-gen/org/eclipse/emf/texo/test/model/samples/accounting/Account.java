@@ -54,8 +54,8 @@ public abstract class Account extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Account#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Account#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

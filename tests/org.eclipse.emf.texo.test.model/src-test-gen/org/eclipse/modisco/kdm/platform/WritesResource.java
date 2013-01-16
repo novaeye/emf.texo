@@ -53,8 +53,8 @@ public class WritesResource extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WritesResource#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link WritesResource#getTo() to}' feature.
    * @generated
    */
   public void setTo(ResourceType newTo) {
@@ -78,8 +78,8 @@ public class WritesResource extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WritesResource#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link WritesResource#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

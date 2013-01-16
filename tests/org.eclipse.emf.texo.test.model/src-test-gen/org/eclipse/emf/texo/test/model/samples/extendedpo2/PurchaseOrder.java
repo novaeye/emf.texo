@@ -151,8 +151,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getItems() items}' feature.
+   * @param newItems
+   *          the new value of the '{@link PurchaseOrder#getItems() items}' feature.
    * @generated
    */
   public void setItems(List<Item> newItems) {
@@ -176,8 +176,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
+   * @param newBillTo
+   *          the new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(Address newBillTo) {
@@ -201,8 +201,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
+   * @param newShipTo
+   *          the new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(Address newShipTo) {
@@ -226,8 +226,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link PurchaseOrder#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -251,8 +251,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
+   * @param newOrderDate
+   *          the new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
    * @generated
    */
   public void setOrderDate(Date newOrderDate) {
@@ -276,8 +276,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getStatus() status}' feature.
+   * @param newStatus
+   *          the new value of the '{@link PurchaseOrder#getStatus() status}' feature.
    * @generated
    */
   public void setStatus(OrderStatus newStatus) {
@@ -313,8 +313,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getCustomer() customer}' feature.
+   * @param newCustomer
+   *          the new value of the '{@link PurchaseOrder#getCustomer() customer}' feature.
    * @generated
    */
   public void setCustomer(Customer newCustomer) {
@@ -338,8 +338,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getPreviousOrder() previousOrder}' feature.
+   * @param newPreviousOrder
+   *          the new value of the '{@link PurchaseOrder#getPreviousOrder() previousOrder}' feature.
    * @generated
    */
   public void setPreviousOrder(PurchaseOrder newPreviousOrder) {

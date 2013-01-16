@@ -45,8 +45,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link PriceType#getValue() value}' feature.
    * @generated
    */
   public void setValue(Integer newValue) {

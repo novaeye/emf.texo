@@ -51,8 +51,8 @@ public class BindsTo extends AbstractPlatformRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BindsTo#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link BindsTo#getTo() to}' feature.
    * @generated
    */
   public void setTo(ResourceType newTo) {
@@ -76,8 +76,8 @@ public class BindsTo extends AbstractPlatformRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BindsTo#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link BindsTo#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ResourceType newFrom) {

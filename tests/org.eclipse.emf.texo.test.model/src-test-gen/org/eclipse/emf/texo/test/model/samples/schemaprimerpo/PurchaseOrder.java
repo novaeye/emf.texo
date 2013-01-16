@@ -88,8 +88,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
+   * @param newShipTo
+   *          the new value of the '{@link PurchaseOrder#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(USAddress newShipTo) {
@@ -113,8 +113,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
+   * @param newBillTo
+   *          the new value of the '{@link PurchaseOrder#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(USAddress newBillTo) {
@@ -138,8 +138,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link PurchaseOrder#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -196,8 +196,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getItems() items}' feature.
+   * @param newItems
+   *          the new value of the '{@link PurchaseOrder#getItems() items}' feature.
    * @generated
    */
   public void setItems(List<Item> newItems) {
@@ -221,8 +221,8 @@ public class PurchaseOrder extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
+   * @param newOrderDate
+   *          the new value of the '{@link PurchaseOrder#getOrderDate() orderDate}' feature.
    * @generated
    */
   public void setOrderDate(Date newOrderDate) {

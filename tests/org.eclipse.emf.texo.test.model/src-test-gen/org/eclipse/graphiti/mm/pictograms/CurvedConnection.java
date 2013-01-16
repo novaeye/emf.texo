@@ -82,8 +82,8 @@ public class CurvedConnection extends Connection {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CurvedConnection#getControlPoints() controlPoints}' feature.
+   * @param newControlPoints
+   *          the new value of the '{@link CurvedConnection#getControlPoints() controlPoints}' feature.
    * @generated
    */
   public void setControlPoints(List<PrecisionPoint> newControlPoints) {

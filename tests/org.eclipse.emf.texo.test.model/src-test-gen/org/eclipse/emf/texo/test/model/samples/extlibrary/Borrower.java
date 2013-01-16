@@ -82,8 +82,8 @@ public class Borrower extends Person {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Borrower#getBorrowed() borrowed}' feature.
+   * @param newBorrowed
+   *          the new value of the '{@link Borrower#getBorrowed() borrowed}' feature.
    * @generated
    */
   public void setBorrowed(List<Lendable> newBorrowed) {

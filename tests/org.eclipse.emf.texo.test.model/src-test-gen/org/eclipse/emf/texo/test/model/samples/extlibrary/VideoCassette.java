@@ -80,8 +80,8 @@ public class VideoCassette extends AudioVisualItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VideoCassette#getCast() cast}' feature.
+   * @param newCast
+   *          the new value of the '{@link VideoCassette#getCast() cast}' feature.
    * @generated
    */
   public void setCast(List<Person> newCast) {

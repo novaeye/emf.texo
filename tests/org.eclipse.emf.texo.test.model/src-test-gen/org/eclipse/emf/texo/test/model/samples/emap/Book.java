@@ -63,8 +63,8 @@ public class Book extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -88,8 +88,8 @@ public class Book extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getWriters() writers}' feature.
+   * @param newWriters
+   *          the new value of the '{@link Book#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(Map<String, Writer> newWriters) {

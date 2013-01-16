@@ -143,8 +143,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getGridUnit() gridUnit}' feature.
+   * @param newGridUnit
+   *          the new value of the '{@link Diagram#getGridUnit() gridUnit}' feature.
    * @generated
    */
   public void setGridUnit(int newGridUnit) {
@@ -168,8 +168,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getDiagramTypeId() diagramTypeId}' feature.
+   * @param newDiagramTypeId
+   *          the new value of the '{@link Diagram#getDiagramTypeId() diagramTypeId}' feature.
    * @generated
    */
   public void setDiagramTypeId(String newDiagramTypeId) {
@@ -226,8 +226,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getConnections() connections}' feature.
+   * @param newConnections
+   *          the new value of the '{@link Diagram#getConnections() connections}' feature.
    * @generated
    */
   public void setConnections(Set<Connection> newConnections) {
@@ -251,8 +251,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Diagram#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -276,8 +276,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#isSnapToGrid() snapToGrid}' feature.
+   * @param newSnapToGrid
+   *          the new value of the '{@link Diagram#isSnapToGrid() snapToGrid}' feature.
    * @generated
    */
   public void setSnapToGrid(boolean newSnapToGrid) {
@@ -369,8 +369,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getColors() colors}' feature.
+   * @param newColors
+   *          the new value of the '{@link Diagram#getColors() colors}' feature.
    * @generated
    */
   public void setColors(Set<Color> newColors) {
@@ -427,8 +427,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getFonts() fonts}' feature.
+   * @param newFonts
+   *          the new value of the '{@link Diagram#getFonts() fonts}' feature.
    * @generated
    */
   public void setFonts(Set<Font> newFonts) {
@@ -485,8 +485,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getPictogramLinks() pictogramLinks}' feature.
+   * @param newPictogramLinks
+   *          the new value of the '{@link Diagram#getPictogramLinks() pictogramLinks}' feature.
    * @generated
    */
   public void setPictogramLinks(Set<PictogramLink> newPictogramLinks) {
@@ -510,8 +510,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getVerticalGridUnit() verticalGridUnit}' feature.
+   * @param newVerticalGridUnit
+   *          the new value of the '{@link Diagram#getVerticalGridUnit() verticalGridUnit}' feature.
    * @generated
    */
   public void setVerticalGridUnit(int newVerticalGridUnit) {
@@ -535,8 +535,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Diagram#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(String newVersion) {
@@ -593,8 +593,8 @@ public class Diagram extends ContainerShape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Diagram#getStyles() styles}' feature.
+   * @param newStyles
+   *          the new value of the '{@link Diagram#getStyles() styles}' feature.
    * @generated
    */
   public void setStyles(Set<Style> newStyles) {

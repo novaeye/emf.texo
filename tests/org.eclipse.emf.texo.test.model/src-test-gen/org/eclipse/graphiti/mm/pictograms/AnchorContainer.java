@@ -78,8 +78,8 @@ public abstract class AnchorContainer extends PictogramElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AnchorContainer#getAnchors() anchors}' feature.
+   * @param newAnchors
+   *          the new value of the '{@link AnchorContainer#getAnchors() anchors}' feature.
    * @generated
    */
   public void setAnchors(Set<Anchor> newAnchors) {

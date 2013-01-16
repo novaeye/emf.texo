@@ -88,8 +88,8 @@ public class ExtensionFamily extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ExtensionFamily#getStereotype() stereotype}' feature.
+   * @param newStereotype
+   *          the new value of the '{@link ExtensionFamily#getStereotype() stereotype}' feature.
    * @generated
    */
   public void setStereotype(Set<Stereotype> newStereotype) {
@@ -113,8 +113,8 @@ public class ExtensionFamily extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ExtensionFamily#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link ExtensionFamily#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

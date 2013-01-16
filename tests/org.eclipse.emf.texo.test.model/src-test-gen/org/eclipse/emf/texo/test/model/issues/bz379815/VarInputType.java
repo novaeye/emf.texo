@@ -62,8 +62,8 @@ public class VarInputType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VarInputType#getCondition() condition}' feature.
+   * @param newCondition
+   *          the new value of the '{@link VarInputType#getCondition() condition}' feature.
    * @generated
    */
   public void setCondition(VarConditionType newCondition) {
@@ -87,8 +87,8 @@ public class VarInputType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VarInputType#getMeasure() measure}' feature.
+   * @param newMeasure
+   *          the new value of the '{@link VarInputType#getMeasure() measure}' feature.
    * @generated
    */
   public void setMeasure(String newMeasure) {

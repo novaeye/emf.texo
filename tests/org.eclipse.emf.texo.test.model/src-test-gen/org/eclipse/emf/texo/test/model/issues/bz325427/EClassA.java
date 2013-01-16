@@ -45,8 +45,8 @@ public class EClassA extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EClassA#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link EClassA#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

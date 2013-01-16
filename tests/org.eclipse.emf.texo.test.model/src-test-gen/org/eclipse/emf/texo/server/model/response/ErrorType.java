@@ -71,8 +71,8 @@ public class ErrorType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ErrorType#getErrorClass() errorClass}' feature.
+   * @param newErrorClass
+   *          the new value of the '{@link ErrorType#getErrorClass() errorClass}' feature.
    * @generated
    */
   public void setErrorClass(String newErrorClass) {
@@ -96,8 +96,8 @@ public class ErrorType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ErrorType#getMessage() message}' feature.
+   * @param newMessage
+   *          the new value of the '{@link ErrorType#getMessage() message}' feature.
    * @generated
    */
   public void setMessage(String newMessage) {
@@ -121,8 +121,8 @@ public class ErrorType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ErrorType#getStackTrace() stackTrace}' feature.
+   * @param newStackTrace
+   *          the new value of the '{@link ErrorType#getStackTrace() stackTrace}' feature.
    * @generated
    */
   public void setStackTrace(String newStackTrace) {
@@ -146,8 +146,8 @@ public class ErrorType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ErrorType#getCause() cause}' feature.
+   * @param newCause
+   *          the new value of the '{@link ErrorType#getCause() cause}' feature.
    * @generated
    */
   public void setCause(ErrorType newCause) {

@@ -319,7 +319,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("* ");
     _builder.newLine();
     _builder.append("\t ");
-    _builder.append("* @param eStructuralFeature");
+    _builder.append("* @param eFeature");
     _builder.newLine();
     _builder.append("\t ");
     _builder.append("*          the feature map feature");
@@ -392,7 +392,7 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("* ");
     _builder.newLine();
     _builder.append("     ");
-    _builder.append("* @param eStructuralFeature");
+    _builder.append("* @param eFeature");
     _builder.newLine();
     _builder.append("     ");
     _builder.append("*          the feature map feature of the object");

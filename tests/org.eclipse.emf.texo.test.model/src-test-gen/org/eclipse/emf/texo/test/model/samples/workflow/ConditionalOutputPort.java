@@ -45,8 +45,8 @@ public class ConditionalOutputPort extends OutputPort {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConditionalOutputPort#getCondition() condition}' feature.
+   * @param newCondition
+   *          the new value of the '{@link ConditionalOutputPort#getCondition() condition}' feature.
    * @generated
    */
   public void setCondition(String newCondition) {

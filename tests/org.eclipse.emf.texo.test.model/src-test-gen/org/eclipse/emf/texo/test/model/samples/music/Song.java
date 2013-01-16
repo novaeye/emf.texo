@@ -69,8 +69,8 @@ public class Song extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Song#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Song#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -94,8 +94,8 @@ public class Song extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Song#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Song#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -119,8 +119,8 @@ public class Song extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Song#getTrack() track}' feature.
+   * @param newTrack
+   *          the new value of the '{@link Song#getTrack() track}' feature.
    * @generated
    */
   public void setTrack(int newTrack) {
@@ -144,8 +144,8 @@ public class Song extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Song#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Song#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

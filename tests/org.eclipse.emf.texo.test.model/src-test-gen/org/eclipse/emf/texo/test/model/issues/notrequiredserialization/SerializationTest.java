@@ -46,8 +46,8 @@ public class SerializationTest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SerializationTest#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link SerializationTest#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

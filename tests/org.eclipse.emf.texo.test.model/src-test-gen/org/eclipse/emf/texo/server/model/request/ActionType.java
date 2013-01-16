@@ -104,8 +104,8 @@ public class ActionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionType#getUpdate() update}' feature.
+   * @param newUpdate
+   *          the new value of the '{@link ActionType#getUpdate() update}' feature.
    * @generated
    */
   public void setUpdate(List<Object> newUpdate) {
@@ -162,8 +162,8 @@ public class ActionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionType#getInsert() insert}' feature.
+   * @param newInsert
+   *          the new value of the '{@link ActionType#getInsert() insert}' feature.
    * @generated
    */
   public void setInsert(List<Object> newInsert) {
@@ -220,8 +220,8 @@ public class ActionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionType#getDelete() delete}' feature.
+   * @param newDelete
+   *          the new value of the '{@link ActionType#getDelete() delete}' feature.
    * @generated
    */
   public void setDelete(List<Object> newDelete) {

@@ -51,8 +51,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -76,8 +76,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * @param newXMLNSPrefixMap
+   *          the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -101,8 +101,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * @param newXSISchemaLocation
+   *          the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -127,8 +127,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAct() act}' feature.
+   * @param newAct
+   *          the new value of the '{@link DocumentRoot#getAct() act}' feature.
    * @generated
    */
   public void setAct(ActType newAct) {
@@ -153,8 +153,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getFm() fm}' feature.
+   * @param newFm
+   *          the new value of the '{@link DocumentRoot#getFm() fm}' feature.
    * @generated
    */
   public void setFm(FmType newFm) {
@@ -179,8 +179,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getGroupDescription() groupDescription}' feature.
+   * @param newGroupDescription
+   *          the new value of the '{@link DocumentRoot#getGroupDescription() groupDescription}' feature.
    * @generated
    */
   public void setGroupDescription(String newGroupDescription) {
@@ -206,8 +206,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getLine() line}' feature.
+   * @param newLine
+   *          the new value of the '{@link DocumentRoot#getLine() line}' feature.
    * @generated
    */
   public void setLine(String newLine) {
@@ -232,8 +232,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getP() p}' feature.
+   * @param newP
+   *          the new value of the '{@link DocumentRoot#getP() p}' feature.
    * @generated
    */
   public void setP(String newP) {
@@ -258,8 +258,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getPersona() persona}' feature.
+   * @param newPersona
+   *          the new value of the '{@link DocumentRoot#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(String newPersona) {
@@ -285,8 +285,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getPersonae() personae}' feature.
+   * @param newPersonae
+   *          the new value of the '{@link DocumentRoot#getPersonae() personae}' feature.
    * @generated
    */
   public void setPersonae(PersonaeType newPersonae) {
@@ -312,8 +312,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getPersonaGroup() personaGroup}' feature.
+   * @param newPersonaGroup
+   *          the new value of the '{@link DocumentRoot#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(PersonaGroupType newPersonaGroup) {
@@ -339,8 +339,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getPlay() play}' feature.
+   * @param newPlay
+   *          the new value of the '{@link DocumentRoot#getPlay() play}' feature.
    * @generated
    */
   public void setPlay(PlayType newPlay) {
@@ -366,8 +366,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getPlaySubTitle() playSubTitle}' feature.
+   * @param newPlaySubTitle
+   *          the new value of the '{@link DocumentRoot#getPlaySubTitle() playSubTitle}' feature.
    * @generated
    */
   public void setPlaySubTitle(String newPlaySubTitle) {
@@ -393,8 +393,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getScene() scene}' feature.
+   * @param newScene
+   *          the new value of the '{@link DocumentRoot#getScene() scene}' feature.
    * @generated
    */
   public void setScene(SceneType newScene) {
@@ -420,8 +420,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSceneDescription() sceneDescription}' feature.
+   * @param newSceneDescription
+   *          the new value of the '{@link DocumentRoot#getSceneDescription() sceneDescription}' feature.
    * @generated
    */
   public void setSceneDescription(String newSceneDescription) {
@@ -447,8 +447,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSpeaker() speaker}' feature.
+   * @param newSpeaker
+   *          the new value of the '{@link DocumentRoot#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(String newSpeaker) {
@@ -474,8 +474,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSpeech() speech}' feature.
+   * @param newSpeech
+   *          the new value of the '{@link DocumentRoot#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(SpeechType newSpeech) {
@@ -501,8 +501,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getStageDirections() stageDirections}' feature.
+   * @param newStageDirections
+   *          the new value of the '{@link DocumentRoot#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -528,8 +528,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link DocumentRoot#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {

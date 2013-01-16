@@ -51,8 +51,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -76,8 +76,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * @param newXMLNSPrefixMap
+   *          the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -101,8 +101,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * @param newXSISchemaLocation
+   *          the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -127,8 +127,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOtherTest() otherTest}' feature.
+   * @param newOtherTest
+   *          the new value of the '{@link DocumentRoot#getOtherTest() otherTest}' feature.
    * @generated
    */
   public void setOtherTest(String newOtherTest) {
@@ -154,8 +154,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getTest() test}' feature.
+   * @param newTest
+   *          the new value of the '{@link DocumentRoot#getTest() test}' feature.
    * @generated
    */
   public void setTest(String newTest) {

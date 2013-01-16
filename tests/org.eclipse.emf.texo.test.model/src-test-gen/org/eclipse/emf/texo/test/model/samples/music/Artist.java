@@ -99,8 +99,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Artist#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -124,8 +124,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Artist#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -149,8 +149,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getFirstName() firstName}' feature.
+   * @param newFirstName
+   *          the new value of the '{@link Artist#getFirstName() firstName}' feature.
    * @generated
    */
   public void setFirstName(String newFirstName) {
@@ -174,8 +174,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getLastName() lastName}' feature.
+   * @param newLastName
+   *          the new value of the '{@link Artist#getLastName() lastName}' feature.
    * @generated
    */
   public void setLastName(String newLastName) {
@@ -199,8 +199,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getBirthDate() birthDate}' feature.
+   * @param newBirthDate
+   *          the new value of the '{@link Artist#getBirthDate() birthDate}' feature.
    * @generated
    */
   public void setBirthDate(Date newBirthDate) {
@@ -224,8 +224,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getCountry() country}' feature.
+   * @param newCountry
+   *          the new value of the '{@link Artist#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(Country newCountry) {
@@ -249,8 +249,8 @@ public class Artist extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Artist#getGenre() genre}' feature.
+   * @param newGenre
+   *          the new value of the '{@link Artist#getGenre() genre}' feature.
    * @generated
    */
   public void setGenre(Genre newGenre) {

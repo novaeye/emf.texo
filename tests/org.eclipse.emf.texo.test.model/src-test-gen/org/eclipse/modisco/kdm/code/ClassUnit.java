@@ -56,8 +56,8 @@ public class ClassUnit extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClassUnit#getIsAbstract() isAbstract}' feature.
+   * @param newIsAbstract
+   *          the new value of the '{@link ClassUnit#getIsAbstract() isAbstract}' feature.
    * @generated
    */
   public void setIsAbstract(Boolean newIsAbstract) {
@@ -114,8 +114,8 @@ public class ClassUnit extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClassUnit#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link ClassUnit#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<CodeItem> newCodeElement) {

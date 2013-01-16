@@ -61,8 +61,8 @@ public class OutputPort extends Port {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link OutputPort#getNode() node}' feature.
+   * @param newNode
+   *          the new value of the '{@link OutputPort#getNode() node}' feature.
    * @generated
    */
   public void setNode(WorkflowNode newNode) {
@@ -119,8 +119,8 @@ public class OutputPort extends Port {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link OutputPort#getEdges() edges}' feature.
+   * @param newEdges
+   *          the new value of the '{@link OutputPort#getEdges() edges}' feature.
    * @generated
    */
   public void setEdges(List<Edge> newEdges) {

@@ -179,6 +179,8 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 			
 			/**			
 			 * Removes from the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 *
+			 * @param «featureAnnotation.validJavaMemberName»Value the value to remove			 
 			 * @generated
 			 */
 			public void removeFrom«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
@@ -231,7 +233,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 			 * «featureAnnotation.documentation»
 			 * <!-- end-model-doc -->
 			«ENDIF»
-			 * @param the new value of the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() «featureAnnotation.EStructuralFeature.name»}' feature.
+			 * @param new«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)» the new value of the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() «featureAnnotation.EStructuralFeature.name»}' feature.
 			 * @generated
 			 */
 			«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "setter")»

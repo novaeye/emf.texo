@@ -55,8 +55,8 @@ public class RentalCar extends RentalUnit {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalCar#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link RentalCar#getSize() size}' feature.
    * @generated
    */
   public void setSize(RentalCarSize newSize) {
@@ -80,8 +80,8 @@ public class RentalCar extends RentalUnit {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalCar#getCurrentDriver() currentDriver}' feature.
+   * @param newCurrentDriver
+   *          the new value of the '{@link RentalCar#getCurrentDriver() currentDriver}' feature.
    * @generated
    */
   public void setCurrentDriver(RentalCarDriver newCurrentDriver) {

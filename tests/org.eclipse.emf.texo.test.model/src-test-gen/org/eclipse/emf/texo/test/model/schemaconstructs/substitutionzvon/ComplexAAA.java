@@ -45,8 +45,8 @@ public class ComplexAAA extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ComplexAAA#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link ComplexAAA#getValue() value}' feature.
    * @generated
    */
   public void setValue(long newValue) {

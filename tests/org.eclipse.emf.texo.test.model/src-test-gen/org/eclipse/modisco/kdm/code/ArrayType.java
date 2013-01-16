@@ -52,8 +52,8 @@ public class ArrayType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ArrayType#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link ArrayType#getSize() size}' feature.
    * @generated
    */
   public void setSize(Integer newSize) {
@@ -77,8 +77,8 @@ public class ArrayType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ArrayType#getIndexUnit() indexUnit}' feature.
+   * @param newIndexUnit
+   *          the new value of the '{@link ArrayType#getIndexUnit() indexUnit}' feature.
    * @generated
    */
   public void setIndexUnit(IndexUnit newIndexUnit) {

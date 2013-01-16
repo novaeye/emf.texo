@@ -45,8 +45,8 @@ public class ComplexType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ComplexType#getTest() test}' feature.
+   * @param newTest
+   *          the new value of the '{@link ComplexType#getTest() test}' feature.
    * @generated
    */
   public void setTest(String newTest) {

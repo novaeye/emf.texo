@@ -79,8 +79,8 @@ public class DeployedResource extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DeployedResource#getPlatformElement() platformElement}' feature.
+   * @param newPlatformElement
+   *          the new value of the '{@link DeployedResource#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<ResourceType> newPlatformElement) {

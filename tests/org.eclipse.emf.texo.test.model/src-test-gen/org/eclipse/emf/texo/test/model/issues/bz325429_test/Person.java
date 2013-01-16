@@ -76,8 +76,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getFirstname() firstname}' feature.
+   * @param newFirstname
+   *          the new value of the '{@link Person#getFirstname() firstname}' feature.
    * @generated
    */
   public void setFirstname(String newFirstname) {
@@ -101,8 +101,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getLastname() lastname}' feature.
+   * @param newLastname
+   *          the new value of the '{@link Person#getLastname() lastname}' feature.
    * @generated
    */
   public void setLastname(String newLastname) {
@@ -126,8 +126,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getAddress() address}' feature.
+   * @param newAddress
+   *          the new value of the '{@link Person#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(Address newAddress) {
@@ -184,8 +184,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getContacts() contacts}' feature.
+   * @param newContacts
+   *          the new value of the '{@link Person#getContacts() contacts}' feature.
    * @generated
    */
   public void setContacts(List<Contact> newContacts) {

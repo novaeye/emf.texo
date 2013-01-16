@@ -68,8 +68,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Supplier#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -126,8 +126,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getCustomers() customers}' feature.
+   * @param newCustomers
+   *          the new value of the '{@link Supplier#getCustomers() customers}' feature.
    * @generated
    */
   public void setCustomers(List<Customer> newCustomers) {
@@ -184,8 +184,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getOrders() orders}' feature.
+   * @param newOrders
+   *          the new value of the '{@link Supplier#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<PurchaseOrder> newOrders) {

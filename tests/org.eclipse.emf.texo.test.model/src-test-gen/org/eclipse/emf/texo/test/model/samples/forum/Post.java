@@ -67,8 +67,8 @@ public class Post extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Post#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link Post#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -92,8 +92,8 @@ public class Post extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Post#getAuthor() author}' feature.
+   * @param newAuthor
+   *          the new value of the '{@link Post#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Member newAuthor) {
@@ -117,8 +117,8 @@ public class Post extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Post#getTopic() topic}' feature.
+   * @param newTopic
+   *          the new value of the '{@link Post#getTopic() topic}' feature.
    * @generated
    */
   public void setTopic(Topic newTopic) {

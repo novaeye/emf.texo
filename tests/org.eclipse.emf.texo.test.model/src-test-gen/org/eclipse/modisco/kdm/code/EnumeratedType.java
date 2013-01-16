@@ -89,8 +89,8 @@ public class EnumeratedType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EnumeratedType#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link EnumeratedType#getValue() value}' feature.
    * @generated
    */
   public void setValue(List<Value> newValue) {
@@ -147,8 +147,8 @@ public class EnumeratedType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EnumeratedType#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link EnumeratedType#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<CodeItem> newCodeElement) {

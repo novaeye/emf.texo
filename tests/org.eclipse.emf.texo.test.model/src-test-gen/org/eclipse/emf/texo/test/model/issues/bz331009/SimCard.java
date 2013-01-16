@@ -87,8 +87,8 @@ public class SimCard extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimCard#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link SimCard#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {

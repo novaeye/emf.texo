@@ -76,8 +76,8 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MySerializableClass#getSomethingInteresting() somethingInteresting}' feature.
+   * @param newSomethingInteresting
+   *          the new value of the '{@link MySerializableClass#getSomethingInteresting() somethingInteresting}' feature.
    * @generated
    */
   public void setSomethingInteresting(String newSomethingInteresting) {
@@ -101,8 +101,8 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MySerializableClass#getNonEMF() nonEMF}' feature.
+   * @param newNonEMF
+   *          the new value of the '{@link MySerializableClass#getNonEMF() nonEMF}' feature.
    * @generated
    */
   public void setNonEMF(NonEMF newNonEMF) {
@@ -159,8 +159,8 @@ public class MySerializableClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MySerializableClass#getNonEMFs() nonEMFs}' feature.
+   * @param newNonEMFs
+   *          the new value of the '{@link MySerializableClass#getNonEMFs() nonEMFs}' feature.
    * @generated
    */
   public void setNonEMFs(List<NonEMF> newNonEMFs) {

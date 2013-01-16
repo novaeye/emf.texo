@@ -51,8 +51,8 @@ public class ContentRestriction extends AbstractContentElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContentRestriction#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link ContentRestriction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -76,8 +76,8 @@ public class ContentRestriction extends AbstractContentElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContentRestriction#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link ContentRestriction#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

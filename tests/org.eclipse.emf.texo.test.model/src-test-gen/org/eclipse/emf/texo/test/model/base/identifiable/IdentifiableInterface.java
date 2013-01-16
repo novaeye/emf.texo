@@ -35,8 +35,8 @@ public interface IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IdentifiableInterface#getDb_Id() <em>db_Id</em>}' feature.
+   * @param newDb_Id
+   *          the new value of the '{@link IdentifiableInterface#getDb_Id() <em>db_Id</em>}' feature.
    * @generated
    */
   @Id()
@@ -61,8 +61,8 @@ public interface IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IdentifiableInterface#getDb_version() <em>db_version</em>}' feature.
+   * @param newDb_version
+   *          the new value of the '{@link IdentifiableInterface#getDb_version() <em>db_version</em>}' feature.
    * @generated
    */
   @Version()

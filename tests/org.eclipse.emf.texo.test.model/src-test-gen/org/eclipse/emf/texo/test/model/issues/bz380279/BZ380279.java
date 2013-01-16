@@ -45,8 +45,8 @@ public class BZ380279 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BZ380279#getFirstName() firstName}' feature.
+   * @param newFirstName
+   *          the new value of the '{@link BZ380279#getFirstName() firstName}' feature.
    * @generated
    */
   public void setFirstName(String newFirstName) {

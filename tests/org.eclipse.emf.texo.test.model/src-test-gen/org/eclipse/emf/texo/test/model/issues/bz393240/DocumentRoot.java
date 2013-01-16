@@ -51,8 +51,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -76,8 +76,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * @param newXMLNSPrefixMap
+   *          the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -101,8 +101,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * @param newXSISchemaLocation
+   *          the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -127,8 +127,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getApplicationRequest() applicationRequest}' feature.
+   * @param newApplicationRequest
+   *          the new value of the '{@link DocumentRoot#getApplicationRequest() applicationRequest}' feature.
    * @generated
    */
   public void setApplicationRequest(Application newApplicationRequest) {
@@ -154,8 +154,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getApplicationResponse() applicationResponse}' feature.
+   * @param newApplicationResponse
+   *          the new value of the '{@link DocumentRoot#getApplicationResponse() applicationResponse}' feature.
    * @generated
    */
   public void setApplicationResponse(Application newApplicationResponse) {

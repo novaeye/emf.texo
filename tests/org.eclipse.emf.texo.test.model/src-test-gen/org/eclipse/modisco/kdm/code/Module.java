@@ -80,8 +80,8 @@ public class Module extends CodeItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Module#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link Module#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<AbstractCodeElement> newCodeElement) {

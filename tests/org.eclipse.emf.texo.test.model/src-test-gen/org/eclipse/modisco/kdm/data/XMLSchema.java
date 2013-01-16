@@ -78,8 +78,8 @@ public class XMLSchema extends AbstractDataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link XMLSchema#getContentElement() contentElement}' feature.
+   * @param newContentElement
+   *          the new value of the '{@link XMLSchema#getContentElement() contentElement}' feature.
    * @generated
    */
   public void setContentElement(Set<AbstractContentElement> newContentElement) {

@@ -51,8 +51,8 @@ public class SimpleAllMapType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getAllMap() allMap}' feature.
+   * @param newAllMap
+   *          the new value of the '{@link SimpleAllMapType#getAllMap() allMap}' feature.
    * @generated
    */
   public void setAllMap(List<SimpleAllMapTypeAllMapFeatureGroup> newAllMap) {
@@ -77,8 +77,8 @@ public class SimpleAllMapType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
+   * @param newAaa
+   *          the new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
    * @generated
    */
   public void setAaa(String newAaa) {
@@ -104,8 +104,8 @@ public class SimpleAllMapType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
+   * @param newBbb
+   *          the new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
    * @generated
    */
   public void setBbb(String newBbb) {
@@ -131,8 +131,8 @@ public class SimpleAllMapType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
+   * @param newCcc
+   *          the new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
    * @generated
    */
   public void setCcc(String newCcc) {

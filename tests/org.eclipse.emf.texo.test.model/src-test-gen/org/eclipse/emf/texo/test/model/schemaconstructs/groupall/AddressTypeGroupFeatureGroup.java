@@ -171,10 +171,12 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressType#getName() <em>name</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link AddressType#getName() name}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value of the '{@link AddressType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -197,10 +199,12 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressType#getLongName() <em>longName</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLongName
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link AddressType#getLongName() longName}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLongName
+   *          the new value of the '{@link AddressType#getLongName() longName}' feature.
    * @generated
    */
   public void setLongName(String newLongName) {
@@ -231,8 +235,8 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

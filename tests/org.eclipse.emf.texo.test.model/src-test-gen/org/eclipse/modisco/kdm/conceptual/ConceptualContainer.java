@@ -79,8 +79,8 @@ public class ConceptualContainer extends AbstractConceptualElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConceptualContainer#getConceptualElement() conceptualElement}' feature.
+   * @param newConceptualElement
+   *          the new value of the '{@link ConceptualContainer#getConceptualElement() conceptualElement}' feature.
    * @generated
    */
   public void setConceptualElement(Set<AbstractConceptualElement> newConceptualElement) {

@@ -87,8 +87,8 @@ public class BalanceAccount extends Account {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BalanceAccount#getReport() report}' feature.
+   * @param newReport
+   *          the new value of the '{@link BalanceAccount#getReport() report}' feature.
    * @generated
    */
   public void setReport(List<ReportGroup> newReport) {

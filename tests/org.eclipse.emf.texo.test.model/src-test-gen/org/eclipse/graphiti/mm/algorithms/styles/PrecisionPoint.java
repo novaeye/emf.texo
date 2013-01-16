@@ -53,8 +53,8 @@ public class PrecisionPoint extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PrecisionPoint#getX() x}' feature.
+   * @param newX
+   *          the new value of the '{@link PrecisionPoint#getX() x}' feature.
    * @generated
    */
   public void setX(double newX) {
@@ -78,8 +78,8 @@ public class PrecisionPoint extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PrecisionPoint#getY() y}' feature.
+   * @param newY
+   *          the new value of the '{@link PrecisionPoint#getY() y}' feature.
    * @generated
    */
   public void setY(double newY) {

@@ -59,8 +59,8 @@ public class Audit extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Audit#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link Audit#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -84,8 +84,8 @@ public class Audit extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Audit#getAuthor() author}' feature.
+   * @param newAuthor
+   *          the new value of the '{@link Audit#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(String newAuthor) {
@@ -109,8 +109,8 @@ public class Audit extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Audit#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link Audit#getDate() date}' feature.
    * @generated
    */
   public void setDate(String newDate) {

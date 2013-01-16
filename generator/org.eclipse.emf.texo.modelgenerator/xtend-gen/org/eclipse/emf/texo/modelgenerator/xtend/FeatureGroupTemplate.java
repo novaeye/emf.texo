@@ -698,7 +698,7 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.append("* <!-- end-user-doc -->");
         _builder.newLine();
         _builder.append(" ");
-        _builder.append("* @param the new value of the \'{@link LetterBodyType#getText() text}\' feature.");
+        _builder.append("* @param newText the new value of the \'{@link LetterBodyType#getText() text}\' feature.");
         _builder.newLine();
         _builder.append(" ");
         _builder.append("* @generated");
@@ -763,7 +763,7 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.append("* <!-- end-user-doc -->");
         _builder.newLine();
         _builder.append(" ");
-        _builder.append("* @param the new value of the \'{@link LetterBodyType#getCDATA() cDATA}\' feature.");
+        _builder.append("* @param newCDATA the new value of the \'{@link LetterBodyType#getCDATA() cDATA}\' feature.");
         _builder.newLine();
         _builder.append(" ");
         _builder.append("* @generated");
@@ -828,7 +828,7 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.append("* <!-- end-user-doc -->");
         _builder.newLine();
         _builder.append(" ");
-        _builder.append("* @param the new value of the \'{@link LetterBodyType#getComment() comment}\' feature.");
+        _builder.append("* @param newComment the new value of the \'{@link LetterBodyType#getComment() comment}\' feature.");
         _builder.newLine();
         _builder.append(" ");
         _builder.append("* @generated");
@@ -980,6 +980,18 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.newLine();
         _builder.append("\t");
         _builder.append("\t ");
+        _builder.append("* @param new");
+        String _name_6 = memberFeatureAnnotation_2.getName();
+        String _firstUpper = TemplateUtil.toFirstUpper(_name_6);
+        _builder.append(_firstUpper, "		 ");
+        _builder.append(" the new value for the feature");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t ");
+        _builder.append("*");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t ");
         _builder.append("* <!-- begin-user-doc -->");
         _builder.newLine();
         _builder.append("\t");
@@ -988,7 +1000,11 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.newLine();
         _builder.append("\t");
         _builder.append("\t ");
-        _builder.append("* @param the new value of the \'{@link ");
+        _builder.append("* @param new");
+        String _name_7 = memberFeatureAnnotation_2.getName();
+        String _firstUpper_1 = TemplateUtil.toFirstUpper(_name_7);
+        _builder.append(_firstUpper_1, "		 ");
+        _builder.append(" the new value of the \'{@link ");
         String _simpleClassName_1 = eClassAnnotation.getSimpleClassName();
         _builder.append(_simpleClassName_1, "		 ");
         _builder.append("#");
@@ -996,8 +1012,8 @@ public class FeatureGroupTemplate extends BaseTemplate {
         _builder.append(_getter_5, "		 ");
         _builder.append("() ");
         EStructuralFeature _eStructuralFeature_13 = memberFeatureAnnotation_2.getEStructuralFeature();
-        String _name_6 = _eStructuralFeature_13.getName();
-        _builder.append(_name_6, "		 ");
+        String _name_8 = _eStructuralFeature_13.getName();
+        _builder.append(_name_8, "		 ");
         _builder.append("}\' feature.");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
@@ -1023,9 +1039,9 @@ public class FeatureGroupTemplate extends BaseTemplate {
         String _itemType_2 = memberFeatureAnnotation_2.getItemType();
         _builder.append(_itemType_2, "		");
         _builder.append(" new");
-        String _name_7 = memberFeatureAnnotation_2.getName();
-        String _firstUpper = TemplateUtil.toFirstUpper(_name_7);
-        _builder.append(_firstUpper, "		");
+        String _name_9 = memberFeatureAnnotation_2.getName();
+        String _firstUpper_2 = TemplateUtil.toFirstUpper(_name_9);
+        _builder.append(_firstUpper_2, "		");
         _builder.append(") {");
         _builder.newLineIfNotEmpty();
         {
@@ -1037,16 +1053,16 @@ public class FeatureGroupTemplate extends BaseTemplate {
             String _validJavaMemberName_2 = memberFeatureAnnotation_2.getValidJavaMemberName();
             _builder.append(_validJavaMemberName_2, "			");
             _builder.append(" = new");
-            String _name_8 = memberFeatureAnnotation_2.getName();
-            String _firstUpper_1 = TemplateUtil.toFirstUpper(_name_8);
-            _builder.append(_firstUpper_1, "			");
+            String _name_10 = memberFeatureAnnotation_2.getName();
+            String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_10);
+            _builder.append(_firstUpper_3, "			");
             _builder.append(";");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             _builder.append("\t\t");
             _builder.append("setFeature(Feature.");
-            String _name_9 = memberFeatureAnnotation_2.getName();
-            String _upperCase_1 = TemplateUtil.toUpperCase(_name_9);
+            String _name_11 = memberFeatureAnnotation_2.getName();
+            String _upperCase_1 = TemplateUtil.toUpperCase(_name_11);
             _builder.append(_upperCase_1, "			");
             _builder.append(");");
             _builder.newLineIfNotEmpty();
@@ -1084,9 +1100,9 @@ public class FeatureGroupTemplate extends BaseTemplate {
             String _setter_2 = memberFeatureAnnotation_2.getSetter();
             _builder.append(_setter_2, "			");
             _builder.append("(new");
-            String _name_10 = memberFeatureAnnotation_2.getName();
-            String _firstUpper_2 = TemplateUtil.toFirstUpper(_name_10);
-            _builder.append(_firstUpper_2, "			");
+            String _name_12 = memberFeatureAnnotation_2.getName();
+            String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_12);
+            _builder.append(_firstUpper_4, "			");
             _builder.append(");");
             _builder.newLineIfNotEmpty();
           }
@@ -1151,8 +1167,8 @@ public class FeatureGroupTemplate extends BaseTemplate {
       for(final EStructuralFeatureModelGenAnnotation memberFeatureAnnotation_3 : _allMemberFeatureMapFeatures_3) {
         _builder.append("\t");
         _builder.append("case ");
-        String _name_11 = memberFeatureAnnotation_3.getName();
-        String _upperCase_2 = TemplateUtil.toUpperCase(_name_11);
+        String _name_13 = memberFeatureAnnotation_3.getName();
+        String _upperCase_2 = TemplateUtil.toUpperCase(_name_13);
         _builder.append(_upperCase_2, "	");
         _builder.append(":");
         _builder.newLineIfNotEmpty();
@@ -1191,7 +1207,7 @@ public class FeatureGroupTemplate extends BaseTemplate {
     _builder.append("* @param feature the feature to set");
     _builder.newLine();
     _builder.append(" \t ");
-    _builder.append("* @param the value to set in this instance");
+    _builder.append("* @param value the value to set in this instance");
     _builder.newLine();
     _builder.append(" \t ");
     _builder.append("* @see #getFeature()");
@@ -1243,8 +1259,8 @@ public class FeatureGroupTemplate extends BaseTemplate {
       for(final EStructuralFeatureModelGenAnnotation memberFeatureAnnotation_4 : _allMemberFeatureMapFeatures_4) {
         _builder.append("\t");
         _builder.append("case ");
-        String _name_12 = memberFeatureAnnotation_4.getName();
-        String _upperCase_3 = TemplateUtil.toUpperCase(_name_12);
+        String _name_14 = memberFeatureAnnotation_4.getName();
+        String _upperCase_3 = TemplateUtil.toUpperCase(_name_14);
         _builder.append(_upperCase_3, "	");
         _builder.append(":");
         _builder.newLineIfNotEmpty();

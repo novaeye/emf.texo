@@ -45,8 +45,8 @@ public class MacroUnit extends PreprocessorDirective {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MacroUnit#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link MacroUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(MacroKind newKind) {

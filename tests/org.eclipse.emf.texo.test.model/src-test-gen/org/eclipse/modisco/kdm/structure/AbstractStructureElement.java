@@ -106,8 +106,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStructureElement#getAggregated() aggregated}' feature.
+   * @param newAggregated
+   *          the new value of the '{@link AbstractStructureElement#getAggregated() aggregated}' feature.
    * @generated
    */
   public void setAggregated(Set<AggregatedRelationship> newAggregated) {
@@ -164,8 +164,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStructureElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link AbstractStructureElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -222,8 +222,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStructureElement#getStructureElement() structureElement}' feature.
+   * @param newStructureElement
+   *          the new value of the '{@link AbstractStructureElement#getStructureElement() structureElement}' feature.
    * @generated
    */
   public void setStructureElement(Set<AbstractStructureElement> newStructureElement) {
@@ -280,8 +280,8 @@ public abstract class AbstractStructureElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStructureElement#getStructureRelationship() structureRelationship}'
+   * @param newStructureRelationship
+   *          the new value of the '{@link AbstractStructureElement#getStructureRelationship() structureRelationship}'
    *          feature.
    * @generated
    */

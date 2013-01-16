@@ -58,8 +58,8 @@ public class PDeclaration extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PDeclaration#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link PDeclaration#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -83,8 +83,8 @@ public class PDeclaration extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PDeclaration#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link PDeclaration#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

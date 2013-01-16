@@ -106,8 +106,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getBackground() background}' feature.
+   * @param newBackground
+   *          the new value of the '{@link AbstractStyle#getBackground() background}' feature.
    * @generated
    */
   public void setBackground(Color newBackground) {
@@ -131,8 +131,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getForeground() foreground}' feature.
+   * @param newForeground
+   *          the new value of the '{@link AbstractStyle#getForeground() foreground}' feature.
    * @generated
    */
   public void setForeground(Color newForeground) {
@@ -156,8 +156,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getLineWidth() lineWidth}' feature.
+   * @param newLineWidth
+   *          the new value of the '{@link AbstractStyle#getLineWidth() lineWidth}' feature.
    * @generated
    */
   public void setLineWidth(Integer newLineWidth) {
@@ -181,8 +181,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getLineStyle() lineStyle}' feature.
+   * @param newLineStyle
+   *          the new value of the '{@link AbstractStyle#getLineStyle() lineStyle}' feature.
    * @generated
    */
   public void setLineStyle(LineStyle newLineStyle) {
@@ -206,8 +206,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getFilled() filled}' feature.
+   * @param newFilled
+   *          the new value of the '{@link AbstractStyle#getFilled() filled}' feature.
    * @generated
    */
   public void setFilled(Boolean newFilled) {
@@ -231,8 +231,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getLineVisible() lineVisible}' feature.
+   * @param newLineVisible
+   *          the new value of the '{@link AbstractStyle#getLineVisible() lineVisible}' feature.
    * @generated
    */
   public void setLineVisible(Boolean newLineVisible) {
@@ -256,8 +256,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getRenderingStyle() renderingStyle}' feature.
+   * @param newRenderingStyle
+   *          the new value of the '{@link AbstractStyle#getRenderingStyle() renderingStyle}' feature.
    * @generated
    */
   public void setRenderingStyle(RenderingStyle newRenderingStyle) {
@@ -281,8 +281,8 @@ public abstract class AbstractStyle extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractStyle#getTransparency() transparency}' feature.
+   * @param newTransparency
+   *          the new value of the '{@link AbstractStyle#getTransparency() transparency}' feature.
    * @generated
    */
   public void setTransparency(Double newTransparency) {

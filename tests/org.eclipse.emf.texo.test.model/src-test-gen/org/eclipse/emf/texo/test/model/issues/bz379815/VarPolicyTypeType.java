@@ -53,8 +53,8 @@ public class VarPolicyTypeType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VarPolicyTypeType#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link VarPolicyTypeType#getType() type}' feature.
    * @generated
    */
   public void setType(TypeType newType) {

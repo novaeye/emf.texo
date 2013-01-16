@@ -80,8 +80,8 @@ public abstract class AbstractBuildElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractBuildElement#getBuildRelation() buildRelation}' feature.
+   * @param newBuildRelation
+   *          the new value of the '{@link AbstractBuildElement#getBuildRelation() buildRelation}' feature.
    * @generated
    */
   public void setBuildRelation(Set<AbstractBuildRelationship> newBuildRelation) {

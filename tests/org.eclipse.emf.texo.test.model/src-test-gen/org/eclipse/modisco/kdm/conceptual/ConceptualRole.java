@@ -43,8 +43,8 @@ public class ConceptualRole extends AbstractConceptualElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConceptualRole#getConceptualElement() conceptualElement}' feature.
+   * @param newConceptualElement
+   *          the new value of the '{@link ConceptualRole#getConceptualElement() conceptualElement}' feature.
    * @generated
    */
   public void setConceptualElement(AbstractConceptualElement newConceptualElement) {

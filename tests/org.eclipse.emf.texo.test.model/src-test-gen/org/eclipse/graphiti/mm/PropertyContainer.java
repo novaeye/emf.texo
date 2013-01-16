@@ -82,8 +82,8 @@ public abstract class PropertyContainer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PropertyContainer#getProperties() properties}' feature.
+   * @param newProperties
+   *          the new value of the '{@link PropertyContainer#getProperties() properties}' feature.
    * @generated
    */
   public void setProperties(Set<Property> newProperties) {

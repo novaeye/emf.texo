@@ -226,8 +226,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -252,8 +252,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -278,8 +278,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -302,10 +302,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getSalutation() <em>salutation</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSalutation
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSalutation
+   *          the new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
    * @generated
    */
   public void setSalutation(SalutationType newSalutation) {
@@ -328,10 +330,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getQuantity() <em>quantity</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newQuantity
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newQuantity
+   *          the new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -354,10 +358,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getProductName() <em>productName</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newProductName
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getProductName() productName}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newProductName
+   *          the new value of the '{@link LetterBodyType#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -380,10 +386,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getShipDate() <em>shipDate</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newShipDate
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newShipDate
+   *          the new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -424,8 +432,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

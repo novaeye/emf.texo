@@ -115,8 +115,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getValueElement() valueElement}' feature.
+   * @param newValueElement
+   *          the new value of the '{@link PriceType#getValueElement() valueElement}' feature.
    * @generated
    */
   public void setValueElement(Integer newValueElement) {
@@ -140,8 +140,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getNillableValueElement() nillableValueElement}' feature.
+   * @param newNillableValueElement
+   *          the new value of the '{@link PriceType#getNillableValueElement() nillableValueElement}' feature.
    * @generated
    */
   public void setNillableValueElement(Integer newNillableValueElement) {
@@ -165,8 +165,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getRequiredValueElement() requiredValueElement}' feature.
+   * @param newRequiredValueElement
+   *          the new value of the '{@link PriceType#getRequiredValueElement() requiredValueElement}' feature.
    * @generated
    */
   public void setRequiredValueElement(int newRequiredValueElement) {
@@ -190,8 +190,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getComparisonElement() comparisonElement}' feature.
+   * @param newComparisonElement
+   *          the new value of the '{@link PriceType#getComparisonElement() comparisonElement}' feature.
    * @generated
    */
   public void setComparisonElement(ComparisonType newComparisonElement) {
@@ -215,8 +215,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getRequiredComparisonElement() requiredComparisonElement}' feature.
+   * @param newRequiredComparisonElement
+   *          the new value of the '{@link PriceType#getRequiredComparisonElement() requiredComparisonElement}' feature.
    * @generated
    */
   public void setRequiredComparisonElement(ComparisonType newRequiredComparisonElement) {
@@ -240,8 +240,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getComparison() comparison}' feature.
+   * @param newComparison
+   *          the new value of the '{@link PriceType#getComparison() comparison}' feature.
    * @generated
    */
   public void setComparison(ComparisonType newComparison) {
@@ -265,8 +265,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getRequiredComparison() requiredComparison}' feature.
+   * @param newRequiredComparison
+   *          the new value of the '{@link PriceType#getRequiredComparison() requiredComparison}' feature.
    * @generated
    */
   public void setRequiredComparison(ComparisonType newRequiredComparison) {
@@ -290,8 +290,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getRequiredValue() requiredValue}' feature.
+   * @param newRequiredValue
+   *          the new value of the '{@link PriceType#getRequiredValue() requiredValue}' feature.
    * @generated
    */
   public void setRequiredValue(String newRequiredValue) {
@@ -315,8 +315,8 @@ public class PriceType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PriceType#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link PriceType#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

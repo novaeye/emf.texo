@@ -51,8 +51,8 @@ public class UILayout extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UILayout#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link UILayout#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -76,8 +76,8 @@ public class UILayout extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UILayout#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link UILayout#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(UIResource newFrom) {

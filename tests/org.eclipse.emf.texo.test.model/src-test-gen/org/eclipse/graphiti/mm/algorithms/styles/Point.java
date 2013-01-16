@@ -69,8 +69,8 @@ public class Point extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Point#getX() x}' feature.
+   * @param newX
+   *          the new value of the '{@link Point#getX() x}' feature.
    * @generated
    */
   public void setX(int newX) {
@@ -94,8 +94,8 @@ public class Point extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Point#getY() y}' feature.
+   * @param newY
+   *          the new value of the '{@link Point#getY() y}' feature.
    * @generated
    */
   public void setY(int newY) {
@@ -119,8 +119,8 @@ public class Point extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Point#getBefore() before}' feature.
+   * @param newBefore
+   *          the new value of the '{@link Point#getBefore() before}' feature.
    * @generated
    */
   public void setBefore(int newBefore) {
@@ -144,8 +144,8 @@ public class Point extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Point#getAfter() after}' feature.
+   * @param newAfter
+   *          the new value of the '{@link Point#getAfter() after}' feature.
    * @generated
    */
   public void setAfter(int newAfter) {

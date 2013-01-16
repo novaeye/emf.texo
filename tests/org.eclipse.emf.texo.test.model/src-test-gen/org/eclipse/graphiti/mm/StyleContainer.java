@@ -82,8 +82,8 @@ public abstract class StyleContainer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StyleContainer#getStyles() styles}' feature.
+   * @param newStyles
+   *          the new value of the '{@link StyleContainer#getStyles() styles}' feature.
    * @generated
    */
   public void setStyles(Set<Style> newStyles) {

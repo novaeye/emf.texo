@@ -172,10 +172,12 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Feature#getName() <em>name</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Feature#getName() name}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value of the '{@link Feature#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -198,10 +200,12 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Feature#getValue_() <em>value</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newValue_
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Feature#getValue_() value}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newValue_
+   *          the new value of the '{@link Feature#getValue_() value}' feature.
    * @generated
    */
   public void setValue_(Double newValue_) {
@@ -232,8 +236,8 @@ public class FeatureAMapFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

@@ -51,8 +51,8 @@ public class DescribedBy extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribedBy#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link DescribedBy#getTo() to}' feature.
    * @generated
    */
   public void setTo(BuildDescription newTo) {
@@ -76,8 +76,8 @@ public class DescribedBy extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribedBy#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link DescribedBy#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(BuildStep newFrom) {

@@ -50,8 +50,8 @@ public class RangeType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RangeType#getLower() lower}' feature.
+   * @param newLower
+   *          the new value of the '{@link RangeType#getLower() lower}' feature.
    * @generated
    */
   public void setLower(Integer newLower) {
@@ -75,8 +75,8 @@ public class RangeType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RangeType#getUpper() upper}' feature.
+   * @param newUpper
+   *          the new value of the '{@link RangeType#getUpper() upper}' feature.
    * @generated
    */
   public void setUpper(Integer newUpper) {

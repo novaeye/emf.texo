@@ -92,8 +92,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getWorkWeek() workWeek}' feature.
+   * @param newWorkWeek
+   *          the new value of the '{@link Machine#getWorkWeek() workWeek}' feature.
    * @generated
    */
   public void setWorkWeek(WorkWeek newWorkWeek) {
@@ -150,8 +150,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getTasks() tasks}' feature.
+   * @param newTasks
+   *          the new value of the '{@link Machine#getTasks() tasks}' feature.
    * @generated
    */
   public void setTasks(List<Task> newTasks) {
@@ -175,8 +175,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getMachineId() machineId}' feature.
+   * @param newMachineId
+   *          the new value of the '{@link Machine#getMachineId() machineId}' feature.
    * @generated
    */
   public void setMachineId(String newMachineId) {
@@ -200,8 +200,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getMachineSearchString() machineSearchString}' feature.
+   * @param newMachineSearchString
+   *          the new value of the '{@link Machine#getMachineSearchString() machineSearchString}' feature.
    * @generated
    */
   public void setMachineSearchString(String newMachineSearchString) {
@@ -225,8 +225,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getMultiplicity() multiplicity}' feature.
+   * @param newMultiplicity
+   *          the new value of the '{@link Machine#getMultiplicity() multiplicity}' feature.
    * @generated
    */
   public void setMultiplicity(Integer newMultiplicity) {
@@ -250,8 +250,8 @@ public class Machine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getTaskSearchString() taskSearchString}' feature.
+   * @param newTaskSearchString
+   *          the new value of the '{@link Machine#getTaskSearchString() taskSearchString}' feature.
    * @generated
    */
   public void setTaskSearchString(String newTaskSearchString) {

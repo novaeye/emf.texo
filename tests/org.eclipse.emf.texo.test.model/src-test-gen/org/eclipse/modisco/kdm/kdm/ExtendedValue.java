@@ -44,8 +44,8 @@ public abstract class ExtendedValue extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ExtendedValue#getTag() tag}' feature.
+   * @param newTag
+   *          the new value of the '{@link ExtendedValue#getTag() tag}' feature.
    * @generated
    */
   public void setTag(TagDefinition newTag) {

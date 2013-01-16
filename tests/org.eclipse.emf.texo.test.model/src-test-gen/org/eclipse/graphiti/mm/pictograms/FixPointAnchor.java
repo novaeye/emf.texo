@@ -44,8 +44,8 @@ public class FixPointAnchor extends AdvancedAnchor {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link FixPointAnchor#getLocation() location}' feature.
+   * @param newLocation
+   *          the new value of the '{@link FixPointAnchor#getLocation() location}' feature.
    * @generated
    */
   public void setLocation(Point newLocation) {

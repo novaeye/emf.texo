@@ -51,8 +51,8 @@ public class RestrictionOf extends AbstractDataRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RestrictionOf#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link RestrictionOf#getTo() to}' feature.
    * @generated
    */
   public void setTo(ComplexContentType newTo) {
@@ -76,8 +76,8 @@ public class RestrictionOf extends AbstractDataRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RestrictionOf#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link RestrictionOf#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ComplexContentType newFrom) {

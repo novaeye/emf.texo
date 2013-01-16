@@ -49,8 +49,8 @@ public abstract class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getPublicationDate() publicationDate}' feature.
+   * @param newPublicationDate
+   *          the new value of the '{@link Item#getPublicationDate() publicationDate}' feature.
    * @generated
    */
   public void setPublicationDate(Date newPublicationDate) {

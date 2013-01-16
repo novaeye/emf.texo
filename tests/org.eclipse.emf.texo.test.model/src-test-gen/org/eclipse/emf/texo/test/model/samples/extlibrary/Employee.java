@@ -43,8 +43,8 @@ public class Employee extends Person {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Employee#getManager() manager}' feature.
+   * @param newManager
+   *          the new value of the '{@link Employee#getManager() manager}' feature.
    * @generated
    */
   public void setManager(Employee newManager) {

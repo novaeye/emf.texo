@@ -53,8 +53,8 @@ public class WritesColumnSet extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WritesColumnSet#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link WritesColumnSet#getTo() to}' feature.
    * @generated
    */
   public void setTo(ColumnSet newTo) {
@@ -78,8 +78,8 @@ public class WritesColumnSet extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WritesColumnSet#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link WritesColumnSet#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

@@ -126,8 +126,8 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClaimLine#getClaimLineCompositeKey() claimLineCompositeKey}' feature.
+   * @param newClaimLineCompositeKey
+   *          the new value of the '{@link ClaimLine#getClaimLineCompositeKey() claimLineCompositeKey}' feature.
    * @generated
    */
   public void setClaimLineCompositeKey(ClaimLineCompositeKey newClaimLineCompositeKey) {

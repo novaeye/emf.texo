@@ -53,8 +53,8 @@ public class ProducesEvent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProducesEvent#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ProducesEvent#getTo() to}' feature.
    * @generated
    */
   public void setTo(Event newTo) {
@@ -78,8 +78,8 @@ public class ProducesEvent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProducesEvent#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ProducesEvent#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

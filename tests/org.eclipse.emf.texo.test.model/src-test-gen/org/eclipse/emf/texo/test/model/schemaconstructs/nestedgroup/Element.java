@@ -50,8 +50,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link Element#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<ElementMixedFeatureGroup> newMixed) {
@@ -75,8 +75,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Element#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -100,8 +100,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getTrue_() true}' feature.
+   * @param newTrue_
+   *          the new value of the '{@link Element#getTrue_() true}' feature.
    * @generated
    */
   public void setTrue_(List<ElementTrue_FeatureGroup> newTrue_) {
@@ -125,8 +125,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getC() c}' feature.
+   * @param newC
+   *          the new value of the '{@link Element#getC() c}' feature.
    * @generated
    */
   public void setC(List<CType> newC) {
@@ -150,8 +150,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getRecursive() recursive}' feature.
+   * @param newRecursive
+   *          the new value of the '{@link Element#getRecursive() recursive}' feature.
    * @generated
    */
   public void setRecursive(Element newRecursive) {

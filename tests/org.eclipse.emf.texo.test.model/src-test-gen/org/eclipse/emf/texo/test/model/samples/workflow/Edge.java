@@ -64,8 +64,8 @@ public class Edge extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Edge#getWorkflow() workflow}' feature.
+   * @param newWorkflow
+   *          the new value of the '{@link Edge#getWorkflow() workflow}' feature.
    * @generated
    */
   public void setWorkflow(Workflow newWorkflow) {
@@ -89,8 +89,8 @@ public class Edge extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Edge#getTarget() target}' feature.
+   * @param newTarget
+   *          the new value of the '{@link Edge#getTarget() target}' feature.
    * @generated
    */
   public void setTarget(InputPort newTarget) {
@@ -114,8 +114,8 @@ public class Edge extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Edge#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link Edge#getSource() source}' feature.
    * @generated
    */
   public void setSource(OutputPort newSource) {

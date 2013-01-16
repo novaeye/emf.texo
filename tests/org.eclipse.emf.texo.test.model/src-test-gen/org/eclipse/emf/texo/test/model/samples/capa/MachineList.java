@@ -83,8 +83,8 @@ public class MachineList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MachineList#getMachines() machines}' feature.
+   * @param newMachines
+   *          the new value of the '{@link MachineList#getMachines() machines}' feature.
    * @generated
    */
   public void setMachines(List<Machine> newMachines) {

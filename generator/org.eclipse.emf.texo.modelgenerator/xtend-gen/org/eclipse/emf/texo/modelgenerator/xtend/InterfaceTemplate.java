@@ -295,7 +295,11 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.append("* <!-- end-user-doc -->");
             _builder.newLine();
             _builder.append(" ");
-            _builder.append("* @param the new value of the \'{@link ");
+            _builder.append("* @param new");
+            String _name_7 = featureAnnotation.getName();
+            String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_7);
+            _builder.append(_firstUpper_3, " ");
+            _builder.append(" the new value of the \'{@link ");
             String _simpleClassName_2 = eClassModelGenAnnotation.getSimpleClassName();
             _builder.append(_simpleClassName_2, " ");
             _builder.append("#");
@@ -303,8 +307,8 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.append(_getter_2, " ");
             _builder.append("() <em>");
             EStructuralFeature _eStructuralFeature_8 = featureAnnotation.getEStructuralFeature();
-            String _name_7 = _eStructuralFeature_8.getName();
-            _builder.append(_name_7, " ");
+            String _name_8 = _eStructuralFeature_8.getName();
+            _builder.append(_name_8, " ");
             _builder.append("</em>}\' feature.");
             _builder.newLineIfNotEmpty();
             _builder.append(" ");
@@ -324,9 +328,9 @@ public class InterfaceTemplate extends BaseTemplate {
             String _type_1 = featureAnnotation.getType();
             _builder.append(_type_1, "");
             _builder.append(" new");
-            String _name_8 = featureAnnotation.getName();
-            String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_8);
-            _builder.append(_firstUpper_3, "");
+            String _name_9 = featureAnnotation.getName();
+            String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_9);
+            _builder.append(_firstUpper_4, "");
             _builder.append(");");
             _builder.newLineIfNotEmpty();
           }

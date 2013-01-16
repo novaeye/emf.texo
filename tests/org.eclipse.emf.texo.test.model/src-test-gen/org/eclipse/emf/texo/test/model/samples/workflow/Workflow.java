@@ -103,8 +103,8 @@ public class Workflow extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Workflow#getNodes() nodes}' feature.
+   * @param newNodes
+   *          the new value of the '{@link Workflow#getNodes() nodes}' feature.
    * @generated
    */
   public void setNodes(List<WorkflowNode> newNodes) {
@@ -161,8 +161,8 @@ public class Workflow extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Workflow#getEdges() edges}' feature.
+   * @param newEdges
+   *          the new value of the '{@link Workflow#getEdges() edges}' feature.
    * @generated
    */
   public void setEdges(List<Edge> newEdges) {
@@ -219,8 +219,8 @@ public class Workflow extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Workflow#getComments() comments}' feature.
+   * @param newComments
+   *          the new value of the '{@link Workflow#getComments() comments}' feature.
    * @generated
    */
   public void setComments(List<Comment> newComments) {

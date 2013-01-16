@@ -71,8 +71,8 @@ public class Book extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -96,8 +96,8 @@ public class Book extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getPages() pages}' feature.
+   * @param newPages
+   *          the new value of the '{@link Book#getPages() pages}' feature.
    * @generated
    */
   public void setPages(int newPages) {
@@ -121,8 +121,8 @@ public class Book extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getCategory() category}' feature.
+   * @param newCategory
+   *          the new value of the '{@link Book#getCategory() category}' feature.
    * @generated
    */
   public void setCategory(BookCategory newCategory) {
@@ -146,8 +146,8 @@ public class Book extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getAuthor() author}' feature.
+   * @param newAuthor
+   *          the new value of the '{@link Book#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Writer newAuthor) {

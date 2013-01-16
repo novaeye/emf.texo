@@ -107,8 +107,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractConceptualElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractConceptualElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -165,8 +165,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractConceptualElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link AbstractConceptualElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -223,8 +223,9 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractConceptualElement#getConceptualRelation() conceptualRelation}' feature.
+   * @param newConceptualRelation
+   *          the new value of the '{@link AbstractConceptualElement#getConceptualRelation() conceptualRelation}'
+   *          feature.
    * @generated
    */
   public void setConceptualRelation(Set<AbstractConceptualRelationship> newConceptualRelation) {
@@ -281,8 +282,8 @@ public abstract class AbstractConceptualElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractConceptualElement#getAbstraction() abstraction}' feature.
+   * @param newAbstraction
+   *          the new value of the '{@link AbstractConceptualElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(Set<ActionElement> newAbstraction) {

@@ -42,8 +42,8 @@ public class TaggedValue extends ExtendedValue {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TaggedValue#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link TaggedValue#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

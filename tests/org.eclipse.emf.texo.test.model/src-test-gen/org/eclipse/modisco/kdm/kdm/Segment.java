@@ -86,8 +86,8 @@ public class Segment extends KDMFramework {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Segment#getSegment() segment}' feature.
+   * @param newSegment
+   *          the new value of the '{@link Segment#getSegment() segment}' feature.
    * @generated
    */
   public void setSegment(Set<Segment> newSegment) {
@@ -144,8 +144,8 @@ public class Segment extends KDMFramework {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Segment#getModel() model}' feature.
+   * @param newModel
+   *          the new value of the '{@link Segment#getModel() model}' feature.
    * @generated
    */
   public void setModel(Set<KDMModel> newModel) {

@@ -55,8 +55,8 @@ public class GradientColoredArea extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredArea#getStart() start}' feature.
+   * @param newStart
+   *          the new value of the '{@link GradientColoredArea#getStart() start}' feature.
    * @generated
    */
   public void setStart(GradientColoredLocation newStart) {
@@ -80,8 +80,8 @@ public class GradientColoredArea extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredArea#getEnd() end}' feature.
+   * @param newEnd
+   *          the new value of the '{@link GradientColoredArea#getEnd() end}' feature.
    * @generated
    */
   public void setEnd(GradientColoredLocation newEnd) {

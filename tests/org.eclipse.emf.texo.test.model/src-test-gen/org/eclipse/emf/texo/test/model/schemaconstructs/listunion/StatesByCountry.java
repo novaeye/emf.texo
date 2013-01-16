@@ -123,8 +123,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getCountry() country}' feature.
+   * @param newCountry
+   *          the new value of the '{@link StatesByCountry#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {
@@ -148,8 +148,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
+   * @param newAllStates
+   *          the new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
    * @generated
    */
   public void setAllStates(List<String> newAllStates) {
@@ -173,8 +173,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
+   * @param newSixImportantStates
+   *          the new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
    * @generated
    */
   public void setSixImportantStates(List<String> newSixImportantStates) {
@@ -198,8 +198,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getZipUnion() zipUnion}' feature.
+   * @param newZipUnion
+   *          the new value of the '{@link StatesByCountry#getZipUnion() zipUnion}' feature.
    * @generated
    */
   public void setZipUnion(String newZipUnion) {
@@ -223,8 +223,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getZipUnions() zipUnions}' feature.
+   * @param newZipUnions
+   *          the new value of the '{@link StatesByCountry#getZipUnions() zipUnions}' feature.
    * @generated
    */
   public void setZipUnions(List<String> newZipUnions) {
@@ -248,8 +248,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSimpleUnion() simpleUnion}' feature.
+   * @param newSimpleUnion
+   *          the new value of the '{@link StatesByCountry#getSimpleUnion() simpleUnion}' feature.
    * @generated
    */
   public void setSimpleUnion(Object newSimpleUnion) {
@@ -273,8 +273,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSimpleUnions() simpleUnions}' feature.
+   * @param newSimpleUnions
+   *          the new value of the '{@link StatesByCountry#getSimpleUnions() simpleUnions}' feature.
    * @generated
    */
   public void setSimpleUnions(List<Object> newSimpleUnions) {
@@ -298,8 +298,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSimpleStringUnion() simpleStringUnion}' feature.
+   * @param newSimpleStringUnion
+   *          the new value of the '{@link StatesByCountry#getSimpleStringUnion() simpleStringUnion}' feature.
    * @generated
    */
   public void setSimpleStringUnion(String newSimpleStringUnion) {
@@ -323,8 +323,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSimpleStringUnions() simpleStringUnions}' feature.
+   * @param newSimpleStringUnions
+   *          the new value of the '{@link StatesByCountry#getSimpleStringUnions() simpleStringUnions}' feature.
    * @generated
    */
   public void setSimpleStringUnions(List<String> newSimpleStringUnions) {

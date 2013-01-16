@@ -51,8 +51,8 @@ public abstract class DefinedType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DefinedType#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link DefinedType#getType() type}' feature.
    * @generated
    */
   public void setType(Datatype newType) {
@@ -76,8 +76,8 @@ public abstract class DefinedType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DefinedType#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link DefinedType#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Datatype newCodeElement) {

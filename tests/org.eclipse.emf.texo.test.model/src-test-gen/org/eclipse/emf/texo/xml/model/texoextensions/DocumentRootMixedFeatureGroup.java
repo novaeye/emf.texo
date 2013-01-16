@@ -184,8 +184,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -210,8 +210,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -236,8 +236,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -270,8 +270,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

@@ -49,8 +49,8 @@ public abstract class Periodical extends Item {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Periodical#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Periodical#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -74,8 +74,8 @@ public abstract class Periodical extends Item {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Periodical#getIssuesPerYear() issuesPerYear}' feature.
+   * @param newIssuesPerYear
+   *          the new value of the '{@link Periodical#getIssuesPerYear() issuesPerYear}' feature.
    * @generated
    */
   public void setIssuesPerYear(int newIssuesPerYear) {

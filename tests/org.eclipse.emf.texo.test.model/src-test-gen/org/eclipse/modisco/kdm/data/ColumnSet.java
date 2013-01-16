@@ -81,8 +81,8 @@ public class ColumnSet extends DataContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ColumnSet#getItemUnit() itemUnit}' feature.
+   * @param newItemUnit
+   *          the new value of the '{@link ColumnSet#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(List<ItemUnit> newItemUnit) {

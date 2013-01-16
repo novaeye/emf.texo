@@ -53,8 +53,8 @@ public class HasContent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasContent#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link HasContent#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractDataElement newTo) {
@@ -78,8 +78,8 @@ public class HasContent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasContent#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link HasContent#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

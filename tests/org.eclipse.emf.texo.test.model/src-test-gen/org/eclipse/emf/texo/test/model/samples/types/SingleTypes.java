@@ -231,8 +231,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getString() string}' feature.
+   * @param newString
+   *          the new value of the '{@link SingleTypes#getString() string}' feature.
    * @generated
    */
   public void setString(String newString) {
@@ -256,8 +256,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getInteger() integer}' feature.
+   * @param newInteger
+   *          the new value of the '{@link SingleTypes#getInteger() integer}' feature.
    * @generated
    */
   public void setInteger(int newInteger) {
@@ -281,8 +281,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getIntegerObject() integerObject}' feature.
+   * @param newIntegerObject
+   *          the new value of the '{@link SingleTypes#getIntegerObject() integerObject}' feature.
    * @generated
    */
   public void setIntegerObject(Integer newIntegerObject) {
@@ -306,8 +306,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getLong_() long}' feature.
+   * @param newLong_
+   *          the new value of the '{@link SingleTypes#getLong_() long}' feature.
    * @generated
    */
   public void setLong_(long newLong_) {
@@ -331,8 +331,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getLongObject() longObject}' feature.
+   * @param newLongObject
+   *          the new value of the '{@link SingleTypes#getLongObject() longObject}' feature.
    * @generated
    */
   public void setLongObject(Long newLongObject) {
@@ -356,8 +356,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getDouble_() double}' feature.
+   * @param newDouble_
+   *          the new value of the '{@link SingleTypes#getDouble_() double}' feature.
    * @generated
    */
   public void setDouble_(double newDouble_) {
@@ -381,8 +381,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getDoubleObject() doubleObject}' feature.
+   * @param newDoubleObject
+   *          the new value of the '{@link SingleTypes#getDoubleObject() doubleObject}' feature.
    * @generated
    */
   public void setDoubleObject(Double newDoubleObject) {
@@ -406,8 +406,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getFloat_() float}' feature.
+   * @param newFloat_
+   *          the new value of the '{@link SingleTypes#getFloat_() float}' feature.
    * @generated
    */
   public void setFloat_(float newFloat_) {
@@ -431,8 +431,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getFloatObject() floatObject}' feature.
+   * @param newFloatObject
+   *          the new value of the '{@link SingleTypes#getFloatObject() floatObject}' feature.
    * @generated
    */
   public void setFloatObject(Float newFloatObject) {
@@ -456,8 +456,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getClazz() clazz}' feature.
+   * @param newClazz
+   *          the new value of the '{@link SingleTypes#getClazz() clazz}' feature.
    * @generated
    */
   public void setClazz(Class newClazz) {
@@ -481,8 +481,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getChar_() char}' feature.
+   * @param newChar_
+   *          the new value of the '{@link SingleTypes#getChar_() char}' feature.
    * @generated
    */
   public void setChar_(char newChar_) {
@@ -506,8 +506,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getCharObject() charObject}' feature.
+   * @param newCharObject
+   *          the new value of the '{@link SingleTypes#getCharObject() charObject}' feature.
    * @generated
    */
   public void setCharObject(Character newCharObject) {
@@ -531,8 +531,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getByte_() byte}' feature.
+   * @param newByte_
+   *          the new value of the '{@link SingleTypes#getByte_() byte}' feature.
    * @generated
    */
   public void setByte_(byte newByte_) {
@@ -556,8 +556,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getByteObject() byteObject}' feature.
+   * @param newByteObject
+   *          the new value of the '{@link SingleTypes#getByteObject() byteObject}' feature.
    * @generated
    */
   public void setByteObject(Byte newByteObject) {
@@ -581,8 +581,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getByteArray() byteArray}' feature.
+   * @param newByteArray
+   *          the new value of the '{@link SingleTypes#getByteArray() byteArray}' feature.
    * @generated
    */
   public void setByteArray(byte[] newByteArray) {
@@ -606,8 +606,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getBigDecimal() bigDecimal}' feature.
+   * @param newBigDecimal
+   *          the new value of the '{@link SingleTypes#getBigDecimal() bigDecimal}' feature.
    * @generated
    */
   public void setBigDecimal(BigDecimal newBigDecimal) {
@@ -631,8 +631,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getBigInteger() bigInteger}' feature.
+   * @param newBigInteger
+   *          the new value of the '{@link SingleTypes#getBigInteger() bigInteger}' feature.
    * @generated
    */
   public void setBigInteger(BigInteger newBigInteger) {
@@ -656,8 +656,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getEnum_() enum}' feature.
+   * @param newEnum_
+   *          the new value of the '{@link SingleTypes#getEnum_() enum}' feature.
    * @generated
    */
   public void setEnum_(TestEnum newEnum_) {
@@ -681,8 +681,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link SingleTypes#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -706,8 +706,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getStringArray() stringArray}' feature.
+   * @param newStringArray
+   *          the new value of the '{@link SingleTypes#getStringArray() stringArray}' feature.
    * @generated
    */
   public void setStringArray(String[] newStringArray) {
@@ -731,8 +731,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getLongArray() longArray}' feature.
+   * @param newLongArray
+   *          the new value of the '{@link SingleTypes#getLongArray() longArray}' feature.
    * @generated
    */
   public void setLongArray(long[] newLongArray) {
@@ -756,8 +756,8 @@ public class SingleTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SingleTypes#getNextEnum() nextEnum}' feature.
+   * @param newNextEnum
+   *          the new value of the '{@link SingleTypes#getNextEnum() nextEnum}' feature.
    * @generated
    */
   public void setNextEnum(TestNextEnum newNextEnum) {

@@ -171,10 +171,12 @@ public class MultiNumberTypeMyComplexAbstractGroupFeatureGroup extends Identifia
   /**
    * Sets the '{@link MultiNumberType#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link MultiNumberType#getMyComplexAbstract() myComplexAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value of the '{@link MultiNumberType#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexNumber newMyComplexAbstract) {
@@ -203,8 +205,8 @@ public class MultiNumberTypeMyComplexAbstractGroupFeatureGroup extends Identifia
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

@@ -56,8 +56,8 @@ public class Contact extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contact#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link Contact#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {
@@ -81,8 +81,8 @@ public class Contact extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contact#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link Contact#getType() type}' feature.
    * @generated
    */
   public void setType(ContactType newType) {

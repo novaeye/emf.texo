@@ -71,8 +71,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link A#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -96,8 +96,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getDoub() doub}' feature.
+   * @param newDoub
+   *          the new value of the '{@link A#getDoub() doub}' feature.
    * @generated
    */
   public void setDoub(double newDoub) {
@@ -121,8 +121,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getLon() lon}' feature.
+   * @param newLon
+   *          the new value of the '{@link A#getLon() lon}' feature.
    * @generated
    */
   public void setLon(long newLon) {
@@ -146,8 +146,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getMyB() myB}' feature.
+   * @param newMyB
+   *          the new value of the '{@link A#getMyB() myB}' feature.
    * @generated
    */
   public void setMyB(B newMyB) {

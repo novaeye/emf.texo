@@ -73,8 +73,8 @@ public class Library extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Library#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -131,8 +131,8 @@ public class Library extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getWriters() writers}' feature.
+   * @param newWriters
+   *          the new value of the '{@link Library#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(List<Writer> newWriters) {
@@ -189,8 +189,8 @@ public class Library extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getBooks() books}' feature.
+   * @param newBooks
+   *          the new value of the '{@link Library#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(List<Book> newBooks) {

@@ -45,8 +45,8 @@ public class Include2 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Include2#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link Include2#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {

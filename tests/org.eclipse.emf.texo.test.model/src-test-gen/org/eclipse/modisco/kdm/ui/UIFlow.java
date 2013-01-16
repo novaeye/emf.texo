@@ -51,8 +51,8 @@ public class UIFlow extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIFlow#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link UIFlow#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractUIElement newTo) {
@@ -76,8 +76,8 @@ public class UIFlow extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIFlow#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link UIFlow#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractUIElement newFrom) {

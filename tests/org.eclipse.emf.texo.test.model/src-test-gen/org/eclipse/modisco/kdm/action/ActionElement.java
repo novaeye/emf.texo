@@ -67,8 +67,8 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionElement#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link ActionElement#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -125,8 +125,8 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionElement#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link ActionElement#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<AbstractCodeElement> newCodeElement) {
@@ -183,8 +183,8 @@ public class ActionElement extends AbstractCodeElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActionElement#getActionRelation() actionRelation}' feature.
+   * @param newActionRelation
+   *          the new value of the '{@link ActionElement#getActionRelation() actionRelation}' feature.
    * @generated
    */
   public void setActionRelation(List<AbstractActionRelationship> newActionRelation) {

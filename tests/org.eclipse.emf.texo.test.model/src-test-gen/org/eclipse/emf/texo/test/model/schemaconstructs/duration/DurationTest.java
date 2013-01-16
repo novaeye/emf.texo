@@ -69,8 +69,8 @@ public class DurationTest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DurationTest#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link DurationTest#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -94,8 +94,8 @@ public class DurationTest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DurationTest#getDuration() duration}' feature.
+   * @param newDuration
+   *          the new value of the '{@link DurationTest#getDuration() duration}' feature.
    * @generated
    */
   public void setDuration(Duration newDuration) {
@@ -119,8 +119,8 @@ public class DurationTest extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DurationTest#getDurations() durations}' feature.
+   * @param newDurations
+   *          the new value of the '{@link DurationTest#getDurations() durations}' feature.
    * @generated
    */
   public void setDurations(List<Duration> newDurations) {

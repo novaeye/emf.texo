@@ -45,8 +45,8 @@ public abstract class RentalUnit extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalUnit#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link RentalUnit#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {

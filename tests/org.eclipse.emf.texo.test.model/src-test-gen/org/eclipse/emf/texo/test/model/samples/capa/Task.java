@@ -87,8 +87,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getCapacityEntry() capacityEntry}' feature.
+   * @param newCapacityEntry
+   *          the new value of the '{@link Task#getCapacityEntry() capacityEntry}' feature.
    * @generated
    */
   public void setCapacityEntry(CapacityEntry newCapacityEntry) {
@@ -112,8 +112,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getProduction() production}' feature.
+   * @param newProduction
+   *          the new value of the '{@link Task#getProduction() production}' feature.
    * @generated
    */
   public void setProduction(Production newProduction) {
@@ -137,8 +137,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Task#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -162,8 +162,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getTaskId() taskId}' feature.
+   * @param newTaskId
+   *          the new value of the '{@link Task#getTaskId() taskId}' feature.
    * @generated
    */
   public void setTaskId(String newTaskId) {
@@ -187,8 +187,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getTimePerPice() timePerPice}' feature.
+   * @param newTimePerPice
+   *          the new value of the '{@link Task#getTimePerPice() timePerPice}' feature.
    * @generated
    */
   public void setTimePerPice(Float newTimePerPice) {
@@ -212,8 +212,8 @@ public class Task extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Task#getTimePerPreperation() timePerPreperation}' feature.
+   * @param newTimePerPreperation
+   *          the new value of the '{@link Task#getTimePerPreperation() timePerPreperation}' feature.
    * @generated
    */
   public void setTimePerPreperation(Float newTimePerPreperation) {

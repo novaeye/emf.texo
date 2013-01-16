@@ -58,8 +58,8 @@ public class Vat extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Vat#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Vat#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -83,8 +83,8 @@ public class Vat extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Vat#getRate() rate}' feature.
+   * @param newRate
+   *          the new value of the '{@link Vat#getRate() rate}' feature.
    * @generated
    */
   public void setRate(float newRate) {

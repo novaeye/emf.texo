@@ -51,8 +51,8 @@ public class Redefines extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Redefines#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Redefines#getTo() to}' feature.
    * @generated
    */
   public void setTo(MacroUnit newTo) {
@@ -76,8 +76,8 @@ public class Redefines extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Redefines#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Redefines#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(PreprocessorDirective newFrom) {

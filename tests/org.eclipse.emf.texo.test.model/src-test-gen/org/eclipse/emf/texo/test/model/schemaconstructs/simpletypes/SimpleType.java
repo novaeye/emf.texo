@@ -151,8 +151,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link SimpleType#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -176,8 +176,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#isBoo() boo}' feature.
+   * @param newBoo
+   *          the new value of the '{@link SimpleType#isBoo() boo}' feature.
    * @generated
    */
   public void setBoo(boolean newBoo) {
@@ -201,8 +201,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getByt() byt}' feature.
+   * @param newByt
+   *          the new value of the '{@link SimpleType#getByt() byt}' feature.
    * @generated
    */
   public void setByt(byte newByt) {
@@ -226,8 +226,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getDoubl() doubl}' feature.
+   * @param newDoubl
+   *          the new value of the '{@link SimpleType#getDoubl() doubl}' feature.
    * @generated
    */
   public void setDoubl(double newDoubl) {
@@ -251,8 +251,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getFloat_() float}' feature.
+   * @param newFloat_
+   *          the new value of the '{@link SimpleType#getFloat_() float}' feature.
    * @generated
    */
   public void setFloat_(float newFloat_) {
@@ -276,8 +276,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getInte() inte}' feature.
+   * @param newInte
+   *          the new value of the '{@link SimpleType#getInte() inte}' feature.
    * @generated
    */
   public void setInte(int newInte) {
@@ -301,8 +301,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getLon() lon}' feature.
+   * @param newLon
+   *          the new value of the '{@link SimpleType#getLon() lon}' feature.
    * @generated
    */
   public void setLon(long newLon) {
@@ -326,8 +326,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getShor() shor}' feature.
+   * @param newShor
+   *          the new value of the '{@link SimpleType#getShor() shor}' feature.
    * @generated
    */
   public void setShor(short newShor) {
@@ -351,8 +351,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getEnu() enu}' feature.
+   * @param newEnu
+   *          the new value of the '{@link SimpleType#getEnu() enu}' feature.
    * @generated
    */
   public void setEnu(SimpleEnum newEnu) {
@@ -376,8 +376,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getDat() dat}' feature.
+   * @param newDat
+   *          the new value of the '{@link SimpleType#getDat() dat}' feature.
    * @generated
    */
   public void setDat(Date newDat) {
@@ -401,8 +401,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getLimitedstring() limitedstring}' feature.
+   * @param newLimitedstring
+   *          the new value of the '{@link SimpleType#getLimitedstring() limitedstring}' feature.
    * @generated
    */
   public void setLimitedstring(String newLimitedstring) {
@@ -426,8 +426,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getLimitedDecimal() limitedDecimal}' feature.
+   * @param newLimitedDecimal
+   *          the new value of the '{@link SimpleType#getLimitedDecimal() limitedDecimal}' feature.
    * @generated
    */
   public void setLimitedDecimal(BigDecimal newLimitedDecimal) {
@@ -451,8 +451,8 @@ public class SimpleType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleType#getExtraLimitedString() extraLimitedString}' feature.
+   * @param newExtraLimitedString
+   *          the new value of the '{@link SimpleType#getExtraLimitedString() extraLimitedString}' feature.
    * @generated
    */
   public void setExtraLimitedString(String newExtraLimitedString) {

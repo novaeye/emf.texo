@@ -81,8 +81,8 @@ public class ComplexContentType extends AbstractContentElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ComplexContentType#getContentElement() contentElement}' feature.
+   * @param newContentElement
+   *          the new value of the '{@link ComplexContentType#getContentElement() contentElement}' feature.
    * @generated
    */
   public void setContentElement(List<AbstractContentElement> newContentElement) {

@@ -173,10 +173,12 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressList#getShipTo() <em>shipTo</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newShipTo
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getShipTo() shipTo}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newShipTo
+   *          the new value of the '{@link AddressList#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(AddressType newShipTo) {
@@ -199,10 +201,12 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressList#getBillTo() <em>billTo</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBillTo
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getBillTo() billTo}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBillTo
+   *          the new value of the '{@link AddressList#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(AddressType newBillTo) {
@@ -233,8 +237,8 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

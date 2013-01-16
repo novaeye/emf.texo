@@ -181,8 +181,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getString() string}' feature.
+   * @param newString
+   *          the new value of the '{@link ManyTypes#getString() string}' feature.
    * @generated
    */
   public void setString(List<String> newString) {
@@ -206,8 +206,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getIntegerObject() integerObject}' feature.
+   * @param newIntegerObject
+   *          the new value of the '{@link ManyTypes#getIntegerObject() integerObject}' feature.
    * @generated
    */
   public void setIntegerObject(List<Integer> newIntegerObject) {
@@ -231,8 +231,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getLong_() long}' feature.
+   * @param newLong_
+   *          the new value of the '{@link ManyTypes#getLong_() long}' feature.
    * @generated
    */
   public void setLong_(Set<Long> newLong_) {
@@ -256,8 +256,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getDoubleObject() doubleObject}' feature.
+   * @param newDoubleObject
+   *          the new value of the '{@link ManyTypes#getDoubleObject() doubleObject}' feature.
    * @generated
    */
   public void setDoubleObject(Set<Double> newDoubleObject) {
@@ -281,8 +281,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getFloatObject() floatObject}' feature.
+   * @param newFloatObject
+   *          the new value of the '{@link ManyTypes#getFloatObject() floatObject}' feature.
    * @generated
    */
   public void setFloatObject(List<Float> newFloatObject) {
@@ -306,8 +306,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getClazz() clazz}' feature.
+   * @param newClazz
+   *          the new value of the '{@link ManyTypes#getClazz() clazz}' feature.
    * @generated
    */
   public void setClazz(Set<Class> newClazz) {
@@ -331,8 +331,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getCharObject() charObject}' feature.
+   * @param newCharObject
+   *          the new value of the '{@link ManyTypes#getCharObject() charObject}' feature.
    * @generated
    */
   public void setCharObject(List<Character> newCharObject) {
@@ -356,8 +356,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getByteObject() byteObject}' feature.
+   * @param newByteObject
+   *          the new value of the '{@link ManyTypes#getByteObject() byteObject}' feature.
    * @generated
    */
   public void setByteObject(List<Byte> newByteObject) {
@@ -381,8 +381,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getByteArray() byteArray}' feature.
+   * @param newByteArray
+   *          the new value of the '{@link ManyTypes#getByteArray() byteArray}' feature.
    * @generated
    */
   public void setByteArray(List<byte[]> newByteArray) {
@@ -406,8 +406,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getBigDecimal() bigDecimal}' feature.
+   * @param newBigDecimal
+   *          the new value of the '{@link ManyTypes#getBigDecimal() bigDecimal}' feature.
    * @generated
    */
   public void setBigDecimal(List<BigDecimal> newBigDecimal) {
@@ -431,8 +431,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getBigInteger() bigInteger}' feature.
+   * @param newBigInteger
+   *          the new value of the '{@link ManyTypes#getBigInteger() bigInteger}' feature.
    * @generated
    */
   public void setBigInteger(Set<BigInteger> newBigInteger) {
@@ -456,8 +456,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getEnum_() enum}' feature.
+   * @param newEnum_
+   *          the new value of the '{@link ManyTypes#getEnum_() enum}' feature.
    * @generated
    */
   public void setEnum_(List<TestEnum> newEnum_) {
@@ -481,8 +481,8 @@ public class ManyTypes extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManyTypes#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link ManyTypes#getDate() date}' feature.
    * @generated
    */
   public void setDate(Set<Date> newDate) {

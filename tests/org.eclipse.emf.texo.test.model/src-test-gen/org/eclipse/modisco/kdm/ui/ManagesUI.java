@@ -53,8 +53,8 @@ public class ManagesUI extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManagesUI#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ManagesUI#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -78,8 +78,8 @@ public class ManagesUI extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ManagesUI#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ManagesUI#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

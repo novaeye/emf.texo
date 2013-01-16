@@ -52,8 +52,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link DocumentRoot#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<DocumentRootMixedFeatureGroup> newMixed) {
@@ -77,8 +77,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
+   * @param newXMLNSPrefixMap
+   *          the new value of the '{@link DocumentRoot#getXMLNSPrefixMap() xMLNSPrefixMap}' feature.
    * @generated
    */
   public void setXMLNSPrefixMap(Map<String, String> newXMLNSPrefixMap) {
@@ -102,8 +102,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
+   * @param newXSISchemaLocation
+   *          the new value of the '{@link DocumentRoot#getXSISchemaLocation() xSISchemaLocation}' feature.
    * @generated
    */
   public void setXSISchemaLocation(Map<String, String> newXSISchemaLocation) {
@@ -128,8 +128,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getEven() even}' feature.
+   * @param newEven
+   *          the new value of the '{@link DocumentRoot#getEven() even}' feature.
    * @generated
    */
   public void setEven(EvenType newEven) {
@@ -168,8 +168,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
+   * @param newEvenComplexNumber
+   *          the new value of the '{@link DocumentRoot#getEvenComplexNumber() evenComplexNumber}' feature.
    * @generated
    */
   public void setEvenComplexNumber(EvenComplexNumberType newEvenComplexNumber) {
@@ -208,8 +208,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
+   * @param newMultiNumber
+   *          the new value of the '{@link DocumentRoot#getMultiNumber() multiNumber}' feature.
    * @generated
    */
   public void setMultiNumber(MultiNumberType newMultiNumber) {
@@ -235,8 +235,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link DocumentRoot#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(NumberType newNumber) {
@@ -262,8 +262,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOdd() odd}' feature.
+   * @param newOdd
+   *          the new value of the '{@link DocumentRoot#getOdd() odd}' feature.
    * @generated
    */
   public void setOdd(OddType newOdd) {
@@ -289,8 +289,8 @@ public class DocumentRoot extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
+   * @param newOddComplexNumber
+   *          the new value of the '{@link DocumentRoot#getOddComplexNumber() oddComplexNumber}' feature.
    * @generated
    */
   public void setOddComplexNumber(OddComplexNumberType newOddComplexNumber) {

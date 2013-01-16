@@ -61,8 +61,8 @@ public class BookStore extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookStore#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link BookStore#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -86,8 +86,8 @@ public class BookStore extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookStore#getWritersByBook() writersByBook}' feature.
+   * @param newWritersByBook
+   *          the new value of the '{@link BookStore#getWritersByBook() writersByBook}' feature.
    * @generated
    */
   public void setWritersByBook(Map<Writer, Book> newWritersByBook) {

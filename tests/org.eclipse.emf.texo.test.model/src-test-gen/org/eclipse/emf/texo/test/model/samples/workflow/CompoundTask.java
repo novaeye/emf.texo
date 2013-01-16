@@ -46,8 +46,8 @@ public class CompoundTask extends WorkflowNode {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CompoundTask#getSubworkflow() subworkflow}' feature.
+   * @param newSubworkflow
+   *          the new value of the '{@link CompoundTask#getSubworkflow() subworkflow}' feature.
    * @generated
    */
   public void setSubworkflow(Workflow newSubworkflow) {

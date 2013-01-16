@@ -70,8 +70,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getCountry() country}' feature.
+   * @param newCountry
+   *          the new value of the '{@link StatesByCountry#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {
@@ -95,8 +95,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getIndex() index}' feature.
+   * @param newIndex
+   *          the new value of the '{@link StatesByCountry#getIndex() index}' feature.
    * @generated
    */
   public void setIndex(int newIndex) {
@@ -120,8 +120,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
+   * @param newAllStates
+   *          the new value of the '{@link StatesByCountry#getAllStates() allStates}' feature.
    * @generated
    */
   public void setAllStates(List<String> newAllStates) {
@@ -145,8 +145,8 @@ public class StatesByCountry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
+   * @param newSixImportantStates
+   *          the new value of the '{@link StatesByCountry#getSixImportantStates() sixImportantStates}' feature.
    * @generated
    */
   public void setSixImportantStates(List<String> newSixImportantStates) {

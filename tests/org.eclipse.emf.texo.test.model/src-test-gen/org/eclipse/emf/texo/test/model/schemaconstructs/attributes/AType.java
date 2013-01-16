@@ -87,8 +87,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link AType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -112,8 +112,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getB() b}' feature.
+   * @param newB
+   *          the new value of the '{@link AType#getB() b}' feature.
    * @generated
    */
   public void setB(Long newB) {
@@ -137,8 +137,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getC() c}' feature.
+   * @param newC
+   *          the new value of the '{@link AType#getC() c}' feature.
    * @generated
    */
   public void setC(String newC) {
@@ -162,8 +162,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link AType#getId() id}' feature.
    * @generated
    */
   public void setId(String newId) {
@@ -187,8 +187,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getD() d}' feature.
+   * @param newD
+   *          the new value of the '{@link AType#getD() d}' feature.
    * @generated
    */
   public void setD(String newD) {
@@ -212,8 +212,8 @@ public class AType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AType#getMyR() myR}' feature.
+   * @param newMyR
+   *          the new value of the '{@link AType#getMyR() myR}' feature.
    * @generated
    */
   public void setMyR(Object newMyR) {

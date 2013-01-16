@@ -79,8 +79,8 @@ public class PlatformModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlatformModel#getPlatformElement() platformElement}' feature.
+   * @param newPlatformElement
+   *          the new value of the '{@link PlatformModel#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<AbstractPlatformElement> newPlatformElement) {

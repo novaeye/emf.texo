@@ -80,8 +80,8 @@ public class CompositeType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CompositeType#getItemUnit() itemUnit}' feature.
+   * @param newItemUnit
+   *          the new value of the '{@link CompositeType#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(List<ItemUnit> newItemUnit) {

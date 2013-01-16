@@ -45,8 +45,8 @@ public class CallableUnit extends ControlElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CallableUnit#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link CallableUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(CallableKind newKind) {

@@ -52,8 +52,8 @@ public class Displays extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Displays#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Displays#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -77,8 +77,8 @@ public class Displays extends AbstractUIRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Displays#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Displays#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

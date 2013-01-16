@@ -192,8 +192,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -218,8 +218,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -244,8 +244,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -268,10 +268,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getAtest() <em>atest</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAtest
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAtest() atest}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAtest
+   *          the new value of the '{@link DocumentRoot#getAtest() atest}' feature.
    * @generated
    */
   public void setAtest(Mytest newAtest) {
@@ -306,8 +308,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

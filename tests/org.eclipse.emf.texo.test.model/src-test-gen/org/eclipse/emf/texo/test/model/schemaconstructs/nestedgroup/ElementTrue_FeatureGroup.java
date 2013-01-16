@@ -164,10 +164,12 @@ public class ElementTrue_FeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getC() <em>c</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Element#getC() c}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value of the '{@link Element#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -196,8 +198,8 @@ public class ElementTrue_FeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

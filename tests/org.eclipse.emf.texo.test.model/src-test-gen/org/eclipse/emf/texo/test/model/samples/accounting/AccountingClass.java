@@ -110,8 +110,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link AccountingClass#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -168,8 +168,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getAccountGroup() accountGroup}' feature.
+   * @param newAccountGroup
+   *          the new value of the '{@link AccountingClass#getAccountGroup() accountGroup}' feature.
    * @generated
    */
   public void setAccountGroup(List<AccountGroup> newAccountGroup) {
@@ -226,8 +226,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getVat() vat}' feature.
+   * @param newVat
+   *          the new value of the '{@link AccountingClass#getVat() vat}' feature.
    * @generated
    */
   public void setVat(List<Vat> newVat) {
@@ -251,8 +251,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getVatAccount() vatAccount}' feature.
+   * @param newVatAccount
+   *          the new value of the '{@link AccountingClass#getVatAccount() vatAccount}' feature.
    * @generated
    */
   public void setVatAccount(BalanceAccount newVatAccount) {
@@ -276,8 +276,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getReport() report}' feature.
+   * @param newReport
+   *          the new value of the '{@link AccountingClass#getReport() report}' feature.
    * @generated
    */
   public void setReport(Report newReport) {
@@ -334,8 +334,8 @@ public class AccountingClass extends Identifiable implements Serializable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AccountingClass#getJournalGroup() journalGroup}' feature.
+   * @param newJournalGroup
+   *          the new value of the '{@link AccountingClass#getJournalGroup() journalGroup}' feature.
    * @generated
    */
   public void setJournalGroup(List<JournalGroup> newJournalGroup) {

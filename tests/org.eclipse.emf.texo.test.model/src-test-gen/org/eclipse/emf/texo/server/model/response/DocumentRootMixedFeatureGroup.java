@@ -206,8 +206,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -232,8 +232,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -258,8 +258,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -282,10 +282,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getError() <em>error</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newError
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getError() error}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newError
+   *          the new value of the '{@link DocumentRoot#getError() error}' feature.
    * @generated
    */
   public void setError(ErrorType newError) {
@@ -308,10 +310,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getResponse() <em>response</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newResponse
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getResponse() response}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newResponse
+   *          the new value of the '{@link DocumentRoot#getResponse() response}' feature.
    * @generated
    */
   public void setResponse(ResponseType newResponse) {
@@ -334,10 +338,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getResult() <em>result</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newResult
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getResult() result}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newResult
+   *          the new value of the '{@link DocumentRoot#getResult() result}' feature.
    * @generated
    */
   public void setResult(ResultType newResult) {
@@ -376,8 +382,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

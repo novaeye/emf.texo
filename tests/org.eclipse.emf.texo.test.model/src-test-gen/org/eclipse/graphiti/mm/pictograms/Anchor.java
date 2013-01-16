@@ -71,8 +71,8 @@ public abstract class Anchor extends PictogramElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Anchor#getParent() parent}' feature.
+   * @param newParent
+   *          the new value of the '{@link Anchor#getParent() parent}' feature.
    * @generated
    */
   public void setParent(AnchorContainer newParent) {
@@ -129,8 +129,8 @@ public abstract class Anchor extends PictogramElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Anchor#getOutgoingConnections() outgoingConnections}' feature.
+   * @param newOutgoingConnections
+   *          the new value of the '{@link Anchor#getOutgoingConnections() outgoingConnections}' feature.
    * @generated
    */
   public void setOutgoingConnections(Set<Connection> newOutgoingConnections) {
@@ -187,8 +187,8 @@ public abstract class Anchor extends PictogramElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Anchor#getIncomingConnections() incomingConnections}' feature.
+   * @param newIncomingConnections
+   *          the new value of the '{@link Anchor#getIncomingConnections() incomingConnections}' feature.
    * @generated
    */
   public void setIncomingConnections(Set<Connection> newIncomingConnections) {
@@ -212,8 +212,9 @@ public abstract class Anchor extends PictogramElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Anchor#getReferencedGraphicsAlgorithm() referencedGraphicsAlgorithm}' feature.
+   * @param newReferencedGraphicsAlgorithm
+   *          the new value of the '{@link Anchor#getReferencedGraphicsAlgorithm() referencedGraphicsAlgorithm}'
+   *          feature.
    * @generated
    */
   public void setReferencedGraphicsAlgorithm(GraphicsAlgorithm newReferencedGraphicsAlgorithm) {

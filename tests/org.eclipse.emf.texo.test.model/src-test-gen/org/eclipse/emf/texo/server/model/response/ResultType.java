@@ -104,8 +104,8 @@ public class ResultType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResultType#getUpdated() updated}' feature.
+   * @param newUpdated
+   *          the new value of the '{@link ResultType#getUpdated() updated}' feature.
    * @generated
    */
   public void setUpdated(List<Object> newUpdated) {
@@ -162,8 +162,8 @@ public class ResultType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResultType#getInserted() inserted}' feature.
+   * @param newInserted
+   *          the new value of the '{@link ResultType#getInserted() inserted}' feature.
    * @generated
    */
   public void setInserted(List<Object> newInserted) {
@@ -220,8 +220,8 @@ public class ResultType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResultType#getDeleted() deleted}' feature.
+   * @param newDeleted
+   *          the new value of the '{@link ResultType#getDeleted() deleted}' feature.
    * @generated
    */
   public void setDeleted(List<Object> newDeleted) {

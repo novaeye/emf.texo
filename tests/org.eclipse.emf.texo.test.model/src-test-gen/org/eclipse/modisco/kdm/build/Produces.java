@@ -51,8 +51,8 @@ public class Produces extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Produces#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Produces#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractBuildElement newTo) {
@@ -76,8 +76,8 @@ public class Produces extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Produces#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Produces#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(BuildStep newFrom) {

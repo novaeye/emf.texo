@@ -54,8 +54,8 @@ public class EventAction extends AbstractEventElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EventAction#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link EventAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -112,8 +112,8 @@ public class EventAction extends AbstractEventElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EventAction#getEventElement() eventElement}' feature.
+   * @param newEventElement
+   *          the new value of the '{@link EventAction#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<Event> newEventElement) {

@@ -54,8 +54,8 @@ public class DefinedBy extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DefinedBy#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link DefinedBy#getTo() to}' feature.
    * @generated
    */
   public void setTo(CodeItem newTo) {
@@ -79,8 +79,8 @@ public class DefinedBy extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DefinedBy#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link DefinedBy#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

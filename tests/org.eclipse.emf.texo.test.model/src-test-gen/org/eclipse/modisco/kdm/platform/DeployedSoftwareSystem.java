@@ -79,8 +79,8 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DeployedSoftwareSystem#getGroupedComponent() groupedComponent}' feature.
+   * @param newGroupedComponent
+   *          the new value of the '{@link DeployedSoftwareSystem#getGroupedComponent() groupedComponent}' feature.
    * @generated
    */
   public void setGroupedComponent(Set<DeployedComponent> newGroupedComponent) {

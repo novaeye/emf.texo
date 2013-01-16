@@ -82,8 +82,8 @@ public class Book extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getAuthors() authors}' feature.
+   * @param newAuthors
+   *          the new value of the '{@link Book#getAuthors() authors}' feature.
    * @generated
    */
   public void setAuthors(List<Author> newAuthors) {

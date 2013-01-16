@@ -43,8 +43,8 @@ public class SchoolBook extends Book implements Asset {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SchoolBook#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link SchoolBook#getValue() value}' feature.
    * @generated
    */
   public void setValue(float newValue) {

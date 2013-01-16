@@ -53,8 +53,8 @@ public class CodeRelationship extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CodeRelationship#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link CodeRelationship#getTo() to}' feature.
    * @generated
    */
   public void setTo(KDMEntity newTo) {
@@ -78,8 +78,8 @@ public class CodeRelationship extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CodeRelationship#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link CodeRelationship#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(CodeItem newFrom) {

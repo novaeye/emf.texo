@@ -93,8 +93,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getProductName() productName}' feature.
+   * @param newProductName
+   *          the new value of the '{@link Item#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -118,8 +118,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getQuantity() quantity}' feature.
+   * @param newQuantity
+   *          the new value of the '{@link Item#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -143,8 +143,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getUSPrice() uSPrice}' feature.
+   * @param newUSPrice
+   *          the new value of the '{@link Item#getUSPrice() uSPrice}' feature.
    * @generated
    */
   public void setUSPrice(BigDecimal newUSPrice) {
@@ -168,8 +168,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link Item#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -193,8 +193,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getShipDate() shipDate}' feature.
+   * @param newShipDate
+   *          the new value of the '{@link Item#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {
@@ -218,8 +218,8 @@ public class Item extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Item#getPartNum() partNum}' feature.
+   * @param newPartNum
+   *          the new value of the '{@link Item#getPartNum() partNum}' feature.
    * @generated
    */
   public void setPartNum(String newPartNum) {

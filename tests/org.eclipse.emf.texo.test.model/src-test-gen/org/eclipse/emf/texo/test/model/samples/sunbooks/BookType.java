@@ -118,8 +118,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link BookType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -143,8 +143,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getISBN() iSBN}' feature.
+   * @param newISBN
+   *          the new value of the '{@link BookType#getISBN() iSBN}' feature.
    * @generated
    */
   public void setISBN(long newISBN) {
@@ -168,8 +168,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getPrice() price}' feature.
+   * @param newPrice
+   *          the new value of the '{@link BookType#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(String newPrice) {
@@ -193,8 +193,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getAuthors() authors}' feature.
+   * @param newAuthors
+   *          the new value of the '{@link BookType#getAuthors() authors}' feature.
    * @generated
    */
   public void setAuthors(AuthorsType newAuthors) {
@@ -218,8 +218,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link BookType#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -243,8 +243,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getPromotion() promotion}' feature.
+   * @param newPromotion
+   *          the new value of the '{@link BookType#getPromotion() promotion}' feature.
    * @generated
    */
   public void setPromotion(PromotionType newPromotion) {
@@ -268,8 +268,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getPublicationDate() publicationDate}' feature.
+   * @param newPublicationDate
+   *          the new value of the '{@link BookType#getPublicationDate() publicationDate}' feature.
    * @generated
    */
   public void setPublicationDate(Date newPublicationDate) {
@@ -293,8 +293,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getBookCategory() bookCategory}' feature.
+   * @param newBookCategory
+   *          the new value of the '{@link BookType#getBookCategory() bookCategory}' feature.
    * @generated
    */
   public void setBookCategory(BookCategoryType1 newBookCategory) {
@@ -318,8 +318,8 @@ public class BookType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookType#getItemId() itemId}' feature.
+   * @param newItemId
+   *          the new value of the '{@link BookType#getItemId() itemId}' feature.
    * @generated
    */
   public void setItemId(String newItemId) {

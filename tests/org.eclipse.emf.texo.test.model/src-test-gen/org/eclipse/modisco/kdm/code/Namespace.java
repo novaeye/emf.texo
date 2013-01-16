@@ -78,8 +78,8 @@ public class Namespace extends CodeItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Namespace#getGroupedCode() groupedCode}' feature.
+   * @param newGroupedCode
+   *          the new value of the '{@link Namespace#getGroupedCode() groupedCode}' feature.
    * @generated
    */
   public void setGroupedCode(Set<CodeItem> newGroupedCode) {

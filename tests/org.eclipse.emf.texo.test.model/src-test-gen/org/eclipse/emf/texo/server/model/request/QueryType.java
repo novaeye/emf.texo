@@ -99,8 +99,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#getQuery() query}' feature.
+   * @param newQuery
+   *          the new value of the '{@link QueryType#getQuery() query}' feature.
    * @generated
    */
   public void setQuery(String newQuery) {
@@ -124,8 +124,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#getNamedQuery() namedQuery}' feature.
+   * @param newNamedQuery
+   *          the new value of the '{@link QueryType#getNamedQuery() namedQuery}' feature.
    * @generated
    */
   public void setNamedQuery(String newNamedQuery) {
@@ -182,8 +182,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#getParameters() parameters}' feature.
+   * @param newParameters
+   *          the new value of the '{@link QueryType#getParameters() parameters}' feature.
    * @generated
    */
   public void setParameters(List<Parameter> newParameters) {
@@ -207,8 +207,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#getFirstResult() firstResult}' feature.
+   * @param newFirstResult
+   *          the new value of the '{@link QueryType#getFirstResult() firstResult}' feature.
    * @generated
    */
   public void setFirstResult(int newFirstResult) {
@@ -232,8 +232,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#getMaxResults() maxResults}' feature.
+   * @param newMaxResults
+   *          the new value of the '{@link QueryType#getMaxResults() maxResults}' feature.
    * @generated
    */
   public void setMaxResults(int newMaxResults) {
@@ -257,8 +257,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#isDoCount() doCount}' feature.
+   * @param newDoCount
+   *          the new value of the '{@link QueryType#isDoCount() doCount}' feature.
    * @generated
    */
   public void setDoCount(boolean newDoCount) {
@@ -282,8 +282,8 @@ public class QueryType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryType#isCountOperation() countOperation}' feature.
+   * @param newCountOperation
+   *          the new value of the '{@link QueryType#isCountOperation() countOperation}' feature.
    * @generated
    */
   public void setCountOperation(boolean newCountOperation) {

@@ -51,8 +51,8 @@ public class Implements extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Implements#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Implements#getTo() to}' feature.
    * @generated
    */
   public void setTo(CodeItem newTo) {
@@ -76,8 +76,8 @@ public class Implements extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Implements#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Implements#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(CodeItem newFrom) {

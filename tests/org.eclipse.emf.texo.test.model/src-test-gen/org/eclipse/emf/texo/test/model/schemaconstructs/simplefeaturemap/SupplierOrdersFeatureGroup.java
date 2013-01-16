@@ -187,10 +187,12 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPreferredOrders
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPreferredOrders
+   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
    * @generated
    */
   public void setPreferredOrders(PurchaseOrder newPreferredOrders) {
@@ -213,10 +215,12 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStandardOrders
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStandardOrders
+   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
    * @generated
    */
   public void setStandardOrders(PurchaseOrder newStandardOrders) {
@@ -239,10 +243,12 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getHardCopyOrderReference() <em>hardCopyOrderReference</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newHardCopyOrderReference
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newHardCopyOrderReference
+   *          the new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
    * @generated
    */
   public void setHardCopyOrderReference(String newHardCopyOrderReference) {
@@ -265,10 +271,12 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getHardCopyOrderNumber() <em>hardCopyOrderNumber</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newHardCopyOrderNumber
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newHardCopyOrderNumber
+   *          the new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
    * @generated
    */
   public void setHardCopyOrderNumber(Long newHardCopyOrderNumber) {
@@ -303,8 +311,8 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

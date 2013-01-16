@@ -71,8 +71,8 @@ public abstract class PictogramElement extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramElement#isVisible() visible}' feature.
+   * @param newVisible
+   *          the new value of the '{@link PictogramElement#isVisible() visible}' feature.
    * @generated
    */
   public void setVisible(boolean newVisible) {
@@ -96,8 +96,8 @@ public abstract class PictogramElement extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramElement#getGraphicsAlgorithm() graphicsAlgorithm}' feature.
+   * @param newGraphicsAlgorithm
+   *          the new value of the '{@link PictogramElement#getGraphicsAlgorithm() graphicsAlgorithm}' feature.
    * @generated
    */
   public void setGraphicsAlgorithm(GraphicsAlgorithm newGraphicsAlgorithm) {
@@ -121,8 +121,8 @@ public abstract class PictogramElement extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramElement#isActive() active}' feature.
+   * @param newActive
+   *          the new value of the '{@link PictogramElement#isActive() active}' feature.
    * @generated
    */
   public void setActive(boolean newActive) {
@@ -146,8 +146,8 @@ public abstract class PictogramElement extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramElement#getLink() link}' feature.
+   * @param newLink
+   *          the new value of the '{@link PictogramElement#getLink() link}' feature.
    * @generated
    */
   public void setLink(PictogramLink newLink) {

@@ -59,8 +59,8 @@ public class PictogramLink extends PropertyContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramLink#getPictogramElement() pictogramElement}' feature.
+   * @param newPictogramElement
+   *          the new value of the '{@link PictogramLink#getPictogramElement() pictogramElement}' feature.
    * @generated
    */
   public void setPictogramElement(PictogramElement newPictogramElement) {
@@ -117,8 +117,8 @@ public class PictogramLink extends PropertyContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PictogramLink#getBusinessObjects() businessObjects}' feature.
+   * @param newBusinessObjects
+   *          the new value of the '{@link PictogramLink#getBusinessObjects() businessObjects}' feature.
    * @generated
    */
   public void setBusinessObjects(List<Object> newBusinessObjects) {

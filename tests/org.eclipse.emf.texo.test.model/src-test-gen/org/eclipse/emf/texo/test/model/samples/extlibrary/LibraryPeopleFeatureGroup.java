@@ -180,10 +180,12 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Library#getWriters() <em>writers</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newWriters
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Library#getWriters() writers}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newWriters
+   *          the new value of the '{@link Library#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(Writer newWriters) {
@@ -206,10 +208,12 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Library#getEmployees() <em>employees</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEmployees
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Library#getEmployees() employees}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEmployees
+   *          the new value of the '{@link Library#getEmployees() employees}' feature.
    * @generated
    */
   public void setEmployees(Employee newEmployees) {
@@ -232,10 +236,12 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Library#getBorrowers() <em>borrowers</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBorrowers
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Library#getBorrowers() borrowers}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBorrowers
+   *          the new value of the '{@link Library#getBorrowers() borrowers}' feature.
    * @generated
    */
   public void setBorrowers(Borrower newBorrowers) {
@@ -268,8 +274,8 @@ public class LibraryPeopleFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

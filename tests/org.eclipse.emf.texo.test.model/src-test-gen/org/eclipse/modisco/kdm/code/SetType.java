@@ -42,8 +42,8 @@ public class SetType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SetType#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link SetType#getSize() size}' feature.
    * @generated
    */
   public void setSize(Integer newSize) {

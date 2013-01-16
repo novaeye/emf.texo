@@ -67,8 +67,8 @@ public class NameList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NameList#getFirstName() firstName}' feature.
+   * @param newFirstName
+   *          the new value of the '{@link NameList#getFirstName() firstName}' feature.
    * @generated
    */
   public void setFirstName(String newFirstName) {
@@ -92,8 +92,8 @@ public class NameList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NameList#getMiddleName() middleName}' feature.
+   * @param newMiddleName
+   *          the new value of the '{@link NameList#getMiddleName() middleName}' feature.
    * @generated
    */
   public void setMiddleName(String newMiddleName) {
@@ -117,8 +117,8 @@ public class NameList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NameList#getLastName() lastName}' feature.
+   * @param newLastName
+   *          the new value of the '{@link NameList#getLastName() lastName}' feature.
    * @generated
    */
   public void setLastName(String newLastName) {

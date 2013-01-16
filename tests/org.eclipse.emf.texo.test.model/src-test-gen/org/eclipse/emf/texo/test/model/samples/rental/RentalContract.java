@@ -88,8 +88,8 @@ public class RentalContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContract#getRentToBusinessPartner() rentToBusinessPartner}' feature.
+   * @param newRentToBusinessPartner
+   *          the new value of the '{@link RentalContract#getRentToBusinessPartner() rentToBusinessPartner}' feature.
    * @generated
    */
   public void setRentToBusinessPartner(String newRentToBusinessPartner) {
@@ -113,8 +113,8 @@ public class RentalContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContract#getStartDate() startDate}' feature.
+   * @param newStartDate
+   *          the new value of the '{@link RentalContract#getStartDate() startDate}' feature.
    * @generated
    */
   public void setStartDate(Date newStartDate) {
@@ -138,8 +138,8 @@ public class RentalContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContract#getEndDate() endDate}' feature.
+   * @param newEndDate
+   *          the new value of the '{@link RentalContract#getEndDate() endDate}' feature.
    * @generated
    */
   public void setEndDate(Date newEndDate) {
@@ -163,8 +163,8 @@ public class RentalContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContract#getCost() cost}' feature.
+   * @param newCost
+   *          the new value of the '{@link RentalContract#getCost() cost}' feature.
    * @generated
    */
   public void setCost(float newCost) {
@@ -221,8 +221,8 @@ public class RentalContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContract#getRentalContractLines() rentalContractLines}' feature.
+   * @param newRentalContractLines
+   *          the new value of the '{@link RentalContract#getRentalContractLines() rentalContractLines}' feature.
    * @generated
    */
   public void setRentalContractLines(List<RentalContractLine> newRentalContractLines) {

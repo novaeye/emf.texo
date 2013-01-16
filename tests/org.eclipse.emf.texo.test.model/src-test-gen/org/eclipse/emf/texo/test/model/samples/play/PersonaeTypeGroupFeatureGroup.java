@@ -180,10 +180,12 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getTitle() <em>title</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newTitle
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getTitle() title}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newTitle
+   *          the new value of the '{@link PersonaeType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -206,10 +208,12 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getPersona() <em>persona</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPersona
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getPersona() persona}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPersona
+   *          the new value of the '{@link PersonaeType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(String newPersona) {
@@ -232,10 +236,12 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getPersonaGroup() <em>personaGroup</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPersonaGroup
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newPersonaGroup
+   *          the new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(PersonaGroupType newPersonaGroup) {
@@ -268,8 +274,8 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

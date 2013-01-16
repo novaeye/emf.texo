@@ -94,8 +94,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link WorkflowElement#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -119,8 +119,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link WorkflowElement#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -144,8 +144,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getX() x}' feature.
+   * @param newX
+   *          the new value of the '{@link WorkflowElement#getX() x}' feature.
    * @generated
    */
   public void setX(int newX) {
@@ -169,8 +169,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getY() y}' feature.
+   * @param newY
+   *          the new value of the '{@link WorkflowElement#getY() y}' feature.
    * @generated
    */
   public void setY(int newY) {
@@ -194,8 +194,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getWidth() width}' feature.
+   * @param newWidth
+   *          the new value of the '{@link WorkflowElement#getWidth() width}' feature.
    * @generated
    */
   public void setWidth(int newWidth) {
@@ -219,8 +219,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getHeight() height}' feature.
+   * @param newHeight
+   *          the new value of the '{@link WorkflowElement#getHeight() height}' feature.
    * @generated
    */
   public void setHeight(int newHeight) {
@@ -247,8 +247,8 @@ public abstract class WorkflowElement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowElement#getWorkFlowElementId() workFlowElementId}' feature.
+   * @param newWorkFlowElementId
+   *          the new value of the '{@link WorkflowElement#getWorkFlowElementId() workFlowElementId}' feature.
    * @generated
    */
   public void setWorkFlowElementId(String newWorkFlowElementId) {

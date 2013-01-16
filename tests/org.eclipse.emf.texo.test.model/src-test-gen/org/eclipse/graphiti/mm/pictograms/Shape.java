@@ -46,8 +46,8 @@ public class Shape extends AnchorContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Shape#getContainer() container}' feature.
+   * @param newContainer
+   *          the new value of the '{@link Shape#getContainer() container}' feature.
    * @generated
    */
   public void setContainer(ContainerShape newContainer) {

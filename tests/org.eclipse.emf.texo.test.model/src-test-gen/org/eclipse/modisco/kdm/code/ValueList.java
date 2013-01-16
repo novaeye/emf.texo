@@ -80,8 +80,8 @@ public class ValueList extends ValueElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ValueList#getValueElement() valueElement}' feature.
+   * @param newValueElement
+   *          the new value of the '{@link ValueList#getValueElement() valueElement}' feature.
    * @generated
    */
   public void setValueElement(List<ValueElement> newValueElement) {

@@ -62,8 +62,8 @@ public class EClass0 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EClass0#getToClass1() toClass1}' feature.
+   * @param newToClass1
+   *          the new value of the '{@link EClass0#getToClass1() toClass1}' feature.
    * @generated
    */
   public void setToClass1(EClass1 newToClass1) {
@@ -132,8 +132,8 @@ public class EClass0 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EClass0#getMany() many}' feature.
+   * @param newMany
+   *          the new value of the '{@link EClass0#getMany() many}' feature.
    * @generated
    */
   public void setMany(List<EClass1> newMany) {

@@ -51,8 +51,8 @@ public class RoundedRectangle extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RoundedRectangle#getCornerHeight() cornerHeight}' feature.
+   * @param newCornerHeight
+   *          the new value of the '{@link RoundedRectangle#getCornerHeight() cornerHeight}' feature.
    * @generated
    */
   public void setCornerHeight(int newCornerHeight) {
@@ -76,8 +76,8 @@ public class RoundedRectangle extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RoundedRectangle#getCornerWidth() cornerWidth}' feature.
+   * @param newCornerWidth
+   *          the new value of the '{@link RoundedRectangle#getCornerWidth() cornerWidth}' feature.
    * @generated
    */
   public void setCornerWidth(int newCornerWidth) {

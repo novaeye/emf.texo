@@ -96,8 +96,8 @@ public class Stereotype extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Stereotype#getTag() tag}' feature.
+   * @param newTag
+   *          the new value of the '{@link Stereotype#getTag() tag}' feature.
    * @generated
    */
   public void setTag(Set<TagDefinition> newTag) {
@@ -121,8 +121,8 @@ public class Stereotype extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Stereotype#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Stereotype#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -146,8 +146,8 @@ public class Stereotype extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Stereotype#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link Stereotype#getType() type}' feature.
    * @generated
    */
   public void setType(String newType) {

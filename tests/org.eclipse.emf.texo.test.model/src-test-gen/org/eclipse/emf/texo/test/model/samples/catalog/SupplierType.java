@@ -53,8 +53,8 @@ public class SupplierType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SupplierType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link SupplierType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -78,8 +78,8 @@ public class SupplierType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SupplierType#getNoOfEmployees() noOfEmployees}' feature.
+   * @param newNoOfEmployees
+   *          the new value of the '{@link SupplierType#getNoOfEmployees() noOfEmployees}' feature.
    * @generated
    */
   public void setNoOfEmployees(int newNoOfEmployees) {

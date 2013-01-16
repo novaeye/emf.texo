@@ -112,8 +112,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractEventElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractEventElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -170,8 +170,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractEventElement#getEventRelation() eventRelation}' feature.
+   * @param newEventRelation
+   *          the new value of the '{@link AbstractEventElement#getEventRelation() eventRelation}' feature.
    * @generated
    */
   public void setEventRelation(Set<AbstractEventRelationship> newEventRelation) {
@@ -228,8 +228,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractEventElement#getAbstraction() abstraction}' feature.
+   * @param newAbstraction
+   *          the new value of the '{@link AbstractEventElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {
@@ -286,8 +286,8 @@ public abstract class AbstractEventElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractEventElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link AbstractEventElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<AbstractCodeElement> newImplementation) {

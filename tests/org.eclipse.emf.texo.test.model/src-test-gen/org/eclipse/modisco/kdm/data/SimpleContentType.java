@@ -88,8 +88,8 @@ public class SimpleContentType extends ComplexContentType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleContentType#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link SimpleContentType#getType() type}' feature.
    * @generated
    */
   public void setType(Set<ComplexContentType> newType) {
@@ -113,8 +113,8 @@ public class SimpleContentType extends ComplexContentType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleContentType#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link SimpleContentType#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {

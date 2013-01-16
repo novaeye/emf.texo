@@ -52,8 +52,8 @@ public class Loads extends AbstractPlatformRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Loads#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Loads#getTo() to}' feature.
    * @generated
    */
   public void setTo(DeployedComponent newTo) {
@@ -77,8 +77,8 @@ public class Loads extends AbstractPlatformRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Loads#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Loads#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

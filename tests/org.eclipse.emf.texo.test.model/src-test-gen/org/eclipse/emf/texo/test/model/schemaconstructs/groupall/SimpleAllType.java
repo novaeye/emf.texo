@@ -61,8 +61,8 @@ public class SimpleAllType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllType#getAaa() aaa}' feature.
+   * @param newAaa
+   *          the new value of the '{@link SimpleAllType#getAaa() aaa}' feature.
    * @generated
    */
   public void setAaa(String newAaa) {
@@ -86,8 +86,8 @@ public class SimpleAllType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllType#getBbb() bbb}' feature.
+   * @param newBbb
+   *          the new value of the '{@link SimpleAllType#getBbb() bbb}' feature.
    * @generated
    */
   public void setBbb(String newBbb) {
@@ -111,8 +111,8 @@ public class SimpleAllType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllType#getCcc() ccc}' feature.
+   * @param newCcc
+   *          the new value of the '{@link SimpleAllType#getCcc() ccc}' feature.
    * @generated
    */
   public void setCcc(String newCcc) {

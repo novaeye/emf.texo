@@ -50,8 +50,8 @@ public class InventoryItem extends AbstractInventoryElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link InventoryItem#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link InventoryItem#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(String newVersion) {
@@ -75,8 +75,8 @@ public class InventoryItem extends AbstractInventoryElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link InventoryItem#getPath() path}' feature.
+   * @param newPath
+   *          the new value of the '{@link InventoryItem#getPath() path}' feature.
    * @generated
    */
   public void setPath(String newPath) {

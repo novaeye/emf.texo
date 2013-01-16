@@ -43,8 +43,8 @@ public class DerivedType extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DerivedType#getItemUnit() itemUnit}' feature.
+   * @param newItemUnit
+   *          the new value of the '{@link DerivedType#getItemUnit() itemUnit}' feature.
    * @generated
    */
   public void setItemUnit(ItemUnit newItemUnit) {

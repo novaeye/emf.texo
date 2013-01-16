@@ -50,8 +50,8 @@ public class SalutationType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SalutationType#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link SalutationType#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<SalutationTypeMixedFeatureGroup> newMixed) {
@@ -76,8 +76,8 @@ public class SalutationType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SalutationType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link SalutationType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

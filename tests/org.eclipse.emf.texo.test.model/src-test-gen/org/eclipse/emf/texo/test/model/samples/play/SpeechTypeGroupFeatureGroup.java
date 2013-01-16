@@ -178,10 +178,12 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getSpeaker() <em>speaker</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSpeaker
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSpeaker
+   *          the new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
    * @generated
    */
   public void setSpeaker(String newSpeaker) {
@@ -204,10 +206,12 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getLine() <em>line</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLine
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getLine() line}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLine
+   *          the new value of the '{@link SpeechType#getLine() line}' feature.
    * @generated
    */
   public void setLine(String newLine) {
@@ -230,10 +234,12 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getStageDirections() <em>stageDirections</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStageDirections
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStageDirections
+   *          the new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -266,8 +272,8 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

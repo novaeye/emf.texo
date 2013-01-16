@@ -121,8 +121,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Album#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -146,8 +146,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Album#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -171,8 +171,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Album#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -196,8 +196,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getArtist() artist}' feature.
+   * @param newArtist
+   *          the new value of the '{@link Album#getArtist() artist}' feature.
    * @generated
    */
   public void setArtist(Artist newArtist) {
@@ -221,8 +221,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getReleaseDate() releaseDate}' feature.
+   * @param newReleaseDate
+   *          the new value of the '{@link Album#getReleaseDate() releaseDate}' feature.
    * @generated
    */
   public void setReleaseDate(Date newReleaseDate) {
@@ -279,8 +279,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getGenres() genres}' feature.
+   * @param newGenres
+   *          the new value of the '{@link Album#getGenres() genres}' feature.
    * @generated
    */
   public void setGenres(List<Genre> newGenres) {
@@ -337,8 +337,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getSongs() songs}' feature.
+   * @param newSongs
+   *          the new value of the '{@link Album#getSongs() songs}' feature.
    * @generated
    */
   public void setSongs(List<Song> newSongs) {
@@ -362,8 +362,8 @@ public class Album extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Album#getRatings() ratings}' feature.
+   * @param newRatings
+   *          the new value of the '{@link Album#getRatings() ratings}' feature.
    * @generated
    */
   public void setRatings(List<Rating> newRatings) {

@@ -51,8 +51,8 @@ public class Includes extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Includes#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Includes#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractCodeElement newTo) {
@@ -76,8 +76,8 @@ public class Includes extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Includes#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Includes#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(PreprocessorDirective newFrom) {

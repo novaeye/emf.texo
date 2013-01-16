@@ -50,8 +50,8 @@ public class AddressType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressType#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link AddressType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<AddressTypeGroupFeatureGroup> newGroup) {
@@ -76,8 +76,8 @@ public class AddressType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link AddressType#getName() name}' feature.
    * @generated
    */
   public void setName(List<String> newName) {
@@ -102,8 +102,8 @@ public class AddressType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressType#getLongName() longName}' feature.
+   * @param newLongName
+   *          the new value of the '{@link AddressType#getLongName() longName}' feature.
    * @generated
    */
   public void setLongName(List<String> newLongName) {

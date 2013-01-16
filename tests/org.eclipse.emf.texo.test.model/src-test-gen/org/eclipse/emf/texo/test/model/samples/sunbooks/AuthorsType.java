@@ -51,8 +51,8 @@ public class AuthorsType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AuthorsType#getAuthorName() authorName}' feature.
+   * @param newAuthorName
+   *          the new value of the '{@link AuthorsType#getAuthorName() authorName}' feature.
    * @generated
    */
   public void setAuthorName(List<String> newAuthorName) {

@@ -57,8 +57,8 @@ public class GlobalAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GlobalAddress#getLocation() location}' feature.
+   * @param newLocation
+   *          the new value of the '{@link GlobalAddress#getLocation() location}' feature.
    * @generated
    */
   public void setLocation(List<String> newLocation) {
@@ -82,8 +82,8 @@ public class GlobalAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GlobalAddress#getCountryCode() countryCode}' feature.
+   * @param newCountryCode
+   *          the new value of the '{@link GlobalAddress#getCountryCode() countryCode}' feature.
    * @generated
    */
   public void setCountryCode(int newCountryCode) {

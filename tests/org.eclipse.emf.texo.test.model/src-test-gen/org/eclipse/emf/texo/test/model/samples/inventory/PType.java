@@ -105,8 +105,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link PType#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -130,8 +130,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link PType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -155,8 +155,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getBase() base}' feature.
+   * @param newBase
+   *          the new value of the '{@link PType#getBase() base}' feature.
    * @generated
    */
   public void setBase(PType newBase) {
@@ -211,8 +211,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getSubTypes() subTypes}' feature.
+   * @param newSubTypes
+   *          the new value of the '{@link PType#getSubTypes() subTypes}' feature.
    * @generated
    */
   public void setSubTypes(Set<PType> newSubTypes) {
@@ -267,8 +267,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getSubNOTypes() subNOTypes}' feature.
+   * @param newSubNOTypes
+   *          the new value of the '{@link PType#getSubNOTypes() subNOTypes}' feature.
    * @generated
    */
   public void setSubNOTypes(Set<PType> newSubNOTypes) {
@@ -323,8 +323,8 @@ public class PType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PType#getInfoReferences() infoReferences}' feature.
+   * @param newInfoReferences
+   *          the new value of the '{@link PType#getInfoReferences() infoReferences}' feature.
    * @generated
    */
   public void setInfoReferences(List<PDeclaration> newInfoReferences) {

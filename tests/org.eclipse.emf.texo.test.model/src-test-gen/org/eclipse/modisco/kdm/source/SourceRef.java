@@ -98,8 +98,8 @@ public class SourceRef extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRef#getRegion() region}' feature.
+   * @param newRegion
+   *          the new value of the '{@link SourceRef#getRegion() region}' feature.
    * @generated
    */
   public void setRegion(List<SourceRegion> newRegion) {
@@ -123,8 +123,8 @@ public class SourceRef extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRef#getLanguage() language}' feature.
+   * @param newLanguage
+   *          the new value of the '{@link SourceRef#getLanguage() language}' feature.
    * @generated
    */
   public void setLanguage(String newLanguage) {
@@ -148,8 +148,8 @@ public class SourceRef extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRef#getSnippet() snippet}' feature.
+   * @param newSnippet
+   *          the new value of the '{@link SourceRef#getSnippet() snippet}' feature.
    * @generated
    */
   public void setSnippet(String newSnippet) {

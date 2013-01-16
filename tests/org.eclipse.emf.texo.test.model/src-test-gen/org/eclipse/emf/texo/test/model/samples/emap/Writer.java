@@ -47,8 +47,8 @@ public class Writer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Writer#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Writer#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

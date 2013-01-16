@@ -53,8 +53,8 @@ public class CType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CType#getCname() cname}' feature.
+   * @param newCname
+   *          the new value of the '{@link CType#getCname() cname}' feature.
    * @generated
    */
   public void setCname(String newCname) {
@@ -78,8 +78,8 @@ public class CType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CType#getCvalue() cvalue}' feature.
+   * @param newCvalue
+   *          the new value of the '{@link CType#getCvalue() cvalue}' feature.
    * @generated
    */
   public void setCvalue(double newCvalue) {

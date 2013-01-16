@@ -72,8 +72,8 @@ public class AddressGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressGroupType#getGroupName() groupName}' feature.
+   * @param newGroupName
+   *          the new value of the '{@link AddressGroupType#getGroupName() groupName}' feature.
    * @generated
    */
   public void setGroupName(String newGroupName) {
@@ -97,8 +97,8 @@ public class AddressGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressGroupType#getShipTo() shipTo}' feature.
+   * @param newShipTo
+   *          the new value of the '{@link AddressGroupType#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(AddressType newShipTo) {
@@ -122,8 +122,8 @@ public class AddressGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressGroupType#getBillTo() billTo}' feature.
+   * @param newBillTo
+   *          the new value of the '{@link AddressGroupType#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(AddressType newBillTo) {
@@ -147,8 +147,8 @@ public class AddressGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressGroupType#getSimpleAddress() simpleAddress}' feature.
+   * @param newSimpleAddress
+   *          the new value of the '{@link AddressGroupType#getSimpleAddress() simpleAddress}' feature.
    * @generated
    */
   public void setSimpleAddress(String newSimpleAddress) {

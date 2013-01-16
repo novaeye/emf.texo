@@ -122,8 +122,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link SimpleTypeObject#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -147,8 +147,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getBoo() boo}' feature.
+   * @param newBoo
+   *          the new value of the '{@link SimpleTypeObject#getBoo() boo}' feature.
    * @generated
    */
   public void setBoo(Boolean newBoo) {
@@ -172,8 +172,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getByt() byt}' feature.
+   * @param newByt
+   *          the new value of the '{@link SimpleTypeObject#getByt() byt}' feature.
    * @generated
    */
   public void setByt(Byte newByt) {
@@ -197,8 +197,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getDoubl() doubl}' feature.
+   * @param newDoubl
+   *          the new value of the '{@link SimpleTypeObject#getDoubl() doubl}' feature.
    * @generated
    */
   public void setDoubl(Double newDoubl) {
@@ -222,8 +222,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getFloat_() float}' feature.
+   * @param newFloat_
+   *          the new value of the '{@link SimpleTypeObject#getFloat_() float}' feature.
    * @generated
    */
   public void setFloat_(Float newFloat_) {
@@ -247,8 +247,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getInte() inte}' feature.
+   * @param newInte
+   *          the new value of the '{@link SimpleTypeObject#getInte() inte}' feature.
    * @generated
    */
   public void setInte(Integer newInte) {
@@ -272,8 +272,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getLon() lon}' feature.
+   * @param newLon
+   *          the new value of the '{@link SimpleTypeObject#getLon() lon}' feature.
    * @generated
    */
   public void setLon(Long newLon) {
@@ -297,8 +297,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getShor() shor}' feature.
+   * @param newShor
+   *          the new value of the '{@link SimpleTypeObject#getShor() shor}' feature.
    * @generated
    */
   public void setShor(Short newShor) {
@@ -322,8 +322,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getEnu() enu}' feature.
+   * @param newEnu
+   *          the new value of the '{@link SimpleTypeObject#getEnu() enu}' feature.
    * @generated
    */
   public void setEnu(SimpleEnum newEnu) {
@@ -347,8 +347,8 @@ public class SimpleTypeObject extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleTypeObject#getDat() dat}' feature.
+   * @param newDat
+   *          the new value of the '{@link SimpleTypeObject#getDat() dat}' feature.
    * @generated
    */
   public void setDat(Date newDat) {

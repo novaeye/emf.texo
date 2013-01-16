@@ -78,8 +78,8 @@ public class EventResource extends AbstractEventElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EventResource#getEventElement() eventElement}' feature.
+   * @param newEventElement
+   *          the new value of the '{@link EventResource#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<AbstractEventElement> newEventElement) {

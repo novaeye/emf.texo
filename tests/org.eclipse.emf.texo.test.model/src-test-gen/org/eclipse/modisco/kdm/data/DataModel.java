@@ -79,8 +79,8 @@ public class DataModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataModel#getDataElement() dataElement}' feature.
+   * @param newDataElement
+   *          the new value of the '{@link DataModel#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<AbstractDataElement> newDataElement) {

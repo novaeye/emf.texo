@@ -61,8 +61,8 @@ public class Color extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Color#getRed() red}' feature.
+   * @param newRed
+   *          the new value of the '{@link Color#getRed() red}' feature.
    * @generated
    */
   public void setRed(int newRed) {
@@ -86,8 +86,8 @@ public class Color extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Color#getGreen() green}' feature.
+   * @param newGreen
+   *          the new value of the '{@link Color#getGreen() green}' feature.
    * @generated
    */
   public void setGreen(int newGreen) {
@@ -111,8 +111,8 @@ public class Color extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Color#getBlue() blue}' feature.
+   * @param newBlue
+   *          the new value of the '{@link Color#getBlue() blue}' feature.
    * @generated
    */
   public void setBlue(int newBlue) {

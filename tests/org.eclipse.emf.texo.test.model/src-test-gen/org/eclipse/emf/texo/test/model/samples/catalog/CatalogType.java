@@ -77,8 +77,8 @@ public class CatalogType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CatalogType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link CatalogType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -102,8 +102,8 @@ public class CatalogType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CatalogType#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link CatalogType#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -160,8 +160,8 @@ public class CatalogType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CatalogType#getSubCatalog() subCatalog}' feature.
+   * @param newSubCatalog
+   *          the new value of the '{@link CatalogType#getSubCatalog() subCatalog}' feature.
    * @generated
    */
   public void setSubCatalog(List<CatalogType> newSubCatalog) {

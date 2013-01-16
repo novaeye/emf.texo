@@ -59,8 +59,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Supplier#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -84,8 +84,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getOrders() orders}' feature.
+   * @param newOrders
+   *          the new value of the '{@link Supplier#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<SupplierOrdersFeatureGroup> newOrders) {
@@ -110,8 +110,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   * @param newPreferredOrders
+   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
    * @generated
    */
   public void setPreferredOrders(List<PurchaseOrder> newPreferredOrders) {
@@ -137,8 +137,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   * @param newStandardOrders
+   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
    * @generated
    */
   public void setStandardOrders(List<PurchaseOrder> newStandardOrders) {
@@ -164,8 +164,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
+   * @param newHardCopyOrderReference
+   *          the new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
    * @generated
    */
   public void setHardCopyOrderReference(List<String> newHardCopyOrderReference) {
@@ -191,8 +191,8 @@ public class Supplier extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
+   * @param newHardCopyOrderNumber
+   *          the new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
    * @generated
    */
   public void setHardCopyOrderNumber(List<Long> newHardCopyOrderNumber) {

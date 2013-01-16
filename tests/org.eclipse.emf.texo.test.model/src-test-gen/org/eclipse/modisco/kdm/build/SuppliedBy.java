@@ -51,8 +51,8 @@ public class SuppliedBy extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SuppliedBy#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link SuppliedBy#getTo() to}' feature.
    * @generated
    */
   public void setTo(Supplier newTo) {
@@ -76,8 +76,8 @@ public class SuppliedBy extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SuppliedBy#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link SuppliedBy#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractBuildElement newFrom) {

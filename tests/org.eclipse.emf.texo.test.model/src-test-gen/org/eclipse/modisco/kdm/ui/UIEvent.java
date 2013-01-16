@@ -42,8 +42,8 @@ public class UIEvent extends AbstractUIElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIEvent#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link UIEvent#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {

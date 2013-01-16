@@ -158,8 +158,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getOwner() owner}' feature.
+   * @param newOwner
+   *          the new value of the '{@link CarRegInfo#getOwner() owner}' feature.
    * @generated
    */
   public void setOwner(Person newOwner) {

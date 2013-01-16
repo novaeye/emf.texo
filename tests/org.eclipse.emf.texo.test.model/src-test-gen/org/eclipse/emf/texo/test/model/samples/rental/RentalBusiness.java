@@ -45,8 +45,8 @@ public class RentalBusiness extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalBusiness#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link RentalBusiness#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

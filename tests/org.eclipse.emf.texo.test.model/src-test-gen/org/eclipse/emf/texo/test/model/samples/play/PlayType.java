@@ -92,8 +92,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link PlayType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -117,8 +117,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getFm() fm}' feature.
+   * @param newFm
+   *          the new value of the '{@link PlayType#getFm() fm}' feature.
    * @generated
    */
   public void setFm(FmType newFm) {
@@ -142,8 +142,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getPersonae() personae}' feature.
+   * @param newPersonae
+   *          the new value of the '{@link PlayType#getPersonae() personae}' feature.
    * @generated
    */
   public void setPersonae(PersonaeType newPersonae) {
@@ -167,8 +167,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getSceneDescription() sceneDescription}' feature.
+   * @param newSceneDescription
+   *          the new value of the '{@link PlayType#getSceneDescription() sceneDescription}' feature.
    * @generated
    */
   public void setSceneDescription(String newSceneDescription) {
@@ -192,8 +192,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getPlaySubTitle() playSubTitle}' feature.
+   * @param newPlaySubTitle
+   *          the new value of the '{@link PlayType#getPlaySubTitle() playSubTitle}' feature.
    * @generated
    */
   public void setPlaySubTitle(String newPlaySubTitle) {
@@ -250,8 +250,8 @@ public class PlayType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlayType#getAct() act}' feature.
+   * @param newAct
+   *          the new value of the '{@link PlayType#getAct() act}' feature.
    * @generated
    */
   public void setAct(List<ActType> newAct) {

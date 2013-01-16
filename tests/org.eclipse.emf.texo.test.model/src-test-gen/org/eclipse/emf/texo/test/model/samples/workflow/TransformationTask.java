@@ -45,8 +45,8 @@ public class TransformationTask extends WorkflowNode {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TransformationTask#getTransformExpression() transformExpression}' feature.
+   * @param newTransformExpression
+   *          the new value of the '{@link TransformationTask#getTransformExpression() transformExpression}' feature.
    * @generated
    */
   public void setTransformExpression(String newTransformExpression) {

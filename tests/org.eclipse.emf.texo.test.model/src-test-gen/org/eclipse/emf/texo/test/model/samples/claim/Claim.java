@@ -87,8 +87,8 @@ public class Claim extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Claim#getClaimCompositeKey() claimCompositeKey}' feature.
+   * @param newClaimCompositeKey
+   *          the new value of the '{@link Claim#getClaimCompositeKey() claimCompositeKey}' feature.
    * @generated
    */
   public void setClaimCompositeKey(ClaimCompositeKey newClaimCompositeKey) {
@@ -224,8 +224,8 @@ public class Claim extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Claim#getClaimLine() claimLine}' feature.
+   * @param newClaimLine
+   *          the new value of the '{@link Claim#getClaimLine() claimLine}' feature.
    * @generated
    */
   public void setClaimLine(List<ClaimLine> newClaimLine) {

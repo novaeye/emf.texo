@@ -43,8 +43,8 @@ public class SchoolLibrary extends Library {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SchoolLibrary#getLocation() location}' feature.
+   * @param newLocation
+   *          the new value of the '{@link SchoolLibrary#getLocation() location}' feature.
    * @generated
    */
   public void setLocation(String newLocation) {

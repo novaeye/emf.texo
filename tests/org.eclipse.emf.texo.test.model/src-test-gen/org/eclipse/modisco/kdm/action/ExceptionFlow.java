@@ -51,8 +51,8 @@ public class ExceptionFlow extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ExceptionFlow#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ExceptionFlow#getTo() to}' feature.
    * @generated
    */
   public void setTo(ActionElement newTo) {
@@ -76,8 +76,8 @@ public class ExceptionFlow extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ExceptionFlow#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ExceptionFlow#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

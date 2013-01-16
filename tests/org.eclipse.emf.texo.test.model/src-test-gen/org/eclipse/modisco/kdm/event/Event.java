@@ -42,8 +42,8 @@ public class Event extends AbstractEventElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Event#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link Event#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {

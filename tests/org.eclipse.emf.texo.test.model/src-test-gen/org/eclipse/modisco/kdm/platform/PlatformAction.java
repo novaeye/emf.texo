@@ -54,8 +54,8 @@ public class PlatformAction extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlatformAction#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link PlatformAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -112,8 +112,8 @@ public class PlatformAction extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlatformAction#getPlatformElement() platformElement}' feature.
+   * @param newPlatformElement
+   *          the new value of the '{@link PlatformAction#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<PlatformEvent> newPlatformElement) {

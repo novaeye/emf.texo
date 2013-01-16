@@ -52,8 +52,8 @@ public class VarConditionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VarConditionType#getPolicyType() policyType}' feature.
+   * @param newPolicyType
+   *          the new value of the '{@link VarConditionType#getPolicyType() policyType}' feature.
    * @generated
    */
   public void setPolicyType(VarPolicyTypeType newPolicyType) {

@@ -54,8 +54,8 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IdentifiableConcrete#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link IdentifiableConcrete#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -79,8 +79,8 @@ public class IdentifiableConcrete extends Identifiable implements IdentifiedType
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IdentifiableConcrete#getIdentifier() identifier}' feature.
+   * @param newIdentifier
+   *          the new value of the '{@link IdentifiableConcrete#getIdentifier() identifier}' feature.
    * @generated
    */
   public void setIdentifier(String newIdentifier) {

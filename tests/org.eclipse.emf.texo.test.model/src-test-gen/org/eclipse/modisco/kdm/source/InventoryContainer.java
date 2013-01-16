@@ -79,8 +79,8 @@ public class InventoryContainer extends AbstractInventoryElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link InventoryContainer#getInventoryElement() inventoryElement}' feature.
+   * @param newInventoryElement
+   *          the new value of the '{@link InventoryContainer#getInventoryElement() inventoryElement}' feature.
    * @generated
    */
   public void setInventoryElement(Set<AbstractInventoryElement> newInventoryElement) {

@@ -45,8 +45,8 @@ public class Sub2Type extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Sub2Type#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Sub2Type#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

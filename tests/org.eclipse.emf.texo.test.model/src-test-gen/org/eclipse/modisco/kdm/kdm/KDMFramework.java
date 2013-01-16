@@ -96,8 +96,8 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link KDMFramework#getAudit() audit}' feature.
+   * @param newAudit
+   *          the new value of the '{@link KDMFramework#getAudit() audit}' feature.
    * @generated
    */
   public void setAudit(Set<Audit> newAudit) {
@@ -154,8 +154,8 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link KDMFramework#getExtension() extension}' feature.
+   * @param newExtension
+   *          the new value of the '{@link KDMFramework#getExtension() extension}' feature.
    * @generated
    */
   public void setExtension(Set<ExtensionFamily> newExtension) {
@@ -179,8 +179,8 @@ public abstract class KDMFramework extends ModelElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link KDMFramework#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link KDMFramework#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

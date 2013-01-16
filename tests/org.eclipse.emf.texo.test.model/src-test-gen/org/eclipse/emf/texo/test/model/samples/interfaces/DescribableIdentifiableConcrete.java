@@ -61,8 +61,8 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribableIdentifiableConcrete#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link DescribableIdentifiableConcrete#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -86,8 +86,8 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribableIdentifiableConcrete#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link DescribableIdentifiableConcrete#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -111,8 +111,8 @@ public class DescribableIdentifiableConcrete extends Identifiable implements Des
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribableIdentifiableConcrete#getIdentifier() identifier}' feature.
+   * @param newIdentifier
+   *          the new value of the '{@link DescribableIdentifiableConcrete#getIdentifier() identifier}' feature.
    * @generated
    */
   public void setIdentifier(String newIdentifier) {

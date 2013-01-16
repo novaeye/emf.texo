@@ -201,8 +201,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link SimpleList#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -226,8 +226,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getBoo() boo}' feature.
+   * @param newBoo
+   *          the new value of the '{@link SimpleList#getBoo() boo}' feature.
    * @generated
    */
   public void setBoo(List<Boolean> newBoo) {
@@ -251,8 +251,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getByt() byt}' feature.
+   * @param newByt
+   *          the new value of the '{@link SimpleList#getByt() byt}' feature.
    * @generated
    */
   public void setByt(List<Byte> newByt) {
@@ -276,8 +276,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getDoubl() doubl}' feature.
+   * @param newDoubl
+   *          the new value of the '{@link SimpleList#getDoubl() doubl}' feature.
    * @generated
    */
   public void setDoubl(List<Double> newDoubl) {
@@ -301,8 +301,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getFloa() floa}' feature.
+   * @param newFloa
+   *          the new value of the '{@link SimpleList#getFloa() floa}' feature.
    * @generated
    */
   public void setFloa(List<Float> newFloa) {
@@ -326,8 +326,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getInte() inte}' feature.
+   * @param newInte
+   *          the new value of the '{@link SimpleList#getInte() inte}' feature.
    * @generated
    */
   public void setInte(List<Integer> newInte) {
@@ -351,8 +351,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getLong_() long}' feature.
+   * @param newLong_
+   *          the new value of the '{@link SimpleList#getLong_() long}' feature.
    * @generated
    */
   public void setLong_(List<Long> newLong_) {
@@ -376,8 +376,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getShor() shor}' feature.
+   * @param newShor
+   *          the new value of the '{@link SimpleList#getShor() shor}' feature.
    * @generated
    */
   public void setShor(List<Short> newShor) {
@@ -401,8 +401,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getEnu() enu}' feature.
+   * @param newEnu
+   *          the new value of the '{@link SimpleList#getEnu() enu}' feature.
    * @generated
    */
   public void setEnu(List<SimpleEnum> newEnu) {
@@ -426,8 +426,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getDat() dat}' feature.
+   * @param newDat
+   *          the new value of the '{@link SimpleList#getDat() dat}' feature.
    * @generated
    */
   public void setDat(List<Date> newDat) {
@@ -451,8 +451,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getLimitedstring() limitedstring}' feature.
+   * @param newLimitedstring
+   *          the new value of the '{@link SimpleList#getLimitedstring() limitedstring}' feature.
    * @generated
    */
   public void setLimitedstring(List<String> newLimitedstring) {
@@ -476,8 +476,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getStri() stri}' feature.
+   * @param newStri
+   *          the new value of the '{@link SimpleList#getStri() stri}' feature.
    * @generated
    */
   public void setStri(List<String> newStri) {
@@ -501,8 +501,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getIntArray() intArray}' feature.
+   * @param newIntArray
+   *          the new value of the '{@link SimpleList#getIntArray() intArray}' feature.
    * @generated
    */
   public void setIntArray(int[] newIntArray) {
@@ -526,8 +526,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getDoubleArray() doubleArray}' feature.
+   * @param newDoubleArray
+   *          the new value of the '{@link SimpleList#getDoubleArray() doubleArray}' feature.
    * @generated
    */
   public void setDoubleArray(double[] newDoubleArray) {
@@ -551,8 +551,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getStringArray() stringArray}' feature.
+   * @param newStringArray
+   *          the new value of the '{@link SimpleList#getStringArray() stringArray}' feature.
    * @generated
    */
   public void setStringArray(String[] newStringArray) {
@@ -576,8 +576,8 @@ public class SimpleList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimpleList#getByteArray() byteArray}' feature.
+   * @param newByteArray
+   *          the new value of the '{@link SimpleList#getByteArray() byteArray}' feature.
    * @generated
    */
   public void setByteArray(byte[] newByteArray) {

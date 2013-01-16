@@ -53,8 +53,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getStreet() street}' feature.
+   * @param newStreet
+   *          the new value of the '{@link Address#getStreet() street}' feature.
    * @generated
    */
   public void setStreet(String newStreet) {
@@ -78,8 +78,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getCity() city}' feature.
+   * @param newCity
+   *          the new value of the '{@link Address#getCity() city}' feature.
    * @generated
    */
   public void setCity(String newCity) {

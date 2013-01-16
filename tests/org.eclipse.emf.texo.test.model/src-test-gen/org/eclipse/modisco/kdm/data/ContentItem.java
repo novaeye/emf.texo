@@ -54,8 +54,8 @@ public class ContentItem extends AbstractContentElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContentItem#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link ContentItem#getType() type}' feature.
    * @generated
    */
   public void setType(ComplexContentType newType) {
@@ -112,8 +112,8 @@ public class ContentItem extends AbstractContentElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContentItem#getContentElement() contentElement}' feature.
+   * @param newContentElement
+   *          the new value of the '{@link ContentItem#getContentElement() contentElement}' feature.
    * @generated
    */
   public void setContentElement(Set<AbstractContentElement> newContentElement) {

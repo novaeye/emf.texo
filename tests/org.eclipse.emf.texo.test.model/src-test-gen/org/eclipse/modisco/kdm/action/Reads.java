@@ -52,8 +52,8 @@ public class Reads extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Reads#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Reads#getTo() to}' feature.
    * @generated
    */
   public void setTo(DataElement newTo) {
@@ -77,8 +77,8 @@ public class Reads extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Reads#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Reads#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

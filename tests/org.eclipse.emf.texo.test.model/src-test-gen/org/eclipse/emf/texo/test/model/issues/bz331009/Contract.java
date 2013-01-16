@@ -137,8 +137,8 @@ public class Contract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contract#getSimCard() simCard}' feature.
+   * @param newSimCard
+   *          the new value of the '{@link Contract#getSimCard() simCard}' feature.
    * @generated
    */
   public void setSimCard(SimCard newSimCard) {
@@ -162,8 +162,8 @@ public class Contract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contract#getPaymentInfo() paymentInfo}' feature.
+   * @param newPaymentInfo
+   *          the new value of the '{@link Contract#getPaymentInfo() paymentInfo}' feature.
    * @generated
    */
   public void setPaymentInfo(PaymentInfo newPaymentInfo) {

@@ -45,8 +45,8 @@ public class StorableUnit extends DataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StorableUnit#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link StorableUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(StorableKind newKind) {

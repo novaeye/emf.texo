@@ -60,8 +60,8 @@ public class Person extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getFirstName() firstName}' feature.
+   * @param newFirstName
+   *          the new value of the '{@link Person#getFirstName() firstName}' feature.
    * @generated
    */
   public void setFirstName(String newFirstName) {
@@ -85,8 +85,8 @@ public class Person extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getLastName() lastName}' feature.
+   * @param newLastName
+   *          the new value of the '{@link Person#getLastName() lastName}' feature.
    * @generated
    */
   public void setLastName(String newLastName) {
@@ -110,8 +110,8 @@ public class Person extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getAddress() address}' feature.
+   * @param newAddress
+   *          the new value of the '{@link Person#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(String newAddress) {

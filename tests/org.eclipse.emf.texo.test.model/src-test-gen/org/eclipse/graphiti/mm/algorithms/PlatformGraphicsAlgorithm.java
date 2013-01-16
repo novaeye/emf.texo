@@ -43,8 +43,8 @@ public class PlatformGraphicsAlgorithm extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PlatformGraphicsAlgorithm#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link PlatformGraphicsAlgorithm#getId() id}' feature.
    * @generated
    */
   public void setId(String newId) {

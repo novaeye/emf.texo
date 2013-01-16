@@ -53,8 +53,8 @@ public class ParameterUnit extends DataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ParameterUnit#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link ParameterUnit#getKind() kind}' feature.
    * @generated
    */
   public void setKind(ParameterKind newKind) {
@@ -78,8 +78,8 @@ public class ParameterUnit extends DataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ParameterUnit#getPos() pos}' feature.
+   * @param newPos
+   *          the new value of the '{@link ParameterUnit#getPos() pos}' feature.
    * @generated
    */
   public void setPos(Integer newPos) {

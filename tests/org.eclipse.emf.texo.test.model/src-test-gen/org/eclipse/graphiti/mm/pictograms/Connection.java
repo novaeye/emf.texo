@@ -75,8 +75,8 @@ public class Connection extends AnchorContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Connection#getStart() start}' feature.
+   * @param newStart
+   *          the new value of the '{@link Connection#getStart() start}' feature.
    * @generated
    */
   public void setStart(Anchor newStart) {
@@ -100,8 +100,8 @@ public class Connection extends AnchorContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Connection#getEnd() end}' feature.
+   * @param newEnd
+   *          the new value of the '{@link Connection#getEnd() end}' feature.
    * @generated
    */
   public void setEnd(Anchor newEnd) {
@@ -125,8 +125,8 @@ public class Connection extends AnchorContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Connection#getParent() parent}' feature.
+   * @param newParent
+   *          the new value of the '{@link Connection#getParent() parent}' feature.
    * @generated
    */
   public void setParent(Diagram newParent) {
@@ -183,8 +183,8 @@ public class Connection extends AnchorContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Connection#getConnectionDecorators() connectionDecorators}' feature.
+   * @param newConnectionDecorators
+   *          the new value of the '{@link Connection#getConnectionDecorators() connectionDecorators}' feature.
    * @generated
    */
   public void setConnectionDecorators(List<ConnectionDecorator> newConnectionDecorators) {

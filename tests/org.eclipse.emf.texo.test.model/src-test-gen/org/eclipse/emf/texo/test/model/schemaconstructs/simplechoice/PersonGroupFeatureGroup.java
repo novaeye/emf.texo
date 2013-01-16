@@ -169,10 +169,12 @@ public class PersonGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Person#getAge() <em>age</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAge
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Person#getAge() age}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAge
+   *          the new value of the '{@link Person#getAge() age}' feature.
    * @generated
    */
   public void setAge(Integer newAge) {
@@ -195,10 +197,12 @@ public class PersonGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Person#getLength() <em>length</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLength
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Person#getLength() length}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newLength
+   *          the new value of the '{@link Person#getLength() length}' feature.
    * @generated
    */
   public void setLength(Integer newLength) {
@@ -229,8 +233,8 @@ public class PersonGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

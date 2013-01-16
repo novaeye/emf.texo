@@ -52,8 +52,8 @@ public class Addresses extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Addresses#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Addresses#getTo() to}' feature.
    * @generated
    */
   public void setTo(ComputationalObject newTo) {
@@ -77,8 +77,8 @@ public class Addresses extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Addresses#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Addresses#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

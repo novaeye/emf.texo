@@ -52,8 +52,8 @@ public class Writes extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Writes#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Writes#getTo() to}' feature.
    * @generated
    */
   public void setTo(DataElement newTo) {
@@ -77,8 +77,8 @@ public class Writes extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Writes#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Writes#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

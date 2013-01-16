@@ -235,8 +235,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -261,8 +261,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -287,8 +287,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -311,10 +311,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getComplexEven() <em>complexEven</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newComplexEven
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getComplexEven() complexEven}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newComplexEven
+   *          the new value of the '{@link DocumentRoot#getComplexEven() complexEven}' feature.
    * @generated
    */
   public void setComplexEven(ComplexEvenType newComplexEven) {
@@ -337,10 +339,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexAAA newMyComplexAbstract) {
@@ -363,10 +367,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getComplexOdd() <em>complexOdd</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newComplexOdd
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getComplexOdd() complexOdd}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newComplexOdd
+   *          the new value of the '{@link DocumentRoot#getComplexOdd() complexOdd}' feature.
    * @generated
    */
   public void setComplexOdd(ComplexOddType newComplexOdd) {
@@ -389,10 +395,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getEven() <em>even</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEven
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getEven() even}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newEven
+   *          the new value of the '{@link DocumentRoot#getEven() even}' feature.
    * @generated
    */
   public void setEven(EvenType newEven) {
@@ -415,10 +423,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMyAbstract() <em>myAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getMyAbstract() myAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyAbstract
+   *          the new value of the '{@link DocumentRoot#getMyAbstract() myAbstract}' feature.
    * @generated
    */
   public void setMyAbstract(BigInteger newMyAbstract) {
@@ -441,10 +451,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getOdd() <em>odd</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOdd
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getOdd() odd}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newOdd
+   *          the new value of the '{@link DocumentRoot#getOdd() odd}' feature.
    * @generated
    */
   public void setOdd(OddType newOdd) {
@@ -467,10 +479,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getRoot() <em>root</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newRoot
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getRoot() root}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newRoot
+   *          the new value of the '{@link DocumentRoot#getRoot() root}' feature.
    * @generated
    */
   public void setRoot(RootType newRoot) {
@@ -517,8 +531,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

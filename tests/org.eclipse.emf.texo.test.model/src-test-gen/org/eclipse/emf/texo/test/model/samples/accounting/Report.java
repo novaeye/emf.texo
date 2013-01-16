@@ -71,8 +71,8 @@ public class Report extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Report#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Report#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -96,8 +96,8 @@ public class Report extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Report#getDebitReportGroup() debitReportGroup}' feature.
+   * @param newDebitReportGroup
+   *          the new value of the '{@link Report#getDebitReportGroup() debitReportGroup}' feature.
    * @generated
    */
   public void setDebitReportGroup(ReportGroup newDebitReportGroup) {
@@ -121,8 +121,8 @@ public class Report extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Report#getCreditReportGroup() creditReportGroup}' feature.
+   * @param newCreditReportGroup
+   *          the new value of the '{@link Report#getCreditReportGroup() creditReportGroup}' feature.
    * @generated
    */
   public void setCreditReportGroup(ReportGroup newCreditReportGroup) {

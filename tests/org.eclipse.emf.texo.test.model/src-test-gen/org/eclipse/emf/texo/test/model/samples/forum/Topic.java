@@ -84,8 +84,8 @@ public class Topic extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Topic#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Topic#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -109,8 +109,8 @@ public class Topic extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Topic#getCategory() category}' feature.
+   * @param newCategory
+   *          the new value of the '{@link Topic#getCategory() category}' feature.
    * @generated
    */
   public void setCategory(TopicCategory newCategory) {
@@ -134,8 +134,8 @@ public class Topic extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Topic#getCreator() creator}' feature.
+   * @param newCreator
+   *          the new value of the '{@link Topic#getCreator() creator}' feature.
    * @generated
    */
   public void setCreator(Member newCreator) {
@@ -192,8 +192,8 @@ public class Topic extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Topic#getPosts() posts}' feature.
+   * @param newPosts
+   *          the new value of the '{@link Topic#getPosts() posts}' feature.
    * @generated
    */
   public void setPosts(List<Post> newPosts) {

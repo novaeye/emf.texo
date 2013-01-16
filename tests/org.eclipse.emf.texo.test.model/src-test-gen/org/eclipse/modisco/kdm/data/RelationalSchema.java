@@ -80,8 +80,8 @@ public class RelationalSchema extends DataContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RelationalSchema#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link RelationalSchema#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<CodeItem> newCodeElement) {

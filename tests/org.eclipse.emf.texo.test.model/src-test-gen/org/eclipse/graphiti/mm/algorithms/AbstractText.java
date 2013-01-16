@@ -82,8 +82,8 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractText#getFont() font}' feature.
+   * @param newFont
+   *          the new value of the '{@link AbstractText#getFont() font}' feature.
    * @generated
    */
   public void setFont(Font newFont) {
@@ -107,8 +107,8 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractText#getHorizontalAlignment() horizontalAlignment}' feature.
+   * @param newHorizontalAlignment
+   *          the new value of the '{@link AbstractText#getHorizontalAlignment() horizontalAlignment}' feature.
    * @generated
    */
   public void setHorizontalAlignment(Orientation newHorizontalAlignment) {
@@ -132,8 +132,8 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractText#getVerticalAlignment() verticalAlignment}' feature.
+   * @param newVerticalAlignment
+   *          the new value of the '{@link AbstractText#getVerticalAlignment() verticalAlignment}' feature.
    * @generated
    */
   public void setVerticalAlignment(Orientation newVerticalAlignment) {
@@ -157,8 +157,8 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractText#getAngle() angle}' feature.
+   * @param newAngle
+   *          the new value of the '{@link AbstractText#getAngle() angle}' feature.
    * @generated
    */
   public void setAngle(Integer newAngle) {
@@ -182,8 +182,8 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractText#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link AbstractText#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

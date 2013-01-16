@@ -44,8 +44,8 @@ public class TaggedRef extends ExtendedValue {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TaggedRef#getRef() ref}' feature.
+   * @param newRef
+   *          the new value of the '{@link TaggedRef#getRef() ref}' feature.
    * @generated
    */
   public void setRef(ModelElement newRef) {

@@ -54,8 +54,8 @@ public class DescribableConcrete extends Identifiable implements Describable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribableConcrete#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link DescribableConcrete#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -79,8 +79,8 @@ public class DescribableConcrete extends Identifiable implements Describable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DescribableConcrete#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link DescribableConcrete#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {

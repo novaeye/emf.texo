@@ -93,8 +93,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getFile() file}' feature.
+   * @param newFile
+   *          the new value of the '{@link SourceRegion#getFile() file}' feature.
    * @generated
    */
   public void setFile(SourceFile newFile) {
@@ -118,8 +118,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getStartLine() startLine}' feature.
+   * @param newStartLine
+   *          the new value of the '{@link SourceRegion#getStartLine() startLine}' feature.
    * @generated
    */
   public void setStartLine(Integer newStartLine) {
@@ -143,8 +143,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getStartPosition() startPosition}' feature.
+   * @param newStartPosition
+   *          the new value of the '{@link SourceRegion#getStartPosition() startPosition}' feature.
    * @generated
    */
   public void setStartPosition(Integer newStartPosition) {
@@ -168,8 +168,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getEndLine() endLine}' feature.
+   * @param newEndLine
+   *          the new value of the '{@link SourceRegion#getEndLine() endLine}' feature.
    * @generated
    */
   public void setEndLine(Integer newEndLine) {
@@ -193,8 +193,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getEndPosition() endPosition}' feature.
+   * @param newEndPosition
+   *          the new value of the '{@link SourceRegion#getEndPosition() endPosition}' feature.
    * @generated
    */
   public void setEndPosition(Integer newEndPosition) {
@@ -218,8 +218,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getLanguage() language}' feature.
+   * @param newLanguage
+   *          the new value of the '{@link SourceRegion#getLanguage() language}' feature.
    * @generated
    */
   public void setLanguage(String newLanguage) {
@@ -243,8 +243,8 @@ public class SourceRegion extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceRegion#getPath() path}' feature.
+   * @param newPath
+   *          the new value of the '{@link SourceRegion#getPath() path}' feature.
    * @generated
    */
   public void setPath(String newPath) {

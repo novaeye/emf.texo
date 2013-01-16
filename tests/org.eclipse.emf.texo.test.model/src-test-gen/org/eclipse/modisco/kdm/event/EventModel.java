@@ -79,8 +79,8 @@ public class EventModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link EventModel#getEventElement() eventElement}' feature.
+   * @param newEventElement
+   *          the new value of the '{@link EventModel#getEventElement() eventElement}' feature.
    * @generated
    */
   public void setEventElement(Set<AbstractEventElement> newEventElement) {

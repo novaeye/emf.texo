@@ -169,10 +169,12 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link NumberType#getMySimpleAbstract() <em>mySimpleAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMySimpleAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link NumberType#getMySimpleAbstract() mySimpleAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMySimpleAbstract
+   *          the new value of the '{@link NumberType#getMySimpleAbstract() mySimpleAbstract}' feature.
    * @generated
    */
   public void setMySimpleAbstract(BigInteger newMySimpleAbstract) {
@@ -201,8 +203,8 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

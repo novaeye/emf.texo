@@ -56,8 +56,8 @@ public class ControlElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ControlElement#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link ControlElement#getType() type}' feature.
    * @generated
    */
   public void setType(Datatype newType) {
@@ -114,8 +114,8 @@ public class ControlElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ControlElement#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link ControlElement#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<AbstractCodeElement> newCodeElement) {

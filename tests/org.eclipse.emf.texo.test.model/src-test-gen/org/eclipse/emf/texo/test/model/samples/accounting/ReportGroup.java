@@ -78,8 +78,8 @@ public class ReportGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ReportGroup#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link ReportGroup#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -136,8 +136,8 @@ public class ReportGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ReportGroup#getReportGroup() reportGroup}' feature.
+   * @param newReportGroup
+   *          the new value of the '{@link ReportGroup#getReportGroup() reportGroup}' feature.
    * @generated
    */
   public void setReportGroup(List<ReportGroup> newReportGroup) {
@@ -194,8 +194,8 @@ public class ReportGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ReportGroup#getAccount() account}' feature.
+   * @param newAccount
+   *          the new value of the '{@link ReportGroup#getAccount() account}' feature.
    * @generated
    */
   public void setAccount(List<BalanceAccount> newAccount) {

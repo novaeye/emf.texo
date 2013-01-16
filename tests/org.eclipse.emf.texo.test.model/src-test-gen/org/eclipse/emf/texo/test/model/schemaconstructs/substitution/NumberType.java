@@ -69,8 +69,8 @@ public class NumberType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NumberType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link NumberType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -94,8 +94,8 @@ public class NumberType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NumberType#getMySimpleAbstractGroup() mySimpleAbstractGroup}' feature.
+   * @param newMySimpleAbstractGroup
+   *          the new value of the '{@link NumberType#getMySimpleAbstractGroup() mySimpleAbstractGroup}' feature.
    * @generated
    */
   public void setMySimpleAbstractGroup(List<NumberTypeMySimpleAbstractGroupFeatureGroup> newMySimpleAbstractGroup) {
@@ -132,8 +132,8 @@ public class NumberType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
+   * @param newMyComplexAbstractGroup
+   *          the new value of the '{@link NumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
    * @generated
    */
   public void setMyComplexAbstractGroup(List<NumberTypeMyComplexAbstractGroupFeatureGroup> newMyComplexAbstractGroup) {

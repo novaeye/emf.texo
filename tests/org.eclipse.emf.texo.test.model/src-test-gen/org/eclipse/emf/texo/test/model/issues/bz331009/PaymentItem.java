@@ -120,8 +120,8 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentItem#getCurrency() currency}' feature.
+   * @param newCurrency
+   *          the new value of the '{@link PaymentItem#getCurrency() currency}' feature.
    * @generated
    */
   public void setCurrency(Currency newCurrency) {

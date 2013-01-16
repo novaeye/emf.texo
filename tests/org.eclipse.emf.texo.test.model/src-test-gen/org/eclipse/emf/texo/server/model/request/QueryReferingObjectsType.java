@@ -62,8 +62,8 @@ public class QueryReferingObjectsType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryReferingObjectsType#getTargetUri() targetUri}' feature.
+   * @param newTargetUri
+   *          the new value of the '{@link QueryReferingObjectsType#getTargetUri() targetUri}' feature.
    * @generated
    */
   public void setTargetUri(String newTargetUri) {
@@ -88,8 +88,8 @@ public class QueryReferingObjectsType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryReferingObjectsType#getIncludeContainerReferences()
+   * @param newIncludeContainerReferences
+   *          the new value of the '{@link QueryReferingObjectsType#getIncludeContainerReferences()
    *          includeContainerReferences}' feature.
    * @generated
    */
@@ -114,8 +114,8 @@ public class QueryReferingObjectsType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link QueryReferingObjectsType#getMaxResults() maxResults}' feature.
+   * @param newMaxResults
+   *          the new value of the '{@link QueryReferingObjectsType#getMaxResults() maxResults}' feature.
    * @generated
    */
   public void setMaxResults(int newMaxResults) {

@@ -93,8 +93,8 @@ public class GradientColoredAreas extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredAreas#getGradientColor() gradientColor}' feature.
+   * @param newGradientColor
+   *          the new value of the '{@link GradientColoredAreas#getGradientColor() gradientColor}' feature.
    * @generated
    */
   public void setGradientColor(List<GradientColoredArea> newGradientColor) {
@@ -118,8 +118,8 @@ public class GradientColoredAreas extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredAreas#getStyleAdaption() styleAdaption}' feature.
+   * @param newStyleAdaption
+   *          the new value of the '{@link GradientColoredAreas#getStyleAdaption() styleAdaption}' feature.
    * @generated
    */
   public void setStyleAdaption(Integer newStyleAdaption) {

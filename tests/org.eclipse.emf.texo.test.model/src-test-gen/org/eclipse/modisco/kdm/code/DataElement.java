@@ -71,8 +71,8 @@ public class DataElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataElement#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link DataElement#getType() type}' feature.
    * @generated
    */
   public void setType(Datatype newType) {
@@ -96,8 +96,8 @@ public class DataElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataElement#getExt() ext}' feature.
+   * @param newExt
+   *          the new value of the '{@link DataElement#getExt() ext}' feature.
    * @generated
    */
   public void setExt(String newExt) {
@@ -121,8 +121,8 @@ public class DataElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataElement#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link DataElement#getSize() size}' feature.
    * @generated
    */
   public void setSize(Integer newSize) {
@@ -179,8 +179,8 @@ public class DataElement extends ComputationalObject {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataElement#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link DataElement#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<Datatype> newCodeElement) {

@@ -75,8 +75,8 @@ public class Event extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Event#getEventType() eventType}' feature.
+   * @param newEventType
+   *          the new value of the '{@link Event#getEventType() eventType}' feature.
    * @generated
    */
   public void setEventType(EventType newEventType) {
@@ -125,8 +125,8 @@ public class Event extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Event#getCoordinates() coordinates}' feature.
+   * @param newCoordinates
+   *          the new value of the '{@link Event#getCoordinates() coordinates}' feature.
    * @generated
    */
   public void setCoordinates(Coordinates newCoordinates) {

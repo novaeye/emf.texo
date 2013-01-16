@@ -48,8 +48,8 @@ public class PeriodicalPayment extends PaymentItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PeriodicalPayment#getPeriodicity() periodicity}' feature.
+   * @param newPeriodicity
+   *          the new value of the '{@link PeriodicalPayment#getPeriodicity() periodicity}' feature.
    * @generated
    */
   public void setPeriodicity(Periodicity newPeriodicity) {

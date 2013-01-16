@@ -64,8 +64,8 @@ public class DataAction extends AbstractDataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataAction#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link DataAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -122,8 +122,8 @@ public class DataAction extends AbstractDataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataAction#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link DataAction#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<ActionElement> newImplementation) {
@@ -180,8 +180,8 @@ public class DataAction extends AbstractDataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DataAction#getDataElement() dataElement}' feature.
+   * @param newDataElement
+   *          the new value of the '{@link DataAction#getDataElement() dataElement}' feature.
    * @generated
    */
   public void setDataElement(Set<DataEvent> newDataElement) {

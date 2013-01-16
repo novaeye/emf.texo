@@ -316,8 +316,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getDrivingLicense() drivingLicense}' feature.
+   * @param newDrivingLicense
+   *          the new value of the '{@link Person#getDrivingLicense() drivingLicense}' feature.
    * @generated
    */
   public void setDrivingLicense(DrivingLicense newDrivingLicense) {

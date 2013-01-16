@@ -42,8 +42,8 @@ public class SequenceType extends DerivedType {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SequenceType#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link SequenceType#getSize() size}' feature.
    * @generated
    */
   public void setSize(Integer newSize) {

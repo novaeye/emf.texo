@@ -53,8 +53,8 @@ public class Property extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Property#getKey() key}' feature.
+   * @param newKey
+   *          the new value of the '{@link Property#getKey() key}' feature.
    * @generated
    */
   public void setKey(String newKey) {
@@ -78,8 +78,8 @@ public class Property extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Property#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link Property#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

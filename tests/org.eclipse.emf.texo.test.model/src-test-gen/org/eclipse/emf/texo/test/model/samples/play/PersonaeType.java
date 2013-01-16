@@ -50,8 +50,8 @@ public class PersonaeType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link PersonaeType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<PersonaeTypeGroupFeatureGroup> newGroup) {
@@ -76,8 +76,8 @@ public class PersonaeType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link PersonaeType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(List<String> newTitle) {
@@ -103,8 +103,8 @@ public class PersonaeType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getPersona() persona}' feature.
+   * @param newPersona
+   *          the new value of the '{@link PersonaeType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(List<String> newPersona) {
@@ -130,8 +130,8 @@ public class PersonaeType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
+   * @param newPersonaGroup
+   *          the new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
    * @generated
    */
   public void setPersonaGroup(List<PersonaGroupType> newPersonaGroup) {

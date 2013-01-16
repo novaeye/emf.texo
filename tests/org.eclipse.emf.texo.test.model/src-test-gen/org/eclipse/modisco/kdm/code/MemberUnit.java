@@ -45,8 +45,8 @@ public class MemberUnit extends DataElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MemberUnit#getExport() export}' feature.
+   * @param newExport
+   *          the new value of the '{@link MemberUnit#getExport() export}' feature.
    * @generated
    */
   public void setExport(ExportKind newExport) {

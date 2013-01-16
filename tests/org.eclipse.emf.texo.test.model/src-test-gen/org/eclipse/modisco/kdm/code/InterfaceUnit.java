@@ -80,8 +80,8 @@ public class InterfaceUnit extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link InterfaceUnit#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link InterfaceUnit#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<CodeItem> newCodeElement) {

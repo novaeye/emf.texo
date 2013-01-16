@@ -45,8 +45,8 @@ public class GlobalLocation extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GlobalLocation#getCountryCode() countryCode}' feature.
+   * @param newCountryCode
+   *          the new value of the '{@link GlobalLocation#getCountryCode() countryCode}' feature.
    * @generated
    */
   public void setCountryCode(int newCountryCode) {

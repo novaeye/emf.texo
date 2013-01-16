@@ -84,8 +84,8 @@ public class ResponseType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResponseType#getStatus() status}' feature.
+   * @param newStatus
+   *          the new value of the '{@link ResponseType#getStatus() status}' feature.
    * @generated
    */
   public void setStatus(String newStatus) {
@@ -109,8 +109,8 @@ public class ResponseType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResponseType#getStartRow() startRow}' feature.
+   * @param newStartRow
+   *          the new value of the '{@link ResponseType#getStartRow() startRow}' feature.
    * @generated
    */
   public void setStartRow(long newStartRow) {
@@ -134,8 +134,8 @@ public class ResponseType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResponseType#getEndRow() endRow}' feature.
+   * @param newEndRow
+   *          the new value of the '{@link ResponseType#getEndRow() endRow}' feature.
    * @generated
    */
   public void setEndRow(long newEndRow) {
@@ -159,8 +159,8 @@ public class ResponseType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResponseType#getTotalRows() totalRows}' feature.
+   * @param newTotalRows
+   *          the new value of the '{@link ResponseType#getTotalRows() totalRows}' feature.
    * @generated
    */
   public void setTotalRows(long newTotalRows) {
@@ -217,8 +217,8 @@ public class ResponseType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResponseType#getData() data}' feature.
+   * @param newData
+   *          the new value of the '{@link ResponseType#getData() data}' feature.
    * @generated
    */
   public void setData(List<Object> newData) {

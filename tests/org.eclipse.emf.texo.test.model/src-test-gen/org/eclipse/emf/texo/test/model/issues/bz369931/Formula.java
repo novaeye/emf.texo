@@ -48,8 +48,8 @@ public class Formula extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Formula#getFormulaType() formulaType}' feature.
+   * @param newFormulaType
+   *          the new value of the '{@link Formula#getFormulaType() formulaType}' feature.
    * @generated
    */
   public void setFormulaType(FormulaType newFormulaType) {

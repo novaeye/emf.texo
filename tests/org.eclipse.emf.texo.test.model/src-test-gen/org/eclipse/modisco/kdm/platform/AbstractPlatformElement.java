@@ -112,8 +112,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractPlatformElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractPlatformElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -170,8 +170,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractPlatformElement#getPlatformRelation() platformRelation}' feature.
+   * @param newPlatformRelation
+   *          the new value of the '{@link AbstractPlatformElement#getPlatformRelation() platformRelation}' feature.
    * @generated
    */
   public void setPlatformRelation(Set<AbstractPlatformRelationship> newPlatformRelation) {
@@ -228,8 +228,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractPlatformElement#getAbstraction() abstraction}' feature.
+   * @param newAbstraction
+   *          the new value of the '{@link AbstractPlatformElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {
@@ -286,8 +286,8 @@ public abstract class AbstractPlatformElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractPlatformElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link AbstractPlatformElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<AbstractCodeElement> newImplementation) {

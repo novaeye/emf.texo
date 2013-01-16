@@ -64,8 +64,8 @@ public class ConnectionDecorator extends Shape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConnectionDecorator#isLocationRelative() locationRelative}' feature.
+   * @param newLocationRelative
+   *          the new value of the '{@link ConnectionDecorator#isLocationRelative() locationRelative}' feature.
    * @generated
    */
   public void setLocationRelative(boolean newLocationRelative) {
@@ -89,8 +89,8 @@ public class ConnectionDecorator extends Shape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConnectionDecorator#getLocation() location}' feature.
+   * @param newLocation
+   *          the new value of the '{@link ConnectionDecorator#getLocation() location}' feature.
    * @generated
    */
   public void setLocation(double newLocation) {
@@ -114,8 +114,8 @@ public class ConnectionDecorator extends Shape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConnectionDecorator#getConnection() connection}' feature.
+   * @param newConnection
+   *          the new value of the '{@link ConnectionDecorator#getConnection() connection}' feature.
    * @generated
    */
   public void setConnection(Connection newConnection) {

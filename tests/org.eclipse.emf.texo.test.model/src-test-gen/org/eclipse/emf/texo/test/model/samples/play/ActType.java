@@ -100,8 +100,8 @@ public class ActType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActType#getScene() scene}' feature.
+   * @param newScene
+   *          the new value of the '{@link ActType#getScene() scene}' feature.
    * @generated
    */
   public void setScene(List<SceneType> newScene) {
@@ -125,8 +125,8 @@ public class ActType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActType#getPindex() pindex}' feature.
+   * @param newPindex
+   *          the new value of the '{@link ActType#getPindex() pindex}' feature.
    * @generated
    */
   public void setPindex(byte newPindex) {
@@ -150,8 +150,8 @@ public class ActType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ActType#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link ActType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {

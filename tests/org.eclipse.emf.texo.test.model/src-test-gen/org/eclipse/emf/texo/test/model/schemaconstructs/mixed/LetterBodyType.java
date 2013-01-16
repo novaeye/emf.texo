@@ -52,8 +52,8 @@ public class LetterBodyType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link LetterBodyType#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<LetterBodyTypeMixedFeatureGroup> newMixed) {
@@ -78,8 +78,8 @@ public class LetterBodyType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
+   * @param newSalutation
+   *          the new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
    * @generated
    */
   public void setSalutation(SalutationType newSalutation) {
@@ -105,8 +105,8 @@ public class LetterBodyType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
+   * @param newQuantity
+   *          the new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
    * @generated
    */
   public void setQuantity(BigInteger newQuantity) {
@@ -132,8 +132,8 @@ public class LetterBodyType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getProductName() productName}' feature.
+   * @param newProductName
+   *          the new value of the '{@link LetterBodyType#getProductName() productName}' feature.
    * @generated
    */
   public void setProductName(String newProductName) {
@@ -159,8 +159,8 @@ public class LetterBodyType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
+   * @param newShipDate
+   *          the new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
    * @generated
    */
   public void setShipDate(Date newShipDate) {

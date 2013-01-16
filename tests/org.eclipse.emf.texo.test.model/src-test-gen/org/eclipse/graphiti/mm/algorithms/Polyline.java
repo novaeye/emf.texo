@@ -81,8 +81,8 @@ public class Polyline extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Polyline#getPoints() points}' feature.
+   * @param newPoints
+   *          the new value of the '{@link Polyline#getPoints() points}' feature.
    * @generated
    */
   public void setPoints(List<Point> newPoints) {

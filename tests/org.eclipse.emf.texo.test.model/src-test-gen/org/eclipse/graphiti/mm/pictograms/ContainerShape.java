@@ -80,8 +80,8 @@ public class ContainerShape extends Shape {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContainerShape#getChildren() children}' feature.
+   * @param newChildren
+   *          the new value of the '{@link ContainerShape#getChildren() children}' feature.
    * @generated
    */
   public void setChildren(List<Shape> newChildren) {

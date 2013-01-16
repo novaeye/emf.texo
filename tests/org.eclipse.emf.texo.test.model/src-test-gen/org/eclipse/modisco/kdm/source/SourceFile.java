@@ -50,8 +50,8 @@ public class SourceFile extends InventoryItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceFile#getLanguage() language}' feature.
+   * @param newLanguage
+   *          the new value of the '{@link SourceFile#getLanguage() language}' feature.
    * @generated
    */
   public void setLanguage(String newLanguage) {
@@ -75,8 +75,8 @@ public class SourceFile extends InventoryItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SourceFile#getEncoding() encoding}' feature.
+   * @param newEncoding
+   *          the new value of the '{@link SourceFile#getEncoding() encoding}' feature.
    * @generated
    */
   public void setEncoding(String newEncoding) {

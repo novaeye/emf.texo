@@ -38,8 +38,8 @@ public interface Lendable extends IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Lendable#getCopies() <em>copies</em>}' feature.
+   * @param newCopies
+   *          the new value of the '{@link Lendable#getCopies() <em>copies</em>}' feature.
    * @generated
    */
   public void setCopies(int newCopies);
@@ -59,8 +59,8 @@ public interface Lendable extends IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Lendable#getBorrowers() <em>borrowers</em>}' feature.
+   * @param newBorrowers
+   *          the new value of the '{@link Lendable#getBorrowers() <em>borrowers</em>}' feature.
    * @generated
    */
   public void setBorrowers(Set<Borrower> newBorrowers);

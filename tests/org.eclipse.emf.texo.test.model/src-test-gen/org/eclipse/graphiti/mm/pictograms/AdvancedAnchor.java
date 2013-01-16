@@ -43,8 +43,8 @@ public abstract class AdvancedAnchor extends Anchor {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AdvancedAnchor#isUseAnchorLocationAsConnectionEndpoint()
+   * @param newUseAnchorLocationAsConnectionEndpoint
+   *          the new value of the '{@link AdvancedAnchor#isUseAnchorLocationAsConnectionEndpoint()
    *          useAnchorLocationAsConnectionEndpoint}' feature.
    * @generated
    */

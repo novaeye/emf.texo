@@ -53,8 +53,8 @@ public abstract class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Address#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -78,8 +78,8 @@ public abstract class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getCountry() country}' feature.
+   * @param newCountry
+   *          the new value of the '{@link Address#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {

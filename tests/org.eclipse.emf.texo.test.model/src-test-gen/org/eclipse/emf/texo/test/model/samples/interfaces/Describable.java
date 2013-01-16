@@ -37,8 +37,8 @@ public interface Describable extends IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Describable#getDescription() <em>description</em>}' feature.
+   * @param newDescription
+   *          the new value of the '{@link Describable#getDescription() <em>description</em>}' feature.
    * @generated
    */
   public void setDescription(String newDescription);

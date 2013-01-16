@@ -38,8 +38,8 @@ public interface Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Document#getSeries() <em>series</em>}' feature.
+   * @param newSeries
+   *          the new value of the '{@link Document#getSeries() <em>series</em>}' feature.
    * @generated
    */
   public void setSeries(String newSeries);
@@ -59,8 +59,8 @@ public interface Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Document#getNumber() <em>number</em>}' feature.
+   * @param newNumber
+   *          the new value of the '{@link Document#getNumber() <em>number</em>}' feature.
    * @generated
    */
   public void setNumber(String newNumber);
@@ -80,8 +80,8 @@ public interface Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Document#getIssueDate() <em>issueDate</em>}' feature.
+   * @param newIssueDate
+   *          the new value of the '{@link Document#getIssueDate() <em>issueDate</em>}' feature.
    * @generated
    */
   public void setIssueDate(String newIssueDate);
@@ -101,8 +101,8 @@ public interface Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Document#getIssued() <em>issued</em>}' feature.
+   * @param newIssued
+   *          the new value of the '{@link Document#getIssued() <em>issued</em>}' feature.
    * @generated
    */
   public void setIssued(String newIssued);

@@ -70,8 +70,8 @@ public class SceneType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link SceneType#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<SceneTypeGroupFeatureGroup> newGroup) {
@@ -96,8 +96,8 @@ public class SceneType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
+   * @param newStageDirections
+   *          the new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(List<String> newStageDirections) {
@@ -123,8 +123,8 @@ public class SceneType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getSpeech() speech}' feature.
+   * @param newSpeech
+   *          the new value of the '{@link SceneType#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(List<SpeechType> newSpeech) {
@@ -148,8 +148,8 @@ public class SceneType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getPindex() pindex}' feature.
+   * @param newPindex
+   *          the new value of the '{@link SceneType#getPindex() pindex}' feature.
    * @generated
    */
   public void setPindex(PindexType newPindex) {
@@ -173,8 +173,8 @@ public class SceneType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link SceneType#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {

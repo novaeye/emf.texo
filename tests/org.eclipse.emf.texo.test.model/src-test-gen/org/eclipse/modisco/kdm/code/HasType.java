@@ -51,8 +51,8 @@ public class HasType extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasType#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link HasType#getTo() to}' feature.
    * @generated
    */
   public void setTo(Datatype newTo) {
@@ -76,8 +76,8 @@ public class HasType extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasType#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link HasType#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(CodeItem newFrom) {

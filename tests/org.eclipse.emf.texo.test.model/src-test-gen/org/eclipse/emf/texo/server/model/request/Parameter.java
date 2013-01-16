@@ -63,8 +63,8 @@ public class Parameter extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Parameter#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Parameter#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -88,8 +88,8 @@ public class Parameter extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Parameter#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link Parameter#getValue() value}' feature.
    * @generated
    */
   public void setValue(Object newValue) {
@@ -113,8 +113,8 @@ public class Parameter extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Parameter#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link Parameter#getType() type}' feature.
    * @generated
    */
   public void setType(String newType) {

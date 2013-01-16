@@ -52,8 +52,8 @@ public class CompliesTo extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CompliesTo#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link CompliesTo#getTo() to}' feature.
    * @generated
    */
   public void setTo(CodeItem newTo) {
@@ -77,8 +77,8 @@ public class CompliesTo extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CompliesTo#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link CompliesTo#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

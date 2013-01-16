@@ -54,8 +54,8 @@ public class ComplexNumber extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ComplexNumber#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link ComplexNumber#getValue() value}' feature.
    * @generated
    */
   public void setValue(BigInteger newValue) {
@@ -79,8 +79,8 @@ public class ComplexNumber extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ComplexNumber#getUnit() unit}' feature.
+   * @param newUnit
+   *          the new value of the '{@link ComplexNumber#getUnit() unit}' feature.
    * @generated
    */
   public void setUnit(String newUnit) {

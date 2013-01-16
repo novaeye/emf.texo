@@ -61,8 +61,8 @@ public class Genre extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Genre#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Genre#getId() id}' feature.
    * @generated
    */
   public void setId(long newId) {
@@ -86,8 +86,8 @@ public class Genre extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Genre#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Genre#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -111,8 +111,8 @@ public class Genre extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Genre#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Genre#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

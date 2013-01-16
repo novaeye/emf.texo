@@ -53,8 +53,8 @@ public class HasState extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasState#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link HasState#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractEventElement newTo) {
@@ -78,8 +78,8 @@ public class HasState extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link HasState#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link HasState#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

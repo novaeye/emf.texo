@@ -61,8 +61,8 @@ public class Country extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Country#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link Country#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -86,8 +86,8 @@ public class Country extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Country#getVersion() version}' feature.
+   * @param newVersion
+   *          the new value of the '{@link Country#getVersion() version}' feature.
    * @generated
    */
   public void setVersion(Long newVersion) {
@@ -111,8 +111,8 @@ public class Country extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Country#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Country#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

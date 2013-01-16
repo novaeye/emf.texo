@@ -79,8 +79,8 @@ public class UIModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIModel#getUIElement() UIElement}' feature.
+   * @param newUIElement
+   *          the new value of the '{@link UIModel#getUIElement() UIElement}' feature.
    * @generated
    */
   public void setUIElement(Set<AbstractUIElement> newUIElement) {

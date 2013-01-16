@@ -45,8 +45,8 @@ public class Abstract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Abstract#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Abstract#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

@@ -79,8 +79,8 @@ public class ConceptualModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ConceptualModel#getConceptualElement() conceptualElement}' feature.
+   * @param newConceptualElement
+   *          the new value of the '{@link ConceptualModel#getConceptualElement() conceptualElement}' feature.
    * @generated
    */
   public void setConceptualElement(Set<AbstractConceptualElement> newConceptualElement) {

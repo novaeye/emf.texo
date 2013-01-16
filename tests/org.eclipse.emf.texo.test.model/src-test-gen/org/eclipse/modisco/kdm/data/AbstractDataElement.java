@@ -102,8 +102,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractDataElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractDataElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -160,8 +160,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractDataElement#getDataRelation() dataRelation}' feature.
+   * @param newDataRelation
+   *          the new value of the '{@link AbstractDataElement#getDataRelation() dataRelation}' feature.
    * @generated
    */
   public void setDataRelation(Set<AbstractDataRelationship> newDataRelation) {
@@ -218,8 +218,8 @@ public abstract class AbstractDataElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractDataElement#getAbstraction() abstraction}' feature.
+   * @param newAbstraction
+   *          the new value of the '{@link AbstractDataElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {

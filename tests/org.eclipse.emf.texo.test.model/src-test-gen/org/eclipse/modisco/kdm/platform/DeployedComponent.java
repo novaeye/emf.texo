@@ -80,8 +80,8 @@ public class DeployedComponent extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DeployedComponent#getGroupedCode() groupedCode}' feature.
+   * @param newGroupedCode
+   *          the new value of the '{@link DeployedComponent#getGroupedCode() groupedCode}' feature.
    * @generated
    */
   public void setGroupedCode(Set<Module> newGroupedCode) {

@@ -66,8 +66,8 @@ public class Image extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Image#getId() id}' feature.
+   * @param newId
+   *          the new value of the '{@link Image#getId() id}' feature.
    * @generated
    */
   public void setId(String newId) {
@@ -91,8 +91,8 @@ public class Image extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Image#getStretchH() stretchH}' feature.
+   * @param newStretchH
+   *          the new value of the '{@link Image#getStretchH() stretchH}' feature.
    * @generated
    */
   public void setStretchH(Boolean newStretchH) {
@@ -116,8 +116,8 @@ public class Image extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Image#getStretchV() stretchV}' feature.
+   * @param newStretchV
+   *          the new value of the '{@link Image#getStretchV() stretchV}' feature.
    * @generated
    */
   public void setStretchV(Boolean newStretchV) {
@@ -141,8 +141,8 @@ public class Image extends GraphicsAlgorithm {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Image#getProportional() proportional}' feature.
+   * @param newProportional
+   *          the new value of the '{@link Image#getProportional() proportional}' feature.
    * @generated
    */
   public void setProportional(Boolean newProportional) {

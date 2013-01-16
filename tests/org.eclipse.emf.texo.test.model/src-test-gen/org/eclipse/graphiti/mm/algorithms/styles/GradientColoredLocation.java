@@ -67,8 +67,8 @@ public class GradientColoredLocation extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredLocation#getLocationType() locationType}' feature.
+   * @param newLocationType
+   *          the new value of the '{@link GradientColoredLocation#getLocationType() locationType}' feature.
    * @generated
    */
   public void setLocationType(LocationType newLocationType) {
@@ -92,8 +92,8 @@ public class GradientColoredLocation extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredLocation#getLocationValue() locationValue}' feature.
+   * @param newLocationValue
+   *          the new value of the '{@link GradientColoredLocation#getLocationValue() locationValue}' feature.
    * @generated
    */
   public void setLocationValue(Integer newLocationValue) {
@@ -117,8 +117,8 @@ public class GradientColoredLocation extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GradientColoredLocation#getColor() color}' feature.
+   * @param newColor
+   *          the new value of the '{@link GradientColoredLocation#getColor() color}' feature.
    * @generated
    */
   public void setColor(Color newColor) {

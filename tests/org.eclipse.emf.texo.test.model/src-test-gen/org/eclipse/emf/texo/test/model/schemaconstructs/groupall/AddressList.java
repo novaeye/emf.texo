@@ -59,8 +59,8 @@ public class AddressList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getGroupName() groupName}' feature.
+   * @param newGroupName
+   *          the new value of the '{@link AddressList#getGroupName() groupName}' feature.
    * @generated
    */
   public void setGroupName(String newGroupName) {
@@ -84,8 +84,8 @@ public class AddressList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getAddrs() addrs}' feature.
+   * @param newAddrs
+   *          the new value of the '{@link AddressList#getAddrs() addrs}' feature.
    * @generated
    */
   public void setAddrs(List<AddressListAddrsFeatureGroup> newAddrs) {
@@ -110,8 +110,8 @@ public class AddressList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getShipTo() shipTo}' feature.
+   * @param newShipTo
+   *          the new value of the '{@link AddressList#getShipTo() shipTo}' feature.
    * @generated
    */
   public void setShipTo(List<AddressType> newShipTo) {
@@ -137,8 +137,8 @@ public class AddressList extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AddressList#getBillTo() billTo}' feature.
+   * @param newBillTo
+   *          the new value of the '{@link AddressList#getBillTo() billTo}' feature.
    * @generated
    */
   public void setBillTo(List<AddressType> newBillTo) {

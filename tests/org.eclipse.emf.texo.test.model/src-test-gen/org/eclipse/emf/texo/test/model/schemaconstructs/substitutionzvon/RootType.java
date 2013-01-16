@@ -60,8 +60,8 @@ public class RootType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RootType#getMyAbstractGroup() myAbstractGroup}' feature.
+   * @param newMyAbstractGroup
+   *          the new value of the '{@link RootType#getMyAbstractGroup() myAbstractGroup}' feature.
    * @generated
    */
   public void setMyAbstractGroup(List<RootTypeMyAbstractGroupFeatureGroup> newMyAbstractGroup) {
@@ -98,8 +98,8 @@ public class RootType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RootType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
+   * @param newMyComplexAbstractGroup
+   *          the new value of the '{@link RootType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
    * @generated
    */
   public void setMyComplexAbstractGroup(List<RootTypeMyComplexAbstractGroupFeatureGroup> newMyComplexAbstractGroup) {

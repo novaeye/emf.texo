@@ -78,8 +78,8 @@ public class ProductType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProductType#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link ProductType#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -163,8 +163,8 @@ public class ProductType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProductType#getRemark() remark}' feature.
+   * @param newRemark
+   *          the new value of the '{@link ProductType#getRemark() remark}' feature.
    * @generated
    */
   public void setRemark(List<StringType> newRemark) {
@@ -188,8 +188,8 @@ public class ProductType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProductType#getPrice() price}' feature.
+   * @param newPrice
+   *          the new value of the '{@link ProductType#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(PriceType newPrice) {

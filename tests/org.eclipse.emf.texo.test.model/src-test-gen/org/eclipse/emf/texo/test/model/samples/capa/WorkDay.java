@@ -61,8 +61,8 @@ public class WorkDay extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkDay#getDayOfWeek() dayOfWeek}' feature.
+   * @param newDayOfWeek
+   *          the new value of the '{@link WorkDay#getDayOfWeek() dayOfWeek}' feature.
    * @generated
    */
   public void setDayOfWeek(Integer newDayOfWeek) {
@@ -86,8 +86,8 @@ public class WorkDay extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkDay#getDuration() duration}' feature.
+   * @param newDuration
+   *          the new value of the '{@link WorkDay#getDuration() duration}' feature.
    * @generated
    */
   public void setDuration(Integer newDuration) {
@@ -111,8 +111,8 @@ public class WorkDay extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkDay#getStartTime() startTime}' feature.
+   * @param newStartTime
+   *          the new value of the '{@link WorkDay#getStartTime() startTime}' feature.
    * @generated
    */
   public void setStartTime(Integer newStartTime) {

@@ -51,8 +51,8 @@ public class GeneratedFrom extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GeneratedFrom#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link GeneratedFrom#getTo() to}' feature.
    * @generated
    */
   public void setTo(PreprocessorDirective newTo) {
@@ -76,8 +76,8 @@ public class GeneratedFrom extends AbstractCodeRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GeneratedFrom#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link GeneratedFrom#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(AbstractCodeElement newFrom) {

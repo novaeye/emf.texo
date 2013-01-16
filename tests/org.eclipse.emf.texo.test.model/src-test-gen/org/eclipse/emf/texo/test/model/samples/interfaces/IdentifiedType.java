@@ -36,8 +36,8 @@ public interface IdentifiedType extends IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link IdentifiedType#getIdentifier() <em>identifier</em>}' feature.
+   * @param newIdentifier
+   *          the new value of the '{@link IdentifiedType#getIdentifier() <em>identifier</em>}' feature.
    * @generated
    */
   public void setIdentifier(String newIdentifier);

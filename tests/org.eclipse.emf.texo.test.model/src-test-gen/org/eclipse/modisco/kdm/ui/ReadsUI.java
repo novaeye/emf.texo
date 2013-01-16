@@ -53,8 +53,8 @@ public class ReadsUI extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ReadsUI#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ReadsUI#getTo() to}' feature.
    * @generated
    */
   public void setTo(UIResource newTo) {
@@ -78,8 +78,8 @@ public class ReadsUI extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ReadsUI#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ReadsUI#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

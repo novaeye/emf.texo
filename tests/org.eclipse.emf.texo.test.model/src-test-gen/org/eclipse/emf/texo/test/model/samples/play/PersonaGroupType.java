@@ -61,8 +61,8 @@ public class PersonaGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaGroupType#getPersona() persona}' feature.
+   * @param newPersona
+   *          the new value of the '{@link PersonaGroupType#getPersona() persona}' feature.
    * @generated
    */
   public void setPersona(List<String> newPersona) {
@@ -86,8 +86,8 @@ public class PersonaGroupType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PersonaGroupType#getGroupDescription() groupDescription}' feature.
+   * @param newGroupDescription
+   *          the new value of the '{@link PersonaGroupType#getGroupDescription() groupDescription}' feature.
    * @generated
    */
   public void setGroupDescription(String newGroupDescription) {

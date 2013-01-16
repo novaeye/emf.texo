@@ -90,8 +90,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getArticle() article}' feature.
+   * @param newArticle
+   *          the new value of the '{@link Production#getArticle() article}' feature.
    * @generated
    */
   public void setArticle(String newArticle) {
@@ -115,8 +115,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getDueTime() dueTime}' feature.
+   * @param newDueTime
+   *          the new value of the '{@link Production#getDueTime() dueTime}' feature.
    * @generated
    */
   public void setDueTime(Date newDueTime) {
@@ -140,8 +140,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getMissingAmount() missingAmount}' feature.
+   * @param newMissingAmount
+   *          the new value of the '{@link Production#getMissingAmount() missingAmount}' feature.
    * @generated
    */
   public void setMissingAmount(Float newMissingAmount) {
@@ -165,8 +165,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getProductionId() productionId}' feature.
+   * @param newProductionId
+   *          the new value of the '{@link Production#getProductionId() productionId}' feature.
    * @generated
    */
   public void setProductionId(String newProductionId) {
@@ -190,8 +190,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getStartTime() startTime}' feature.
+   * @param newStartTime
+   *          the new value of the '{@link Production#getStartTime() startTime}' feature.
    * @generated
    */
   public void setStartTime(Date newStartTime) {
@@ -215,8 +215,8 @@ public class Production extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Production#getTotalAmount() totalAmount}' feature.
+   * @param newTotalAmount
+   *          the new value of the '{@link Production#getTotalAmount() totalAmount}' feature.
    * @generated
    */
   public void setTotalAmount(Float newTotalAmount) {

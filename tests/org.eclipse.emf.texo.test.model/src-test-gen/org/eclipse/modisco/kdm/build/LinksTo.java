@@ -51,8 +51,8 @@ public class LinksTo extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LinksTo#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link LinksTo#getTo() to}' feature.
    * @generated
    */
   public void setTo(AbstractBuildElement newTo) {
@@ -76,8 +76,8 @@ public class LinksTo extends AbstractBuildRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LinksTo#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link LinksTo#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(SymbolicLink newFrom) {

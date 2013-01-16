@@ -103,8 +103,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link JournalStatement#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -128,8 +128,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link JournalStatement#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -153,8 +153,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getAmount() amount}' feature.
+   * @param newAmount
+   *          the new value of the '{@link JournalStatement#getAmount() amount}' feature.
    * @generated
    */
   public void setAmount(float newAmount) {
@@ -178,8 +178,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getDebitAccount() debitAccount}' feature.
+   * @param newDebitAccount
+   *          the new value of the '{@link JournalStatement#getDebitAccount() debitAccount}' feature.
    * @generated
    */
   public void setDebitAccount(Account newDebitAccount) {
@@ -203,8 +203,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getCreditAccount() creditAccount}' feature.
+   * @param newCreditAccount
+   *          the new value of the '{@link JournalStatement#getCreditAccount() creditAccount}' feature.
    * @generated
    */
   public void setCreditAccount(Account newCreditAccount) {
@@ -228,8 +228,8 @@ public class JournalStatement extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalStatement#getVat() vat}' feature.
+   * @param newVat
+   *          the new value of the '{@link JournalStatement#getVat() vat}' feature.
    * @generated
    */
   public void setVat(Vat newVat) {

@@ -179,10 +179,12 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getAaa() <em>aaa</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAaa
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAaa
+   *          the new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
    * @generated
    */
   public void setAaa(String newAaa) {
@@ -205,10 +207,12 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getBbb() <em>bbb</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBbb
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newBbb
+   *          the new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
    * @generated
    */
   public void setBbb(String newBbb) {
@@ -231,10 +235,12 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getCcc() <em>ccc</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newCcc
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newCcc
+   *          the new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
    * @generated
    */
   public void setCcc(String newCcc) {
@@ -267,8 +273,8 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

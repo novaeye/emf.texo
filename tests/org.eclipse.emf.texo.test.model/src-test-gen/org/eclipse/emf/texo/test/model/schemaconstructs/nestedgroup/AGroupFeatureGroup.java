@@ -170,10 +170,12 @@ public class AGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link A#getB() <em>b</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newB
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link A#getB() b}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newB
+   *          the new value of the '{@link A#getB() b}' feature.
    * @generated
    */
   public void setB(String newB) {
@@ -196,10 +198,12 @@ public class AGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link A#getC() <em>c</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link A#getC() c}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value of the '{@link A#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -230,8 +234,8 @@ public class AGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

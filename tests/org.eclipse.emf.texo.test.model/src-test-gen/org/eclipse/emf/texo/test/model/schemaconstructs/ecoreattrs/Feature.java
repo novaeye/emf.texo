@@ -52,8 +52,8 @@ public class Feature extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Feature#getAMap() aMap}' feature.
+   * @param newAMap
+   *          the new value of the '{@link Feature#getAMap() aMap}' feature.
    * @generated
    */
   public void setAMap(List<FeatureAMapFeatureGroup> newAMap) {
@@ -77,8 +77,8 @@ public class Feature extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Feature#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Feature#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -102,8 +102,8 @@ public class Feature extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Feature#getValue_() value}' feature.
+   * @param newValue_
+   *          the new value of the '{@link Feature#getValue_() value}' feature.
    * @generated
    */
   public void setValue_(double newValue_) {

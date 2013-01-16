@@ -83,8 +83,8 @@ public class BooksType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BooksType#getBook() book}' feature.
+   * @param newBook
+   *          the new value of the '{@link BooksType#getBook() book}' feature.
    * @generated
    */
   public void setBook(List<BookType> newBook) {

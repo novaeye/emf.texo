@@ -171,10 +171,12 @@ public class NumberTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link NumberType#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link NumberType#getMyComplexAbstract() myComplexAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyComplexAbstract
+   *          the new value of the '{@link NumberType#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
    */
   public void setMyComplexAbstract(ComplexNumber newMyComplexAbstract) {
@@ -203,8 +205,8 @@ public class NumberTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

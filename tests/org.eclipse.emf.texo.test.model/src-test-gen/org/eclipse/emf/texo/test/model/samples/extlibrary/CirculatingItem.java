@@ -53,8 +53,8 @@ public abstract class CirculatingItem extends Item implements Lendable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CirculatingItem#getCopies() copies}' feature.
+   * @param newCopies
+   *          the new value of the '{@link CirculatingItem#getCopies() copies}' feature.
    * @generated
    */
   public void setCopies(int newCopies) {
@@ -111,8 +111,8 @@ public abstract class CirculatingItem extends Item implements Lendable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CirculatingItem#getBorrowers() borrowers}' feature.
+   * @param newBorrowers
+   *          the new value of the '{@link CirculatingItem#getBorrowers() borrowers}' feature.
    * @generated
    */
   public void setBorrowers(Set<Borrower> newBorrowers) {

@@ -51,8 +51,8 @@ public class FmType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link FmType#getP() p}' feature.
+   * @param newP
+   *          the new value of the '{@link FmType#getP() p}' feature.
    * @generated
    */
   public void setP(List<String> newP) {

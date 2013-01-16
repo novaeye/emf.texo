@@ -111,8 +111,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractCodeElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractCodeElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -169,8 +169,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractCodeElement#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link AbstractCodeElement#getComment() comment}' feature.
    * @generated
    */
   public void setComment(Set<CommentUnit> newComment) {
@@ -227,8 +227,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractCodeElement#getCodeRelation() codeRelation}' feature.
+   * @param newCodeRelation
+   *          the new value of the '{@link AbstractCodeElement#getCodeRelation() codeRelation}' feature.
    * @generated
    */
   public void setCodeRelation(Set<AbstractCodeRelationship> newCodeRelation) {
@@ -285,8 +285,8 @@ public abstract class AbstractCodeElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractCodeElement#getEntryFlow() entryFlow}' feature.
+   * @param newEntryFlow
+   *          the new value of the '{@link AbstractCodeElement#getEntryFlow() entryFlow}' feature.
    * @generated
    */
   public void setEntryFlow(List<EntryFlow> newEntryFlow) {

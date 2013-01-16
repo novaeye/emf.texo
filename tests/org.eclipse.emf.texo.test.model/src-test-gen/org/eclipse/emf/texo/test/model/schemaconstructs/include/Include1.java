@@ -55,8 +55,8 @@ public class Include1 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Include1#getCode() code}' feature.
+   * @param newCode
+   *          the new value of the '{@link Include1#getCode() code}' feature.
    * @generated
    */
   public void setCode(String newCode) {
@@ -80,8 +80,8 @@ public class Include1 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Include1#getInclude2() include2}' feature.
+   * @param newInclude2
+   *          the new value of the '{@link Include1#getInclude2() include2}' feature.
    * @generated
    */
   public void setInclude2(Include2 newInclude2) {

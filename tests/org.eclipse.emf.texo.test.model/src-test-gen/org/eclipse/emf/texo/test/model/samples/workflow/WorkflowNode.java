@@ -90,8 +90,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowNode#getWorkflow() workflow}' feature.
+   * @param newWorkflow
+   *          the new value of the '{@link WorkflowNode#getWorkflow() workflow}' feature.
    * @generated
    */
   public void setWorkflow(Workflow newWorkflow) {
@@ -148,8 +148,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowNode#getOutputs() outputs}' feature.
+   * @param newOutputs
+   *          the new value of the '{@link WorkflowNode#getOutputs() outputs}' feature.
    * @generated
    */
   public void setOutputs(List<OutputPort> newOutputs) {
@@ -206,8 +206,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowNode#getInputs() inputs}' feature.
+   * @param newInputs
+   *          the new value of the '{@link WorkflowNode#getInputs() inputs}' feature.
    * @generated
    */
   public void setInputs(List<InputPort> newInputs) {
@@ -231,8 +231,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowNode#isIsStart() isStart}' feature.
+   * @param newIsStart
+   *          the new value of the '{@link WorkflowNode#isIsStart() isStart}' feature.
    * @generated
    */
   public void setIsStart(boolean newIsStart) {
@@ -256,8 +256,8 @@ public abstract class WorkflowNode extends WorkflowElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkflowNode#isIsFinish() isFinish}' feature.
+   * @param newIsFinish
+   *          the new value of the '{@link WorkflowNode#isIsFinish() isFinish}' feature.
    * @generated
    */
   public void setIsFinish(boolean newIsFinish) {

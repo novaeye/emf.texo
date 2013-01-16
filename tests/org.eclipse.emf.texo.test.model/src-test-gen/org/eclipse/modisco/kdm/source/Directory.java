@@ -42,8 +42,8 @@ public class Directory extends InventoryContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Directory#getPath() path}' feature.
+   * @param newPath
+   *          the new value of the '{@link Directory#getPath() path}' feature.
    * @generated
    */
   public void setPath(String newPath) {

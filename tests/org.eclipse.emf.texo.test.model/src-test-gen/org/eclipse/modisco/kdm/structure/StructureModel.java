@@ -79,8 +79,8 @@ public class StructureModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StructureModel#getStructureElement() structureElement}' feature.
+   * @param newStructureElement
+   *          the new value of the '{@link StructureModel#getStructureElement() structureElement}' feature.
    * @generated
    */
   public void setStructureElement(Set<AbstractStructureElement> newStructureElement) {

@@ -81,8 +81,8 @@ public class CompositeConnection extends Connection {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CompositeConnection#getChildren() children}' feature.
+   * @param newChildren
+   *          the new value of the '{@link CompositeConnection#getChildren() children}' feature.
    * @generated
    */
   public void setChildren(List<CurvedConnection> newChildren) {

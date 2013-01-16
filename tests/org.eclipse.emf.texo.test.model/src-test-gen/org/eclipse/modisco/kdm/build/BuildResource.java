@@ -96,8 +96,8 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildResource#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link BuildResource#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<KDMEntity> newImplementation) {
@@ -154,8 +154,8 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildResource#getGroupedBuild() groupedBuild}' feature.
+   * @param newGroupedBuild
+   *          the new value of the '{@link BuildResource#getGroupedBuild() groupedBuild}' feature.
    * @generated
    */
   public void setGroupedBuild(Set<AbstractBuildElement> newGroupedBuild) {
@@ -212,8 +212,8 @@ public class BuildResource extends AbstractBuildElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildResource#getBuildElement() buildElement}' feature.
+   * @param newBuildElement
+   *          the new value of the '{@link BuildResource#getBuildElement() buildElement}' feature.
    * @generated
    */
   public void setBuildElement(Set<AbstractBuildElement> newBuildElement) {

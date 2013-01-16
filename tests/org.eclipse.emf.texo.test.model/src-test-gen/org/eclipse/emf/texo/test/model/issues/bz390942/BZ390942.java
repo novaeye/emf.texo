@@ -47,8 +47,8 @@ public class BZ390942 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BZ390942#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link BZ390942#getValue() value}' feature.
    * @generated
    */
   public void setValue(float newValue) {

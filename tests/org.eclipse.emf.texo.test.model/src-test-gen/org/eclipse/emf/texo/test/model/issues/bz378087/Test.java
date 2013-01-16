@@ -45,8 +45,8 @@ public class Test extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Test#getClass_() class}' feature.
+   * @param newClass_
+   *          the new value of the '{@link Test#getClass_() class}' feature.
    * @generated
    */
   public void setClass_(String newClass_) {

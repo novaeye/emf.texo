@@ -80,8 +80,8 @@ public abstract class AbstractInventoryElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractInventoryElement#getInventoryRelationship() inventoryRelationship}'
+   * @param newInventoryRelationship
+   *          the new value of the '{@link AbstractInventoryElement#getInventoryRelationship() inventoryRelationship}'
    *          feature.
    * @generated
    */

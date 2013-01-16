@@ -54,8 +54,8 @@ public class ProducesDataEvent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProducesDataEvent#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link ProducesDataEvent#getTo() to}' feature.
    * @generated
    */
   public void setTo(DataEvent newTo) {
@@ -79,8 +79,8 @@ public class ProducesDataEvent extends AbstractActionRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProducesDataEvent#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link ProducesDataEvent#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ActionElement newFrom) {

@@ -102,7 +102,7 @@ public class RequestModelFactory implements ModelFactory {
    * Wraps a feature map entry pojo in a {@link AbstractModelFeatureMapEntry}. If the feature map entry is null then a
    * new one is created and <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature of the object
    * @param adaptee
    *          the pojo feature map entry being wrapped/adapted

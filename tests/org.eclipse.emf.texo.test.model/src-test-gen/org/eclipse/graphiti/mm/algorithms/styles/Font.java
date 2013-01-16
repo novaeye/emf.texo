@@ -69,8 +69,8 @@ public class Font extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Font#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Font#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -94,8 +94,8 @@ public class Font extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Font#getSize() size}' feature.
+   * @param newSize
+   *          the new value of the '{@link Font#getSize() size}' feature.
    * @generated
    */
   public void setSize(int newSize) {
@@ -119,8 +119,8 @@ public class Font extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Font#isItalic() italic}' feature.
+   * @param newItalic
+   *          the new value of the '{@link Font#isItalic() italic}' feature.
    * @generated
    */
   public void setItalic(boolean newItalic) {
@@ -144,8 +144,8 @@ public class Font extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Font#isBold() bold}' feature.
+   * @param newBold
+   *          the new value of the '{@link Font#isBold() bold}' feature.
    * @generated
    */
   public void setBold(boolean newBold) {

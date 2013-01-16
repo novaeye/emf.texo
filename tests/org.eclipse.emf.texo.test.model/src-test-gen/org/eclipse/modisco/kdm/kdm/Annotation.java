@@ -43,8 +43,8 @@ public class Annotation extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Annotation#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link Annotation#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {

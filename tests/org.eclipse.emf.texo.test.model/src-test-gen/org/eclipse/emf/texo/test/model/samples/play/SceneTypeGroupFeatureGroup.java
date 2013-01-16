@@ -173,10 +173,12 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SceneType#getStageDirections() <em>stageDirections</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStageDirections
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newStageDirections
+   *          the new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
    * @generated
    */
   public void setStageDirections(String newStageDirections) {
@@ -199,10 +201,12 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SceneType#getSpeech() <em>speech</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSpeech
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link SceneType#getSpeech() speech}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSpeech
+   *          the new value of the '{@link SceneType#getSpeech() speech}' feature.
    * @generated
    */
   public void setSpeech(SpeechType newSpeech) {
@@ -233,8 +237,8 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

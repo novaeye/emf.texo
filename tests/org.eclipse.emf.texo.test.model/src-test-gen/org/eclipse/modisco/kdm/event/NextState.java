@@ -51,8 +51,8 @@ public class NextState extends AbstractEventRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NextState#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link NextState#getTo() to}' feature.
    * @generated
    */
   public void setTo(State newTo) {
@@ -76,8 +76,8 @@ public class NextState extends AbstractEventRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link NextState#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link NextState#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(Transition newFrom) {

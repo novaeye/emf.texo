@@ -53,8 +53,8 @@ public class CapacityEntry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CapacityEntry#getCapacityEntryId() capacityEntryId}' feature.
+   * @param newCapacityEntryId
+   *          the new value of the '{@link CapacityEntry#getCapacityEntryId() capacityEntryId}' feature.
    * @generated
    */
   public void setCapacityEntryId(String newCapacityEntryId) {
@@ -78,8 +78,8 @@ public class CapacityEntry extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CapacityEntry#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link CapacityEntry#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

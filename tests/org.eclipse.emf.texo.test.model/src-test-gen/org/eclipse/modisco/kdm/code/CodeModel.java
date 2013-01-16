@@ -81,8 +81,8 @@ public class CodeModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CodeModel#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link CodeModel#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(List<AbstractCodeElement> newCodeElement) {

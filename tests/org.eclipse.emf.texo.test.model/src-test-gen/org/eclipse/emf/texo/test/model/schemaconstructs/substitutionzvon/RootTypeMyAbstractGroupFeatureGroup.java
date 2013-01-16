@@ -169,10 +169,12 @@ public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link RootType#getMyAbstract() <em>myAbstract</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyAbstract
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link RootType#getMyAbstract() myAbstract}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newMyAbstract
+   *          the new value of the '{@link RootType#getMyAbstract() myAbstract}' feature.
    * @generated
    */
   public void setMyAbstract(BigInteger newMyAbstract) {
@@ -201,8 +203,8 @@ public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

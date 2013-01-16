@@ -108,8 +108,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Library#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -134,8 +134,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getWriters() writers}' feature.
+   * @param newWriters
+   *          the new value of the '{@link Library#getWriters() writers}' feature.
    * @generated
    */
   public void setWriters(List<Writer> newWriters) {
@@ -160,8 +160,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getEmployees() employees}' feature.
+   * @param newEmployees
+   *          the new value of the '{@link Library#getEmployees() employees}' feature.
    * @generated
    */
   public void setEmployees(List<Employee> newEmployees) {
@@ -187,8 +187,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getBorrowers() borrowers}' feature.
+   * @param newBorrowers
+   *          the new value of the '{@link Library#getBorrowers() borrowers}' feature.
    * @generated
    */
   public void setBorrowers(List<Borrower> newBorrowers) {
@@ -246,8 +246,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getStock() stock}' feature.
+   * @param newStock
+   *          the new value of the '{@link Library#getStock() stock}' feature.
    * @generated
    */
   public void setStock(Set<Item> newStock) {
@@ -304,8 +304,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getBooks() books}' feature.
+   * @param newBooks
+   *          the new value of the '{@link Library#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(Set<Book> newBooks) {
@@ -362,8 +362,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getBranches() branches}' feature.
+   * @param newBranches
+   *          the new value of the '{@link Library#getBranches() branches}' feature.
    * @generated
    */
   public void setBranches(List<Library> newBranches) {
@@ -387,8 +387,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getParentBranch() parentBranch}' feature.
+   * @param newParentBranch
+   *          the new value of the '{@link Library#getParentBranch() parentBranch}' feature.
    * @generated
    */
   public void setParentBranch(Library newParentBranch) {
@@ -412,8 +412,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getPeople() people}' feature.
+   * @param newPeople
+   *          the new value of the '{@link Library#getPeople() people}' feature.
    * @generated
    */
   public void setPeople(List<LibraryPeopleFeatureGroup> newPeople) {
@@ -437,8 +437,8 @@ public class Library extends Identifiable implements Addressable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Library#getAddress() address}' feature.
+   * @param newAddress
+   *          the new value of the '{@link Library#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(String newAddress) {

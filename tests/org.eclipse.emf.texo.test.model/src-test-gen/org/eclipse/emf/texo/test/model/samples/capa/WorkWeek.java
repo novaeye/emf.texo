@@ -92,8 +92,8 @@ public class WorkWeek extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkWeek#getDays() days}' feature.
+   * @param newDays
+   *          the new value of the '{@link WorkWeek#getDays() days}' feature.
    * @generated
    */
   public void setDays(List<WorkDay> newDays) {
@@ -117,8 +117,8 @@ public class WorkWeek extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link WorkWeek#getWorkWeekId() workWeekId}' feature.
+   * @param newWorkWeekId
+   *          the new value of the '{@link WorkWeek#getWorkWeekId() workWeekId}' feature.
    * @generated
    */
   public void setWorkWeekId(String newWorkWeekId) {

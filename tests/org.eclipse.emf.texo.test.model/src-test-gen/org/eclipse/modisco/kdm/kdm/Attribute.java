@@ -51,8 +51,8 @@ public class Attribute extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Attribute#getTag() tag}' feature.
+   * @param newTag
+   *          the new value of the '{@link Attribute#getTag() tag}' feature.
    * @generated
    */
   public void setTag(String newTag) {
@@ -76,8 +76,8 @@ public class Attribute extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Attribute#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link Attribute#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

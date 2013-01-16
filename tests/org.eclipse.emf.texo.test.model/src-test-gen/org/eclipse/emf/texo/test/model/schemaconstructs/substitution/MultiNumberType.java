@@ -59,8 +59,8 @@ public class MultiNumberType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MultiNumberType#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link MultiNumberType#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -84,8 +84,8 @@ public class MultiNumberType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link MultiNumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
+   * @param newMyComplexAbstractGroup
+   *          the new value of the '{@link MultiNumberType#getMyComplexAbstractGroup() myComplexAbstractGroup}' feature.
    * @generated
    */
   public void setMyComplexAbstractGroup(

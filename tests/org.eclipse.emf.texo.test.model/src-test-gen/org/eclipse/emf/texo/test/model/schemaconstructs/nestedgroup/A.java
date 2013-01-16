@@ -59,8 +59,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link A#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -84,8 +84,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link A#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<AGroupFeatureGroup> newGroup) {
@@ -109,8 +109,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getB() b}' feature.
+   * @param newB
+   *          the new value of the '{@link A#getB() b}' feature.
    * @generated
    */
   public void setB(List<String> newB) {
@@ -134,8 +134,8 @@ public class A extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link A#getC() c}' feature.
+   * @param newC
+   *          the new value of the '{@link A#getC() c}' feature.
    * @generated
    */
   public void setC(List<CType> newC) {

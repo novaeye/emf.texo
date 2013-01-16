@@ -98,8 +98,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link TestAny#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -123,8 +123,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getSingleAnyType() singleAnyType}' feature.
+   * @param newSingleAnyType
+   *          the new value of the '{@link TestAny#getSingleAnyType() singleAnyType}' feature.
    * @generated
    */
   public void setSingleAnyType(Object newSingleAnyType) {
@@ -181,8 +181,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getMultiAnyType() multiAnyType}' feature.
+   * @param newMultiAnyType
+   *          the new value of the '{@link TestAny#getMultiAnyType() multiAnyType}' feature.
    * @generated
    */
   public void setMultiAnyType(List<Object> newMultiAnyType) {
@@ -206,8 +206,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getA() a}' feature.
+   * @param newA
+   *          the new value of the '{@link TestAny#getA() a}' feature.
    * @generated
    */
   public void setA(String newA) {
@@ -231,8 +231,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getMyAny() myAny}' feature.
+   * @param newMyAny
+   *          the new value of the '{@link TestAny#getMyAny() myAny}' feature.
    * @generated
    */
   public void setMyAny(List<TestAnyMyAnyFeatureGroup> newMyAny) {
@@ -256,8 +256,8 @@ public class TestAny extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestAny#getAny() any}' feature.
+   * @param newAny
+   *          the new value of the '{@link TestAny#getAny() any}' feature.
    * @generated
    */
   public void setAny(List<TestAnyAnyFeatureGroup> newAny) {

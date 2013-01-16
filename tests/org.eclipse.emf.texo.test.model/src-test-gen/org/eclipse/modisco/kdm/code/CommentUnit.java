@@ -43,8 +43,8 @@ public class CommentUnit extends ModelElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CommentUnit#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link CommentUnit#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {

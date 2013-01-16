@@ -56,8 +56,8 @@ public abstract class AudioVisualItem extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AudioVisualItem#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link AudioVisualItem#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -81,8 +81,8 @@ public abstract class AudioVisualItem extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AudioVisualItem#getMinutesLength() minutesLength}' feature.
+   * @param newMinutesLength
+   *          the new value of the '{@link AudioVisualItem#getMinutesLength() minutesLength}' feature.
    * @generated
    */
   public void setMinutesLength(int newMinutesLength) {
@@ -106,8 +106,8 @@ public abstract class AudioVisualItem extends CirculatingItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AudioVisualItem#isDamaged() damaged}' feature.
+   * @param newDamaged
+   *          the new value of the '{@link AudioVisualItem#isDamaged() damaged}' feature.
    * @generated
    */
   public void setDamaged(boolean newDamaged) {

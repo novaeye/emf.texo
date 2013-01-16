@@ -53,8 +53,8 @@ public class PromotionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PromotionType#getDiscount() discount}' feature.
+   * @param newDiscount
+   *          the new value of the '{@link PromotionType#getDiscount() discount}' feature.
    * @generated
    */
   public void setDiscount(String newDiscount) {
@@ -78,8 +78,8 @@ public class PromotionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PromotionType#getNone() none}' feature.
+   * @param newNone
+   *          the new value of the '{@link PromotionType#getNone() none}' feature.
    * @generated
    */
   public void setNone(String newNone) {

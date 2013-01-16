@@ -68,8 +68,8 @@ public class Forum extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Forum#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Forum#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {
@@ -126,8 +126,8 @@ public class Forum extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Forum#getMembers() members}' feature.
+   * @param newMembers
+   *          the new value of the '{@link Forum#getMembers() members}' feature.
    * @generated
    */
   public void setMembers(List<Member> newMembers) {
@@ -184,8 +184,8 @@ public class Forum extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Forum#getTopics() topics}' feature.
+   * @param newTopics
+   *          the new value of the '{@link Forum#getTopics() topics}' feature.
    * @generated
    */
   public void setTopics(List<Topic> newTopics) {

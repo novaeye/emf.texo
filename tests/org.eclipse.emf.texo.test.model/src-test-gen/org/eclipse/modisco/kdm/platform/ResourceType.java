@@ -78,8 +78,8 @@ public class ResourceType extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ResourceType#getPlatformElement() platformElement}' feature.
+   * @param newPlatformElement
+   *          the new value of the '{@link ResourceType#getPlatformElement() platformElement}' feature.
    * @generated
    */
   public void setPlatformElement(Set<AbstractPlatformElement> newPlatformElement) {

@@ -112,8 +112,8 @@ public abstract class AbstractUIElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractUIElement#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link AbstractUIElement#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -170,8 +170,8 @@ public abstract class AbstractUIElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractUIElement#getUIRelation() UIRelation}' feature.
+   * @param newUIRelation
+   *          the new value of the '{@link AbstractUIElement#getUIRelation() UIRelation}' feature.
    * @generated
    */
   public void setUIRelation(Set<AbstractUIRelationship> newUIRelation) {
@@ -228,8 +228,8 @@ public abstract class AbstractUIElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractUIElement#getImplementation() implementation}' feature.
+   * @param newImplementation
+   *          the new value of the '{@link AbstractUIElement#getImplementation() implementation}' feature.
    * @generated
    */
   public void setImplementation(Set<AbstractCodeElement> newImplementation) {
@@ -286,8 +286,8 @@ public abstract class AbstractUIElement extends KDMEntity {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AbstractUIElement#getAbstraction() abstraction}' feature.
+   * @param newAbstraction
+   *          the new value of the '{@link AbstractUIElement#getAbstraction() abstraction}' feature.
    * @generated
    */
   public void setAbstraction(List<ActionElement> newAbstraction) {

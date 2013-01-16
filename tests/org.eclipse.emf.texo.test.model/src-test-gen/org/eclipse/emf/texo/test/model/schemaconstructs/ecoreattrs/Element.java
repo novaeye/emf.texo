@@ -52,8 +52,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getNameMap() nameMap}' feature.
+   * @param newNameMap
+   *          the new value of the '{@link Element#getNameMap() nameMap}' feature.
    * @generated
    */
   public void setNameMap(List<ElementNameMapFeatureGroup> newNameMap) {
@@ -77,8 +77,8 @@ public class Element extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getNames() names}' feature.
+   * @param newNames
+   *          the new value of the '{@link Element#getNames() names}' feature.
    * @generated
    */
   public void setNames(NameList newNames) {

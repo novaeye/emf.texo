@@ -46,8 +46,8 @@ public class CollectionType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CollectionType#getBooks() books}' feature.
+   * @param newBooks
+   *          the new value of the '{@link CollectionType#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(BooksType newBooks) {

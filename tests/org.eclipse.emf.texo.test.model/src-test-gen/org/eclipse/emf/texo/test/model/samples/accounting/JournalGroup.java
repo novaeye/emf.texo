@@ -76,8 +76,8 @@ public class JournalGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalGroup#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link JournalGroup#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -134,8 +134,8 @@ public class JournalGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalGroup#getJournalGroups() journalGroups}' feature.
+   * @param newJournalGroups
+   *          the new value of the '{@link JournalGroup#getJournalGroups() journalGroups}' feature.
    * @generated
    */
   public void setJournalGroups(List<JournalGroup> newJournalGroups) {
@@ -192,8 +192,8 @@ public class JournalGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link JournalGroup#getJournalStatements() journalStatements}' feature.
+   * @param newJournalStatements
+   *          the new value of the '{@link JournalGroup#getJournalStatements() journalStatements}' feature.
    * @generated
    */
   public void setJournalStatements(List<JournalStatement> newJournalStatements) {

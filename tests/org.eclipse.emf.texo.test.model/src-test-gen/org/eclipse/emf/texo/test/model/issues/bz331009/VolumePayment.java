@@ -68,8 +68,8 @@ public class VolumePayment extends PaymentItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VolumePayment#getVolume() volume}' feature.
+   * @param newVolume
+   *          the new value of the '{@link VolumePayment#getVolume() volume}' feature.
    * @generated
    */
   public void setVolume(BigDecimal newVolume) {

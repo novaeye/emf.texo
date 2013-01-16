@@ -44,8 +44,8 @@ public class LoopTask extends CompoundTask {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LoopTask#getWhileCondition() whileCondition}' feature.
+   * @param newWhileCondition
+   *          the new value of the '{@link LoopTask#getWhileCondition() whileCondition}' feature.
    * @generated
    */
   public void setWhileCondition(String newWhileCondition) {

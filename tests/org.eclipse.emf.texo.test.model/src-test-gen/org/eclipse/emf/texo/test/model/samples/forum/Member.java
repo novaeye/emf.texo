@@ -71,8 +71,8 @@ public class Member extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Member#getNickname() nickname}' feature.
+   * @param newNickname
+   *          the new value of the '{@link Member#getNickname() nickname}' feature.
    * @generated
    */
   public void setNickname(String newNickname) {
@@ -129,8 +129,8 @@ public class Member extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Member#getPosts() posts}' feature.
+   * @param newPosts
+   *          the new value of the '{@link Member#getPosts() posts}' feature.
    * @generated
    */
   public void setPosts(List<Post> newPosts) {
@@ -187,8 +187,8 @@ public class Member extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Member#getCreated() created}' feature.
+   * @param newCreated
+   *          the new value of the '{@link Member#getCreated() created}' feature.
    * @generated
    */
   public void setCreated(List<Topic> newCreated) {

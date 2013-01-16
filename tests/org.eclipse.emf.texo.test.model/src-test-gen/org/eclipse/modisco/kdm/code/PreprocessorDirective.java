@@ -79,8 +79,8 @@ public class PreprocessorDirective extends AbstractCodeElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PreprocessorDirective#getCodeElement() codeElement}' feature.
+   * @param newCodeElement
+   *          the new value of the '{@link PreprocessorDirective#getCodeElement() codeElement}' feature.
    * @generated
    */
   public void setCodeElement(Set<AbstractCodeElement> newCodeElement) {

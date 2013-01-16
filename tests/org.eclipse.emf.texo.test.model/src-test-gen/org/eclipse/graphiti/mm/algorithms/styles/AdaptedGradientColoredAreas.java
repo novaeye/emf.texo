@@ -68,8 +68,8 @@ public class AdaptedGradientColoredAreas extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AdaptedGradientColoredAreas#getDefinedStyleId() definedStyleId}' feature.
+   * @param newDefinedStyleId
+   *          the new value of the '{@link AdaptedGradientColoredAreas#getDefinedStyleId() definedStyleId}' feature.
    * @generated
    */
   public void setDefinedStyleId(String newDefinedStyleId) {
@@ -127,8 +127,8 @@ public class AdaptedGradientColoredAreas extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AdaptedGradientColoredAreas#getAdaptedGradientColoredAreas()
+   * @param newAdaptedGradientColoredAreas
+   *          the new value of the '{@link AdaptedGradientColoredAreas#getAdaptedGradientColoredAreas()
    *          adaptedGradientColoredAreas}' feature.
    * @generated
    */
@@ -153,8 +153,8 @@ public class AdaptedGradientColoredAreas extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AdaptedGradientColoredAreas#getGradientType() gradientType}' feature.
+   * @param newGradientType
+   *          the new value of the '{@link AdaptedGradientColoredAreas#getGradientType() gradientType}' feature.
    * @generated
    */
   public void setGradientType(Integer newGradientType) {

@@ -213,8 +213,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -239,8 +239,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -265,8 +265,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -289,10 +289,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getAddress() <em>address</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAddress
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAddress() address}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAddress
+   *          the new value of the '{@link DocumentRoot#getAddress() address}' feature.
    * @generated
    */
   public void setAddress(AddressType newAddress) {
@@ -315,10 +317,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getAddressGroup() <em>addressGroup</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAddressGroup
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newAddressGroup
+   *          the new value of the '{@link DocumentRoot#getAddressGroup() addressGroup}' feature.
    * @generated
    */
   public void setAddressGroup(AddressGroupType newAddressGroup) {
@@ -341,10 +345,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getSimpleAll() <em>simpleAll</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSimpleAll
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSimpleAll
+   *          the new value of the '{@link DocumentRoot#getSimpleAll() simpleAll}' feature.
    * @generated
    */
   public void setSimpleAll(SimpleAllType newSimpleAll) {
@@ -367,10 +373,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getSimpleAllMap() <em>simpleAllMap</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSimpleAllMap
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newSimpleAllMap
+   *          the new value of the '{@link DocumentRoot#getSimpleAllMap() simpleAllMap}' feature.
    * @generated
    */
   public void setSimpleAllMap(SimpleAllMapType newSimpleAllMap) {
@@ -411,8 +419,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

@@ -67,8 +67,8 @@ public class RentalContractLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContractLine#getRentalContract() rentalContract}' feature.
+   * @param newRentalContract
+   *          the new value of the '{@link RentalContractLine#getRentalContract() rentalContract}' feature.
    * @generated
    */
   public void setRentalContract(RentalContract newRentalContract) {
@@ -92,8 +92,8 @@ public class RentalContractLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContractLine#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link RentalContractLine#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(long newNumber) {
@@ -117,8 +117,8 @@ public class RentalContractLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalContractLine#getRentalUnit() rentalUnit}' feature.
+   * @param newRentalUnit
+   *          the new value of the '{@link RentalContractLine#getRentalUnit() rentalUnit}' feature.
    * @generated
    */
   public void setRentalUnit(RentalUnit newRentalUnit) {

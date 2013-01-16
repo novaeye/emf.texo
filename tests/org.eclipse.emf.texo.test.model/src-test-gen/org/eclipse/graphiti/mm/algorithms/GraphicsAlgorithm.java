@@ -216,8 +216,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getGraphicsAlgorithmChildren() graphicsAlgorithmChildren}'
+   * @param newGraphicsAlgorithmChildren
+   *          the new value of the '{@link GraphicsAlgorithm#getGraphicsAlgorithmChildren() graphicsAlgorithmChildren}'
    *          feature.
    * @generated
    */
@@ -242,8 +242,9 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getParentGraphicsAlgorithm() parentGraphicsAlgorithm}' feature.
+   * @param newParentGraphicsAlgorithm
+   *          the new value of the '{@link GraphicsAlgorithm#getParentGraphicsAlgorithm() parentGraphicsAlgorithm}'
+   *          feature.
    * @generated
    */
   public void setParentGraphicsAlgorithm(GraphicsAlgorithm newParentGraphicsAlgorithm) {
@@ -267,8 +268,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getPictogramElement() pictogramElement}' feature.
+   * @param newPictogramElement
+   *          the new value of the '{@link GraphicsAlgorithm#getPictogramElement() pictogramElement}' feature.
    * @generated
    */
   public void setPictogramElement(PictogramElement newPictogramElement) {
@@ -292,8 +293,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getWidth() width}' feature.
+   * @param newWidth
+   *          the new value of the '{@link GraphicsAlgorithm#getWidth() width}' feature.
    * @generated
    */
   public void setWidth(int newWidth) {
@@ -317,8 +318,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getHeight() height}' feature.
+   * @param newHeight
+   *          the new value of the '{@link GraphicsAlgorithm#getHeight() height}' feature.
    * @generated
    */
   public void setHeight(int newHeight) {
@@ -342,8 +343,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getX() x}' feature.
+   * @param newX
+   *          the new value of the '{@link GraphicsAlgorithm#getX() x}' feature.
    * @generated
    */
   public void setX(int newX) {
@@ -367,8 +368,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getY() y}' feature.
+   * @param newY
+   *          the new value of the '{@link GraphicsAlgorithm#getY() y}' feature.
    * @generated
    */
   public void setY(int newY) {
@@ -392,8 +393,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getStyle() style}' feature.
+   * @param newStyle
+   *          the new value of the '{@link GraphicsAlgorithm#getStyle() style}' feature.
    * @generated
    */
   public void setStyle(Style newStyle) {
@@ -417,8 +418,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getBackground() background}' feature.
+   * @param newBackground
+   *          the new value of the '{@link GraphicsAlgorithm#getBackground() background}' feature.
    * @generated
    */
   public void setBackground(Color newBackground) {
@@ -442,8 +443,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getForeground() foreground}' feature.
+   * @param newForeground
+   *          the new value of the '{@link GraphicsAlgorithm#getForeground() foreground}' feature.
    * @generated
    */
   public void setForeground(Color newForeground) {
@@ -467,8 +468,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getLineWidth() lineWidth}' feature.
+   * @param newLineWidth
+   *          the new value of the '{@link GraphicsAlgorithm#getLineWidth() lineWidth}' feature.
    * @generated
    */
   public void setLineWidth(Integer newLineWidth) {
@@ -492,8 +493,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getLineStyle() lineStyle}' feature.
+   * @param newLineStyle
+   *          the new value of the '{@link GraphicsAlgorithm#getLineStyle() lineStyle}' feature.
    * @generated
    */
   public void setLineStyle(LineStyle newLineStyle) {
@@ -517,8 +518,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getFilled() filled}' feature.
+   * @param newFilled
+   *          the new value of the '{@link GraphicsAlgorithm#getFilled() filled}' feature.
    * @generated
    */
   public void setFilled(Boolean newFilled) {
@@ -542,8 +543,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getLineVisible() lineVisible}' feature.
+   * @param newLineVisible
+   *          the new value of the '{@link GraphicsAlgorithm#getLineVisible() lineVisible}' feature.
    * @generated
    */
   public void setLineVisible(Boolean newLineVisible) {
@@ -567,8 +568,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getRenderingStyle() renderingStyle}' feature.
+   * @param newRenderingStyle
+   *          the new value of the '{@link GraphicsAlgorithm#getRenderingStyle() renderingStyle}' feature.
    * @generated
    */
   public void setRenderingStyle(RenderingStyle newRenderingStyle) {
@@ -592,8 +593,8 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link GraphicsAlgorithm#getTransparency() transparency}' feature.
+   * @param newTransparency
+   *          the new value of the '{@link GraphicsAlgorithm#getTransparency() transparency}' feature.
    * @generated
    */
   public void setTransparency(Double newTransparency) {

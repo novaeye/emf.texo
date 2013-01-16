@@ -52,8 +52,8 @@ public class DatatypeOf extends AbstractDataRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DatatypeOf#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link DatatypeOf#getTo() to}' feature.
    * @generated
    */
   public void setTo(Datatype newTo) {
@@ -77,8 +77,8 @@ public class DatatypeOf extends AbstractDataRelationship {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link DatatypeOf#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link DatatypeOf#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(ComplexContentType newFrom) {

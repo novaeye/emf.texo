@@ -58,8 +58,8 @@ public class TestDate extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestDate#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link TestDate#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -83,8 +83,8 @@ public class TestDate extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TestDate#getDatetime() datetime}' feature.
+   * @param newDatetime
+   *          the new value of the '{@link TestDate#getDatetime() datetime}' feature.
    * @generated
    */
   public void setDatetime(Date newDatetime) {

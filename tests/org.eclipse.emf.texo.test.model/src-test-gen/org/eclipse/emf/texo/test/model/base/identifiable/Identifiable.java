@@ -52,8 +52,8 @@ public abstract class Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Identifiable#getDb_Id() db_Id}' feature.
+   * @param newDb_Id
+   *          the new value of the '{@link Identifiable#getDb_Id() db_Id}' feature.
    * @generated
    */
   public void setDb_Id(Long newDb_Id) {
@@ -77,8 +77,8 @@ public abstract class Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Identifiable#getDb_version() db_version}' feature.
+   * @param newDb_version
+   *          the new value of the '{@link Identifiable#getDb_version() db_version}' feature.
    * @generated
    */
   public void setDb_version(Integer newDb_version) {

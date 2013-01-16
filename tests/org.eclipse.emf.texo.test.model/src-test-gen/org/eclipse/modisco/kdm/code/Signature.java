@@ -80,8 +80,8 @@ public class Signature extends Datatype {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Signature#getParameterUnit() parameterUnit}' feature.
+   * @param newParameterUnit
+   *          the new value of the '{@link Signature#getParameterUnit() parameterUnit}' feature.
    * @generated
    */
   public void setParameterUnit(List<ParameterUnit> newParameterUnit) {

@@ -86,8 +86,8 @@ public class Machine extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getDeployedComponent() deployedComponent}' feature.
+   * @param newDeployedComponent
+   *          the new value of the '{@link Machine#getDeployedComponent() deployedComponent}' feature.
    * @generated
    */
   public void setDeployedComponent(Set<DeployedComponent> newDeployedComponent) {
@@ -144,8 +144,8 @@ public class Machine extends AbstractPlatformElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Machine#getDeployedResource() deployedResource}' feature.
+   * @param newDeployedResource
+   *          the new value of the '{@link Machine#getDeployedResource() deployedResource}' feature.
    * @generated
    */
   public void setDeployedResource(Set<DeployedResource> newDeployedResource) {

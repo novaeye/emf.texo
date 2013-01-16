@@ -102,7 +102,7 @@ public interface «eClassModelGenAnnotation.simpleClassName»
 			 *
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
-			 * @param the new value of the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() <em>«featureAnnotation.EStructuralFeature.name»</em>}' feature.
+			 * @param new«TemplateUtil::toFirstUpper(featureAnnotation.name)» the new value of the '{@link «eClassModelGenAnnotation.simpleClassName»#«featureAnnotation.getter»() <em>«featureAnnotation.EStructuralFeature.name»</em>}' feature.
 			 * @generated
 			 */
 			«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "getter")»

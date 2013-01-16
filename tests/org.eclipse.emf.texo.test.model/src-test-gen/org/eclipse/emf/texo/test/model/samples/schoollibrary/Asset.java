@@ -35,8 +35,8 @@ public interface Asset {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Asset#getValue() <em>value</em>}' feature.
+   * @param newValue
+   *          the new value of the '{@link Asset#getValue() <em>value</em>}' feature.
    * @generated
    */
   public void setValue(float newValue);

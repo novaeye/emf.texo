@@ -82,8 +82,8 @@ public class FreeFormConnection extends Connection {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link FreeFormConnection#getBendpoints() bendpoints}' feature.
+   * @param newBendpoints
+   *          the new value of the '{@link FreeFormConnection#getBendpoints() bendpoints}' feature.
    * @generated
    */
   public void setBendpoints(List<Point> newBendpoints) {

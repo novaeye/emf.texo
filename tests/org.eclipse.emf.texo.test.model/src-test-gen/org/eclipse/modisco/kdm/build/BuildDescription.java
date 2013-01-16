@@ -89,8 +89,8 @@ public class BuildDescription extends BuildResource {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildDescription#getSource() source}' feature.
+   * @param newSource
+   *          the new value of the '{@link BuildDescription#getSource() source}' feature.
    * @generated
    */
   public void setSource(Set<SourceRef> newSource) {
@@ -114,8 +114,8 @@ public class BuildDescription extends BuildResource {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildDescription#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link BuildDescription#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {

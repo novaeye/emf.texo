@@ -37,8 +37,8 @@ public interface Addressable extends IdentifiableInterface {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Addressable#getAddress() <em>address</em>}' feature.
+   * @param newAddress
+   *          the new value of the '{@link Addressable#getAddress() <em>address</em>}' feature.
    * @generated
    */
   public void setAddress(String newAddress);

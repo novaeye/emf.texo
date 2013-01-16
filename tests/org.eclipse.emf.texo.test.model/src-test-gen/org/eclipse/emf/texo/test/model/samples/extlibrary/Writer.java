@@ -52,8 +52,8 @@ public class Writer extends Person {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Writer#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Writer#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -113,8 +113,8 @@ public class Writer extends Person {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Writer#getBooks() books}' feature.
+   * @param newBooks
+   *          the new value of the '{@link Writer#getBooks() books}' feature.
    * @generated
    */
   public void setBooks(List<Book> newBooks) {

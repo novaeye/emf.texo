@@ -59,8 +59,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Person#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -84,8 +84,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link Person#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(List<PersonGroupFeatureGroup> newGroup) {
@@ -109,8 +109,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getAge() age}' feature.
+   * @param newAge
+   *          the new value of the '{@link Person#getAge() age}' feature.
    * @generated
    */
   public void setAge(List<Integer> newAge) {
@@ -134,8 +134,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getLength() length}' feature.
+   * @param newLength
+   *          the new value of the '{@link Person#getLength() length}' feature.
    * @generated
    */
   public void setLength(List<Integer> newLength) {

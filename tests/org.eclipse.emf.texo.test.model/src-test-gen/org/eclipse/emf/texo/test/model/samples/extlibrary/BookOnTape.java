@@ -50,8 +50,8 @@ public class BookOnTape extends AudioVisualItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookOnTape#getReader() reader}' feature.
+   * @param newReader
+   *          the new value of the '{@link BookOnTape#getReader() reader}' feature.
    * @generated
    */
   public void setReader(Person newReader) {
@@ -75,8 +75,8 @@ public class BookOnTape extends AudioVisualItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BookOnTape#getAuthor() author}' feature.
+   * @param newAuthor
+   *          the new value of the '{@link BookOnTape#getAuthor() author}' feature.
    * @generated
    */
   public void setAuthor(Writer newAuthor) {

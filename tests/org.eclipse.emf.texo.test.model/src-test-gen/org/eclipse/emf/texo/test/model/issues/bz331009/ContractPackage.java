@@ -79,8 +79,8 @@ public class ContractPackage extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContractPackage#getClient() client}' feature.
+   * @param newClient
+   *          the new value of the '{@link ContractPackage#getClient() client}' feature.
    * @generated
    */
   public void setClient(Person newClient) {
@@ -104,8 +104,8 @@ public class ContractPackage extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ContractPackage#getUser() user}' feature.
+   * @param newUser
+   *          the new value of the '{@link ContractPackage#getUser() user}' feature.
    * @generated
    */
   public void setUser(User newUser) {

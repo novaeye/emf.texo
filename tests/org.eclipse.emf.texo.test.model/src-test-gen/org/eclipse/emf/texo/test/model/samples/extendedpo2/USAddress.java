@@ -66,8 +66,8 @@ public class USAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link USAddress#getStreet() street}' feature.
+   * @param newStreet
+   *          the new value of the '{@link USAddress#getStreet() street}' feature.
    * @generated
    */
   public void setStreet(String newStreet) {
@@ -91,8 +91,8 @@ public class USAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link USAddress#getCity() city}' feature.
+   * @param newCity
+   *          the new value of the '{@link USAddress#getCity() city}' feature.
    * @generated
    */
   public void setCity(String newCity) {
@@ -116,8 +116,8 @@ public class USAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link USAddress#getState() state}' feature.
+   * @param newState
+   *          the new value of the '{@link USAddress#getState() state}' feature.
    * @generated
    */
   public void setState(String newState) {
@@ -141,8 +141,8 @@ public class USAddress extends Address {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link USAddress#getZip() zip}' feature.
+   * @param newZip
+   *          the new value of the '{@link USAddress#getZip() zip}' feature.
    * @generated
    */
   public void setZip(int newZip) {

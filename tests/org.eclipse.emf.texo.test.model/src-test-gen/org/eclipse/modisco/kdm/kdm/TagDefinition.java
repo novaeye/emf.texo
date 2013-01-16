@@ -51,8 +51,8 @@ public class TagDefinition extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TagDefinition#getTag() tag}' feature.
+   * @param newTag
+   *          the new value of the '{@link TagDefinition#getTag() tag}' feature.
    * @generated
    */
   public void setTag(String newTag) {
@@ -76,8 +76,8 @@ public class TagDefinition extends Element {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link TagDefinition#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link TagDefinition#getType() type}' feature.
    * @generated
    */
   public void setType(String newType) {

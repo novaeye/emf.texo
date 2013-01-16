@@ -54,8 +54,8 @@ public class UIAction extends AbstractUIElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIAction#getKind() kind}' feature.
+   * @param newKind
+   *          the new value of the '{@link UIAction#getKind() kind}' feature.
    * @generated
    */
   public void setKind(String newKind) {
@@ -112,8 +112,8 @@ public class UIAction extends AbstractUIElement {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link UIAction#getUIElement() UIElement}' feature.
+   * @param newUIElement
+   *          the new value of the '{@link UIAction#getUIElement() UIElement}' feature.
    * @generated
    */
   public void setUIElement(Set<UIEvent> newUIElement) {

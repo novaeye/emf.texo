@@ -45,8 +45,8 @@ public class StringType extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link StringType#getValue() value}' feature.
+   * @param newValue
+   *          the new value of the '{@link StringType#getValue() value}' feature.
    * @generated
    */
   public void setValue(String newValue) {

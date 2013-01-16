@@ -55,8 +55,8 @@ public class RentalCarDriver extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalCarDriver#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link RentalCarDriver#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -80,8 +80,8 @@ public class RentalCarDriver extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link RentalCarDriver#getCurrentRentalCar() currentRentalCar}' feature.
+   * @param newCurrentRentalCar
+   *          the new value of the '{@link RentalCarDriver#getCurrentRentalCar() currentRentalCar}' feature.
    * @generated
    */
   public void setCurrentRentalCar(RentalCar newCurrentRentalCar) {

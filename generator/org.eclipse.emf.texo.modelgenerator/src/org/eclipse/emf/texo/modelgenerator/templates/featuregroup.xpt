@@ -13,7 +13,7 @@
 «ePackageAnnotation.javaFileHeader-»
 package «ePackageAnnotation.packagePath»;
 
-/** 
+/**
  * A representation for the Feature Group '<em><b>«eClassAnnotation.EClass.name».«this.name»</b></em>'.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
@@ -22,10 +22,10 @@ package «ePackageAnnotation.packagePath»;
  * «this.documentation»
  * <!-- end-model-doc -->
 «ENDIF-»
- * @generated 
+ * @generated
 */
 «modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.type")-»
-public class «this.featureMapSimpleClassName-» 
+public class «this.featureMapSimpleClassName-»
 «IF ePackageAnnotation.featureMapClassExtends != null && ePackageAnnotation.featureMapClassExtends.trim().length > 0-» extends «ePackageAnnotation.featureMapClassExtends-»«ENDIF-»
 {
 
@@ -33,25 +33,27 @@ public class «this.featureMapSimpleClassName-»
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
 	 * Is used to identify which feature is set in this feature group.
-	 * @generated 
-	 */	
+	 * @generated
+	 */
 	public static enum Feature {
-	«IF isMixed(this.EStructuralFeature)-»TEXT, CDATA, COMMENT«IF this.allMemberFeatureMapFeatures.size > 0-»,«ENDIF-»«ENDIF-» 
+	«IF isMixed(this.EStructuralFeature)-»TEXT, CDATA, COMMENT«IF this.allMemberFeatureMapFeatures.size > 0-»,«ENDIF-»«ENDIF-»
 	«FOREACH this.allMemberFeatureMapFeatures AS memberFeatureAnnotation SEPARATOR ","-»
    		«toUpperCase(memberFeatureAnnotation.name)»
     «ENDFOREACH-»
 	}
-	
+
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
-	 * Returns only the values from the feature group which have the feature equal to the parameter. 
-	 * 
-	 * @param featureGroup the featureGroup List to filter
-	 * @param filterByFeature filters by this enum
+	 * Returns only the values from the feature group which have the feature equal to the parameter.
+	 *
+	 * @param featureGroup
+	 *            the featureGroup List to filter
+	 * @param filterByFeature
+	 *            filters by this enum
 	 * @return a list with instances corresponding to the feature kind
 	 * @see java.util.Collections#unmodifiableList(List)
-	 * @generated 
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> java.util.List<T> createUnmodifiableValueList(java.util.List<«this.featureMapSimpleClassName-»> featureGroup, Feature filterByFeature) {
@@ -63,17 +65,19 @@ public class «this.featureMapSimpleClassName-»
 		}
 		return (List<T>) Collections.unmodifiableList(result);
 	}
-	
+
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
 	 * Returns a single value from the feature group which has the feature equal to the parameter.
-	 * The first found value is returned. If no value can be found then null is returned. 
-	 * 
-	 * @param featureGroup the featureGroup List to filter
-	 * @param filterByFeature filters by this enum
+	 * The first found value is returned. If no value can be found then null is returned.
+	 *
+	 * @param featureGroup
+	 *            the featureGroup List to filter
+	 * @param filterByFeature
+	 *            filters by this enum
 	 * @return an instance corresponding to the feature kind or null if not found.
-	 * @generated 
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> T getSingleFeatureMapValue(java.util.List<«this.featureMapSimpleClassName-»> featureGroup, Feature filterByFeature) {
@@ -84,17 +88,20 @@ public class «this.featureMapSimpleClassName-»
 		}
 		return null;
 	}
-	
+
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
-	 * Sets a single value in a feature group, if there is already a value set in the feature 
-	 * for the feature in question then it is replaced by the new value. 
-	 * 
-	 * @param featureGroup the featureGroup List to find the value
-	 * @param feature sets this feature
-	 * @param value the value to set
-	 * @generated 
+	 * Sets a single value in a feature group, if there is already a value set in the feature
+	 * for the feature in question then it is replaced by the new value.
+	 *
+	 * @param featureGroup
+	 *            the featureGroup List to find the value
+	 * @param feature
+	 *            sets this feature
+	 * @param value
+	 *            the value to set
+	 * @generated
 	 */
 	public static void setSingleFeatureMapValue(java.util.List<«this.featureMapSimpleClassName-»> featureGroup, Feature feature, Object value) {
 		for (final «this.featureMapSimpleClassName-» group : featureGroup) {
@@ -111,12 +118,14 @@ public class «this.featureMapSimpleClassName-»
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
-	 * Creates a list of group instances set with the passed feature and values. 
-	 * 
-	 * @param feature the feature to set
-	 * @param values the values to set as value of each group instance in the result.
+	 * Creates a list of group instances set with the passed feature and values.
+	 *
+	 * @param feature
+	 *            the feature to set
+	 * @param values
+	 *            the values to set as value of each group instance in the result.
 	 * @return a list with instances of this class, set with the Feature and values
-	 * @generated 
+	 * @generated
 	 */
 	public static java.util.List<«this.featureMapSimpleClassName»> createFeatureGroupList(Feature feature, List<?> values) {
 		final java.util.List<«this.featureMapSimpleClassName»> result = new java.util.ArrayList<«this.featureMapSimpleClassName»>();
@@ -125,69 +134,69 @@ public class «this.featureMapSimpleClassName-»
 			group.setValue(feature, value);
 			result.add(group);
 		}
-		return result;		
+		return result;
 	}
 
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
-	 * @generated 
-	 */	
+	 * @generated
+	 */
 	«modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.feature")-»
 	private Feature feature = null;
-	
+
 «IF isMixed(this.EStructuralFeature)-»
-	/** 
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated
 	 */
 	«modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.text")-»
 	private String text;
 
-	/** 
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated
 	 */
 	«modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.cdata")-»
 	private String cDATA;
 
-	/** 
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated
 	 */
 	«modelController.getJavaAnnotations(this.EStructuralFeature, "featureMap.comment")-»
 	private String comment;
-«ENDIF-»	
+«ENDIF-»
 	«FOREACH this.memberFeatureMapFeatures AS memberFeatureAnnotation-»
-		
+
 	«IF memberFeatureAnnotation.featureMapFeature == this-»
-	/** 
+	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated
 	*/
 	«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "featureMap.field")-»
 	private «memberFeatureAnnotation.itemType» «memberFeatureAnnotation.validJavaMemberName»;
 	«ENDIF-»
 	«ENDFOREACH-»
-			
+
 	/**
-	 * @generated 
-	 */	
+	 * @generated
+	 */
 	public void setFeature(Feature feature) {
-		this.feature = feature; 
-	} 
-		
+		this.feature = feature;
+	}
+
 	/**
-	 * @generated 
-	 */	
+	 * @generated
+	 */
 	public Feature getFeature() {
-		return feature; 
-	} 
-	
+		return feature;
+	}
+
 «IF isMixed(this.EStructuralFeature)-»
 	/**
 	 * Returns the value of '<em><b>text</b></em>' feature.
@@ -206,7 +215,8 @@ public class «this.featureMapSimpleClassName-»
 	 *
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param the new value of the '{@link LetterBodyType#getText() text}' feature.
+	 * @param newText
+	 *            the new value of the '{@link LetterBodyType#getText() text}' feature.
 	 * @generated
 	 */
 	public void setText(String newText) {
@@ -231,7 +241,8 @@ public class «this.featureMapSimpleClassName-»
 	 *
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+	 * @param newCDATA
+	 *            the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
 	 * @generated
 	 */
 	public void setCDATA(String newCDATA) {
@@ -256,16 +267,17 @@ public class «this.featureMapSimpleClassName-»
 	 *
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+	 * @param newComment
+	 *            the new value of the '{@link LetterBodyType#getComment() comment}' feature.
 	 * @generated
 	 */
 	public void setComment(String newComment) {
 		comment = newComment;
 		setFeature(Feature.COMMENT);
 	}
-«ENDIF-»	
+«ENDIF-»
 	«FOREACH this.allMemberFeatureMapFeatures AS memberFeatureAnnotation-»
-	
+
 		/**
 		 * Returns the value of '<em><b>«memberFeatureAnnotation.EStructuralFeature.name»</b></em>' feature.
 		 *
@@ -291,7 +303,8 @@ public class «this.featureMapSimpleClassName-»
 		 *
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @param the new value of the '{@link «eClassAnnotation.simpleClassName»#«memberFeatureAnnotation.getter»() «memberFeatureAnnotation.EStructuralFeature.name»}' feature.
+		 * @param new«toFirstUpper(memberFeatureAnnotation.name)»
+		 *            the new value of the '{@link «eClassAnnotation.simpleClassName»#«memberFeatureAnnotation.getter»() «memberFeatureAnnotation.EStructuralFeature.name»}' feature.
 		 * @generated
 		 */
 		«modelController.getJavaAnnotations(memberFeatureAnnotation.EStructuralFeature, "featureMap.setter")-»
@@ -299,13 +312,13 @@ public class «this.featureMapSimpleClassName-»
 			«IF memberFeatureAnnotation.featureMapFeature == this-»
 			«memberFeatureAnnotation.validJavaMemberName» = new«toFirstUpper(memberFeatureAnnotation.name)»;
 			setFeature(Feature.«toUpperCase(memberFeatureAnnotation.name)»);
-			«ELSE-» 
+			«ELSE-»
 				if («memberFeatureAnnotation.featureMapFeature.getter»() == null) {
 					«memberFeatureAnnotation.featureMapFeature.setter»(new «memberFeatureAnnotation.featureMapFeature.featureMapQualifiedClassName»());
 				}
 				«memberFeatureAnnotation.featureMapFeature.getter»().«memberFeatureAnnotation.setter»(new«toFirstUpper(memberFeatureAnnotation.name)»);
 			«ENDIF-»
-		}	
+		}
 	«ENDFOREACH-»
 
 	/**
@@ -313,10 +326,10 @@ public class «this.featureMapSimpleClassName-»
  	 * <!-- end-user-doc -->
  	 * @return the value of this feature map entry. The type of the returned value is based on the feature.
  	 * @see #getFeature()
-	 * @generated 
-	 */	
+	 * @generated
+	 */
 	public Object getValue() {
-		switch (getFeature()) {	
+		switch (getFeature()) {
 «IF isMixed(this.EStructuralFeature)-»
 		case TEXT:
 			return getText();
@@ -324,12 +337,12 @@ public class «this.featureMapSimpleClassName-»
 			return getCDATA();
 		case COMMENT:
 			return getComment();
-«ENDIF-»			
+«ENDIF-»
 	«FOREACH this.allMemberFeatureMapFeatures AS memberFeatureAnnotation-»
 			case «toUpperCase(memberFeatureAnnotation.name)»:
-				return «memberFeatureAnnotation.getter»();		
+				return «memberFeatureAnnotation.getter»();
 	«ENDFOREACH-»
-			default: 			
+			default:
 				throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);
 		}
 	}
@@ -337,13 +350,15 @@ public class «this.featureMapSimpleClassName-»
 	/**
      * <!-- begin-user-doc -->
  	 * <!-- end-user-doc -->
- 	 * @param feature the feature to set
- 	 * @param the value to set in this instance
+ 	 * @param feature
+ 	 *            the feature to set
+ 	 * @param value
+ 	 *            the value to set in this instance
  	 * @see #getFeature()
-	 * @generated 
-	 */	 
+	 * @generated
+	 */
 	public void setValue(Feature feature, Object value) {
-		switch (feature) {	
+		switch (feature) {
 «IF isMixed(this.EStructuralFeature)-»
 		case TEXT:
 			setText((String)value);
@@ -354,7 +369,7 @@ public class «this.featureMapSimpleClassName-»
 		case COMMENT:
 			setComment((String)value);
 			break;
-«ENDIF-»			
+«ENDIF-»
 	«FOREACH this.allMemberFeatureMapFeatures AS memberFeatureAnnotation-»
 			case «toUpperCase(memberFeatureAnnotation.name)»:
 				«memberFeatureAnnotation.setter»((«memberFeatureAnnotation.itemType»)value);

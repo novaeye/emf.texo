@@ -48,8 +48,8 @@ public class Test397220 extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Test397220#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Test397220#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

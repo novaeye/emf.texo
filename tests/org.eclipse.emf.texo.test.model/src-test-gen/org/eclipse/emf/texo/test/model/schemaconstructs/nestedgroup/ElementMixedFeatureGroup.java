@@ -211,8 +211,8 @@ public class ElementMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -237,8 +237,8 @@ public class ElementMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   * @param newCDATA
+   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -263,8 +263,8 @@ public class ElementMixedFeatureGroup extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   * @param newComment
+   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -287,10 +287,12 @@ public class ElementMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getName() <em>name</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Element#getName() name}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newName
+   *          the new value of the '{@link Element#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -313,10 +315,12 @@ public class ElementMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getTrue_() <em>true</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newTrue_
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Element#getTrue_() true}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newTrue_
+   *          the new value of the '{@link Element#getTrue_() true}' feature.
    * @generated
    */
   public void setTrue_(ElementTrue_FeatureGroup newTrue_) {
@@ -342,10 +346,12 @@ public class ElementMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getC() <em>c</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Element#getC() c}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newC
+   *          the new value of the '{@link Element#getC() c}' feature.
    * @generated
    */
   public void setC(CType newC) {
@@ -370,10 +376,12 @@ public class ElementMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getRecursive() <em>recursive</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newRecursive
+   *          the new value for the feature
    * 
-   * @param the
-   *          new value of the '{@link Element#getRecursive() recursive}' feature.
+   *          <!-- begin-user-doc --> <!-- end-user-doc -->
+   * @param newRecursive
+   *          the new value of the '{@link Element#getRecursive() recursive}' feature.
    * @generated
    */
   public void setRecursive(Element newRecursive) {
@@ -414,8 +422,8 @@ public class ElementMixedFeatureGroup extends Identifiable {
    * 
    * @param feature
    *          the feature to set
-   * @param the
-   *          value to set in this instance
+   * @param value
+   *          the value to set in this instance
    * @see #getFeature()
    * @generated
    */

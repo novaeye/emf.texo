@@ -79,8 +79,8 @@ public class BuildModel extends KDMModel {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link BuildModel#getBuildElement() buildElement}' feature.
+   * @param newBuildElement
+   *          the new value of the '{@link BuildModel#getBuildElement() buildElement}' feature.
    * @generated
    */
   public void setBuildElement(Set<AbstractBuildElement> newBuildElement) {

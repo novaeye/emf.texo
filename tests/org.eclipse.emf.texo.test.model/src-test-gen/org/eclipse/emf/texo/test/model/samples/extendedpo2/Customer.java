@@ -61,8 +61,8 @@ public class Customer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Customer#getCustomerID() customerID}' feature.
+   * @param newCustomerID
+   *          the new value of the '{@link Customer#getCustomerID() customerID}' feature.
    * @generated
    */
   public void setCustomerID(int newCustomerID) {
@@ -119,8 +119,8 @@ public class Customer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Customer#getOrders() orders}' feature.
+   * @param newOrders
+   *          the new value of the '{@link Customer#getOrders() orders}' feature.
    * @generated
    */
   public void setOrders(List<PurchaseOrder> newOrders) {

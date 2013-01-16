@@ -52,8 +52,8 @@ public class Mixed extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mixed#getMixed() mixed}' feature.
+   * @param newMixed
+   *          the new value of the '{@link Mixed#getMixed() mixed}' feature.
    * @generated
    */
   public void setMixed(List<MixedMixedFeatureGroup> newMixed) {
@@ -77,8 +77,8 @@ public class Mixed extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mixed#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Mixed#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -102,8 +102,8 @@ public class Mixed extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Mixed#getValue_() value}' feature.
+   * @param newValue_
+   *          the new value of the '{@link Mixed#getValue_() value}' feature.
    * @generated
    */
   public void setValue_(double newValue_) {
