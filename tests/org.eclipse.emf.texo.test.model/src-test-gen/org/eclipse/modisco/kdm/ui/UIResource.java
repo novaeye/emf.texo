@@ -43,6 +43,9 @@ public class UIResource extends AbstractUIElement {
   /**
    * Adds to the <em>UIElement</em> feature.
    * 
+   * @param uIElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToUIElement(AbstractUIElement uIElementValue) {
@@ -53,6 +56,9 @@ public class UIResource extends AbstractUIElement {
 
   /**
    * Removes from the <em>UIElement</em> feature.
+   * 
+   * @param uIElementValue
+   *          the value to remove
    * 
    * @generated
    */

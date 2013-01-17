@@ -7,6 +7,7 @@ package org.eclipse.emf.texo.test.model.samples.employee;
  */
 public class EmployeeOverrideTest {
   /**
+   * @return the hello return
    * @generated
    */
   public String hello() {

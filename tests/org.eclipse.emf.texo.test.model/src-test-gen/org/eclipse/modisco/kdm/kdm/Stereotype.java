@@ -61,6 +61,9 @@ public class Stereotype extends Element {
   /**
    * Adds to the <em>tag</em> feature.
    * 
+   * @param tagValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToTag(TagDefinition tagValue) {
@@ -71,6 +74,9 @@ public class Stereotype extends Element {
 
   /**
    * Removes from the <em>tag</em> feature.
+   * 
+   * @param tagValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -26,7 +26,7 @@ import org.eclipse.modisco.kdm.core.dao.ModelElementDao;
  * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The Core package provides basic constructs for
  * creating and describing meta-model classes in all specific KDM packages. Classes of the Core package determine the
  * structure of KDM models, define fundamental modeling constraints, and determine the reflective API to KDM instances.
- * * <!-- end-model-doc -->
+ * <!-- end-model-doc -->
  * 
  * @generated
  */
@@ -251,6 +251,8 @@ public class CoreModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -649,7 +651,8 @@ public class CoreModelPackage extends ModelPackage {
       return Integer.class;
     case BOOLEAN_CLASSIFIER_ID:
       return Boolean.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

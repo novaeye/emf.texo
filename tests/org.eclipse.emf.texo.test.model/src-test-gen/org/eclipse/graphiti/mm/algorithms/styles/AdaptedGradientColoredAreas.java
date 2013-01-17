@@ -91,6 +91,9 @@ public class AdaptedGradientColoredAreas extends Identifiable {
   /**
    * Adds to the <em>adaptedGradientColoredAreas</em> feature.
    * 
+   * @param adaptedGradientColoredAreasValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAdaptedGradientColoredAreas(GradientColoredAreas adaptedGradientColoredAreasValue) {
@@ -101,6 +104,9 @@ public class AdaptedGradientColoredAreas extends Identifiable {
 
   /**
    * Removes from the <em>adaptedGradientColoredAreas</em> feature.
+   * 
+   * @param adaptedGradientColoredAreasValue
+   *          the value to remove
    * 
    * @generated
    */

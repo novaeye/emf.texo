@@ -4,6 +4,7 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -20,7 +21,7 @@ import org.eclipse.modisco.kdm.kdm.Stereotype;
  * representation. <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The Core package provides
  * basic constructs for creating and describing meta-model classes in all specific KDM packages. Classes of the Core
  * package determine the structure of KDM models, define fundamental modeling constraints, and determine the reflective
- * API to KDM instances. * <!-- end-model-doc -->
+ * API to KDM instances. <!-- end-model-doc -->
  * 
  * @generated
  */
@@ -38,8 +39,10 @@ public class CoreModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case CoreModelPackage.AGGREGATEDRELATIONSHIP_CLASSIFIER_ID:
       return createAggregatedRelationship();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -81,7 +84,7 @@ public class CoreModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -134,8 +137,9 @@ public class CoreModelFactory implements ModelFactory {
       return createIntegerFromString(value);
     case CoreModelPackage.BOOLEAN_CLASSIFIER_ID:
       return createBooleanFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -155,8 +159,9 @@ public class CoreModelFactory implements ModelFactory {
       return convertIntegerToString((Integer) value);
     case CoreModelPackage.BOOLEAN_CLASSIFIER_ID:
       return convertBooleanToString((Boolean) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -252,6 +257,9 @@ public class CoreModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ElementModelObject<E extends Element> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -282,8 +290,9 @@ public class CoreModelFactory implements ModelFactory {
         return getTarget().getAttribute();
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
         return getTarget().getAnnotation();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -300,8 +309,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
         getTarget().setAnnotation((Set<Annotation>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -319,8 +329,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
         getTarget().getAnnotation().add((Annotation) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -338,13 +349,17 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
         getTarget().getAnnotation().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ModelElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -376,8 +391,9 @@ public class CoreModelFactory implements ModelFactory {
         return getTarget().getStereotype();
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
         return getTarget().getTaggedValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -394,8 +410,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
         getTarget().setTaggedValue((Set<ExtendedValue>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -413,8 +430,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
         getTarget().getTaggedValue().add((ExtendedValue) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -432,13 +450,17 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
         getTarget().getTaggedValue().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>KDMEntity</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -488,8 +510,9 @@ public class CoreModelFactory implements ModelFactory {
         return getTarget().getInAggregated();
       case CoreModelPackage.KDMENTITY_OUTAGGREGATED_FEATURE_ID:
         return getTarget().getOutAggregated();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -502,8 +525,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.KDMENTITY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -514,8 +538,9 @@ public class CoreModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -526,13 +551,17 @@ public class CoreModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>KDMRelationship</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -560,8 +589,9 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -571,8 +601,9 @@ public class CoreModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -582,8 +613,9 @@ public class CoreModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -593,14 +625,18 @@ public class CoreModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AggregatedRelationship</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -637,8 +673,9 @@ public class CoreModelFactory implements ModelFactory {
         return getTarget().getRelation();
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_DENSITY_FEATURE_ID:
         return getTarget().getDensity();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -661,8 +698,9 @@ public class CoreModelFactory implements ModelFactory {
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_DENSITY_FEATURE_ID:
         getTarget().setDensity((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -677,8 +715,9 @@ public class CoreModelFactory implements ModelFactory {
         getTarget().getRelation().add((KDMRelationship) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -693,9 +732,9 @@ public class CoreModelFactory implements ModelFactory {
         getTarget().getRelation().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

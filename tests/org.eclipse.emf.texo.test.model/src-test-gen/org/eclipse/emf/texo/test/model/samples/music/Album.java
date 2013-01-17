@@ -244,6 +244,9 @@ public class Album extends Identifiable {
   /**
    * Adds to the <em>genres</em> feature.
    * 
+   * @param genresValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGenres(Genre genresValue) {
@@ -254,6 +257,9 @@ public class Album extends Identifiable {
 
   /**
    * Removes from the <em>genres</em> feature.
+   * 
+   * @param genresValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -302,6 +308,9 @@ public class Album extends Identifiable {
   /**
    * Adds to the <em>songs</em> feature.
    * 
+   * @param songsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSongs(Song songsValue) {
@@ -312,6 +321,9 @@ public class Album extends Identifiable {
 
   /**
    * Removes from the <em>songs</em> feature.
+   * 
+   * @param songsValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -100,8 +100,8 @@ public class Event extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Полученное сообщение <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Event#getMessage() message}' feature.
+   * @param newMessage
+   *          the new value of the '{@link Event#getMessage() message}' feature.
    * @generated
    */
   public void setMessage(Message newMessage) {

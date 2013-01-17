@@ -215,6 +215,9 @@ public class PlayType extends Identifiable {
   /**
    * Adds to the <em>act</em> feature.
    * 
+   * @param actValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAct(ActType actValue) {
@@ -225,6 +228,9 @@ public class PlayType extends Identifiable {
 
   /**
    * Removes from the <em>act</em> feature.
+   * 
+   * @param actValue
+   *          the value to remove
    * 
    * @generated
    */

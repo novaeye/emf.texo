@@ -54,6 +54,9 @@ public class EnumeratedType extends Datatype {
   /**
    * Adds to the <em>value</em> feature.
    * 
+   * @param valueValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToValue(Value valueValue) {
@@ -64,6 +67,9 @@ public class EnumeratedType extends Datatype {
 
   /**
    * Removes from the <em>value</em> feature.
+   * 
+   * @param valueValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -112,6 +118,9 @@ public class EnumeratedType extends Datatype {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(CodeItem codeElementValue) {
@@ -122,6 +131,9 @@ public class EnumeratedType extends Datatype {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

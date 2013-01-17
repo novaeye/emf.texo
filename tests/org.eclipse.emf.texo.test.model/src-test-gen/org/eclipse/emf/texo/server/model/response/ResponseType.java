@@ -182,6 +182,9 @@ public class ResponseType extends Identifiable {
   /**
    * Adds to the <em>data</em> feature.
    * 
+   * @param dataValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToData(Object dataValue) {
@@ -192,6 +195,9 @@ public class ResponseType extends Identifiable {
 
   /**
    * Removes from the <em>data</em> feature.
+   * 
+   * @param dataValue
+   *          the value to remove
    * 
    * @generated
    */

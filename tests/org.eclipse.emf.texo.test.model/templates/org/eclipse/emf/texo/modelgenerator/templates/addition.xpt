@@ -12,13 +12,14 @@
 «FILE classFileName(this) java-»
 package «ePackageAnnotation.packagePath»;
 
-/** 
+/**
  * A test output for testing overrides.
- * @generated 
+ * @generated
 */
 public class «this.simpleClassName-»OverrideTest
 {
 	/**
+	* @return the hello return
 	* @generated
 	*/
 	public String hello() {

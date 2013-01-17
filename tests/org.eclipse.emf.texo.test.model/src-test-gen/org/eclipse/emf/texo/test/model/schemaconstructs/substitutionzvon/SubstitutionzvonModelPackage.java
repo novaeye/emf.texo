@@ -57,13 +57,6 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int AAA_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int EVENTYPE_CLASSIFIER_ID = 6;
 
   /**
@@ -71,7 +64,7 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EVENTYPEOBJECT_CLASSIFIER_ID = 7;
+  public static final int AAA_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -79,6 +72,13 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ODDTYPE_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int EVENTYPEOBJECT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -236,6 +236,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -539,16 +541,6 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>AAA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>AAA</b></em>'
-   * @generated
-   */
-  public EDataType getAAAEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(AAA_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the EEnum '<em><b>EvenType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the EEnum representing '<em><b>EvenType</b></em>'
@@ -559,13 +551,13 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>AAA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>EvenTypeObject</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>AAA</b></em>'
    * @generated
    */
-  public EDataType getEvenTypeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(EVENTYPEOBJECT_CLASSIFIER_ID);
+  public EDataType getAAAEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(AAA_CLASSIFIER_ID);
   }
 
   /**
@@ -576,6 +568,16 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
    */
   public EEnum getOddTypeEEnum() {
     return (EEnum) getEPackage().getEClassifiers().get(ODDTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>EvenTypeObject</b></em>'
+   * @generated
+   */
+  public EDataType getEvenTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(EVENTYPEOBJECT_CLASSIFIER_ID);
   }
 
   /**
@@ -619,7 +621,8 @@ public class SubstitutionzvonModelPackage extends ModelPackage {
       return EvenType.class;
     case ODDTYPEOBJECT_CLASSIFIER_ID:
       return OddType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

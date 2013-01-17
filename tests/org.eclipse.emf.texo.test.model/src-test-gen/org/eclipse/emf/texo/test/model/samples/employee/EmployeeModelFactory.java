@@ -5,6 +5,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -35,8 +36,10 @@ public class EmployeeModelFactory implements ModelFactory {
       return createDepartment();
     case EmployeeModelPackage.EMPLOYEE_CLASSIFIER_ID:
       return createEmployee();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -69,7 +72,7 @@ public class EmployeeModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -128,8 +131,9 @@ public class EmployeeModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case EmployeeModelPackage.DATE_CLASSIFIER_ID:
       return createDateFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -145,8 +149,9 @@ public class EmployeeModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case EmployeeModelPackage.DATE_CLASSIFIER_ID:
       return convertDateToString((Date) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -182,6 +187,9 @@ public class EmployeeModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Department</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class DepartmentModelObject<E extends Department> extends
@@ -213,8 +221,9 @@ public class EmployeeModelFactory implements ModelFactory {
         return getTarget().getName();
       case EmployeeModelPackage.DEPARTMENT_EMPLOYEES_FEATURE_ID:
         return getTarget().getEmployees();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -231,8 +240,9 @@ public class EmployeeModelFactory implements ModelFactory {
       case EmployeeModelPackage.DEPARTMENT_EMPLOYEES_FEATURE_ID:
         getTarget().setEmployees((List<Employee>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -246,8 +256,9 @@ public class EmployeeModelFactory implements ModelFactory {
       case EmployeeModelPackage.DEPARTMENT_EMPLOYEES_FEATURE_ID:
         getTarget().getEmployees().add((Employee) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -261,13 +272,17 @@ public class EmployeeModelFactory implements ModelFactory {
       case EmployeeModelPackage.DEPARTMENT_EMPLOYEES_FEATURE_ID:
         getTarget().getEmployees().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -304,8 +319,9 @@ public class EmployeeModelFactory implements ModelFactory {
         return getTarget().getAge();
       case EmployeeModelPackage.EMPLOYEE_HIREDATE_FEATURE_ID:
         return getTarget().getHireDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -327,8 +343,9 @@ public class EmployeeModelFactory implements ModelFactory {
       case EmployeeModelPackage.EMPLOYEE_HIREDATE_FEATURE_ID:
         getTarget().setHireDate((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -339,8 +356,9 @@ public class EmployeeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -351,8 +369,9 @@ public class EmployeeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 }

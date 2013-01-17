@@ -35,9 +35,7 @@ public class ClaimLineCompositeKey extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -45,9 +43,7 @@ public class ClaimLineCompositeKey extends Identifiable {
   private String claimLineNumber = null;
 
   /**
-   * Returns the value of '<em><b>claim</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToClaim(org.eclipse.emf.texo.test.model.samples.claim.Claim value)} and {@link #removeFromClaim(Claim value)}
-   * methods to modify this feature.
+   * Returns the value of '<em><b>claim</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> A generated key to uniquely the parent <!--
    * end-model-doc -->
@@ -65,8 +61,8 @@ public class ClaimLineCompositeKey extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> A generated key to uniquely the parent <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClaimLineCompositeKey#getClaim() claim}' feature.
+   * @param newClaim
+   *          the new value of the '{@link ClaimLineCompositeKey#getClaim() claim}' feature.
    * @generated
    */
   public void setClaim(Claim newClaim) {
@@ -78,9 +74,7 @@ public class ClaimLineCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>claimLineNumber</b></em>' feature
    * @generated
@@ -94,12 +88,10 @@ public class ClaimLineCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ClaimLineCompositeKey#getClaimLineNumber() claimLineNumber}' feature.
+   * @param newClaimLineNumber
+   *          the new value of the '{@link ClaimLineCompositeKey#getClaimLineNumber() claimLineNumber}' feature.
    * @generated
    */
   public void setClaimLineNumber(String newClaimLineNumber) {

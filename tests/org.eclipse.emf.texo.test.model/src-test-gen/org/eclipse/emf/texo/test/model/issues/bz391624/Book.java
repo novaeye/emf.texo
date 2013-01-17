@@ -28,8 +28,8 @@ public class Book extends Identifiable {
    * @generated
    */
   @ElementCollection()
-  @CollectionTable(name = "AUTHOR")
   @OrderColumn()
+  @CollectionTable(name = "AUTHOR")
   private List<Author> authors = new ArrayList<Author>();
 
   /**
@@ -47,6 +47,9 @@ public class Book extends Identifiable {
   /**
    * Adds to the <em>authors</em> feature.
    * 
+   * @param authorsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAuthors(Author authorsValue) {
@@ -57,6 +60,9 @@ public class Book extends Identifiable {
 
   /**
    * Removes from the <em>authors</em> feature.
+   * 
+   * @param authorsValue
+   *          the value to remove
    * 
    * @generated
    */

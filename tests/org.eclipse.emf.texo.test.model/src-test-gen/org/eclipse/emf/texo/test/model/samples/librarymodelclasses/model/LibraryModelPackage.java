@@ -25,7 +25,7 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * The <b>Package</b> for the model '<em><b>library</b></em>'. It contains initialization code and access to the Factory
  * to instantiate types of this package.
  * 
- * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> This is documentation on package level * <!--
+ * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> This is documentation on package level <!--
  * end-model-doc -->
  * 
  * @generated
@@ -100,27 +100,6 @@ public class LibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITER_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WRITER_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WRITER_BOOKS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int LIBRARY_CLASSIFIER_ID = 1;
 
   /**
@@ -145,6 +124,27 @@ public class LibraryModelPackage extends ModelPackage {
   public static final int LIBRARY_BOOKS_FEATURE_ID = 4;
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_BOOKS_FEATURE_ID = 3;
+
+  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -153,6 +153,8 @@ public class LibraryModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -280,37 +282,6 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>'
-   * @generated
-   */
-  public EClass getWriterEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(WRITER_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getWriter_Name() {
-    return (EAttribute) getWriterEClass().getEAllStructuralFeatures().get(WRITER_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writer.books</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.books</b></em>'.
-   * @generated
-   */
-  public EReference getWriter_Books() {
-    return (EReference) getWriterEClass().getEAllStructuralFeatures().get(WRITER_BOOKS_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Library</b></em>'
@@ -354,6 +325,37 @@ public class LibraryModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>'
+   * @generated
+   */
+  public EClass getWriterEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(WRITER_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getWriter_Name() {
+    return (EAttribute) getWriterEClass().getEAllStructuralFeatures().get(WRITER_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Writer.books</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.books</b></em>'.
+   * @generated
+   */
+  public EReference getWriter_Books() {
+    return (EReference) getWriterEClass().getEAllStructuralFeatures().get(WRITER_BOOKS_FEATURE_ID);
+  }
+
+  /**
    * Returns the EEnum '<em><b>BookCategory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the EEnum representing '<em><b>BookCategory</b></em>'
@@ -382,7 +384,8 @@ public class LibraryModelPackage extends ModelPackage {
       return Writer.class;
     case BOOKCATEGORY_CLASSIFIER_ID:
       return BookCategory.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

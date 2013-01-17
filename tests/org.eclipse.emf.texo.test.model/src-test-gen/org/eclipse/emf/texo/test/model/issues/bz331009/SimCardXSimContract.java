@@ -61,8 +61,8 @@ public class SimCardXSimContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сим-карта <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimCardXSimContract#getSimCard() simCard}' feature.
+   * @param newSimCard
+   *          the new value of the '{@link SimCardXSimContract#getSimCard() simCard}' feature.
    * @generated
    */
   public void setSimCard(SimCard newSimCard) {
@@ -86,8 +86,8 @@ public class SimCardXSimContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Контракт <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimCardXSimContract#getSimContract() simContract}' feature.
+   * @param newSimContract
+   *          the new value of the '{@link SimCardXSimContract#getSimContract() simContract}' feature.
    * @generated
    */
   public void setSimContract(SimContract newSimContract) {

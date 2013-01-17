@@ -66,6 +66,9 @@ public enum PaymentType {
    * Returns the '<em><b>PaymentType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the PaymentType, the literal enum class
    * @generated
    */
   public static PaymentType get(String literal) {
@@ -82,6 +85,9 @@ public enum PaymentType {
    * Returns the '<em><b>PaymentType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the PaymentType, the literal enum class
    * @generated
    */
   public static PaymentType getByName(String name) {
@@ -98,6 +104,9 @@ public enum PaymentType {
    * Returns the '<em><b>PaymentType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the PaymentType, the literal enum
    * @generated
    */
   public static PaymentType get(int value) {
@@ -164,6 +173,7 @@ public enum PaymentType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -173,6 +183,7 @@ public enum PaymentType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -182,6 +193,7 @@ public enum PaymentType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

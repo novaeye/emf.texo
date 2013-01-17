@@ -96,6 +96,9 @@ public class Library extends Identifiable {
   /**
    * Adds to the <em>writers</em> feature.
    * 
+   * @param writersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToWriters(Writer writersValue) {
@@ -106,6 +109,9 @@ public class Library extends Identifiable {
 
   /**
    * Removes from the <em>writers</em> feature.
+   * 
+   * @param writersValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -154,6 +160,9 @@ public class Library extends Identifiable {
   /**
    * Adds to the <em>books</em> feature.
    * 
+   * @param booksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -164,6 +173,9 @@ public class Library extends Identifiable {
 
   /**
    * Removes from the <em>books</em> feature.
+   * 
+   * @param booksValue
+   *          the value to remove
    * 
    * @generated
    */

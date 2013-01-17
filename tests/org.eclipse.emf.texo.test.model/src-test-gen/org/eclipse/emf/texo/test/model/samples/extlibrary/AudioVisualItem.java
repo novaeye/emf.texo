@@ -24,6 +24,7 @@ public abstract class AudioVisualItem extends CirculatingItem {
    */
   @Basic()
   private String title = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -31,6 +32,7 @@ public abstract class AudioVisualItem extends CirculatingItem {
    */
   @Basic(optional = false)
   private int minutesLength = 0;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

@@ -121,6 +121,8 @@ public class EmployeeModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static EmployeeModelPackage initialize() {
@@ -305,7 +307,8 @@ public class EmployeeModelPackage extends ModelPackage {
       return Employee.class;
     case DATE_CLASSIFIER_ID:
       return Date.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

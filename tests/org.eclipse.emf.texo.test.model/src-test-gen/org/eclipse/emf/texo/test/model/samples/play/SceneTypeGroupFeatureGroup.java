@@ -136,6 +136,7 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String stageDirections;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -145,6 +146,8 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   private SpeechType speech;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -152,6 +155,7 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -173,10 +177,8 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SceneType#getStageDirections() <em>stageDirections</em>}' feature.
    * 
-   * @param newStageDirections
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newStageDirections
    *          the new value of the '{@link SceneType#getStageDirections() stageDirections}' feature.
    * @generated
@@ -201,10 +203,8 @@ public class SceneTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SceneType#getSpeech() <em>speech</em>}' feature.
    * 
-   * @param newSpeech
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newSpeech
    *          the new value of the '{@link SceneType#getSpeech() speech}' feature.
    * @generated

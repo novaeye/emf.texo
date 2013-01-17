@@ -5,6 +5,7 @@ import java.util.Date;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
@@ -91,8 +92,10 @@ public class ModelModelFactory implements ModelFactory {
       return createEvent();
     case ModelModelPackage.COORDINATES_CLASSIFIER_ID:
       return createCoordinates();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -218,7 +221,7 @@ public class ModelModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -571,8 +574,9 @@ public class ModelModelFactory implements ModelFactory {
       return createPhoneTypeFromString(value);
     case ModelModelPackage.MESSAGEIOTYPES_CLASSIFIER_ID:
       return createMessageIOTypesFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -602,8 +606,9 @@ public class ModelModelFactory implements ModelFactory {
       return convertPhoneTypeToString((PhoneType) value);
     case ModelModelPackage.MESSAGEIOTYPES_CLASSIFIER_ID:
       return convertMessageIOTypesToString((MessageIOTypes) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -850,6 +855,9 @@ public class ModelModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>SimCard</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class SimCardModelObject<E extends SimCard> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -880,8 +888,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getPhoneNumber();
       case ModelModelPackage.SIMCARD_NUMBER_FEATURE_ID:
         return getTarget().getNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -897,8 +906,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.SIMCARD_NUMBER_FEATURE_ID:
         getTarget().setNumber((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -909,8 +919,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -921,13 +932,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -964,8 +979,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getDescritpion();
       case ModelModelPackage.SIMCONTRACT_PAYMENTINFO_FEATURE_ID:
         return getTarget().getPaymentInfo();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -987,8 +1003,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.SIMCONTRACT_PAYMENTINFO_FEATURE_ID:
         getTarget().setPaymentInfo((PaymentInfo) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -999,8 +1016,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1011,13 +1029,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PaymentInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1050,8 +1072,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getTariff();
       case ModelModelPackage.PAYMENTINFO_FACTPAYMENTS_FEATURE_ID:
         return getTarget().getFactPayments();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1064,8 +1087,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PAYMENTINFO_TARIFF_FEATURE_ID:
         getTarget().setTariff((Tariff) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1076,8 +1100,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1088,14 +1113,18 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimCardXSimContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1128,8 +1157,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getSimCard();
       case ModelModelPackage.SIMCARDXSIMCONTRACT_SIMCONTRACT_FEATURE_ID:
         return getTarget().getSimContract();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1145,8 +1175,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.SIMCARDXSIMCONTRACT_SIMCONTRACT_FEATURE_ID:
         getTarget().setSimContract((SimContract) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1157,8 +1188,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1169,13 +1201,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1203,8 +1239,9 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1214,8 +1251,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1225,8 +1263,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1236,13 +1275,17 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Tariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1282,8 +1325,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getInitialPayment();
       case ModelModelPackage.TARIFF_SERVICES_FEATURE_ID:
         return getTarget().getServices();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1299,8 +1343,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.TARIFF_ACTIVE_FEATURE_ID:
         getTarget().setActive((Boolean) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1311,8 +1356,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1323,13 +1369,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PaymentItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1368,8 +1418,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getDescription();
       case ModelModelPackage.PAYMENTITEM_PAYMENTTYPE_FEATURE_ID:
         return getTarget().getPaymentType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1394,8 +1445,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PAYMENTITEM_PAYMENTTYPE_FEATURE_ID:
         getTarget().setPaymentType((PaymentType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1406,8 +1458,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1418,13 +1471,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>VolumePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1458,8 +1515,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getUnit();
       case ModelModelPackage.VOLUMEPAYMENT_PRICE_FEATURE_ID:
         return getTarget().getPrice();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1478,8 +1536,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.VOLUMEPAYMENT_PRICE_FEATURE_ID:
         getTarget().setPrice((BigDecimal) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1490,8 +1549,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1502,14 +1562,18 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PeriodicalPayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1539,8 +1603,9 @@ public class ModelModelFactory implements ModelFactory {
       switch (featureID) {
       case ModelModelPackage.PERIODICALPAYMENT_PERIODICITY_FEATURE_ID:
         return getTarget().getPeriodicity();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1553,8 +1618,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PERIODICALPAYMENT_PERIODICITY_FEATURE_ID:
         getTarget().setPeriodicity((Periodicity) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1565,8 +1631,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1577,13 +1644,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>OneTimePayment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1611,8 +1682,9 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1622,8 +1694,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1633,8 +1706,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1644,13 +1718,17 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Service</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1688,8 +1766,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getPeriodicalPayment();
       case ModelModelPackage.SERVICE_VOLUMEPAYMENT_FEATURE_ID:
         return getTarget().getVolumePayment();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1714,8 +1793,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.SERVICE_VOLUMEPAYMENT_FEATURE_ID:
         getTarget().setVolumePayment((VolumePayment) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1726,8 +1806,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1738,13 +1819,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Units</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1774,8 +1859,9 @@ public class ModelModelFactory implements ModelFactory {
       switch (featureID) {
       case ModelModelPackage.UNITS_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1788,8 +1874,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.UNITS_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1800,8 +1887,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1812,13 +1900,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1846,8 +1938,9 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1857,8 +1950,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1868,8 +1962,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1879,13 +1974,17 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CarProducer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1916,8 +2015,9 @@ public class ModelModelFactory implements ModelFactory {
       switch (featureID) {
       case ModelModelPackage.CARPRODUCER_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1930,8 +2030,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CARPRODUCER_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1942,8 +2043,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1954,13 +2056,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CarModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1993,8 +2099,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getProducer();
       case ModelModelPackage.CARMODEL_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2010,8 +2117,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CARMODEL_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2022,8 +2130,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2034,13 +2143,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CarRegInfo</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2093,8 +2206,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getIssueDate();
       case ModelModelPackage.CARREGINFO_ISSUED_FEATURE_ID:
         return getTarget().getIssued();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2140,8 +2254,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CARREGINFO_ISSUED_FEATURE_ID:
         getTarget().setIssued((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2152,8 +2267,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2164,13 +2280,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Document</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2204,8 +2324,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getIssueDate();
       case ModelModelPackage.DOCUMENT_ISSUED_FEATURE_ID:
         return getTarget().getIssued();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2227,8 +2348,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.DOCUMENT_ISSUED_FEATURE_ID:
         getTarget().setIssued((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2239,8 +2361,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2251,13 +2374,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2303,8 +2430,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getDrivingLicense();
       case ModelModelPackage.PERSON_PHONES_FEATURE_ID:
         return getTarget().getPhones();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2338,8 +2466,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PERSON_DRIVINGLICENSE_FEATURE_ID:
         getTarget().setDrivingLicense((DrivingLicense) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2350,8 +2479,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2362,13 +2492,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Car</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2402,8 +2536,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getRegInfo();
       case ModelModelPackage.CAR_CARPASSPORT_FEATURE_ID:
         return getTarget().getCarPassport();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2422,8 +2557,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CAR_CARPASSPORT_FEATURE_ID:
         getTarget().setCarPassport((CarPassport) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2434,8 +2570,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2446,13 +2583,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CarPassport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2489,8 +2630,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getIssueDate();
       case ModelModelPackage.CARPASSPORT_ISSUED_FEATURE_ID:
         return getTarget().getIssued();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2512,8 +2654,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CARPASSPORT_ISSUED_FEATURE_ID:
         getTarget().setIssued((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2524,8 +2667,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2536,13 +2680,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Phone</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2574,8 +2722,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getNumber();
       case ModelModelPackage.PHONE_DESCRIPTION_FEATURE_ID:
         return getTarget().getDescription();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2591,8 +2740,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PHONE_DESCRIPTION_FEATURE_ID:
         getTarget().setDescription((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2603,8 +2753,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2615,13 +2766,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2663,8 +2818,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getBuilding();
       case ModelModelPackage.ADDRESS_FLAT_FEATURE_ID:
         return getTarget().getFlat();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2695,8 +2851,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.ADDRESS_FLAT_FEATURE_ID:
         getTarget().setFlat((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2707,8 +2864,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2719,13 +2877,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Passport</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2762,8 +2924,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getIssueDate();
       case ModelModelPackage.PASSPORT_ISSUED_FEATURE_ID:
         return getTarget().getIssued();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2785,8 +2948,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.PASSPORT_ISSUED_FEATURE_ID:
         getTarget().setIssued((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2797,8 +2961,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2809,13 +2974,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DrivingLicense</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2852,8 +3021,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getIssueDate();
       case ModelModelPackage.DRIVINGLICENSE_ISSUED_FEATURE_ID:
         return getTarget().getIssued();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2875,8 +3045,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.DRIVINGLICENSE_ISSUED_FEATURE_ID:
         getTarget().setIssued((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2887,8 +3058,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2899,13 +3071,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Contract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -2946,8 +3122,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getSecretQuestions();
       case ModelModelPackage.CONTRACT_NUMBER_FEATURE_ID:
         return getTarget().getNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -2972,8 +3149,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CONTRACT_NUMBER_FEATURE_ID:
         getTarget().setNumber((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -2984,8 +3162,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -2996,13 +3175,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SecretQuestion</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3041,8 +3224,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().isActive();
       case ModelModelPackage.SECRETQUESTION_TYPE_FEATURE_ID:
         return getTarget().getType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3067,8 +3251,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.SECRETQUESTION_TYPE_FEATURE_ID:
         getTarget().setType((SecretQuestionType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3079,8 +3264,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3091,13 +3277,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ClientTariff</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3125,8 +3315,9 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3136,8 +3327,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3147,8 +3339,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3158,13 +3351,17 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ContractPackage</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3199,8 +3396,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getUser();
       case ModelModelPackage.CONTRACTPACKAGE_CONTRACTS_FEATURE_ID:
         return getTarget().getContracts();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3216,8 +3414,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.CONTRACTPACKAGE_USER_FEATURE_ID:
         getTarget().setUser((User) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3228,8 +3427,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3240,13 +3440,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>User</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3280,8 +3484,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getPassword();
       case ModelModelPackage.USER_GROUP_FEATURE_ID:
         return getTarget().getGroup();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3300,8 +3505,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.USER_GROUP_FEATURE_ID:
         getTarget().setGroup((UserGroup) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3312,8 +3518,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3324,13 +3531,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>UserGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3359,8 +3570,9 @@ public class ModelModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3370,8 +3582,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3381,8 +3594,9 @@ public class ModelModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3392,13 +3606,17 @@ public class ModelModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Message</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3436,8 +3654,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getTo();
       case ModelModelPackage.MESSAGE_DATETIME_FEATURE_ID:
         return getTarget().getDateTime();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3462,8 +3681,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.MESSAGE_DATETIME_FEATURE_ID:
         getTarget().setDateTime((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3474,8 +3694,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3486,13 +3707,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Event</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3526,8 +3751,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getMessage();
       case ModelModelPackage.EVENT_COORDINATES_FEATURE_ID:
         return getTarget().getCoordinates();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3546,8 +3772,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.EVENT_COORDINATES_FEATURE_ID:
         getTarget().setCoordinates((Coordinates) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3558,8 +3785,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3570,13 +3798,17 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Coordinates</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -3609,8 +3841,9 @@ public class ModelModelFactory implements ModelFactory {
         return getTarget().getX();
       case ModelModelPackage.COORDINATES_Y_FEATURE_ID:
         return getTarget().getY();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -3626,8 +3859,9 @@ public class ModelModelFactory implements ModelFactory {
       case ModelModelPackage.COORDINATES_Y_FEATURE_ID:
         getTarget().setY((BigDecimal) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -3638,8 +3872,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -3650,9 +3885,9 @@ public class ModelModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

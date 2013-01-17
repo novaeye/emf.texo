@@ -37,8 +37,10 @@ public class DocumentrootModelFactory implements ModelFactory {
       return createComplexType();
     case DocumentrootModelPackage.DOCUMENTROOT_CLASSIFIER_ID:
       return createDocumentRoot();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -71,7 +73,7 @@ public class DocumentrootModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -136,8 +138,9 @@ public class DocumentrootModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -151,12 +154,16 @@ public class DocumentrootModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ComplexType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -187,8 +194,9 @@ public class DocumentrootModelFactory implements ModelFactory {
       switch (featureID) {
       case DocumentrootModelPackage.COMPLEXTYPE_TEST_FEATURE_ID:
         return getTarget().getTest();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -201,8 +209,9 @@ public class DocumentrootModelFactory implements ModelFactory {
       case DocumentrootModelPackage.COMPLEXTYPE_TEST_FEATURE_ID:
         getTarget().setTest((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -213,8 +222,9 @@ public class DocumentrootModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -225,13 +235,17 @@ public class DocumentrootModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -270,8 +284,9 @@ public class DocumentrootModelFactory implements ModelFactory {
         return getTarget().getOtherTest();
       case DocumentrootModelPackage.DOCUMENTROOT_TEST_FEATURE_ID:
         return getTarget().getTest();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -297,8 +312,9 @@ public class DocumentrootModelFactory implements ModelFactory {
       case DocumentrootModelPackage.DOCUMENTROOT_TEST_FEATURE_ID:
         getTarget().setTest((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -313,8 +329,9 @@ public class DocumentrootModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -329,14 +346,17 @@ public class DocumentrootModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -357,8 +377,9 @@ public class DocumentrootModelFactory implements ModelFactory {
         return DocumentrootModelPackage.INSTANCE.getDocumentRoot_OtherTest();
       case TEST:
         return DocumentrootModelPackage.INSTANCE.getDocumentRoot_Test();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -384,8 +405,9 @@ public class DocumentrootModelFactory implements ModelFactory {
       case DocumentrootModelPackage.DOCUMENTROOT_TEST_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.TEST);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -402,5 +424,4 @@ public class DocumentrootModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

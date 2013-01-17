@@ -112,8 +112,8 @@ public class Claim extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Billing Name <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Claim#getBillingName() billingName}' feature.
+   * @param newBillingName
+   *          the new value of the '{@link Claim#getBillingName() billingName}' feature.
    * @generated
    */
   public void setBillingName(String newBillingName) {
@@ -137,8 +137,8 @@ public class Claim extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Claim Group VSP Id <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Claim#getClaimGroupVSPId() claimGroupVSPId}' feature.
+   * @param newClaimGroupVSPId
+   *          the new value of the '{@link Claim#getClaimGroupVSPId() claimGroupVSPId}' feature.
    * @generated
    */
   public void setClaimGroupVSPId(String newClaimGroupVSPId) {
@@ -166,8 +166,8 @@ public class Claim extends Identifiable {
    * 
    * <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Claim#getClaimStatus() claimStatus}' feature.
+   * @param newClaimStatus
+   *          the new value of the '{@link Claim#getClaimStatus() claimStatus}' feature.
    * @generated
    */
   public void setClaimStatus(String newClaimStatus) {
@@ -189,6 +189,9 @@ public class Claim extends Identifiable {
   /**
    * Adds to the <em>claimLine</em> feature.
    * 
+   * @param claimLineValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToClaimLine(ClaimLine claimLineValue) {
@@ -199,6 +202,9 @@ public class Claim extends Identifiable {
 
   /**
    * Removes from the <em>claimLine</em> feature.
+   * 
+   * @param claimLineValue
+   *          the value to remove
    * 
    * @generated
    */

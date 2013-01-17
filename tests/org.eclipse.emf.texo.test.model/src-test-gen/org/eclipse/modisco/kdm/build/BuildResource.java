@@ -61,6 +61,9 @@ public class BuildResource extends AbstractBuildElement {
   /**
    * Adds to the <em>implementation</em> feature.
    * 
+   * @param implementationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToImplementation(KDMEntity implementationValue) {
@@ -71,6 +74,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Removes from the <em>implementation</em> feature.
+   * 
+   * @param implementationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -119,6 +125,9 @@ public class BuildResource extends AbstractBuildElement {
   /**
    * Adds to the <em>groupedBuild</em> feature.
    * 
+   * @param groupedBuildValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGroupedBuild(AbstractBuildElement groupedBuildValue) {
@@ -129,6 +138,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Removes from the <em>groupedBuild</em> feature.
+   * 
+   * @param groupedBuildValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -177,6 +189,9 @@ public class BuildResource extends AbstractBuildElement {
   /**
    * Adds to the <em>buildElement</em> feature.
    * 
+   * @param buildElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBuildElement(AbstractBuildElement buildElementValue) {
@@ -187,6 +202,9 @@ public class BuildResource extends AbstractBuildElement {
 
   /**
    * Removes from the <em>buildElement</em> feature.
+   * 
+   * @param buildElementValue
+   *          the value to remove
    * 
    * @generated
    */

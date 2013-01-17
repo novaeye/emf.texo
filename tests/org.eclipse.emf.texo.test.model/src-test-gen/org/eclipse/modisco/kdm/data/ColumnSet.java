@@ -46,6 +46,9 @@ public class ColumnSet extends DataContainer {
   /**
    * Adds to the <em>itemUnit</em> feature.
    * 
+   * @param itemUnitValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToItemUnit(ItemUnit itemUnitValue) {
@@ -56,6 +59,9 @@ public class ColumnSet extends DataContainer {
 
   /**
    * Removes from the <em>itemUnit</em> feature.
+   * 
+   * @param itemUnitValue
+   *          the value to remove
    * 
    * @generated
    */

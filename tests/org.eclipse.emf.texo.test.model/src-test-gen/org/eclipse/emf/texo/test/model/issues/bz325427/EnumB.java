@@ -33,6 +33,9 @@ public enum EnumB {
    * Returns the '<em><b>EnumB</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the EnumB, the literal enum class
    * @generated
    */
   public static EnumB get(String literal) {
@@ -48,6 +51,9 @@ public enum EnumB {
   /**
    * Returns the '<em><b>EnumB</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the EnumB, the literal enum class
    * @generated
    */
   public static EnumB getByName(String name) {
@@ -64,6 +70,9 @@ public enum EnumB {
    * Returns the '<em><b>EnumB</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the EnumB, the literal enum
    * @generated
    */
   public static EnumB get(int value) {
@@ -110,6 +119,7 @@ public enum EnumB {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -119,6 +129,7 @@ public enum EnumB {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -128,6 +139,7 @@ public enum EnumB {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

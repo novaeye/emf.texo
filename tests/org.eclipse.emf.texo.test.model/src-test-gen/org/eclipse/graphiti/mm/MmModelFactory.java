@@ -4,6 +4,7 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -32,8 +33,10 @@ public class MmModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case MmModelPackage.PROPERTY_CLASSIFIER_ID:
       return createProperty();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -72,7 +75,7 @@ public class MmModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -119,8 +122,9 @@ public class MmModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -134,12 +138,16 @@ public class MmModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Property</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -172,8 +180,9 @@ public class MmModelFactory implements ModelFactory {
         return getTarget().getKey();
       case MmModelPackage.PROPERTY_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -189,8 +198,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.PROPERTY_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -201,8 +211,9 @@ public class MmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -213,14 +224,18 @@ public class MmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PropertyContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -251,8 +266,9 @@ public class MmModelFactory implements ModelFactory {
       switch (featureID) {
       case MmModelPackage.PROPERTYCONTAINER_PROPERTIES_FEATURE_ID:
         return getTarget().getProperties();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -266,8 +282,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.PROPERTYCONTAINER_PROPERTIES_FEATURE_ID:
         getTarget().setProperties((Set<Property>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -281,8 +298,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.PROPERTYCONTAINER_PROPERTIES_FEATURE_ID:
         getTarget().getProperties().add((Property) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -296,14 +314,18 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.PROPERTYCONTAINER_PROPERTIES_FEATURE_ID:
         getTarget().getProperties().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GraphicsAlgorithmContainer</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -332,8 +354,9 @@ public class MmModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -343,8 +366,9 @@ public class MmModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -354,8 +378,9 @@ public class MmModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -365,13 +390,17 @@ public class MmModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>StyleContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -402,8 +431,9 @@ public class MmModelFactory implements ModelFactory {
       switch (featureID) {
       case MmModelPackage.STYLECONTAINER_STYLES_FEATURE_ID:
         return getTarget().getStyles();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -417,8 +447,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.STYLECONTAINER_STYLES_FEATURE_ID:
         getTarget().setStyles((Set<Style>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -432,8 +463,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.STYLECONTAINER_STYLES_FEATURE_ID:
         getTarget().getStyles().add((Style) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -447,9 +479,9 @@ public class MmModelFactory implements ModelFactory {
       case MmModelPackage.STYLECONTAINER_STYLES_FEATURE_ID:
         getTarget().getStyles().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

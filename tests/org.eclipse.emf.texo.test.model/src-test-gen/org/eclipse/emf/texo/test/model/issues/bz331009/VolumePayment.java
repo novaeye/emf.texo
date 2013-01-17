@@ -93,8 +93,8 @@ public class VolumePayment extends PaymentItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> единицы объема <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VolumePayment#getUnit() unit}' feature.
+   * @param newUnit
+   *          the new value of the '{@link VolumePayment#getUnit() unit}' feature.
    * @generated
    */
   public void setUnit(Units newUnit) {
@@ -118,8 +118,8 @@ public class VolumePayment extends PaymentItem {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Цена за единицу <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link VolumePayment#getPrice() price}' feature.
+   * @param newPrice
+   *          the new value of the '{@link VolumePayment#getPrice() price}' feature.
    * @generated
    */
   public void setPrice(BigDecimal newPrice) {

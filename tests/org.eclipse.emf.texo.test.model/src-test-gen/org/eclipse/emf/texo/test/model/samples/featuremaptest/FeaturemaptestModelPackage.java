@@ -86,20 +86,6 @@ public class FeaturemaptestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SUPPLIER_PREFERREDORDERS_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SUPPLIER_STANDARDORDERS_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID = 4;
 
   /**
@@ -110,6 +96,20 @@ public class FeaturemaptestModelPackage extends ModelPackage {
   public static final int SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID = 5;
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SUPPLIER_PREFERREDORDERS_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SUPPLIER_STANDARDORDERS_FEATURE_ID = 7;
+
+  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -118,6 +118,8 @@ public class FeaturemaptestModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -244,6 +246,28 @@ public class FeaturemaptestModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EStructuralFeature} '<em><b>Supplier.hardCopyOrderReference</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Supplier.hardCopyOrderReference</b></em>'.
+   * @generated
+   */
+  public EAttribute getSupplier_HardCopyOrderReference() {
+    return (EAttribute) getSupplierEClass().getEAllStructuralFeatures().get(SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Supplier.hardCopyOrderNumber</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Supplier.hardCopyOrderNumber</b></em>'.
+   * @generated
+   */
+  public EAttribute getSupplier_HardCopyOrderNumber() {
+    return (EAttribute) getSupplierEClass().getEAllStructuralFeatures().get(SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EStructuralFeature} '<em><b>Supplier.preferredOrders</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
@@ -280,29 +304,8 @@ public class FeaturemaptestModelPackage extends ModelPackage {
       return PurchaseOrder.class;
     case SUPPLIER_CLASSIFIER_ID:
       return Supplier.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Supplier.hardCopyOrderReference</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Supplier.hardCopyOrderReference</b></em>'.
-   * @generated
-   */
-  public EAttribute getSupplier_HardCopyOrderReference() {
-    return (EAttribute) getSupplierEClass().getEAllStructuralFeatures().get(SUPPLIER_HARDCOPYORDERREFERENCE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Supplier.hardCopyOrderNumber</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Supplier.hardCopyOrderNumber</b></em>'.
-   * @generated
-   */
-  public EAttribute getSupplier_HardCopyOrderNumber() {
-    return (EAttribute) getSupplierEClass().getEAllStructuralFeatures().get(SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID);
   }
 }

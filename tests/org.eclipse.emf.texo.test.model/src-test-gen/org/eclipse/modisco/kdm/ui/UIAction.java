@@ -77,6 +77,9 @@ public class UIAction extends AbstractUIElement {
   /**
    * Adds to the <em>UIElement</em> feature.
    * 
+   * @param uIElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToUIElement(UIEvent uIElementValue) {
@@ -87,6 +90,9 @@ public class UIAction extends AbstractUIElement {
 
   /**
    * Removes from the <em>UIElement</em> feature.
+   * 
+   * @param uIElementValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -57,14 +57,14 @@ public class SunBooksModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOKCATEGORYTYPE_CLASSIFIER_ID = 6;
+  public static final int BOOKCATEGORYTYPE1_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOKCATEGORYTYPE1_CLASSIFIER_ID = 7;
+  public static final int BOOKCATEGORYTYPE_CLASSIFIER_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -183,6 +183,27 @@ public class SunBooksModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int PROMOTIONTYPE_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PROMOTIONTYPE_DISCOUNT_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PROMOTIONTYPE_NONE_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int COLLECTIONTYPE_CLASSIFIER_ID = 3;
 
   /**
@@ -228,27 +249,6 @@ public class SunBooksModelPackage extends ModelPackage {
   public static final int DOCUMENTROOT_COLLECTION_FEATURE_ID = 5;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PROMOTIONTYPE_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PROMOTIONTYPE_DISCOUNT_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PROMOTIONTYPE_NONE_FEATURE_ID = 3;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -257,6 +257,8 @@ public class SunBooksModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -498,6 +500,38 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PromotionType</b></em>'
+   * @generated
+   */
+  public EClass getPromotionTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(PROMOTIONTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.discount</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.discount</b></em>'.
+   * @generated
+   */
+  public EAttribute getPromotionType_Discount() {
+    return (EAttribute) getPromotionTypeEClass().getEAllStructuralFeatures().get(PROMOTIONTYPE_DISCOUNT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.none</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.none</b></em>'.
+   * @generated
+   */
+  public EAttribute getPromotionType_None() {
+    return (EAttribute) getPromotionTypeEClass().getEAllStructuralFeatures().get(PROMOTIONTYPE_NONE_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>CollectionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>CollectionType</b></em>'
@@ -574,35 +608,13 @@ public class SunBooksModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>BookCategoryType1</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>PromotionType</b></em>'
+   * @return an instance of the EEnum representing '<em><b>BookCategoryType1</b></em>'
    * @generated
    */
-  public EClass getPromotionTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(PROMOTIONTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.discount</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.discount</b></em>'.
-   * @generated
-   */
-  public EAttribute getPromotionType_Discount() {
-    return (EAttribute) getPromotionTypeEClass().getEAllStructuralFeatures().get(PROMOTIONTYPE_DISCOUNT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PromotionType.none</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PromotionType.none</b></em>'.
-   * @generated
-   */
-  public EAttribute getPromotionType_None() {
-    return (EAttribute) getPromotionTypeEClass().getEAllStructuralFeatures().get(PROMOTIONTYPE_NONE_FEATURE_ID);
+  public EEnum getBookCategoryType1EEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORYTYPE1_CLASSIFIER_ID);
   }
 
   /**
@@ -613,16 +625,6 @@ public class SunBooksModelPackage extends ModelPackage {
    */
   public EEnum getBookCategoryTypeEEnum() {
     return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORYTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the EEnum '<em><b>BookCategoryType1</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>BookCategoryType1</b></em>'
-   * @generated
-   */
-  public EEnum getBookCategoryType1EEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORYTYPE1_CLASSIFIER_ID);
   }
 
   /**
@@ -678,7 +680,8 @@ public class SunBooksModelPackage extends ModelPackage {
       return BookCategoryType.class;
     case BOOKCATEGORYTYPEOBJECT1_CLASSIFIER_ID:
       return BookCategoryType1.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

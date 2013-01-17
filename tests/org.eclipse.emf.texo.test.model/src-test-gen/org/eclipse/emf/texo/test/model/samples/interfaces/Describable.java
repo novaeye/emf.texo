@@ -21,7 +21,6 @@ import org.eclipse.persistence.annotations.Converters;
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 @Access(AccessType.PROPERTY)
 public interface Describable extends IdentifiableInterface {
-
   /**
    * Returns the value of '<em><b>description</em></b>' feature.
    * 

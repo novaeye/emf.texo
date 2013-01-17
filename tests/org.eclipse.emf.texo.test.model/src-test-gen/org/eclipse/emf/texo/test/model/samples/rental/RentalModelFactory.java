@@ -44,8 +44,10 @@ public class RentalModelFactory implements ModelFactory {
       return createRentalContract();
     case RentalModelPackage.RENTALCONTRACTLINE_CLASSIFIER_ID:
       return createRentalContractLine();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -93,7 +95,7 @@ public class RentalModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -132,6 +134,16 @@ public class RentalModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass RentalCar
+   * @generated
+   */
+  public RentalCar createRentalCar() {
+    return new RentalCar();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass RentalBusiness
    * @generated
    */
@@ -147,16 +159,6 @@ public class RentalModelFactory implements ModelFactory {
    */
   public RentalCarDriver createRentalCarDriver() {
     return new RentalCarDriver();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass RentalCar
-   * @generated
-   */
-  public RentalCar createRentalCar() {
-    return new RentalCar();
   }
 
   /**
@@ -200,8 +202,9 @@ public class RentalModelFactory implements ModelFactory {
       return createRentalBicycleTypeObjectFromString(value);
     case RentalModelPackage.RENTALCARSIZEOBJECT_CLASSIFIER_ID:
       return createRentalCarSizeObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -225,23 +228,9 @@ public class RentalModelFactory implements ModelFactory {
       return convertRentalBicycleTypeObjectToString((RentalBicycleType) value);
     case RentalModelPackage.RENTALCARSIZEOBJECT_CLASSIFIER_ID:
       return convertRentalCarSizeObjectToString((RentalCarSize) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Date createDateFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return ModelUtils.createFromXML(value);
   }
 
   /**
@@ -273,37 +262,6 @@ public class RentalModelFactory implements ModelFactory {
       return null;
     }
     return RentalBicycleType.get(value);
-  }
-
-  /**
-   * Converts the EDataType: RentalBicycleTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertRentalBicycleTypeObjectToString(RentalBicycleType value) {
-    if (value == null) {
-      return null;
-    }
-    return convertRentalBicycleTypeToString(value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: RentalBicycleTypeObject from a String. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public RentalBicycleType createRentalBicycleTypeObjectFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return createRentalBicycleTypeFromString(value);
   }
 
   /**
@@ -352,6 +310,52 @@ public class RentalModelFactory implements ModelFactory {
   }
 
   /**
+   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Date createDateFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return ModelUtils.createFromXML(value);
+  }
+
+  /**
+   * Converts the EDataType: RentalBicycleTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertRentalBicycleTypeObjectToString(RentalBicycleType value) {
+    if (value == null) {
+      return null;
+    }
+    return convertRentalBicycleTypeToString(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: RentalBicycleTypeObject from a String. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public RentalBicycleType createRentalBicycleTypeObjectFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return createRentalBicycleTypeFromString(value);
+  }
+
+  /**
    * Converts the EDataType: RentalCarSizeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
@@ -385,6 +389,9 @@ public class RentalModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalBicycle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class RentalBicycleModelObject<E extends RentalBicycle> extends RentalUnitModelObject<E> {
@@ -415,8 +422,9 @@ public class RentalModelFactory implements ModelFactory {
         return getTarget().getType();
       case RentalModelPackage.RENTALBICYCLE_RENTALCAR_FEATURE_ID:
         return getTarget().getRentalCar();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -432,8 +440,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALBICYCLE_RENTALCAR_FEATURE_ID:
         getTarget().setRentalCar((RentalCar) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -444,8 +453,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -456,13 +466,17 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -493,8 +507,9 @@ public class RentalModelFactory implements ModelFactory {
       switch (featureID) {
       case RentalModelPackage.RENTALUNIT_DESCRIPTION_FEATURE_ID:
         return getTarget().getDescription();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -507,8 +522,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALUNIT_DESCRIPTION_FEATURE_ID:
         getTarget().setDescription((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -519,8 +535,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -531,13 +548,17 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalCar</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -569,8 +590,9 @@ public class RentalModelFactory implements ModelFactory {
         return getTarget().getSize();
       case RentalModelPackage.RENTALCAR_CURRENTDRIVER_FEATURE_ID:
         return getTarget().getCurrentDriver();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -586,8 +608,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCAR_CURRENTDRIVER_FEATURE_ID:
         getTarget().setCurrentDriver((RentalCarDriver) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -598,8 +621,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -610,13 +634,17 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalBusiness</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -647,8 +675,9 @@ public class RentalModelFactory implements ModelFactory {
       switch (featureID) {
       case RentalModelPackage.RENTALBUSINESS_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -661,8 +690,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALBUSINESS_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -673,8 +703,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -685,13 +716,17 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalCarDriver</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -724,8 +759,9 @@ public class RentalModelFactory implements ModelFactory {
         return getTarget().getName();
       case RentalModelPackage.RENTALCARDRIVER_CURRENTRENTALCAR_FEATURE_ID:
         return getTarget().getCurrentRentalCar();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -741,8 +777,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCARDRIVER_CURRENTRENTALCAR_FEATURE_ID:
         getTarget().setCurrentRentalCar((RentalCar) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -753,8 +790,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -765,13 +803,17 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalContract</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -810,8 +852,9 @@ public class RentalModelFactory implements ModelFactory {
         return getTarget().getCost();
       case RentalModelPackage.RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID:
         return getTarget().getRentalContractLines();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -837,8 +880,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID:
         getTarget().setRentalContractLines((List<RentalContractLine>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -852,8 +896,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID:
         getTarget().getRentalContractLines().add((RentalContractLine) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -867,14 +912,18 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCONTRACT_RENTALCONTRACTLINES_FEATURE_ID:
         getTarget().getRentalContractLines().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RentalContractLine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -909,8 +958,9 @@ public class RentalModelFactory implements ModelFactory {
         return getTarget().getNumber();
       case RentalModelPackage.RENTALCONTRACTLINE_RENTALUNIT_FEATURE_ID:
         return getTarget().getRentalUnit();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -929,8 +979,9 @@ public class RentalModelFactory implements ModelFactory {
       case RentalModelPackage.RENTALCONTRACTLINE_RENTALUNIT_FEATURE_ID:
         getTarget().setRentalUnit((RentalUnit) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -941,8 +992,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -953,9 +1005,9 @@ public class RentalModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

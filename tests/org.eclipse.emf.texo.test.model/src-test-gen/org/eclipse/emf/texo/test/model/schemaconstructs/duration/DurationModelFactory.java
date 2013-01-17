@@ -33,8 +33,10 @@ public class DurationModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case DurationModelPackage.DURATIONTEST_CLASSIFIER_ID:
       return createDurationTest();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -64,7 +66,7 @@ public class DurationModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -111,8 +113,9 @@ public class DurationModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -126,12 +129,16 @@ public class DurationModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DurationTest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -166,8 +173,9 @@ public class DurationModelFactory implements ModelFactory {
         return getTarget().getDuration();
       case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
         return getTarget().getDurations();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -187,8 +195,9 @@ public class DurationModelFactory implements ModelFactory {
       case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
         getTarget().setDurations((List<Duration>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -202,8 +211,9 @@ public class DurationModelFactory implements ModelFactory {
       case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
         getTarget().getDurations().add((Duration) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -217,9 +227,9 @@ public class DurationModelFactory implements ModelFactory {
       case DurationModelPackage.DURATIONTEST_DURATIONS_FEATURE_ID:
         getTarget().getDurations().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

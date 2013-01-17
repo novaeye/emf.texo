@@ -44,6 +44,9 @@ public class BuildModel extends KDMModel {
   /**
    * Adds to the <em>buildElement</em> feature.
    * 
+   * @param buildElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBuildElement(AbstractBuildElement buildElementValue) {
@@ -54,6 +57,9 @@ public class BuildModel extends KDMModel {
 
   /**
    * Removes from the <em>buildElement</em> feature.
+   * 
+   * @param buildElementValue
+   *          the value to remove
    * 
    * @generated
    */

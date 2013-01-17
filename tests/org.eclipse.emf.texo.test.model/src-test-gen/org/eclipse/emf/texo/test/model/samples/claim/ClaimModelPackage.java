@@ -184,6 +184,8 @@ public class ClaimModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static ClaimModelPackage initialize() {
@@ -479,7 +481,8 @@ public class ClaimModelPackage extends ModelPackage {
       return ClaimLine.class;
     case CLAIMLINECOMPOSITEKEY_CLASSIFIER_ID:
       return ClaimLineCompositeKey.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

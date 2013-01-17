@@ -186,6 +186,9 @@ public class RentalContract extends Identifiable {
   /**
    * Adds to the <em>rentalContractLines</em> feature.
    * 
+   * @param rentalContractLinesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToRentalContractLines(RentalContractLine rentalContractLinesValue) {
@@ -196,6 +199,9 @@ public class RentalContract extends Identifiable {
 
   /**
    * Removes from the <em>rentalContractLines</em> feature.
+   * 
+   * @param rentalContractLinesValue
+   *          the value to remove
    * 
    * @generated
    */

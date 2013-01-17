@@ -46,6 +46,9 @@ public class CompositeConnection extends Connection {
   /**
    * Adds to the <em>children</em> feature.
    * 
+   * @param childrenValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToChildren(CurvedConnection childrenValue) {
@@ -56,6 +59,9 @@ public class CompositeConnection extends Connection {
 
   /**
    * Removes from the <em>children</em> feature.
+   * 
+   * @param childrenValue
+   *          the value to remove
    * 
    * @generated
    */

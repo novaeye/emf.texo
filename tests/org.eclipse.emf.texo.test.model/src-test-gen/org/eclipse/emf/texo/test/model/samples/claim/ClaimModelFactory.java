@@ -39,8 +39,10 @@ public class ClaimModelFactory implements ModelFactory {
       return createClaimLine();
     case ClaimModelPackage.CLAIMLINECOMPOSITEKEY_CLASSIFIER_ID:
       return createClaimLineCompositeKey();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -79,7 +81,7 @@ public class ClaimModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -156,8 +158,9 @@ public class ClaimModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -171,12 +174,16 @@ public class ClaimModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Claim</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -214,8 +221,9 @@ public class ClaimModelFactory implements ModelFactory {
         return getTarget().getClaimStatus();
       case ClaimModelPackage.CLAIM_CLAIMLINE_FEATURE_ID:
         return getTarget().getClaimLine();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -241,8 +249,9 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIM_CLAIMLINE_FEATURE_ID:
         getTarget().setClaimLine((List<ClaimLine>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -256,8 +265,9 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIM_CLAIMLINE_FEATURE_ID:
         getTarget().getClaimLine().add((ClaimLine) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -271,14 +281,18 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIM_CLAIMLINE_FEATURE_ID:
         getTarget().getClaimLine().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ClaimCompositeKey</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -311,8 +325,9 @@ public class ClaimModelFactory implements ModelFactory {
         return getTarget().getClaimNumber();
       case ClaimModelPackage.CLAIMCOMPOSITEKEY_CLAIMEXTENSIONNUMBER_FEATURE_ID:
         return getTarget().getClaimExtensionNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -328,8 +343,9 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIMCOMPOSITEKEY_CLAIMEXTENSIONNUMBER_FEATURE_ID:
         getTarget().setClaimExtensionNumber((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -340,8 +356,9 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -352,13 +369,17 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ClaimLine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -397,8 +418,9 @@ public class ClaimModelFactory implements ModelFactory {
         return getTarget().getServiceCode();
       case ClaimModelPackage.CLAIMLINE_CLAIMLINESTATUS_FEATURE_ID:
         return getTarget().getClaimLineStatus();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -423,8 +445,9 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIMLINE_CLAIMLINESTATUS_FEATURE_ID:
         getTarget().setClaimLineStatus((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -435,8 +458,9 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -447,14 +471,18 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ClaimLineCompositeKey</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -487,8 +515,9 @@ public class ClaimModelFactory implements ModelFactory {
         return getTarget().getClaim();
       case ClaimModelPackage.CLAIMLINECOMPOSITEKEY_CLAIMLINENUMBER_FEATURE_ID:
         return getTarget().getClaimLineNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -504,8 +533,9 @@ public class ClaimModelFactory implements ModelFactory {
       case ClaimModelPackage.CLAIMLINECOMPOSITEKEY_CLAIMLINENUMBER_FEATURE_ID:
         getTarget().setClaimLineNumber((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -516,8 +546,9 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -528,9 +559,9 @@ public class ClaimModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

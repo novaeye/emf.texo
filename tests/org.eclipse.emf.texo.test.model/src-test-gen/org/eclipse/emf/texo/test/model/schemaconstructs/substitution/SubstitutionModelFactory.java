@@ -46,8 +46,10 @@ public class SubstitutionModelFactory implements ModelFactory {
       return createNumberType();
     case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_CLASSIFIER_ID:
       return createOddComplexNumberType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -92,7 +94,7 @@ public class SubstitutionModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -231,8 +233,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       return createEvenTypeObjectFromString(value);
     case SubstitutionModelPackage.ODDTYPEOBJECT_CLASSIFIER_ID:
       return createOddTypeObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -256,8 +259,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       return convertEvenTypeObjectToString((EvenType) value);
     case SubstitutionModelPackage.ODDTYPEOBJECT_CLASSIFIER_ID:
       return convertOddTypeObjectToString((OddType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -291,33 +295,33 @@ public class SubstitutionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: EvenTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: SimpleNumber to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
-  public String convertEvenTypeObjectToString(EvenType value) {
+  public String convertSimpleNumberToString(BigInteger value) {
     if (value == null) {
       return null;
     }
-    return convertEvenTypeToString(value);
+    return value.toString();
   }
 
   /**
-   * Creates an instance of the EDataType: EvenTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the EDataType: SimpleNumber from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
-  public EvenType createEvenTypeObjectFromString(String value) {
+  public BigInteger createSimpleNumberFromString(String value) {
     if (value == null) {
       return null;
     }
-    return createEvenTypeFromString(value);
+    return new BigInteger(value);
   }
 
   /**
@@ -348,6 +352,36 @@ public class SubstitutionModelFactory implements ModelFactory {
       return null;
     }
     return OddType.get(value);
+  }
+
+  /**
+   * Converts the EDataType: EvenTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertEvenTypeObjectToString(EvenType value) {
+    if (value == null) {
+      return null;
+    }
+    return convertEvenTypeToString(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: EvenTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public EvenType createEvenTypeObjectFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return createEvenTypeFromString(value);
   }
 
   /**
@@ -383,6 +417,9 @@ public class SubstitutionModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>ComplexNumber</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ComplexNumberModelObject<E extends ComplexNumber> extends
@@ -414,8 +451,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         return getTarget().getValue();
       case SubstitutionModelPackage.COMPLEXNUMBER_UNIT_FEATURE_ID:
         return getTarget().getUnit();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -431,8 +469,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.COMPLEXNUMBER_UNIT_FEATURE_ID:
         getTarget().setUnit((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -443,8 +482,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -455,13 +495,17 @@ public class SubstitutionModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -512,8 +556,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         return getTarget().getOdd();
       case SubstitutionModelPackage.DOCUMENTROOT_ODDCOMPLEXNUMBER_FEATURE_ID:
         return getTarget().getOddComplexNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -551,8 +596,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.DOCUMENTROOT_ODDCOMPLEXNUMBER_FEATURE_ID:
         getTarget().setOddComplexNumber((OddComplexNumberType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -567,8 +613,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -583,14 +630,18 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>EvenComplexNumberType</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -619,8 +670,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -630,8 +682,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -641,8 +694,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -652,13 +706,17 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>MultiNumberType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -693,8 +751,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         return getTarget().getMyComplexAbstractGroup();
       case SubstitutionModelPackage.MULTINUMBERTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         return getTarget().getMyComplexAbstract();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -711,8 +770,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.MULTINUMBERTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
         getTarget().setMyComplexAbstractGroup((List<MultiNumberTypeMyComplexAbstractGroupFeatureGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -727,8 +787,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().add((MultiNumberTypeMyComplexAbstractGroupFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -743,13 +804,17 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>NumberType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -788,8 +853,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         return getTarget().getMyComplexAbstractGroup();
       case SubstitutionModelPackage.NUMBERTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         return getTarget().getMyComplexAbstract();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -809,8 +875,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.NUMBERTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
         getTarget().setMyComplexAbstractGroup((List<NumberTypeMyComplexAbstractGroupFeatureGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -829,8 +896,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().add((NumberTypeMyComplexAbstractGroupFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -849,14 +917,18 @@ public class SubstitutionModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>OddComplexNumberType</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -885,8 +957,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -896,8 +969,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -907,8 +981,9 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -918,14 +993,17 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -958,8 +1036,9 @@ public class SubstitutionModelFactory implements ModelFactory {
         return SubstitutionModelPackage.INSTANCE.getDocumentRoot_Odd();
       case ODDCOMPLEXNUMBER:
         return SubstitutionModelPackage.INSTANCE.getDocumentRoot_OddComplexNumber();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1003,8 +1082,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.DOCUMENTROOT_ODDCOMPLEXNUMBER_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.ODDCOMPLEXNUMBER);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1025,6 +1105,8 @@ public class SubstitutionModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>MultiNumberType.myComplexAbstractGroup</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class MultiNumberTypeMyComplexAbstractGroupFeatureGroupModelFeatureMapEntry<E extends MultiNumberTypeMyComplexAbstractGroupFeatureGroup>
@@ -1037,8 +1119,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case MYCOMPLEXABSTRACT:
         return SubstitutionModelPackage.INSTANCE.getMultiNumberType_MyComplexAbstract();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1051,8 +1134,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.MULTINUMBERTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         getTarget().setFeature(MultiNumberTypeMyComplexAbstractGroupFeatureGroup.Feature.MYCOMPLEXABSTRACT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1073,6 +1157,8 @@ public class SubstitutionModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>NumberType.mySimpleAbstractGroup</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class NumberTypeMySimpleAbstractGroupFeatureGroupModelFeatureMapEntry<E extends NumberTypeMySimpleAbstractGroupFeatureGroup>
@@ -1085,8 +1171,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case MYSIMPLEABSTRACT:
         return SubstitutionModelPackage.INSTANCE.getNumberType_MySimpleAbstract();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1099,8 +1186,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.NUMBERTYPE_MYSIMPLEABSTRACT_FEATURE_ID:
         getTarget().setFeature(NumberTypeMySimpleAbstractGroupFeatureGroup.Feature.MYSIMPLEABSTRACT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1121,6 +1209,8 @@ public class SubstitutionModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>NumberType.myComplexAbstractGroup</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class NumberTypeMyComplexAbstractGroupFeatureGroupModelFeatureMapEntry<E extends NumberTypeMyComplexAbstractGroupFeatureGroup>
@@ -1133,8 +1223,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case MYCOMPLEXABSTRACT:
         return SubstitutionModelPackage.INSTANCE.getNumberType_MyComplexAbstract();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1147,8 +1238,9 @@ public class SubstitutionModelFactory implements ModelFactory {
       case SubstitutionModelPackage.NUMBERTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         getTarget().setFeature(NumberTypeMyComplexAbstractGroupFeatureGroup.Feature.MYCOMPLEXABSTRACT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1165,35 +1257,4 @@ public class SubstitutionModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
-  /**
-   * Converts the EDataType: SimpleNumber to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSimpleNumberToString(BigInteger value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: SimpleNumber from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public BigInteger createSimpleNumberFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new BigInteger(value);
-  }
-
 }

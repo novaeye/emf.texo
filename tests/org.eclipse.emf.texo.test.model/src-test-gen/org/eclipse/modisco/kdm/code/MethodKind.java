@@ -145,6 +145,9 @@ public enum MethodKind {
    * Returns the '<em><b>MethodKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the MethodKind, the literal enum class
    * @generated
    */
   public static MethodKind get(String literal) {
@@ -161,6 +164,9 @@ public enum MethodKind {
    * Returns the '<em><b>MethodKind</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the MethodKind, the literal enum class
    * @generated
    */
   public static MethodKind getByName(String name) {
@@ -177,6 +183,9 @@ public enum MethodKind {
    * Returns the '<em><b>MethodKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the MethodKind, the literal enum
    * @generated
    */
   public static MethodKind get(int value) {
@@ -293,6 +302,7 @@ public enum MethodKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -302,6 +312,7 @@ public enum MethodKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -311,6 +322,7 @@ public enum MethodKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

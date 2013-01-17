@@ -78,6 +78,9 @@ public class Writer extends Person {
   /**
    * Adds to the <em>books</em> feature.
    * 
+   * @param booksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -88,6 +91,9 @@ public class Writer extends Person {
 
   /**
    * Removes from the <em>books</em> feature.
+   * 
+   * @param booksValue
+   *          the value to remove
    * 
    * @generated
    */

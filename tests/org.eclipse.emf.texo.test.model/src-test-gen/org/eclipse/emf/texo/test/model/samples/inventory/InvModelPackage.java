@@ -126,6 +126,8 @@ public class InvModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static InvModelPackage initialize() {
@@ -316,7 +318,8 @@ public class InvModelPackage extends ModelPackage {
       return PType.class;
     case PDECLARATION_CLASSIFIER_ID:
       return PDeclaration.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

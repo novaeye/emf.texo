@@ -55,13 +55,6 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOL_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int BYTE_CLASSIFIER_ID = 4;
 
   /**
@@ -69,35 +62,7 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BYTEARRAY_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int DATE_CLASSIFIER_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int DOUBLE_CLASSIFIER_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int DOUBLEARRAY_CLASSIFIER_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int EXTRALIMITEDSTRING_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -118,27 +83,6 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INTARRAY_CLASSIFIER_ID = 12;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LIMITEDDECIMAL_CLASSIFIER_ID = 13;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LIMITEDSTRING_CLASSIFIER_ID = 14;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int LONG_CLASSIFIER_ID = 15;
 
   /**
@@ -153,7 +97,28 @@ public class SimpletypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIMPLEENUMOBJECT_CLASSIFIER_ID = 17;
+  public static final int DATE_CLASSIFIER_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LIMITEDSTRING_CLASSIFIER_ID = 14;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int INTARRAY_CLASSIFIER_ID = 12;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int DOUBLEARRAY_CLASSIFIER_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -161,6 +126,41 @@ public class SimpletypesModelPackage extends ModelPackage {
    * @generated
    */
   public static final int STRINGARRAY_CLASSIFIER_ID = 18;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int BYTEARRAY_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LIMITEDDECIMAL_CLASSIFIER_ID = 13;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int EXTRALIMITEDSTRING_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIMPLEENUMOBJECT_CLASSIFIER_ID = 17;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int BOOL_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -465,6 +465,8 @@ public class SimpletypesModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -1003,16 +1005,6 @@ public class SimpletypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>Bool</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>Bool</b></em>'
-   * @generated
-   */
-  public EDataType getBoolEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(BOOL_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EDataType} '<em><b>Byte</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>Byte</b></em>'
@@ -1023,26 +1015,6 @@ public class SimpletypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>ByteArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>ByteArray</b></em>'
-   * @generated
-   */
-  public EDataType getByteArrayEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(BYTEARRAY_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
-   * @generated
-   */
-  public EDataType getDateEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EDataType} '<em><b>Double</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>Double</b></em>'
@@ -1050,26 +1022,6 @@ public class SimpletypesModelPackage extends ModelPackage {
    */
   public EDataType getDoubleEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(DOUBLE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>DoubleArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>DoubleArray</b></em>'
-   * @generated
-   */
-  public EDataType getDoubleArrayEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(DOUBLEARRAY_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>ExtraLimitedString</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>ExtraLimitedString</b></em>'
-   * @generated
-   */
-  public EDataType getExtraLimitedStringEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(EXTRALIMITEDSTRING_CLASSIFIER_ID);
   }
 
   /**
@@ -1093,36 +1045,6 @@ public class SimpletypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>IntArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>IntArray</b></em>'
-   * @generated
-   */
-  public EDataType getIntArrayEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(INTARRAY_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>LimitedDecimal</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>LimitedDecimal</b></em>'
-   * @generated
-   */
-  public EDataType getLimitedDecimalEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(LIMITEDDECIMAL_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>LimitedString</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>LimitedString</b></em>'
-   * @generated
-   */
-  public EDataType getLimitedStringEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(LIMITEDSTRING_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EDataType} '<em><b>Long</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>Long</b></em>'
@@ -1143,13 +1065,43 @@ public class SimpletypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>SimpleEnumObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SimpleEnumObject</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
    * @generated
    */
-  public EDataType getSimpleEnumObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SIMPLEENUMOBJECT_CLASSIFIER_ID);
+  public EDataType getDateEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>LimitedString</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>LimitedString</b></em>'
+   * @generated
+   */
+  public EDataType getLimitedStringEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(LIMITEDSTRING_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>IntArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>IntArray</b></em>'
+   * @generated
+   */
+  public EDataType getIntArrayEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(INTARRAY_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>DoubleArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>DoubleArray</b></em>'
+   * @generated
+   */
+  public EDataType getDoubleArrayEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(DOUBLEARRAY_CLASSIFIER_ID);
   }
 
   /**
@@ -1160,6 +1112,56 @@ public class SimpletypesModelPackage extends ModelPackage {
    */
   public EDataType getStringArrayEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(STRINGARRAY_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>ByteArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>ByteArray</b></em>'
+   * @generated
+   */
+  public EDataType getByteArrayEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(BYTEARRAY_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>LimitedDecimal</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>LimitedDecimal</b></em>'
+   * @generated
+   */
+  public EDataType getLimitedDecimalEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(LIMITEDDECIMAL_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>ExtraLimitedString</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>ExtraLimitedString</b></em>'
+   * @generated
+   */
+  public EDataType getExtraLimitedStringEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(EXTRALIMITEDSTRING_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>SimpleEnumObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>SimpleEnumObject</b></em>'
+   * @generated
+   */
+  public EDataType getSimpleEnumObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SIMPLEENUMOBJECT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>Bool</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>Bool</b></em>'
+   * @generated
+   */
+  public EDataType getBoolEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(BOOL_CLASSIFIER_ID);
   }
 
   /**
@@ -1211,7 +1213,8 @@ public class SimpletypesModelPackage extends ModelPackage {
       return SimpleEnum.class;
     case BOOL_CLASSIFIER_ID:
       return Boolean.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

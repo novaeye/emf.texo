@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum RentalCarSize {
+
   /**
    * The enum: SMALL <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -79,6 +80,9 @@ public enum RentalCarSize {
    * Returns the '<em><b>RentalCarSize</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the RentalCarSize, the literal enum class
    * @generated
    */
   public static RentalCarSize get(String literal) {
@@ -95,6 +99,9 @@ public enum RentalCarSize {
    * Returns the '<em><b>RentalCarSize</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the RentalCarSize, the literal enum class
    * @generated
    */
   public static RentalCarSize getByName(String name) {
@@ -111,6 +118,9 @@ public enum RentalCarSize {
    * Returns the '<em><b>RentalCarSize</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the RentalCarSize, the literal enum
    * @generated
    */
   public static RentalCarSize get(int value) {
@@ -187,6 +197,7 @@ public enum RentalCarSize {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -196,6 +207,7 @@ public enum RentalCarSize {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -205,6 +217,7 @@ public enum RentalCarSize {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

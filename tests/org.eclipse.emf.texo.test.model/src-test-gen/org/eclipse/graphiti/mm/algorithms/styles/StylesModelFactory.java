@@ -4,6 +4,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -51,8 +52,10 @@ public class StylesModelFactory implements ModelFactory {
       return createGradientColoredArea();
     case StylesModelPackage.GRADIENTCOLOREDAREAS_CLASSIFIER_ID:
       return createGradientColoredAreas();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -112,7 +115,7 @@ public class StylesModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -255,8 +258,9 @@ public class StylesModelFactory implements ModelFactory {
       return createLineStyleFromString(value);
     case StylesModelPackage.LOCATIONTYPE_CLASSIFIER_ID:
       return createLocationTypeFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -276,8 +280,9 @@ public class StylesModelFactory implements ModelFactory {
       return convertLineStyleToString((LineStyle) value);
     case StylesModelPackage.LOCATIONTYPE_CLASSIFIER_ID:
       return convertLocationTypeToString((LocationType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -373,6 +378,9 @@ public class StylesModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Style</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class StyleModelObject<E extends Style> extends MmModelFactory.StyleContainerModelObject<E> {
@@ -435,8 +443,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getRenderingStyle();
       case StylesModelPackage.STYLE_TRANSPARENCY_FEATURE_ID:
         return getTarget().getTransparency();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -500,8 +509,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.STYLE_TRANSPARENCY_FEATURE_ID:
         getTarget().setTransparency((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -512,8 +522,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -524,13 +535,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AbstractStyle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -575,8 +590,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getRenderingStyle();
       case StylesModelPackage.ABSTRACTSTYLE_TRANSPARENCY_FEATURE_ID:
         return getTarget().getTransparency();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -610,8 +626,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.ABSTRACTSTYLE_TRANSPARENCY_FEATURE_ID:
         getTarget().setTransparency((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -622,8 +639,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -634,13 +652,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Color</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -674,8 +696,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getGreen();
       case StylesModelPackage.COLOR_BLUE_FEATURE_ID:
         return getTarget().getBlue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -694,8 +717,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.COLOR_BLUE_FEATURE_ID:
         getTarget().setBlue((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -706,8 +730,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -718,13 +743,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Font</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -760,8 +789,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().isItalic();
       case StylesModelPackage.FONT_BOLD_FEATURE_ID:
         return getTarget().isBold();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -783,8 +813,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.FONT_BOLD_FEATURE_ID:
         getTarget().setBold((Boolean) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -795,8 +826,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -807,13 +839,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Point</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -849,8 +885,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getBefore();
       case StylesModelPackage.POINT_AFTER_FEATURE_ID:
         return getTarget().getAfter();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -872,8 +909,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.POINT_AFTER_FEATURE_ID:
         getTarget().setAfter((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -884,8 +922,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -896,13 +935,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PrecisionPoint</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -935,8 +978,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getX();
       case StylesModelPackage.PRECISIONPOINT_Y_FEATURE_ID:
         return getTarget().getY();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -952,8 +996,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.PRECISIONPOINT_Y_FEATURE_ID:
         getTarget().setY((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -964,8 +1009,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -976,13 +1022,17 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RenderingStyle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1013,8 +1063,9 @@ public class StylesModelFactory implements ModelFactory {
       switch (featureID) {
       case StylesModelPackage.RENDERINGSTYLE_ADAPTEDGRADIENTCOLOREDAREAS_FEATURE_ID:
         return getTarget().getAdaptedGradientColoredAreas();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1027,8 +1078,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.RENDERINGSTYLE_ADAPTEDGRADIENTCOLOREDAREAS_FEATURE_ID:
         getTarget().setAdaptedGradientColoredAreas((AdaptedGradientColoredAreas) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1039,8 +1091,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1051,14 +1104,18 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AdaptedGradientColoredAreas</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1093,8 +1150,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getAdaptedGradientColoredAreas();
       case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_GRADIENTTYPE_FEATURE_ID:
         return getTarget().getGradientType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1114,8 +1172,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_GRADIENTTYPE_FEATURE_ID:
         getTarget().setGradientType((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1130,8 +1189,9 @@ public class StylesModelFactory implements ModelFactory {
         getTarget().getAdaptedGradientColoredAreas().add((GradientColoredAreas) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1146,14 +1206,18 @@ public class StylesModelFactory implements ModelFactory {
         getTarget().getAdaptedGradientColoredAreas().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GradientColoredLocation</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1188,8 +1252,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getLocationValue();
       case StylesModelPackage.GRADIENTCOLOREDLOCATION_COLOR_FEATURE_ID:
         return getTarget().getColor();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1208,8 +1273,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.GRADIENTCOLOREDLOCATION_COLOR_FEATURE_ID:
         getTarget().setColor((Color) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1220,8 +1286,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1232,14 +1299,18 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GradientColoredArea</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1272,8 +1343,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getStart();
       case StylesModelPackage.GRADIENTCOLOREDAREA_END_FEATURE_ID:
         return getTarget().getEnd();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1289,8 +1361,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.GRADIENTCOLOREDAREA_END_FEATURE_ID:
         getTarget().setEnd((GradientColoredLocation) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1301,8 +1374,9 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1313,14 +1387,18 @@ public class StylesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GradientColoredAreas</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1353,8 +1431,9 @@ public class StylesModelFactory implements ModelFactory {
         return getTarget().getGradientColor();
       case StylesModelPackage.GRADIENTCOLOREDAREAS_STYLEADAPTION_FEATURE_ID:
         return getTarget().getStyleAdaption();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1371,8 +1450,9 @@ public class StylesModelFactory implements ModelFactory {
       case StylesModelPackage.GRADIENTCOLOREDAREAS_STYLEADAPTION_FEATURE_ID:
         getTarget().setStyleAdaption((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1387,8 +1467,9 @@ public class StylesModelFactory implements ModelFactory {
         getTarget().getGradientColor().add((GradientColoredArea) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1403,9 +1484,9 @@ public class StylesModelFactory implements ModelFactory {
         getTarget().getGradientColor().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

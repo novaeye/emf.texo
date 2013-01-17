@@ -104,8 +104,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Индекс <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getZipCode() zipCode}' feature.
+   * @param newZipCode
+   *          the new value of the '{@link Address#getZipCode() zipCode}' feature.
    * @generated
    */
   public void setZipCode(String newZipCode) {
@@ -129,8 +129,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Страна <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getCountry() country}' feature.
+   * @param newCountry
+   *          the new value of the '{@link Address#getCountry() country}' feature.
    * @generated
    */
   public void setCountry(String newCountry) {
@@ -154,8 +154,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Область <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getRegion() region}' feature.
+   * @param newRegion
+   *          the new value of the '{@link Address#getRegion() region}' feature.
    * @generated
    */
   public void setRegion(String newRegion) {
@@ -179,8 +179,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Город <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getCity() city}' feature.
+   * @param newCity
+   *          the new value of the '{@link Address#getCity() city}' feature.
    * @generated
    */
   public void setCity(String newCity) {
@@ -204,8 +204,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Улица <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getStreet() street}' feature.
+   * @param newStreet
+   *          the new value of the '{@link Address#getStreet() street}' feature.
    * @generated
    */
   public void setStreet(String newStreet) {
@@ -229,8 +229,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дом <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getBuilding() building}' feature.
+   * @param newBuilding
+   *          the new value of the '{@link Address#getBuilding() building}' feature.
    * @generated
    */
   public void setBuilding(String newBuilding) {
@@ -254,8 +254,8 @@ public class Address extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Квартира <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Address#getFlat() flat}' feature.
+   * @param newFlat
+   *          the new value of the '{@link Address#getFlat() flat}' feature.
    * @generated
    */
   public void setFlat(String newFlat) {

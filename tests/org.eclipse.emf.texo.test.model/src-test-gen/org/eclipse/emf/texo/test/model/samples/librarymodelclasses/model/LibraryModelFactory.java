@@ -19,7 +19,7 @@ import org.eclipse.emf.texo.test.model.samples.library.Writer;
  * The <b>{@link ModelFactory}</b> for the types of this model: library. It contains code to create instances
  * {@link ModelObject} wrappers and instances for EClasses and convert objects back and forth from their String (XML)
  * representation. <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> This is documentation on
- * package level * <!-- end-model-doc -->
+ * package level <!-- end-model-doc -->
  * 
  * @generated
  */
@@ -41,8 +41,10 @@ public class LibraryModelFactory implements ModelFactory {
       return createLibrary();
     case LibraryModelPackage.WRITER_CLASSIFIER_ID:
       return createWriter();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -78,7 +80,7 @@ public class LibraryModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -117,6 +119,16 @@ public class LibraryModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass Library
+   * @generated
+   */
+  public Library createLibrary() {
+    return new Library();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Writer
    * @generated
    */
@@ -137,8 +149,9 @@ public class LibraryModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case LibraryModelPackage.BOOKCATEGORY_CLASSIFIER_ID:
       return createBookCategoryFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -154,8 +167,9 @@ public class LibraryModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case LibraryModelPackage.BOOKCATEGORY_CLASSIFIER_ID:
       return convertBookCategoryToString((BookCategory) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -171,16 +185,6 @@ public class LibraryModelFactory implements ModelFactory {
       return null;
     }
     return value.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Library
-   * @generated
-   */
-  public Library createLibrary() {
-    return new Library();
   }
 
   /**
@@ -200,6 +204,9 @@ public class LibraryModelFactory implements ModelFactory {
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -235,8 +242,9 @@ public class LibraryModelFactory implements ModelFactory {
         return getTarget().getCategory();
       case LibraryModelPackage.BOOK_AUTHOR_FEATURE_ID:
         return getTarget().getAuthor();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -258,8 +266,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.BOOK_AUTHOR_FEATURE_ID:
         getTarget().setAuthor((Writer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -270,8 +279,9 @@ public class LibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -282,13 +292,17 @@ public class LibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -322,8 +336,9 @@ public class LibraryModelFactory implements ModelFactory {
         return getTarget().getWriters();
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
         return getTarget().getBooks();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -343,8 +358,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
         getTarget().setBooks((List<Book>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -362,8 +378,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
         getTarget().getBooks().add((Book) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -381,13 +398,17 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.LIBRARY_BOOKS_FEATURE_ID:
         getTarget().getBooks().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -419,8 +440,9 @@ public class LibraryModelFactory implements ModelFactory {
         return getTarget().getName();
       case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         return getTarget().getBooks();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -437,8 +459,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().setBooks((List<Book>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -452,8 +475,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().getBooks().add((Book) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -467,9 +491,9 @@ public class LibraryModelFactory implements ModelFactory {
       case LibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().getBooks().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

@@ -55,6 +55,20 @@ public class ForumModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int TOPICCATEGORY_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TOPICCATEGORYOBJECT_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int FORUM_CLASSIFIER_ID = 0;
 
   /**
@@ -111,34 +125,6 @@ public class ForumModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int POST_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int POST_COMMENT_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int POST_AUTHOR_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int POST_TOPIC_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int TOPIC_CLASSIFIER_ID = 3;
 
   /**
@@ -174,14 +160,28 @@ public class ForumModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TOPICCATEGORY_CLASSIFIER_ID = 4;
+  public static final int POST_CLASSIFIER_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int TOPICCATEGORYOBJECT_CLASSIFIER_ID = 5;
+  public static final int POST_COMMENT_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int POST_AUTHOR_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int POST_TOPIC_FEATURE_ID = 4;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -192,6 +192,8 @@ public class ForumModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -355,47 +357,6 @@ public class ForumModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Post</b></em>'
-   * @generated
-   */
-  public EClass getPostEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(POST_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Post.comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.comment</b></em>'.
-   * @generated
-   */
-  public EAttribute getPost_Comment() {
-    return (EAttribute) getPostEClass().getEAllStructuralFeatures().get(POST_COMMENT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Post.author</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.author</b></em>'.
-   * @generated
-   */
-  public EReference getPost_Author() {
-    return (EReference) getPostEClass().getEAllStructuralFeatures().get(POST_AUTHOR_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Post.topic</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.topic</b></em>'.
-   * @generated
-   */
-  public EReference getPost_Topic() {
-    return (EReference) getPostEClass().getEAllStructuralFeatures().get(POST_TOPIC_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Topic</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Topic</b></em>'
@@ -448,6 +409,47 @@ public class ForumModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Post</b></em>'
+   * @generated
+   */
+  public EClass getPostEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(POST_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Post.comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.comment</b></em>'.
+   * @generated
+   */
+  public EAttribute getPost_Comment() {
+    return (EAttribute) getPostEClass().getEAllStructuralFeatures().get(POST_COMMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Post.author</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.author</b></em>'.
+   * @generated
+   */
+  public EReference getPost_Author() {
+    return (EReference) getPostEClass().getEAllStructuralFeatures().get(POST_AUTHOR_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Post.topic</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Post.topic</b></em>'.
+   * @generated
+   */
+  public EReference getPost_Topic() {
+    return (EReference) getPostEClass().getEAllStructuralFeatures().get(POST_TOPIC_FEATURE_ID);
+  }
+
+  /**
    * Returns the EEnum '<em><b>TopicCategory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the EEnum representing '<em><b>TopicCategory</b></em>'
@@ -490,7 +492,8 @@ public class ForumModelPackage extends ModelPackage {
       return TopicCategory.class;
     case TOPICCATEGORYOBJECT_CLASSIFIER_ID:
       return TopicCategory.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

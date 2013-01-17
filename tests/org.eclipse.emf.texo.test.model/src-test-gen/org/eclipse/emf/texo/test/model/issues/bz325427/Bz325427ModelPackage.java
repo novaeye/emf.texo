@@ -98,6 +98,8 @@ public class Bz325427ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Bz325427ModelPackage initialize() {
@@ -251,7 +253,8 @@ public class Bz325427ModelPackage extends ModelPackage {
       return EnumB.class;
     case ENUMA_CLASSIFIER_ID:
       return EnumA.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum EvenType {
+
   /**
    * The enum: _2 <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -95,6 +96,9 @@ public enum EvenType {
    * Returns the '<em><b>EvenType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the EvenType, the literal enum class
    * @generated
    */
   public static EvenType get(String literal) {
@@ -111,6 +115,9 @@ public enum EvenType {
    * Returns the '<em><b>EvenType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the EvenType, the literal enum class
    * @generated
    */
   public static EvenType getByName(String name) {
@@ -127,6 +134,9 @@ public enum EvenType {
    * Returns the '<em><b>EvenType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the EvenType, the literal enum
    * @generated
    */
   public static EvenType get(int value) {
@@ -213,6 +223,7 @@ public enum EvenType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -222,6 +233,7 @@ public enum EvenType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -231,6 +243,7 @@ public enum EvenType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

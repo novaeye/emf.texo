@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum SimpleEnum {
+
   /**
    * The enum: ENUM1 <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -63,6 +64,9 @@ public enum SimpleEnum {
    * Returns the '<em><b>SimpleEnum</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the SimpleEnum, the literal enum class
    * @generated
    */
   public static SimpleEnum get(String literal) {
@@ -79,6 +83,9 @@ public enum SimpleEnum {
    * Returns the '<em><b>SimpleEnum</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the SimpleEnum, the literal enum class
    * @generated
    */
   public static SimpleEnum getByName(String name) {
@@ -95,6 +102,9 @@ public enum SimpleEnum {
    * Returns the '<em><b>SimpleEnum</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the SimpleEnum, the literal enum
    * @generated
    */
   public static SimpleEnum get(int value) {
@@ -161,6 +171,7 @@ public enum SimpleEnum {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -170,6 +181,7 @@ public enum SimpleEnum {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -179,6 +191,7 @@ public enum SimpleEnum {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

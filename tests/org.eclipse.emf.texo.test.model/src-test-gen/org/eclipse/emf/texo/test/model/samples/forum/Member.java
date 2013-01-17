@@ -94,6 +94,9 @@ public class Member extends Identifiable {
   /**
    * Adds to the <em>posts</em> feature.
    * 
+   * @param postsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPosts(Post postsValue) {
@@ -104,6 +107,9 @@ public class Member extends Identifiable {
 
   /**
    * Removes from the <em>posts</em> feature.
+   * 
+   * @param postsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -152,6 +158,9 @@ public class Member extends Identifiable {
   /**
    * Adds to the <em>created</em> feature.
    * 
+   * @param createdValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCreated(Topic createdValue) {
@@ -162,6 +171,9 @@ public class Member extends Identifiable {
 
   /**
    * Removes from the <em>created</em> feature.
+   * 
+   * @param createdValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -133,6 +133,7 @@ public class AGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String b;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -142,6 +143,8 @@ public class AGroupFeatureGroup extends Identifiable {
   private CType c;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -149,6 +152,7 @@ public class AGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -170,10 +174,8 @@ public class AGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link A#getB() <em>b</em>}' feature.
    * 
-   * @param newB
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newB
    *          the new value of the '{@link A#getB() b}' feature.
    * @generated
@@ -198,10 +200,8 @@ public class AGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link A#getC() <em>c</em>}' feature.
    * 
-   * @param newC
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newC
    *          the new value of the '{@link A#getC() c}' feature.
    * @generated

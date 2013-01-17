@@ -45,6 +45,9 @@ public class RelationalSchema extends DataContainer {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(CodeItem codeElementValue) {
@@ -55,6 +58,9 @@ public class RelationalSchema extends DataContainer {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

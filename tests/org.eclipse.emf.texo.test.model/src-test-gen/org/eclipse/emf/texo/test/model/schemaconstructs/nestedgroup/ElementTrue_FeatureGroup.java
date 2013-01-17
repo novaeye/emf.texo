@@ -136,6 +136,8 @@ public class ElementTrue_FeatureGroup extends Identifiable {
   private CType c;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -143,6 +145,7 @@ public class ElementTrue_FeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -164,10 +167,8 @@ public class ElementTrue_FeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getC() <em>c</em>}' feature.
    * 
-   * @param newC
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newC
    *          the new value of the '{@link Element#getC() c}' feature.
    * @generated

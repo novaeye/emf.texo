@@ -84,6 +84,9 @@ public class Customer extends Identifiable {
   /**
    * Adds to the <em>orders</em> feature.
    * 
+   * @param ordersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToOrders(PurchaseOrder ordersValue) {
@@ -94,6 +97,9 @@ public class Customer extends Identifiable {
 
   /**
    * Removes from the <em>orders</em> feature.
+   * 
+   * @param ordersValue
+   *          the value to remove
    * 
    * @generated
    */

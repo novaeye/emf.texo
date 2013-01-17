@@ -47,6 +47,9 @@ public class Borrower extends Person {
   /**
    * Adds to the <em>borrowed</em> feature.
    * 
+   * @param borrowedValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBorrowed(Lendable borrowedValue) {
@@ -57,6 +60,9 @@ public class Borrower extends Person {
 
   /**
    * Removes from the <em>borrowed</em> feature.
+   * 
+   * @param borrowedValue
+   *          the value to remove
    * 
    * @generated
    */

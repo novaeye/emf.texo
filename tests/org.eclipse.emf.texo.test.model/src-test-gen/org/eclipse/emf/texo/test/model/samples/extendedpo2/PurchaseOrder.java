@@ -116,6 +116,9 @@ public class PurchaseOrder extends Identifiable {
   /**
    * Adds to the <em>items</em> feature.
    * 
+   * @param itemsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToItems(Item itemsValue) {
@@ -126,6 +129,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Removes from the <em>items</em> feature.
+   * 
+   * @param itemsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -290,10 +296,13 @@ public class PurchaseOrder extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return the value of '<em><b>totalAmount</b></em>' feature
-   * @generatedNOT
+   * @generated
    */
   public int getTotalAmount() {
-    return 0;
+    // Volatile feature
+    // TODO: implement this method to return the 'totalAmount'
+    // Ensure that you remove @generated or mark it @generated NOT
+    throw new UnsupportedOperationException();
   }
 
   /**

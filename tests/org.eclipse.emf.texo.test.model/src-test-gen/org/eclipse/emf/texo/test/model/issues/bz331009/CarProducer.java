@@ -50,8 +50,8 @@ public class CarProducer extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Название марки <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarProducer#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link CarProducer#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

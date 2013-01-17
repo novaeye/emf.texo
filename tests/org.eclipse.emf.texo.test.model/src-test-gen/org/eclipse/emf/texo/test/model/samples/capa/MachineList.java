@@ -48,6 +48,9 @@ public class MachineList extends Identifiable {
   /**
    * Adds to the <em>machines</em> feature.
    * 
+   * @param machinesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToMachines(Machine machinesValue) {
@@ -58,6 +61,9 @@ public class MachineList extends Identifiable {
 
   /**
    * Removes from the <em>machines</em> feature.
+   * 
+   * @param machinesValue
+   *          the value to remove
    * 
    * @generated
    */

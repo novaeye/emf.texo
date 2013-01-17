@@ -125,6 +125,9 @@ public class CatalogType extends Identifiable {
   /**
    * Adds to the <em>subCatalog</em> feature.
    * 
+   * @param subCatalogValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSubCatalog(CatalogType subCatalogValue) {
@@ -135,6 +138,9 @@ public class CatalogType extends Identifiable {
 
   /**
    * Removes from the <em>subCatalog</em> feature.
+   * 
+   * @param subCatalogValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -169,9 +175,7 @@ public class CatalogType extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>product</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToProduct(org.eclipse.emf.texo.test.model.samples.catalog.ProductType value)} and
-   * {@link #removeFromProduct(ProductType value)} methods to modify this feature.
+   * Returns the value of '<em><b>product</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> My product documentation <!-- end-model-doc
    * -->
@@ -186,6 +190,9 @@ public class CatalogType extends Identifiable {
   /**
    * Adds to the <em>product</em> feature.
    * 
+   * @param productValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToProduct(ProductType productValue) {
@@ -196,6 +203,9 @@ public class CatalogType extends Identifiable {
 
   /**
    * Removes from the <em>product</em> feature.
+   * 
+   * @param productValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -222,8 +232,8 @@ public class CatalogType extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> My product documentation <!-- end-model-doc
    * -->
    * 
-   * @param the
-   *          new value of the '{@link CatalogType#getProduct() product}' feature.
+   * @param newProduct
+   *          the new value of the '{@link CatalogType#getProduct() product}' feature.
    * @generated
    */
   public void setProduct(List<ProductType> newProduct) {

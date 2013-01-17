@@ -119,6 +119,8 @@ public class QnameModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static QnameModelPackage initialize() {
@@ -301,7 +303,8 @@ public class QnameModelPackage extends ModelPackage {
       return DocumentRoot.class;
     case MYTEST_CLASSIFIER_ID:
       return Mytest.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

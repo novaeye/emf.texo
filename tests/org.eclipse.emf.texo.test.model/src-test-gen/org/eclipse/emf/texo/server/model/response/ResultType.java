@@ -69,6 +69,9 @@ public class ResultType extends Identifiable {
   /**
    * Adds to the <em>updated</em> feature.
    * 
+   * @param updatedValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToUpdated(Object updatedValue) {
@@ -79,6 +82,9 @@ public class ResultType extends Identifiable {
 
   /**
    * Removes from the <em>updated</em> feature.
+   * 
+   * @param updatedValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -127,6 +133,9 @@ public class ResultType extends Identifiable {
   /**
    * Adds to the <em>inserted</em> feature.
    * 
+   * @param insertedValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInserted(Object insertedValue) {
@@ -137,6 +146,9 @@ public class ResultType extends Identifiable {
 
   /**
    * Removes from the <em>inserted</em> feature.
+   * 
+   * @param insertedValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -185,6 +197,9 @@ public class ResultType extends Identifiable {
   /**
    * Adds to the <em>deleted</em> feature.
    * 
+   * @param deletedValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDeleted(Object deletedValue) {
@@ -195,6 +210,9 @@ public class ResultType extends Identifiable {
 
   /**
    * Removes from the <em>deleted</em> feature.
+   * 
+   * @param deletedValue
+   *          the value to remove
    * 
    * @generated
    */

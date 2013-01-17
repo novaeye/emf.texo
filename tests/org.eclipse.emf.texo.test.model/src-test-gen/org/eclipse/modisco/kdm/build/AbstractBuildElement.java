@@ -45,6 +45,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
   /**
    * Adds to the <em>buildRelation</em> feature.
    * 
+   * @param buildRelationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBuildRelation(AbstractBuildRelationship buildRelationValue) {
@@ -55,6 +58,9 @@ public abstract class AbstractBuildElement extends KDMEntity {
 
   /**
    * Removes from the <em>buildRelation</em> feature.
+   * 
+   * @param buildRelationValue
+   *          the value to remove
    * 
    * @generated
    */

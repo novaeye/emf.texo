@@ -34,8 +34,10 @@ public class TexoExtensionsModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case TexoExtensionsModelPackage.DOCUMENTROOT_CLASSIFIER_ID:
       return createDocumentRoot();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -65,7 +67,7 @@ public class TexoExtensionsModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -120,8 +122,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -135,12 +138,16 @@ public class TexoExtensionsModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -181,8 +188,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
         return getTarget().getTitle();
       case TexoExtensionsModelPackage.DOCUMENTROOT_TYPE_FEATURE_ID:
         return getTarget().getType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -211,8 +219,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
       case TexoExtensionsModelPackage.DOCUMENTROOT_TYPE_FEATURE_ID:
         getTarget().setType((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -227,8 +236,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -243,14 +253,17 @@ public class TexoExtensionsModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -267,8 +280,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_CDATA();
       case COMMENT:
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -288,8 +302,9 @@ public class TexoExtensionsModelFactory implements ModelFactory {
 
       final EClass eClass = TexoExtensionsModelPackage.INSTANCE.getDocumentRootEClass();
       switch (eClass.getFeatureID(eStructuralFeature)) {
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -306,5 +321,4 @@ public class TexoExtensionsModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

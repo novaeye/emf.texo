@@ -70,8 +70,8 @@ public class PaymentInfo extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тариф <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentInfo#getTariff() tariff}' feature.
+   * @param newTariff
+   *          the new value of the '{@link PaymentInfo#getTariff() tariff}' feature.
    * @generated
    */
   public void setTariff(Tariff newTariff) {

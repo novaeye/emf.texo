@@ -25,6 +25,7 @@ public class BookOnTape extends AudioVisualItem {
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = true)
   private Person reader = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

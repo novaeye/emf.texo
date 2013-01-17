@@ -69,6 +69,9 @@ public class ActionType extends Identifiable {
   /**
    * Adds to the <em>update</em> feature.
    * 
+   * @param updateValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToUpdate(Object updateValue) {
@@ -79,6 +82,9 @@ public class ActionType extends Identifiable {
 
   /**
    * Removes from the <em>update</em> feature.
+   * 
+   * @param updateValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -127,6 +133,9 @@ public class ActionType extends Identifiable {
   /**
    * Adds to the <em>insert</em> feature.
    * 
+   * @param insertValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInsert(Object insertValue) {
@@ -137,6 +146,9 @@ public class ActionType extends Identifiable {
 
   /**
    * Removes from the <em>insert</em> feature.
+   * 
+   * @param insertValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -185,6 +197,9 @@ public class ActionType extends Identifiable {
   /**
    * Adds to the <em>delete</em> feature.
    * 
+   * @param deleteValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDelete(Object deleteValue) {
@@ -195,6 +210,9 @@ public class ActionType extends Identifiable {
 
   /**
    * Removes from the <em>delete</em> feature.
+   * 
+   * @param deleteValue
+   *          the value to remove
    * 
    * @generated
    */

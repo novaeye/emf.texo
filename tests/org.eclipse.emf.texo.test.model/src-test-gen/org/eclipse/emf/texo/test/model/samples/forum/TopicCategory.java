@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum TopicCategory {
+
   /**
    * The enum: ANNOUNCEMENT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Announcement <!--
    * end-model-doc -->
@@ -80,6 +81,9 @@ public enum TopicCategory {
    * Returns the '<em><b>TopicCategory</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the TopicCategory, the literal enum class
    * @generated
    */
   public static TopicCategory get(String literal) {
@@ -96,6 +100,9 @@ public enum TopicCategory {
    * Returns the '<em><b>TopicCategory</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the TopicCategory, the literal enum class
    * @generated
    */
   public static TopicCategory getByName(String name) {
@@ -112,6 +119,9 @@ public enum TopicCategory {
    * Returns the '<em><b>TopicCategory</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the TopicCategory, the literal enum
    * @generated
    */
   public static TopicCategory get(int value) {
@@ -188,6 +198,7 @@ public enum TopicCategory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -197,6 +208,7 @@ public enum TopicCategory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -206,6 +218,7 @@ public enum TopicCategory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

@@ -27,5 +27,4 @@ public class WriterDao extends GenericLibraryDao<Writer> {
   public EClass getEClass() {
     return LibraryModelPackage.INSTANCE.getWriterEClass();
   }
-
 }

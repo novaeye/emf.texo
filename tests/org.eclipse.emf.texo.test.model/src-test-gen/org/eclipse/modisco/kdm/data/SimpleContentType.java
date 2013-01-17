@@ -53,6 +53,9 @@ public class SimpleContentType extends ComplexContentType {
   /**
    * Adds to the <em>type</em> feature.
    * 
+   * @param typeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToType(ComplexContentType typeValue) {
@@ -63,6 +66,9 @@ public class SimpleContentType extends ComplexContentType {
 
   /**
    * Removes from the <em>type</em> feature.
+   * 
+   * @param typeValue
+   *          the value to remove
    * 
    * @generated
    */

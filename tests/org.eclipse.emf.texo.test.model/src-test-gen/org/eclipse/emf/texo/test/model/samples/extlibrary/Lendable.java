@@ -22,7 +22,6 @@ import org.eclipse.persistence.annotations.Converters;
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 @Access(AccessType.PROPERTY)
 public interface Lendable extends IdentifiableInterface {
-
   /**
    * Returns the value of '<em><b>copies</em></b>' feature.
    * 

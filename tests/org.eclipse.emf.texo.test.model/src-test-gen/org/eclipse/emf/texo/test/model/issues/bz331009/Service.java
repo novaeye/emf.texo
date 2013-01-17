@@ -90,8 +90,8 @@ public class Service extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Название <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Service#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Service#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -115,8 +115,8 @@ public class Service extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Активна ли <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Service#isActive() active}' feature.
+   * @param newActive
+   *          the new value of the '{@link Service#isActive() active}' feature.
    * @generated
    */
   public void setActive(boolean newActive) {
@@ -140,8 +140,8 @@ public class Service extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Плата за подключение <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Service#getInitialPayment() initialPayment}' feature.
+   * @param newInitialPayment
+   *          the new value of the '{@link Service#getInitialPayment() initialPayment}' feature.
    * @generated
    */
   public void setInitialPayment(OneTimePayment newInitialPayment) {
@@ -165,8 +165,8 @@ public class Service extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Абонентская плата <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Service#getPeriodicalPayment() periodicalPayment}' feature.
+   * @param newPeriodicalPayment
+   *          the new value of the '{@link Service#getPeriodicalPayment() periodicalPayment}' feature.
    * @generated
    */
   public void setPeriodicalPayment(PeriodicalPayment newPeriodicalPayment) {
@@ -190,8 +190,8 @@ public class Service extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Плата за объем <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Service#getVolumePayment() volumePayment}' feature.
+   * @param newVolumePayment
+   *          the new value of the '{@link Service#getVolumePayment() volumePayment}' feature.
    * @generated
    */
   public void setVolumePayment(VolumePayment newVolumePayment) {

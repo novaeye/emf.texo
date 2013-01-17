@@ -148,6 +148,9 @@ public class Connection extends AnchorContainer {
   /**
    * Adds to the <em>connectionDecorators</em> feature.
    * 
+   * @param connectionDecoratorsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToConnectionDecorators(ConnectionDecorator connectionDecoratorsValue) {
@@ -158,6 +161,9 @@ public class Connection extends AnchorContainer {
 
   /**
    * Removes from the <em>connectionDecorators</em> feature.
+   * 
+   * @param connectionDecoratorsValue
+   *          the value to remove
    * 
    * @generated
    */

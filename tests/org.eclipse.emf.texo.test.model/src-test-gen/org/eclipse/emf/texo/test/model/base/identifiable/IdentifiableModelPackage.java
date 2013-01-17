@@ -71,6 +71,13 @@ public class IdentifiableModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int NOTIDENTIFIABLE_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int IDENTIFIABLEINTERFACE_CLASSIFIER_ID = 1;
 
   /**
@@ -88,13 +95,6 @@ public class IdentifiableModelPackage extends ModelPackage {
   public static final int IDENTIFIABLEINTERFACE_DB_VERSION_FEATURE_ID = 1;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int NOTIDENTIFIABLE_CLASSIFIER_ID = 2;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -103,6 +103,8 @@ public class IdentifiableModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -209,6 +211,16 @@ public class IdentifiableModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>NotIdentifiable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>NotIdentifiable</b></em>'
+   * @generated
+   */
+  public EClass getNotIdentifiableEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(NOTIDENTIFIABLE_CLASSIFIER_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>IdentifiableInterface</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>IdentifiableInterface</b></em>'
@@ -243,16 +255,6 @@ public class IdentifiableModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>NotIdentifiable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>NotIdentifiable</b></em>'
-   * @generated
-   */
-  public EClass getNotIdentifiableEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(NOTIDENTIFIABLE_CLASSIFIER_ID);
-  }
-
-  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eClassifier
@@ -269,7 +271,8 @@ public class IdentifiableModelPackage extends ModelPackage {
       return NotIdentifiable.class;
     case IDENTIFIABLEINTERFACE_CLASSIFIER_ID:
       return IdentifiableInterface.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -165,6 +165,8 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   private String name;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -172,6 +174,7 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -191,12 +194,12 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
+   * Sets the <em>text</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newText
-   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
+   *          the new value of the '<em><b>text</b></em>' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -205,11 +208,11 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>cDATA</b></em>' feature.
+   * Returns the value of '<em><b>CDATA</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>cDATA</b></em>' feature
+   * @return the value of '<em><b>CDATA</b></em>' feature
    * @generated
    */
   public String getCDATA() {
@@ -217,12 +220,12 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
+   * Sets the <em>cDATA</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newCDATA
-   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   *          the new value of the '<em><b>CDATA</b></em>' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -243,12 +246,12 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
+   * Sets the <em>comment</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newComment
-   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   *          the new value of the '<em><b>comment</b></em>' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -271,10 +274,8 @@ public class SalutationTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SalutationType#getName() <em>name</em>}' feature.
    * 
-   * @param newName
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newName
    *          the new value of the '{@link SalutationType#getName() name}' feature.
    * @generated

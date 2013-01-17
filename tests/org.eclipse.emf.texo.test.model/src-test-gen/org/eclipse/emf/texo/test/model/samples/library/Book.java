@@ -94,8 +94,8 @@ public class Book extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> This is documentation <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Book#getTitle() title}' feature.
+   * @param newTitle
+   *          the new value of the '{@link Book#getTitle() title}' feature.
    * @generated
    */
   public void setTitle(String newTitle) {

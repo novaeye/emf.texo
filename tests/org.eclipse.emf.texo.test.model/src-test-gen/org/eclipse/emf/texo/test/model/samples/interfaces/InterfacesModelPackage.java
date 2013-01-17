@@ -156,6 +156,8 @@ public class InterfacesModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static InterfacesModelPackage initialize() {
@@ -264,8 +266,8 @@ public class InterfacesModelPackage extends ModelPackage {
    * Returns the {@link EStructuralFeature} '<em><b>DescribableIdentifiableConcrete.description</b></em>'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '
-   *         <em><b>DescribableIdentifiableConcrete.description</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>DescribableIdentifiableConcrete.description</b></em>
+   *         '.
    * @generated
    */
   public EAttribute getDescribableIdentifiableConcrete_Description() {
@@ -277,7 +279,7 @@ public class InterfacesModelPackage extends ModelPackage {
    * Returns the {@link EStructuralFeature} '<em><b>DescribableIdentifiableConcrete.identifier</b></em>'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: ' <em><b>DescribableIdentifiableConcrete.identifier</b></em>
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>DescribableIdentifiableConcrete.identifier</b></em>
    *         '.
    * @generated
    */
@@ -417,7 +419,8 @@ public class InterfacesModelPackage extends ModelPackage {
       return DescribableConcrete.class;
     case IDENTIFIABLECONCRETE_CLASSIFIER_ID:
       return IdentifiableConcrete.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

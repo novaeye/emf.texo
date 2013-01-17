@@ -74,6 +74,34 @@ public class EcoreattrsModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int NAMELIST_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int NAMELIST_FIRSTNAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int NAMELIST_MIDDLENAME_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int NAMELIST_LASTNAME_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int FEATURE_CLASSIFIER_ID = 1;
 
   /**
@@ -126,34 +154,6 @@ public class EcoreattrsModelPackage extends ModelPackage {
   public static final int MIXED_VALUE__FEATURE_ID = 4;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int NAMELIST_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int NAMELIST_FIRSTNAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int NAMELIST_MIDDLENAME_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int NAMELIST_LASTNAME_FEATURE_ID = 4;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -162,6 +162,8 @@ public class EcoreattrsModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -270,6 +272,49 @@ public class EcoreattrsModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>NameList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>NameList</b></em>'
+   * @generated
+   */
+  public EClass getNameListEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(NAMELIST_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>NameList.firstName</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.firstName</b></em>'.
+   * @generated
+   */
+  public EAttribute getNameList_FirstName() {
+    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_FIRSTNAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>NameList.middleName</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.middleName</b></em>'.
+   * @generated
+   */
+  public EAttribute getNameList_MiddleName() {
+    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_MIDDLENAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>NameList.lastName</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.lastName</b></em>'.
+   * @generated
+   */
+  public EAttribute getNameList_LastName() {
+    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_LASTNAME_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Feature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Feature</b></em>'
@@ -353,49 +398,6 @@ public class EcoreattrsModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>NameList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>NameList</b></em>'
-   * @generated
-   */
-  public EClass getNameListEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(NAMELIST_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>NameList.firstName</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.firstName</b></em>'.
-   * @generated
-   */
-  public EAttribute getNameList_FirstName() {
-    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_FIRSTNAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>NameList.middleName</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.middleName</b></em>'.
-   * @generated
-   */
-  public EAttribute getNameList_MiddleName() {
-    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_MIDDLENAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>NameList.lastName</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>NameList.lastName</b></em>'.
-   * @generated
-   */
-  public EAttribute getNameList_LastName() {
-    return (EAttribute) getNameListEClass().getEAllStructuralFeatures().get(NAMELIST_LASTNAME_FEATURE_ID);
-  }
-
-  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eClassifier
@@ -414,7 +416,8 @@ public class EcoreattrsModelPackage extends ModelPackage {
       return Feature.class;
     case MIXED_CLASSIFIER_ID:
       return Mixed.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

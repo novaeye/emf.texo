@@ -43,6 +43,9 @@ public class ResourceType extends AbstractPlatformElement {
   /**
    * Adds to the <em>platformElement</em> feature.
    * 
+   * @param platformElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -53,6 +56,9 @@ public class ResourceType extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>platformElement</em> feature.
+   * 
+   * @param platformElementValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -89,34 +89,6 @@ public class CatalogModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PRICETYPE_CLASSIFIER_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PRICETYPE_PRICE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PRICETYPE_QUANTITYTO_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PRICETYPE_SUPPLIER_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int PRODUCTTYPE_CLASSIFIER_ID = 2;
 
   /**
@@ -152,14 +124,28 @@ public class CatalogModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STRINGTYPE_CLASSIFIER_ID = 3;
+  public static final int PRICETYPE_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int STRINGTYPE_VALUE_FEATURE_ID = 2;
+  public static final int PRICETYPE_PRICE_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_QUANTITYTO_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PRICETYPE_SUPPLIER_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -183,6 +169,20 @@ public class CatalogModelPackage extends ModelPackage {
   public static final int SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID = 3;
 
   /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int STRINGTYPE_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int STRINGTYPE_VALUE_FEATURE_ID = 2;
+
+  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -191,6 +191,8 @@ public class CatalogModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -327,49 +329,6 @@ public class CatalogModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>PriceType</b></em>'
-   * @generated
-   */
-  public EClass getPriceTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(PRICETYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PriceType.price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.price</b></em>'.
-   * @generated
-   */
-  public EAttribute getPriceType_Price() {
-    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_PRICE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PriceType.quantityTo</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.quantityTo</b></em>'.
-   * @generated
-   */
-  public EAttribute getPriceType_QuantityTo() {
-    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_QUANTITYTO_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PriceType.supplier</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.supplier</b></em>'.
-   * @generated
-   */
-  public EReference getPriceType_Supplier() {
-    return (EReference) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_SUPPLIER_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>ProductType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>ProductType</b></em>'
@@ -424,6 +383,81 @@ public class CatalogModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PriceType</b></em>'
+   * @generated
+   */
+  public EClass getPriceTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(PRICETYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.price</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.price</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_Price() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_PRICE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.quantityTo</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.quantityTo</b></em>'.
+   * @generated
+   */
+  public EAttribute getPriceType_QuantityTo() {
+    return (EAttribute) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_QUANTITYTO_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PriceType.supplier</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PriceType.supplier</b></em>'.
+   * @generated
+   */
+  public EReference getPriceType_Supplier() {
+    return (EReference) getPriceTypeEClass().getEAllStructuralFeatures().get(PRICETYPE_SUPPLIER_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>SupplierType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SupplierType</b></em>'
+   * @generated
+   */
+  public EClass getSupplierTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(SUPPLIERTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SupplierType.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SupplierType.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getSupplierType_Name() {
+    return (EAttribute) getSupplierTypeEClass().getEAllStructuralFeatures().get(SUPPLIERTYPE_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SupplierType.noOfEmployees</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SupplierType.noOfEmployees</b></em>'.
+   * @generated
+   */
+  public EAttribute getSupplierType_NoOfEmployees() {
+    return (EAttribute) getSupplierTypeEClass().getEAllStructuralFeatures().get(SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>StringType</b></em>'
@@ -465,39 +499,8 @@ public class CatalogModelPackage extends ModelPackage {
       return SupplierType.class;
     case STRINGTYPE_CLASSIFIER_ID:
       return StringType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>SupplierType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>SupplierType</b></em>'
-   * @generated
-   */
-  public EClass getSupplierTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(SUPPLIERTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SupplierType.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SupplierType.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getSupplierType_Name() {
-    return (EAttribute) getSupplierTypeEClass().getEAllStructuralFeatures().get(SUPPLIERTYPE_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SupplierType.noOfEmployees</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SupplierType.noOfEmployees</b></em>'.
-   * @generated
-   */
-  public EAttribute getSupplierType_NoOfEmployees() {
-    return (EAttribute) getSupplierTypeEClass().getEAllStructuralFeatures().get(SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID);
   }
 }

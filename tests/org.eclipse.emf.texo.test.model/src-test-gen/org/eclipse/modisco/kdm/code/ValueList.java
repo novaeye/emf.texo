@@ -45,6 +45,9 @@ public class ValueList extends ValueElement {
   /**
    * Adds to the <em>valueElement</em> feature.
    * 
+   * @param valueElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToValueElement(ValueElement valueElementValue) {
@@ -55,6 +58,9 @@ public class ValueList extends ValueElement {
 
   /**
    * Removes from the <em>valueElement</em> feature.
+   * 
+   * @param valueElementValue
+   *          the value to remove
    * 
    * @generated
    */

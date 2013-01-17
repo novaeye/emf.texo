@@ -43,6 +43,9 @@ public abstract class AnchorContainer extends PictogramElement {
   /**
    * Adds to the <em>anchors</em> feature.
    * 
+   * @param anchorsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAnchors(Anchor anchorsValue) {
@@ -53,6 +56,9 @@ public abstract class AnchorContainer extends PictogramElement {
 
   /**
    * Removes from the <em>anchors</em> feature.
+   * 
+   * @param anchorsValue
+   *          the value to remove
    * 
    * @generated
    */

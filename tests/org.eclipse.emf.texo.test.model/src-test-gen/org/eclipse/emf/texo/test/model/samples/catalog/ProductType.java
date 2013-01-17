@@ -105,8 +105,8 @@ public class ProductType extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> My description documentation <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ProductType#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link ProductType#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -128,6 +128,9 @@ public class ProductType extends Identifiable {
   /**
    * Adds to the <em>remark</em> feature.
    * 
+   * @param remarkValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToRemark(StringType remarkValue) {
@@ -138,6 +141,9 @@ public class ProductType extends Identifiable {
 
   /**
    * Removes from the <em>remark</em> feature.
+   * 
+   * @param remarkValue
+   *          the value to remove
    * 
    * @generated
    */

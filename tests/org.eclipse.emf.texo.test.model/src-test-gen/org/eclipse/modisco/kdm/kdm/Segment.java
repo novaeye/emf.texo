@@ -51,6 +51,9 @@ public class Segment extends KDMFramework {
   /**
    * Adds to the <em>segment</em> feature.
    * 
+   * @param segmentValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSegment(Segment segmentValue) {
@@ -61,6 +64,9 @@ public class Segment extends KDMFramework {
 
   /**
    * Removes from the <em>segment</em> feature.
+   * 
+   * @param segmentValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -109,6 +115,9 @@ public class Segment extends KDMFramework {
   /**
    * Adds to the <em>model</em> feature.
    * 
+   * @param modelValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToModel(KDMModel modelValue) {
@@ -119,6 +128,9 @@ public class Segment extends KDMFramework {
 
   /**
    * Removes from the <em>model</em> feature.
+   * 
+   * @param modelValue
+   *          the value to remove
    * 
    * @generated
    */

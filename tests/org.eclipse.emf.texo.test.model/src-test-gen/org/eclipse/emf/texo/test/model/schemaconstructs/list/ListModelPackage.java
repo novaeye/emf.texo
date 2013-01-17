@@ -51,7 +51,7 @@ public class ListModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIXSTATESLIST_CLASSIFIER_ID = 1;
+  public static final int STATELIST_CLASSIFIER_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -65,7 +65,7 @@ public class ListModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int STATELIST_CLASSIFIER_ID = 3;
+  public static final int SIXSTATESLIST_CLASSIFIER_ID = 1;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -125,6 +125,8 @@ public class ListModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -251,13 +253,13 @@ public class ListModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>SixStatesList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>StateList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SixStatesList</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>StateList</b></em>'
    * @generated
    */
-  public EDataType getSixStatesListEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SIXSTATESLIST_CLASSIFIER_ID);
+  public EDataType getStateListEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(STATELIST_CLASSIFIER_ID);
   }
 
   /**
@@ -271,13 +273,13 @@ public class ListModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>StateList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>SixStatesList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>StateList</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>SixStatesList</b></em>'
    * @generated
    */
-  public EDataType getStateListEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(STATELIST_CLASSIFIER_ID);
+  public EDataType getSixStatesListEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SIXSTATESLIST_CLASSIFIER_ID);
   }
 
   /**
@@ -323,7 +325,8 @@ public class ListModelPackage extends ModelPackage {
       return List.class;
     case ZIPCODE_CLASSIFIER_ID:
       return String.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

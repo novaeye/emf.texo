@@ -135,6 +135,7 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String aaa;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -142,6 +143,7 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String bbb;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -151,6 +153,8 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   private String ccc;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -158,6 +162,7 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -179,10 +184,8 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getAaa() <em>aaa</em>}' feature.
    * 
-   * @param newAaa
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newAaa
    *          the new value of the '{@link SimpleAllMapType#getAaa() aaa}' feature.
    * @generated
@@ -207,10 +210,8 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getBbb() <em>bbb</em>}' feature.
    * 
-   * @param newBbb
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newBbb
    *          the new value of the '{@link SimpleAllMapType#getBbb() bbb}' feature.
    * @generated
@@ -235,10 +236,8 @@ public class SimpleAllMapTypeAllMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SimpleAllMapType#getCcc() <em>ccc</em>}' feature.
    * 
-   * @param newCcc
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newCcc
    *          the new value of the '{@link SimpleAllMapType#getCcc() ccc}' feature.
    * @generated

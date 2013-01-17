@@ -61,6 +61,9 @@ public abstract class Element extends Identifiable {
   /**
    * Adds to the <em>attribute</em> feature.
    * 
+   * @param attributeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAttribute(Attribute attributeValue) {
@@ -71,6 +74,9 @@ public abstract class Element extends Identifiable {
 
   /**
    * Removes from the <em>attribute</em> feature.
+   * 
+   * @param attributeValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -97,8 +103,8 @@ public abstract class Element extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of attributes owned by the given
    * element. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getAttribute() attribute}' feature.
+   * @param newAttribute
+   *          the new value of the '{@link Element#getAttribute() attribute}' feature.
    * @generated
    */
   public void setAttribute(Set<Attribute> newAttribute) {
@@ -121,6 +127,9 @@ public abstract class Element extends Identifiable {
   /**
    * Adds to the <em>annotation</em> feature.
    * 
+   * @param annotationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAnnotation(Annotation annotationValue) {
@@ -131,6 +140,9 @@ public abstract class Element extends Identifiable {
 
   /**
    * Removes from the <em>annotation</em> feature.
+   * 
+   * @param annotationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -157,8 +169,8 @@ public abstract class Element extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of annotations owned by the given
    * element. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Element#getAnnotation() annotation}' feature.
+   * @param newAnnotation
+   *          the new value of the '{@link Element#getAnnotation() annotation}' feature.
    * @generated
    */
   public void setAnnotation(Set<Annotation> newAnnotation) {

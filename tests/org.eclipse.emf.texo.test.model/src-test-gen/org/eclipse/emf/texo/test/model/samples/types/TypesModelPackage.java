@@ -52,6 +52,132 @@ public class TypesModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int TESTENUM_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int STRINGARRAY_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LONGARRAY_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TESTNEXTENUM_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_CLASSIFIER_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_STRING_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_INTEGEROBJECT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_LONG__FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_DOUBLEOBJECT_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_FLOATOBJECT_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_CLAZZ_FEATURE_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_CHAROBJECT_FEATURE_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_BYTEOBJECT_FEATURE_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_BYTEARRAY_FEATURE_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_BIGDECIMAL_FEATURE_ID = 11;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_BIGINTEGER_FEATURE_ID = 12;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_ENUM__FEATURE_ID = 13;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int MANYTYPES_DATE_FEATURE_ID = 14;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int SINGLETYPES_CLASSIFIER_ID = 0;
 
   /**
@@ -209,132 +335,6 @@ public class TypesModelPackage extends ModelPackage {
   public static final int SINGLETYPES_NEXTENUM_FEATURE_ID = 23;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_CLASSIFIER_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_STRING_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_INTEGEROBJECT_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_LONG__FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_DOUBLEOBJECT_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_FLOATOBJECT_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_CLAZZ_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_CHAROBJECT_FEATURE_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_BYTEOBJECT_FEATURE_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_BYTEARRAY_FEATURE_ID = 10;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_BIGDECIMAL_FEATURE_ID = 11;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_BIGINTEGER_FEATURE_ID = 12;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_ENUM__FEATURE_ID = 13;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int MANYTYPES_DATE_FEATURE_ID = 14;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TESTENUM_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LONGARRAY_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int STRINGARRAY_CLASSIFIER_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TESTNEXTENUM_CLASSIFIER_ID = 5;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -343,6 +343,8 @@ public class TypesModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -418,6 +420,159 @@ public class TypesModelPackage extends ModelPackage {
   @Override
   public String getEcoreFileName() {
     return "types.ecore";
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ManyTypes</b></em>'
+   * @generated
+   */
+  public EClass getManyTypesEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(MANYTYPES_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.string</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.string</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_String() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_STRING_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.integerObject</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.integerObject</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_IntegerObject() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_INTEGEROBJECT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.long</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.long</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_Long_() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_LONG__FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.doubleObject</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.doubleObject</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_DoubleObject() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_DOUBLEOBJECT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.floatObject</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.floatObject</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_FloatObject() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_FLOATOBJECT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.clazz</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.clazz</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_Clazz() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_CLAZZ_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.charObject</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.charObject</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_CharObject() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_CHAROBJECT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.byteObject</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.byteObject</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_ByteObject() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BYTEOBJECT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.byteArray</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.byteArray</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_ByteArray() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BYTEARRAY_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.bigDecimal</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.bigDecimal</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_BigDecimal() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BIGDECIMAL_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.bigInteger</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.bigInteger</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_BigInteger() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BIGINTEGER_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.enum</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.enum</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_Enum_() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_ENUM__FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.date</b></em>'.
+   * @generated
+   */
+  public EAttribute getManyTypes_Date() {
+    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_DATE_FEATURE_ID);
   }
 
   /**
@@ -673,159 +828,6 @@ public class TypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>ManyTypes</b></em>'
-   * @generated
-   */
-  public EClass getManyTypesEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(MANYTYPES_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.string</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.string</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_String() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_STRING_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.integerObject</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.integerObject</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_IntegerObject() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_INTEGEROBJECT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.long</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.long</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_Long_() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_LONG__FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.doubleObject</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.doubleObject</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_DoubleObject() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_DOUBLEOBJECT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.floatObject</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.floatObject</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_FloatObject() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_FLOATOBJECT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.clazz</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.clazz</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_Clazz() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_CLAZZ_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.charObject</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.charObject</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_CharObject() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_CHAROBJECT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.byteObject</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.byteObject</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_ByteObject() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BYTEOBJECT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.byteArray</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.byteArray</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_ByteArray() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BYTEARRAY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.bigDecimal</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.bigDecimal</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_BigDecimal() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BIGDECIMAL_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.bigInteger</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.bigInteger</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_BigInteger() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_BIGINTEGER_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.enum</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.enum</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_Enum_() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_ENUM__FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ManyTypes.date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ManyTypes.date</b></em>'.
-   * @generated
-   */
-  public EAttribute getManyTypes_Date() {
-    return (EAttribute) getManyTypesEClass().getEAllStructuralFeatures().get(MANYTYPES_DATE_FEATURE_ID);
-  }
-
-  /**
    * Returns the EEnum '<em><b>TestEnum</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the EEnum representing '<em><b>TestEnum</b></em>'
@@ -836,16 +838,6 @@ public class TypesModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>LongArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>LongArray</b></em>'
-   * @generated
-   */
-  public EDataType getLongArrayEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(LONGARRAY_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EDataType} '<em><b>StringArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>StringArray</b></em>'
@@ -853,6 +845,16 @@ public class TypesModelPackage extends ModelPackage {
    */
   public EDataType getStringArrayEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(STRINGARRAY_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>LongArray</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>LongArray</b></em>'
+   * @generated
+   */
+  public EDataType getLongArrayEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(LONGARRAY_CLASSIFIER_ID);
   }
 
   /**
@@ -888,7 +890,8 @@ public class TypesModelPackage extends ModelPackage {
       return long[].class;
     case TESTNEXTENUM_CLASSIFIER_ID:
       return TestNextEnum.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

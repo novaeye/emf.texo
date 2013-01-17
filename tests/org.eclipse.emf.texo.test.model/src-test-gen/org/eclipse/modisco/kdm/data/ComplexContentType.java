@@ -46,6 +46,9 @@ public class ComplexContentType extends AbstractContentElement {
   /**
    * Adds to the <em>contentElement</em> feature.
    * 
+   * @param contentElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
@@ -56,6 +59,9 @@ public class ComplexContentType extends AbstractContentElement {
 
   /**
    * Removes from the <em>contentElement</em> feature.
+   * 
+   * @param contentElementValue
+   *          the value to remove
    * 
    * @generated
    */

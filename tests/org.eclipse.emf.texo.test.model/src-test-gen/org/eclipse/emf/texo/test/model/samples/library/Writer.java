@@ -87,6 +87,9 @@ public class Writer extends Identifiable {
   /**
    * Adds to the <em>books</em> feature.
    * 
+   * @param booksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -97,6 +100,9 @@ public class Writer extends Identifiable {
 
   /**
    * Removes from the <em>books</em> feature.
+   * 
+   * @param booksValue
+   *          the value to remove
    * 
    * @generated
    */

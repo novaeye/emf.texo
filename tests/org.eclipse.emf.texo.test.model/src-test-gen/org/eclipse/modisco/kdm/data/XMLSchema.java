@@ -43,6 +43,9 @@ public class XMLSchema extends AbstractDataElement {
   /**
    * Adds to the <em>contentElement</em> feature.
    * 
+   * @param contentElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToContentElement(AbstractContentElement contentElementValue) {
@@ -53,6 +56,9 @@ public class XMLSchema extends AbstractDataElement {
 
   /**
    * Removes from the <em>contentElement</em> feature.
+   * 
+   * @param contentElementValue
+   *          the value to remove
    * 
    * @generated
    */

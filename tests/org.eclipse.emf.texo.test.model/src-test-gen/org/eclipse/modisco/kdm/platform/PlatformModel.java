@@ -44,6 +44,9 @@ public class PlatformModel extends KDMModel {
   /**
    * Adds to the <em>platformElement</em> feature.
    * 
+   * @param platformElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPlatformElement(AbstractPlatformElement platformElementValue) {
@@ -54,6 +57,9 @@ public class PlatformModel extends KDMModel {
 
   /**
    * Removes from the <em>platformElement</em> feature.
+   * 
+   * @param platformElementValue
+   *          the value to remove
    * 
    * @generated
    */

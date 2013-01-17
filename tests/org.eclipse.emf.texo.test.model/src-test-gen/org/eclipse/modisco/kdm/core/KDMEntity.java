@@ -185,8 +185,8 @@ public abstract class KDMEntity extends ModelElement {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> An identifier for the KDM entity. <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link KDMEntity#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link KDMEntity#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum SimpleUnionTypeMember1 {
+
   /**
    * The enum: NA <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -48,6 +49,9 @@ public enum SimpleUnionTypeMember1 {
    * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified literal value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the SimpleUnionTypeMember1, the literal enum class
    * @generated
    */
   public static SimpleUnionTypeMember1 get(String literal) {
@@ -64,6 +68,9 @@ public enum SimpleUnionTypeMember1 {
    * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the SimpleUnionTypeMember1, the literal enum class
    * @generated
    */
   public static SimpleUnionTypeMember1 getByName(String name) {
@@ -80,6 +87,9 @@ public enum SimpleUnionTypeMember1 {
    * Returns the '<em><b>SimpleUnionTypeMember1</b></em>' literal with the specified integer value. <!-- begin-user-doc
    * --> <!-- end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the SimpleUnionTypeMember1, the literal enum
    * @generated
    */
   public static SimpleUnionTypeMember1 get(int value) {
@@ -136,6 +146,7 @@ public enum SimpleUnionTypeMember1 {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -145,6 +156,7 @@ public enum SimpleUnionTypeMember1 {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -154,6 +166,7 @@ public enum SimpleUnionTypeMember1 {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

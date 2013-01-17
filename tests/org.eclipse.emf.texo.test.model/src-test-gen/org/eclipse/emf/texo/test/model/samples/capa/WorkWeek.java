@@ -57,6 +57,9 @@ public class WorkWeek extends Identifiable {
   /**
    * Adds to the <em>days</em> feature.
    * 
+   * @param daysValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDays(WorkDay daysValue) {
@@ -67,6 +70,9 @@ public class WorkWeek extends Identifiable {
 
   /**
    * Removes from the <em>days</em> feature.
+   * 
+   * @param daysValue
+   *          the value to remove
    * 
    * @generated
    */

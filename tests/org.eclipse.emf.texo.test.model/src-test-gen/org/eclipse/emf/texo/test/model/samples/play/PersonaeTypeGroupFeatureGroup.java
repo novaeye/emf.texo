@@ -136,6 +136,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String title;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -143,6 +144,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String persona;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -152,6 +154,8 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   private PersonaGroupType personaGroup;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -159,6 +163,7 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -180,10 +185,8 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getTitle() <em>title</em>}' feature.
    * 
-   * @param newTitle
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newTitle
    *          the new value of the '{@link PersonaeType#getTitle() title}' feature.
    * @generated
@@ -208,10 +211,8 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getPersona() <em>persona</em>}' feature.
    * 
-   * @param newPersona
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newPersona
    *          the new value of the '{@link PersonaeType#getPersona() persona}' feature.
    * @generated
@@ -236,10 +237,8 @@ public class PersonaeTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link PersonaeType#getPersonaGroup() <em>personaGroup</em>}' feature.
    * 
-   * @param newPersonaGroup
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newPersonaGroup
    *          the new value of the '{@link PersonaeType#getPersonaGroup() personaGroup}' feature.
    * @generated

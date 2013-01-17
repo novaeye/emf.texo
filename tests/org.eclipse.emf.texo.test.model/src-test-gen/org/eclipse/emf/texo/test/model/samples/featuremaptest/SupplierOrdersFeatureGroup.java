@@ -26,7 +26,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    * @generated
    */
   public static enum Feature {
-    PREFERREDORDERS, STANDARDORDERS, HARDCOPYORDERREFERENCE, HARDCOPYORDERNUMBER
+    HARDCOPYORDERREFERENCE, HARDCOPYORDERNUMBER, PREFERREDORDERS, STANDARDORDERS
   }
 
   /**
@@ -136,6 +136,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String hardCopyOrderReference;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -143,6 +144,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private Long hardCopyOrderNumber;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -150,6 +152,7 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH }, optional = false)
   private PurchaseOrder preferredOrders;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -159,6 +162,8 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   private PurchaseOrder standardOrders;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -166,66 +171,11 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
     return feature;
-  }
-
-  /**
-   * Returns the value of '<em><b>preferredOrders</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>preferredOrders</b></em>' feature
-   * @generated
-   */
-  public PurchaseOrder getPreferredOrders() {
-    return preferredOrders;
-  }
-
-  /**
-   * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
-   * 
-   * @param newPreferredOrders
-   *          the new value for the feature
-   * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param newPreferredOrders
-   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
-   * @generated
-   */
-  public void setPreferredOrders(PurchaseOrder newPreferredOrders) {
-    preferredOrders = newPreferredOrders;
-    setFeature(Feature.PREFERREDORDERS);
-  }
-
-  /**
-   * Returns the value of '<em><b>standardOrders</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>standardOrders</b></em>' feature
-   * @generated
-   */
-  public PurchaseOrder getStandardOrders() {
-    return standardOrders;
-  }
-
-  /**
-   * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
-   * 
-   * @param newStandardOrders
-   *          the new value for the feature
-   * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
-   * @param newStandardOrders
-   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
-   * @generated
-   */
-  public void setStandardOrders(PurchaseOrder newStandardOrders) {
-    standardOrders = newStandardOrders;
-    setFeature(Feature.STANDARDORDERS);
   }
 
   /**
@@ -243,10 +193,8 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getHardCopyOrderReference() <em>hardCopyOrderReference</em>}' feature.
    * 
-   * @param newHardCopyOrderReference
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newHardCopyOrderReference
    *          the new value of the '{@link Supplier#getHardCopyOrderReference() hardCopyOrderReference}' feature.
    * @generated
@@ -271,10 +219,8 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Supplier#getHardCopyOrderNumber() <em>hardCopyOrderNumber</em>}' feature.
    * 
-   * @param newHardCopyOrderNumber
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newHardCopyOrderNumber
    *          the new value of the '{@link Supplier#getHardCopyOrderNumber() hardCopyOrderNumber}' feature.
    * @generated
@@ -282,6 +228,58 @@ public class SupplierOrdersFeatureGroup extends Identifiable {
   public void setHardCopyOrderNumber(Long newHardCopyOrderNumber) {
     hardCopyOrderNumber = newHardCopyOrderNumber;
     setFeature(Feature.HARDCOPYORDERNUMBER);
+  }
+
+  /**
+   * Returns the value of '<em><b>preferredOrders</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>preferredOrders</b></em>' feature
+   * @generated
+   */
+  public PurchaseOrder getPreferredOrders() {
+    return preferredOrders;
+  }
+
+  /**
+   * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param newPreferredOrders
+   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   * @generated
+   */
+  public void setPreferredOrders(PurchaseOrder newPreferredOrders) {
+    preferredOrders = newPreferredOrders;
+    setFeature(Feature.PREFERREDORDERS);
+  }
+
+  /**
+   * Returns the value of '<em><b>standardOrders</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>standardOrders</b></em>' feature
+   * @generated
+   */
+  public PurchaseOrder getStandardOrders() {
+    return standardOrders;
+  }
+
+  /**
+   * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param newStandardOrders
+   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   * @generated
+   */
+  public void setStandardOrders(PurchaseOrder newStandardOrders) {
+    standardOrders = newStandardOrders;
+    setFeature(Feature.STANDARDORDERS);
   }
 
   /**

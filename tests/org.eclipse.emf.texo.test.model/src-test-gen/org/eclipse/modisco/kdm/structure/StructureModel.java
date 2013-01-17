@@ -44,6 +44,9 @@ public class StructureModel extends KDMModel {
   /**
    * Adds to the <em>structureElement</em> feature.
    * 
+   * @param structureElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
@@ -54,6 +57,9 @@ public class StructureModel extends KDMModel {
 
   /**
    * Removes from the <em>structureElement</em> feature.
+   * 
+   * @param structureElementValue
+   *          the value to remove
    * 
    * @generated
    */

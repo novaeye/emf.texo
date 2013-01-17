@@ -100,6 +100,9 @@ public enum Periodicity {
    * Returns the '<em><b>Periodicity</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the Periodicity, the literal enum class
    * @generated
    */
   public static Periodicity get(String literal) {
@@ -116,6 +119,9 @@ public enum Periodicity {
    * Returns the '<em><b>Periodicity</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the Periodicity, the literal enum class
    * @generated
    */
   public static Periodicity getByName(String name) {
@@ -132,6 +138,9 @@ public enum Periodicity {
    * Returns the '<em><b>Periodicity</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the Periodicity, the literal enum
    * @generated
    */
   public static Periodicity get(int value) {
@@ -218,6 +227,7 @@ public enum Periodicity {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -227,6 +237,7 @@ public enum Periodicity {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -236,6 +247,7 @@ public enum Periodicity {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

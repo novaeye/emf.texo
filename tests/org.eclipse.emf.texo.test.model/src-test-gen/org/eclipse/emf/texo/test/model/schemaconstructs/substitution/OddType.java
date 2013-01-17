@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum OddType {
+
   /**
    * The enum: _1 <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -111,6 +112,9 @@ public enum OddType {
    * Returns the '<em><b>OddType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the OddType, the literal enum class
    * @generated
    */
   public static OddType get(String literal) {
@@ -127,6 +131,9 @@ public enum OddType {
    * Returns the '<em><b>OddType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the OddType, the literal enum class
    * @generated
    */
   public static OddType getByName(String name) {
@@ -143,6 +150,9 @@ public enum OddType {
    * Returns the '<em><b>OddType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the OddType, the literal enum
    * @generated
    */
   public static OddType get(int value) {
@@ -239,6 +249,7 @@ public enum OddType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -248,6 +259,7 @@ public enum OddType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -257,6 +269,7 @@ public enum OddType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

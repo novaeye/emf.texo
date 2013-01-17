@@ -24,6 +24,7 @@ public abstract class Periodical extends Item {
    */
   @Basic()
   private String title = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

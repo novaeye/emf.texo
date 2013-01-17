@@ -48,8 +48,10 @@ public class PlayModelFactory implements ModelFactory {
       return createPlayType();
     case PlayModelPackage.SPEECHTYPE_CLASSIFIER_ID:
       return createSpeechType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -100,7 +102,7 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -171,6 +173,16 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass SceneType
+   * @generated
+   */
+  public SceneType createSceneType() {
+    return new SceneType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass DocumentRoot
    * @generated
    */
@@ -221,16 +233,6 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass SceneType
-   * @generated
-   */
-  public SceneType createSceneType() {
-    return new SceneType();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass SpeechType
    * @generated
    */
@@ -253,8 +255,9 @@ public class PlayModelFactory implements ModelFactory {
       return createPindexTypeFromString(value);
     case PlayModelPackage.PINDEXTYPEOBJECT_CLASSIFIER_ID:
       return createPindexTypeObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -272,8 +275,9 @@ public class PlayModelFactory implements ModelFactory {
       return convertPindexTypeToString((PindexType) value);
     case PlayModelPackage.PINDEXTYPEOBJECT_CLASSIFIER_ID:
       return convertPindexTypeObjectToString((PindexType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -339,6 +343,9 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>ActType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ActTypeModelObject<E extends ActType> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -371,8 +378,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getPindex();
       case PlayModelPackage.ACTTYPE_TITLE_FEATURE_ID:
         return getTarget().getTitle();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -392,8 +400,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.ACTTYPE_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -408,8 +417,9 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getScene().add((SceneType) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -424,13 +434,17 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getScene().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -469,8 +483,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getPindex();
       case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
         return getTarget().getTitle();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -496,8 +511,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SCENETYPE_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -520,8 +536,9 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getSpeech().add((SpeechType) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -544,13 +561,17 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getSpeech().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -617,8 +638,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getStageDirections();
       case PlayModelPackage.DOCUMENTROOT_TITLE_FEATURE_ID:
         return getTarget().getTitle();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -686,8 +708,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.DOCUMENTROOT_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -702,8 +725,9 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -718,13 +742,17 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>FmType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -754,8 +782,9 @@ public class PlayModelFactory implements ModelFactory {
       switch (featureID) {
       case PlayModelPackage.FMTYPE_P_FEATURE_ID:
         return getTarget().getP();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -769,8 +798,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.FMTYPE_P_FEATURE_ID:
         getTarget().setP((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -784,8 +814,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.FMTYPE_P_FEATURE_ID:
         getTarget().getP().add((String) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -799,13 +830,17 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.FMTYPE_P_FEATURE_ID:
         getTarget().getP().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PersonaeType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -842,8 +877,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getPersona();
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         return getTarget().getPersonaGroup();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -866,8 +902,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         getTarget().setPersonaGroup((List<PersonaGroupType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -893,8 +930,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         getTarget().getPersonaGroup().add((PersonaGroupType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -920,14 +958,18 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         getTarget().getPersonaGroup().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PersonaGroupType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -960,8 +1002,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getPersona();
       case PlayModelPackage.PERSONAGROUPTYPE_GROUPDESCRIPTION_FEATURE_ID:
         return getTarget().getGroupDescription();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -978,8 +1021,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PERSONAGROUPTYPE_GROUPDESCRIPTION_FEATURE_ID:
         getTarget().setGroupDescription((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -994,8 +1038,9 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getPersona().add((String) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1010,13 +1055,17 @@ public class PlayModelFactory implements ModelFactory {
         getTarget().getPersona().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PlayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1057,8 +1106,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getPlaySubTitle();
       case PlayModelPackage.PLAYTYPE_ACT_FEATURE_ID:
         return getTarget().getAct();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1087,8 +1137,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PLAYTYPE_ACT_FEATURE_ID:
         getTarget().setAct((List<ActType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1102,8 +1153,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PLAYTYPE_ACT_FEATURE_ID:
         getTarget().getAct().add((ActType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1117,13 +1169,17 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PLAYTYPE_ACT_FEATURE_ID:
         getTarget().getAct().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SpeechType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1160,8 +1216,9 @@ public class PlayModelFactory implements ModelFactory {
         return getTarget().getLine();
       case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
         return getTarget().getStageDirections();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1184,8 +1241,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
         getTarget().setStageDirections((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1211,8 +1269,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
         getTarget().getStageDirections().add((String) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1238,14 +1297,17 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
         getTarget().getStageDirections().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>SceneType.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SceneTypeGroupFeatureGroupModelFeatureMapEntry<E extends SceneTypeGroupFeatureGroup> extends
@@ -1260,8 +1322,9 @@ public class PlayModelFactory implements ModelFactory {
         return PlayModelPackage.INSTANCE.getSceneType_StageDirections();
       case SPEECH:
         return PlayModelPackage.INSTANCE.getSceneType_Speech();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1277,8 +1340,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SCENETYPE_SPEECH_FEATURE_ID:
         getTarget().setFeature(SceneTypeGroupFeatureGroup.Feature.SPEECH);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1299,6 +1363,8 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -1347,8 +1413,9 @@ public class PlayModelFactory implements ModelFactory {
         return PlayModelPackage.INSTANCE.getDocumentRoot_StageDirections();
       case TITLE:
         return PlayModelPackage.INSTANCE.getDocumentRoot_Title();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1416,8 +1483,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.DOCUMENTROOT_TITLE_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.TITLE);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1438,6 +1506,8 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>PersonaeType.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class PersonaeTypeGroupFeatureGroupModelFeatureMapEntry<E extends PersonaeTypeGroupFeatureGroup>
@@ -1454,8 +1524,9 @@ public class PlayModelFactory implements ModelFactory {
         return PlayModelPackage.INSTANCE.getPersonaeType_Persona();
       case PERSONAGROUP:
         return PlayModelPackage.INSTANCE.getPersonaeType_PersonaGroup();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1474,8 +1545,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.PERSONAETYPE_PERSONAGROUP_FEATURE_ID:
         getTarget().setFeature(PersonaeTypeGroupFeatureGroup.Feature.PERSONAGROUP);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1496,6 +1568,8 @@ public class PlayModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>SpeechType.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SpeechTypeGroupFeatureGroupModelFeatureMapEntry<E extends SpeechTypeGroupFeatureGroup> extends
@@ -1512,8 +1586,9 @@ public class PlayModelFactory implements ModelFactory {
         return PlayModelPackage.INSTANCE.getSpeechType_Line();
       case STAGEDIRECTIONS:
         return PlayModelPackage.INSTANCE.getSpeechType_StageDirections();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1532,8 +1607,9 @@ public class PlayModelFactory implements ModelFactory {
       case PlayModelPackage.SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID:
         getTarget().setFeature(SpeechTypeGroupFeatureGroup.Feature.STAGEDIRECTIONS);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1550,5 +1626,4 @@ public class PlayModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

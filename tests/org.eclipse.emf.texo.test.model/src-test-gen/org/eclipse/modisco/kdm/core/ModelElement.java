@@ -61,6 +61,9 @@ public abstract class ModelElement extends Element {
   /**
    * Adds to the <em>stereotype</em> feature.
    * 
+   * @param stereotypeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStereotype(Stereotype stereotypeValue) {
@@ -71,6 +74,9 @@ public abstract class ModelElement extends Element {
 
   /**
    * Removes from the <em>stereotype</em> feature.
+   * 
+   * @param stereotypeValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -97,8 +103,8 @@ public abstract class ModelElement extends Element {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of stereotype applied to current
    * element. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ModelElement#getStereotype() stereotype}' feature.
+   * @param newStereotype
+   *          the new value of the '{@link ModelElement#getStereotype() stereotype}' feature.
    * @generated
    */
   public void setStereotype(Set<Stereotype> newStereotype) {
@@ -121,6 +127,9 @@ public abstract class ModelElement extends Element {
   /**
    * Adds to the <em>taggedValue</em> feature.
    * 
+   * @param taggedValueValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToTaggedValue(ExtendedValue taggedValueValue) {
@@ -131,6 +140,9 @@ public abstract class ModelElement extends Element {
 
   /**
    * Removes from the <em>taggedValue</em> feature.
+   * 
+   * @param taggedValueValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -157,8 +169,8 @@ public abstract class ModelElement extends Element {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of tagged values determined by the
    * stereotype. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ModelElement#getTaggedValue() taggedValue}' feature.
+   * @param newTaggedValue
+   *          the new value of the '{@link ModelElement#getTaggedValue() taggedValue}' feature.
    * @generated
    */
   public void setTaggedValue(Set<ExtendedValue> newTaggedValue) {

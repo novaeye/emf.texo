@@ -22,11 +22,11 @@ import org.eclipse.persistence.annotations.Converters;
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 public class BalanceAccount extends Account {
-
   /**
    * @generated
    */
   private static final long serialVersionUID = 1L;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -52,6 +52,9 @@ public class BalanceAccount extends Account {
   /**
    * Adds to the <em>report</em> feature.
    * 
+   * @param reportValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToReport(ReportGroup reportValue) {
@@ -62,6 +65,9 @@ public class BalanceAccount extends Account {
 
   /**
    * Removes from the <em>report</em> feature.
+   * 
+   * @param reportValue
+   *          the value to remove
    * 
    * @generated
    */

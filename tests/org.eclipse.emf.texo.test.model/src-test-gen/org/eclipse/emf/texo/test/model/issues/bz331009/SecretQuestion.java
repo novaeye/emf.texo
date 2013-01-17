@@ -90,8 +90,8 @@ public class SecretQuestion extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Вопрос <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SecretQuestion#getQuestion() question}' feature.
+   * @param newQuestion
+   *          the new value of the '{@link SecretQuestion#getQuestion() question}' feature.
    * @generated
    */
   public void setQuestion(String newQuestion) {
@@ -115,8 +115,8 @@ public class SecretQuestion extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Корректный ответ <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SecretQuestion#getCorrectAnswer() correctAnswer}' feature.
+   * @param newCorrectAnswer
+   *          the new value of the '{@link SecretQuestion#getCorrectAnswer() correctAnswer}' feature.
    * @generated
    */
   public void setCorrectAnswer(String newCorrectAnswer) {
@@ -142,8 +142,8 @@ public class SecretQuestion extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сигнальный ответ под принуждением <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SecretQuestion#getAlarmAnswer() alarmAnswer}' feature.
+   * @param newAlarmAnswer
+   *          the new value of the '{@link SecretQuestion#getAlarmAnswer() alarmAnswer}' feature.
    * @generated
    */
   public void setAlarmAnswer(String newAlarmAnswer) {
@@ -167,8 +167,8 @@ public class SecretQuestion extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Активен ли <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SecretQuestion#isActive() active}' feature.
+   * @param newActive
+   *          the new value of the '{@link SecretQuestion#isActive() active}' feature.
    * @generated
    */
   public void setActive(boolean newActive) {
@@ -192,8 +192,8 @@ public class SecretQuestion extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип вопроса <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SecretQuestion#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link SecretQuestion#getType() type}' feature.
    * @generated
    */
   public void setType(SecretQuestionType newType) {

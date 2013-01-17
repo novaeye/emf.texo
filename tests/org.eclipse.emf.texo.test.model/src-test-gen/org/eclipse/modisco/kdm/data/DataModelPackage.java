@@ -725,6 +725,8 @@ public class DataModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static DataModelPackage initialize() {
@@ -1965,7 +1967,8 @@ public class DataModelPackage extends ModelPackage {
       return ContentElement.class;
     case MANAGESDATA_CLASSIFIER_ID:
       return ManagesData.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

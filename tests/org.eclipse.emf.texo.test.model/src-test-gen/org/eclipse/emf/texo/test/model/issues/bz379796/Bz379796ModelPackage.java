@@ -140,6 +140,8 @@ public class Bz379796ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Bz379796ModelPackage initialize() {
@@ -358,7 +360,8 @@ public class Bz379796ModelPackage extends ModelPackage {
       return ComparisonType.class;
     case COMPARISONTYPEOBJECT_CLASSIFIER_ID:
       return ComparisonType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -65,6 +65,9 @@ public class ActType extends Identifiable {
   /**
    * Adds to the <em>scene</em> feature.
    * 
+   * @param sceneValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToScene(SceneType sceneValue) {
@@ -75,6 +78,9 @@ public class ActType extends Identifiable {
 
   /**
    * Removes from the <em>scene</em> feature.
+   * 
+   * @param sceneValue
+   *          the value to remove
    * 
    * @generated
    */

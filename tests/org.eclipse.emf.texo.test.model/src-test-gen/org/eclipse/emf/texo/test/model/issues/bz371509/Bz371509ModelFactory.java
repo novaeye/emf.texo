@@ -5,6 +5,7 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -34,8 +35,10 @@ public class Bz371509ModelFactory implements ModelFactory {
       return createEClass0();
     case Bz371509ModelPackage.ECLASS1_CLASSIFIER_ID:
       return createEClass1();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -68,7 +71,7 @@ public class Bz371509ModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -125,8 +128,9 @@ public class Bz371509ModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -140,12 +144,16 @@ public class Bz371509ModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>EClass0</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -177,8 +185,9 @@ public class Bz371509ModelFactory implements ModelFactory {
         return getTarget().getToClass1();
       case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
         return getTarget().getMany();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -195,8 +204,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
         getTarget().setMany((List<EClass1>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -210,8 +220,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
         getTarget().addToMany((EClass1) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -225,13 +236,17 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS0_MANY_FEATURE_ID:
         getTarget().removeFromMany((EClass1) value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>EClass1</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -263,8 +278,9 @@ public class Bz371509ModelFactory implements ModelFactory {
         return getTarget().getToClass0();
       case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
         return getTarget().getMany();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -281,8 +297,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
         getTarget().setMany((List<EClass0>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -300,8 +317,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
         getTarget().addToMany((EClass0) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -319,9 +337,9 @@ public class Bz371509ModelFactory implements ModelFactory {
       case Bz371509ModelPackage.ECLASS1_MANY_FEATURE_ID:
         getTarget().removeFromMany((EClass0) value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

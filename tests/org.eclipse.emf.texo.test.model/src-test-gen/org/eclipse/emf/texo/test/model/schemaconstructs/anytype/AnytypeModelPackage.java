@@ -163,6 +163,8 @@ public class AnytypeModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static AnytypeModelPackage initialize() {
@@ -409,7 +411,8 @@ public class AnytypeModelPackage extends ModelPackage {
       return C.class;
     case TESTANY_CLASSIFIER_ID:
       return TestAny.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

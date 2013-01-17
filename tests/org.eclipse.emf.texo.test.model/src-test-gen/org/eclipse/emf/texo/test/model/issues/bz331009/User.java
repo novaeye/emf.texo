@@ -72,8 +72,8 @@ public class User extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Логин <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link User#getLogin() login}' feature.
+   * @param newLogin
+   *          the new value of the '{@link User#getLogin() login}' feature.
    * @generated
    */
   public void setLogin(String newLogin) {
@@ -97,8 +97,8 @@ public class User extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Пароль <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link User#getPassword() password}' feature.
+   * @param newPassword
+   *          the new value of the '{@link User#getPassword() password}' feature.
    * @generated
    */
   public void setPassword(String newPassword) {
@@ -122,8 +122,8 @@ public class User extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Группа <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link User#getGroup() group}' feature.
+   * @param newGroup
+   *          the new value of the '{@link User#getGroup() group}' feature.
    * @generated
    */
   public void setGroup(UserGroup newGroup) {

@@ -46,9 +46,7 @@ public class Car extends Identifiable {
   private CarRegInfo regInfo = null;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС
-   * 
-   * <!-- end-model-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -73,8 +71,8 @@ public class Car extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Модель <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Car#getModel() model}' feature.
+   * @param newModel
+   *          the new value of the '{@link Car#getModel() model}' feature.
    * @generated
    */
   public void setModel(CarModel newModel) {
@@ -100,8 +98,8 @@ public class Car extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Свидетельство о регистрации <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Car#getRegInfo() regInfo}' feature.
+   * @param newRegInfo
+   *          the new value of the '{@link Car#getRegInfo() regInfo}' feature.
    * @generated
    */
   public void setRegInfo(CarRegInfo newRegInfo) {
@@ -111,9 +109,7 @@ public class Car extends Identifiable {
   /**
    * Returns the value of '<em><b>carPassport</b></em>' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС
-   * 
-   * <!-- end-model-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>carPassport</b></em>' feature
    * @generated
@@ -125,12 +121,10 @@ public class Car extends Identifiable {
   /**
    * Sets the '{@link Car#getCarPassport() <em>carPassport</em>}' feature.
    * 
-   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС
+   * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ПТС <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link Car#getCarPassport() carPassport}' feature.
+   * @param newCarPassport
+   *          the new value of the '{@link Car#getCarPassport() carPassport}' feature.
    * @generated
    */
   public void setCarPassport(CarPassport newCarPassport) {

@@ -112,8 +112,8 @@ public class Contract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата подписания <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contract#getSignDate() signDate}' feature.
+   * @param newSignDate
+   *          the new value of the '{@link Contract#getSignDate() signDate}' feature.
    * @generated
    */
   public void setSignDate(Date newSignDate) {
@@ -187,8 +187,8 @@ public class Contract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> ТС <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contract#getCar() car}' feature.
+   * @param newCar
+   *          the new value of the '{@link Contract#getCar() car}' feature.
    * @generated
    */
   public void setCar(Car newCar) {
@@ -224,8 +224,8 @@ public class Contract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер контракта <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Contract#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link Contract#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {

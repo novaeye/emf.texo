@@ -346,6 +346,8 @@ public class AlgorithmsModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static AlgorithmsModelPackage initialize() {
@@ -922,7 +924,8 @@ public class AlgorithmsModelPackage extends ModelPackage {
       return PlatformGraphicsAlgorithm.class;
     case MULTITEXT_CLASSIFIER_ID:
       return MultiText.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

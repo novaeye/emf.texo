@@ -47,6 +47,9 @@ public abstract class PropertyContainer extends Identifiable {
   /**
    * Adds to the <em>properties</em> feature.
    * 
+   * @param propertiesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToProperties(Property propertiesValue) {
@@ -57,6 +60,9 @@ public abstract class PropertyContainer extends Identifiable {
 
   /**
    * Removes from the <em>properties</em> feature.
+   * 
+   * @param propertiesValue
+   *          the value to remove
    * 
    * @generated
    */

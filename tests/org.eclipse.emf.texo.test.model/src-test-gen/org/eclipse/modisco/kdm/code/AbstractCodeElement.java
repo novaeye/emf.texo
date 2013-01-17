@@ -76,6 +76,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
   /**
    * Adds to the <em>source</em> feature.
    * 
+   * @param sourceValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -86,6 +89,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Removes from the <em>source</em> feature.
+   * 
+   * @param sourceValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -134,6 +140,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
   /**
    * Adds to the <em>comment</em> feature.
    * 
+   * @param commentValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToComment(CommentUnit commentValue) {
@@ -144,6 +153,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Removes from the <em>comment</em> feature.
+   * 
+   * @param commentValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -192,6 +204,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
   /**
    * Adds to the <em>codeRelation</em> feature.
    * 
+   * @param codeRelationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeRelation(AbstractCodeRelationship codeRelationValue) {
@@ -202,6 +217,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Removes from the <em>codeRelation</em> feature.
+   * 
+   * @param codeRelationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -250,6 +268,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
   /**
    * Adds to the <em>entryFlow</em> feature.
    * 
+   * @param entryFlowValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEntryFlow(EntryFlow entryFlowValue) {
@@ -260,6 +281,9 @@ public abstract class AbstractCodeElement extends KDMEntity {
 
   /**
    * Removes from the <em>entryFlow</em> feature.
+   * 
+   * @param entryFlowValue
+   *          the value to remove
    * 
    * @generated
    */

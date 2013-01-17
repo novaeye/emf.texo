@@ -48,6 +48,9 @@ public class BooksType extends Identifiable {
   /**
    * Adds to the <em>book</em> feature.
    * 
+   * @param bookValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBook(BookType bookValue) {
@@ -58,6 +61,9 @@ public class BooksType extends Identifiable {
 
   /**
    * Removes from the <em>book</em> feature.
+   * 
+   * @param bookValue
+   *          the value to remove
    * 
    * @generated
    */

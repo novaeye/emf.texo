@@ -38,8 +38,10 @@ public class NestedgroupModelFactory implements ModelFactory {
       return createCType();
     case NestedgroupModelPackage.ELEMENT_CLASSIFIER_ID:
       return createElement();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -75,7 +77,7 @@ public class NestedgroupModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -166,8 +168,9 @@ public class NestedgroupModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -181,12 +184,16 @@ public class NestedgroupModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>A</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -222,8 +229,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         return getTarget().getB();
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         return getTarget().getC();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -246,8 +254,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().setC((List<CType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -269,8 +278,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().getC().add((CType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -292,13 +302,17 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().getC().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -330,8 +344,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         return getTarget().getCname();
       case NestedgroupModelPackage.CTYPE_CVALUE_FEATURE_ID:
         return getTarget().getCvalue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -347,8 +362,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.CTYPE_CVALUE_FEATURE_ID:
         getTarget().setCvalue((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -359,8 +375,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -371,13 +388,17 @@ public class NestedgroupModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -415,8 +436,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         return getTarget().getC();
       case NestedgroupModelPackage.ELEMENT_RECURSIVE_FEATURE_ID:
         return getTarget().getRecursive();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -442,8 +464,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.ELEMENT_RECURSIVE_FEATURE_ID:
         getTarget().setRecursive((Element) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -466,8 +489,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         getTarget().getC().add((CType) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -490,14 +514,17 @@ public class NestedgroupModelFactory implements ModelFactory {
         getTarget().getC().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>A.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class AGroupFeatureGroupModelFeatureMapEntry<E extends AGroupFeatureGroup> extends
@@ -512,8 +539,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         return NestedgroupModelPackage.INSTANCE.getA_B();
       case C:
         return NestedgroupModelPackage.INSTANCE.getA_C();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -529,8 +557,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.A_C_FEATURE_ID:
         getTarget().setFeature(AGroupFeatureGroup.Feature.C);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -551,6 +580,8 @@ public class NestedgroupModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Element.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class ElementMixedFeatureGroupModelFeatureMapEntry<E extends ElementMixedFeatureGroup> extends
@@ -575,8 +606,9 @@ public class NestedgroupModelFactory implements ModelFactory {
         return NestedgroupModelPackage.INSTANCE.getElement_C();
       case RECURSIVE:
         return NestedgroupModelPackage.INSTANCE.getElement_Recursive();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -608,8 +640,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.ELEMENT_RECURSIVE_FEATURE_ID:
         getTarget().setFeature(ElementMixedFeatureGroup.Feature.RECURSIVE);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -630,6 +663,8 @@ public class NestedgroupModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Element.true_</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class ElementTrue_FeatureGroupModelFeatureMapEntry<E extends ElementTrue_FeatureGroup> extends
@@ -642,8 +677,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case C:
         return NestedgroupModelPackage.INSTANCE.getElement_C();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -656,8 +692,9 @@ public class NestedgroupModelFactory implements ModelFactory {
       case NestedgroupModelPackage.ELEMENT_C_FEATURE_ID:
         getTarget().setFeature(ElementTrue_FeatureGroup.Feature.C);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -674,5 +711,4 @@ public class NestedgroupModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

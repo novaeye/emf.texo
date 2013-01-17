@@ -45,8 +45,10 @@ public class CapaModelFactory implements ModelFactory {
       return createProduction();
     case CapaModelPackage.WORKDAY_CLASSIFIER_ID:
       return createWorkDay();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -94,7 +96,7 @@ public class CapaModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -143,6 +145,26 @@ public class CapaModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass WorkWeek
+   * @generated
+   */
+  public WorkWeek createWorkWeek() {
+    return new WorkWeek();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Task
+   * @generated
+   */
+  public Task createTask() {
+    return new Task();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass MachineList
    * @generated
    */
@@ -158,16 +180,6 @@ public class CapaModelFactory implements ModelFactory {
    */
   public Production createProduction() {
     return new Production();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Task
-   * @generated
-   */
-  public Task createTask() {
-    return new Task();
   }
 
   /**
@@ -191,8 +203,9 @@ public class CapaModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -206,12 +219,16 @@ public class CapaModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CapacityEntry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -244,8 +261,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getCapacityEntryId();
       case CapaModelPackage.CAPACITYENTRY_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -261,8 +279,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.CAPACITYENTRY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -273,8 +292,9 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -285,13 +305,17 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Machine</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -331,8 +355,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getMultiplicity();
       case CapaModelPackage.MACHINE_TASKSEARCHSTRING_FEATURE_ID:
         return getTarget().getTaskSearchString();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -361,8 +386,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.MACHINE_TASKSEARCHSTRING_FEATURE_ID:
         getTarget().setTaskSearchString((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -377,8 +403,9 @@ public class CapaModelFactory implements ModelFactory {
         getTarget().getTasks().add((Task) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -393,13 +420,17 @@ public class CapaModelFactory implements ModelFactory {
         getTarget().getTasks().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -432,8 +463,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getDays();
       case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
         return getTarget().getWorkWeekId();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -450,8 +482,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.WORKWEEK_WORKWEEKID_FEATURE_ID:
         getTarget().setWorkWeekId((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -466,8 +499,9 @@ public class CapaModelFactory implements ModelFactory {
         getTarget().getDays().add((WorkDay) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -482,13 +516,17 @@ public class CapaModelFactory implements ModelFactory {
         getTarget().getDays().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -528,8 +566,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getTimePerPice();
       case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
         return getTarget().getTimePerPreperation();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -557,8 +596,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.TASK_TIMEPERPREPERATION_FEATURE_ID:
         getTarget().setTimePerPreperation((Float) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -569,8 +609,9 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -581,13 +622,17 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>MachineList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -618,8 +663,9 @@ public class CapaModelFactory implements ModelFactory {
       switch (featureID) {
       case CapaModelPackage.MACHINELIST_MACHINES_FEATURE_ID:
         return getTarget().getMachines();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -633,8 +679,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.MACHINELIST_MACHINES_FEATURE_ID:
         getTarget().setMachines((List<Machine>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -648,8 +695,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.MACHINELIST_MACHINES_FEATURE_ID:
         getTarget().getMachines().add((Machine) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -663,13 +711,17 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.MACHINELIST_MACHINES_FEATURE_ID:
         getTarget().getMachines().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Production</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -710,8 +762,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getStartTime();
       case CapaModelPackage.PRODUCTION_TOTALAMOUNT_FEATURE_ID:
         return getTarget().getTotalAmount();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -739,8 +792,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.PRODUCTION_TOTALAMOUNT_FEATURE_ID:
         getTarget().setTotalAmount((Float) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -751,8 +805,9 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -763,13 +818,17 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>WorkDay</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -803,8 +862,9 @@ public class CapaModelFactory implements ModelFactory {
         return getTarget().getDuration();
       case CapaModelPackage.WORKDAY_STARTTIME_FEATURE_ID:
         return getTarget().getStartTime();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -823,8 +883,9 @@ public class CapaModelFactory implements ModelFactory {
       case CapaModelPackage.WORKDAY_STARTTIME_FEATURE_ID:
         getTarget().setStartTime((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -835,8 +896,9 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -847,19 +909,9 @@ public class CapaModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass WorkWeek
-   * @generated
-   */
-  public WorkWeek createWorkWeek() {
-    return new WorkWeek();
-  }
-
 }

@@ -95,8 +95,8 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сумма платежа <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentItem#getSum() sum}' feature.
+   * @param newSum
+   *          the new value of the '{@link PaymentItem#getSum() sum}' feature.
    * @generated
    */
   public void setSum(BigDecimal newSum) {
@@ -145,8 +145,8 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата платежа <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentItem#getDate() date}' feature.
+   * @param newDate
+   *          the new value of the '{@link PaymentItem#getDate() date}' feature.
    * @generated
    */
   public void setDate(Date newDate) {
@@ -170,8 +170,8 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Описание <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentItem#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link PaymentItem#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {
@@ -195,8 +195,8 @@ public abstract class PaymentItem extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип платежа <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link PaymentItem#getPaymentType() paymentType}' feature.
+   * @param newPaymentType
+   *          the new value of the '{@link PaymentItem#getPaymentType() paymentType}' feature.
    * @generated
    */
   public void setPaymentType(PaymentType newPaymentType) {

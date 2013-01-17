@@ -104,6 +104,8 @@ public class TexoExtensionsModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static TexoExtensionsModelPackage initialize() {
@@ -262,7 +264,8 @@ public class TexoExtensionsModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case DOCUMENTROOT_CLASSIFIER_ID:
       return DocumentRoot.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

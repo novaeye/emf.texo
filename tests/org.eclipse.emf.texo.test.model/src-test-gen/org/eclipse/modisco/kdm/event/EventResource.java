@@ -43,6 +43,9 @@ public class EventResource extends AbstractEventElement {
   /**
    * Adds to the <em>eventElement</em> feature.
    * 
+   * @param eventElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEventElement(AbstractEventElement eventElementValue) {
@@ -53,6 +56,9 @@ public class EventResource extends AbstractEventElement {
 
   /**
    * Removes from the <em>eventElement</em> feature.
+   * 
+   * @param eventElementValue
+   *          the value to remove
    * 
    * @generated
    */

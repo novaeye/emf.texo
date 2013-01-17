@@ -212,6 +212,8 @@ public class ResponseModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static ResponseModelPackage initialize() {
@@ -547,7 +549,8 @@ public class ResponseModelPackage extends ModelPackage {
       return ResponseType.class;
     case RESULTTYPE_CLASSIFIER_ID:
       return ResultType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

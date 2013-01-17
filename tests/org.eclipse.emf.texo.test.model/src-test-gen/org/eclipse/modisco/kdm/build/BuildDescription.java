@@ -54,6 +54,9 @@ public class BuildDescription extends BuildResource {
   /**
    * Adds to the <em>source</em> feature.
    * 
+   * @param sourceValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -64,6 +67,9 @@ public class BuildDescription extends BuildResource {
 
   /**
    * Removes from the <em>source</em> feature.
+   * 
+   * @param sourceValue
+   *          the value to remove
    * 
    * @generated
    */

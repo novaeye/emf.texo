@@ -30,6 +30,7 @@ public class Book extends CirculatingItem {
    */
   @Basic()
   private String title = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -37,6 +38,7 @@ public class Book extends CirculatingItem {
    */
   @Basic()
   private int pages = 100;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -45,6 +47,7 @@ public class Book extends CirculatingItem {
   @Basic()
   @Enumerated(EnumType.STRING)
   private BookCategory category = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

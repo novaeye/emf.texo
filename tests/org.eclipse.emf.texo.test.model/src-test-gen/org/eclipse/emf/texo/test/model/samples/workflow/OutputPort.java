@@ -84,6 +84,9 @@ public class OutputPort extends Port {
   /**
    * Adds to the <em>edges</em> feature.
    * 
+   * @param edgesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEdges(Edge edgesValue) {
@@ -94,6 +97,9 @@ public class OutputPort extends Port {
 
   /**
    * Removes from the <em>edges</em> feature.
+   * 
+   * @param edgesValue
+   *          the value to remove
    * 
    * @generated
    */

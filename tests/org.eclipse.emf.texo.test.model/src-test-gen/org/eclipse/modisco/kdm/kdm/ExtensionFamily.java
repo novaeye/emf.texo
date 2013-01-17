@@ -53,6 +53,9 @@ public class ExtensionFamily extends Element {
   /**
    * Adds to the <em>stereotype</em> feature.
    * 
+   * @param stereotypeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStereotype(Stereotype stereotypeValue) {
@@ -63,6 +66,9 @@ public class ExtensionFamily extends Element {
 
   /**
    * Removes from the <em>stereotype</em> feature.
+   * 
+   * @param stereotypeValue
+   *          the value to remove
    * 
    * @generated
    */

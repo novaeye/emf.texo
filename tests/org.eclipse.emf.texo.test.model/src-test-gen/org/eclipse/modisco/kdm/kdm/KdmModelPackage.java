@@ -303,6 +303,8 @@ public class KdmModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static KdmModelPackage initialize() {
@@ -796,7 +798,8 @@ public class KdmModelPackage extends ModelPackage {
       return TaggedValue.class;
     case TAGGEDREF_CLASSIFIER_ID:
       return TaggedRef.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

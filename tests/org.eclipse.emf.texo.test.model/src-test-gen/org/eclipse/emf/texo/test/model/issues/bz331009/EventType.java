@@ -13,8 +13,8 @@ import java.util.List;
 public enum EventType {
 
   /**
-   * The enum: COORDINATES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
-   * end-model-doc -->
+   * The enum: COORDINATES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сообщение с
+   * координатами <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -30,8 +30,8 @@ public enum EventType {
     }
   },
   /**
-   * The enum: SENSOR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
-   * end-model-doc -->
+   * The enum: SENSOR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сообщение о сработке
+   * датчика <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -47,8 +47,8 @@ public enum EventType {
     }
   },
   /**
-   * The enum: ALARM <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип события <!--
-   * end-model-doc -->
+   * The enum: ALARM <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Сообщение о нажатии
+   * тревожной кнопки <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -83,6 +83,9 @@ public enum EventType {
    * Returns the '<em><b>EventType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the EventType, the literal enum class
    * @generated
    */
   public static EventType get(String literal) {
@@ -99,6 +102,9 @@ public enum EventType {
    * Returns the '<em><b>EventType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the EventType, the literal enum class
    * @generated
    */
   public static EventType getByName(String name) {
@@ -115,6 +121,9 @@ public enum EventType {
    * Returns the '<em><b>EventType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the EventType, the literal enum
    * @generated
    */
   public static EventType get(int value) {
@@ -191,6 +200,7 @@ public enum EventType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -200,6 +210,7 @@ public enum EventType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -209,6 +220,7 @@ public enum EventType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

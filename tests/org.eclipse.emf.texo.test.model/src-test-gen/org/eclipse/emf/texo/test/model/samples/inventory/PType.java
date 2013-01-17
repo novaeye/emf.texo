@@ -178,6 +178,9 @@ public class PType extends Identifiable {
   /**
    * Adds to the <em>subTypes</em> feature.
    * 
+   * @param subTypesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSubTypes(PType subTypesValue) {
@@ -186,6 +189,9 @@ public class PType extends Identifiable {
 
   /**
    * Removes from the <em>subTypes</em> feature.
+   * 
+   * @param subTypesValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -234,6 +240,9 @@ public class PType extends Identifiable {
   /**
    * Adds to the <em>subNOTypes</em> feature.
    * 
+   * @param subNOTypesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSubNOTypes(PType subNOTypesValue) {
@@ -242,6 +251,9 @@ public class PType extends Identifiable {
 
   /**
    * Removes from the <em>subNOTypes</em> feature.
+   * 
+   * @param subNOTypesValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -290,6 +302,9 @@ public class PType extends Identifiable {
   /**
    * Adds to the <em>infoReferences</em> feature.
    * 
+   * @param infoReferencesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInfoReferences(PDeclaration infoReferencesValue) {
@@ -298,6 +313,9 @@ public class PType extends Identifiable {
 
   /**
    * Removes from the <em>infoReferences</em> feature.
+   * 
+   * @param infoReferencesValue
+   *          the value to remove
    * 
    * @generated
    */

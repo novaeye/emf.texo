@@ -47,6 +47,9 @@ public class FreeFormConnection extends Connection {
   /**
    * Adds to the <em>bendpoints</em> feature.
    * 
+   * @param bendpointsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBendpoints(Point bendpointsValue) {
@@ -57,6 +60,9 @@ public class FreeFormConnection extends Connection {
 
   /**
    * Removes from the <em>bendpoints</em> feature.
+   * 
+   * @param bendpointsValue
+   *          the value to remove
    * 
    * @generated
    */

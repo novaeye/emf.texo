@@ -45,8 +45,10 @@ public class SunBooksModelFactory implements ModelFactory {
       return createCollectionType();
     case SunBooksModelPackage.DOCUMENTROOT_CLASSIFIER_ID:
       return createDocumentRoot();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -91,7 +93,7 @@ public class SunBooksModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -158,6 +160,16 @@ public class SunBooksModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass PromotionType
+   * @generated
+   */
+  public PromotionType createPromotionType() {
+    return new PromotionType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass CollectionType
    * @generated
    */
@@ -194,8 +206,9 @@ public class SunBooksModelFactory implements ModelFactory {
       return createBookCategoryTypeObjectFromString(value);
     case SunBooksModelPackage.BOOKCATEGORYTYPEOBJECT1_CLASSIFIER_ID:
       return createBookCategoryTypeObject1FromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -217,48 +230,9 @@ public class SunBooksModelFactory implements ModelFactory {
       return convertBookCategoryTypeObjectToString((BookCategoryType) value);
     case SunBooksModelPackage.BOOKCATEGORYTYPEOBJECT1_CLASSIFIER_ID:
       return convertBookCategoryTypeObject1ToString((BookCategoryType1) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass PromotionType
-   * @generated
-   */
-  public PromotionType createPromotionType() {
-    return new PromotionType();
-  }
-
-  /**
-   * Converts the EDataType: BookCategoryType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertBookCategoryTypeToString(BookCategoryType value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: BookCategoryType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public BookCategoryType createBookCategoryTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return BookCategoryType.get(value);
   }
 
   /**
@@ -290,6 +264,36 @@ public class SunBooksModelFactory implements ModelFactory {
       return null;
     }
     return BookCategoryType1.get(value);
+  }
+
+  /**
+   * Converts the EDataType: BookCategoryType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertBookCategoryTypeToString(BookCategoryType value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: BookCategoryType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public BookCategoryType createBookCategoryTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return BookCategoryType.get(value);
   }
 
   /**
@@ -357,6 +361,9 @@ public class SunBooksModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>AuthorsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class AuthorsTypeModelObject<E extends AuthorsType> extends
@@ -386,8 +393,9 @@ public class SunBooksModelFactory implements ModelFactory {
       switch (featureID) {
       case SunBooksModelPackage.AUTHORSTYPE_AUTHORNAME_FEATURE_ID:
         return getTarget().getAuthorName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -401,8 +409,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.AUTHORSTYPE_AUTHORNAME_FEATURE_ID:
         getTarget().setAuthorName((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -416,8 +425,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.AUTHORSTYPE_AUTHORNAME_FEATURE_ID:
         getTarget().getAuthorName().add((String) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -431,13 +441,17 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.AUTHORSTYPE_AUTHORNAME_FEATURE_ID:
         getTarget().getAuthorName().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>BooksType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -468,8 +482,9 @@ public class SunBooksModelFactory implements ModelFactory {
       switch (featureID) {
       case SunBooksModelPackage.BOOKSTYPE_BOOK_FEATURE_ID:
         return getTarget().getBook();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -483,8 +498,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.BOOKSTYPE_BOOK_FEATURE_ID:
         getTarget().setBook((List<BookType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -498,8 +514,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.BOOKSTYPE_BOOK_FEATURE_ID:
         getTarget().getBook().add((BookType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -513,13 +530,17 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.BOOKSTYPE_BOOK_FEATURE_ID:
         getTarget().getBook().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>BookType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -566,8 +587,9 @@ public class SunBooksModelFactory implements ModelFactory {
         return getTarget().getBookCategory();
       case SunBooksModelPackage.BOOKTYPE_ITEMID_FEATURE_ID:
         return getTarget().getItemId();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -604,8 +626,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.BOOKTYPE_ITEMID_FEATURE_ID:
         getTarget().setItemId((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -616,8 +639,9 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -628,13 +652,17 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PromotionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -667,8 +695,9 @@ public class SunBooksModelFactory implements ModelFactory {
         return getTarget().getDiscount();
       case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
         return getTarget().getNone();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -684,8 +713,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.PROMOTIONTYPE_NONE_FEATURE_ID:
         getTarget().setNone((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -696,8 +726,9 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -708,13 +739,17 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CollectionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -745,8 +780,9 @@ public class SunBooksModelFactory implements ModelFactory {
       switch (featureID) {
       case SunBooksModelPackage.COLLECTIONTYPE_BOOKS_FEATURE_ID:
         return getTarget().getBooks();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -759,8 +795,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.COLLECTIONTYPE_BOOKS_FEATURE_ID:
         getTarget().setBooks((BooksType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -771,8 +808,9 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -783,13 +821,17 @@ public class SunBooksModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -826,8 +868,9 @@ public class SunBooksModelFactory implements ModelFactory {
         return getTarget().getXSISchemaLocation();
       case SunBooksModelPackage.DOCUMENTROOT_COLLECTION_FEATURE_ID:
         return getTarget().getCollection();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -850,8 +893,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.DOCUMENTROOT_COLLECTION_FEATURE_ID:
         getTarget().setCollection((CollectionType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -866,8 +910,9 @@ public class SunBooksModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -882,14 +927,17 @@ public class SunBooksModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -908,8 +956,9 @@ public class SunBooksModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case COLLECTION:
         return SunBooksModelPackage.INSTANCE.getDocumentRoot_Collection();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -932,8 +981,9 @@ public class SunBooksModelFactory implements ModelFactory {
       case SunBooksModelPackage.DOCUMENTROOT_COLLECTION_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.COLLECTION);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -950,5 +1000,4 @@ public class SunBooksModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

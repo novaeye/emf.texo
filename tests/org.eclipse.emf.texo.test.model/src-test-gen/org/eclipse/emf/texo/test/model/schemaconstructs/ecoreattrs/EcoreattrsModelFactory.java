@@ -40,8 +40,10 @@ public class EcoreattrsModelFactory implements ModelFactory {
       return createFeature();
     case EcoreattrsModelPackage.MIXED_CLASSIFIER_ID:
       return createMixed();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -80,7 +82,7 @@ public class EcoreattrsModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -143,6 +145,16 @@ public class EcoreattrsModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass NameList
+   * @generated
+   */
+  public NameList createNameList() {
+    return new NameList();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Feature
    * @generated
    */
@@ -161,16 +173,6 @@ public class EcoreattrsModelFactory implements ModelFactory {
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass NameList
-   * @generated
-   */
-  public NameList createNameList() {
-    return new NameList();
-  }
-
-  /**
    * Converts an instance of an {@link EDataType} to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eDataType
@@ -181,8 +183,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -196,12 +199,16 @@ public class EcoreattrsModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Element</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -233,8 +240,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return getTarget().getNameMap();
       case EcoreattrsModelPackage.ELEMENT_NAMES_FEATURE_ID:
         return getTarget().getNames();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -251,8 +259,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.ELEMENT_NAMES_FEATURE_ID:
         getTarget().setNames((NameList) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -267,8 +276,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getNameMap().add((ElementNameMapFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -283,13 +293,17 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getNameMap().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>NameList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -324,8 +338,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return getTarget().getMiddleName();
       case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
         return getTarget().getLastName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -344,8 +359,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.NAMELIST_LASTNAME_FEATURE_ID:
         getTarget().setLastName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -356,8 +372,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -368,13 +385,17 @@ public class EcoreattrsModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Feature</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -408,8 +429,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return getTarget().getName();
       case EcoreattrsModelPackage.FEATURE_VALUE__FEATURE_ID:
         return getTarget().getValue_();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -429,8 +451,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.FEATURE_VALUE__FEATURE_ID:
         getTarget().setValue_((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -445,8 +468,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getAMap().add((FeatureAMapFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -461,13 +485,17 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getAMap().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Mixed</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -501,8 +529,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return getTarget().getName();
       case EcoreattrsModelPackage.MIXED_VALUE__FEATURE_ID:
         return getTarget().getValue_();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -522,8 +551,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.MIXED_VALUE__FEATURE_ID:
         getTarget().setValue_((Double) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -538,8 +568,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getMixed().add((MixedMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -554,14 +585,17 @@ public class EcoreattrsModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Element.nameMap</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class ElementNameMapFeatureGroupModelFeatureMapEntry<E extends ElementNameMapFeatureGroup> extends
@@ -574,8 +608,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case NAMES:
         return EcoreattrsModelPackage.INSTANCE.getElement_Names();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -588,8 +623,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.ELEMENT_NAMES_FEATURE_ID:
         getTarget().setFeature(ElementNameMapFeatureGroup.Feature.NAMES);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -610,6 +646,8 @@ public class EcoreattrsModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Feature.aMap</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class FeatureAMapFeatureGroupModelFeatureMapEntry<E extends FeatureAMapFeatureGroup> extends
@@ -624,8 +662,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return EcoreattrsModelPackage.INSTANCE.getFeature_Name();
       case VALUE_:
         return EcoreattrsModelPackage.INSTANCE.getFeature_Value_();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -641,8 +680,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.FEATURE_VALUE__FEATURE_ID:
         getTarget().setFeature(FeatureAMapFeatureGroup.Feature.VALUE_);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -663,6 +703,8 @@ public class EcoreattrsModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Mixed.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class MixedMixedFeatureGroupModelFeatureMapEntry<E extends MixedMixedFeatureGroup> extends
@@ -683,8 +725,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
         return EcoreattrsModelPackage.INSTANCE.getMixed_Name();
       case VALUE_:
         return EcoreattrsModelPackage.INSTANCE.getMixed_Value_();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -710,8 +753,9 @@ public class EcoreattrsModelFactory implements ModelFactory {
       case EcoreattrsModelPackage.MIXED_VALUE__FEATURE_ID:
         getTarget().setFeature(MixedMixedFeatureGroup.Feature.VALUE_);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -728,5 +772,4 @@ public class EcoreattrsModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

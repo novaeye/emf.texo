@@ -101,6 +101,8 @@ public class Bz306546ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Bz306546ModelPackage initialize() {
@@ -198,7 +200,7 @@ public class Bz306546ModelPackage extends ModelPackage {
    * Returns the {@link EStructuralFeature} '<em><b>MySerializableClass.somethingInteresting</b></em>'. <!--
    * begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>MySerializableClass.somethingInteresting</b></em> '.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>MySerializableClass.somethingInteresting</b></em>'.
    * @generated
    */
   public EAttribute getMySerializableClass_SomethingInteresting() {
@@ -257,7 +259,8 @@ public class Bz306546ModelPackage extends ModelPackage {
       return MySerializableClass.class;
     case NONEMF_CLASSIFIER_ID:
       return NonEMF.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

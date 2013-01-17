@@ -99,6 +99,9 @@ public class JournalGroup extends Identifiable {
   /**
    * Adds to the <em>journalGroups</em> feature.
    * 
+   * @param journalGroupsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToJournalGroups(JournalGroup journalGroupsValue) {
@@ -109,6 +112,9 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Removes from the <em>journalGroups</em> feature.
+   * 
+   * @param journalGroupsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -157,6 +163,9 @@ public class JournalGroup extends Identifiable {
   /**
    * Adds to the <em>journalStatements</em> feature.
    * 
+   * @param journalStatementsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToJournalStatements(JournalStatement journalStatementsValue) {
@@ -167,6 +176,9 @@ public class JournalGroup extends Identifiable {
 
   /**
    * Removes from the <em>journalStatements</em> feature.
+   * 
+   * @param journalStatementsValue
+   *          the value to remove
    * 
    * @generated
    */

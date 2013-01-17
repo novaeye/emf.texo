@@ -15,7 +15,6 @@ import org.eclipse.persistence.annotations.Converters;
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 public class PLAccount extends Account {
-
   /**
    * @generated
    */

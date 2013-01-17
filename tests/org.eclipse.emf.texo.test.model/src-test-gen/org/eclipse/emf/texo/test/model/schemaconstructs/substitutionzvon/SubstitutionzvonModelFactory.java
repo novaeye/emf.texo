@@ -44,8 +44,10 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       return createDocumentRoot();
     case SubstitutionzvonModelPackage.ROOTTYPE_CLASSIFIER_ID:
       return createRootType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -87,7 +89,7 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -208,8 +210,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       return createEvenTypeObjectFromString(value);
     case SubstitutionzvonModelPackage.ODDTYPEOBJECT_CLASSIFIER_ID:
       return createOddTypeObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -233,38 +236,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       return convertEvenTypeObjectToString((EvenType) value);
     case SubstitutionzvonModelPackage.ODDTYPEOBJECT_CLASSIFIER_ID:
       return convertOddTypeObjectToString((OddType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * Converts the EDataType: AAA to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertAAAToString(BigInteger value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: AAA from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public BigInteger createAAAFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new BigInteger(value);
   }
 
   /**
@@ -298,33 +272,33 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: EvenTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: AAA to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
-  public String convertEvenTypeObjectToString(EvenType value) {
+  public String convertAAAToString(BigInteger value) {
     if (value == null) {
       return null;
     }
-    return convertEvenTypeToString(value);
+    return value.toString();
   }
 
   /**
-   * Creates an instance of the EDataType: EvenTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the EDataType: AAA from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
    * @generated
    */
-  public EvenType createEvenTypeObjectFromString(String value) {
+  public BigInteger createAAAFromString(String value) {
     if (value == null) {
       return null;
     }
-    return createEvenTypeFromString(value);
+    return new BigInteger(value);
   }
 
   /**
@@ -355,6 +329,36 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       return null;
     }
     return OddType.get(value);
+  }
+
+  /**
+   * Converts the EDataType: EvenTypeObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertEvenTypeObjectToString(EvenType value) {
+    if (value == null) {
+      return null;
+    }
+    return convertEvenTypeToString(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: EvenTypeObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public EvenType createEvenTypeObjectFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return createEvenTypeFromString(value);
   }
 
   /**
@@ -390,6 +394,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>ComplexAAA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ComplexAAAModelObject<E extends ComplexAAA> extends
@@ -419,8 +426,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       switch (featureID) {
       case SubstitutionzvonModelPackage.COMPLEXAAA_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -433,8 +441,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.COMPLEXAAA_VALUE_FEATURE_ID:
         getTarget().setValue((Long) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -445,8 +454,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -457,13 +467,17 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ComplexEvenType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -491,8 +505,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -502,8 +517,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -513,8 +529,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -524,13 +541,17 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ComplexOddType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -558,8 +579,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -569,8 +591,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -580,8 +603,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -591,13 +615,17 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -646,8 +674,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         return getTarget().getOdd();
       case SubstitutionzvonModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         return getTarget().getRoot();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -682,8 +711,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         getTarget().setRoot((RootType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -698,8 +728,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -714,13 +745,17 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>RootType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -757,8 +792,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         return getTarget().getMyComplexAbstractGroup();
       case SubstitutionzvonModelPackage.ROOTTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         return getTarget().getMyComplexAbstract();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -775,8 +811,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.ROOTTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
         getTarget().setMyComplexAbstractGroup((List<RootTypeMyComplexAbstractGroupFeatureGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -795,8 +832,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().add((RootTypeMyComplexAbstractGroupFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -815,14 +853,17 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         getTarget().getMyComplexAbstractGroup().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -853,8 +894,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
         return SubstitutionzvonModelPackage.INSTANCE.getDocumentRoot_Odd();
       case ROOT:
         return SubstitutionzvonModelPackage.INSTANCE.getDocumentRoot_Root();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -895,8 +937,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.ROOT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -917,6 +960,8 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>RootType.myAbstractGroup</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class RootTypeMyAbstractGroupFeatureGroupModelFeatureMapEntry<E extends RootTypeMyAbstractGroupFeatureGroup>
@@ -929,8 +974,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case MYABSTRACT:
         return SubstitutionzvonModelPackage.INSTANCE.getRootType_MyAbstract();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -943,8 +989,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.ROOTTYPE_MYABSTRACT_FEATURE_ID:
         getTarget().setFeature(RootTypeMyAbstractGroupFeatureGroup.Feature.MYABSTRACT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -965,6 +1012,8 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>RootType.myComplexAbstractGroup</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class RootTypeMyComplexAbstractGroupFeatureGroupModelFeatureMapEntry<E extends RootTypeMyComplexAbstractGroupFeatureGroup>
@@ -977,8 +1026,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       switch (getTarget().getFeature()) {
       case MYCOMPLEXABSTRACT:
         return SubstitutionzvonModelPackage.INSTANCE.getRootType_MyComplexAbstract();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -991,8 +1041,9 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       case SubstitutionzvonModelPackage.ROOTTYPE_MYCOMPLEXABSTRACT_FEATURE_ID:
         getTarget().setFeature(RootTypeMyComplexAbstractGroupFeatureGroup.Feature.MYCOMPLEXABSTRACT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1009,5 +1060,4 @@ public class SubstitutionzvonModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

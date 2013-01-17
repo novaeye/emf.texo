@@ -63,6 +63,9 @@ public class SourceRef extends Element {
   /**
    * Adds to the <em>region</em> feature.
    * 
+   * @param regionValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToRegion(SourceRegion regionValue) {
@@ -73,6 +76,9 @@ public class SourceRef extends Element {
 
   /**
    * Removes from the <em>region</em> feature.
+   * 
+   * @param regionValue
+   *          the value to remove
    * 
    * @generated
    */

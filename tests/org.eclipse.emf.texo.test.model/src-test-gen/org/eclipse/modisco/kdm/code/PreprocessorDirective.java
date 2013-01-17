@@ -44,6 +44,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -54,6 +57,9 @@ public class PreprocessorDirective extends AbstractCodeElement {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

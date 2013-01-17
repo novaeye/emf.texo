@@ -43,8 +43,10 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       return createItem();
     case SchemaprimerpoModelPackage.USADDRESS_CLASSIFIER_ID:
       return createUSAddress();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -83,7 +85,7 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -130,21 +132,21 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass Item
-   * @generated
-   */
-  public Item createItem() {
-    return new Item();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass PurchaseOrder
    * @generated
    */
   public PurchaseOrder createPurchaseOrder() {
     return new PurchaseOrder();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Item
+   * @generated
+   */
+  public Item createItem() {
+    return new Item();
   }
 
   /**
@@ -172,8 +174,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       return createQuantityTypeFromString(value);
     case SchemaprimerpoModelPackage.SKU_CLASSIFIER_ID:
       return createSKUFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -191,8 +194,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       return convertQuantityTypeToString((BigInteger) value);
     case SchemaprimerpoModelPackage.SKU_CLASSIFIER_ID:
       return convertSKUToString((String) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -258,6 +262,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class DocumentRootModelObject<E extends DocumentRoot> extends
@@ -295,8 +302,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return getTarget().getComment_();
       case SchemaprimerpoModelPackage.DOCUMENTROOT_ORDER_FEATURE_ID:
         return getTarget().getOrder();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -322,8 +330,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       case SchemaprimerpoModelPackage.DOCUMENTROOT_ORDER_FEATURE_ID:
         getTarget().setOrder((PurchaseOrder) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -338,8 +347,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -354,13 +364,17 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -399,8 +413,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return getTarget().getItems();
       case SchemaprimerpoModelPackage.PURCHASEORDER_ORDERDATE_FEATURE_ID:
         return getTarget().getOrderDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -426,8 +441,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       case SchemaprimerpoModelPackage.PURCHASEORDER_ORDERDATE_FEATURE_ID:
         getTarget().setOrderDate((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -442,8 +458,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         getTarget().getItems().add((Item) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -458,13 +475,17 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         getTarget().getItems().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -504,8 +525,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return getTarget().getShipDate();
       case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
         return getTarget().getPartNum();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -533,8 +555,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       case SchemaprimerpoModelPackage.ITEM_PARTNUM_FEATURE_ID:
         getTarget().setPartNum((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -545,8 +568,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -557,13 +581,17 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -604,8 +632,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return getTarget().getZip();
       case SchemaprimerpoModelPackage.USADDRESS_COUNTRY_FEATURE_ID:
         return getTarget().getCountry();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -633,8 +662,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       case SchemaprimerpoModelPackage.USADDRESS_COUNTRY_FEATURE_ID:
         getTarget().setCountry((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -645,8 +675,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -657,14 +688,17 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -685,8 +719,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
         return SchemaprimerpoModelPackage.INSTANCE.getDocumentRoot_Comment_();
       case ORDER:
         return SchemaprimerpoModelPackage.INSTANCE.getDocumentRoot_Order();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -712,8 +747,9 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       case SchemaprimerpoModelPackage.DOCUMENTROOT_ORDER_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.ORDER);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -730,5 +766,4 @@ public class SchemaprimerpoModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

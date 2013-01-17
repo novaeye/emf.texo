@@ -138,14 +138,14 @@ public class RequestModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int QUERYTYPE_QUERY_FEATURE_ID = 3;
+  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int QUERYTYPE_NAMEDQUERY_FEATURE_ID = 2;
+  public static final int QUERYTYPE_QUERY_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -247,6 +247,8 @@ public class RequestModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -460,17 +462,6 @@ public class RequestModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>QueryType.query</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.query</b></em>'.
-   * @generated
-   */
-  public EAttribute getQueryType_Query() {
-    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_QUERY_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EStructuralFeature} '<em><b>QueryType.namedQuery</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
@@ -479,6 +470,17 @@ public class RequestModelPackage extends ModelPackage {
    */
   public EAttribute getQueryType_NamedQuery() {
     return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_NAMEDQUERY_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>QueryType.query</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>QueryType.query</b></em>'.
+   * @generated
+   */
+  public EAttribute getQueryType_Query() {
+    return (EAttribute) getQueryTypeEClass().getEAllStructuralFeatures().get(QUERYTYPE_QUERY_FEATURE_ID);
   }
 
   /**
@@ -648,7 +650,8 @@ public class RequestModelPackage extends ModelPackage {
       return QueryReferingObjectsType.class;
     case PARAMETER_CLASSIFIER_ID:
       return Parameter.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

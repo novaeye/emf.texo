@@ -27,5 +27,4 @@ public class BookDao extends GenericLibraryDao<Book> {
   public EClass getEClass() {
     return LibraryModelPackage.INSTANCE.getBookEClass();
   }
-
 }

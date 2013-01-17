@@ -142,6 +142,8 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   private ComplexAAA myComplexAbstract;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -149,6 +151,7 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -170,10 +173,8 @@ public class RootTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link RootType#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * @param newMyComplexAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMyComplexAbstract
    *          the new value of the '{@link RootType#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated

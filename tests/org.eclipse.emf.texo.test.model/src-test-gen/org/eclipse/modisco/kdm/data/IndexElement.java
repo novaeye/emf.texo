@@ -44,6 +44,9 @@ public class IndexElement extends DataResource {
   /**
    * Adds to the <em>implementation</em> feature.
    * 
+   * @param implementationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToImplementation(ItemUnit implementationValue) {
@@ -54,6 +57,9 @@ public class IndexElement extends DataResource {
 
   /**
    * Removes from the <em>implementation</em> feature.
+   * 
+   * @param implementationValue
+   *          the value to remove
    * 
    * @generated
    */

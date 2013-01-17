@@ -40,8 +40,10 @@ public class ResponseModelFactory implements ModelFactory {
       return createResponseType();
     case ResponseModelPackage.RESULTTYPE_CLASSIFIER_ID:
       return createResultType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -80,7 +82,7 @@ public class ResponseModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -165,8 +167,9 @@ public class ResponseModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -180,12 +183,16 @@ public class ResponseModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -226,8 +233,9 @@ public class ResponseModelFactory implements ModelFactory {
         return getTarget().getResponse();
       case ResponseModelPackage.DOCUMENTROOT_RESULT_FEATURE_ID:
         return getTarget().getResult();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -256,8 +264,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.DOCUMENTROOT_RESULT_FEATURE_ID:
         getTarget().setResult((ResultType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -272,8 +281,9 @@ public class ResponseModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -288,13 +298,17 @@ public class ResponseModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ErrorType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -331,8 +345,9 @@ public class ResponseModelFactory implements ModelFactory {
         return getTarget().getStackTrace();
       case ResponseModelPackage.ERRORTYPE_CAUSE_FEATURE_ID:
         return getTarget().getCause();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -354,8 +369,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.ERRORTYPE_CAUSE_FEATURE_ID:
         getTarget().setCause((ErrorType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -366,8 +382,9 @@ public class ResponseModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -378,13 +395,17 @@ public class ResponseModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ResponseType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -423,8 +444,9 @@ public class ResponseModelFactory implements ModelFactory {
         return getTarget().getTotalRows();
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
         return getTarget().getData();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -450,8 +472,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
         getTarget().setData((List<Object>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -465,8 +488,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
         getTarget().getData().add((Object) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -480,13 +504,17 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
         getTarget().getData().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -521,8 +549,9 @@ public class ResponseModelFactory implements ModelFactory {
         return getTarget().getInserted();
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
         return getTarget().getDeleted();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -542,8 +571,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
         getTarget().setDeleted((List<Object>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -565,8 +595,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
         getTarget().getDeleted().add((Object) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -588,14 +619,17 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
         getTarget().getDeleted().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -618,8 +652,9 @@ public class ResponseModelFactory implements ModelFactory {
         return ResponseModelPackage.INSTANCE.getDocumentRoot_Response();
       case RESULT:
         return ResponseModelPackage.INSTANCE.getDocumentRoot_Result();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -648,8 +683,9 @@ public class ResponseModelFactory implements ModelFactory {
       case ResponseModelPackage.DOCUMENTROOT_RESULT_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.RESULT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -666,5 +702,4 @@ public class ResponseModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

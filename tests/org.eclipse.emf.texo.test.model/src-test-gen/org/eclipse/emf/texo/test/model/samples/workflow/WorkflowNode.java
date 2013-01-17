@@ -113,6 +113,9 @@ public abstract class WorkflowNode extends WorkflowElement {
   /**
    * Adds to the <em>outputs</em> feature.
    * 
+   * @param outputsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToOutputs(OutputPort outputsValue) {
@@ -123,6 +126,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Removes from the <em>outputs</em> feature.
+   * 
+   * @param outputsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -171,6 +177,9 @@ public abstract class WorkflowNode extends WorkflowElement {
   /**
    * Adds to the <em>inputs</em> feature.
    * 
+   * @param inputsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInputs(InputPort inputsValue) {
@@ -181,6 +190,9 @@ public abstract class WorkflowNode extends WorkflowElement {
 
   /**
    * Removes from the <em>inputs</em> feature.
+   * 
+   * @param inputsValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -128,6 +128,9 @@ public enum LineStyle {
    * Returns the '<em><b>LineStyle</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the LineStyle, the literal enum class
    * @generated
    */
   public static LineStyle get(String literal) {
@@ -144,6 +147,9 @@ public enum LineStyle {
    * Returns the '<em><b>LineStyle</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the LineStyle, the literal enum class
    * @generated
    */
   public static LineStyle getByName(String name) {
@@ -160,6 +166,9 @@ public enum LineStyle {
    * Returns the '<em><b>LineStyle</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the LineStyle, the literal enum
    * @generated
    */
   public static LineStyle get(int value) {
@@ -266,6 +275,7 @@ public enum LineStyle {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -275,6 +285,7 @@ public enum LineStyle {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -284,6 +295,7 @@ public enum LineStyle {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

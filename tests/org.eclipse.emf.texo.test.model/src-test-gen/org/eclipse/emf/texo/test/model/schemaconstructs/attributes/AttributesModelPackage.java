@@ -162,6 +162,8 @@ public class AttributesModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static AttributesModelPackage initialize() {
@@ -407,7 +409,8 @@ public class AttributesModelPackage extends ModelPackage {
       return DocumentRoot.class;
     case RTYPE_CLASSIFIER_ID:
       return RType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -4,6 +4,7 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -48,8 +49,10 @@ public class KdmModelFactory implements ModelFactory {
       return createTaggedValue();
     case KdmModelPackage.TAGGEDREF_CLASSIFIER_ID:
       return createTaggedRef();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -112,7 +115,7 @@ public class KdmModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -239,8 +242,9 @@ public class KdmModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -254,12 +258,16 @@ public class KdmModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Attribute</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -291,8 +299,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getTag();
       case KdmModelPackage.ATTRIBUTE_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -308,8 +317,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.ATTRIBUTE_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -320,8 +330,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -332,13 +343,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Annotation</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -368,8 +383,9 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
       case KdmModelPackage.ANNOTATION_TEXT_FEATURE_ID:
         return getTarget().getText();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -382,8 +398,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.ANNOTATION_TEXT_FEATURE_ID:
         getTarget().setText((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -394,8 +411,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -406,13 +424,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Stereotype</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -446,8 +468,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getName();
       case KdmModelPackage.STEREOTYPE_TYPE_FEATURE_ID:
         return getTarget().getType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -467,8 +490,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.STEREOTYPE_TYPE_FEATURE_ID:
         getTarget().setType((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -483,8 +507,9 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getTag().add((TagDefinition) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -499,13 +524,17 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getTag().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ExtendedValue</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -535,8 +564,9 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
       case KdmModelPackage.EXTENDEDVALUE_TAG_FEATURE_ID:
         return getTarget().getTag();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -549,8 +579,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.EXTENDEDVALUE_TAG_FEATURE_ID:
         getTarget().setTag((TagDefinition) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -561,8 +592,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -573,13 +605,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>KDMModel</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -609,8 +645,9 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
       case KdmModelPackage.KDMMODEL_OWNEDELEMENT_FEATURE_ID:
         return getTarget().getOwnedElement();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -620,8 +657,9 @@ public class KdmModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -632,8 +670,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -644,13 +683,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>KDMFramework</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -685,8 +728,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getExtension();
       case KdmModelPackage.KDMFRAMEWORK_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -706,8 +750,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.KDMFRAMEWORK_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -726,8 +771,9 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getExtension().add((ExtensionFamily) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -746,13 +792,17 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getExtension().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Audit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -786,8 +836,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getAuthor();
       case KdmModelPackage.AUDIT_DATE_FEATURE_ID:
         return getTarget().getDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -806,8 +857,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.AUDIT_DATE_FEATURE_ID:
         getTarget().setDate((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -818,8 +870,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -830,13 +883,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ExtensionFamily</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -869,8 +926,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getStereotype();
       case KdmModelPackage.EXTENSIONFAMILY_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -887,8 +945,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.EXTENSIONFAMILY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -903,8 +962,9 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getStereotype().add((Stereotype) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -919,13 +979,17 @@ public class KdmModelFactory implements ModelFactory {
         getTarget().getStereotype().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Segment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -957,8 +1021,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getSegment();
       case KdmModelPackage.SEGMENT_MODEL_FEATURE_ID:
         return getTarget().getModel();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -975,8 +1040,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.SEGMENT_MODEL_FEATURE_ID:
         getTarget().setModel((Set<KDMModel>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -994,8 +1060,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.SEGMENT_MODEL_FEATURE_ID:
         getTarget().getModel().add((KDMModel) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1013,13 +1080,17 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.SEGMENT_MODEL_FEATURE_ID:
         getTarget().getModel().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TagDefinition</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1051,8 +1122,9 @@ public class KdmModelFactory implements ModelFactory {
         return getTarget().getTag();
       case KdmModelPackage.TAGDEFINITION_TYPE_FEATURE_ID:
         return getTarget().getType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1068,8 +1140,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.TAGDEFINITION_TYPE_FEATURE_ID:
         getTarget().setType((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1080,8 +1153,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1092,13 +1166,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TaggedValue</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1128,8 +1206,9 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
       case KdmModelPackage.TAGGEDVALUE_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1142,8 +1221,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.TAGGEDVALUE_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1154,8 +1234,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1166,13 +1247,17 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TaggedRef</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1202,8 +1287,9 @@ public class KdmModelFactory implements ModelFactory {
       switch (featureID) {
       case KdmModelPackage.TAGGEDREF_REF_FEATURE_ID:
         return getTarget().getRef();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1216,8 +1302,9 @@ public class KdmModelFactory implements ModelFactory {
       case KdmModelPackage.TAGGEDREF_REF_FEATURE_ID:
         getTarget().setRef((ModelElement) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1228,8 +1315,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1240,9 +1328,9 @@ public class KdmModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

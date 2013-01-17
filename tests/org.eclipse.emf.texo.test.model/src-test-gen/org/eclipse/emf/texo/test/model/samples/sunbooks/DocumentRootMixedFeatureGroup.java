@@ -8,7 +8,6 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
  * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -162,6 +161,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   private CollectionType collection;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -169,6 +170,7 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -188,12 +190,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
+   * Sets the <em>text</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newText
-   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
+   *          the new value of the '<em><b>text</b></em>' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -202,11 +204,11 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>cDATA</b></em>' feature.
+   * Returns the value of '<em><b>CDATA</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>cDATA</b></em>' feature
+   * @return the value of '<em><b>CDATA</b></em>' feature
    * @generated
    */
   public String getCDATA() {
@@ -214,12 +216,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
+   * Sets the <em>cDATA</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newCDATA
-   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   *          the new value of the '<em><b>CDATA</b></em>' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -240,12 +242,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
+   * Sets the <em>comment</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newComment
-   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   *          the new value of the '<em><b>comment</b></em>' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -268,10 +270,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getCollection() <em>collection</em>}' feature.
    * 
-   * @param newCollection
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newCollection
    *          the new value of the '{@link DocumentRoot#getCollection() collection}' feature.
    * @generated

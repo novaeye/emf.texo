@@ -161,6 +161,9 @@ public class PurchaseOrder extends Identifiable {
   /**
    * Adds to the <em>items</em> feature.
    * 
+   * @param itemsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToItems(Item itemsValue) {
@@ -171,6 +174,9 @@ public class PurchaseOrder extends Identifiable {
 
   /**
    * Removes from the <em>items</em> feature.
+   * 
+   * @param itemsValue
+   *          the value to remove
    * 
    * @generated
    */

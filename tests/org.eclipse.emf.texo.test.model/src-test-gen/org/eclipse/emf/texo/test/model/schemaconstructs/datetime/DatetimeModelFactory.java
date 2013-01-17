@@ -38,8 +38,10 @@ public class DatetimeModelFactory implements ModelFactory {
       return createDocumentRoot();
     case DatetimeModelPackage.TESTDATE_CLASSIFIER_ID:
       return createTestDate();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -72,7 +74,7 @@ public class DatetimeModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -137,8 +139,9 @@ public class DatetimeModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -152,12 +155,16 @@ public class DatetimeModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -194,8 +201,9 @@ public class DatetimeModelFactory implements ModelFactory {
         return getTarget().getXSISchemaLocation();
       case DatetimeModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         return getTarget().getRoot();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -218,8 +226,9 @@ public class DatetimeModelFactory implements ModelFactory {
       case DatetimeModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         getTarget().setRoot((TestDate) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -234,8 +243,9 @@ public class DatetimeModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -250,13 +260,17 @@ public class DatetimeModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TestDate</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -289,8 +303,9 @@ public class DatetimeModelFactory implements ModelFactory {
         return getTarget().getDate();
       case DatetimeModelPackage.TESTDATE_DATETIME_FEATURE_ID:
         return getTarget().getDatetime();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -306,8 +321,9 @@ public class DatetimeModelFactory implements ModelFactory {
       case DatetimeModelPackage.TESTDATE_DATETIME_FEATURE_ID:
         getTarget().setDatetime((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -318,8 +334,9 @@ public class DatetimeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -330,14 +347,17 @@ public class DatetimeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -356,8 +376,9 @@ public class DatetimeModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case ROOT:
         return DatetimeModelPackage.INSTANCE.getDocumentRoot_Root();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -380,8 +401,9 @@ public class DatetimeModelFactory implements ModelFactory {
       case DatetimeModelPackage.DOCUMENTROOT_ROOT_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.ROOT);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -398,5 +420,4 @@ public class DatetimeModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

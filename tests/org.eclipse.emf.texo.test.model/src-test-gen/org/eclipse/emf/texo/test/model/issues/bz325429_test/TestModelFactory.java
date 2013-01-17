@@ -36,8 +36,10 @@ public class TestModelFactory implements ModelFactory {
       return createAddress();
     case TestModelPackage.CONTACT_CLASSIFIER_ID:
       return createContact();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -73,7 +75,7 @@ public class TestModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -142,8 +144,9 @@ public class TestModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case TestModelPackage.CONTACTTYPE_CLASSIFIER_ID:
       return createContactTypeFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -159,8 +162,9 @@ public class TestModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case TestModelPackage.CONTACTTYPE_CLASSIFIER_ID:
       return convertContactTypeToString((ContactType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -196,6 +200,9 @@ public class TestModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class PersonModelObject<E extends Person> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -230,8 +237,9 @@ public class TestModelFactory implements ModelFactory {
         return getTarget().getAddress();
       case TestModelPackage.PERSON_CONTACTS_FEATURE_ID:
         return getTarget().getContacts();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -254,8 +262,9 @@ public class TestModelFactory implements ModelFactory {
       case TestModelPackage.PERSON_CONTACTS_FEATURE_ID:
         getTarget().setContacts((List<Contact>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -269,8 +278,9 @@ public class TestModelFactory implements ModelFactory {
       case TestModelPackage.PERSON_CONTACTS_FEATURE_ID:
         getTarget().getContacts().add((Contact) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -284,13 +294,17 @@ public class TestModelFactory implements ModelFactory {
       case TestModelPackage.PERSON_CONTACTS_FEATURE_ID:
         getTarget().getContacts().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -322,8 +336,9 @@ public class TestModelFactory implements ModelFactory {
         return getTarget().getStreet();
       case TestModelPackage.ADDRESS_CITY_FEATURE_ID:
         return getTarget().getCity();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -339,8 +354,9 @@ public class TestModelFactory implements ModelFactory {
       case TestModelPackage.ADDRESS_CITY_FEATURE_ID:
         getTarget().setCity((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -351,8 +367,9 @@ public class TestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -363,13 +380,17 @@ public class TestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Contact</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -401,8 +422,9 @@ public class TestModelFactory implements ModelFactory {
         return getTarget().getValue();
       case TestModelPackage.CONTACT_TYPE_FEATURE_ID:
         return getTarget().getType();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -418,8 +440,9 @@ public class TestModelFactory implements ModelFactory {
       case TestModelPackage.CONTACT_TYPE_FEATURE_ID:
         getTarget().setType((ContactType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -430,8 +453,9 @@ public class TestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -442,9 +466,9 @@ public class TestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

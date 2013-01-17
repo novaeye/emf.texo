@@ -183,8 +183,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Регистрационный знак <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getRegNumber() regNumber}' feature.
+   * @param newRegNumber
+   *          the new value of the '{@link CarRegInfo#getRegNumber() regNumber}' feature.
    * @generated
    */
   public void setRegNumber(String newRegNumber) {
@@ -210,8 +210,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Идентификационный номер (VIN) <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getVin() vin}' feature.
+   * @param newVin
+   *          the new value of the '{@link CarRegInfo#getVin() vin}' feature.
    * @generated
    */
   public void setVin(String newVin) {
@@ -235,8 +235,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Год выпуска <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getReleaseYear() releaseYear}' feature.
+   * @param newReleaseYear
+   *          the new value of the '{@link CarRegInfo#getReleaseYear() releaseYear}' feature.
    * @generated
    */
   public void setReleaseYear(Date newReleaseYear) {
@@ -260,8 +260,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер двигателя <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getEngineNumber() engineNumber}' feature.
+   * @param newEngineNumber
+   *          the new value of the '{@link CarRegInfo#getEngineNumber() engineNumber}' feature.
    * @generated
    */
   public void setEngineNumber(String newEngineNumber) {
@@ -285,8 +285,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер шасси <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getChassisNumber() chassisNumber}' feature.
+   * @param newChassisNumber
+   *          the new value of the '{@link CarRegInfo#getChassisNumber() chassisNumber}' feature.
    * @generated
    */
   public void setChassisNumber(String newChassisNumber) {
@@ -310,8 +310,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер кузова <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getBodyNumber() bodyNumber}' feature.
+   * @param newBodyNumber
+   *          the new value of the '{@link CarRegInfo#getBodyNumber() bodyNumber}' feature.
    * @generated
    */
   public void setBodyNumber(String newBodyNumber) {
@@ -335,8 +335,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Цвет <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getColor() color}' feature.
+   * @param newColor
+   *          the new value of the '{@link CarRegInfo#getColor() color}' feature.
    * @generated
    */
   public void setColor(String newColor) {
@@ -360,8 +360,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Серия <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getSeries() series}' feature.
+   * @param newSeries
+   *          the new value of the '{@link CarRegInfo#getSeries() series}' feature.
    * @generated
    */
   public void setSeries(String newSeries) {
@@ -385,8 +385,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link CarRegInfo#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {
@@ -410,8 +410,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата выдачи <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getIssueDate() issueDate}' feature.
+   * @param newIssueDate
+   *          the new value of the '{@link CarRegInfo#getIssueDate() issueDate}' feature.
    * @generated
    */
   public void setIssueDate(String newIssueDate) {
@@ -435,8 +435,8 @@ public class CarRegInfo extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Кем выдан <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarRegInfo#getIssued() issued}' feature.
+   * @param newIssued
+   *          the new value of the '{@link CarRegInfo#getIssued() issued}' feature.
    * @generated
    */
   public void setIssued(String newIssued) {

@@ -68,6 +68,9 @@ public class Workflow extends WorkflowElement {
   /**
    * Adds to the <em>nodes</em> feature.
    * 
+   * @param nodesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToNodes(WorkflowNode nodesValue) {
@@ -78,6 +81,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Removes from the <em>nodes</em> feature.
+   * 
+   * @param nodesValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -126,6 +132,9 @@ public class Workflow extends WorkflowElement {
   /**
    * Adds to the <em>edges</em> feature.
    * 
+   * @param edgesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEdges(Edge edgesValue) {
@@ -136,6 +145,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Removes from the <em>edges</em> feature.
+   * 
+   * @param edgesValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -184,6 +196,9 @@ public class Workflow extends WorkflowElement {
   /**
    * Adds to the <em>comments</em> feature.
    * 
+   * @param commentsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToComments(Comment commentsValue) {
@@ -194,6 +209,9 @@ public class Workflow extends WorkflowElement {
 
   /**
    * Removes from the <em>comments</em> feature.
+   * 
+   * @param commentsValue
+   *          the value to remove
    * 
    * @generated
    */

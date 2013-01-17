@@ -70,9 +70,7 @@ public class Diagram extends ContainerShape {
    * 
    * @deprecated This attribute simply exists because of compatibility (after removing it old diagrams would not be
    *             readable any more). It is never evaluated, instead the Graphiti framework queries the tool behaviour
-   *             provider if guides shall be shown in a diagram editor.
-   * 
-   *             <!-- end-model-doc -->
+   *             provider if guides shall be shown in a diagram editor. <!-- end-model-doc -->
    * @generated
    */
   @Basic(optional = false)
@@ -191,6 +189,9 @@ public class Diagram extends ContainerShape {
   /**
    * Adds to the <em>connections</em> feature.
    * 
+   * @param connectionsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToConnections(Connection connectionsValue) {
@@ -201,6 +202,9 @@ public class Diagram extends ContainerShape {
 
   /**
    * Removes from the <em>connections</em> feature.
+   * 
+   * @param connectionsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -291,9 +295,7 @@ public class Diagram extends ContainerShape {
    * 
    * @deprecated This attribute simply exists because of compatibility (after removing it old diagrams would not be
    *             readable any more). It is never evaluated, instead the Graphiti framework queries the tool behaviour
-   *             provider if guides shall be shown in a diagram editor.
-   * 
-   *             <!-- end-model-doc -->
+   *             provider if guides shall be shown in a diagram editor. <!-- end-model-doc -->
    * @return the value of '<em><b>showGuides</b></em>' feature
    * @generated
    */
@@ -308,11 +310,9 @@ public class Diagram extends ContainerShape {
    * 
    * @deprecated This attribute simply exists because of compatibility (after removing it old diagrams would not be
    *             readable any more). It is never evaluated, instead the Graphiti framework queries the tool behaviour
-   *             provider if guides shall be shown in a diagram editor.
-   * 
-   *             <!-- end-model-doc -->
-   * @param the
-   *          new value of the '{@link Diagram#isShowGuides() showGuides}' feature.
+   *             provider if guides shall be shown in a diagram editor. <!-- end-model-doc -->
+   * @param newShowGuides
+   *          the new value of the '{@link Diagram#isShowGuides() showGuides}' feature.
    * @generated
    */
   public void setShowGuides(boolean newShowGuides) {
@@ -334,6 +334,9 @@ public class Diagram extends ContainerShape {
   /**
    * Adds to the <em>colors</em> feature.
    * 
+   * @param colorsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToColors(Color colorsValue) {
@@ -344,6 +347,9 @@ public class Diagram extends ContainerShape {
 
   /**
    * Removes from the <em>colors</em> feature.
+   * 
+   * @param colorsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -392,6 +398,9 @@ public class Diagram extends ContainerShape {
   /**
    * Adds to the <em>fonts</em> feature.
    * 
+   * @param fontsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToFonts(Font fontsValue) {
@@ -402,6 +411,9 @@ public class Diagram extends ContainerShape {
 
   /**
    * Removes from the <em>fonts</em> feature.
+   * 
+   * @param fontsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -450,6 +462,9 @@ public class Diagram extends ContainerShape {
   /**
    * Adds to the <em>pictogramLinks</em> feature.
    * 
+   * @param pictogramLinksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPictogramLinks(PictogramLink pictogramLinksValue) {
@@ -460,6 +475,9 @@ public class Diagram extends ContainerShape {
 
   /**
    * Removes from the <em>pictogramLinks</em> feature.
+   * 
+   * @param pictogramLinksValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -558,6 +576,9 @@ public class Diagram extends ContainerShape {
   /**
    * Adds to the <em>styles</em> feature.
    * 
+   * @param stylesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStyles(Style stylesValue) {
@@ -568,6 +589,9 @@ public class Diagram extends ContainerShape {
 
   /**
    * Removes from the <em>styles</em> feature.
+   * 
+   * @param stylesValue
+   *          the value to remove
    * 
    * @generated
    */

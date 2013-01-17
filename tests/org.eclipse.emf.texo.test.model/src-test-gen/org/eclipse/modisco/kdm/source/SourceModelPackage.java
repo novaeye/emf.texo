@@ -352,6 +352,8 @@ public class SourceModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static SourceModelPackage initialize() {
@@ -944,7 +946,8 @@ public class SourceModelPackage extends ModelPackage {
       return InventoryElement.class;
     case INVENTORYRELATIONSHIP_CLASSIFIER_ID:
       return InventoryRelationship.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

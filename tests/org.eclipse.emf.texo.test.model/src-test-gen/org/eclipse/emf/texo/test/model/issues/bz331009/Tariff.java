@@ -113,8 +113,8 @@ public abstract class Tariff extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Название <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Tariff#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Tariff#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -138,8 +138,8 @@ public abstract class Tariff extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Активен ли <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Tariff#isActive() active}' feature.
+   * @param newActive
+   *          the new value of the '{@link Tariff#isActive() active}' feature.
    * @generated
    */
   public void setActive(boolean newActive) {

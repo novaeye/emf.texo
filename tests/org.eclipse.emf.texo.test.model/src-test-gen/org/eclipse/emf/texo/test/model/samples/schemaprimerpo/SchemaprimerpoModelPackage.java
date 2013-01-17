@@ -55,6 +55,20 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int QUANTITYTYPE_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SKU_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int DOCUMENTROOT_CLASSIFIER_ID = 0;
 
   /**
@@ -91,6 +105,48 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * @generated
    */
   public static final int DOCUMENTROOT_ORDER_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -140,62 +196,6 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ITEM_PARTNUM_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_SHIPTO_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_BILLTO_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_COMMENT_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_ITEMS_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PURCHASEORDER_ORDERDATE_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int QUANTITYTYPE_CLASSIFIER_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SKU_CLASSIFIER_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -255,6 +255,8 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -399,6 +401,71 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>PurchaseOrder</b></em>'
+   * @generated
+   */
+  public EClass getPurchaseOrderEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(PURCHASEORDER_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.shipTo</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.shipTo</b></em>'.
+   * @generated
+   */
+  public EReference getPurchaseOrder_ShipTo() {
+    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_SHIPTO_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.billTo</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.billTo</b></em>'.
+   * @generated
+   */
+  public EReference getPurchaseOrder_BillTo() {
+    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_BILLTO_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.comment</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.comment</b></em>'.
+   * @generated
+   */
+  public EAttribute getPurchaseOrder_Comment() {
+    return (EAttribute) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_COMMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.items</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.items</b></em>'.
+   * @generated
+   */
+  public EReference getPurchaseOrder_Items() {
+    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_ITEMS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.orderDate</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.orderDate</b></em>'.
+   * @generated
+   */
+  public EAttribute getPurchaseOrder_OrderDate() {
+    return (EAttribute) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_ORDERDATE_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Item</b></em>'
@@ -475,118 +542,6 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>PurchaseOrder</b></em>'
-   * @generated
-   */
-  public EClass getPurchaseOrderEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(PURCHASEORDER_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.shipTo</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.shipTo</b></em>'.
-   * @generated
-   */
-  public EReference getPurchaseOrder_ShipTo() {
-    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_SHIPTO_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.billTo</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.billTo</b></em>'.
-   * @generated
-   */
-  public EReference getPurchaseOrder_BillTo() {
-    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_BILLTO_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.comment</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.comment</b></em>'.
-   * @generated
-   */
-  public EAttribute getPurchaseOrder_Comment() {
-    return (EAttribute) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_COMMENT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.items</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.items</b></em>'.
-   * @generated
-   */
-  public EReference getPurchaseOrder_Items() {
-    return (EReference) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_ITEMS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>PurchaseOrder.orderDate</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>PurchaseOrder.orderDate</b></em>'.
-   * @generated
-   */
-  public EAttribute getPurchaseOrder_OrderDate() {
-    return (EAttribute) getPurchaseOrderEClass().getEAllStructuralFeatures().get(PURCHASEORDER_ORDERDATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>QuantityType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>QuantityType</b></em>'
-   * @generated
-   */
-  public EDataType getQuantityTypeEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(QUANTITYTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>SKU</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SKU</b></em>'
-   * @generated
-   */
-  public EDataType getSKUEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SKU_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case DOCUMENTROOT_CLASSIFIER_ID:
-      return DocumentRoot.class;
-    case PURCHASEORDER_CLASSIFIER_ID:
-      return PurchaseOrder.class;
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case USADDRESS_CLASSIFIER_ID:
-      return USAddress.class;
-    case QUANTITYTYPE_CLASSIFIER_ID:
-      return BigInteger.class;
-    case SKU_CLASSIFIER_ID:
-      return String.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>USAddress</b></em>'
@@ -660,5 +615,53 @@ public class SchemaprimerpoModelPackage extends ModelPackage {
    */
   public EAttribute getUSAddress_Country() {
     return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_COUNTRY_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>QuantityType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>QuantityType</b></em>'
+   * @generated
+   */
+  public EDataType getQuantityTypeEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(QUANTITYTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>SKU</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>SKU</b></em>'
+   * @generated
+   */
+  public EDataType getSKUEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SKU_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case DOCUMENTROOT_CLASSIFIER_ID:
+      return DocumentRoot.class;
+    case PURCHASEORDER_CLASSIFIER_ID:
+      return PurchaseOrder.class;
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case USADDRESS_CLASSIFIER_ID:
+      return USAddress.class;
+    case QUANTITYTYPE_CLASSIFIER_ID:
+      return BigInteger.class;
+    case SKU_CLASSIFIER_ID:
+      return String.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

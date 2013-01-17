@@ -146,6 +146,9 @@ public class TestAny extends Identifiable {
   /**
    * Adds to the <em>multiAnyType</em> feature.
    * 
+   * @param multiAnyTypeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToMultiAnyType(Object multiAnyTypeValue) {
@@ -156,6 +159,9 @@ public class TestAny extends Identifiable {
 
   /**
    * Removes from the <em>multiAnyType</em> feature.
+   * 
+   * @param multiAnyTypeValue
+   *          the value to remove
    * 
    * @generated
    */

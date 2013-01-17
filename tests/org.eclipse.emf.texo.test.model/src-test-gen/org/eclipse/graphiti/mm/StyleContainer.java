@@ -47,6 +47,9 @@ public abstract class StyleContainer extends Identifiable {
   /**
    * Adds to the <em>styles</em> feature.
    * 
+   * @param stylesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStyles(Style stylesValue) {
@@ -57,6 +60,9 @@ public abstract class StyleContainer extends Identifiable {
 
   /**
    * Removes from the <em>styles</em> feature.
+   * 
+   * @param stylesValue
+   *          the value to remove
    * 
    * @generated
    */

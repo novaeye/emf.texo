@@ -155,6 +155,8 @@ public class JpamixedModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static JpamixedModelPackage initialize() {
@@ -399,7 +401,8 @@ public class JpamixedModelPackage extends ModelPackage {
       return LetterBodyType.class;
     case SALUTATIONTYPE_CLASSIFIER_ID:
       return SalutationType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

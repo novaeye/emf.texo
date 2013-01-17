@@ -67,6 +67,9 @@ public abstract class AbstractDataElement extends KDMEntity {
   /**
    * Adds to the <em>source</em> feature.
    * 
+   * @param sourceValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -77,6 +80,9 @@ public abstract class AbstractDataElement extends KDMEntity {
 
   /**
    * Removes from the <em>source</em> feature.
+   * 
+   * @param sourceValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -125,6 +131,9 @@ public abstract class AbstractDataElement extends KDMEntity {
   /**
    * Adds to the <em>dataRelation</em> feature.
    * 
+   * @param dataRelationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDataRelation(AbstractDataRelationship dataRelationValue) {
@@ -135,6 +144,9 @@ public abstract class AbstractDataElement extends KDMEntity {
 
   /**
    * Removes from the <em>dataRelation</em> feature.
+   * 
+   * @param dataRelationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -183,6 +195,9 @@ public abstract class AbstractDataElement extends KDMEntity {
   /**
    * Adds to the <em>abstraction</em> feature.
    * 
+   * @param abstractionValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAbstraction(ActionElement abstractionValue) {
@@ -193,6 +208,9 @@ public abstract class AbstractDataElement extends KDMEntity {
 
   /**
    * Removes from the <em>abstraction</em> feature.
+   * 
+   * @param abstractionValue
+   *          the value to remove
    * 
    * @generated
    */

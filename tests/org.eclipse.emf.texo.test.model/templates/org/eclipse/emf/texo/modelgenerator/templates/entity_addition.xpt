@@ -5,6 +5,7 @@
 «REM»Called for an EClass, generated code is placed in the entity main class body«ENDREM»
 «DEFINE root(ModelController modelController) FOR EClassModelGenAnnotation-»
 	/**
+	* @return the hello string
 	* @generated
 	*/
 	public String helloWorld() {

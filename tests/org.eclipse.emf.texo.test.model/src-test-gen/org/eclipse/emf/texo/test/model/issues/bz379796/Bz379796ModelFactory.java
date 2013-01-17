@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.issues.bz379796;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -30,8 +31,10 @@ public class Bz379796ModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case Bz379796ModelPackage.PRICETYPE_CLASSIFIER_ID:
       return createPriceType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -61,7 +64,7 @@ public class Bz379796ModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -112,8 +115,9 @@ public class Bz379796ModelFactory implements ModelFactory {
       return createComparisonTypeFromString(value);
     case Bz379796ModelPackage.COMPARISONTYPEOBJECT_CLASSIFIER_ID:
       return createComparisonTypeObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -131,8 +135,9 @@ public class Bz379796ModelFactory implements ModelFactory {
       return convertComparisonTypeToString((ComparisonType) value);
     case Bz379796ModelPackage.COMPARISONTYPEOBJECT_CLASSIFIER_ID:
       return convertComparisonTypeObjectToString((ComparisonType) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -199,6 +204,9 @@ public class Bz379796ModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class PriceTypeModelObject<E extends PriceType> extends
@@ -244,8 +252,9 @@ public class Bz379796ModelFactory implements ModelFactory {
         return getTarget().getRequiredValue();
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -282,8 +291,9 @@ public class Bz379796ModelFactory implements ModelFactory {
       case Bz379796ModelPackage.PRICETYPE_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -294,8 +304,9 @@ public class Bz379796ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -306,9 +317,9 @@ public class Bz379796ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

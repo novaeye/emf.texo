@@ -37,8 +37,10 @@ public class QnameModelFactory implements ModelFactory {
       return createDocumentRoot();
     case QnameModelPackage.MYTEST_CLASSIFIER_ID:
       return createMytest();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -71,7 +73,7 @@ public class QnameModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -136,8 +138,9 @@ public class QnameModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -151,12 +154,16 @@ public class QnameModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -193,8 +200,9 @@ public class QnameModelFactory implements ModelFactory {
         return getTarget().getXSISchemaLocation();
       case QnameModelPackage.DOCUMENTROOT_ATEST_FEATURE_ID:
         return getTarget().getAtest();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -217,8 +225,9 @@ public class QnameModelFactory implements ModelFactory {
       case QnameModelPackage.DOCUMENTROOT_ATEST_FEATURE_ID:
         getTarget().setAtest((Mytest) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -233,8 +242,9 @@ public class QnameModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -249,13 +259,17 @@ public class QnameModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Mytest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -289,8 +303,9 @@ public class QnameModelFactory implements ModelFactory {
         return getTarget().getName();
       case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
         return getTarget().getNames();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -310,8 +325,9 @@ public class QnameModelFactory implements ModelFactory {
       case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
         getTarget().setNames((List<QName>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -325,8 +341,9 @@ public class QnameModelFactory implements ModelFactory {
       case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
         getTarget().getNames().add((QName) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -340,14 +357,17 @@ public class QnameModelFactory implements ModelFactory {
       case QnameModelPackage.MYTEST_NAMES_FEATURE_ID:
         getTarget().getNames().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -366,8 +386,9 @@ public class QnameModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case ATEST:
         return QnameModelPackage.INSTANCE.getDocumentRoot_Atest();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -390,8 +411,9 @@ public class QnameModelFactory implements ModelFactory {
       case QnameModelPackage.DOCUMENTROOT_ATEST_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.ATEST);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -408,5 +430,4 @@ public class QnameModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

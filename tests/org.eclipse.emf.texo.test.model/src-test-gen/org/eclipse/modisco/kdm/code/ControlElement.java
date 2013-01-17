@@ -79,6 +79,9 @@ public class ControlElement extends ComputationalObject {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -89,6 +92,9 @@ public class ControlElement extends ComputationalObject {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

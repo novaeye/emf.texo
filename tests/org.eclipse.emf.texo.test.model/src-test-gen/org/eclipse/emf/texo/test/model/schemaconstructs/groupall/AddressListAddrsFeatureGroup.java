@@ -136,6 +136,7 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
    */
   @ManyToOne(cascade = { CascadeType.ALL }, optional = false)
   private AddressType shipTo;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -145,6 +146,8 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   private AddressType billTo;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -152,6 +155,7 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -173,10 +177,8 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressList#getShipTo() <em>shipTo</em>}' feature.
    * 
-   * @param newShipTo
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newShipTo
    *          the new value of the '{@link AddressList#getShipTo() shipTo}' feature.
    * @generated
@@ -201,10 +203,8 @@ public class AddressListAddrsFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressList#getBillTo() <em>billTo</em>}' feature.
    * 
-   * @param newBillTo
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newBillTo
    *          the new value of the '{@link AddressList#getBillTo() billTo}' feature.
    * @generated

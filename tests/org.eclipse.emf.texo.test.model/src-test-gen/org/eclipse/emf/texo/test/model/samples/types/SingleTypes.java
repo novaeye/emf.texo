@@ -191,10 +191,11 @@ public class SingleTypes extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @generatedNOT
+   * @generated
    */
+  @Basic()
   private String[] stringArray = (String[]) TypesModelPackage.MODELFACTORY.createFromString(
-      TypesModelPackage.INSTANCE.getStringArrayEDataType(), "abc::def");
+      TypesModelPackage.INSTANCE.getStringArrayEDataType(), null);
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

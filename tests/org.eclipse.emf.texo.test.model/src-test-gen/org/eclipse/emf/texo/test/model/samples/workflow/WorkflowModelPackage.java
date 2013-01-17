@@ -64,6 +64,20 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int CONDITIONALOUTPUTPORT_CLASSIFIER_ID = 12;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID = 11;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int WORKFLOW_CLASSIFIER_ID = 0;
 
   /**
@@ -86,6 +100,62 @@ public class WorkflowModelPackage extends ModelPackage {
    * @generated
    */
   public static final int WORKFLOW_COMMENTS_FEATURE_ID = 11;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_CLASSIFIER_ID = 11;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_COMMENT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_X_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_Y_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_WIDTH_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_HEIGHT_FEATURE_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID = 8;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -162,21 +232,14 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int INPUTPORT_CLASSIFIER_ID = 3;
+  public static final int COMMENT_CLASSIFIER_ID = 13;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int INPUTPORT_NODE_FEATURE_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int INPUTPORT_EDGES_FEATURE_ID = 10;
+  public static final int COMMENT_WORKFLOW_FEATURE_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -204,6 +267,34 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int PORT_CLASSIFIER_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int INPUTPORT_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int INPUTPORT_NODE_FEATURE_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int INPUTPORT_EDGES_FEATURE_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int FAULT_CLASSIFIER_ID = 5;
 
   /**
@@ -219,13 +310,6 @@ public class WorkflowModelPackage extends ModelPackage {
    * @generated
    */
   public static final int COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID = 14;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PORT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -267,90 +351,6 @@ public class WorkflowModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WORKFLOWELEMENT_CLASSIFIER_ID = 11;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_COMMENT_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_X_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_Y_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_WIDTH_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_HEIGHT_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CONDITIONALOUTPUTPORT_CLASSIFIER_ID = 12;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID = 11;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int COMMENT_CLASSIFIER_ID = 13;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int COMMENT_WORKFLOW_FEATURE_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int TASK_CLASSIFIER_ID = 14;
 
   /**
@@ -362,6 +362,8 @@ public class WorkflowModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -469,6 +471,28 @@ public class WorkflowModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ConditionalOutputPort</b></em>'
+   * @generated
+   */
+  public EClass getConditionalOutputPortEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(CONDITIONALOUTPUTPORT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ConditionalOutputPort.condition</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ConditionalOutputPort.condition</b></em>'.
+   * @generated
+   */
+  public EAttribute getConditionalOutputPort_Condition() {
+    return (EAttribute) getConditionalOutputPortEClass().getEAllStructuralFeatures().get(
+        CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Workflow</b></em>'
@@ -509,6 +533,94 @@ public class WorkflowModelPackage extends ModelPackage {
    */
   public EReference getWorkflow_Comments() {
     return (EReference) getWorkflowEClass().getEAllStructuralFeatures().get(WORKFLOW_COMMENTS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>WorkflowElement</b></em>'
+   * @generated
+   */
+  public EClass getWorkflowElementEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(WORKFLOWELEMENT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_Name() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.comment</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.comment</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_Comment() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_COMMENT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.x</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.x</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_X() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_X_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.y</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.y</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_Y() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_Y_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.width</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.width</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_Width() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_WIDTH_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.height</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.height</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_Height() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_HEIGHT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.workFlowElementId</b></em>'. <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.workFlowElementId</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkflowElement_WorkFlowElementId() {
+    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(
+        WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID);
   }
 
   /**
@@ -618,35 +730,24 @@ public class WorkflowModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>InputPort</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>Comment</b></em>'
    * @generated
    */
-  public EClass getInputPortEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(INPUTPORT_CLASSIFIER_ID);
+  public EClass getCommentEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(COMMENT_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>InputPort.node</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
+   * Returns the {@link EStructuralFeature} '<em><b>Comment.workflow</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>InputPort.node</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Comment.workflow</b></em>'.
    * @generated
    */
-  public EReference getInputPort_Node() {
-    return (EReference) getInputPortEClass().getEAllStructuralFeatures().get(INPUTPORT_NODE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>InputPort.edges</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>InputPort.edges</b></em>'.
-   * @generated
-   */
-  public EReference getInputPort_Edges() {
-    return (EReference) getInputPortEClass().getEAllStructuralFeatures().get(INPUTPORT_EDGES_FEATURE_ID);
+  public EReference getComment_Workflow() {
+    return (EReference) getCommentEClass().getEAllStructuralFeatures().get(COMMENT_WORKFLOW_FEATURE_ID);
   }
 
   /**
@@ -682,6 +783,48 @@ public class WorkflowModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Port</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Port</b></em>'
+   * @generated
+   */
+  public EClass getPortEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(PORT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>InputPort</b></em>'
+   * @generated
+   */
+  public EClass getInputPortEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(INPUTPORT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>InputPort.node</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>InputPort.node</b></em>'.
+   * @generated
+   */
+  public EReference getInputPort_Node() {
+    return (EReference) getInputPortEClass().getEAllStructuralFeatures().get(INPUTPORT_NODE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>InputPort.edges</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>InputPort.edges</b></em>'.
+   * @generated
+   */
+  public EReference getInputPort_Edges() {
+    return (EReference) getInputPortEClass().getEAllStructuralFeatures().get(INPUTPORT_EDGES_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Fault</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Fault</b></em>'
@@ -710,16 +853,6 @@ public class WorkflowModelPackage extends ModelPackage {
    */
   public EReference getCompoundTask_Subworkflow() {
     return (EReference) getCompoundTaskEClass().getEAllStructuralFeatures().get(COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Port</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Port</b></em>'
-   * @generated
-   */
-  public EClass getPortEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(PORT_CLASSIFIER_ID);
   }
 
   /**
@@ -776,137 +909,6 @@ public class WorkflowModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>WorkflowElement</b></em>'
-   * @generated
-   */
-  public EClass getWorkflowElementEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(WORKFLOWELEMENT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_Name() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.comment</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.comment</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_Comment() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_COMMENT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.x</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.x</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_X() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_X_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.y</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.y</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_Y() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_Y_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.width</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.width</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_Width() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_WIDTH_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.height</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.height</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_Height() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(WORKFLOWELEMENT_HEIGHT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkflowElement.workFlowElementId</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkflowElement.workFlowElementId</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkflowElement_WorkFlowElementId() {
-    return (EAttribute) getWorkflowElementEClass().getEAllStructuralFeatures().get(
-        WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>ConditionalOutputPort</b></em>'
-   * @generated
-   */
-  public EClass getConditionalOutputPortEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(CONDITIONALOUTPUTPORT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ConditionalOutputPort.condition</b></em>'. <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ConditionalOutputPort.condition</b></em>'.
-   * @generated
-   */
-  public EAttribute getConditionalOutputPort_Condition() {
-    return (EAttribute) getConditionalOutputPortEClass().getEAllStructuralFeatures().get(
-        CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Comment</b></em>'
-   * @generated
-   */
-  public EClass getCommentEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(COMMENT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Comment.workflow</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Comment.workflow</b></em>'.
-   * @generated
-   */
-  public EReference getComment_Workflow() {
-    return (EReference) getCommentEClass().getEAllStructuralFeatures().get(COMMENT_WORKFLOW_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Task</b></em>'
@@ -957,7 +959,8 @@ public class WorkflowModelPackage extends ModelPackage {
       return LoopTask.class;
     case TASK_CLASSIFIER_ID:
       return Task.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

@@ -46,8 +46,10 @@ public class Epo2ModelFactory implements ModelFactory {
       return createGlobalAddress();
     case Epo2ModelPackage.GLOBALLOCATION_CLASSIFIER_ID:
       return createGlobalLocation();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -98,7 +100,7 @@ public class Epo2ModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -137,16 +139,6 @@ public class Epo2ModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass USAddress
-   * @generated
-   */
-  public USAddress createUSAddress() {
-    return new USAddress();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass PurchaseOrder
    * @generated
    */
@@ -157,11 +149,11 @@ public class Epo2ModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass Supplier
+   * @return an instance of the model object representing the EClass USAddress
    * @generated
    */
-  public Supplier createSupplier() {
-    return new Supplier();
+  public USAddress createUSAddress() {
+    return new USAddress();
   }
 
   /**
@@ -172,6 +164,16 @@ public class Epo2ModelFactory implements ModelFactory {
    */
   public Customer createCustomer() {
     return new Customer();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Supplier
+   * @generated
+   */
+  public Supplier createSupplier() {
+    return new Supplier();
   }
 
   /**
@@ -211,8 +213,9 @@ public class Epo2ModelFactory implements ModelFactory {
       return createSKUFromString(value);
     case Epo2ModelPackage.ORDERSTATUS_CLASSIFIER_ID:
       return createOrderStatusFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -232,8 +235,9 @@ public class Epo2ModelFactory implements ModelFactory {
       return convertSKUToString((String) value);
     case Epo2ModelPackage.ORDERSTATUS_CLASSIFIER_ID:
       return convertOrderStatusToString((OrderStatus) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -249,6 +253,21 @@ public class Epo2ModelFactory implements ModelFactory {
       return null;
     }
     return ModelUtils.convertToXML(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Date createDateFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return ModelUtils.createFromXML(value);
   }
 
   /**
@@ -279,21 +298,6 @@ public class Epo2ModelFactory implements ModelFactory {
       return null;
     }
     return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Date createDateFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return ModelUtils.createFromXML(value);
   }
 
   /**
@@ -328,6 +332,9 @@ public class Epo2ModelFactory implements ModelFactory {
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -369,8 +376,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getShipDate();
       case Epo2ModelPackage.ITEM_PARTNUM_FEATURE_ID:
         return getTarget().getPartNum();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -401,8 +409,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.ITEM_PARTNUM_FEATURE_ID:
         getTarget().setPartNum((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -413,8 +422,9 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -425,13 +435,17 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -478,8 +492,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getCustomer();
       case Epo2ModelPackage.PURCHASEORDER_PREVIOUSORDER_FEATURE_ID:
         return getTarget().getPreviousOrder();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -514,8 +529,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.PURCHASEORDER_PREVIOUSORDER_FEATURE_ID:
         getTarget().setPreviousOrder((PurchaseOrder) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -530,8 +546,9 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getItems().add((Item) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -546,13 +563,17 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getItems().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -588,8 +609,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getState();
       case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
         return getTarget().getZip();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -611,8 +633,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.USADDRESS_ZIP_FEATURE_ID:
         getTarget().setZip((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -623,8 +646,9 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -635,13 +659,17 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -673,8 +701,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getName();
       case Epo2ModelPackage.ADDRESS_COUNTRY_FEATURE_ID:
         return getTarget().getCountry();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -690,8 +719,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.ADDRESS_COUNTRY_FEATURE_ID:
         getTarget().setCountry((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -702,8 +732,9 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -714,13 +745,17 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -753,8 +788,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getCustomerID();
       case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
         return getTarget().getOrders();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -771,8 +807,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
         getTarget().setOrders((List<PurchaseOrder>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -786,8 +823,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
         getTarget().getOrders().add((PurchaseOrder) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -801,13 +839,17 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.CUSTOMER_ORDERS_FEATURE_ID:
         getTarget().getOrders().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -846,8 +888,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getPendingOrders();
       case Epo2ModelPackage.SUPPLIER_SHIPPEDORDERS_FEATURE_ID:
         return getTarget().getShippedOrders();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -867,8 +910,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.SUPPLIER_ORDERS_FEATURE_ID:
         getTarget().setOrders((List<PurchaseOrder>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -887,8 +931,9 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getOrders().add((PurchaseOrder) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -907,13 +952,17 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getOrders().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GlobalAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -945,8 +994,9 @@ public class Epo2ModelFactory implements ModelFactory {
         return getTarget().getLocation();
       case Epo2ModelPackage.GLOBALADDRESS_COUNTRYCODE_FEATURE_ID:
         return getTarget().getCountryCode();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -963,8 +1013,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.GLOBALADDRESS_COUNTRYCODE_FEATURE_ID:
         getTarget().setCountryCode((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -979,8 +1030,9 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getLocation().add((String) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -995,13 +1047,17 @@ public class Epo2ModelFactory implements ModelFactory {
         getTarget().getLocation().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>GlobalLocation</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1032,8 +1088,9 @@ public class Epo2ModelFactory implements ModelFactory {
       switch (featureID) {
       case Epo2ModelPackage.GLOBALLOCATION_COUNTRYCODE_FEATURE_ID:
         return getTarget().getCountryCode();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1046,8 +1103,9 @@ public class Epo2ModelFactory implements ModelFactory {
       case Epo2ModelPackage.GLOBALLOCATION_COUNTRYCODE_FEATURE_ID:
         getTarget().setCountryCode((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1058,8 +1116,9 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1070,9 +1129,9 @@ public class Epo2ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

@@ -43,6 +43,9 @@ public class DataContainer extends DataResource {
   /**
    * Adds to the <em>dataElement</em> feature.
    * 
+   * @param dataElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDataElement(DataResource dataElementValue) {
@@ -53,6 +56,9 @@ public class DataContainer extends DataResource {
 
   /**
    * Removes from the <em>dataElement</em> feature.
+   * 
+   * @param dataElementValue
+   *          the value to remove
    * 
    * @generated
    */

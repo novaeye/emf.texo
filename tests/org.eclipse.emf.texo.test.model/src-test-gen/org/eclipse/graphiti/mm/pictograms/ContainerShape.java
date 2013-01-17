@@ -45,6 +45,9 @@ public class ContainerShape extends Shape {
   /**
    * Adds to the <em>children</em> feature.
    * 
+   * @param childrenValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToChildren(Shape childrenValue) {
@@ -55,6 +58,9 @@ public class ContainerShape extends Shape {
 
   /**
    * Removes from the <em>children</em> feature.
+   * 
+   * @param childrenValue
+   *          the value to remove
    * 
    * @generated
    */

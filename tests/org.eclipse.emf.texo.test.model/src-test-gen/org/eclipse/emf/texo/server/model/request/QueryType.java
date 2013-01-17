@@ -31,7 +31,7 @@ public class QueryType extends Identifiable {
    * @generated
    */
   @Basic()
-  private String query = null;
+  private String namedQuery = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -39,7 +39,7 @@ public class QueryType extends Identifiable {
    * @generated
    */
   @Basic()
-  private String namedQuery = null;
+  private String query = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -83,31 +83,6 @@ public class QueryType extends Identifiable {
   private boolean countOperation = false;
 
   /**
-   * Returns the value of '<em><b>query</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>query</b></em>' feature
-   * @generated
-   */
-  public String getQuery() {
-    return query;
-  }
-
-  /**
-   * Sets the '{@link QueryType#getQuery() <em>query</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param newQuery
-   *          the new value of the '{@link QueryType#getQuery() query}' feature.
-   * @generated
-   */
-  public void setQuery(String newQuery) {
-    query = newQuery;
-  }
-
-  /**
    * Returns the value of '<em><b>namedQuery</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -133,6 +108,31 @@ public class QueryType extends Identifiable {
   }
 
   /**
+   * Returns the value of '<em><b>query</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>query</b></em>' feature
+   * @generated
+   */
+  public String getQuery() {
+    return query;
+  }
+
+  /**
+   * Sets the '{@link QueryType#getQuery() <em>query</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param newQuery
+   *          the new value of the '{@link QueryType#getQuery() query}' feature.
+   * @generated
+   */
+  public void setQuery(String newQuery) {
+    query = newQuery;
+  }
+
+  /**
    * Returns the value of '<em><b>parameters</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -147,6 +147,9 @@ public class QueryType extends Identifiable {
   /**
    * Adds to the <em>parameters</em> feature.
    * 
+   * @param parametersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToParameters(Parameter parametersValue) {
@@ -157,6 +160,9 @@ public class QueryType extends Identifiable {
 
   /**
    * Removes from the <em>parameters</em> feature.
+   * 
+   * @param parametersValue
+   *          the value to remove
    * 
    * @generated
    */

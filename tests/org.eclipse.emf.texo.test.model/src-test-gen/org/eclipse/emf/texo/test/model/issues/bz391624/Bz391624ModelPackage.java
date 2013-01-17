@@ -84,6 +84,8 @@ public class Bz391624ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Bz391624ModelPackage initialize() {
@@ -209,7 +211,8 @@ public class Bz391624ModelPackage extends ModelPackage {
       return Book.class;
     case AUTHOR_CLASSIFIER_ID:
       return Author.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

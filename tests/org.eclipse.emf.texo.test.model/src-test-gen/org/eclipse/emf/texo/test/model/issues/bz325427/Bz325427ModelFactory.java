@@ -33,8 +33,10 @@ public class Bz325427ModelFactory implements ModelFactory {
       return createEClassB();
     case Bz325427ModelPackage.ECLASSA_CLASSIFIER_ID:
       return createEClassA();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -67,7 +69,7 @@ public class Bz325427ModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -128,8 +130,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       return createEnumBFromString(value);
     case Bz325427ModelPackage.ENUMA_CLASSIFIER_ID:
       return createEnumAFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -147,8 +150,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       return convertEnumBToString((EnumB) value);
     case Bz325427ModelPackage.ENUMA_CLASSIFIER_ID:
       return convertEnumAToString((EnumA) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -214,6 +218,9 @@ public class Bz325427ModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>EClassB</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class EClassBModelObject<E extends EClassB> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -242,8 +249,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz325427ModelPackage.ECLASSB_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -256,8 +264,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       case Bz325427ModelPackage.ECLASSB_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -268,8 +277,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -280,13 +290,17 @@ public class Bz325427ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>EClassA</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -316,8 +330,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz325427ModelPackage.ECLASSA_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -330,8 +345,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       case Bz325427ModelPackage.ECLASSA_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -342,8 +358,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -354,9 +371,9 @@ public class Bz325427ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

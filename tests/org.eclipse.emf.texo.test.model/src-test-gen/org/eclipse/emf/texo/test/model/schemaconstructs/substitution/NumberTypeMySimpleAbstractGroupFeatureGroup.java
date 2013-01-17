@@ -141,6 +141,8 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
   private BigInteger mySimpleAbstract;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -148,6 +150,7 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -169,10 +172,8 @@ public class NumberTypeMySimpleAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link NumberType#getMySimpleAbstract() <em>mySimpleAbstract</em>}' feature.
    * 
-   * @param newMySimpleAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMySimpleAbstract
    *          the new value of the '{@link NumberType#getMySimpleAbstract() mySimpleAbstract}' feature.
    * @generated

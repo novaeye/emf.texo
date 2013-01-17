@@ -112,6 +112,9 @@ public enum CallableKind {
    * Returns the '<em><b>CallableKind</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the CallableKind, the literal enum class
    * @generated
    */
   public static CallableKind get(String literal) {
@@ -128,6 +131,9 @@ public enum CallableKind {
    * Returns the '<em><b>CallableKind</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the CallableKind, the literal enum class
    * @generated
    */
   public static CallableKind getByName(String name) {
@@ -144,6 +150,9 @@ public enum CallableKind {
    * Returns the '<em><b>CallableKind</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the CallableKind, the literal enum
    * @generated
    */
   public static CallableKind get(int value) {
@@ -240,6 +249,7 @@ public enum CallableKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -249,6 +259,7 @@ public enum CallableKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -258,6 +269,7 @@ public enum CallableKind {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

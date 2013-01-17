@@ -211,6 +211,9 @@ public class Library extends Identifiable implements Addressable {
   /**
    * Adds to the <em>stock</em> feature.
    * 
+   * @param stockValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStock(Item stockValue) {
@@ -221,6 +224,9 @@ public class Library extends Identifiable implements Addressable {
 
   /**
    * Removes from the <em>stock</em> feature.
+   * 
+   * @param stockValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -269,6 +275,9 @@ public class Library extends Identifiable implements Addressable {
   /**
    * Adds to the <em>books</em> feature.
    * 
+   * @param booksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBooks(Book booksValue) {
@@ -279,6 +288,9 @@ public class Library extends Identifiable implements Addressable {
 
   /**
    * Removes from the <em>books</em> feature.
+   * 
+   * @param booksValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -327,6 +339,9 @@ public class Library extends Identifiable implements Addressable {
   /**
    * Adds to the <em>branches</em> feature.
    * 
+   * @param branchesValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBranches(Library branchesValue) {
@@ -337,6 +352,9 @@ public class Library extends Identifiable implements Addressable {
 
   /**
    * Removes from the <em>branches</em> feature.
+   * 
+   * @param branchesValue
+   *          the value to remove
    * 
    * @generated
    */

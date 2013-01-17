@@ -38,8 +38,10 @@ public class ForumModelFactory implements ModelFactory {
       return createTopic();
     case ForumModelPackage.POST_CLASSIFIER_ID:
       return createPost();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -78,7 +80,7 @@ public class ForumModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -127,6 +129,16 @@ public class ForumModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass Topic
+   * @generated
+   */
+  public Topic createTopic() {
+    return new Topic();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Post
    * @generated
    */
@@ -149,8 +161,9 @@ public class ForumModelFactory implements ModelFactory {
       return createTopicCategoryFromString(value);
     case ForumModelPackage.TOPICCATEGORYOBJECT_CLASSIFIER_ID:
       return createTopicCategoryObjectFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -168,18 +181,9 @@ public class ForumModelFactory implements ModelFactory {
       return convertTopicCategoryToString((TopicCategory) value);
     case ForumModelPackage.TOPICCATEGORYOBJECT_CLASSIFIER_ID:
       return convertTopicCategoryObjectToString((TopicCategory) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Topic
-   * @generated
-   */
-  public Topic createTopic() {
-    return new Topic();
   }
 
   /**
@@ -246,6 +250,9 @@ public class ForumModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Forum</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ForumModelObject<E extends Forum> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
@@ -278,8 +285,9 @@ public class ForumModelFactory implements ModelFactory {
         return getTarget().getMembers();
       case ForumModelPackage.FORUM_TOPICS_FEATURE_ID:
         return getTarget().getTopics();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -299,8 +307,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.FORUM_TOPICS_FEATURE_ID:
         getTarget().setTopics((List<Topic>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -318,8 +327,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.FORUM_TOPICS_FEATURE_ID:
         getTarget().getTopics().add((Topic) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -337,13 +347,17 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.FORUM_TOPICS_FEATURE_ID:
         getTarget().getTopics().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Member</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -377,8 +391,9 @@ public class ForumModelFactory implements ModelFactory {
         return getTarget().getPosts();
       case ForumModelPackage.MEMBER_CREATED_FEATURE_ID:
         return getTarget().getCreated();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -398,8 +413,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.MEMBER_CREATED_FEATURE_ID:
         getTarget().setCreated((List<Topic>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -417,8 +433,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.MEMBER_CREATED_FEATURE_ID:
         getTarget().getCreated().add((Topic) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -436,13 +453,17 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.MEMBER_CREATED_FEATURE_ID:
         getTarget().getCreated().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Topic</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -478,8 +499,9 @@ public class ForumModelFactory implements ModelFactory {
         return getTarget().getCreator();
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
         return getTarget().getPosts();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -502,8 +524,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
         getTarget().setPosts((List<Post>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -517,8 +540,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
         getTarget().getPosts().add((Post) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -532,13 +556,17 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.TOPIC_POSTS_FEATURE_ID:
         getTarget().getPosts().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Post</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -572,8 +600,9 @@ public class ForumModelFactory implements ModelFactory {
         return getTarget().getAuthor();
       case ForumModelPackage.POST_TOPIC_FEATURE_ID:
         return getTarget().getTopic();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -592,8 +621,9 @@ public class ForumModelFactory implements ModelFactory {
       case ForumModelPackage.POST_TOPIC_FEATURE_ID:
         getTarget().setTopic((Topic) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -604,8 +634,9 @@ public class ForumModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -616,9 +647,9 @@ public class ForumModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

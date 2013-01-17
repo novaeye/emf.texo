@@ -89,6 +89,9 @@ public class AccountGroup extends Identifiable {
   /**
    * Adds to the <em>account</em> feature.
    * 
+   * @param accountValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAccount(Account accountValue) {
@@ -99,6 +102,9 @@ public class AccountGroup extends Identifiable {
 
   /**
    * Removes from the <em>account</em> feature.
+   * 
+   * @param accountValue
+   *          the value to remove
    * 
    * @generated
    */

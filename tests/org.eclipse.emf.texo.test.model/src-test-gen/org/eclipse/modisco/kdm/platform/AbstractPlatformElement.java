@@ -77,6 +77,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
   /**
    * Adds to the <em>source</em> feature.
    * 
+   * @param sourceValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToSource(SourceRef sourceValue) {
@@ -87,6 +90,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
 
   /**
    * Removes from the <em>source</em> feature.
+   * 
+   * @param sourceValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -135,6 +141,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
   /**
    * Adds to the <em>platformRelation</em> feature.
    * 
+   * @param platformRelationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPlatformRelation(AbstractPlatformRelationship platformRelationValue) {
@@ -145,6 +154,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
 
   /**
    * Removes from the <em>platformRelation</em> feature.
+   * 
+   * @param platformRelationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -193,6 +205,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
   /**
    * Adds to the <em>abstraction</em> feature.
    * 
+   * @param abstractionValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAbstraction(ActionElement abstractionValue) {
@@ -203,6 +218,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
 
   /**
    * Removes from the <em>abstraction</em> feature.
+   * 
+   * @param abstractionValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -251,6 +269,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
   /**
    * Adds to the <em>implementation</em> feature.
    * 
+   * @param implementationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToImplementation(AbstractCodeElement implementationValue) {
@@ -261,6 +282,9 @@ public abstract class AbstractPlatformElement extends KDMEntity {
 
   /**
    * Removes from the <em>implementation</em> feature.
+   * 
+   * @param implementationValue
+   *          the value to remove
    * 
    * @generated
    */

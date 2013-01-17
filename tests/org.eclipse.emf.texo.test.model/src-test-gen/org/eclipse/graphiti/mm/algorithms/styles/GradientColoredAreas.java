@@ -58,6 +58,9 @@ public class GradientColoredAreas extends Identifiable {
   /**
    * Adds to the <em>gradientColor</em> feature.
    * 
+   * @param gradientColorValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGradientColor(GradientColoredArea gradientColorValue) {
@@ -68,6 +71,9 @@ public class GradientColoredAreas extends Identifiable {
 
   /**
    * Removes from the <em>gradientColor</em> feature.
+   * 
+   * @param gradientColorValue
+   *          the value to remove
    * 
    * @generated
    */

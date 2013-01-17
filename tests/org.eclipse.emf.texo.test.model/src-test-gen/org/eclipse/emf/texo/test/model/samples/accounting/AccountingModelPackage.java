@@ -63,35 +63,7 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ACCOUNT_CLASSIFIER_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ACCOUNT_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ACCOUNTGROUP_CLASSIFIER_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ACCOUNTGROUP_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ACCOUNTGROUP_ACCOUNT_FEATURE_ID = 3;
+  public static final int DATE_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -147,6 +119,69 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int SERIALIZABLE_CLASSIFIER_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ACCOUNT_CLASSIFIER_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ACCOUNT_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ACCOUNTGROUP_CLASSIFIER_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ACCOUNTGROUP_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ACCOUNTGROUP_ACCOUNT_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int VAT_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int VAT_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int VAT_RATE_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int BALANCEACCOUNT_CLASSIFIER_ID = 3;
 
   /**
@@ -161,7 +196,28 @@ public class AccountingModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int DATE_CLASSIFIER_ID = 11;
+  public static final int REPORT_CLASSIFIER_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORT_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORT_DEBITREPORTGROUP_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORT_CREDITREPORTGROUP_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -190,6 +246,34 @@ public class AccountingModelPackage extends ModelPackage {
    * @generated
    */
   public static final int JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORTGROUP_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORTGROUP_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORTGROUP_REPORTGROUP_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int REPORTGROUP_ACCOUNT_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -248,90 +332,6 @@ public class AccountingModelPackage extends ModelPackage {
   public static final int PLACCOUNT_CLASSIFIER_ID = 6;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORT_CLASSIFIER_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORT_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORT_DEBITREPORTGROUP_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORT_CREDITREPORTGROUP_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORTGROUP_CLASSIFIER_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORTGROUP_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORTGROUP_REPORTGROUP_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int REPORTGROUP_ACCOUNT_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VAT_CLASSIFIER_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VAT_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int VAT_RATE_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SERIALIZABLE_CLASSIFIER_ID = 10;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -340,6 +340,8 @@ public class AccountingModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -437,59 +439,6 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Account</b></em>'
-   * @generated
-   */
-  public EClass getAccountEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(ACCOUNT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Account.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Account.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getAccount_Name() {
-    return (EAttribute) getAccountEClass().getEAllStructuralFeatures().get(ACCOUNT_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>AccountGroup</b></em>'
-   * @generated
-   */
-  public EClass getAccountGroupEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(ACCOUNTGROUP_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getAccountGroup_Name() {
-    return (EAttribute) getAccountGroupEClass().getEAllStructuralFeatures().get(ACCOUNTGROUP_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.account</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.account</b></em>'.
-   * @generated
-   */
-  public EReference getAccountGroup_Account() {
-    return (EReference) getAccountGroupEClass().getEAllStructuralFeatures().get(ACCOUNTGROUP_ACCOUNT_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Accounting</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Accounting</b></em>'
@@ -566,6 +515,99 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Serializable</b></em>'
+   * @generated
+   */
+  public EClass getSerializableEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(SERIALIZABLE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Account</b></em>'
+   * @generated
+   */
+  public EClass getAccountEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(ACCOUNT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Account.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Account.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getAccount_Name() {
+    return (EAttribute) getAccountEClass().getEAllStructuralFeatures().get(ACCOUNT_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AccountGroup</b></em>'
+   * @generated
+   */
+  public EClass getAccountGroupEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(ACCOUNTGROUP_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getAccountGroup_Name() {
+    return (EAttribute) getAccountGroupEClass().getEAllStructuralFeatures().get(ACCOUNTGROUP_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>AccountGroup.account</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>AccountGroup.account</b></em>'.
+   * @generated
+   */
+  public EReference getAccountGroup_Account() {
+    return (EReference) getAccountGroupEClass().getEAllStructuralFeatures().get(ACCOUNTGROUP_ACCOUNT_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Vat</b></em>'
+   * @generated
+   */
+  public EClass getVatEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(VAT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Vat.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getVat_Name() {
+    return (EAttribute) getVatEClass().getEAllStructuralFeatures().get(VAT_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Vat.rate</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.rate</b></em>'.
+   * @generated
+   */
+  public EAttribute getVat_Rate() {
+    return (EAttribute) getVatEClass().getEAllStructuralFeatures().get(VAT_RATE_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>BalanceAccount</b></em>'
@@ -587,52 +629,45 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>Report</b></em>'
    * @generated
    */
-  public EDataType getDateEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
+  public EClass getReportEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(REPORT_CLASSIFIER_ID);
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Report.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.name</b></em>'.
    * @generated
    */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ACCOUNTING_CLASSIFIER_ID:
-      return AccountingClass.class;
-    case SERIALIZABLE_CLASSIFIER_ID:
-      return Serializable.class;
-    case ACCOUNT_CLASSIFIER_ID:
-      return Account.class;
-    case ACCOUNTGROUP_CLASSIFIER_ID:
-      return AccountGroup.class;
-    case VAT_CLASSIFIER_ID:
-      return Vat.class;
-    case BALANCEACCOUNT_CLASSIFIER_ID:
-      return BalanceAccount.class;
-    case REPORT_CLASSIFIER_ID:
-      return Report.class;
-    case JOURNALGROUP_CLASSIFIER_ID:
-      return JournalGroup.class;
-    case REPORTGROUP_CLASSIFIER_ID:
-      return ReportGroup.class;
-    case JOURNALSTATEMENT_CLASSIFIER_ID:
-      return JournalStatement.class;
-    case PLACCOUNT_CLASSIFIER_ID:
-      return PLAccount.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  public EAttribute getReport_Name() {
+    return (EAttribute) getReportEClass().getEAllStructuralFeatures().get(REPORT_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Report.debitReportGroup</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.debitReportGroup</b></em>'.
+   * @generated
+   */
+  public EReference getReport_DebitReportGroup() {
+    return (EReference) getReportEClass().getEAllStructuralFeatures().get(REPORT_DEBITREPORTGROUP_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Report.creditReportGroup</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.creditReportGroup</b></em>'.
+   * @generated
+   */
+  public EReference getReport_CreditReportGroup() {
+    return (EReference) getReportEClass().getEAllStructuralFeatures().get(REPORT_CREDITREPORTGROUP_FEATURE_ID);
   }
 
   /**
@@ -677,6 +712,49 @@ public class AccountingModelPackage extends ModelPackage {
   public EReference getJournalGroup_JournalStatements() {
     return (EReference) getJournalGroupEClass().getEAllStructuralFeatures().get(
         JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>ReportGroup</b></em>'
+   * @generated
+   */
+  public EClass getReportGroupEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(REPORTGROUP_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getReportGroup_Name() {
+    return (EAttribute) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.reportGroup</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.reportGroup</b></em>'.
+   * @generated
+   */
+  public EReference getReportGroup_ReportGroup() {
+    return (EReference) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_REPORTGROUP_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.account</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.account</b></em>'.
+   * @generated
+   */
+  public EReference getReportGroup_Account() {
+    return (EReference) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_ACCOUNT_FEATURE_ID);
   }
 
   /**
@@ -769,127 +847,52 @@ public class AccountingModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>Report</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
    * @generated
    */
-  public EClass getReportEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(REPORT_CLASSIFIER_ID);
+  public EDataType getDateEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.name</b></em>'.
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
    * @generated
    */
-  public EAttribute getReport_Name() {
-    return (EAttribute) getReportEClass().getEAllStructuralFeatures().get(REPORT_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.debitReportGroup</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.debitReportGroup</b></em>'.
-   * @generated
-   */
-  public EReference getReport_DebitReportGroup() {
-    return (EReference) getReportEClass().getEAllStructuralFeatures().get(REPORT_DEBITREPORTGROUP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Report.creditReportGroup</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Report.creditReportGroup</b></em>'.
-   * @generated
-   */
-  public EReference getReport_CreditReportGroup() {
-    return (EReference) getReportEClass().getEAllStructuralFeatures().get(REPORT_CREDITREPORTGROUP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>ReportGroup</b></em>'
-   * @generated
-   */
-  public EClass getReportGroupEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(REPORTGROUP_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getReportGroup_Name() {
-    return (EAttribute) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.reportGroup</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.reportGroup</b></em>'.
-   * @generated
-   */
-  public EReference getReportGroup_ReportGroup() {
-    return (EReference) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_REPORTGROUP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>ReportGroup.account</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>ReportGroup.account</b></em>'.
-   * @generated
-   */
-  public EReference getReportGroup_Account() {
-    return (EReference) getReportGroupEClass().getEAllStructuralFeatures().get(REPORTGROUP_ACCOUNT_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Vat</b></em>'
-   * @generated
-   */
-  public EClass getVatEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(VAT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Vat.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getVat_Name() {
-    return (EAttribute) getVatEClass().getEAllStructuralFeatures().get(VAT_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Vat.rate</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Vat.rate</b></em>'.
-   * @generated
-   */
-  public EAttribute getVat_Rate() {
-    return (EAttribute) getVatEClass().getEAllStructuralFeatures().get(VAT_RATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Serializable</b></em>'
-   * @generated
-   */
-  public EClass getSerializableEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(SERIALIZABLE_CLASSIFIER_ID);
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ACCOUNTING_CLASSIFIER_ID:
+      return AccountingClass.class;
+    case SERIALIZABLE_CLASSIFIER_ID:
+      return Serializable.class;
+    case ACCOUNT_CLASSIFIER_ID:
+      return Account.class;
+    case ACCOUNTGROUP_CLASSIFIER_ID:
+      return AccountGroup.class;
+    case VAT_CLASSIFIER_ID:
+      return Vat.class;
+    case BALANCEACCOUNT_CLASSIFIER_ID:
+      return BalanceAccount.class;
+    case REPORT_CLASSIFIER_ID:
+      return Report.class;
+    case JOURNALGROUP_CLASSIFIER_ID:
+      return JournalGroup.class;
+    case REPORTGROUP_CLASSIFIER_ID:
+      return ReportGroup.class;
+    case JOURNALSTATEMENT_CLASSIFIER_ID:
+      return JournalStatement.class;
+    case PLACCOUNT_CLASSIFIER_ID:
+      return PLAccount.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

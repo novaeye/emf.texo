@@ -36,8 +36,10 @@ public class Bz393240ModelFactory implements ModelFactory {
       return createApplication();
     case Bz393240ModelPackage.DOCUMENTROOT_CLASSIFIER_ID:
       return createDocumentRoot();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -70,7 +72,7 @@ public class Bz393240ModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -135,8 +137,9 @@ public class Bz393240ModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -150,12 +153,16 @@ public class Bz393240ModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Application</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -186,8 +193,9 @@ public class Bz393240ModelFactory implements ModelFactory {
       switch (featureID) {
       case Bz393240ModelPackage.APPLICATION_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -200,8 +208,9 @@ public class Bz393240ModelFactory implements ModelFactory {
       case Bz393240ModelPackage.APPLICATION_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -212,8 +221,9 @@ public class Bz393240ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -224,13 +234,17 @@ public class Bz393240ModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -269,8 +283,9 @@ public class Bz393240ModelFactory implements ModelFactory {
         return getTarget().getApplicationRequest();
       case Bz393240ModelPackage.DOCUMENTROOT_APPLICATIONRESPONSE_FEATURE_ID:
         return getTarget().getApplicationResponse();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -296,8 +311,9 @@ public class Bz393240ModelFactory implements ModelFactory {
       case Bz393240ModelPackage.DOCUMENTROOT_APPLICATIONRESPONSE_FEATURE_ID:
         getTarget().setApplicationResponse((Application) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -312,8 +328,9 @@ public class Bz393240ModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -328,14 +345,17 @@ public class Bz393240ModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -356,8 +376,9 @@ public class Bz393240ModelFactory implements ModelFactory {
         return Bz393240ModelPackage.INSTANCE.getDocumentRoot_ApplicationRequest();
       case APPLICATIONRESPONSE:
         return Bz393240ModelPackage.INSTANCE.getDocumentRoot_ApplicationResponse();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -383,8 +404,9 @@ public class Bz393240ModelFactory implements ModelFactory {
       case Bz393240ModelPackage.DOCUMENTROOT_APPLICATIONRESPONSE_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.APPLICATIONRESPONSE);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**

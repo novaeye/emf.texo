@@ -50,6 +50,9 @@ public class InventoryModel extends KDMModel {
   /**
    * Adds to the <em>inventoryElement</em> feature.
    * 
+   * @param inventoryElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -60,6 +63,9 @@ public class InventoryModel extends KDMModel {
 
   /**
    * Removes from the <em>inventoryElement</em> feature.
+   * 
+   * @param inventoryElementValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -86,8 +92,8 @@ public class InventoryModel extends KDMModel {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of inventory elements owned by the
    * inventory model. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link InventoryModel#getInventoryElement() inventoryElement}' feature.
+   * @param newInventoryElement
+   *          the new value of the '{@link InventoryModel#getInventoryElement() inventoryElement}' feature.
    * @generated
    */
   public void setInventoryElement(Set<AbstractInventoryElement> newInventoryElement) {

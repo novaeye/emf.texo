@@ -73,27 +73,6 @@ public class EmapModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int BOOKSTORE_CLASSIFIER_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BOOKSTORE_NAME_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BOOKSTORE_WRITERSBYBOOK_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int STRINGTOWRITERMAPENTRY_CLASSIFIER_ID = 2;
 
   /**
@@ -129,6 +108,27 @@ public class EmapModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int BOOKSTORE_CLASSIFIER_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int BOOKSTORE_NAME_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int BOOKSTORE_WRITERSBYBOOK_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int WRITERTOBOOKMAPENTRY_CLASSIFIER_ID = 4;
 
   /**
@@ -154,6 +154,8 @@ public class EmapModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -259,38 +261,6 @@ public class EmapModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>BookStore</b></em>'
-   * @generated
-   */
-  public EClass getBookStoreEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(BOOKSTORE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookStore.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>BookStore.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getBookStore_Name() {
-    return (EAttribute) getBookStoreEClass().getEAllStructuralFeatures().get(BOOKSTORE_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>BookStore.writersByBook</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>BookStore.writersByBook</b></em>'.
-   * @generated
-   */
-  public EReference getBookStore_WritersByBook() {
-    return (EReference) getBookStoreEClass().getEAllStructuralFeatures().get(BOOKSTORE_WRITERSBYBOOK_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>StringToWriterMapEntry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>StringToWriterMapEntry</b></em>'
@@ -345,6 +315,38 @@ public class EmapModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>BookStore</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>BookStore</b></em>'
+   * @generated
+   */
+  public EClass getBookStoreEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(BOOKSTORE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>BookStore.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>BookStore.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getBookStore_Name() {
+    return (EAttribute) getBookStoreEClass().getEAllStructuralFeatures().get(BOOKSTORE_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>BookStore.writersByBook</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>BookStore.writersByBook</b></em>'.
+   * @generated
+   */
+  public EReference getBookStore_WritersByBook() {
+    return (EReference) getBookStoreEClass().getEAllStructuralFeatures().get(BOOKSTORE_WRITERSBYBOOK_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>WriterToBookMapEntry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>WriterToBookMapEntry</b></em>'
@@ -395,7 +397,8 @@ public class EmapModelPackage extends ModelPackage {
       return Writer.class;
     case BOOKSTORE_CLASSIFIER_ID:
       return BookStore.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

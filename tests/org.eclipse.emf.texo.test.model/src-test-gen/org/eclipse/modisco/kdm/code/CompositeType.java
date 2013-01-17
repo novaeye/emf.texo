@@ -45,6 +45,9 @@ public class CompositeType extends Datatype {
   /**
    * Adds to the <em>itemUnit</em> feature.
    * 
+   * @param itemUnitValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToItemUnit(ItemUnit itemUnitValue) {
@@ -55,6 +58,9 @@ public class CompositeType extends Datatype {
 
   /**
    * Removes from the <em>itemUnit</em> feature.
+   * 
+   * @param itemUnitValue
+   *          the value to remove
    * 
    * @generated
    */

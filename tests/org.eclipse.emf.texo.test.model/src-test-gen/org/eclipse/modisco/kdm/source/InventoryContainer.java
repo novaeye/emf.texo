@@ -44,6 +44,9 @@ public class InventoryContainer extends AbstractInventoryElement {
   /**
    * Adds to the <em>inventoryElement</em> feature.
    * 
+   * @param inventoryElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInventoryElement(AbstractInventoryElement inventoryElementValue) {
@@ -54,6 +57,9 @@ public class InventoryContainer extends AbstractInventoryElement {
 
   /**
    * Removes from the <em>inventoryElement</em> feature.
+   * 
+   * @param inventoryElementValue
+   *          the value to remove
    * 
    * @generated
    */

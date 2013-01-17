@@ -40,8 +40,10 @@ public class JpamixedModelFactory implements ModelFactory {
       return createLetterBodyType();
     case JpamixedModelPackage.SALUTATIONTYPE_CLASSIFIER_ID:
       return createSalutationType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -77,7 +79,7 @@ public class JpamixedModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -168,8 +170,9 @@ public class JpamixedModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -183,12 +186,16 @@ public class JpamixedModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -225,8 +232,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return getTarget().getXSISchemaLocation();
       case JpamixedModelPackage.DOCUMENTROOT_LETTERBODY_FEATURE_ID:
         return getTarget().getLetterBody();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -249,8 +257,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.DOCUMENTROOT_LETTERBODY_FEATURE_ID:
         getTarget().setLetterBody((LetterBodyType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -265,8 +274,9 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -281,13 +291,17 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>LetterBodyType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -326,8 +340,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return getTarget().getProductName();
       case JpamixedModelPackage.LETTERBODYTYPE_SHIPDATE_FEATURE_ID:
         return getTarget().getShipDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -353,8 +368,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.LETTERBODYTYPE_SHIPDATE_FEATURE_ID:
         getTarget().setShipDate((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -369,8 +385,9 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().add((LetterBodyTypeMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -385,13 +402,17 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SalutationType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -424,8 +445,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return getTarget().getMixed();
       case JpamixedModelPackage.SALUTATIONTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -442,8 +464,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.SALUTATIONTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -458,8 +481,9 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().add((SalutationTypeMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -474,14 +498,17 @@ public class JpamixedModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -500,8 +527,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case LETTERBODY:
         return JpamixedModelPackage.INSTANCE.getDocumentRoot_LetterBody();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -524,8 +552,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.DOCUMENTROOT_LETTERBODY_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.LETTERBODY);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -546,6 +575,8 @@ public class JpamixedModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>LetterBodyType.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class LetterBodyTypeMixedFeatureGroupModelFeatureMapEntry<E extends LetterBodyTypeMixedFeatureGroup>
@@ -570,8 +601,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return JpamixedModelPackage.INSTANCE.getLetterBodyType_ProductName();
       case SHIPDATE:
         return JpamixedModelPackage.INSTANCE.getLetterBodyType_ShipDate();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -603,8 +635,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.LETTERBODYTYPE_SHIPDATE_FEATURE_ID:
         getTarget().setFeature(LetterBodyTypeMixedFeatureGroup.Feature.SHIPDATE);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -625,6 +658,8 @@ public class JpamixedModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>SalutationType.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SalutationTypeMixedFeatureGroupModelFeatureMapEntry<E extends SalutationTypeMixedFeatureGroup>
@@ -643,8 +678,9 @@ public class JpamixedModelFactory implements ModelFactory {
         return XMLTypePackage.eINSTANCE.getXMLTypeDocumentRoot_Comment();
       case NAME:
         return JpamixedModelPackage.INSTANCE.getSalutationType_Name();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -667,8 +703,9 @@ public class JpamixedModelFactory implements ModelFactory {
       case JpamixedModelPackage.SALUTATIONTYPE_NAME_FEATURE_ID:
         getTarget().setFeature(SalutationTypeMixedFeatureGroup.Feature.NAME);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -685,5 +722,4 @@ public class JpamixedModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

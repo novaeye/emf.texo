@@ -59,7 +59,35 @@ public class RentalModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int RENTALBICYCLETYPE_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALCARSIZE_CLASSIFIER_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int DATE_CLASSIFIER_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALCARSIZEOBJECT_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -87,14 +115,35 @@ public class RentalModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int RENTALBICYCLETYPE_CLASSIFIER_ID = 8;
+  public static final int RENTALUNIT_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID = 9;
+  public static final int RENTALUNIT_DESCRIPTION_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALCAR_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALCAR_SIZE_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int RENTALCAR_CURRENTDRIVER_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -130,41 +179,6 @@ public class RentalModelPackage extends ModelPackage {
    * @generated
    */
   public static final int RENTALCARDRIVER_CURRENTRENTALCAR_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALCAR_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALCAR_SIZE_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALCAR_CURRENTDRIVER_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALCARSIZE_CLASSIFIER_ID = 10;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALCARSIZEOBJECT_CLASSIFIER_ID = 11;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -237,20 +251,6 @@ public class RentalModelPackage extends ModelPackage {
   public static final int RENTALCONTRACTLINE_RENTALUNIT_FEATURE_ID = 4;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALUNIT_CLASSIFIER_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RENTALUNIT_DESCRIPTION_FEATURE_ID = 2;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -259,6 +259,8 @@ public class RentalModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -352,16 +354,6 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
-   * @generated
-   */
-  public EDataType getDateEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>RentalBicycle</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>RentalBicycle</b></em>'
@@ -394,24 +386,56 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>RentalBicycleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>RentalUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the EEnum representing '<em><b>RentalBicycleType</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>RentalUnit</b></em>'
    * @generated
    */
-  public EEnum getRentalBicycleTypeEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(RENTALBICYCLETYPE_CLASSIFIER_ID);
+  public EClass getRentalUnitEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(RENTALUNIT_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>RentalBicycleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
+   * Returns the {@link EStructuralFeature} '<em><b>RentalUnit.description</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>RentalBicycleTypeObject</b></em>'
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalUnit.description</b></em>'.
    * @generated
    */
-  public EDataType getRentalBicycleTypeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID);
+  public EAttribute getRentalUnit_Description() {
+    return (EAttribute) getRentalUnitEClass().getEAllStructuralFeatures().get(RENTALUNIT_DESCRIPTION_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>RentalCar</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>RentalCar</b></em>'
+   * @generated
+   */
+  public EClass getRentalCarEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(RENTALCAR_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.size</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCar.size</b></em>'.
+   * @generated
+   */
+  public EAttribute getRentalCar_Size() {
+    return (EAttribute) getRentalCarEClass().getEAllStructuralFeatures().get(RENTALCAR_SIZE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.currentDriver</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCar.currentDriver</b></em>'.
+   * @generated
+   */
+  public EReference getRentalCar_CurrentDriver() {
+    return (EReference) getRentalCarEClass().getEAllStructuralFeatures().get(RENTALCAR_CURRENTDRIVER_FEATURE_ID);
   }
 
   /**
@@ -466,97 +490,6 @@ public class RentalModelPackage extends ModelPackage {
   public EReference getRentalCarDriver_CurrentRentalCar() {
     return (EReference) getRentalCarDriverEClass().getEAllStructuralFeatures().get(
         RENTALCARDRIVER_CURRENTRENTALCAR_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>RentalCar</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>RentalCar</b></em>'
-   * @generated
-   */
-  public EClass getRentalCarEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(RENTALCAR_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.size</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCar.size</b></em>'.
-   * @generated
-   */
-  public EAttribute getRentalCar_Size() {
-    return (EAttribute) getRentalCarEClass().getEAllStructuralFeatures().get(RENTALCAR_SIZE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalCar.currentDriver</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalCar.currentDriver</b></em>'.
-   * @generated
-   */
-  public EReference getRentalCar_CurrentDriver() {
-    return (EReference) getRentalCarEClass().getEAllStructuralFeatures().get(RENTALCAR_CURRENTDRIVER_FEATURE_ID);
-  }
-
-  /**
-   * Returns the EEnum '<em><b>RentalCarSize</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>RentalCarSize</b></em>'
-   * @generated
-   */
-  public EEnum getRentalCarSizeEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(RENTALCARSIZE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>RentalCarSizeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>RentalCarSizeObject</b></em>'
-   * @generated
-   */
-  public EDataType getRentalCarSizeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(RENTALCARSIZEOBJECT_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case RENTALBICYCLE_CLASSIFIER_ID:
-      return RentalBicycle.class;
-    case RENTALUNIT_CLASSIFIER_ID:
-      return RentalUnit.class;
-    case RENTALCAR_CLASSIFIER_ID:
-      return RentalCar.class;
-    case RENTALBUSINESS_CLASSIFIER_ID:
-      return RentalBusiness.class;
-    case RENTALCARDRIVER_CLASSIFIER_ID:
-      return RentalCarDriver.class;
-    case RENTALCONTRACT_CLASSIFIER_ID:
-      return RentalContract.class;
-    case RENTALCONTRACTLINE_CLASSIFIER_ID:
-      return RentalContractLine.class;
-    case RENTALBICYCLETYPE_CLASSIFIER_ID:
-      return RentalBicycleType.class;
-    case RENTALCARSIZE_CLASSIFIER_ID:
-      return RentalCarSize.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    case RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID:
-      return RentalBicycleType.class;
-    case RENTALCARSIZEOBJECT_CLASSIFIER_ID:
-      return RentalCarSize.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 
   /**
@@ -673,23 +606,93 @@ public class RentalModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>RentalUnit</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>RentalBicycleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>RentalUnit</b></em>'
+   * @return an instance of the EEnum representing '<em><b>RentalBicycleType</b></em>'
    * @generated
    */
-  public EClass getRentalUnitEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(RENTALUNIT_CLASSIFIER_ID);
+  public EEnum getRentalBicycleTypeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(RENTALBICYCLETYPE_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>RentalUnit.description</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
+   * Returns the EEnum '<em><b>RentalCarSize</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>RentalUnit.description</b></em>'.
+   * @return an instance of the EEnum representing '<em><b>RentalCarSize</b></em>'
    * @generated
    */
-  public EAttribute getRentalUnit_Description() {
-    return (EAttribute) getRentalUnitEClass().getEAllStructuralFeatures().get(RENTALUNIT_DESCRIPTION_FEATURE_ID);
+  public EEnum getRentalCarSizeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(RENTALCARSIZE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
+   * @generated
+   */
+  public EDataType getDateEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>RentalBicycleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>RentalBicycleTypeObject</b></em>'
+   * @generated
+   */
+  public EDataType getRentalBicycleTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>RentalCarSizeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>RentalCarSizeObject</b></em>'
+   * @generated
+   */
+  public EDataType getRentalCarSizeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(RENTALCARSIZEOBJECT_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case RENTALBICYCLE_CLASSIFIER_ID:
+      return RentalBicycle.class;
+    case RENTALUNIT_CLASSIFIER_ID:
+      return RentalUnit.class;
+    case RENTALCAR_CLASSIFIER_ID:
+      return RentalCar.class;
+    case RENTALBUSINESS_CLASSIFIER_ID:
+      return RentalBusiness.class;
+    case RENTALCARDRIVER_CLASSIFIER_ID:
+      return RentalCarDriver.class;
+    case RENTALCONTRACT_CLASSIFIER_ID:
+      return RentalContract.class;
+    case RENTALCONTRACTLINE_CLASSIFIER_ID:
+      return RentalContractLine.class;
+    case RENTALBICYCLETYPE_CLASSIFIER_ID:
+      return RentalBicycleType.class;
+    case RENTALCARSIZE_CLASSIFIER_ID:
+      return RentalCarSize.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    case RENTALBICYCLETYPEOBJECT_CLASSIFIER_ID:
+      return RentalBicycleType.class;
+    case RENTALCARSIZEOBJECT_CLASSIFIER_ID:
+      return RentalCarSize.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

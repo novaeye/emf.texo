@@ -91,6 +91,8 @@ public class IncludeModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static IncludeModelPackage initialize() {
@@ -230,7 +232,8 @@ public class IncludeModelPackage extends ModelPackage {
       return Include1.class;
     case INCLUDE2_CLASSIFIER_ID:
       return Include2.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

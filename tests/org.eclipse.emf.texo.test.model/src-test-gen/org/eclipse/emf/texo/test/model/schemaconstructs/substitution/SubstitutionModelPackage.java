@@ -65,7 +65,7 @@ public class SubstitutionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int EVENTYPEOBJECT_CLASSIFIER_ID = 7;
+  public static final int SIMPLENUMBER_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -79,14 +79,14 @@ public class SubstitutionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ODDTYPEOBJECT_CLASSIFIER_ID = 9;
+  public static final int EVENTYPEOBJECT_CLASSIFIER_ID = 7;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int SIMPLENUMBER_CLASSIFIER_ID = 10;
+  public static final int ODDTYPEOBJECT_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -286,6 +286,8 @@ public class SubstitutionModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -685,13 +687,13 @@ public class SubstitutionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EDataType} '<em><b>SimpleNumber</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EDataType} representing '<em><b>EvenTypeObject</b></em>'
+   * @return an instance of the {@link EDataType} representing '<em><b>SimpleNumber</b></em>'
    * @generated
    */
-  public EDataType getEvenTypeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(EVENTYPEOBJECT_CLASSIFIER_ID);
+  public EDataType getSimpleNumberEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SIMPLENUMBER_CLASSIFIER_ID);
   }
 
   /**
@@ -705,6 +707,16 @@ public class SubstitutionModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EDataType} '<em><b>EvenTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>EvenTypeObject</b></em>'
+   * @generated
+   */
+  public EDataType getEvenTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(EVENTYPEOBJECT_CLASSIFIER_ID);
+  }
+
+  /**
    * Returns the {@link EDataType} '<em><b>OddTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>OddTypeObject</b></em>'
@@ -712,16 +724,6 @@ public class SubstitutionModelPackage extends ModelPackage {
    */
   public EDataType getOddTypeObjectEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(ODDTYPEOBJECT_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>SimpleNumber</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SimpleNumber</b></em>'
-   * @generated
-   */
-  public EDataType getSimpleNumberEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SIMPLENUMBER_CLASSIFIER_ID);
   }
 
   /**
@@ -757,7 +759,8 @@ public class SubstitutionModelPackage extends ModelPackage {
       return EvenType.class;
     case ODDTYPEOBJECT_CLASSIFIER_ID:
       return OddType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

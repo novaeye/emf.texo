@@ -133,6 +133,9 @@ public class AccountingClass extends Identifiable implements Serializable {
   /**
    * Adds to the <em>accountGroup</em> feature.
    * 
+   * @param accountGroupValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAccountGroup(AccountGroup accountGroupValue) {
@@ -143,6 +146,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Removes from the <em>accountGroup</em> feature.
+   * 
+   * @param accountGroupValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -191,6 +197,9 @@ public class AccountingClass extends Identifiable implements Serializable {
   /**
    * Adds to the <em>vat</em> feature.
    * 
+   * @param vatValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToVat(Vat vatValue) {
@@ -201,6 +210,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Removes from the <em>vat</em> feature.
+   * 
+   * @param vatValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -299,6 +311,9 @@ public class AccountingClass extends Identifiable implements Serializable {
   /**
    * Adds to the <em>journalGroup</em> feature.
    * 
+   * @param journalGroupValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToJournalGroup(JournalGroup journalGroupValue) {
@@ -309,6 +324,9 @@ public class AccountingClass extends Identifiable implements Serializable {
 
   /**
    * Removes from the <em>journalGroup</em> feature.
+   * 
+   * @param journalGroupValue
+   *          the value to remove
    * 
    * @generated
    */

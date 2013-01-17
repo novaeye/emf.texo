@@ -115,6 +115,9 @@ public class Machine extends Identifiable {
   /**
    * Adds to the <em>tasks</em> feature.
    * 
+   * @param tasksValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToTasks(Task tasksValue) {
@@ -125,6 +128,9 @@ public class Machine extends Identifiable {
 
   /**
    * Removes from the <em>tasks</em> feature.
+   * 
+   * @param tasksValue
+   *          the value to remove
    * 
    * @generated
    */

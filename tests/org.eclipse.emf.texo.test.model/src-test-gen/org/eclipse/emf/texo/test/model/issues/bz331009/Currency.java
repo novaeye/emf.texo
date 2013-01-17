@@ -13,8 +13,8 @@ import java.util.List;
 public enum Currency {
 
   /**
-   * The enum: ROUBLES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
-   * end-model-doc -->
+   * The enum: ROUBLES <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Рубли <!-- end-model-doc
+   * -->
    * 
    * @generated
    */
@@ -30,8 +30,7 @@ public enum Currency {
     }
   },
   /**
-   * The enum: EUROS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
-   * end-model-doc -->
+   * The enum: EUROS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Евро <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -47,7 +46,7 @@ public enum Currency {
     }
   },
   /**
-   * The enum: DOLLARS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Виды валют <!--
+   * The enum: DOLLARS <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Доллары США <!--
    * end-model-doc -->
    * 
    * @generated
@@ -83,6 +82,9 @@ public enum Currency {
    * Returns the '<em><b>Currency</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the Currency, the literal enum class
    * @generated
    */
   public static Currency get(String literal) {
@@ -99,6 +101,9 @@ public enum Currency {
    * Returns the '<em><b>Currency</b></em>' literal with the specified name. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the Currency, the literal enum class
    * @generated
    */
   public static Currency getByName(String name) {
@@ -115,6 +120,9 @@ public enum Currency {
    * Returns the '<em><b>Currency</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the Currency, the literal enum
    * @generated
    */
   public static Currency get(int value) {
@@ -191,6 +199,7 @@ public enum Currency {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -200,6 +209,7 @@ public enum Currency {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -209,6 +219,7 @@ public enum Currency {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

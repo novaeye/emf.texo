@@ -33,8 +33,10 @@ public class SimplechoiceModelFactory implements ModelFactory {
     switch (eClass.getClassifierID()) {
     case SimplechoiceModelPackage.PERSON_CLASSIFIER_ID:
       return createPerson();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -64,7 +66,7 @@ public class SimplechoiceModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -119,8 +121,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -134,12 +137,16 @@ public class SimplechoiceModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -175,8 +182,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
         return getTarget().getAge();
       case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
         return getTarget().getLength();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -199,8 +207,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
       case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
         getTarget().setLength((List<Integer>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -222,8 +231,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
       case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
         getTarget().getLength().add((Integer) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -245,14 +255,17 @@ public class SimplechoiceModelFactory implements ModelFactory {
       case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
         getTarget().getLength().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Person.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class PersonGroupFeatureGroupModelFeatureMapEntry<E extends PersonGroupFeatureGroup> extends
@@ -267,8 +280,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
         return SimplechoiceModelPackage.INSTANCE.getPerson_Age();
       case LENGTH:
         return SimplechoiceModelPackage.INSTANCE.getPerson_Length();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -284,8 +298,9 @@ public class SimplechoiceModelFactory implements ModelFactory {
       case SimplechoiceModelPackage.PERSON_LENGTH_FEATURE_ID:
         getTarget().setFeature(PersonGroupFeatureGroup.Feature.LENGTH);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -302,5 +317,4 @@ public class SimplechoiceModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

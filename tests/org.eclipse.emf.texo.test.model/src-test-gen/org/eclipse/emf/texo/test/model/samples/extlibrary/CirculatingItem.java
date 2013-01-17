@@ -28,6 +28,7 @@ public abstract class CirculatingItem extends Item implements Lendable {
    */
   @Basic(optional = false)
   private int copies = 0;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -76,6 +77,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
   /**
    * Adds to the <em>borrowers</em> feature.
    * 
+   * @param borrowersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBorrowers(Borrower borrowersValue) {
@@ -86,6 +90,9 @@ public abstract class CirculatingItem extends Item implements Lendable {
 
   /**
    * Removes from the <em>borrowers</em> feature.
+   * 
+   * @param borrowersValue
+   *          the value to remove
    * 
    * @generated
    */

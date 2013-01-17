@@ -97,8 +97,8 @@ public class Message extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Текст сообщения <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Message#getText() text}' feature.
+   * @param newText
+   *          the new value of the '{@link Message#getText() text}' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -122,8 +122,8 @@ public class Message extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Message#getType() type}' feature.
+   * @param newType
+   *          the new value of the '{@link Message#getType() type}' feature.
    * @generated
    */
   public void setType(MessageType newType) {
@@ -147,8 +147,8 @@ public class Message extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Отправитель <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Message#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link Message#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(SimCard newFrom) {
@@ -172,8 +172,8 @@ public class Message extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Получатель <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Message#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link Message#getTo() to}' feature.
    * @generated
    */
   public void setTo(SimCard newTo) {
@@ -197,8 +197,8 @@ public class Message extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата/время получения <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Message#getDateTime() dateTime}' feature.
+   * @param newDateTime
+   *          the new value of the '{@link Message#getDateTime() dateTime}' feature.
    * @generated
    */
   public void setDateTime(Date newDateTime) {

@@ -101,6 +101,9 @@ public class ReportGroup extends Identifiable {
   /**
    * Adds to the <em>reportGroup</em> feature.
    * 
+   * @param reportGroupValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToReportGroup(ReportGroup reportGroupValue) {
@@ -111,6 +114,9 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Removes from the <em>reportGroup</em> feature.
+   * 
+   * @param reportGroupValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -159,6 +165,9 @@ public class ReportGroup extends Identifiable {
   /**
    * Adds to the <em>account</em> feature.
    * 
+   * @param accountValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAccount(BalanceAccount accountValue) {
@@ -169,6 +178,9 @@ public class ReportGroup extends Identifiable {
 
   /**
    * Removes from the <em>account</em> feature.
+   * 
+   * @param accountValue
+   *          the value to remove
    * 
    * @generated
    */

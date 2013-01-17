@@ -44,6 +44,9 @@ public class DataModel extends KDMModel {
   /**
    * Adds to the <em>dataElement</em> feature.
    * 
+   * @param dataElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDataElement(AbstractDataElement dataElementValue) {
@@ -54,6 +57,9 @@ public class DataModel extends KDMModel {
 
   /**
    * Removes from the <em>dataElement</em> feature.
+   * 
+   * @param dataElementValue
+   *          the value to remove
    * 
    * @generated
    */

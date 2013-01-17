@@ -46,6 +46,9 @@ public class Polyline extends GraphicsAlgorithm {
   /**
    * Adds to the <em>points</em> feature.
    * 
+   * @param pointsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPoints(Point pointsValue) {
@@ -56,6 +59,9 @@ public class Polyline extends GraphicsAlgorithm {
 
   /**
    * Removes from the <em>points</em> feature.
+   * 
+   * @param pointsValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -45,6 +45,9 @@ public class DeployedComponent extends AbstractPlatformElement {
   /**
    * Adds to the <em>groupedCode</em> feature.
    * 
+   * @param groupedCodeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGroupedCode(Module groupedCodeValue) {
@@ -55,6 +58,9 @@ public class DeployedComponent extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>groupedCode</em> feature.
+   * 
+   * @param groupedCodeValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -142,6 +142,8 @@ public class TestModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static TestModelPackage initialize() {
@@ -363,7 +365,8 @@ public class TestModelPackage extends ModelPackage {
       return Contact.class;
     case CONTACTTYPE_CLASSIFIER_ID:
       return ContactType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

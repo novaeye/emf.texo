@@ -61,6 +61,9 @@ public abstract class KDMFramework extends ModelElement {
   /**
    * Adds to the <em>audit</em> feature.
    * 
+   * @param auditValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAudit(Audit auditValue) {
@@ -71,6 +74,9 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Removes from the <em>audit</em> feature.
+   * 
+   * @param auditValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -119,6 +125,9 @@ public abstract class KDMFramework extends ModelElement {
   /**
    * Adds to the <em>extension</em> feature.
    * 
+   * @param extensionValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToExtension(ExtensionFamily extensionValue) {
@@ -129,6 +138,9 @@ public abstract class KDMFramework extends ModelElement {
 
   /**
    * Removes from the <em>extension</em> feature.
+   * 
+   * @param extensionValue
+   *          the value to remove
    * 
    * @generated
    */

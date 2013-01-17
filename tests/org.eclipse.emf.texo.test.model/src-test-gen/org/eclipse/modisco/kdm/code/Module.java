@@ -45,6 +45,9 @@ public class Module extends CodeItem {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -55,6 +58,9 @@ public class Module extends CodeItem {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

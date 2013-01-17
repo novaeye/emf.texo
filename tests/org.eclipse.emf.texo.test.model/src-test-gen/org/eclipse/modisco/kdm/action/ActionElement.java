@@ -90,6 +90,9 @@ public class ActionElement extends AbstractCodeElement {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(AbstractCodeElement codeElementValue) {
@@ -100,6 +103,9 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -148,6 +154,9 @@ public class ActionElement extends AbstractCodeElement {
   /**
    * Adds to the <em>actionRelation</em> feature.
    * 
+   * @param actionRelationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToActionRelation(AbstractActionRelationship actionRelationValue) {
@@ -158,6 +167,9 @@ public class ActionElement extends AbstractCodeElement {
 
   /**
    * Removes from the <em>actionRelation</em> feature.
+   * 
+   * @param actionRelationValue
+   *          the value to remove
    * 
    * @generated
    */

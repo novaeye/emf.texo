@@ -82,6 +82,8 @@ public class DurationModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static DurationModelPackage initialize() {
@@ -206,7 +208,8 @@ public class DurationModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case DURATIONTEST_CLASSIFIER_ID:
       return DurationTest.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

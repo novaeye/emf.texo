@@ -515,6 +515,8 @@ public class StylesModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static StylesModelPackage initialize() {
@@ -1346,7 +1348,8 @@ public class StylesModelPackage extends ModelPackage {
       return LineStyle.class;
     case LOCATIONTYPE_CLASSIFIER_ID:
       return LocationType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

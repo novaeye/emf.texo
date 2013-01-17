@@ -82,8 +82,8 @@ public class SimContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер контракта <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimContract#getContractNumber() contractNumber}' feature.
+   * @param newContractNumber
+   *          the new value of the '{@link SimContract#getContractNumber() contractNumber}' feature.
    * @generated
    */
   public void setContractNumber(String newContractNumber) {
@@ -107,8 +107,8 @@ public class SimContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Название <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimContract#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link SimContract#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -132,8 +132,8 @@ public class SimContract extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Описание <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimContract#getDescritpion() descritpion}' feature.
+   * @param newDescritpion
+   *          the new value of the '{@link SimContract#getDescritpion() descritpion}' feature.
    * @generated
    */
   public void setDescritpion(String newDescritpion) {
@@ -159,8 +159,8 @@ public class SimContract extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Платежная информация по договору <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link SimContract#getPaymentInfo() paymentInfo}' feature.
+   * @param newPaymentInfo
+   *          the new value of the '{@link SimContract#getPaymentInfo() paymentInfo}' feature.
    * @generated
    */
   public void setPaymentInfo(PaymentInfo newPaymentInfo) {

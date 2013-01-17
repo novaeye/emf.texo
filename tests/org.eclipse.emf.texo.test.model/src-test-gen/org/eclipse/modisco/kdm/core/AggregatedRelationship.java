@@ -90,8 +90,8 @@ public class AggregatedRelationship extends ModelElement {
    * the aggregated set. All relationships in the aggregated set should originate from the source container or from some
    * entity that is contained directly or indirectly in the source container. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AggregatedRelationship#getFrom() from}' feature.
+   * @param newFrom
+   *          the new value of the '{@link AggregatedRelationship#getFrom() from}' feature.
    * @generated
    */
   public void setFrom(KDMEntity newFrom) {
@@ -119,8 +119,8 @@ public class AggregatedRelationship extends ModelElement {
    * the aggregated set. All relations in the aggregated set should terminate at the target container or at some entity
    * that is contained directly or indirectly in the target container. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AggregatedRelationship#getTo() to}' feature.
+   * @param newTo
+   *          the new value of the '{@link AggregatedRelationship#getTo() to}' feature.
    * @generated
    */
   public void setTo(KDMEntity newTo) {
@@ -143,6 +143,9 @@ public class AggregatedRelationship extends ModelElement {
   /**
    * Adds to the <em>relation</em> feature.
    * 
+   * @param relationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToRelation(KDMRelationship relationValue) {
@@ -153,6 +156,9 @@ public class AggregatedRelationship extends ModelElement {
 
   /**
    * Removes from the <em>relation</em> feature.
+   * 
+   * @param relationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -179,8 +185,8 @@ public class AggregatedRelationship extends ModelElement {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The set of primitive KDM relationships
    * represented by the aggregated relationship. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AggregatedRelationship#getRelation() relation}' feature.
+   * @param newRelation
+   *          the new value of the '{@link AggregatedRelationship#getRelation() relation}' feature.
    * @generated
    */
   public void setRelation(Set<KDMRelationship> newRelation) {
@@ -206,8 +212,8 @@ public class AggregatedRelationship extends ModelElement {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> The number of primitive relationships in the
    * aggregated set. <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link AggregatedRelationship#getDensity() density}' feature.
+   * @param newDensity
+   *          the new value of the '{@link AggregatedRelationship#getDensity() density}' feature.
    * @generated
    */
   public void setDensity(Integer newDensity) {

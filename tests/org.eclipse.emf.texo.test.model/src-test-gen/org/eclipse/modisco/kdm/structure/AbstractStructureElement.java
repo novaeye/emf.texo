@@ -71,6 +71,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
   /**
    * Adds to the <em>aggregated</em> feature.
    * 
+   * @param aggregatedValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToAggregated(AggregatedRelationship aggregatedValue) {
@@ -81,6 +84,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Removes from the <em>aggregated</em> feature.
+   * 
+   * @param aggregatedValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -129,6 +135,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
   /**
    * Adds to the <em>implementation</em> feature.
    * 
+   * @param implementationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToImplementation(KDMEntity implementationValue) {
@@ -139,6 +148,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Removes from the <em>implementation</em> feature.
+   * 
+   * @param implementationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -187,6 +199,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
   /**
    * Adds to the <em>structureElement</em> feature.
    * 
+   * @param structureElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStructureElement(AbstractStructureElement structureElementValue) {
@@ -197,6 +212,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Removes from the <em>structureElement</em> feature.
+   * 
+   * @param structureElementValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -245,6 +263,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
   /**
    * Adds to the <em>structureRelationship</em> feature.
    * 
+   * @param structureRelationshipValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToStructureRelationship(AbstractStructureRelationship structureRelationshipValue) {
@@ -255,6 +276,9 @@ public abstract class AbstractStructureElement extends KDMEntity {
 
   /**
    * Removes from the <em>structureRelationship</em> feature.
+   * 
+   * @param structureRelationshipValue
+   *          the value to remove
    * 
    * @generated
    */

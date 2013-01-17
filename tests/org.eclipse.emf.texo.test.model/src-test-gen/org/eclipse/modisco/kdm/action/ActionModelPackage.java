@@ -473,6 +473,8 @@ public class ActionModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static ActionModelPackage initialize() {
@@ -1250,7 +1252,8 @@ public class ActionModelPackage extends ModelPackage {
       return UsesType.class;
     case ACTIONRELATIONSHIP_CLASSIFIER_ID:
       return ActionRelationship.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

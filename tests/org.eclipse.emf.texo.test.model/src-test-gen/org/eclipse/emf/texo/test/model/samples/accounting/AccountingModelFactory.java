@@ -52,8 +52,10 @@ public class AccountingModelFactory implements ModelFactory {
       return createJournalStatement();
     case AccountingModelPackage.PLACCOUNT_CLASSIFIER_ID:
       return createPLAccount();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -110,7 +112,7 @@ public class AccountingModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -139,6 +141,16 @@ public class AccountingModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass Accounting
+   * @generated
+   */
+  public AccountingClass createAccounting() {
+    return new AccountingClass();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass AccountGroup
    * @generated
    */
@@ -149,11 +161,11 @@ public class AccountingModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass Accounting
+   * @return an instance of the model object representing the EClass Vat
    * @generated
    */
-  public AccountingClass createAccounting() {
-    return new AccountingClass();
+  public Vat createVat() {
+    return new Vat();
   }
 
   /**
@@ -169,11 +181,31 @@ public class AccountingModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass Report
+   * @generated
+   */
+  public Report createReport() {
+    return new Report();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass JournalGroup
    * @generated
    */
   public JournalGroup createJournalGroup() {
     return new JournalGroup();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass ReportGroup
+   * @generated
+   */
+  public ReportGroup createReportGroup() {
+    return new ReportGroup();
   }
 
   /**
@@ -209,8 +241,9 @@ public class AccountingModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case AccountingModelPackage.DATE_CLASSIFIER_ID:
       return createDateFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -226,8 +259,9 @@ public class AccountingModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case AccountingModelPackage.DATE_CLASSIFIER_ID:
       return convertDateToString((Date) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
@@ -243,36 +277,6 @@ public class AccountingModelFactory implements ModelFactory {
       return null;
     }
     return ModelUtils.convertToXML(value);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Report
-   * @generated
-   */
-  public Report createReport() {
-    return new Report();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass ReportGroup
-   * @generated
-   */
-  public ReportGroup createReportGroup() {
-    return new ReportGroup();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Vat
-   * @generated
-   */
-  public Vat createVat() {
-    return new Vat();
   }
 
   /**
@@ -292,6 +296,9 @@ public class AccountingModelFactory implements ModelFactory {
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Accounting</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -332,8 +339,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getReport();
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
         return getTarget().getJournalGroup();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -362,8 +370,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
         getTarget().setJournalGroup((List<JournalGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -385,8 +394,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
         getTarget().getJournalGroup().add((JournalGroup) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -408,13 +418,17 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
         getTarget().getJournalGroup().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -440,8 +454,9 @@ public class AccountingModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -451,8 +466,9 @@ public class AccountingModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -462,8 +478,9 @@ public class AccountingModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -473,13 +490,17 @@ public class AccountingModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -509,8 +530,9 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
       case AccountingModelPackage.ACCOUNT_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -523,8 +545,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNT_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -535,8 +558,9 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -547,13 +571,17 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -586,8 +614,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getName();
       case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
         return getTarget().getAccount();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -604,8 +633,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().setAccount((List<Account>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -619,8 +649,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().getAccount().add((Account) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -634,13 +665,17 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().getAccount().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -672,8 +707,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getName();
       case AccountingModelPackage.VAT_RATE_FEATURE_ID:
         return getTarget().getRate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -689,8 +725,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.VAT_RATE_FEATURE_ID:
         getTarget().setRate((Float) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -701,8 +738,9 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -713,13 +751,17 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -749,8 +791,9 @@ public class AccountingModelFactory implements ModelFactory {
       switch (featureID) {
       case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
         return getTarget().getReport();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -764,8 +807,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
         getTarget().setReport((List<ReportGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -779,8 +823,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
         getTarget().getReport().add((ReportGroup) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -794,13 +839,17 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.BALANCEACCOUNT_REPORT_FEATURE_ID:
         getTarget().getReport().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -834,8 +883,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getDebitReportGroup();
       case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
         return getTarget().getCreditReportGroup();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -854,8 +904,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.REPORT_CREDITREPORTGROUP_FEATURE_ID:
         getTarget().setCreditReportGroup((ReportGroup) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -866,8 +917,9 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -878,13 +930,17 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>JournalGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -919,8 +975,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getJournalGroups();
       case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
         return getTarget().getJournalStatements();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -940,8 +997,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
         getTarget().setJournalStatements((List<JournalStatement>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -959,8 +1017,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
         getTarget().getJournalStatements().add((JournalStatement) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -978,13 +1037,17 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.JOURNALGROUP_JOURNALSTATEMENTS_FEATURE_ID:
         getTarget().getJournalStatements().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1019,8 +1082,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getReportGroup();
       case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
         return getTarget().getAccount();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1040,8 +1104,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().setAccount((List<BalanceAccount>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1059,8 +1124,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().getAccount().add((BalanceAccount) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1078,14 +1144,18 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.REPORTGROUP_ACCOUNT_FEATURE_ID:
         getTarget().getAccount().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>JournalStatement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1126,8 +1196,9 @@ public class AccountingModelFactory implements ModelFactory {
         return getTarget().getCreditAccount();
       case AccountingModelPackage.JOURNALSTATEMENT_VAT_FEATURE_ID:
         return getTarget().getVat();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1155,8 +1226,9 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.JOURNALSTATEMENT_VAT_FEATURE_ID:
         getTarget().setVat((Vat) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1167,8 +1239,9 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1179,13 +1252,17 @@ public class AccountingModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PLAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1213,8 +1290,9 @@ public class AccountingModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1224,8 +1302,9 @@ public class AccountingModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1235,8 +1314,9 @@ public class AccountingModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1246,9 +1326,9 @@ public class AccountingModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

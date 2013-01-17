@@ -91,6 +91,9 @@ public class Supplier extends Identifiable {
   /**
    * Adds to the <em>customers</em> feature.
    * 
+   * @param customersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCustomers(Customer customersValue) {
@@ -101,6 +104,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Removes from the <em>customers</em> feature.
+   * 
+   * @param customersValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -149,6 +155,9 @@ public class Supplier extends Identifiable {
   /**
    * Adds to the <em>orders</em> feature.
    * 
+   * @param ordersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToOrders(PurchaseOrder ordersValue) {
@@ -159,6 +168,9 @@ public class Supplier extends Identifiable {
 
   /**
    * Removes from the <em>orders</em> feature.
+   * 
+   * @param ordersValue
+   *          the value to remove
    * 
    * @generated
    */

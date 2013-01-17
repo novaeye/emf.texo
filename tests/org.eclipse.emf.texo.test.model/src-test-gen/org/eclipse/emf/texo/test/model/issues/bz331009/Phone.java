@@ -59,8 +59,8 @@ public class Phone extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер телефона <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Phone#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link Phone#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {
@@ -84,8 +84,8 @@ public class Phone extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Пояснение <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Phone#getDescription() description}' feature.
+   * @param newDescription
+   *          the new value of the '{@link Phone#getDescription() description}' feature.
    * @generated
    */
   public void setDescription(String newDescription) {

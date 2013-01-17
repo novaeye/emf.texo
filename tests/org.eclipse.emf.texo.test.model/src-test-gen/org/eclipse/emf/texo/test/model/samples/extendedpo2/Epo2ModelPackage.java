@@ -60,6 +60,27 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int DATE_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SKU_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ORDERSTATUS_CLASSIFIER_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ITEM_CLASSIFIER_ID = 0;
 
   /**
@@ -110,55 +131,6 @@ public class Epo2ModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ITEM_PARTNUM_FEATURE_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int USADDRESS_CLASSIFIER_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int USADDRESS_STREET_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int USADDRESS_CITY_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int USADDRESS_STATE_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int USADDRESS_ZIP_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SKU_CLASSIFIER_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int DATE_CLASSIFIER_ID = 9;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -235,6 +207,41 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int USADDRESS_CLASSIFIER_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int USADDRESS_STREET_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int USADDRESS_CITY_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int USADDRESS_STATE_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int USADDRESS_ZIP_FEATURE_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ADDRESS_CLASSIFIER_ID = 3;
 
   /**
@@ -256,7 +263,21 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int ORDERSTATUS_CLASSIFIER_ID = 10;
+  public static final int CUSTOMER_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CUSTOMER_CUSTOMERID_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CUSTOMER_ORDERS_FEATURE_ID = 3;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -305,27 +326,6 @@ public class Epo2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int CUSTOMER_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CUSTOMER_CUSTOMERID_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CUSTOMER_ORDERS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int GLOBALADDRESS_CLASSIFIER_ID = 6;
 
   /**
@@ -365,6 +365,8 @@ public class Epo2ModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -543,80 +545,6 @@ public class Epo2ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>USAddress</b></em>'
-   * @generated
-   */
-  public EClass getUSAddressEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(USADDRESS_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>USAddress.street</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.street</b></em>'.
-   * @generated
-   */
-  public EAttribute getUSAddress_Street() {
-    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_STREET_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>USAddress.city</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.city</b></em>'.
-   * @generated
-   */
-  public EAttribute getUSAddress_City() {
-    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_CITY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>USAddress.state</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.state</b></em>'.
-   * @generated
-   */
-  public EAttribute getUSAddress_State() {
-    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_STATE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>USAddress.zip</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.zip</b></em>'.
-   * @generated
-   */
-  public EAttribute getUSAddress_Zip() {
-    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_ZIP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>SKU</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SKU</b></em>'
-   * @generated
-   */
-  public EDataType getSKUEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SKU_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
-   * @generated
-   */
-  public EDataType getDateEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>PurchaseOrder</b></em>'
@@ -727,6 +655,60 @@ public class Epo2ModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>USAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>USAddress</b></em>'
+   * @generated
+   */
+  public EClass getUSAddressEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(USADDRESS_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>USAddress.street</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.street</b></em>'.
+   * @generated
+   */
+  public EAttribute getUSAddress_Street() {
+    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_STREET_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>USAddress.city</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.city</b></em>'.
+   * @generated
+   */
+  public EAttribute getUSAddress_City() {
+    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_CITY_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>USAddress.state</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.state</b></em>'.
+   * @generated
+   */
+  public EAttribute getUSAddress_State() {
+    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_STATE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>USAddress.zip</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>USAddress.zip</b></em>'.
+   * @generated
+   */
+  public EAttribute getUSAddress_Zip() {
+    return (EAttribute) getUSAddressEClass().getEAllStructuralFeatures().get(USADDRESS_ZIP_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Address</b></em>'
@@ -759,50 +741,35 @@ public class Epo2ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>OrderStatus</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the EEnum representing '<em><b>OrderStatus</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>Customer</b></em>'
    * @generated
    */
-  public EEnum getOrderStatusEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(ORDERSTATUS_CLASSIFIER_ID);
+  public EClass getCustomerEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(CUSTOMER_CLASSIFIER_ID);
   }
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EStructuralFeature} '<em><b>Customer.customerID</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
    * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Customer.customerID</b></em>'.
    * @generated
    */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case PURCHASEORDER_CLASSIFIER_ID:
-      return PurchaseOrder.class;
-    case USADDRESS_CLASSIFIER_ID:
-      return USAddress.class;
-    case ADDRESS_CLASSIFIER_ID:
-      return Address.class;
-    case CUSTOMER_CLASSIFIER_ID:
-      return Customer.class;
-    case SUPPLIER_CLASSIFIER_ID:
-      return Supplier.class;
-    case GLOBALADDRESS_CLASSIFIER_ID:
-      return GlobalAddress.class;
-    case GLOBALLOCATION_CLASSIFIER_ID:
-      return GlobalLocation.class;
-    case DATE_CLASSIFIER_ID:
-      return Date.class;
-    case SKU_CLASSIFIER_ID:
-      return String.class;
-    case ORDERSTATUS_CLASSIFIER_ID:
-      return OrderStatus.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+  public EAttribute getCustomer_CustomerID() {
+    return (EAttribute) getCustomerEClass().getEAllStructuralFeatures().get(CUSTOMER_CUSTOMERID_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Customer.orders</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Customer.orders</b></em>'.
+   * @generated
+   */
+  public EReference getCustomer_Orders() {
+    return (EReference) getCustomerEClass().getEAllStructuralFeatures().get(CUSTOMER_ORDERS_FEATURE_ID);
   }
 
   /**
@@ -871,38 +838,6 @@ public class Epo2ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Customer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Customer</b></em>'
-   * @generated
-   */
-  public EClass getCustomerEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(CUSTOMER_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Customer.customerID</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Customer.customerID</b></em>'.
-   * @generated
-   */
-  public EAttribute getCustomer_CustomerID() {
-    return (EAttribute) getCustomerEClass().getEAllStructuralFeatures().get(CUSTOMER_CUSTOMERID_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Customer.orders</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Customer.orders</b></em>'.
-   * @generated
-   */
-  public EReference getCustomer_Orders() {
-    return (EReference) getCustomerEClass().getEAllStructuralFeatures().get(CUSTOMER_ORDERS_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>GlobalAddress</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>GlobalAddress</b></em>'
@@ -954,5 +889,73 @@ public class Epo2ModelPackage extends ModelPackage {
   public EAttribute getGlobalLocation_CountryCode() {
     return (EAttribute) getGlobalLocationEClass().getEAllStructuralFeatures()
         .get(GLOBALLOCATION_COUNTRYCODE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>Date</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>Date</b></em>'
+   * @generated
+   */
+  public EDataType getDateEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(DATE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>SKU</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>SKU</b></em>'
+   * @generated
+   */
+  public EDataType getSKUEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SKU_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the EEnum '<em><b>OrderStatus</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the EEnum representing '<em><b>OrderStatus</b></em>'
+   * @generated
+   */
+  public EEnum getOrderStatusEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(ORDERSTATUS_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case PURCHASEORDER_CLASSIFIER_ID:
+      return PurchaseOrder.class;
+    case USADDRESS_CLASSIFIER_ID:
+      return USAddress.class;
+    case ADDRESS_CLASSIFIER_ID:
+      return Address.class;
+    case CUSTOMER_CLASSIFIER_ID:
+      return Customer.class;
+    case SUPPLIER_CLASSIFIER_ID:
+      return Supplier.class;
+    case GLOBALADDRESS_CLASSIFIER_ID:
+      return GlobalAddress.class;
+    case GLOBALLOCATION_CLASSIFIER_ID:
+      return GlobalLocation.class;
+    case DATE_CLASSIFIER_ID:
+      return Date.class;
+    case SKU_CLASSIFIER_ID:
+      return String.class;
+    case ORDERSTATUS_CLASSIFIER_ID:
+      return OrderStatus.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

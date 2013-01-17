@@ -77,8 +77,8 @@ public class Passport extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Серия <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Passport#getSeries() series}' feature.
+   * @param newSeries
+   *          the new value of the '{@link Passport#getSeries() series}' feature.
    * @generated
    */
   public void setSeries(String newSeries) {
@@ -102,8 +102,8 @@ public class Passport extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Номер <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Passport#getNumber() number}' feature.
+   * @param newNumber
+   *          the new value of the '{@link Passport#getNumber() number}' feature.
    * @generated
    */
   public void setNumber(String newNumber) {
@@ -127,8 +127,8 @@ public class Passport extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата выдачи <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Passport#getIssueDate() issueDate}' feature.
+   * @param newIssueDate
+   *          the new value of the '{@link Passport#getIssueDate() issueDate}' feature.
    * @generated
    */
   public void setIssueDate(String newIssueDate) {
@@ -152,8 +152,8 @@ public class Passport extends Identifiable implements Document {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Кем выдан <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Passport#getIssued() issued}' feature.
+   * @param newIssued
+   *          the new value of the '{@link Passport#getIssued() issued}' feature.
    * @generated
    */
   public void setIssued(String newIssued) {

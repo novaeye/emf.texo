@@ -9,7 +9,6 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
-import org.eclipse.emf.texo.test.model.schemaconstructs.mixed.LetterBodyType;
 
 /**
  * A representation for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'. <!-- begin-user-doc --> <!--
@@ -205,6 +204,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   private RootType root;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -212,6 +213,7 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -231,12 +233,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
+   * Sets the <em>text</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newText
-   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
+   *          the new value of the '<em><b>text</b></em>' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -245,11 +247,11 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>cDATA</b></em>' feature.
+   * Returns the value of '<em><b>CDATA</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>cDATA</b></em>' feature
+   * @return the value of '<em><b>CDATA</b></em>' feature
    * @generated
    */
   public String getCDATA() {
@@ -257,12 +259,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
+   * Sets the <em>cDATA</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newCDATA
-   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   *          the new value of the '<em><b>CDATA</b></em>' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -283,12 +285,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
+   * Sets the <em>comment</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newComment
-   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   *          the new value of the '<em><b>comment</b></em>' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -311,10 +313,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getComplexEven() <em>complexEven</em>}' feature.
    * 
-   * @param newComplexEven
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newComplexEven
    *          the new value of the '{@link DocumentRoot#getComplexEven() complexEven}' feature.
    * @generated
@@ -339,10 +339,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * @param newMyComplexAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMyComplexAbstract
    *          the new value of the '{@link DocumentRoot#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated
@@ -367,10 +365,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getComplexOdd() <em>complexOdd</em>}' feature.
    * 
-   * @param newComplexOdd
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newComplexOdd
    *          the new value of the '{@link DocumentRoot#getComplexOdd() complexOdd}' feature.
    * @generated
@@ -395,10 +391,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getEven() <em>even</em>}' feature.
    * 
-   * @param newEven
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newEven
    *          the new value of the '{@link DocumentRoot#getEven() even}' feature.
    * @generated
@@ -423,10 +417,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getMyAbstract() <em>myAbstract</em>}' feature.
    * 
-   * @param newMyAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMyAbstract
    *          the new value of the '{@link DocumentRoot#getMyAbstract() myAbstract}' feature.
    * @generated
@@ -451,10 +443,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getOdd() <em>odd</em>}' feature.
    * 
-   * @param newOdd
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newOdd
    *          the new value of the '{@link DocumentRoot#getOdd() odd}' feature.
    * @generated
@@ -479,10 +469,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getRoot() <em>root</em>}' feature.
    * 
-   * @param newRoot
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newRoot
    *          the new value of the '{@link DocumentRoot#getRoot() root}' feature.
    * @generated

@@ -11,6 +11,7 @@ import java.util.List;
  * @generated
  */
 public enum RentalBicycleType {
+
   /**
    * The enum: STANDARD <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -63,6 +64,9 @@ public enum RentalBicycleType {
    * Returns the '<em><b>RentalBicycleType</b></em>' literal with the specified literal value. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the RentalBicycleType, the literal enum class
    * @generated
    */
   public static RentalBicycleType get(String literal) {
@@ -79,6 +83,9 @@ public enum RentalBicycleType {
    * Returns the '<em><b>RentalBicycleType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the RentalBicycleType, the literal enum class
    * @generated
    */
   public static RentalBicycleType getByName(String name) {
@@ -95,6 +102,9 @@ public enum RentalBicycleType {
    * Returns the '<em><b>RentalBicycleType</b></em>' literal with the specified integer value. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the RentalBicycleType, the literal enum
    * @generated
    */
   public static RentalBicycleType get(int value) {
@@ -161,6 +171,7 @@ public enum RentalBicycleType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -170,6 +181,7 @@ public enum RentalBicycleType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -179,6 +191,7 @@ public enum RentalBicycleType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

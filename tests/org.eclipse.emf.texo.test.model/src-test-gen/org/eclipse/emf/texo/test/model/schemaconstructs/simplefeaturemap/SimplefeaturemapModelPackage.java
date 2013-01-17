@@ -119,6 +119,8 @@ public class SimplefeaturemapModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static SimplefeaturemapModelPackage initialize() {
@@ -302,7 +304,8 @@ public class SimplefeaturemapModelPackage extends ModelPackage {
       return PurchaseOrder.class;
     case SUPPLIER_CLASSIFIER_ID:
       return Supplier.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

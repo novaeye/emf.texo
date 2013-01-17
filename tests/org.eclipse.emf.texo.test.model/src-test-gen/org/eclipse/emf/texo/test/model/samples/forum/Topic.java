@@ -157,6 +157,9 @@ public class Topic extends Identifiable {
   /**
    * Adds to the <em>posts</em> feature.
    * 
+   * @param postsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPosts(Post postsValue) {
@@ -167,6 +170,9 @@ public class Topic extends Identifiable {
 
   /**
    * Removes from the <em>posts</em> feature.
+   * 
+   * @param postsValue
+   *          the value to remove
    * 
    * @generated
    */

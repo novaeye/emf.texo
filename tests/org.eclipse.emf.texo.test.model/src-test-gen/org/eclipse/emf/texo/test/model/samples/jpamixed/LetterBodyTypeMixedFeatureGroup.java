@@ -196,6 +196,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   private Date shipDate;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -203,6 +205,7 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -222,12 +225,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
+   * Sets the <em>text</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newText
-   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
+   *          the new value of the '<em><b>text</b></em>' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -236,11 +239,11 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>cDATA</b></em>' feature.
+   * Returns the value of '<em><b>CDATA</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>cDATA</b></em>' feature
+   * @return the value of '<em><b>CDATA</b></em>' feature
    * @generated
    */
   public String getCDATA() {
@@ -248,12 +251,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
+   * Sets the <em>cDATA</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newCDATA
-   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   *          the new value of the '<em><b>CDATA</b></em>' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -274,12 +277,12 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
+   * Sets the <em>comment</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newComment
-   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   *          the new value of the '<em><b>comment</b></em>' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -302,10 +305,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getSalutation() <em>salutation</em>}' feature.
    * 
-   * @param newSalutation
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newSalutation
    *          the new value of the '{@link LetterBodyType#getSalutation() salutation}' feature.
    * @generated
@@ -330,10 +331,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getQuantity() <em>quantity</em>}' feature.
    * 
-   * @param newQuantity
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newQuantity
    *          the new value of the '{@link LetterBodyType#getQuantity() quantity}' feature.
    * @generated
@@ -358,10 +357,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getProductName() <em>productName</em>}' feature.
    * 
-   * @param newProductName
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newProductName
    *          the new value of the '{@link LetterBodyType#getProductName() productName}' feature.
    * @generated
@@ -386,10 +383,8 @@ public class LetterBodyTypeMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link LetterBodyType#getShipDate() <em>shipDate</em>}' feature.
    * 
-   * @param newShipDate
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newShipDate
    *          the new value of the '{@link LetterBodyType#getShipDate() shipDate}' feature.
    * @generated

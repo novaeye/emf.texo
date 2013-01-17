@@ -43,6 +43,7 @@ public class Department extends Identifiable {
   private List<Employee> employees = new ArrayList<Employee>();
 
   /**
+   * @return the hello string
    * @generated
    */
   public String helloWorld() {
@@ -67,8 +68,8 @@ public class Department extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Department#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Department#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -90,6 +91,9 @@ public class Department extends Identifiable {
   /**
    * Adds to the <em>employees</em> feature.
    * 
+   * @param employeesValue
+   *          value to add
+   * 
    * @generated
    */
   public void addToEmployees(Employee employeesValue) {
@@ -100,6 +104,9 @@ public class Department extends Identifiable {
 
   /**
    * Removes from the <em>employees</em> feature.
+   * 
+   * @param employeesValue
+   *          value to remove
    * 
    * @generated
    */
@@ -125,8 +132,8 @@ public class Department extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Department#getEmployees() employees}' feature.
+   * @param newEmployees
+   *          the new value of the '{@link Department#getEmployees() employees}' feature.
    * @generated
    */
   public void setEmployees(List<Employee> newEmployees) {

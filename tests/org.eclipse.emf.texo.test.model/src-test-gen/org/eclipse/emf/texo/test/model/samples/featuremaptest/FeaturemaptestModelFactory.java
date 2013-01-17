@@ -34,8 +34,10 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       return createPurchaseOrder();
     case FeaturemaptestModelPackage.SUPPLIER_CLASSIFIER_ID:
       return createSupplier();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -68,7 +70,7 @@ public class FeaturemaptestModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -133,8 +135,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -148,12 +151,16 @@ public class FeaturemaptestModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -184,8 +191,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       switch (featureID) {
       case FeaturemaptestModelPackage.PURCHASEORDER_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -198,8 +206,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       case FeaturemaptestModelPackage.PURCHASEORDER_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -210,8 +219,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -222,13 +232,17 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -269,8 +283,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
         return getTarget().getPreferredOrders();
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
         return getTarget().getStandardOrders();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -299,8 +314,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
         getTarget().setStandardOrders((List<PurchaseOrder>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -330,8 +346,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
         getTarget().getStandardOrders().add((PurchaseOrder) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -361,14 +378,17 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
         getTarget().getStandardOrders().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Supplier.orders</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SupplierOrdersFeatureGroupModelFeatureMapEntry<E extends SupplierOrdersFeatureGroup> extends
@@ -387,8 +407,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
         return FeaturemaptestModelPackage.INSTANCE.getSupplier_PreferredOrders();
       case STANDARDORDERS:
         return FeaturemaptestModelPackage.INSTANCE.getSupplier_StandardOrders();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -410,8 +431,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       case FeaturemaptestModelPackage.SUPPLIER_STANDARDORDERS_FEATURE_ID:
         getTarget().setFeature(SupplierOrdersFeatureGroup.Feature.STANDARDORDERS);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -428,5 +450,4 @@ public class FeaturemaptestModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

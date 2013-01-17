@@ -44,6 +44,9 @@ public class ConceptualContainer extends AbstractConceptualElement {
   /**
    * Adds to the <em>conceptualElement</em> feature.
    * 
+   * @param conceptualElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToConceptualElement(AbstractConceptualElement conceptualElementValue) {
@@ -54,6 +57,9 @@ public class ConceptualContainer extends AbstractConceptualElement {
 
   /**
    * Removes from the <em>conceptualElement</em> feature.
+   * 
+   * @param conceptualElementValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -125,6 +125,8 @@ public class TestAnyAnyFeatureGroup extends Identifiable {
   private Feature feature = null;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -132,6 +134,7 @@ public class TestAnyAnyFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {

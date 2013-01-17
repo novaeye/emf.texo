@@ -144,6 +144,9 @@ public class DataElement extends ComputationalObject {
   /**
    * Adds to the <em>codeElement</em> feature.
    * 
+   * @param codeElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCodeElement(Datatype codeElementValue) {
@@ -154,6 +157,9 @@ public class DataElement extends ComputationalObject {
 
   /**
    * Removes from the <em>codeElement</em> feature.
+   * 
+   * @param codeElementValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -77,6 +77,9 @@ public class EventAction extends AbstractEventElement {
   /**
    * Adds to the <em>eventElement</em> feature.
    * 
+   * @param eventElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEventElement(Event eventElementValue) {
@@ -87,6 +90,9 @@ public class EventAction extends AbstractEventElement {
 
   /**
    * Removes from the <em>eventElement</em> feature.
+   * 
+   * @param eventElementValue
+   *          the value to remove
    * 
    * @generated
    */

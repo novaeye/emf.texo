@@ -141,6 +141,8 @@ public class ElementNameMapFeatureGroup extends Identifiable {
   private NameList names;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -148,6 +150,7 @@ public class ElementNameMapFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -169,10 +172,8 @@ public class ElementNameMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Element#getNames() <em>names</em>}' feature.
    * 
-   * @param newNames
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newNames
    *          the new value of the '{@link Element#getNames() names}' feature.
    * @generated

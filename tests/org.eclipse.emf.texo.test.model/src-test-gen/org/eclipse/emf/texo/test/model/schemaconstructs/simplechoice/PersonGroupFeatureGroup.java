@@ -132,6 +132,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private Integer age;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -141,6 +142,8 @@ public class PersonGroupFeatureGroup extends Identifiable {
   private Integer length;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -148,6 +151,7 @@ public class PersonGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -169,10 +173,8 @@ public class PersonGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Person#getAge() <em>age</em>}' feature.
    * 
-   * @param newAge
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newAge
    *          the new value of the '{@link Person#getAge() age}' feature.
    * @generated
@@ -197,10 +199,8 @@ public class PersonGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Person#getLength() <em>length</em>}' feature.
    * 
-   * @param newLength
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newLength
    *          the new value of the '{@link Person#getLength() length}' feature.
    * @generated

@@ -64,6 +64,9 @@ public enum FormulaType {
    * Returns the '<em><b>FormulaType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the FormulaType, the literal enum class
    * @generated
    */
   public static FormulaType get(String literal) {
@@ -80,6 +83,9 @@ public enum FormulaType {
    * Returns the '<em><b>FormulaType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the FormulaType, the literal enum class
    * @generated
    */
   public static FormulaType getByName(String name) {
@@ -96,6 +102,9 @@ public enum FormulaType {
    * Returns the '<em><b>FormulaType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the FormulaType, the literal enum
    * @generated
    */
   public static FormulaType get(int value) {
@@ -162,6 +171,7 @@ public enum FormulaType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -171,6 +181,7 @@ public enum FormulaType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -180,6 +191,7 @@ public enum FormulaType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

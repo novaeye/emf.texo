@@ -95,6 +95,9 @@ public class EClass0 extends Identifiable {
   /**
    * Adds to the <em>many</em> feature.
    * 
+   * @param manyValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToMany(EClass1 manyValue) {
@@ -106,6 +109,9 @@ public class EClass0 extends Identifiable {
 
   /**
    * Removes from the <em>many</em> feature.
+   * 
+   * @param manyValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -43,6 +43,9 @@ public class Namespace extends CodeItem {
   /**
    * Adds to the <em>groupedCode</em> feature.
    * 
+   * @param groupedCodeValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGroupedCode(CodeItem groupedCodeValue) {
@@ -53,6 +56,9 @@ public class Namespace extends CodeItem {
 
   /**
    * Removes from the <em>groupedCode</em> feature.
+   * 
+   * @param groupedCodeValue
+   *          the value to remove
    * 
    * @generated
    */

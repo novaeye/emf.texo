@@ -47,6 +47,9 @@ public class CurvedConnection extends Connection {
   /**
    * Adds to the <em>controlPoints</em> feature.
    * 
+   * @param controlPointsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToControlPoints(PrecisionPoint controlPointsValue) {
@@ -57,6 +60,9 @@ public class CurvedConnection extends Connection {
 
   /**
    * Removes from the <em>controlPoints</em> feature.
+   * 
+   * @param controlPointsValue
+   *          the value to remove
    * 
    * @generated
    */

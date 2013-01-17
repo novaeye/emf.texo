@@ -63,8 +63,8 @@ public class CarModel extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Марка ТС <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarModel#getProducer() producer}' feature.
+   * @param newProducer
+   *          the new value of the '{@link CarModel#getProducer() producer}' feature.
    * @generated
    */
   public void setProducer(CarProducer newProducer) {
@@ -88,8 +88,8 @@ public class CarModel extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Название модели <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link CarModel#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link CarModel#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {

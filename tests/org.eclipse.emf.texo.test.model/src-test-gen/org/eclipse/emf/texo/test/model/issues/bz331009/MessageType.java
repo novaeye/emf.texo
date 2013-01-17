@@ -13,7 +13,7 @@ import java.util.List;
 public enum MessageType {
 
   /**
-   * The enum: SERVICE <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * The enum: SERVICE <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Служебное <!--
    * end-model-doc -->
    * 
    * @generated
@@ -30,7 +30,7 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: EVENT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * The enum: EVENT <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Событийное <!--
    * end-model-doc -->
    * 
    * @generated
@@ -47,7 +47,7 @@ public enum MessageType {
     }
   },
   /**
-   * The enum: COMMAND <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип сообщения <!--
+   * The enum: COMMAND <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Командное <!--
    * end-model-doc -->
    * 
    * @generated
@@ -83,6 +83,9 @@ public enum MessageType {
    * Returns the '<em><b>MessageType</b></em>' literal with the specified literal value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the MessageType, the literal enum class
    * @generated
    */
   public static MessageType get(String literal) {
@@ -99,6 +102,9 @@ public enum MessageType {
    * Returns the '<em><b>MessageType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the MessageType, the literal enum class
    * @generated
    */
   public static MessageType getByName(String name) {
@@ -115,6 +121,9 @@ public enum MessageType {
    * Returns the '<em><b>MessageType</b></em>' literal with the specified integer value. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the MessageType, the literal enum
    * @generated
    */
   public static MessageType get(int value) {
@@ -191,6 +200,7 @@ public enum MessageType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -200,6 +210,7 @@ public enum MessageType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -209,6 +220,7 @@ public enum MessageType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

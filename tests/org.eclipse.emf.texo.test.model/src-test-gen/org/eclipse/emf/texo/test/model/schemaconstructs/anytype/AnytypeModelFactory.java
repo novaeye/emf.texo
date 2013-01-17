@@ -39,8 +39,10 @@ public class AnytypeModelFactory implements ModelFactory {
       return createC();
     case AnytypeModelPackage.TESTANY_CLASSIFIER_ID:
       return createTestAny();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -79,7 +81,7 @@ public class AnytypeModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -172,8 +174,9 @@ public class AnytypeModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -187,12 +190,16 @@ public class AnytypeModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>A</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -228,8 +235,9 @@ public class AnytypeModelFactory implements ModelFactory {
         return getTarget().getLon();
       case AnytypeModelPackage.A_MYB_FEATURE_ID:
         return getTarget().getMyB();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -251,8 +259,9 @@ public class AnytypeModelFactory implements ModelFactory {
       case AnytypeModelPackage.A_MYB_FEATURE_ID:
         getTarget().setMyB((B) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -263,8 +272,9 @@ public class AnytypeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -275,13 +285,17 @@ public class AnytypeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>B</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -311,8 +325,9 @@ public class AnytypeModelFactory implements ModelFactory {
       switch (featureID) {
       case AnytypeModelPackage.B_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -325,8 +340,9 @@ public class AnytypeModelFactory implements ModelFactory {
       case AnytypeModelPackage.B_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -337,8 +353,9 @@ public class AnytypeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -349,13 +366,17 @@ public class AnytypeModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>C</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -383,8 +404,9 @@ public class AnytypeModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -394,8 +416,9 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -405,8 +428,9 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -416,13 +440,17 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TestAny</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -462,8 +490,9 @@ public class AnytypeModelFactory implements ModelFactory {
         return getTarget().getMyAny();
       case AnytypeModelPackage.TESTANY_ANY_FEATURE_ID:
         return getTarget().getAny();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -492,8 +521,9 @@ public class AnytypeModelFactory implements ModelFactory {
       case AnytypeModelPackage.TESTANY_ANY_FEATURE_ID:
         getTarget().setAny((List<TestAnyAnyFeatureGroup>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -515,8 +545,9 @@ public class AnytypeModelFactory implements ModelFactory {
       case AnytypeModelPackage.TESTANY_ANY_FEATURE_ID:
         getTarget().getAny().add((TestAnyAnyFeatureGroup) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -538,14 +569,17 @@ public class AnytypeModelFactory implements ModelFactory {
       case AnytypeModelPackage.TESTANY_ANY_FEATURE_ID:
         getTarget().getAny().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>TestAny.myAny</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class TestAnyMyAnyFeatureGroupModelFeatureMapEntry<E extends TestAnyMyAnyFeatureGroup> extends
@@ -556,8 +590,9 @@ public class AnytypeModelFactory implements ModelFactory {
      */
     public EStructuralFeature getEStructuralFeature() {
       switch (getTarget().getFeature()) {
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -567,8 +602,9 @@ public class AnytypeModelFactory implements ModelFactory {
 
       final EClass eClass = AnytypeModelPackage.INSTANCE.getTestAnyEClass();
       switch (eClass.getFeatureID(eStructuralFeature)) {
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -589,6 +625,8 @@ public class AnytypeModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>TestAny.any</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class TestAnyAnyFeatureGroupModelFeatureMapEntry<E extends TestAnyAnyFeatureGroup> extends
@@ -599,8 +637,9 @@ public class AnytypeModelFactory implements ModelFactory {
      */
     public EStructuralFeature getEStructuralFeature() {
       switch (getTarget().getFeature()) {
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -610,8 +649,9 @@ public class AnytypeModelFactory implements ModelFactory {
 
       final EClass eClass = AnytypeModelPackage.INSTANCE.getTestAnyEClass();
       switch (eClass.getFeatureID(eStructuralFeature)) {
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -628,5 +668,4 @@ public class AnytypeModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

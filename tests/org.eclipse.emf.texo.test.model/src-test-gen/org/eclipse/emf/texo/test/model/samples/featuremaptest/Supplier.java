@@ -95,60 +95,6 @@ public class Supplier extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>preferredOrders</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>preferredOrders</b></em>' feature
-   * @generated
-   */
-  public List<PurchaseOrder> getPreferredOrders() {
-    return SupplierOrdersFeatureGroup.createUnmodifiableValueList(getOrders(),
-        SupplierOrdersFeatureGroup.Feature.PREFERREDORDERS);
-  }
-
-  /**
-   * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param newPreferredOrders
-   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
-   * @generated
-   */
-  public void setPreferredOrders(List<PurchaseOrder> newPreferredOrders) {
-    setOrders(SupplierOrdersFeatureGroup.createFeatureGroupList(SupplierOrdersFeatureGroup.Feature.PREFERREDORDERS,
-        newPreferredOrders));
-  }
-
-  /**
-   * Returns the value of '<em><b>standardOrders</b></em>' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return the value of '<em><b>standardOrders</b></em>' feature
-   * @generated
-   */
-  public List<PurchaseOrder> getStandardOrders() {
-    return SupplierOrdersFeatureGroup.createUnmodifiableValueList(getOrders(),
-        SupplierOrdersFeatureGroup.Feature.STANDARDORDERS);
-  }
-
-  /**
-   * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param newStandardOrders
-   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
-   * @generated
-   */
-  public void setStandardOrders(List<PurchaseOrder> newStandardOrders) {
-    setOrders(SupplierOrdersFeatureGroup.createFeatureGroupList(SupplierOrdersFeatureGroup.Feature.STANDARDORDERS,
-        newStandardOrders));
-  }
-
-  /**
    * Returns the value of '<em><b>hardCopyOrderReference</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -200,6 +146,60 @@ public class Supplier extends Identifiable {
   public void setHardCopyOrderNumber(List<Long> newHardCopyOrderNumber) {
     setOrders(SupplierOrdersFeatureGroup.createFeatureGroupList(SupplierOrdersFeatureGroup.Feature.HARDCOPYORDERNUMBER,
         newHardCopyOrderNumber));
+  }
+
+  /**
+   * Returns the value of '<em><b>preferredOrders</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>preferredOrders</b></em>' feature
+   * @generated
+   */
+  public List<PurchaseOrder> getPreferredOrders() {
+    return SupplierOrdersFeatureGroup.createUnmodifiableValueList(getOrders(),
+        SupplierOrdersFeatureGroup.Feature.PREFERREDORDERS);
+  }
+
+  /**
+   * Sets the '{@link Supplier#getPreferredOrders() <em>preferredOrders</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param newPreferredOrders
+   *          the new value of the '{@link Supplier#getPreferredOrders() preferredOrders}' feature.
+   * @generated
+   */
+  public void setPreferredOrders(List<PurchaseOrder> newPreferredOrders) {
+    setOrders(SupplierOrdersFeatureGroup.createFeatureGroupList(SupplierOrdersFeatureGroup.Feature.PREFERREDORDERS,
+        newPreferredOrders));
+  }
+
+  /**
+   * Returns the value of '<em><b>standardOrders</b></em>' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return the value of '<em><b>standardOrders</b></em>' feature
+   * @generated
+   */
+  public List<PurchaseOrder> getStandardOrders() {
+    return SupplierOrdersFeatureGroup.createUnmodifiableValueList(getOrders(),
+        SupplierOrdersFeatureGroup.Feature.STANDARDORDERS);
+  }
+
+  /**
+   * Sets the '{@link Supplier#getStandardOrders() <em>standardOrders</em>}' feature.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param newStandardOrders
+   *          the new value of the '{@link Supplier#getStandardOrders() standardOrders}' feature.
+   * @generated
+   */
+  public void setStandardOrders(List<PurchaseOrder> newStandardOrders) {
+    setOrders(SupplierOrdersFeatureGroup.createFeatureGroupList(SupplierOrdersFeatureGroup.Feature.STANDARDORDERS,
+        newStandardOrders));
   }
 
   /**

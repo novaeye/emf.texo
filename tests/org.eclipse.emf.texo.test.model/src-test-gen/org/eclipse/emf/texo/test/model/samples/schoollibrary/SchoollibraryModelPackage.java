@@ -98,6 +98,8 @@ public class SchoollibraryModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static SchoollibraryModelPackage initialize() {
@@ -250,7 +252,8 @@ public class SchoollibraryModelPackage extends ModelPackage {
       return SchoolBook.class;
     case SCHOOLLIBRARY_CLASSIFIER_ID:
       return SchoolLibrary.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

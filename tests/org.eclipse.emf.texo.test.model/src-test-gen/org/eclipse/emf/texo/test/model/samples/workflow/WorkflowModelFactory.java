@@ -54,8 +54,10 @@ public class WorkflowModelFactory implements ModelFactory {
       return createLoopTask();
     case WorkflowModelPackage.TASK_CLASSIFIER_ID:
       return createTask();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -127,7 +129,7 @@ public class WorkflowModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -156,6 +158,16 @@ public class WorkflowModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass ConditionalOutputPort
+   * @generated
+   */
+  public ConditionalOutputPort createConditionalOutputPort() {
+    return new ConditionalOutputPort();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Workflow
    * @generated
    */
@@ -176,11 +188,11 @@ public class WorkflowModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass InputPort
+   * @return an instance of the model object representing the EClass Comment
    * @generated
    */
-  public InputPort createInputPort() {
-    return new InputPort();
+  public Comment createComment() {
+    return new Comment();
   }
 
   /**
@@ -191,6 +203,16 @@ public class WorkflowModelFactory implements ModelFactory {
    */
   public OutputPort createOutputPort() {
     return new OutputPort();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass InputPort
+   * @generated
+   */
+  public InputPort createInputPort() {
+    return new InputPort();
   }
 
   /**
@@ -246,26 +268,6 @@ public class WorkflowModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass ConditionalOutputPort
-   * @generated
-   */
-  public ConditionalOutputPort createConditionalOutputPort() {
-    return new ConditionalOutputPort();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Comment
-   * @generated
-   */
-  public Comment createComment() {
-    return new Comment();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass Task
    * @generated
    */
@@ -284,8 +286,9 @@ public class WorkflowModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -299,13 +302,17 @@ public class WorkflowModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ConditionalOutputPort</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -336,8 +343,9 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
         return getTarget().getCondition();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -350,8 +358,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.CONDITIONALOUTPUTPORT_CONDITION_FEATURE_ID:
         getTarget().setCondition((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -362,8 +371,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -374,13 +384,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Workflow</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -414,8 +428,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().getEdges();
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
         return getTarget().getComments();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -435,8 +450,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
         getTarget().setComments((List<Comment>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -458,8 +474,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
         getTarget().getComments().add((Comment) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -481,13 +498,17 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOW_COMMENTS_FEATURE_ID:
         getTarget().getComments().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>WorkflowElement</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -530,8 +551,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().getHeight();
       case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
         return getTarget().getWorkFlowElementId();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -562,8 +584,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOWELEMENT_WORKFLOWELEMENTID_FEATURE_ID:
         getTarget().setWorkFlowElementId((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -574,8 +597,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -586,13 +610,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>WorkflowNode</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -630,8 +658,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().isIsStart();
       case WorkflowModelPackage.WORKFLOWNODE_ISFINISH_FEATURE_ID:
         return getTarget().isIsFinish();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -657,8 +686,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.WORKFLOWNODE_ISFINISH_FEATURE_ID:
         getTarget().setIsFinish((Boolean) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -677,8 +707,9 @@ public class WorkflowModelFactory implements ModelFactory {
         getTarget().getInputs().add((InputPort) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -697,13 +728,17 @@ public class WorkflowModelFactory implements ModelFactory {
         getTarget().getInputs().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Edge</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -737,8 +772,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().getTarget();
       case WorkflowModelPackage.EDGE_SOURCE_FEATURE_ID:
         return getTarget().getSource();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -757,8 +793,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.EDGE_SOURCE_FEATURE_ID:
         getTarget().setSource((OutputPort) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -769,8 +806,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -781,13 +819,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Comment</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -817,8 +859,9 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
         return getTarget().getWorkflow();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -831,8 +874,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.COMMENT_WORKFLOW_FEATURE_ID:
         getTarget().setWorkflow((Workflow) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -843,8 +887,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -855,13 +900,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>OutputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -893,8 +942,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().getNode();
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
         return getTarget().getEdges();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -911,8 +961,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
         getTarget().setEdges((List<Edge>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -926,8 +977,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
         getTarget().getEdges().add((Edge) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -941,13 +993,17 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.OUTPUTPORT_EDGES_FEATURE_ID:
         getTarget().getEdges().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Port</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -975,8 +1031,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -986,8 +1043,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -997,8 +1055,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1008,13 +1067,17 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>InputPort</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1046,8 +1109,9 @@ public class WorkflowModelFactory implements ModelFactory {
         return getTarget().getNode();
       case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
         return getTarget().getEdges();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1064,8 +1128,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
         getTarget().setEdges((List<Edge>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1079,8 +1144,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
         getTarget().getEdges().add((Edge) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1094,13 +1160,17 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.INPUTPORT_EDGES_FEATURE_ID:
         getTarget().getEdges().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Fault</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1128,8 +1198,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1139,8 +1210,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1150,8 +1222,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1161,13 +1234,17 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CompoundTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1197,8 +1274,9 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID:
         return getTarget().getSubworkflow();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1211,8 +1289,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.COMPOUNDTASK_SUBWORKFLOW_FEATURE_ID:
         getTarget().setSubworkflow((Workflow) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1223,8 +1302,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1235,14 +1315,18 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>TransformationTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1272,8 +1356,9 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.TRANSFORMATIONTASK_TRANSFORMEXPRESSION_FEATURE_ID:
         return getTarget().getTransformExpression();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1286,8 +1371,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.TRANSFORMATIONTASK_TRANSFORMEXPRESSION_FEATURE_ID:
         getTarget().setTransformExpression((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1298,8 +1384,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1310,13 +1397,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ConditionalTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1344,8 +1435,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1355,8 +1447,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1366,8 +1459,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1377,13 +1471,17 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>LoopTask</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1413,8 +1511,9 @@ public class WorkflowModelFactory implements ModelFactory {
       switch (featureID) {
       case WorkflowModelPackage.LOOPTASK_WHILECONDITION_FEATURE_ID:
         return getTarget().getWhileCondition();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1427,8 +1526,9 @@ public class WorkflowModelFactory implements ModelFactory {
       case WorkflowModelPackage.LOOPTASK_WHILECONDITION_FEATURE_ID:
         getTarget().setWhileCondition((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1439,8 +1539,9 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1451,13 +1552,17 @@ public class WorkflowModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1485,8 +1590,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1496,8 +1602,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1507,8 +1614,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1518,9 +1626,9 @@ public class WorkflowModelFactory implements ModelFactory {
     public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

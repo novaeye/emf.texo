@@ -51,6 +51,9 @@ public class Machine extends AbstractPlatformElement {
   /**
    * Adds to the <em>deployedComponent</em> feature.
    * 
+   * @param deployedComponentValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDeployedComponent(DeployedComponent deployedComponentValue) {
@@ -61,6 +64,9 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>deployedComponent</em> feature.
+   * 
+   * @param deployedComponentValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -109,6 +115,9 @@ public class Machine extends AbstractPlatformElement {
   /**
    * Adds to the <em>deployedResource</em> feature.
    * 
+   * @param deployedResourceValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDeployedResource(DeployedResource deployedResourceValue) {
@@ -119,6 +128,9 @@ public class Machine extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>deployedResource</em> feature.
+   * 
+   * @param deployedResourceValue
+   *          the value to remove
    * 
    * @generated
    */

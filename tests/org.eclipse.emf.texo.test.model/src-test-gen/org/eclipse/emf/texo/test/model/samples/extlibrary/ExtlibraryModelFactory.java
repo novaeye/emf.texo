@@ -49,8 +49,10 @@ public class ExtlibraryModelFactory implements ModelFactory {
       return createBookOnTape();
     case ExtlibraryModelPackage.VIDEOCASSETTE_CLASSIFIER_ID:
       return createVideoCassette();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -119,7 +121,7 @@ public class ExtlibraryModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -166,6 +168,26 @@ public class ExtlibraryModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass Writer
+   * @generated
+   */
+  public Writer createWriter() {
+    return new Writer();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Person
+   * @generated
+   */
+  public Person createPerson() {
+    return new Person();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass Library
    * @generated
    */
@@ -176,11 +198,21 @@ public class ExtlibraryModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass Writer
+   * @return an instance of the model object representing the EClass Employee
    * @generated
    */
-  public Writer createWriter() {
-    return new Writer();
+  public Employee createEmployee() {
+    return new Employee();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass Borrower
+   * @generated
+   */
+  public Borrower createBorrower() {
+    return new Borrower();
   }
 
   /**
@@ -216,8 +248,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case ExtlibraryModelPackage.BOOKCATEGORY_CLASSIFIER_ID:
       return createBookCategoryFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -233,38 +266,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
     switch (eDataType.getClassifierID()) {
     case ExtlibraryModelPackage.BOOKCATEGORY_CLASSIFIER_ID:
       return convertBookCategoryToString((BookCategory) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Borrower
-   * @generated
-   */
-  public Borrower createBorrower() {
-    return new Borrower();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Person
-   * @generated
-   */
-  public Person createPerson() {
-    return new Person();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass Employee
-   * @generated
-   */
-  public Employee createEmployee() {
-    return new Employee();
   }
 
   /**
@@ -300,6 +304,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>Book</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class BookModelObject<E extends Book> extends CirculatingItemModelObject<E> {
@@ -334,8 +341,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getCategory();
       case ExtlibraryModelPackage.BOOK_AUTHOR_FEATURE_ID:
         return getTarget().getAuthor();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -357,8 +365,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.BOOK_AUTHOR_FEATURE_ID:
         getTarget().setAuthor((Writer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -369,8 +378,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -381,13 +391,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -417,8 +431,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
       case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
         return getTarget().getPublicationDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -431,8 +446,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
         getTarget().setPublicationDate((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -443,8 +459,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -455,13 +472,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Lendable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -491,8 +512,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getCopies();
       case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
         return getTarget().getBorrowers();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -509,8 +531,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
         getTarget().setBorrowers((Set<Borrower>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -524,8 +547,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
         getTarget().getBorrowers().add((Borrower) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -539,13 +563,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.LENDABLE_BORROWERS_FEATURE_ID:
         getTarget().getBorrowers().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -577,8 +605,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getCopies();
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
         return getTarget().getBorrowers();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -595,8 +624,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
         getTarget().setBorrowers((Set<Borrower>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -610,8 +640,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
         getTarget().getBorrowers().add((Borrower) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -625,13 +656,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
         getTarget().getBorrowers().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -663,8 +698,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getName();
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         return getTarget().getBooks();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -681,8 +717,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().setBooks((List<Book>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -696,8 +733,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().getBooks().add((Book) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -711,13 +749,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
         getTarget().getBooks().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Addressable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -745,8 +787,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
       case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
         return getTarget().getAddress();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -759,8 +802,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.ADDRESSABLE_ADDRESS_FEATURE_ID:
         getTarget().setAddress((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -771,8 +815,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -783,13 +828,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -823,8 +872,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getLastName();
       case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
         return getTarget().getAddress();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -843,8 +893,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.PERSON_ADDRESS_FEATURE_ID:
         getTarget().setAddress((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -855,8 +906,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -867,13 +919,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -921,8 +977,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getPeople();
       case ExtlibraryModelPackage.LIBRARY_ADDRESS_FEATURE_ID:
         return getTarget().getAddress();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -963,8 +1020,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.LIBRARY_ADDRESS_FEATURE_ID:
         getTarget().setAddress((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1003,8 +1061,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getPeople().add((LibraryPeopleFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1043,13 +1102,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
         getTarget().getPeople().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1079,8 +1142,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
       case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
         return getTarget().getManager();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1093,8 +1157,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
         getTarget().setManager((Employee) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1105,8 +1170,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1117,13 +1183,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1153,8 +1223,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         return getTarget().getBorrowed();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1168,8 +1239,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         getTarget().setBorrowed((List<Lendable>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1183,8 +1255,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         getTarget().getBorrowed().add((Lendable) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1198,13 +1271,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         getTarget().getBorrowed().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Periodical</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1236,8 +1313,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getTitle();
       case ExtlibraryModelPackage.PERIODICAL_ISSUESPERYEAR_FEATURE_ID:
         return getTarget().getIssuesPerYear();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1253,8 +1331,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.PERIODICAL_ISSUESPERYEAR_FEATURE_ID:
         getTarget().setIssuesPerYear((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1265,8 +1344,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1277,13 +1357,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AudioVisualItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1317,8 +1401,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getMinutesLength();
       case ExtlibraryModelPackage.AUDIOVISUALITEM_DAMAGED_FEATURE_ID:
         return getTarget().isDamaged();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1337,8 +1422,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.AUDIOVISUALITEM_DAMAGED_FEATURE_ID:
         getTarget().setDamaged((Boolean) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1349,8 +1435,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1361,13 +1448,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>BookOnTape</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1399,8 +1490,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return getTarget().getReader();
       case ExtlibraryModelPackage.BOOKONTAPE_AUTHOR_FEATURE_ID:
         return getTarget().getAuthor();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1416,8 +1508,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.BOOKONTAPE_AUTHOR_FEATURE_ID:
         getTarget().setAuthor((Writer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1428,8 +1521,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1440,13 +1534,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>VideoCassette</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -1476,8 +1574,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       switch (featureID) {
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         return getTarget().getCast();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -1491,8 +1590,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         getTarget().setCast((List<Person>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -1506,8 +1606,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         getTarget().getCast().add((Person) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -1521,14 +1622,17 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         getTarget().getCast().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Library.people</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class LibraryPeopleFeatureGroupModelFeatureMapEntry<E extends LibraryPeopleFeatureGroup> extends
@@ -1545,8 +1649,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
         return ExtlibraryModelPackage.INSTANCE.getLibrary_Employees();
       case BORROWERS:
         return ExtlibraryModelPackage.INSTANCE.getLibrary_Borrowers();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1565,8 +1670,9 @@ public class ExtlibraryModelFactory implements ModelFactory {
       case ExtlibraryModelPackage.LIBRARY_BORROWERS_FEATURE_ID:
         getTarget().setFeature(LibraryPeopleFeatureGroup.Feature.BORROWERS);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1583,5 +1689,4 @@ public class ExtlibraryModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

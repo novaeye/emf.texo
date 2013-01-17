@@ -90,6 +90,34 @@ public class GroupallModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int ADDRESSTYPE_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ADDRESSTYPE_GROUP_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ADDRESSTYPE_NAME_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ADDRESSTYPE_LONGNAME_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ADDRESSLIST_CLASSIFIER_ID = 1;
 
   /**
@@ -119,34 +147,6 @@ public class GroupallModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ADDRESSLIST_BILLTO_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSTYPE_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSTYPE_GROUP_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSTYPE_NAME_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSTYPE_LONGNAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -209,6 +209,34 @@ public class GroupallModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int SIMPLEALLTYPE_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIMPLEALLTYPE_AAA_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIMPLEALLTYPE_BBB_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIMPLEALLTYPE_CCC_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int SIMPLEALLMAPTYPE_CLASSIFIER_ID = 4;
 
   /**
@@ -240,34 +268,6 @@ public class GroupallModelPackage extends ModelPackage {
   public static final int SIMPLEALLMAPTYPE_CCC_FEATURE_ID = 5;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMPLEALLTYPE_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMPLEALLTYPE_AAA_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMPLEALLTYPE_BBB_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMPLEALLTYPE_CCC_FEATURE_ID = 4;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -276,6 +276,8 @@ public class GroupallModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -417,6 +419,49 @@ public class GroupallModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>AddressType</b></em>'
+   * @generated
+   */
+  public EClass getAddressTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(ADDRESSTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>AddressType.group</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.group</b></em>'.
+   * @generated
+   */
+  public EAttribute getAddressType_Group() {
+    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_GROUP_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>AddressType.name</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getAddressType_Name() {
+    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>AddressType.longName</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.longName</b></em>'.
+   * @generated
+   */
+  public EAttribute getAddressType_LongName() {
+    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_LONGNAME_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>AddressList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>AddressList</b></em>'
@@ -468,49 +513,6 @@ public class GroupallModelPackage extends ModelPackage {
    */
   public EReference getAddressList_BillTo() {
     return (EReference) getAddressListEClass().getEAllStructuralFeatures().get(ADDRESSLIST_BILLTO_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>AddressType</b></em>'
-   * @generated
-   */
-  public EClass getAddressTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(ADDRESSTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AddressType.group</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.group</b></em>'.
-   * @generated
-   */
-  public EAttribute getAddressType_Group() {
-    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_GROUP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AddressType.name</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getAddressType_Name() {
-    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>AddressType.longName</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>AddressType.longName</b></em>'.
-   * @generated
-   */
-  public EAttribute getAddressType_LongName() {
-    return (EAttribute) getAddressTypeEClass().getEAllStructuralFeatures().get(ADDRESSTYPE_LONGNAME_FEATURE_ID);
   }
 
   /**
@@ -602,6 +604,49 @@ public class GroupallModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SimpleAllType</b></em>'
+   * @generated
+   */
+  public EClass getSimpleAllTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(SIMPLEALLTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.aaa</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.aaa</b></em>'.
+   * @generated
+   */
+  public EAttribute getSimpleAllType_Aaa() {
+    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_AAA_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.bbb</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.bbb</b></em>'.
+   * @generated
+   */
+  public EAttribute getSimpleAllType_Bbb() {
+    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_BBB_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.ccc</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.ccc</b></em>'.
+   * @generated
+   */
+  public EAttribute getSimpleAllType_Ccc() {
+    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_CCC_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>SimpleAllMapType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>SimpleAllMapType</b></em>'
@@ -656,49 +701,6 @@ public class GroupallModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>SimpleAllType</b></em>'
-   * @generated
-   */
-  public EClass getSimpleAllTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(SIMPLEALLTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.aaa</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.aaa</b></em>'.
-   * @generated
-   */
-  public EAttribute getSimpleAllType_Aaa() {
-    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_AAA_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.bbb</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.bbb</b></em>'.
-   * @generated
-   */
-  public EAttribute getSimpleAllType_Bbb() {
-    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_BBB_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SimpleAllType.ccc</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SimpleAllType.ccc</b></em>'.
-   * @generated
-   */
-  public EAttribute getSimpleAllType_Ccc() {
-    return (EAttribute) getSimpleAllTypeEClass().getEAllStructuralFeatures().get(SIMPLEALLTYPE_CCC_FEATURE_ID);
-  }
-
-  /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param eClassifier
@@ -721,7 +723,8 @@ public class GroupallModelPackage extends ModelPackage {
       return SimpleAllType.class;
     case SIMPLEALLMAPTYPE_CLASSIFIER_ID:
       return SimpleAllMapType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

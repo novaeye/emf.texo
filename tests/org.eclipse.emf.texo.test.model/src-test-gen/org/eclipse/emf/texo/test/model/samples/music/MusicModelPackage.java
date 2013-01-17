@@ -55,6 +55,13 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int RATING_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ARTIST_CLASSIFIER_ID = 0;
 
   /**
@@ -105,6 +112,62 @@ public class MusicModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ARTIST_GENRE_FEATURE_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int COUNTRY_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int COUNTRY_CODE_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int COUNTRY_VERSION_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int COUNTRY_NAME_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int GENRE_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int GENRE_ID_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int GENRE_VERSION_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int GENRE_NAME_FEATURE_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -174,69 +237,6 @@ public class MusicModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int COUNTRY_CLASSIFIER_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int COUNTRY_CODE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int COUNTRY_VERSION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int COUNTRY_NAME_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int GENRE_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int GENRE_ID_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int GENRE_VERSION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int GENRE_NAME_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int RATING_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int SONG_CLASSIFIER_ID = 4;
 
   /**
@@ -276,6 +276,8 @@ public class MusicModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -441,6 +443,90 @@ public class MusicModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Country</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Country</b></em>'
+   * @generated
+   */
+  public EClass getCountryEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(COUNTRY_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Country.code</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.code</b></em>'.
+   * @generated
+   */
+  public EAttribute getCountry_Code() {
+    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_CODE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Country.version</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.version</b></em>'.
+   * @generated
+   */
+  public EAttribute getCountry_Version() {
+    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_VERSION_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Country.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getCountry_Name() {
+    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Genre</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Genre</b></em>'
+   * @generated
+   */
+  public EClass getGenreEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(GENRE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Genre.id</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.id</b></em>'.
+   * @generated
+   */
+  public EAttribute getGenre_Id() {
+    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_ID_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Genre.version</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.version</b></em>'.
+   * @generated
+   */
+  public EAttribute getGenre_Version() {
+    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_VERSION_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Genre.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getGenre_Name() {
+    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_NAME_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Album</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Album</b></em>'
@@ -536,127 +622,6 @@ public class MusicModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Country</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Country</b></em>'
-   * @generated
-   */
-  public EClass getCountryEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(COUNTRY_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Country.code</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.code</b></em>'.
-   * @generated
-   */
-  public EAttribute getCountry_Code() {
-    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_CODE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Country.version</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.version</b></em>'.
-   * @generated
-   */
-  public EAttribute getCountry_Version() {
-    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_VERSION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Country.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Country.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getCountry_Name() {
-    return (EAttribute) getCountryEClass().getEAllStructuralFeatures().get(COUNTRY_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Genre</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Genre</b></em>'
-   * @generated
-   */
-  public EClass getGenreEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(GENRE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Genre.id</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.id</b></em>'.
-   * @generated
-   */
-  public EAttribute getGenre_Id() {
-    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_ID_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Genre.version</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.version</b></em>'.
-   * @generated
-   */
-  public EAttribute getGenre_Version() {
-    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_VERSION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Genre.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Genre.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getGenre_Name() {
-    return (EAttribute) getGenreEClass().getEAllStructuralFeatures().get(GENRE_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the EEnum '<em><b>Rating</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>Rating</b></em>'
-   * @generated
-   */
-  public EEnum getRatingEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(RATING_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ARTIST_CLASSIFIER_ID:
-      return Artist.class;
-    case COUNTRY_CLASSIFIER_ID:
-      return Country.class;
-    case GENRE_CLASSIFIER_ID:
-      return Genre.class;
-    case ALBUM_CLASSIFIER_ID:
-      return Album.class;
-    case SONG_CLASSIFIER_ID:
-      return Song.class;
-    case RATING_CLASSIFIER_ID:
-      return Rating.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>Song</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Song</b></em>'
@@ -705,5 +670,43 @@ public class MusicModelPackage extends ModelPackage {
    */
   public EAttribute getSong_Name() {
     return (EAttribute) getSongEClass().getEAllStructuralFeatures().get(SONG_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the EEnum '<em><b>Rating</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the EEnum representing '<em><b>Rating</b></em>'
+   * @generated
+   */
+  public EEnum getRatingEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(RATING_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ARTIST_CLASSIFIER_ID:
+      return Artist.class;
+    case COUNTRY_CLASSIFIER_ID:
+      return Country.class;
+    case GENRE_CLASSIFIER_ID:
+      return Genre.class;
+    case ALBUM_CLASSIFIER_ID:
+      return Album.class;
+    case SONG_CLASSIFIER_ID:
+      return Song.class;
+    case RATING_CLASSIFIER_ID:
+      return Rating.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

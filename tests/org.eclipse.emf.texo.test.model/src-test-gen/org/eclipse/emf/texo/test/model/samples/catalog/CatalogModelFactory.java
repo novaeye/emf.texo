@@ -40,8 +40,10 @@ public class CatalogModelFactory implements ModelFactory {
       return createSupplierType();
     case CatalogModelPackage.STRINGTYPE_CLASSIFIER_ID:
       return createStringType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -83,7 +85,7 @@ public class CatalogModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -122,6 +124,16 @@ public class CatalogModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an instance of the model object representing the EClass ProductType
+   * @generated
+   */
+  public ProductType createProductType() {
+    return new ProductType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
    * @return an instance of the model object representing the EClass PriceType
    * @generated
    */
@@ -132,11 +144,11 @@ public class CatalogModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass ProductType
+   * @return an instance of the model object representing the EClass SupplierType
    * @generated
    */
-  public ProductType createProductType() {
-    return new ProductType();
+  public SupplierType createSupplierType() {
+    return new SupplierType();
   }
 
   /**
@@ -160,8 +172,9 @@ public class CatalogModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -175,12 +188,16 @@ public class CatalogModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>CatalogType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -217,8 +234,9 @@ public class CatalogModelFactory implements ModelFactory {
         return getTarget().getSubCatalog();
       case CatalogModelPackage.CATALOGTYPE_PRODUCT_FEATURE_ID:
         return getTarget().getProduct();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -241,8 +259,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.CATALOGTYPE_PRODUCT_FEATURE_ID:
         getTarget().setProduct((List<ProductType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -260,8 +279,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.CATALOGTYPE_PRODUCT_FEATURE_ID:
         getTarget().getProduct().add((ProductType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -279,13 +299,17 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.CATALOGTYPE_PRODUCT_FEATURE_ID:
         getTarget().getProduct().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ProductType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -322,8 +346,9 @@ public class CatalogModelFactory implements ModelFactory {
         return getTarget().getRemark();
       case CatalogModelPackage.PRODUCTTYPE_PRICE_FEATURE_ID:
         return getTarget().getPrice();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -346,8 +371,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.PRODUCTTYPE_PRICE_FEATURE_ID:
         getTarget().setPrice((PriceType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -362,8 +388,9 @@ public class CatalogModelFactory implements ModelFactory {
         getTarget().getRemark().add((StringType) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -378,13 +405,17 @@ public class CatalogModelFactory implements ModelFactory {
         getTarget().getRemark().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PriceType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -419,8 +450,9 @@ public class CatalogModelFactory implements ModelFactory {
         return getTarget().getQuantityTo();
       case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
         return getTarget().getSupplier();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -439,8 +471,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.PRICETYPE_SUPPLIER_FEATURE_ID:
         getTarget().setSupplier((SupplierType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -451,8 +484,9 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -463,13 +497,17 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SupplierType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -502,8 +540,9 @@ public class CatalogModelFactory implements ModelFactory {
         return getTarget().getName();
       case CatalogModelPackage.SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID:
         return getTarget().getNoOfEmployees();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -519,8 +558,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID:
         getTarget().setNoOfEmployees((Integer) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -531,8 +571,9 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -543,13 +584,17 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>StringType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -580,8 +625,9 @@ public class CatalogModelFactory implements ModelFactory {
       switch (featureID) {
       case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
         return getTarget().getValue();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -594,8 +640,9 @@ public class CatalogModelFactory implements ModelFactory {
       case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -606,8 +653,9 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -618,19 +666,9 @@ public class CatalogModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass SupplierType
-   * @generated
-   */
-  public SupplierType createSupplierType() {
-    return new SupplierType();
-  }
-
 }

@@ -91,6 +91,9 @@ public class Forum extends Identifiable {
   /**
    * Adds to the <em>members</em> feature.
    * 
+   * @param membersValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToMembers(Member membersValue) {
@@ -101,6 +104,9 @@ public class Forum extends Identifiable {
 
   /**
    * Removes from the <em>members</em> feature.
+   * 
+   * @param membersValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -149,6 +155,9 @@ public class Forum extends Identifiable {
   /**
    * Adds to the <em>topics</em> feature.
    * 
+   * @param topicsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToTopics(Topic topicsValue) {
@@ -159,6 +168,9 @@ public class Forum extends Identifiable {
 
   /**
    * Removes from the <em>topics</em> feature.
+   * 
+   * @param topicsValue
+   *          the value to remove
    * 
    * @generated
    */

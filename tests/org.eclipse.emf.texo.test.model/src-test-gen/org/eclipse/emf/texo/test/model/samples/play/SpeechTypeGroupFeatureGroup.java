@@ -134,6 +134,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String speaker;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -141,6 +142,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String line;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -150,6 +152,8 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   private String stageDirections;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -157,6 +161,7 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -178,10 +183,8 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getSpeaker() <em>speaker</em>}' feature.
    * 
-   * @param newSpeaker
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newSpeaker
    *          the new value of the '{@link SpeechType#getSpeaker() speaker}' feature.
    * @generated
@@ -206,10 +209,8 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getLine() <em>line</em>}' feature.
    * 
-   * @param newLine
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newLine
    *          the new value of the '{@link SpeechType#getLine() line}' feature.
    * @generated
@@ -234,10 +235,8 @@ public class SpeechTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link SpeechType#getStageDirections() <em>stageDirections</em>}' feature.
    * 
-   * @param newStageDirections
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newStageDirections
    *          the new value of the '{@link SpeechType#getStageDirections() stageDirections}' feature.
    * @generated

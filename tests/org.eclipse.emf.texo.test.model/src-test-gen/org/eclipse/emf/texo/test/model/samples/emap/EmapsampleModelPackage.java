@@ -190,6 +190,8 @@ public class EmapsampleModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static EmapsampleModelPackage initialize() {
@@ -487,7 +489,8 @@ public class EmapsampleModelPackage extends ModelPackage {
       return BookStore.class;
     case WRITER_CLASSIFIER_ID:
       return Writer.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

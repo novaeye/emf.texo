@@ -44,6 +44,9 @@ public class EventModel extends KDMModel {
   /**
    * Adds to the <em>eventElement</em> feature.
    * 
+   * @param eventElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToEventElement(AbstractEventElement eventElementValue) {
@@ -54,6 +57,9 @@ public class EventModel extends KDMModel {
 
   /**
    * Removes from the <em>eventElement</em> feature.
+   * 
+   * @param eventElementValue
+   *          the value to remove
    * 
    * @generated
    */

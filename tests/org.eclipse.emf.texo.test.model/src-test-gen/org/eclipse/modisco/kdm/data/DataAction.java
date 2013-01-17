@@ -87,6 +87,9 @@ public class DataAction extends AbstractDataElement {
   /**
    * Adds to the <em>implementation</em> feature.
    * 
+   * @param implementationValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToImplementation(ActionElement implementationValue) {
@@ -97,6 +100,9 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Removes from the <em>implementation</em> feature.
+   * 
+   * @param implementationValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -145,6 +151,9 @@ public class DataAction extends AbstractDataElement {
   /**
    * Adds to the <em>dataElement</em> feature.
    * 
+   * @param dataElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToDataElement(DataEvent dataElementValue) {
@@ -155,6 +164,9 @@ public class DataAction extends AbstractDataElement {
 
   /**
    * Removes from the <em>dataElement</em> feature.
+   * 
+   * @param dataElementValue
+   *          the value to remove
    * 
    * @generated
    */

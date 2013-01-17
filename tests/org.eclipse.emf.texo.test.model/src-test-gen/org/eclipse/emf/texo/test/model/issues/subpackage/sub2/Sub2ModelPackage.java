@@ -68,6 +68,8 @@ public class Sub2ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Sub2ModelPackage initialize() {
@@ -167,7 +169,8 @@ public class Sub2ModelPackage extends ModelPackage {
     switch (eClassifier.getClassifierID()) {
     case SUB2TYPE_CLASSIFIER_ID:
       return Sub2Type.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

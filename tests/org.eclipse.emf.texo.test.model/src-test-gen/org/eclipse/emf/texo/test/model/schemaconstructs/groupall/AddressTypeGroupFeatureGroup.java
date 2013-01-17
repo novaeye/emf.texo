@@ -134,6 +134,7 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
    */
   @Basic(optional = false)
   private String name;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -143,6 +144,8 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   private String longName;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -150,6 +153,7 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -171,10 +175,8 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressType#getName() <em>name</em>}' feature.
    * 
-   * @param newName
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newName
    *          the new value of the '{@link AddressType#getName() name}' feature.
    * @generated
@@ -199,10 +201,8 @@ public class AddressTypeGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link AddressType#getLongName() <em>longName</em>}' feature.
    * 
-   * @param newLongName
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newLongName
    *          the new value of the '{@link AddressType#getLongName() longName}' feature.
    * @generated

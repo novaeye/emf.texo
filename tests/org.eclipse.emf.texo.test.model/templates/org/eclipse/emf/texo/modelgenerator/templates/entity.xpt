@@ -14,7 +14,7 @@
 «ePackageAnnotation.javaFileHeader-»
 package «ePackageAnnotation.packagePath»;
 
-/** 
+/**
  * A representation of the model object '<em><b>«this.name»</b></em>'.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
@@ -23,7 +23,7 @@ package «ePackageAnnotation.packagePath»;
  * «this.documentation»
  * <!-- end-model-doc -->
 «ENDIF-»
- * @generated 
+ * @generated
 */
 «modelController.getJavaAnnotations(this.EClass, "type")-»
 public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
@@ -31,7 +31,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 «IF this.classImplements.size > 0-» implements
 «FOREACH this.classImplements AS classImplements SEPARATOR ","»«classImplements-»«ENDFOREACH-»
 «ENDIF-»
-{ 
+{
 «IF this.serializable-»
   /**
   * @generated
@@ -40,10 +40,10 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 «ENDIF-»
 
 «FOREACH this.EStructuralFeatureModelGenAnnotations AS featureAnnotation-»
-	«REM»a document root has almost only volatile features, but they need to be generated also«ENDREM»		
+	«REM»a document root has almost only volatile features, but they need to be generated also«ENDREM»
 	«IF  featureAnnotation != null && (isDocumentRoot(this.EClass) || !featureAnnotation.EStructuralFeature.volatile)-»
-	
-		/** 
+
+		/**
  		 * <!-- begin-user-doc -->
  		 * <!-- end-user-doc -->
 		«IF featureAnnotation.documentation != null-»
@@ -51,7 +51,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 		 * «featureAnnotation.documentation»
 		 * <!-- end-model-doc -->
 		«ENDIF-»
-		 * @generated 
+		 * @generated
 		 */
 		«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "field")-»
 		private «featureAnnotation.type» «featureAnnotation.validJavaMemberName» = «featureAnnotation.defaultValue»;
@@ -65,7 +65,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 		 * Returns the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</b></em>' feature.
 			«IF (isDocumentRoot(this.EClass) || !featureAnnotation.EStructuralFeature.volatile) && featureAnnotation.many && featureAnnotation.reference && ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess-»
 		 * Note: the returned collection is Unmodifiable use the {#addTo«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)}
-		 * and {@link #removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)} methods 
+		 * and {@link #removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» value)} methods
 		 * to modify this feature.
 		 	«ENDIF-»
 		 *
@@ -109,6 +109,9 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 			«IF featureAnnotation.featureMapFeature == null && featureAnnotation.many && featureAnnotation.reference && (((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport || ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess)-»
 			/**
 			 * Adds to the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 *
+			 * @param «featureAnnotation.validJavaMemberName»Value value to add
+			 *
 			 * @generated
 			 */
 			public void addTo«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
@@ -118,7 +121,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 				«ENDIF-»
 					«featureAnnotation.validJavaMemberName».add(«featureAnnotation.validJavaMemberName»Value);
 					«IF ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null && ((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport-»
-					«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»			
+					«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»
 					«IF oppositeAnnotation.many-»
 						«IF oppositeAnnotation.generateSafeManyAccess-»
 							«featureAnnotation.validJavaMemberName»Value.addTo«toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
@@ -139,17 +142,20 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 				throw new UnsupportedOperationException();
 				«ENDIF-»
 			}
-			
-			/**			
+
+			/**
 			 * Removes from the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 *
+			 * @param «featureAnnotation.validJavaMemberName»Value value to remove
+			 *
 			 * @generated
 			 */
 			public void removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
 				«IF !featureAnnotation.EStructuralFeature.volatile-»
 				if («featureAnnotation.validJavaMemberName».contains(«featureAnnotation.validJavaMemberName»Value)) {
-					«featureAnnotation.validJavaMemberName».remove(«featureAnnotation.validJavaMemberName»Value);					
+					«featureAnnotation.validJavaMemberName».remove(«featureAnnotation.validJavaMemberName»Value);
 					«IF ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null && ((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport-»
-					«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»			
+					«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»
 					«IF oppositeAnnotation.many-»
 						«IF oppositeAnnotation.generateSafeManyAccess-»
 							«featureAnnotation.validJavaMemberName»Value.removeFrom«toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
@@ -169,7 +175,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 				«ENDIF-»
 			}
 
-			/**			
+			/**
 			 * Clears the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
 			 * @generated
 			 */
@@ -195,7 +201,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 			 * «featureAnnotation.documentation»
 			 * <!-- end-model-doc -->
 			«ENDIF-»
-			 * @param the new value of the '{@link «this.simpleClassName»#«featureAnnotation.getter»() «featureAnnotation.EStructuralFeature.name»}' feature.
+			 * @param new«toFirstUpper(featureAnnotation.validJavaMemberName)» the new value of the '{@link «this.simpleClassName»#«featureAnnotation.getter»() «featureAnnotation.EStructuralFeature.name»}' feature.
 			 * @generated
 			 */
 			«modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "setter")-»
@@ -209,7 +215,7 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 						}
 					«ELSE-»
 						«IF ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation != null && ((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport-»
-						«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»			
+						«LET ((EReferenceModelGenAnnotation)featureAnnotation).oppositeModelGenAnnotation AS oppositeAnnotation-»
 						if («featureAnnotation.validJavaMemberName» != new«toFirstUpper(featureAnnotation.validJavaMemberName)») {
 							if («featureAnnotation.validJavaMemberName» != null) {
 								«IF oppositeAnnotation.many-»
@@ -217,12 +223,12 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 										«featureAnnotation.validJavaMemberName».removeFrom«toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
 									«ELSE-»
 										«featureAnnotation.validJavaMemberName».remove(this);
-									«ENDIF-»	
+									«ENDIF-»
 								«ELSE-»
 									«featureAnnotation.type» temp«toFirstUpper(featureAnnotation.validJavaMemberName)» = «featureAnnotation.validJavaMemberName»;
 									«featureAnnotation.validJavaMemberName» = null;
 									temp«toFirstUpper(featureAnnotation.validJavaMemberName)».«oppositeAnnotation.setter»(null);
-								«ENDIF-»	
+								«ENDIF-»
 							}
 							«featureAnnotation.validJavaMemberName» = new«toFirstUpper(featureAnnotation.validJavaMemberName)»;
 							if («featureAnnotation.validJavaMemberName» != null) {
@@ -231,21 +237,21 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 										«featureAnnotation.validJavaMemberName».addTo«toFirstUpper(oppositeAnnotation.validJavaMemberName)»(this);
 									«ELSE-»
 										«featureAnnotation.validJavaMemberName».add(this);
-									«ENDIF-»	
+									«ENDIF-»
 								«ELSE-»
-									«featureAnnotation.validJavaMemberName».«oppositeAnnotation.setter»(this);							
-								«ENDIF-»	
+									«featureAnnotation.validJavaMemberName».«oppositeAnnotation.setter»(this);
+								«ENDIF-»
 							}
-						} 
+						}
 						«ENDLET-»
 						«ELSE-»
 							«featureAnnotation.validJavaMemberName» = new«toFirstUpper(featureAnnotation.validJavaMemberName)»;
-						«ENDIF-»							
+						«ENDIF-»
 					«ENDIF-»
 				«ELSE-»
 					«featureAnnotation.validJavaMemberName» = new«toFirstUpper(featureAnnotation.validJavaMemberName)»;
 				«ENDIF-»
-			«ELSEIF featureAnnotation.featureMapFeature != null-» 
+			«ELSEIF featureAnnotation.featureMapFeature != null-»
 				«IF featureAnnotation.many-»
 				«featureAnnotation.featureMapFeature.setter»(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».createFeatureGroupList(«featureAnnotation.featureMapFeature.featureMapQualifiedClassName».Feature.«toUpperCase(featureAnnotation.name)», new«toFirstUpper(featureAnnotation.validJavaMemberName)»));
 				«ELSE-»
@@ -276,13 +282,14 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 	  		«ENDIF-»
 	 	«ENDFOREACH-»;
 	 }
-	 
+
 	 /**
+	 * @return the boolean value
 	 * @generated
 	 */
 	 public boolean templateIsOverridden() {
 	 	return true;
-	 }	 	
+	 }
 }
 «ENDFILE-»
 

@@ -126,6 +126,76 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int WORKWEEK_CLASSIFIER_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKWEEK_DAYS_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WORKWEEK_WORKWEEKID_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_CAPACITYENTRY_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_PRODUCTION_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_NAME_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_TASKID_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_TIMEPERPICE_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int TASK_TIMEPERPREPERATION_FEATURE_ID = 7;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int MACHINELIST_CLASSIFIER_ID = 2;
 
   /**
@@ -189,55 +259,6 @@ public class CapaModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TASK_CLASSIFIER_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_CAPACITYENTRY_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_PRODUCTION_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_NAME_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_TASKID_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_TIMEPERPICE_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int TASK_TIMEPERPREPERATION_FEATURE_ID = 7;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int WORKDAY_CLASSIFIER_ID = 5;
 
   /**
@@ -262,27 +283,6 @@ public class CapaModelPackage extends ModelPackage {
   public static final int WORKDAY_STARTTIME_FEATURE_ID = 4;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKWEEK_CLASSIFIER_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKWEEK_DAYS_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int WORKWEEK_WORKWEEKID_FEATURE_ID = 3;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -291,6 +291,8 @@ public class CapaModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -485,6 +487,112 @@ public class CapaModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>WorkWeek</b></em>'
+   * @generated
+   */
+  public EClass getWorkWeekEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(WORKWEEK_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkWeek.days</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkWeek.days</b></em>'.
+   * @generated
+   */
+  public EReference getWorkWeek_Days() {
+    return (EReference) getWorkWeekEClass().getEAllStructuralFeatures().get(WORKWEEK_DAYS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>WorkWeek.workWeekId</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkWeek.workWeekId</b></em>'.
+   * @generated
+   */
+  public EAttribute getWorkWeek_WorkWeekId() {
+    return (EAttribute) getWorkWeekEClass().getEAllStructuralFeatures().get(WORKWEEK_WORKWEEKID_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Task</b></em>'
+   * @generated
+   */
+  public EClass getTaskEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(TASK_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.capacityEntry</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.capacityEntry</b></em>'.
+   * @generated
+   */
+  public EReference getTask_CapacityEntry() {
+    return (EReference) getTaskEClass().getEAllStructuralFeatures().get(TASK_CAPACITYENTRY_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.production</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.production</b></em>'.
+   * @generated
+   */
+  public EReference getTask_Production() {
+    return (EReference) getTaskEClass().getEAllStructuralFeatures().get(TASK_PRODUCTION_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getTask_Name() {
+    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.taskId</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.taskId</b></em>'.
+   * @generated
+   */
+  public EAttribute getTask_TaskId() {
+    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TASKID_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.timePerPice</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.timePerPice</b></em>'.
+   * @generated
+   */
+  public EAttribute getTask_TimePerPice() {
+    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TIMEPERPICE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Task.timePerPreperation</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.timePerPreperation</b></em>'.
+   * @generated
+   */
+  public EAttribute getTask_TimePerPreperation() {
+    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TIMEPERPREPERATION_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>MachineList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>MachineList</b></em>'
@@ -582,80 +690,6 @@ public class CapaModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Task</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Task</b></em>'
-   * @generated
-   */
-  public EClass getTaskEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(TASK_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.capacityEntry</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.capacityEntry</b></em>'.
-   * @generated
-   */
-  public EReference getTask_CapacityEntry() {
-    return (EReference) getTaskEClass().getEAllStructuralFeatures().get(TASK_CAPACITYENTRY_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.production</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.production</b></em>'.
-   * @generated
-   */
-  public EReference getTask_Production() {
-    return (EReference) getTaskEClass().getEAllStructuralFeatures().get(TASK_PRODUCTION_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getTask_Name() {
-    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.taskId</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.taskId</b></em>'.
-   * @generated
-   */
-  public EAttribute getTask_TaskId() {
-    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TASKID_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.timePerPice</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.timePerPice</b></em>'.
-   * @generated
-   */
-  public EAttribute getTask_TimePerPice() {
-    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TIMEPERPICE_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Task.timePerPreperation</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Task.timePerPreperation</b></em>'.
-   * @generated
-   */
-  public EAttribute getTask_TimePerPreperation() {
-    return (EAttribute) getTaskEClass().getEAllStructuralFeatures().get(TASK_TIMEPERPREPERATION_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>WorkDay</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>WorkDay</b></em>'
@@ -723,39 +757,8 @@ public class CapaModelPackage extends ModelPackage {
       return Production.class;
     case WORKDAY_CLASSIFIER_ID:
       return WorkDay.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>WorkWeek</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>WorkWeek</b></em>'
-   * @generated
-   */
-  public EClass getWorkWeekEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(WORKWEEK_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkWeek.days</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkWeek.days</b></em>'.
-   * @generated
-   */
-  public EReference getWorkWeek_Days() {
-    return (EReference) getWorkWeekEClass().getEAllStructuralFeatures().get(WORKWEEK_DAYS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>WorkWeek.workWeekId</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>WorkWeek.workWeekId</b></em>'.
-   * @generated
-   */
-  public EAttribute getWorkWeek_WorkWeekId() {
-    return (EAttribute) getWorkWeekEClass().getEAllStructuralFeatures().get(WORKWEEK_WORKWEEKID_FEATURE_ID);
   }
 }

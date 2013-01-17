@@ -38,8 +38,10 @@ public class TypesModelFactory implements ModelFactory {
       return createManyTypes();
     case TypesModelPackage.SINGLETYPES_CLASSIFIER_ID:
       return createSingleTypes();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -72,7 +74,7 @@ public class TypesModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -96,6 +98,16 @@ public class TypesModelFactory implements ModelFactory {
   public ModelFeatureMapEntry<?> createModelFeatureMapEntry(EStructuralFeature eFeature, Object adaptee) {
     throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
         + "' is not a valid feature map in this EPackage");
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass ManyTypes
+   * @generated
+   */
+  public ManyTypes createManyTypes() {
+    return new ManyTypes();
   }
 
   /**
@@ -127,8 +139,9 @@ public class TypesModelFactory implements ModelFactory {
       return createLongArrayFromString(value);
     case TypesModelPackage.TESTNEXTENUM_CLASSIFIER_ID:
       return createTestNextEnumFromString(value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -150,18 +163,9 @@ public class TypesModelFactory implements ModelFactory {
       return convertLongArrayToString((long[]) value);
     case TypesModelPackage.TESTNEXTENUM_CLASSIFIER_ID:
       return convertTestNextEnumToString((TestNextEnum) value);
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the model object representing the EClass ManyTypes
-   * @generated
-   */
-  public ManyTypes createManyTypes() {
-    return new ManyTypes();
   }
 
   /**
@@ -195,68 +199,20 @@ public class TypesModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: LongArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generatedNOT
-   */
-  public String convertLongArrayToString(final long[] value) {
-    if (value == null) {
-      return null;
-    }
-    final StringBuilder sb = new StringBuilder();
-    for (final long longValue : value) {
-      if (sb.length() > 0) {
-        sb.append(",");
-      }
-      sb.append(longValue + "");
-    }
-    return sb.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: LongArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generatedNOT
-   */
-  public long[] createLongArrayFromString(final String value) {
-    if (value == null) {
-      return null;
-    }
-    TypesModelPackage.INSTANCE.getLongArrayEDataType();
-    final String[] values = value.split(",");
-    final long[] result = new long[values.length];
-    for (int i = 0; i < values.length; i++) {
-      result[i] = Long.parseLong(values[i]);
-    }
-    return result;
-  }
-
-  /**
    * Converts the EDataType: StringArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generatedNOT
+   * @generated
    */
-  public String convertStringArrayToString(final String[] value) {
+  public String convertStringArrayToString(String[] value) {
     if (value == null) {
       return null;
     }
-    final StringBuilder sb = new StringBuilder();
-    for (final String strValue : value) {
-      if (sb.length() > 0) {
-        sb.append("::");
-      }
-      sb.append(strValue);
-    }
-    return sb.toString();
+    EDataType eDataType = TypesModelPackage.INSTANCE.getStringArrayEDataType();
+    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
+        + " converting from value " + value);
   }
 
   /**
@@ -265,13 +221,49 @@ public class TypesModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generatedNOT
+   * @generated
    */
-  public String[] createStringArrayFromString(final String value) {
+  public String[] createStringArrayFromString(String value) {
     if (value == null) {
       return null;
     }
-    return value.split("::");
+    EDataType eDataType = TypesModelPackage.INSTANCE.getStringArrayEDataType();
+    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
+        + " converting from value " + value);
+  }
+
+  /**
+   * Converts the EDataType: LongArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertLongArrayToString(long[] value) {
+    if (value == null) {
+      return null;
+    }
+    EDataType eDataType = TypesModelPackage.INSTANCE.getLongArrayEDataType();
+    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
+        + " converting from value " + value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: LongArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public long[] createLongArrayFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    EDataType eDataType = TypesModelPackage.INSTANCE.getLongArrayEDataType();
+    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
+        + " converting from value " + value);
   }
 
   /**
@@ -306,6 +298,9 @@ public class TypesModelFactory implements ModelFactory {
 
   /**
    * The adapter/wrapper for the EClass '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -360,8 +355,9 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getEnum_();
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         return getTarget().getDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -411,8 +407,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().setDate((Set<Date>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -474,8 +471,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().add((Date) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -537,13 +535,17 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -616,8 +618,9 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getLongArray();
       case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
         return getTarget().getNextEnum();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -693,8 +696,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
         getTarget().setNextEnum((TestNextEnum) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -705,8 +709,9 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -717,9 +722,9 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

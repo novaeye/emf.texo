@@ -94,6 +94,9 @@ public abstract class Anchor extends PictogramElement {
   /**
    * Adds to the <em>outgoingConnections</em> feature.
    * 
+   * @param outgoingConnectionsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToOutgoingConnections(Connection outgoingConnectionsValue) {
@@ -104,6 +107,9 @@ public abstract class Anchor extends PictogramElement {
 
   /**
    * Removes from the <em>outgoingConnections</em> feature.
+   * 
+   * @param outgoingConnectionsValue
+   *          the value to remove
    * 
    * @generated
    */
@@ -152,6 +158,9 @@ public abstract class Anchor extends PictogramElement {
   /**
    * Adds to the <em>incomingConnections</em> feature.
    * 
+   * @param incomingConnectionsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToIncomingConnections(Connection incomingConnectionsValue) {
@@ -162,6 +171,9 @@ public abstract class Anchor extends PictogramElement {
 
   /**
    * Removes from the <em>incomingConnections</em> feature.
+   * 
+   * @param incomingConnectionsValue
+   *          the value to remove
    * 
    * @generated
    */

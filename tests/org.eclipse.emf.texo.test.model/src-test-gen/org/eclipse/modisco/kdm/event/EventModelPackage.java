@@ -348,6 +348,8 @@ public class EventModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static EventModelPackage initialize() {
@@ -925,7 +927,8 @@ public class EventModelPackage extends ModelPackage {
       return EventElement.class;
     case HASSTATE_CLASSIFIER_ID:
       return HasState.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

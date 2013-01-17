@@ -27,6 +27,7 @@ public class Person extends Identifiable implements Addressable {
    */
   @Basic(optional = false)
   private String firstName = null;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 

@@ -45,6 +45,9 @@ public class Signature extends Datatype {
   /**
    * Adds to the <em>parameterUnit</em> feature.
    * 
+   * @param parameterUnitValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToParameterUnit(ParameterUnit parameterUnitValue) {
@@ -55,6 +58,9 @@ public class Signature extends Datatype {
 
   /**
    * Removes from the <em>parameterUnit</em> feature.
+   * 
+   * @param parameterUnitValue
+   *          the value to remove
    * 
    * @generated
    */

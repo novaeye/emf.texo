@@ -45,6 +45,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
   /**
    * Adds to the <em>inventoryRelationship</em> feature.
    * 
+   * @param inventoryRelationshipValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToInventoryRelationship(AbstractInventoryRelationship inventoryRelationshipValue) {
@@ -55,6 +58,9 @@ public abstract class AbstractInventoryElement extends KDMEntity {
 
   /**
    * Removes from the <em>inventoryRelationship</em> feature.
+   * 
+   * @param inventoryRelationshipValue
+   *          the value to remove
    * 
    * @generated
    */

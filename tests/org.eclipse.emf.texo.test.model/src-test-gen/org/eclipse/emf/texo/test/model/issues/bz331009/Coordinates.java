@@ -60,8 +60,8 @@ public class Coordinates extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> X <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Coordinates#getX() x}' feature.
+   * @param newX
+   *          the new value of the '{@link Coordinates#getX() x}' feature.
    * @generated
    */
   public void setX(BigDecimal newX) {
@@ -85,8 +85,8 @@ public class Coordinates extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Y <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Coordinates#getY() y}' feature.
+   * @param newY
+   *          the new value of the '{@link Coordinates#getY() y}' feature.
    * @generated
    */
   public void setY(BigDecimal newY) {

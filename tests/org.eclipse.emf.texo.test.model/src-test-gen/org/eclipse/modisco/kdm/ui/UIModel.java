@@ -44,6 +44,9 @@ public class UIModel extends KDMModel {
   /**
    * Adds to the <em>UIElement</em> feature.
    * 
+   * @param uIElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToUIElement(AbstractUIElement uIElementValue) {
@@ -54,6 +57,9 @@ public class UIModel extends KDMModel {
 
   /**
    * Removes from the <em>UIElement</em> feature.
+   * 
+   * @param uIElementValue
+   *          the value to remove
    * 
    * @generated
    */

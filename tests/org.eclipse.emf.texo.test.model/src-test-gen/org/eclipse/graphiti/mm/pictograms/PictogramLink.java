@@ -82,6 +82,9 @@ public class PictogramLink extends PropertyContainer {
   /**
    * Adds to the <em>businessObjects</em> feature.
    * 
+   * @param businessObjectsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToBusinessObjects(Object businessObjectsValue) {
@@ -92,6 +95,9 @@ public class PictogramLink extends PropertyContainer {
 
   /**
    * Removes from the <em>businessObjects</em> feature.
+   * 
+   * @param businessObjectsValue
+   *          the value to remove
    * 
    * @generated
    */

@@ -28,7 +28,6 @@ import org.eclipse.persistence.annotations.Converters;
 @Converters({ @Converter(converterClass = TexoTestObjectConverter.class, name = "TexoTestObjectConverter"),
     @Converter(converterClass = TexoTestQNameConverter.class, name = "TexoTestQNameConverter") })
 public class MySerializableClass extends Identifiable implements Serializable {
-
   /**
    * @generated
    */
@@ -124,6 +123,9 @@ public class MySerializableClass extends Identifiable implements Serializable {
   /**
    * Adds to the <em>nonEMFs</em> feature.
    * 
+   * @param nonEMFsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToNonEMFs(NonEMF nonEMFsValue) {
@@ -134,6 +136,9 @@ public class MySerializableClass extends Identifiable implements Serializable {
 
   /**
    * Removes from the <em>nonEMFs</em> feature.
+   * 
+   * @param nonEMFsValue
+   *          the value to remove
    * 
    * @generated
    */

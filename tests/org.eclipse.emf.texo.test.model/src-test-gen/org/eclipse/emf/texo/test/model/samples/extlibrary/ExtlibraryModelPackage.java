@@ -64,6 +64,13 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int BOOKCATEGORY_CLASSIFIER_ID = 14;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int BOOK_CLASSIFIER_ID = 0;
 
   /**
@@ -93,6 +100,125 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * @generated
    */
   public static final int BOOK_AUTHOR_FEATURE_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ITEM_CLASSIFIER_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ITEM_PUBLICATIONDATE_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LENDABLE_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LENDABLE_COPIES_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int LENDABLE_BORROWERS_FEATURE_ID = 1;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CIRCULATINGITEM_CLASSIFIER_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CIRCULATINGITEM_COPIES_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int CIRCULATINGITEM_BORROWERS_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_CLASSIFIER_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_NAME_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int WRITER_BOOKS_FEATURE_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ADDRESSABLE_CLASSIFIER_ID = 13;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ADDRESSABLE_ADDRESS_FEATURE_ID = 0;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PERSON_CLASSIFIER_ID = 11;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PERSON_FIRSTNAME_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PERSON_LASTNAME_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PERSON_ADDRESS_FEATURE_ID = 2;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -176,84 +302,28 @@ public class ExtlibraryModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int WRITER_CLASSIFIER_ID = 2;
+  public static final int EMPLOYEE_CLASSIFIER_ID = 12;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITER_NAME_FEATURE_ID = 5;
+  public static final int EMPLOYEE_MANAGER_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int WRITER_BOOKS_FEATURE_ID = 6;
+  public static final int BORROWER_CLASSIFIER_ID = 10;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
    */
-  public static final int BOOKCATEGORY_CLASSIFIER_ID = 14;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ITEM_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ITEM_PUBLICATIONDATE_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LENDABLE_CLASSIFIER_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LENDABLE_COPIES_FEATURE_ID = 0;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int LENDABLE_BORROWERS_FEATURE_ID = 1;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CIRCULATINGITEM_CLASSIFIER_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CIRCULATINGITEM_COPIES_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int CIRCULATINGITEM_BORROWERS_FEATURE_ID = 4;
+  public static final int BORROWER_BORROWED_FEATURE_ID = 5;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -340,76 +410,6 @@ public class ExtlibraryModelPackage extends ModelPackage {
   public static final int VIDEOCASSETTE_CAST_FEATURE_ID = 8;
 
   /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BORROWER_CLASSIFIER_ID = 10;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int BORROWER_BORROWED_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERSON_CLASSIFIER_ID = 11;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERSON_FIRSTNAME_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERSON_LASTNAME_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PERSON_ADDRESS_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int EMPLOYEE_CLASSIFIER_ID = 12;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int EMPLOYEE_MANAGER_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSABLE_CLASSIFIER_ID = 13;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ADDRESSABLE_ADDRESS_FEATURE_ID = 0;
-
-  /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @generated
@@ -418,6 +418,8 @@ public class ExtlibraryModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -576,6 +578,187 @@ public class ExtlibraryModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EClass} '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Item</b></em>'
+   * @generated
+   */
+  public EClass getItemEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(ITEM_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Item.publicationDate</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Item.publicationDate</b></em>'.
+   * @generated
+   */
+  public EAttribute getItem_PublicationDate() {
+    return (EAttribute) getItemEClass().getEAllStructuralFeatures().get(ITEM_PUBLICATIONDATE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Lendable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Lendable</b></em>'
+   * @generated
+   */
+  public EClass getLendableEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(LENDABLE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Lendable.copies</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Lendable.copies</b></em>'.
+   * @generated
+   */
+  public EAttribute getLendable_Copies() {
+    return (EAttribute) getLendableEClass().getEAllStructuralFeatures().get(LENDABLE_COPIES_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Lendable.borrowers</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Lendable.borrowers</b></em>'.
+   * @generated
+   */
+  public EReference getLendable_Borrowers() {
+    return (EReference) getLendableEClass().getEAllStructuralFeatures().get(LENDABLE_BORROWERS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>CirculatingItem</b></em>'
+   * @generated
+   */
+  public EClass getCirculatingItemEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(CIRCULATINGITEM_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>CirculatingItem.copies</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>CirculatingItem.copies</b></em>'.
+   * @generated
+   */
+  public EAttribute getCirculatingItem_Copies() {
+    return (EAttribute) getCirculatingItemEClass().getEAllStructuralFeatures().get(CIRCULATINGITEM_COPIES_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>CirculatingItem.borrowers</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>CirculatingItem.borrowers</b></em>'.
+   * @generated
+   */
+  public EReference getCirculatingItem_Borrowers() {
+    return (EReference) getCirculatingItemEClass().getEAllStructuralFeatures()
+        .get(CIRCULATINGITEM_BORROWERS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>'
+   * @generated
+   */
+  public EClass getWriterEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(WRITER_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.name</b></em>'.
+   * @generated
+   */
+  public EAttribute getWriter_Name() {
+    return (EAttribute) getWriterEClass().getEAllStructuralFeatures().get(WRITER_NAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Writer.books</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.books</b></em>'.
+   * @generated
+   */
+  public EReference getWriter_Books() {
+    return (EReference) getWriterEClass().getEAllStructuralFeatures().get(WRITER_BOOKS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Addressable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Addressable</b></em>'
+   * @generated
+   */
+  public EClass getAddressableEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(ADDRESSABLE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Addressable.address</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Addressable.address</b></em>'.
+   * @generated
+   */
+  public EAttribute getAddressable_Address() {
+    return (EAttribute) getAddressableEClass().getEAllStructuralFeatures().get(ADDRESSABLE_ADDRESS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>Person</b></em>'
+   * @generated
+   */
+  public EClass getPersonEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(PERSON_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Person.firstName</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.firstName</b></em>'.
+   * @generated
+   */
+  public EAttribute getPerson_FirstName() {
+    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_FIRSTNAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Person.lastName</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.lastName</b></em>'.
+   * @generated
+   */
+  public EAttribute getPerson_LastName() {
+    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_LASTNAME_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>Person.address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.address</b></em>'.
+   * @generated
+   */
+  public EAttribute getPerson_Address() {
+    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_ADDRESS_FEATURE_ID);
+  }
+
+  /**
    * Returns the {@link EClass} '<em><b>Library</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>Library</b></em>'
@@ -696,175 +879,45 @@ public class ExtlibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Writer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>Writer</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>Employee</b></em>'
    * @generated
    */
-  public EClass getWriterEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(WRITER_CLASSIFIER_ID);
+  public EClass getEmployeeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(EMPLOYEE_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writer.name</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.name</b></em>'.
-   * @generated
-   */
-  public EAttribute getWriter_Name() {
-    return (EAttribute) getWriterEClass().getEAllStructuralFeatures().get(WRITER_NAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Writer.books</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Writer.books</b></em>'.
-   * @generated
-   */
-  public EReference getWriter_Books() {
-    return (EReference) getWriterEClass().getEAllStructuralFeatures().get(WRITER_BOOKS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the EEnum '<em><b>BookCategory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>BookCategory</b></em>'
-   * @generated
-   */
-  public EEnum getBookCategoryEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORY_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case BOOK_CLASSIFIER_ID:
-      return Book.class;
-    case ITEM_CLASSIFIER_ID:
-      return Item.class;
-    case LENDABLE_CLASSIFIER_ID:
-      return Lendable.class;
-    case CIRCULATINGITEM_CLASSIFIER_ID:
-      return CirculatingItem.class;
-    case WRITER_CLASSIFIER_ID:
-      return Writer.class;
-    case ADDRESSABLE_CLASSIFIER_ID:
-      return Addressable.class;
-    case PERSON_CLASSIFIER_ID:
-      return Person.class;
-    case LIBRARY_CLASSIFIER_ID:
-      return Library.class;
-    case EMPLOYEE_CLASSIFIER_ID:
-      return Employee.class;
-    case BORROWER_CLASSIFIER_ID:
-      return Borrower.class;
-    case PERIODICAL_CLASSIFIER_ID:
-      return Periodical.class;
-    case AUDIOVISUALITEM_CLASSIFIER_ID:
-      return AudioVisualItem.class;
-    case BOOKONTAPE_CLASSIFIER_ID:
-      return BookOnTape.class;
-    case VIDEOCASSETTE_CLASSIFIER_ID:
-      return VideoCassette.class;
-    case BOOKCATEGORY_CLASSIFIER_ID:
-      return BookCategory.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Item</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Item</b></em>'
-   * @generated
-   */
-  public EClass getItemEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(ITEM_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Item.publicationDate</b></em>'. <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Employee.manager</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Item.publicationDate</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Employee.manager</b></em>'.
    * @generated
    */
-  public EAttribute getItem_PublicationDate() {
-    return (EAttribute) getItemEClass().getEAllStructuralFeatures().get(ITEM_PUBLICATIONDATE_FEATURE_ID);
+  public EReference getEmployee_Manager() {
+    return (EReference) getEmployeeEClass().getEAllStructuralFeatures().get(EMPLOYEE_MANAGER_FEATURE_ID);
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Lendable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the {@link EClass} '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>Lendable</b></em>'
+   * @return an instance of the {@link EClass} '<em><b>Borrower</b></em>'
    * @generated
    */
-  public EClass getLendableEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(LENDABLE_CLASSIFIER_ID);
+  public EClass getBorrowerEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(BORROWER_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Lendable.copies</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Lendable.copies</b></em>'.
-   * @generated
-   */
-  public EAttribute getLendable_Copies() {
-    return (EAttribute) getLendableEClass().getEAllStructuralFeatures().get(LENDABLE_COPIES_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Lendable.borrowers</b></em>'. <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Borrower.borrowed</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Lendable.borrowers</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Borrower.borrowed</b></em>'.
    * @generated
    */
-  public EReference getLendable_Borrowers() {
-    return (EReference) getLendableEClass().getEAllStructuralFeatures().get(LENDABLE_BORROWERS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>CirculatingItem</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>CirculatingItem</b></em>'
-   * @generated
-   */
-  public EClass getCirculatingItemEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(CIRCULATINGITEM_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>CirculatingItem.copies</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>CirculatingItem.copies</b></em>'.
-   * @generated
-   */
-  public EAttribute getCirculatingItem_Copies() {
-    return (EAttribute) getCirculatingItemEClass().getEAllStructuralFeatures().get(CIRCULATINGITEM_COPIES_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>CirculatingItem.borrowers</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>CirculatingItem.borrowers</b></em>'.
-   * @generated
-   */
-  public EReference getCirculatingItem_Borrowers() {
-    return (EReference) getCirculatingItemEClass().getEAllStructuralFeatures()
-        .get(CIRCULATINGITEM_BORROWERS_FEATURE_ID);
+  public EReference getBorrower_Borrowed() {
+    return (EReference) getBorrowerEClass().getEAllStructuralFeatures().get(BORROWER_BORROWED_FEATURE_ID);
   }
 
   /**
@@ -997,108 +1050,58 @@ public class ExtlibraryModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>Borrower</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Returns the EEnum '<em><b>BookCategory</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EClass} '<em><b>Borrower</b></em>'
+   * @return an instance of the EEnum representing '<em><b>BookCategory</b></em>'
    * @generated
    */
-  public EClass getBorrowerEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(BORROWER_CLASSIFIER_ID);
+  public EEnum getBookCategoryEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(BOOKCATEGORY_CLASSIFIER_ID);
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Borrower.borrowed</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Borrower.borrowed</b></em>'.
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
    * @generated
    */
-  public EReference getBorrower_Borrowed() {
-    return (EReference) getBorrowerEClass().getEAllStructuralFeatures().get(BORROWER_BORROWED_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Person</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Person</b></em>'
-   * @generated
-   */
-  public EClass getPersonEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(PERSON_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.firstName</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.firstName</b></em>'.
-   * @generated
-   */
-  public EAttribute getPerson_FirstName() {
-    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_FIRSTNAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.lastName</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.lastName</b></em>'.
-   * @generated
-   */
-  public EAttribute getPerson_LastName() {
-    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_LASTNAME_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Person.address</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Person.address</b></em>'.
-   * @generated
-   */
-  public EAttribute getPerson_Address() {
-    return (EAttribute) getPersonEClass().getEAllStructuralFeatures().get(PERSON_ADDRESS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Employee</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Employee</b></em>'
-   * @generated
-   */
-  public EClass getEmployeeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(EMPLOYEE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Employee.manager</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Employee.manager</b></em>'.
-   * @generated
-   */
-  public EReference getEmployee_Manager() {
-    return (EReference) getEmployeeEClass().getEAllStructuralFeatures().get(EMPLOYEE_MANAGER_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EClass} '<em><b>Addressable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>Addressable</b></em>'
-   * @generated
-   */
-  public EClass getAddressableEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(ADDRESSABLE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>Addressable.address</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Addressable.address</b></em>'.
-   * @generated
-   */
-  public EAttribute getAddressable_Address() {
-    return (EAttribute) getAddressableEClass().getEAllStructuralFeatures().get(ADDRESSABLE_ADDRESS_FEATURE_ID);
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case BOOK_CLASSIFIER_ID:
+      return Book.class;
+    case ITEM_CLASSIFIER_ID:
+      return Item.class;
+    case LENDABLE_CLASSIFIER_ID:
+      return Lendable.class;
+    case CIRCULATINGITEM_CLASSIFIER_ID:
+      return CirculatingItem.class;
+    case WRITER_CLASSIFIER_ID:
+      return Writer.class;
+    case ADDRESSABLE_CLASSIFIER_ID:
+      return Addressable.class;
+    case PERSON_CLASSIFIER_ID:
+      return Person.class;
+    case LIBRARY_CLASSIFIER_ID:
+      return Library.class;
+    case EMPLOYEE_CLASSIFIER_ID:
+      return Employee.class;
+    case BORROWER_CLASSIFIER_ID:
+      return Borrower.class;
+    case PERIODICAL_CLASSIFIER_ID:
+      return Periodical.class;
+    case AUDIOVISUALITEM_CLASSIFIER_ID:
+      return AudioVisualItem.class;
+    case BOOKONTAPE_CLASSIFIER_ID:
+      return BookOnTape.class;
+    case VIDEOCASSETTE_CLASSIFIER_ID:
+      return VideoCassette.class;
+    case BOOKCATEGORY_CLASSIFIER_ID:
+      return BookCategory.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

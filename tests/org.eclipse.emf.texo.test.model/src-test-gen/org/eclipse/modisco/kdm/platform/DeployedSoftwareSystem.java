@@ -44,6 +44,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
   /**
    * Adds to the <em>groupedComponent</em> feature.
    * 
+   * @param groupedComponentValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGroupedComponent(DeployedComponent groupedComponentValue) {
@@ -54,6 +57,9 @@ public class DeployedSoftwareSystem extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>groupedComponent</em> feature.
+   * 
+   * @param groupedComponentValue
+   *          the value to remove
    * 
    * @generated
    */

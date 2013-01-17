@@ -97,6 +97,8 @@ public class Bz371509ModelPackage extends ModelPackage {
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return an initialized instance of this class
+   * 
    * @generated
    */
   public static Bz371509ModelPackage initialize() {
@@ -245,7 +247,8 @@ public class Bz371509ModelPackage extends ModelPackage {
       return EClass0.class;
     case ECLASS1_CLASSIFIER_ID:
       return EClass1.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

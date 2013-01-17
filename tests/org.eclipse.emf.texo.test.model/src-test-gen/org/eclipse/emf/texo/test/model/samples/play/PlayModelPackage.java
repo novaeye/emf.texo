@@ -59,6 +59,20 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int PINDEXTYPE_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int PINDEXTYPEOBJECT_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int ACTTYPE_CLASSIFIER_ID = 0;
 
   /**
@@ -81,6 +95,48 @@ public class PlayModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ACTTYPE_TITLE_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_CLASSIFIER_ID = 6;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_GROUP_FEATURE_ID = 2;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_STAGEDIRECTIONS_FEATURE_ID = 3;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_SPEECH_FEATURE_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_PINDEX_FEATURE_ID = 5;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SCENETYPE_TITLE_FEATURE_ID = 6;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -297,20 +353,6 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int PINDEXTYPE_CLASSIFIER_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int PINDEXTYPEOBJECT_CLASSIFIER_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int PLAYTYPE_CLASSIFIER_ID = 5;
 
   /**
@@ -360,48 +402,6 @@ public class PlayModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SCENETYPE_CLASSIFIER_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SCENETYPE_GROUP_FEATURE_ID = 2;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SCENETYPE_STAGEDIRECTIONS_FEATURE_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SCENETYPE_SPEECH_FEATURE_ID = 4;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SCENETYPE_PINDEX_FEATURE_ID = 5;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SCENETYPE_TITLE_FEATURE_ID = 6;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int SPEECHTYPE_CLASSIFIER_ID = 7;
 
   /**
@@ -441,6 +441,8 @@ public class PlayModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -573,6 +575,71 @@ public class PlayModelPackage extends ModelPackage {
    */
   public EAttribute getActType_Title() {
     return (EAttribute) getActTypeEClass().getEAllStructuralFeatures().get(ACTTYPE_TITLE_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EClass} '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EClass} '<em><b>SceneType</b></em>'
+   * @generated
+   */
+  public EClass getSceneTypeEClass() {
+    return (EClass) getEPackage().getEClassifiers().get(SCENETYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SceneType.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.group</b></em>'.
+   * @generated
+   */
+  public EAttribute getSceneType_Group() {
+    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_GROUP_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SceneType.stageDirections</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.stageDirections</b></em>'.
+   * @generated
+   */
+  public EAttribute getSceneType_StageDirections() {
+    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_STAGEDIRECTIONS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SceneType.speech</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.speech</b></em>'.
+   * @generated
+   */
+  public EReference getSceneType_Speech() {
+    return (EReference) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_SPEECH_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SceneType.pindex</b></em>'. <!-- begin-user-doc --> <!--
+   * end-user-doc -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.pindex</b></em>'.
+   * @generated
+   */
+  public EAttribute getSceneType_Pindex() {
+    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_PINDEX_FEATURE_ID);
+  }
+
+  /**
+   * Returns the {@link EStructuralFeature} '<em><b>SceneType.title</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.title</b></em>'.
+   * @generated
+   */
+  public EAttribute getSceneType_Title() {
+    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_TITLE_FEATURE_ID);
   }
 
   /**
@@ -907,61 +974,6 @@ public class PlayModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the EEnum '<em><b>PindexType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the EEnum representing '<em><b>PindexType</b></em>'
-   * @generated
-   */
-  public EEnum getPindexTypeEEnum() {
-    return (EEnum) getEPackage().getEClassifiers().get(PINDEXTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>PindexTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>PindexTypeObject</b></em>'
-   * @generated
-   */
-  public EDataType getPindexTypeObjectEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(PINDEXTYPEOBJECT_CLASSIFIER_ID);
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param eClassifier
-   *          the {@link EClassifier}
-   * @return the class implementing a specific {@link EClass}.
-   * @generated
-   */
-  @Override
-  public Class<?> getEClassifierClass(EClassifier eClassifier) {
-    switch (eClassifier.getClassifierID()) {
-    case ACTTYPE_CLASSIFIER_ID:
-      return ActType.class;
-    case SCENETYPE_CLASSIFIER_ID:
-      return SceneType.class;
-    case DOCUMENTROOT_CLASSIFIER_ID:
-      return DocumentRoot.class;
-    case FMTYPE_CLASSIFIER_ID:
-      return FmType.class;
-    case PERSONAETYPE_CLASSIFIER_ID:
-      return PersonaeType.class;
-    case PERSONAGROUPTYPE_CLASSIFIER_ID:
-      return PersonaGroupType.class;
-    case PLAYTYPE_CLASSIFIER_ID:
-      return PlayType.class;
-    case SPEECHTYPE_CLASSIFIER_ID:
-      return SpeechType.class;
-    case PINDEXTYPE_CLASSIFIER_ID:
-      return PindexType.class;
-    case PINDEXTYPEOBJECT_CLASSIFIER_ID:
-      return PindexType.class;
-    }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>PlayType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>PlayType</b></em>'
@@ -1037,71 +1049,6 @@ public class PlayModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EClass} '<em><b>SceneType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EClass} '<em><b>SceneType</b></em>'
-   * @generated
-   */
-  public EClass getSceneTypeEClass() {
-    return (EClass) getEPackage().getEClassifiers().get(SCENETYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SceneType.group</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.group</b></em>'.
-   * @generated
-   */
-  public EAttribute getSceneType_Group() {
-    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_GROUP_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SceneType.stageDirections</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.stageDirections</b></em>'.
-   * @generated
-   */
-  public EAttribute getSceneType_StageDirections() {
-    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_STAGEDIRECTIONS_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SceneType.speech</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.speech</b></em>'.
-   * @generated
-   */
-  public EReference getSceneType_Speech() {
-    return (EReference) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_SPEECH_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SceneType.pindex</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.pindex</b></em>'.
-   * @generated
-   */
-  public EAttribute getSceneType_Pindex() {
-    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_PINDEX_FEATURE_ID);
-  }
-
-  /**
-   * Returns the {@link EStructuralFeature} '<em><b>SceneType.title</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>SceneType.title</b></em>'.
-   * @generated
-   */
-  public EAttribute getSceneType_Title() {
-    return (EAttribute) getSceneTypeEClass().getEAllStructuralFeatures().get(SCENETYPE_TITLE_FEATURE_ID);
-  }
-
-  /**
    * Returns the {@link EClass} '<em><b>SpeechType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EClass} '<em><b>SpeechType</b></em>'
@@ -1153,5 +1100,61 @@ public class PlayModelPackage extends ModelPackage {
    */
   public EAttribute getSpeechType_StageDirections() {
     return (EAttribute) getSpeechTypeEClass().getEAllStructuralFeatures().get(SPEECHTYPE_STAGEDIRECTIONS_FEATURE_ID);
+  }
+
+  /**
+   * Returns the EEnum '<em><b>PindexType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the EEnum representing '<em><b>PindexType</b></em>'
+   * @generated
+   */
+  public EEnum getPindexTypeEEnum() {
+    return (EEnum) getEPackage().getEClassifiers().get(PINDEXTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>PindexTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>PindexTypeObject</b></em>'
+   * @generated
+   */
+  public EDataType getPindexTypeObjectEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(PINDEXTYPEOBJECT_CLASSIFIER_ID);
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param eClassifier
+   *          the {@link EClassifier}
+   * @return the class implementing a specific {@link EClass}.
+   * @generated
+   */
+  @Override
+  public Class<?> getEClassifierClass(EClassifier eClassifier) {
+    switch (eClassifier.getClassifierID()) {
+    case ACTTYPE_CLASSIFIER_ID:
+      return ActType.class;
+    case SCENETYPE_CLASSIFIER_ID:
+      return SceneType.class;
+    case DOCUMENTROOT_CLASSIFIER_ID:
+      return DocumentRoot.class;
+    case FMTYPE_CLASSIFIER_ID:
+      return FmType.class;
+    case PERSONAETYPE_CLASSIFIER_ID:
+      return PersonaeType.class;
+    case PERSONAGROUPTYPE_CLASSIFIER_ID:
+      return PersonaGroupType.class;
+    case PLAYTYPE_CLASSIFIER_ID:
+      return PlayType.class;
+    case SPEECHTYPE_CLASSIFIER_ID:
+      return SpeechType.class;
+    case PINDEXTYPE_CLASSIFIER_ID:
+      return PindexType.class;
+    case PINDEXTYPEOBJECT_CLASSIFIER_ID:
+      return PindexType.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+    }
   }
 }

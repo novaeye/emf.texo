@@ -24,9 +24,7 @@ public class ClaimCompositeKey extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -36,9 +34,7 @@ public class ClaimCompositeKey extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -50,9 +46,7 @@ public class ClaimCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>claimNumber</b></em>' feature
    * @generated
@@ -66,12 +60,10 @@ public class ClaimCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ClaimCompositeKey#getClaimNumber() claimNumber}' feature.
+   * @param newClaimNumber
+   *          the new value of the '{@link ClaimCompositeKey#getClaimNumber() claimNumber}' feature.
    * @generated
    */
   public void setClaimNumber(String newClaimNumber) {
@@ -83,9 +75,7 @@ public class ClaimCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>claimExtensionNumber</b></em>' feature
    * @generated
@@ -99,12 +89,10 @@ public class ClaimCompositeKey extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ClaimCompositeKey#getClaimExtensionNumber() claimExtensionNumber}' feature.
+   * @param newClaimExtensionNumber
+   *          the new value of the '{@link ClaimCompositeKey#getClaimExtensionNumber() claimExtensionNumber}' feature.
    * @generated
    */
   public void setClaimExtensionNumber(String newClaimExtensionNumber) {

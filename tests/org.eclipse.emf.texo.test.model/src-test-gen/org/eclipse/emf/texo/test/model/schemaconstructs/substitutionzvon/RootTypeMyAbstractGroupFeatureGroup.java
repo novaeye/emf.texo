@@ -141,6 +141,8 @@ public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
   private BigInteger myAbstract;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -148,6 +150,7 @@ public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -169,10 +172,8 @@ public class RootTypeMyAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link RootType#getMyAbstract() <em>myAbstract</em>}' feature.
    * 
-   * @param newMyAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMyAbstract
    *          the new value of the '{@link RootType#getMyAbstract() myAbstract}' feature.
    * @generated

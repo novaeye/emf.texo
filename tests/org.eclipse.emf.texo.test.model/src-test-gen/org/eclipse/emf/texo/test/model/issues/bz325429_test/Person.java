@@ -149,6 +149,9 @@ public class Person extends Identifiable {
   /**
    * Adds to the <em>contacts</em> feature.
    * 
+   * @param contactsValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToContacts(Contact contactsValue) {
@@ -159,6 +162,9 @@ public class Person extends Identifiable {
 
   /**
    * Removes from the <em>contacts</em> feature.
+   * 
+   * @param contactsValue
+   *          the value to remove
    * 
    * @generated
    */

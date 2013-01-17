@@ -48,9 +48,7 @@ public class ClaimLine extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -61,9 +59,7 @@ public class ClaimLine extends Identifiable {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @generated
    */
@@ -81,9 +77,7 @@ public class ClaimLine extends Identifiable {
   private String claimLineStatus = "";
 
   /**
-   * Returns the value of '<em><b>claim</b></em>' feature. Note: the returned collection is Unmodifiable use the
-   * {#addToClaim(org.eclipse.emf.texo.test.model.samples.claim.Claim value)} and {@link #removeFromClaim(Claim value)}
-   * methods to modify this feature.
+   * Returns the value of '<em><b>claim</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> A generated key to uniquely the parent <!--
    * end-model-doc -->
@@ -101,8 +95,8 @@ public class ClaimLine extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> A generated key to uniquely the parent <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClaimLine#getClaim() claim}' feature.
+   * @param newClaim
+   *          the new value of the '{@link ClaimLine#getClaim() claim}' feature.
    * @generated
    */
   public void setClaim(Claim newClaim) {
@@ -139,9 +133,7 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>claimLineBilledAmount</b></em>' feature
    * @generated
@@ -155,12 +147,10 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ClaimLine#getClaimLineBilledAmount() claimLineBilledAmount}' feature.
+   * @param newClaimLineBilledAmount
+   *          the new value of the '{@link ClaimLine#getClaimLineBilledAmount() claimLineBilledAmount}' feature.
    * @generated
    */
   public void setClaimLineBilledAmount(BigDecimal newClaimLineBilledAmount) {
@@ -172,9 +162,7 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
-   * 
-   * <!-- end-model-doc -->
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
    * @return the value of '<em><b>serviceCode</b></em>' feature
    * @generated
@@ -188,12 +176,10 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc -->
    * 
-   * The Unique Identifier for a Claim.
+   * The Unique Identifier for a Claim. <!-- end-model-doc -->
    * 
-   * <!-- end-model-doc -->
-   * 
-   * @param the
-   *          new value of the '{@link ClaimLine#getServiceCode() serviceCode}' feature.
+   * @param newServiceCode
+   *          the new value of the '{@link ClaimLine#getServiceCode() serviceCode}' feature.
    * @generated
    */
   public void setServiceCode(String newServiceCode) {
@@ -221,8 +207,8 @@ public class ClaimLine extends Identifiable {
    * 
    * <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link ClaimLine#getClaimLineStatus() claimLineStatus}' feature.
+   * @param newClaimLineStatus
+   *          the new value of the '{@link ClaimLine#getClaimLineStatus() claimLineStatus}' feature.
    * @generated
    */
   public void setClaimLineStatus(String newClaimLineStatus) {

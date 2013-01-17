@@ -181,6 +181,9 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
   /**
    * Adds to the <em>graphicsAlgorithmChildren</em> feature.
    * 
+   * @param graphicsAlgorithmChildrenValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToGraphicsAlgorithmChildren(GraphicsAlgorithm graphicsAlgorithmChildrenValue) {
@@ -191,6 +194,9 @@ public abstract class GraphicsAlgorithm extends GraphicsAlgorithmContainer {
 
   /**
    * Removes from the <em>graphicsAlgorithmChildren</em> feature.
+   * 
+   * @param graphicsAlgorithmChildrenValue
+   *          the value to remove
    * 
    * @generated
    */

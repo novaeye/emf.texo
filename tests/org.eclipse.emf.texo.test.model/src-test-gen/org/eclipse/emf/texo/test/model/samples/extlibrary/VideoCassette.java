@@ -45,6 +45,9 @@ public class VideoCassette extends AudioVisualItem {
   /**
    * Adds to the <em>cast</em> feature.
    * 
+   * @param castValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToCast(Person castValue) {
@@ -55,6 +58,9 @@ public class VideoCassette extends AudioVisualItem {
 
   /**
    * Removes from the <em>cast</em> feature.
+   * 
+   * @param castValue
+   *          the value to remove
    * 
    * @generated
    */

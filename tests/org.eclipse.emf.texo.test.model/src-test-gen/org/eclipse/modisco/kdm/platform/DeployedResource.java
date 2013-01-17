@@ -44,6 +44,9 @@ public class DeployedResource extends AbstractPlatformElement {
   /**
    * Adds to the <em>platformElement</em> feature.
    * 
+   * @param platformElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPlatformElement(ResourceType platformElementValue) {
@@ -54,6 +57,9 @@ public class DeployedResource extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>platformElement</em> feature.
+   * 
+   * @param platformElementValue
+   *          the value to remove
    * 
    * @generated
    */

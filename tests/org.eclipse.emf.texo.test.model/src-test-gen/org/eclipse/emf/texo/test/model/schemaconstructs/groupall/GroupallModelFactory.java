@@ -45,8 +45,10 @@ public class GroupallModelFactory implements ModelFactory {
       return createSimpleAllType();
     case GroupallModelPackage.SIMPLEALLMAPTYPE_CLASSIFIER_ID:
       return createSimpleAllMapType();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -91,7 +93,7 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -162,21 +164,21 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass AddressList
-   * @generated
-   */
-  public AddressList createAddressList() {
-    return new AddressList();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass AddressType
    * @generated
    */
   public AddressType createAddressType() {
     return new AddressType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass AddressList
+   * @generated
+   */
+  public AddressList createAddressList() {
+    return new AddressList();
   }
 
   /**
@@ -192,21 +194,21 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return an instance of the model object representing the EClass SimpleAllMapType
-   * @generated
-   */
-  public SimpleAllMapType createSimpleAllMapType() {
-    return new SimpleAllMapType();
-  }
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
    * @return an instance of the model object representing the EClass SimpleAllType
    * @generated
    */
   public SimpleAllType createSimpleAllType() {
     return new SimpleAllType();
+  }
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the model object representing the EClass SimpleAllMapType
+   * @generated
+   */
+  public SimpleAllMapType createSimpleAllMapType() {
+    return new SimpleAllMapType();
   }
 
   /**
@@ -220,8 +222,9 @@ public class GroupallModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -235,13 +238,17 @@ public class GroupallModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AddressGroupType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -278,8 +285,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getBillTo();
       case GroupallModelPackage.ADDRESSGROUPTYPE_SIMPLEADDRESS_FEATURE_ID:
         return getTarget().getSimpleAddress();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -301,8 +309,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSGROUPTYPE_SIMPLEADDRESS_FEATURE_ID:
         getTarget().setSimpleAddress((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -313,8 +322,9 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -325,13 +335,17 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AddressType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -366,8 +380,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getName();
       case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
         return getTarget().getLongName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -387,8 +402,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
         getTarget().setLongName((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -410,8 +426,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
         getTarget().getLongName().add((String) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -433,13 +450,17 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
         getTarget().getLongName().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>AddressList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -476,8 +497,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getShipTo();
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         return getTarget().getBillTo();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -500,8 +522,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         getTarget().setBillTo((List<AddressType>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -523,8 +546,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         getTarget().getBillTo().add((AddressType) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -546,13 +570,17 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         getTarget().getBillTo().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -595,8 +623,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getSimpleAll();
       case GroupallModelPackage.DOCUMENTROOT_SIMPLEALLMAP_FEATURE_ID:
         return getTarget().getSimpleAllMap();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -628,8 +657,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.DOCUMENTROOT_SIMPLEALLMAP_FEATURE_ID:
         getTarget().setSimpleAllMap((SimpleAllMapType) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -644,8 +674,9 @@ public class GroupallModelFactory implements ModelFactory {
         getTarget().getMixed().add((DocumentRootMixedFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -660,13 +691,17 @@ public class GroupallModelFactory implements ModelFactory {
         getTarget().getMixed().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimpleAllType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -701,8 +736,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getBbb();
       case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
         return getTarget().getCcc();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -721,8 +757,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.SIMPLEALLTYPE_CCC_FEATURE_ID:
         getTarget().setCcc((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -733,8 +770,9 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -745,14 +783,18 @@ public class GroupallModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimpleAllMapType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -789,8 +831,9 @@ public class GroupallModelFactory implements ModelFactory {
         return getTarget().getBbb();
       case GroupallModelPackage.SIMPLEALLMAPTYPE_CCC_FEATURE_ID:
         return getTarget().getCcc();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -813,8 +856,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.SIMPLEALLMAPTYPE_CCC_FEATURE_ID:
         getTarget().setCcc((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -829,8 +873,9 @@ public class GroupallModelFactory implements ModelFactory {
         getTarget().getAllMap().add((SimpleAllMapTypeAllMapFeatureGroup) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -845,14 +890,17 @@ public class GroupallModelFactory implements ModelFactory {
         getTarget().getAllMap().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>AddressType.group</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class AddressTypeGroupFeatureGroupModelFeatureMapEntry<E extends AddressTypeGroupFeatureGroup> extends
@@ -867,8 +915,9 @@ public class GroupallModelFactory implements ModelFactory {
         return GroupallModelPackage.INSTANCE.getAddressType_Name();
       case LONGNAME:
         return GroupallModelPackage.INSTANCE.getAddressType_LongName();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -884,8 +933,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSTYPE_LONGNAME_FEATURE_ID:
         getTarget().setFeature(AddressTypeGroupFeatureGroup.Feature.LONGNAME);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -906,6 +956,8 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>AddressList.addrs</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class AddressListAddrsFeatureGroupModelFeatureMapEntry<E extends AddressListAddrsFeatureGroup> extends
@@ -920,8 +972,9 @@ public class GroupallModelFactory implements ModelFactory {
         return GroupallModelPackage.INSTANCE.getAddressList_ShipTo();
       case BILLTO:
         return GroupallModelPackage.INSTANCE.getAddressList_BillTo();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -937,8 +990,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.ADDRESSLIST_BILLTO_FEATURE_ID:
         getTarget().setFeature(AddressListAddrsFeatureGroup.Feature.BILLTO);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -959,6 +1013,8 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>DocumentRoot.mixed</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class DocumentRootMixedFeatureGroupModelFeatureMapEntry<E extends DocumentRootMixedFeatureGroup>
@@ -983,8 +1039,9 @@ public class GroupallModelFactory implements ModelFactory {
         return GroupallModelPackage.INSTANCE.getDocumentRoot_SimpleAll();
       case SIMPLEALLMAP:
         return GroupallModelPackage.INSTANCE.getDocumentRoot_SimpleAllMap();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1016,8 +1073,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.DOCUMENTROOT_SIMPLEALLMAP_FEATURE_ID:
         getTarget().setFeature(DocumentRootMixedFeatureGroup.Feature.SIMPLEALLMAP);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1038,6 +1096,8 @@ public class GroupallModelFactory implements ModelFactory {
   /**
    * The wrapper/adapter for the Feature Group '<em><b>SimpleAllMapType.allMap</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SimpleAllMapTypeAllMapFeatureGroupModelFeatureMapEntry<E extends SimpleAllMapTypeAllMapFeatureGroup>
@@ -1054,8 +1114,9 @@ public class GroupallModelFactory implements ModelFactory {
         return GroupallModelPackage.INSTANCE.getSimpleAllMapType_Bbb();
       case CCC:
         return GroupallModelPackage.INSTANCE.getSimpleAllMapType_Ccc();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -1074,8 +1135,9 @@ public class GroupallModelFactory implements ModelFactory {
       case GroupallModelPackage.SIMPLEALLMAPTYPE_CCC_FEATURE_ID:
         getTarget().setFeature(SimpleAllMapTypeAllMapFeatureGroup.Feature.CCC);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -1092,5 +1154,4 @@ public class GroupallModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

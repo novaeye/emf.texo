@@ -139,8 +139,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Фамилия <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getSurname() surname}' feature.
+   * @param newSurname
+   *          the new value of the '{@link Person#getSurname() surname}' feature.
    * @generated
    */
   public void setSurname(String newSurname) {
@@ -164,8 +164,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Имя <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Person#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -189,8 +189,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Отчество <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getPatronimic() patronimic}' feature.
+   * @param newPatronimic
+   *          the new value of the '{@link Person#getPatronimic() patronimic}' feature.
    * @generated
    */
   public void setPatronimic(String newPatronimic) {
@@ -214,8 +214,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Дата рождения <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getBirthday() birthday}' feature.
+   * @param newBirthday
+   *          the new value of the '{@link Person#getBirthday() birthday}' feature.
    * @generated
    */
   public void setBirthday(Date newBirthday) {
@@ -239,8 +239,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Адрес регистрации <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getRegistrationAddress() registrationAddress}' feature.
+   * @param newRegistrationAddress
+   *          the new value of the '{@link Person#getRegistrationAddress() registrationAddress}' feature.
    * @generated
    */
   public void setRegistrationAddress(Address newRegistrationAddress) {
@@ -266,8 +266,8 @@ public class Person extends Identifiable {
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Адрес фактического проживания <!--
    * end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getFactAddress() factAddress}' feature.
+   * @param newFactAddress
+   *          the new value of the '{@link Person#getFactAddress() factAddress}' feature.
    * @generated
    */
   public void setFactAddress(Address newFactAddress) {
@@ -291,8 +291,8 @@ public class Person extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Паспортные данные <!-- end-model-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Person#getPassport() passport}' feature.
+   * @param newPassport
+   *          the new value of the '{@link Person#getPassport() passport}' feature.
    * @generated
    */
   public void setPassport(Passport newPassport) {

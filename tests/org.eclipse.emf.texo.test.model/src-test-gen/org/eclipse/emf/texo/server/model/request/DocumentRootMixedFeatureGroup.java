@@ -175,6 +175,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   private QueryReferingObjectsType queryReferingObjects;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -182,6 +184,7 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -201,12 +204,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getText() <em>text</em>}' feature.
+   * Sets the <em>text</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newText
-   *          the new value of the '{@link LetterBodyType#getText() text}' feature.
+   *          the new value of the '<em><b>text</b></em>' feature.
    * @generated
    */
   public void setText(String newText) {
@@ -215,11 +218,11 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Returns the value of '<em><b>cDATA</b></em>' feature.
+   * Returns the value of '<em><b>CDATA</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>cDATA</b></em>' feature
+   * @return the value of '<em><b>CDATA</b></em>' feature
    * @generated
    */
   public String getCDATA() {
@@ -227,12 +230,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getCDATA() <em>cDATA</em>}' feature.
+   * Sets the <em>cDATA</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newCDATA
-   *          the new value of the '{@link LetterBodyType#getCDATA() cDATA}' feature.
+   *          the new value of the '<em><b>CDATA</b></em>' feature.
    * @generated
    */
   public void setCDATA(String newCDATA) {
@@ -253,12 +256,12 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   }
 
   /**
-   * Sets the '{@link LetterBodyType#getComment() <em>comment</em>}' feature.
+   * Sets the <em>comment</em> feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param newComment
-   *          the new value of the '{@link LetterBodyType#getComment() comment}' feature.
+   *          the new value of the '<em><b>comment</b></em>' feature.
    * @generated
    */
   public void setComment(String newComment) {
@@ -281,10 +284,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getAction() <em>action</em>}' feature.
    * 
-   * @param newAction
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newAction
    *          the new value of the '{@link DocumentRoot#getAction() action}' feature.
    * @generated
@@ -309,10 +310,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getQuery() <em>query</em>}' feature.
    * 
-   * @param newQuery
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newQuery
    *          the new value of the '{@link DocumentRoot#getQuery() query}' feature.
    * @generated
@@ -337,10 +336,8 @@ public class DocumentRootMixedFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link DocumentRoot#getQueryReferingObjects() <em>queryReferingObjects</em>}' feature.
    * 
-   * @param newQueryReferingObjects
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newQueryReferingObjects
    *          the new value of the '{@link DocumentRoot#getQueryReferingObjects() queryReferingObjects}' feature.
    * @generated

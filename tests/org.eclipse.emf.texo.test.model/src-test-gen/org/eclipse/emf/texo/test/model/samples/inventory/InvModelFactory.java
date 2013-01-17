@@ -35,8 +35,10 @@ public class InvModelFactory implements ModelFactory {
       return createPType();
     case InvModelPackage.PDECLARATION_CLASSIFIER_ID:
       return createPDeclaration();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -69,7 +71,7 @@ public class InvModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -126,8 +128,9 @@ public class InvModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -141,12 +144,16 @@ public class InvModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -186,8 +193,9 @@ public class InvModelFactory implements ModelFactory {
         return getTarget().getSubNOTypes();
       case InvModelPackage.PTYPE_INFOREFERENCES_FEATURE_ID:
         return getTarget().getInfoReferences();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -216,8 +224,9 @@ public class InvModelFactory implements ModelFactory {
       case InvModelPackage.PTYPE_INFOREFERENCES_FEATURE_ID:
         getTarget().setInfoReferences((List<PDeclaration>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -239,8 +248,9 @@ public class InvModelFactory implements ModelFactory {
       case InvModelPackage.PTYPE_INFOREFERENCES_FEATURE_ID:
         getTarget().getInfoReferences().add((PDeclaration) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -262,13 +272,17 @@ public class InvModelFactory implements ModelFactory {
       case InvModelPackage.PTYPE_INFOREFERENCES_FEATURE_ID:
         getTarget().getInfoReferences().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PDeclaration</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -301,8 +315,9 @@ public class InvModelFactory implements ModelFactory {
         return getTarget().getId();
       case InvModelPackage.PDECLARATION_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -318,8 +333,9 @@ public class InvModelFactory implements ModelFactory {
       case InvModelPackage.PDECLARATION_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -330,8 +346,9 @@ public class InvModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -342,9 +359,9 @@ public class InvModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
-
 }

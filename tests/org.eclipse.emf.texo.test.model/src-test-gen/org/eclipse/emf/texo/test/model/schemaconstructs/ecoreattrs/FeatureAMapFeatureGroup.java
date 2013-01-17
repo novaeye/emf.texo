@@ -134,6 +134,7 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   @Basic(optional = false)
   @Column(name = "name")
   private String name;
+
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
@@ -144,6 +145,8 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   private Double value_;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -151,6 +154,7 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -172,10 +176,8 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Feature#getName() <em>name</em>}' feature.
    * 
-   * @param newName
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newName
    *          the new value of the '{@link Feature#getName() name}' feature.
    * @generated
@@ -200,10 +202,8 @@ public class FeatureAMapFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link Feature#getValue_() <em>value</em>}' feature.
    * 
-   * @param newValue_
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newValue_
    *          the new value of the '{@link Feature#getValue_() value}' feature.
    * @generated

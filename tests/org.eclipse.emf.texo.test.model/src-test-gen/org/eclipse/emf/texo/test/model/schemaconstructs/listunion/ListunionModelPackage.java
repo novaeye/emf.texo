@@ -53,6 +53,48 @@ public class ListunionModelPackage extends ModelPackage {
    * 
    * @generated
    */
+  public static final int STATELIST_CLASSIFIER_ID = 10;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int STATE_CLASSIFIER_ID = 9;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIXSTATESLIST_CLASSIFIER_ID = 8;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ZIPUNIONTYPE_CLASSIFIER_ID = 14;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int ZIPUNIONSTYPE_CLASSIFIER_ID = 13;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
+  public static final int SIMPLEUNIONTYPE_CLASSIFIER_ID = 4;
+
+  /**
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @generated
+   */
   public static final int SIMPLESTRINGUNIONTYPE_CLASSIFIER_ID = 1;
 
   /**
@@ -68,13 +110,6 @@ public class ListunionModelPackage extends ModelPackage {
    * @generated
    */
   public static final int SIMPLESTRINGUNIONTYPEMEMBER1_CLASSIFIER_ID = 3;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int SIMPLEUNIONTYPE_CLASSIFIER_ID = 4;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -102,27 +137,6 @@ public class ListunionModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int SIXSTATESLIST_CLASSIFIER_ID = 8;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int STATE_CLASSIFIER_ID = 9;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int STATELIST_CLASSIFIER_ID = 10;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
   public static final int STRINGLIST_CLASSIFIER_ID = 11;
 
   /**
@@ -131,20 +145,6 @@ public class ListunionModelPackage extends ModelPackage {
    * @generated
    */
   public static final int ZIPCODE_CLASSIFIER_ID = 12;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ZIPUNIONSTYPE_CLASSIFIER_ID = 13;
-
-  /**
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @generated
-   */
-  public static final int ZIPUNIONTYPE_CLASSIFIER_ID = 14;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -225,6 +225,8 @@ public class ListunionModelPackage extends ModelPackage {
 
   /**
    * Initializes this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an initialized instance of this class
    * 
    * @generated
    */
@@ -414,6 +416,66 @@ public class ListunionModelPackage extends ModelPackage {
   }
 
   /**
+   * Returns the {@link EDataType} '<em><b>StateList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>StateList</b></em>'
+   * @generated
+   */
+  public EDataType getStateListEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(STATELIST_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>State</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>State</b></em>'
+   * @generated
+   */
+  public EDataType getStateEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(STATE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>SixStatesList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>SixStatesList</b></em>'
+   * @generated
+   */
+  public EDataType getSixStatesListEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SIXSTATESLIST_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>ZipUnionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>ZipUnionType</b></em>'
+   * @generated
+   */
+  public EDataType getZipUnionTypeEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(ZIPUNIONTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>ZipUnionsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>ZipUnionsType</b></em>'
+   * @generated
+   */
+  public EDataType getZipUnionsTypeEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(ZIPUNIONSTYPE_CLASSIFIER_ID);
+  }
+
+  /**
+   * Returns the {@link EDataType} '<em><b>SimpleUnionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @return an instance of the {@link EDataType} representing '<em><b>SimpleUnionType</b></em>'
+   * @generated
+   */
+  public EDataType getSimpleUnionTypeEDataType() {
+    return (EDataType) getEPackage().getEClassifiers().get(SIMPLEUNIONTYPE_CLASSIFIER_ID);
+  }
+
+  /**
    * Returns the {@link EDataType} '<em><b>SimpleStringUnionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -444,16 +506,6 @@ public class ListunionModelPackage extends ModelPackage {
    */
   public EDataType getSimpleStringUnionTypeMember1EDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(SIMPLESTRINGUNIONTYPEMEMBER1_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>SimpleUnionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SimpleUnionType</b></em>'
-   * @generated
-   */
-  public EDataType getSimpleUnionTypeEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SIMPLEUNIONTYPE_CLASSIFIER_ID);
   }
 
   /**
@@ -489,36 +541,6 @@ public class ListunionModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EDataType} '<em><b>SixStatesList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>SixStatesList</b></em>'
-   * @generated
-   */
-  public EDataType getSixStatesListEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(SIXSTATESLIST_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>State</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>State</b></em>'
-   * @generated
-   */
-  public EDataType getStateEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(STATE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>StateList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>StateList</b></em>'
-   * @generated
-   */
-  public EDataType getStateListEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(STATELIST_CLASSIFIER_ID);
-  }
-
-  /**
    * Returns the {@link EDataType} '<em><b>StringList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @return an instance of the {@link EDataType} representing '<em><b>StringList</b></em>'
@@ -536,26 +558,6 @@ public class ListunionModelPackage extends ModelPackage {
    */
   public EDataType getZipCodeEDataType() {
     return (EDataType) getEPackage().getEClassifiers().get(ZIPCODE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>ZipUnionsType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>ZipUnionsType</b></em>'
-   * @generated
-   */
-  public EDataType getZipUnionsTypeEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(ZIPUNIONSTYPE_CLASSIFIER_ID);
-  }
-
-  /**
-   * Returns the {@link EDataType} '<em><b>ZipUnionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @return an instance of the {@link EDataType} representing '<em><b>ZipUnionType</b></em>'
-   * @generated
-   */
-  public EDataType getZipUnionTypeEDataType() {
-    return (EDataType) getEPackage().getEClassifiers().get(ZIPUNIONTYPE_CLASSIFIER_ID);
   }
 
   /**
@@ -599,7 +601,8 @@ public class ListunionModelPackage extends ModelPackage {
       return List.class;
     case ZIPCODE_CLASSIFIER_ID:
       return String.class;
+    default:
+      throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
   }
 }

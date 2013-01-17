@@ -35,8 +35,10 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       return createPurchaseOrder();
     case SimplefeaturemapModelPackage.SUPPLIER_CLASSIFIER_ID:
       return createSupplier();
+    default:
+      throw new IllegalArgumentException("The EClass '" + eClass.getName()
+          + "' is not a valid EClass for this EPackage");
     }
-    throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
   }
 
   /**
@@ -69,7 +71,7 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -134,8 +136,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
    */
   public Object createFromString(EDataType eDataType, String value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
   }
 
   /**
@@ -149,12 +152,16 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
    */
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
+    default:
+      throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-    throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -185,8 +192,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       switch (featureID) {
       case SimplefeaturemapModelPackage.PURCHASEORDER_NAME_FEATURE_ID:
         return getTarget().getName();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -199,8 +207,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       case SimplefeaturemapModelPackage.PURCHASEORDER_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -211,8 +220,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -223,13 +233,17 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -270,8 +284,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
         return getTarget().getHardCopyOrderReference();
       case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
         return getTarget().getHardCopyOrderNumber();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -300,8 +315,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
         getTarget().setHardCopyOrderNumber((List<Long>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -331,8 +347,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
         getTarget().getHardCopyOrderNumber().add((Long) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -362,14 +379,17 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
         getTarget().getHardCopyOrderNumber().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The wrapper/adapter for the Feature Group '<em><b>Supplier.orders</b></em>'.
    * 
+   * @param <E>
+   *          the Feature Group class
    * @generated
    */
   public static class SupplierOrdersFeatureGroupModelFeatureMapEntry<E extends SupplierOrdersFeatureGroup> extends
@@ -388,8 +408,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
         return SimplefeaturemapModelPackage.INSTANCE.getSupplier_HardCopyOrderReference();
       case HARDCOPYORDERNUMBER:
         return SimplefeaturemapModelPackage.INSTANCE.getSupplier_HardCopyOrderNumber();
+      default:
+        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
       }
-      throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
     }
 
     /**
@@ -411,8 +432,9 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       case SimplefeaturemapModelPackage.SUPPLIER_HARDCOPYORDERNUMBER_FEATURE_ID:
         getTarget().setFeature(SupplierOrdersFeatureGroup.Feature.HARDCOPYORDERNUMBER);
         return;
+      default:
+        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
       }
-      throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
     }
 
     /**
@@ -429,5 +451,4 @@ public class SimplefeaturemapModelFactory implements ModelFactory {
       getTarget().setValue(getTarget().getFeature(), value);
     }
   }
-
 }

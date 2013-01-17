@@ -143,6 +143,8 @@ public class NumberTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   private ComplexNumber myComplexAbstract;
 
   /**
+   * @param feature
+   *          the EStructuralFeature of this feature map entry
    * @generated
    */
   public void setFeature(Feature feature) {
@@ -150,6 +152,7 @@ public class NumberTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   }
 
   /**
+   * @return feature the EStructuralFeature of this feature map entry
    * @generated
    */
   public Feature getFeature() {
@@ -171,10 +174,8 @@ public class NumberTypeMyComplexAbstractGroupFeatureGroup extends Identifiable {
   /**
    * Sets the '{@link NumberType#getMyComplexAbstract() <em>myComplexAbstract</em>}' feature.
    * 
-   * @param newMyComplexAbstract
-   *          the new value for the feature
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   *          <!-- begin-user-doc --> <!-- end-user-doc -->
    * @param newMyComplexAbstract
    *          the new value of the '{@link NumberType#getMyComplexAbstract() myComplexAbstract}' feature.
    * @generated

@@ -13,8 +13,8 @@ import java.util.List;
 public enum SecretQuestionType {
 
   /**
-   * The enum: REGULAR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип вопроса <!--
-   * end-model-doc -->
+   * The enum: REGULAR <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Обычный <!-- end-model-doc
+   * -->
    * 
    * @generated
    */
@@ -30,7 +30,7 @@ public enum SecretQuestionType {
     }
   },
   /**
-   * The enum: CONTROL <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Тип вопроса <!--
+   * The enum: CONTROL <!-- begin-user-doc --> <!-- end-user-doc --> <!-- begin-model-doc --> Контрольный <!--
    * end-model-doc -->
    * 
    * @generated
@@ -66,6 +66,9 @@ public enum SecretQuestionType {
    * Returns the '<em><b>SecretQuestionType</b></em>' literal with the specified literal value. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
+   * @param literal
+   *          the literal to use to get the enum instance
+   * @return the SecretQuestionType, the literal enum class
    * @generated
    */
   public static SecretQuestionType get(String literal) {
@@ -82,6 +85,9 @@ public enum SecretQuestionType {
    * Returns the '<em><b>SecretQuestionType</b></em>' literal with the specified name. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
+   * @param name
+   *          the name to use to get the enum instance
+   * @return the SecretQuestionType, the literal enum class
    * @generated
    */
   public static SecretQuestionType getByName(String name) {
@@ -98,6 +104,9 @@ public enum SecretQuestionType {
    * Returns the '<em><b>SecretQuestionType</b></em>' literal with the specified integer value. <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * 
+   * @param value
+   *          the value to use to get the enum instance
+   * @return the SecretQuestionType, the literal enum
    * @generated
    */
   public static SecretQuestionType get(int value) {
@@ -164,6 +173,7 @@ public enum SecretQuestionType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the value
    * @generated
    */
   public int getValue() {
@@ -173,6 +183,7 @@ public enum SecretQuestionType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the name
    * @generated
    */
   public String getName() {
@@ -182,6 +193,7 @@ public enum SecretQuestionType {
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @return the literal of this enum instance
    * @generated
    */
   public String getLiteral() {

@@ -77,6 +77,9 @@ public class PlatformAction extends AbstractPlatformElement {
   /**
    * Adds to the <em>platformElement</em> feature.
    * 
+   * @param platformElementValue
+   *          the value to add
+   * 
    * @generated
    */
   public void addToPlatformElement(PlatformEvent platformElementValue) {
@@ -87,6 +90,9 @@ public class PlatformAction extends AbstractPlatformElement {
 
   /**
    * Removes from the <em>platformElement</em> feature.
+   * 
+   * @param platformElementValue
+   *          the value to remove
    * 
    * @generated
    */
