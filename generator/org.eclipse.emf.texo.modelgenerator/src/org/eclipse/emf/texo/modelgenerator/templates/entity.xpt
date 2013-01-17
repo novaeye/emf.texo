@@ -109,6 +109,9 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 			«IF featureAnnotation.featureMapFeature == null && featureAnnotation.many && featureAnnotation.reference && (((EReferenceModelGenAnnotation)featureAnnotation).generateBidirectionalAssociationSupport || ((EReferenceModelGenAnnotation)featureAnnotation).generateSafeManyAccess)-»
 			/**
 			 * Adds to the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 *
+			 * @param «featureAnnotation.validJavaMemberName»Value value to add
+			 *
 			 * @generated
 			 */
 			public void addTo«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {
@@ -142,6 +145,9 @@ public«IF this.abstract-» abstract«ENDIF-» class «this.simpleClassName-»
 
 			/**
 			 * Removes from the <em>«featureAnnotation.EStructuralFeature.name»</em> feature.
+			 *
+			 * @param «featureAnnotation.validJavaMemberName»Value value to remove
+			 *
 			 * @generated
 			 */
 			public void removeFrom«toFirstUpper(featureAnnotation.validJavaMemberName)»(«featureAnnotation.itemType» «featureAnnotation.validJavaMemberName»Value) {

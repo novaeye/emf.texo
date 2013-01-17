@@ -125,7 +125,7 @@ public class EclipseModelGeneratorTest extends TestCase {
           .createEPackageRegistry();
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, packageRegistry);
 
-      if (!isGenerateTexoModels()) {
+      if (true || !isGenerateTexoModels()) {
         addSuperType(ePackages, packageRegistry);
 
         boolean hasIdentifiable = false;

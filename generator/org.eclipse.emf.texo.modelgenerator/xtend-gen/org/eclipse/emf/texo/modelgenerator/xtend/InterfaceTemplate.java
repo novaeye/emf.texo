@@ -51,7 +51,7 @@ public class InterfaceTemplate extends BaseTemplate {
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
-    _builder.append("/** ");
+    _builder.append("/**");
     _builder.newLine();
     _builder.append(" ");
     _builder.append("* A representation of the model object \'<em><b>");
@@ -80,7 +80,7 @@ public class InterfaceTemplate extends BaseTemplate {
       }
     }
     _builder.append(" ");
-    _builder.append("* @generated ");
+    _builder.append("* @generated");
     _builder.newLine();
     _builder.append("*/");
     _builder.newLine();
@@ -104,7 +104,7 @@ public class InterfaceTemplate extends BaseTemplate {
       }
     }
     _builder.newLineIfNotEmpty();
-    _builder.append("{ ");
+    _builder.append("{");
     _builder.newLine();
     {
       EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
@@ -207,6 +207,15 @@ public class InterfaceTemplate extends BaseTemplate {
                 _builder.append("</em> feature.");
                 _builder.newLineIfNotEmpty();
                 _builder.append(" ");
+                _builder.append("*");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* @param value the value to add");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("*");
+                _builder.newLine();
+                _builder.append(" ");
                 _builder.append("* @generated");
                 _builder.newLine();
                 _builder.append(" ");
@@ -222,7 +231,7 @@ public class InterfaceTemplate extends BaseTemplate {
                 _builder.append(" value);");
                 _builder.newLineIfNotEmpty();
                 _builder.newLine();
-                _builder.append("/**\t\t\t");
+                _builder.append("/**");
                 _builder.newLine();
                 _builder.append(" ");
                 _builder.append("* Removes from the <em>");
@@ -231,6 +240,15 @@ public class InterfaceTemplate extends BaseTemplate {
                 _builder.append(_name_4, " ");
                 _builder.append("</em> feature.");
                 _builder.newLineIfNotEmpty();
+                _builder.append(" ");
+                _builder.append("*");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* @param value the value to remove");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("*");
+                _builder.newLine();
                 _builder.append(" ");
                 _builder.append("* @generated");
                 _builder.newLine();
@@ -247,7 +265,7 @@ public class InterfaceTemplate extends BaseTemplate {
                 _builder.append(" value);");
                 _builder.newLineIfNotEmpty();
                 _builder.newLine();
-                _builder.append("/**\t\t\t");
+                _builder.append("/**");
                 _builder.newLine();
                 _builder.append(" ");
                 _builder.append("* Clears the <em>");
