@@ -161,6 +161,9 @@ public class TestUtils {
       for (DiffElement diffElement : differences) {
         sb.append(diffElement.toString() + "\n"); //$NON-NLS-1$
       }
+      if (!differences.isEmpty()) {
+        System.err.println("ads");
+      }
       Assert.assertTrue(sb.toString(), differences.isEmpty());
     } catch (final InterruptedException e) {
       throw new IllegalStateException(e);

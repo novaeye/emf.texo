@@ -17,6 +17,7 @@
 
 package org.eclipse.emf.texo.converter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -297,10 +298,28 @@ public class ObjectComparator implements TexoComponent {
     if (v1 == v2) {
       return;
     }
-    if (v1 != null && !v1.equals(v2)) {
+    System.err.println(v1);
+    if (v1 != null && v1.getClass().isArray()) {
+      checkEqualArrays(v1, v2, eAttribute);
+    } else if (v1 != null && !v1.equals(v2)) {
       throw new ObjectComparatorException(v1, v2, "Different values " + v1 + "/" + v2 + getPath()); //$NON-NLS-1$ //$NON-NLS-2$
     }
+  }
 
+  private void checkEqualArrays(Object v1, Object v2, EAttribute eAttribute) {
+    if (v1 == null || !v1.getClass().isArray() || v2 == null || !v2.getClass().isArray()) {
+      throw new ObjectComparatorException(v1, v2, "Different values " + v1 + "/" + v2 + getPath()); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    final int l1 = Array.getLength(v1);
+    final int l2 = Array.getLength(v1);
+    if (l1 != l2) {
+      throw new ObjectComparatorException(v1, v2, "Different values " + v1 + "/" + v2 + getPath()); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    for (int i = 0; i < l1; i++) {
+      final Object e1 = Array.get(v1, i);
+      final Object e2 = Array.get(v2, i);
+      compareValue(e1, e2, eAttribute);
+    }
   }
 
   protected void compareType(ModelObject<?> m1, ModelObject<?> m2) {
@@ -311,7 +330,7 @@ public class ObjectComparator implements TexoComponent {
   }
 
   protected String getPath() {
-    final StringBuilder sb = new StringBuilder(" - path: "); //$NON-NLS-1$ 
+    final StringBuilder sb = new StringBuilder(" - path: "); //$NON-NLS-1$
     for (String part : path) {
       sb.append("/" + part); //$NON-NLS-1$
     }

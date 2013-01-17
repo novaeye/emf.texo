@@ -164,7 +164,7 @@ public class ImportReferenceCollector extends ASTVisitor {
   @Override
   public boolean visit(final PackageDeclaration node) {
     packageName = node.getName().getFullyQualifiedName();
-    if (node.getAST().apiLevel() >= AST.JLS3) {
+    if (node.getAST().apiLevel() >= AST.JLS4) {
       doVisitNode(node.getJavadoc());
       doVisitChildren(node.annotations());
     }
@@ -279,7 +279,7 @@ public class ImportReferenceCollector extends ASTVisitor {
   public boolean visit(final MethodDeclaration node) {
     doVisitNode(node.getJavadoc());
 
-    if (node.getAST().apiLevel() >= AST.JLS3) {
+    if (node.getAST().apiLevel() >= AST.JLS4) {
       doVisitChildren(node.modifiers());
       doVisitChildren(node.typeParameters());
     }

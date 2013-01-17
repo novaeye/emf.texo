@@ -1,6 +1,7 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.listunion;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -67,7 +68,7 @@ public class ListunionModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eFeature
+   * @param eStructuralFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -192,198 +193,6 @@ public class ListunionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: StateList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertStateListToString(List<String> value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: StateList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public List<String> createStateListFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: State to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertStateToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: State from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createStateFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: SixStatesList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSixStatesListToString(List<String> value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: SixStatesList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public List<String> createSixStatesListFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: ZipUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertZipUnionTypeToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: ZipUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createZipUnionTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: ZipUnionsType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertZipUnionsTypeToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: ZipUnionsType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createZipUnionsTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: SimpleUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSimpleUnionTypeToString(Object value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSimpleUnionTypeEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: SimpleUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Object createSimpleUnionTypeFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSimpleUnionTypeEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
    * Converts the EDataType: SimpleStringUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
@@ -470,6 +279,36 @@ public class ListunionModelFactory implements ModelFactory {
    * @generated
    */
   public String createSimpleStringUnionTypeMember1FromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: SimpleUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertSimpleUnionTypeToString(Object value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: SimpleUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public Object createSimpleUnionTypeFromString(String value) {
     if (value == null) {
       return null;
     }
@@ -570,20 +409,139 @@ public class ListunionModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: StringList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: SixStatesList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertSixStatesListToString(List<String> value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: SixStatesList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public List<String> createSixStatesListFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
+  }
+
+  /**
+   * Converts the EDataType: State to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
    * @generated
    */
+  public String convertStateToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: State from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createStateFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: StateList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertStateListToString(List<String> value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: StateList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public List<String> createStateListFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
+  }
+
+  /**
+   * Converts the EDataType: StringList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
   public String convertStringListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -636,9 +594,6 @@ public class ListunionModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param <E>
-   *          the domain model java class
-   * 
    * @generated
    */
   public static class StatesByCountryModelObject<E extends StatesByCountry> extends
@@ -684,9 +639,8 @@ public class ListunionModelFactory implements ModelFactory {
         return getTarget().getSimpleStringUnion();
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         return getTarget().getSimpleStringUnions();
-      default:
-        return super.eGet(eStructuralFeature);
       }
+      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -724,9 +678,8 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().setSimpleStringUnions((List<String>) value);
         return;
-      default:
-        super.eSet(eStructuralFeature, value);
       }
+      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -748,9 +701,8 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().getSimpleStringUnions().add((String) value);
         return;
-      default:
-        super.eAddTo(eStructuralFeature, value);
       }
+      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -772,9 +724,69 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().getSimpleStringUnions().remove(value);
         return;
-      default:
-        super.eRemoveFrom(eStructuralFeature, value);
       }
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
+
+  /**
+   * Converts the EDataType: ZipUnionsType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertZipUnionsTypeToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: ZipUnionsType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createZipUnionsTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: ZipUnionType to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertZipUnionTypeToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: ZipUnionType from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createZipUnionTypeFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
 }

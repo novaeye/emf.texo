@@ -1,5 +1,6 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.list;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -65,7 +66,7 @@ public class ListModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eFeature
+   * @param eStructuralFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -154,37 +155,45 @@ public class ListModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: StateList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: SixStatesList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
-  public String convertStateListToString(List<String> value) {
+  public String convertSixStatesListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
-   * Creates an instance of the EDataType: StateList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the EDataType: SixStatesList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
-  public List<String> createStateListFromString(String value) {
+  public List<String> createSixStatesListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -218,37 +227,45 @@ public class ListModelFactory implements ModelFactory {
   }
 
   /**
-   * Converts the EDataType: SixStatesList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Converts the EDataType: StateList to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
-  public String convertSixStatesListToString(List<String> value) {
+  public String convertStateListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
-   * Creates an instance of the EDataType: SixStatesList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * Creates an instance of the EDataType: StateList from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
-  public List<String> createSixStatesListFromString(String value) {
+  public List<String> createStateListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -257,15 +274,20 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertStringListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -274,15 +296,18 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createStringListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -317,9 +342,6 @@ public class ListModelFactory implements ModelFactory {
 
   /**
    * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param <E>
-   *          the domain model java class
    * 
    * @generated
    */
@@ -356,9 +378,8 @@ public class ListModelFactory implements ModelFactory {
         return getTarget().getAllStates();
       case ListModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
         return getTarget().getSixImportantStates();
-      default:
-        return super.eGet(eStructuralFeature);
       }
+      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -380,9 +401,8 @@ public class ListModelFactory implements ModelFactory {
       case ListModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
         getTarget().setSixImportantStates((List<String>) value);
         return;
-      default:
-        super.eSet(eStructuralFeature, value);
       }
+      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -393,9 +413,8 @@ public class ListModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      default:
-        super.eAddTo(eStructuralFeature, value);
       }
+      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -406,9 +425,9 @@ public class ListModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
-      default:
-        super.eRemoveFrom(eStructuralFeature, value);
       }
+      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
+
 }

@@ -59,7 +59,11 @@ public class SourceMerger extends MergingOutputHandler {
 
     Check.isNotNull(targetFile, "Targetfile is null, for outlet " //$NON-NLS-1$
         + fileHandle.getOutlet().getPath());
-    final String generatedSource = fileHandle.getBuffer().toString();
+    String generatedSource = fileHandle.getBuffer().toString();
+
+    // replace all tabs with 4 spaces
+    generatedSource = generatedSource.replace("\t", "    "); //$NON-NLS-1$ //$NON-NLS-2$
+
     try {
       // if exists merge with it
       if (targetFile.exists()) {

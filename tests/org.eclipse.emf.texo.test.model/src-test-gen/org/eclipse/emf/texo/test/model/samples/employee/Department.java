@@ -2,12 +2,14 @@ package org.eclipse.emf.texo.test.model.samples.employee;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
+
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -152,6 +154,7 @@ public class Department extends Identifiable {
   }
 
   /**
+   * @return the value
    * @generated
    */
   public boolean templateIsOverridden() {

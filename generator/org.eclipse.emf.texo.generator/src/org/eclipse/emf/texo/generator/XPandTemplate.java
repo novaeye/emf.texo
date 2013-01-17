@@ -49,7 +49,7 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
   private String expand;
   private String template;
 
-  private String generatedContent = "";
+  private String generatedContent = ""; //$NON-NLS-1$
 
   private Map<String, String> files = new HashMap<String, String>();
 
@@ -168,7 +168,6 @@ public class XPandTemplate extends BaseTemplate implements TexoComponent {
 
   private class OutputCapture extends OutputImpl {
 
-    private Outlet outlet = new Outlet();
     private String currentFile;
     private String currentContent = ""; //$NON-NLS-1$
 

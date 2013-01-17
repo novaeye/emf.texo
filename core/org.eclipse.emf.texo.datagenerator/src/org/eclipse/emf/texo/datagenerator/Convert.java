@@ -37,51 +37,59 @@ public class Convert {
 
   public static void main(final String[] args) throws Exception {
     final BufferedReader reader = new BufferedReader(new FileReader("/home/mtaal/mytmp/street.txt")); //$NON-NLS-1$
-    String line;
-    final Collection<String> strs = new HashSet<String>();
-    while ((line = reader.readLine()) != null) {
-      if (line.trim().length() == 0) {
-        continue;
-      }
-      int fromIndex = 0;
-      final String startStr = "</a><br>"; //$NON-NLS-1$
-      final String endStr = "<a href=maps"; //$NON-NLS-1$
-      while (line.indexOf(startStr, fromIndex) != -1) {
-        final int startIndex = line.indexOf(startStr, fromIndex);
-        final int endIndex = line.indexOf(endStr, startIndex);
-        if (endIndex == -1) {
-          break;
+    try {
+      String line;
+      final Collection<String> strs = new HashSet<String>();
+      while ((line = reader.readLine()) != null) {
+        if (line.trim().length() == 0) {
+          continue;
         }
-        strs.add(line.substring(startIndex + startStr.length(), endIndex).trim());
-        fromIndex = endIndex;
+        int fromIndex = 0;
+        final String startStr = "</a><br>"; //$NON-NLS-1$
+        final String endStr = "<a href=maps"; //$NON-NLS-1$
+        while (line.indexOf(startStr, fromIndex) != -1) {
+          final int startIndex = line.indexOf(startStr, fromIndex);
+          final int endIndex = line.indexOf(endStr, startIndex);
+          if (endIndex == -1) {
+            break;
+          }
+          strs.add(line.substring(startIndex + startStr.length(), endIndex).trim());
+          fromIndex = endIndex;
+        }
       }
+      sortAndPrint(strs);
+    } finally {
+      reader.close();
     }
-    sortAndPrint(strs);
   }
 
   public static void main2(final String[] args) throws Exception {
     final BufferedReader reader = new BufferedReader(new FileReader("/home/mtaal/mytmp/city_zip.txt")); //$NON-NLS-1$
-    String line;
-    final Collection<String> zips = new HashSet<String>();
-    final Collection<String> cities = new HashSet<String>();
-    while ((line = reader.readLine()) != null) {
-      if (line.trim().length() == 0) {
-        continue;
-      }
-      final String[] parts = line.split(" "); //$NON-NLS-1$
-      final String zip = parts[0];
-      final StringBuilder city = new StringBuilder();
-      for (int i = 1; i < parts.length - 1; i++) {
-        if (city.length() > 0) {
-          city.append(" "); //$NON-NLS-1$
+    try {
+      String line;
+      final Collection<String> zips = new HashSet<String>();
+      final Collection<String> cities = new HashSet<String>();
+      while ((line = reader.readLine()) != null) {
+        if (line.trim().length() == 0) {
+          continue;
         }
-        city.append(parts[i]);
+        final String[] parts = line.split(" "); //$NON-NLS-1$
+        final String zip = parts[0];
+        final StringBuilder city = new StringBuilder();
+        for (int i = 1; i < parts.length - 1; i++) {
+          if (city.length() > 0) {
+            city.append(" "); //$NON-NLS-1$
+          }
+          city.append(parts[i]);
+        }
+        zips.add(zip);
+        cities.add(city.toString());
       }
-      zips.add(zip);
-      cities.add(city.toString());
+      sortAndPrint(zips);
+      sortAndPrint(cities);
+    } finally {
+      reader.close();
     }
-    sortAndPrint(zips);
-    sortAndPrint(cities);
   }
 
   private static void sortAndPrint(final Collection<String> values) {

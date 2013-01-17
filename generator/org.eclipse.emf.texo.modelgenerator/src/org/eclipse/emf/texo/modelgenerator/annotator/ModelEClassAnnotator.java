@@ -19,16 +19,13 @@ package org.eclipse.emf.texo.modelgenerator.annotator;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.texo.generator.Annotator;
 import org.eclipse.emf.texo.generator.GeneratorUtils;
-import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EPackageModelGenAnnotation;
 import org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation;
@@ -193,26 +190,27 @@ public class ModelEClassAnnotator extends ModelEClassifierAnnotator implements A
     return patternName.substring(0, 1).toUpperCase() + (patternName.length() > 1 ? patternName.substring(1) : ""); //$NON-NLS-1$
   }
 
-  private void buildDaoFinders(EClassModelGenAnnotation annotation) {
-    final List<String> doneFinders = new ArrayList<String>();
-    for (EStructuralFeatureModelGenAnnotation featureAnnotation : annotation.getEStructuralFeatureModelGenAnnotations()) {
-
-    }
-  }
-
-  private List<String> getFinderNames(EStructuralFeatureModelGenAnnotation annotation) {
-    final EAnnotation eAnnotation = annotation.getENamedElement().getEAnnotation(ModelConstants.EANNOTATION_SOURCE);
-    if (eAnnotation == null) {
-      return Collections.emptyList();
-    }
-    final List<String> result = new ArrayList<String>();
-    for (String key : eAnnotation.getDetails().keySet()) {
-      if (key.startsWith(ModelConstants.FINDER_ANNOTATION_KEY)) {
-        result.add(key);
-      }
-    }
-    return result;
-  }
+  // private void buildDaoFinders(EClassModelGenAnnotation annotation) {
+  // final List<String> doneFinders = new ArrayList<String>();
+  // for (EStructuralFeatureModelGenAnnotation featureAnnotation :
+  // annotation.getEStructuralFeatureModelGenAnnotations()) {
+  //
+  // }
+  // }
+  //
+  // private List<String> getFinderNames(EStructuralFeatureModelGenAnnotation annotation) {
+  // final EAnnotation eAnnotation = annotation.getENamedElement().getEAnnotation(ModelConstants.EANNOTATION_SOURCE);
+  // if (eAnnotation == null) {
+  // return Collections.emptyList();
+  // }
+  // final List<String> result = new ArrayList<String>();
+  // for (String key : eAnnotation.getDetails().keySet()) {
+  // if (key.startsWith(ModelConstants.FINDER_ANNOTATION_KEY)) {
+  // result.add(key);
+  // }
+  // }
+  // return result;
+  // }
 
   /*
    * (non-Javadoc)

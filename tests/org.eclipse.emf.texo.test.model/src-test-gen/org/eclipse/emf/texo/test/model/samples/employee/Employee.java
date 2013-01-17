@@ -1,11 +1,13 @@
 package org.eclipse.emf.texo.test.model.samples.employee;
 
 import java.util.Date;
+
 import javax.persistence.Basic;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.emf.texo.test.model.base.identifiable.Identifiable;
@@ -59,6 +61,7 @@ public class Employee extends Identifiable {
   private Date hireDate = null;
 
   /**
+   * @return the value of helloworld
    * @generated
    */
   public String helloWorld() {
@@ -83,8 +86,8 @@ public class Employee extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Employee#getName() name}' feature.
+   * @param newName
+   *          the new value of the '{@link Employee#getName() name}' feature.
    * @generated
    */
   public void setName(String newName) {
@@ -108,8 +111,8 @@ public class Employee extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Employee#getSalary() salary}' feature.
+   * @param newSalary
+   *          the new value of the '{@link Employee#getSalary() salary}' feature.
    * @generated
    */
   public void setSalary(int newSalary) {
@@ -133,8 +136,8 @@ public class Employee extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Employee#getAge() age}' feature.
+   * @param newAge
+   *          the new value of the '{@link Employee#getAge() age}' feature.
    * @generated
    */
   public void setAge(int newAge) {
@@ -160,8 +163,8 @@ public class Employee extends Identifiable {
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param the
-   *          new value of the '{@link Employee#getHireDate() hireDate}' feature.
+   * @param newHireDate
+   *          the new value of the '{@link Employee#getHireDate() hireDate}' feature.
    * @generated
    */
   public void setHireDate(Date newHireDate) {
@@ -181,6 +184,7 @@ public class Employee extends Identifiable {
   }
 
   /**
+   * @return the return value
    * @generated
    */
   public boolean templateIsOverridden() {
@@ -221,7 +225,6 @@ public class Employee extends Identifiable {
    * @generatedNOT
    */
   @MergeAnnotationTwo("should-not-be-removed")
-  @SuppressWarnings("unused")
   public static class NotRemoved {
     @MergeAnnotationTwo("should-not-be-removed")
     private String name = "test";
@@ -230,6 +233,7 @@ public class Employee extends Identifiable {
     private String test;
 
     /**
+     * @return the value
      * @generatedNOT
      */
     @MergeAnnotationTwo("should-not-be-removed")
