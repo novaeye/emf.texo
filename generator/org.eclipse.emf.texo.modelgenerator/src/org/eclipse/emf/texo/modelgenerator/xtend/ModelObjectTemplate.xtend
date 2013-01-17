@@ -95,8 +95,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
                 return getTarget().«featureAnnotation.getter»();
         «ENDFOR»
-        	default:
-		        return super.eGet(eStructuralFeature);
+            default:
+                return super.eGet(eStructuralFeature);
         }
     }
 
@@ -117,8 +117,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
                 return;
             «ENDIF»
         «ENDFOR»
-        	default:
-		        super.eSet(eStructuralFeature, value);
+            default:
+                super.eSet(eStructuralFeature, value);
         }
     }
 
@@ -145,8 +145,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
             «ENDIF»
             «ENDIF»
         «ENDFOR»
-        	default:
-		        super.eAddTo(eStructuralFeature, value);
+            default:
+                super.eAddTo(eStructuralFeature, value);
         }
     }
 
@@ -173,8 +173,8 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
             «ENDIF»
             «ENDIF»
         «ENDFOR»
-        	default:
-		        super.eRemoveFrom(eStructuralFeature, value);
+            default:
+                super.eRemoveFrom(eStructuralFeature, value);
         }
     }
 }

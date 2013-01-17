@@ -147,10 +147,10 @@ public class ModelFeatureMapTemplate extends BaseTemplate {
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("    \t\t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("throw new IllegalArgumentException(\"No eStructuralFeature for feature kind \" + getTarget().getFeature());");
     _builder.newLine();
     _builder.append("        ");
@@ -271,10 +271,10 @@ public class ModelFeatureMapTemplate extends BaseTemplate {
         _builder.newLine();
       }
     }
-    _builder.append("    \t\t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("throw new IllegalArgumentException(\"EStructuralFeature \" + eStructuralFeature + \" not supported here\");");
     _builder.newLine();
     _builder.append("        ");

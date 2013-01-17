@@ -69,8 +69,8 @@ public static class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClass
             case «TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»:
                 return «ePackageAnnotation.qualifiedClassName».INSTANCE.get«TemplateUtil::toFirstUpper(eClassAnnotation.name)»_«TemplateUtil::toFirstUpper(memberFeatureAnnotation.name)»();
     «ENDFOR»
-    		default:
-		        throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
+            default:
+                throw new IllegalArgumentException("No eStructuralFeature for feature kind " + getTarget().getFeature());
         }
     }
 
@@ -98,8 +98,8 @@ public static class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClass
                 getTarget().setFeature(«eStructuralFeatureModelGenAnnotation.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»);
                 return;
     «ENDFOR»
-    		default:
-		        throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
+            default:
+                throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");
         }
     }
 

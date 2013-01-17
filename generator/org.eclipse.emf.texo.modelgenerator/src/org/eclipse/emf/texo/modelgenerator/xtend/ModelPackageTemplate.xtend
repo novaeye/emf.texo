@@ -304,8 +304,8 @@ public class «ePackageModelGenAnnotation.simpleClassName» extends org.eclipse.
             return «eClassifierAnnotation.qualifiedClassName».class;
     «ENDIF»
     «ENDFOR»
-    	default:
-	        throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
+        default:
+            throw new IllegalArgumentException("The EClassifier '" + eClassifier + "' is not defined in this EPackage");
         }
     }
 }

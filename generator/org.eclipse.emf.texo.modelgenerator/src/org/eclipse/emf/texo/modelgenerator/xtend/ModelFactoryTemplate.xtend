@@ -78,8 +78,8 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
                 return create«TemplateUtil::toFirstUpper(eClassAnnotation.name)»();
     «ENDIF»
     «ENDFOR»
-    		default:
-        		throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
+            default:
+                throw new IllegalArgumentException("The EClass '" + eClass.getName() + "' is not a valid EClass for this EPackage");
         }
     }
 
@@ -191,8 +191,8 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
         case «ePackageModelGenAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eDataTypeAnnotation.name)»_CLASSIFIER_ID:
             return create«TemplateUtil::toFirstUpper(eDataTypeAnnotation.name)»FromString(value);
     «ENDFOR»
-    	default:
-	        throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
+        default:
+            throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage");
         }
     }
 
@@ -212,8 +212,8 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
                 return convert«TemplateUtil::toFirstUpper(eDataTypeAnnotation.name)»ToString((«eDataTypeAnnotation.objectClassName»)value);
         «ENDIF»
     «ENDFOR»
-    		default:
-	        	throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
+            default:
+                throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
         }
     }
 

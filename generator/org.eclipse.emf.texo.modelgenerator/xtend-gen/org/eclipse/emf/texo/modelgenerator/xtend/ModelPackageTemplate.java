@@ -999,10 +999,10 @@ public class ModelPackageTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("    \t");
+    _builder.append("        ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t        ");
+    _builder.append("            ");
     _builder.append("throw new IllegalArgumentException(\"The EClassifier \'\" + eClassifier + \"\' is not defined in this EPackage\");");
     _builder.newLine();
     _builder.append("        ");

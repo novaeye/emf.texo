@@ -234,10 +234,10 @@ public class ModelObjectTemplate extends BaseTemplate {
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("        \t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("return super.eGet(eStructuralFeature);");
     _builder.newLine();
     _builder.append("        ");
@@ -331,10 +331,10 @@ public class ModelObjectTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("        \t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("super.eSet(eStructuralFeature, value);");
     _builder.newLine();
     _builder.append("        ");
@@ -472,10 +472,10 @@ public class ModelObjectTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("        \t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("super.eAddTo(eStructuralFeature, value);");
     _builder.newLine();
     _builder.append("        ");
@@ -610,10 +610,10 @@ public class ModelObjectTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("        \t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t\t        ");
+    _builder.append("                ");
     _builder.append("super.eRemoveFrom(eStructuralFeature, value);");
     _builder.newLine();
     _builder.append("        ");

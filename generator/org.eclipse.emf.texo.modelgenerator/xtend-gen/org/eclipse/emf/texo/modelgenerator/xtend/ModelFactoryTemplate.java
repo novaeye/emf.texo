@@ -181,10 +181,10 @@ public class ModelFactoryTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("    \t\t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("        \t\t");
+    _builder.append("                ");
     _builder.append("throw new IllegalArgumentException(\"The EClass \'\" + eClass.getName() + \"\' is not a valid EClass for this EPackage\");");
     _builder.newLine();
     _builder.append("        ");
@@ -612,10 +612,10 @@ public class ModelFactoryTemplate extends BaseTemplate {
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("    \t");
+    _builder.append("        ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t        ");
+    _builder.append("            ");
     _builder.append("throw new IllegalArgumentException(\"The EDatatype \'\" + eDataType + \"\' is not defined in this EPackage\");");
     _builder.newLine();
     _builder.append("        ");
@@ -686,10 +686,10 @@ public class ModelFactoryTemplate extends BaseTemplate {
         }
       }
     }
-    _builder.append("    \t\t");
+    _builder.append("            ");
     _builder.append("default:");
     _builder.newLine();
-    _builder.append("\t        \t");
+    _builder.append("                ");
     _builder.append("throw new IllegalArgumentException(\"The EDatatype \'\" + eDataType + \"\' is not defined in this EPackage.\");");
     _builder.newLine();
     _builder.append("        ");
