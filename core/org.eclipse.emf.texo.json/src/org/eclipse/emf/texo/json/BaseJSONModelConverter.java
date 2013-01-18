@@ -498,8 +498,16 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
     }
   }
 
-  public ObjectResolver getUriResolver() {
+  public ObjectResolver getObjectResolver() {
     return objectResolver;
+  }
+
+  /**
+   * @deprecated use {@link #getObjectResolver()}
+   * @return
+   */
+  public ObjectResolver getUriResolver() {
+    return getObjectResolver();
   }
 
   public void setObjectResolver(ObjectResolver uriResolver) {

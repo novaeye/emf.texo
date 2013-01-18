@@ -447,7 +447,7 @@ public class ModelUtils {
   // Note method is copied in DataGeneratorUtils
   public static boolean isEMap(final EClass eClass) {
     return eClass != null && eClass.getInstanceClass() != null
-        && Map.Entry.class.isAssignableFrom(eClass.getInstanceClass()) && eClass.getEStructuralFeature("key") != null //$NON-NLS-1$ 
+        && Map.Entry.class.isAssignableFrom(eClass.getInstanceClass()) && eClass.getEStructuralFeature("key") != null //$NON-NLS-1$
         && eClass.getEStructuralFeature("value") != null; //$NON-NLS-1$
   }
 
@@ -569,8 +569,13 @@ public class ModelUtils {
     } else {
       final String fragment = objectUri.fragment();
 
-      final int separatorIndex = fragment.indexOf(ModelConstants.FRAGMENTSEPARATOR);
-      if (separatorIndex == -1) {
+      final int separatorIndex = fragment == null ? -1 : fragment.indexOf(ModelConstants.FRAGMENTSEPARATOR);
+      if (fragment == null || separatorIndex == -1) {
+        if (fragment == null || fragment.trim().length() == 0) {
+          throw new IllegalArgumentException(
+              "No fragment, is the object URL maybe in webservice format? Consider setting the property useWebServiceFormat " //$NON-NLS-1$
+                  + "to true on the ObjectResolver (of the converter)"); //$NON-NLS-1$
+        }
         throw new IllegalArgumentException("Fragment format not supported for fragment: " + fragment); //$NON-NLS-1$
       }
       eClass = ModelUtils.getEClassFromQualifiedName(fragment.substring(0, separatorIndex));
