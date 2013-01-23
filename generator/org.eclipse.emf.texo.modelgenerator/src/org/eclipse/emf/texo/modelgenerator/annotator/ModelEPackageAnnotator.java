@@ -262,13 +262,13 @@ public class ModelEPackageAnnotator extends ModelENamedElementAnnotator implemen
         }
 
         // now handle the efeatures
-        for (final EReference eref : eClass.getEAllReferences()) {
+        for (final EReference eref : eClass.getEReferences()) {
           final EPackage refEPackage = eref.getEReferenceType().getEPackage();
           if (refEPackage != ePackage && !epacks.contains(refEPackage)) {
             epacks.add(refEPackage);
           }
         }
-        for (final EAttribute eattr : eClass.getEAllAttributes()) {
+        for (final EAttribute eattr : eClass.getEAttributes()) {
           final EPackage refEPackage = eattr.getEType().getEPackage();
           if (refEPackage != ePackage && !epacks.contains(refEPackage)) {
             epacks.add(refEPackage);
