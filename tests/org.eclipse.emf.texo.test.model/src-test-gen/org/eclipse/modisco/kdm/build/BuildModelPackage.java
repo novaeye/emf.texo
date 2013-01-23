@@ -380,8 +380,8 @@ public class BuildModelPackage extends ModelPackage {
 
     KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     SourceModelPackage.initialize();
+    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
 
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();

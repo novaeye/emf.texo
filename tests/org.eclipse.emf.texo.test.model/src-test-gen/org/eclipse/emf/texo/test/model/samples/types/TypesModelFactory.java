@@ -5,7 +5,6 @@ import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -312,6 +311,9 @@ public class TypesModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class ManyTypesModelObject<E extends ManyTypes> extends
@@ -365,8 +367,9 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getEnum_();
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         return getTarget().getDate();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -416,8 +419,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().setDate((Set<Date>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -479,8 +483,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().add((Date) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -542,13 +547,17 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.MANYTYPES_DATE_FEATURE_ID:
         getTarget().getDate().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -621,8 +630,9 @@ public class TypesModelFactory implements ModelFactory {
         return getTarget().getLongArray();
       case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
         return getTarget().getNextEnum();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -698,8 +708,9 @@ public class TypesModelFactory implements ModelFactory {
       case TypesModelPackage.SINGLETYPES_NEXTENUM_FEATURE_ID:
         getTarget().setNextEnum((TestNextEnum) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -710,8 +721,9 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -722,8 +734,9 @@ public class TypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

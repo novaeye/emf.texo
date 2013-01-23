@@ -594,6 +594,9 @@ public class ListunionModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class StatesByCountryModelObject<E extends StatesByCountry> extends
@@ -639,8 +642,9 @@ public class ListunionModelFactory implements ModelFactory {
         return getTarget().getSimpleStringUnion();
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         return getTarget().getSimpleStringUnions();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -678,8 +682,9 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().setSimpleStringUnions((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -701,8 +706,9 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().getSimpleStringUnions().add((String) value);
         return;
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -724,8 +730,9 @@ public class ListunionModelFactory implements ModelFactory {
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
         getTarget().getSimpleStringUnions().remove(value);
         return;
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

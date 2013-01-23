@@ -266,6 +266,9 @@ public class SimpletypesModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>SimpleList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class SimpleListModelObject<E extends SimpleList> extends
@@ -325,8 +328,9 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getStringArray();
       case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
         return getTarget().getByteArray();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -385,8 +389,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLELIST_BYTEARRAY_FEATURE_ID:
         getTarget().setByteArray((byte[]) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -441,8 +446,9 @@ public class SimpletypesModelFactory implements ModelFactory {
         getTarget().getStri().add((String) value);
         return;
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -497,13 +503,17 @@ public class SimpletypesModelFactory implements ModelFactory {
         getTarget().getStri().remove(value);
         return;
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
   /**
    * The adapter/wrapper for the EClass '<em><b>SimpleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param <E>
+   *          the domain model java class
    * 
    * @generated
    */
@@ -558,8 +568,9 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getLimitedDecimal();
       case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
         return getTarget().getExtraLimitedString();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -608,8 +619,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLETYPE_EXTRALIMITEDSTRING_FEATURE_ID:
         getTarget().setExtraLimitedString((String) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -620,8 +632,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -632,8 +645,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
@@ -688,8 +702,9 @@ public class SimpletypesModelFactory implements ModelFactory {
         return getTarget().getEnu();
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
         return getTarget().getDat();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -729,8 +744,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       case SimpletypesModelPackage.SIMPLETYPEOBJECT_DAT_FEATURE_ID:
         getTarget().setDat((Date) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -741,8 +757,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -753,8 +770,9 @@ public class SimpletypesModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 

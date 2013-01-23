@@ -38,7 +38,6 @@ import org.eclipse.modisco.kdm.action.dao.UsesTypeDao;
 import org.eclipse.modisco.kdm.action.dao.WritesDao;
 import org.eclipse.modisco.kdm.code.CodeModelPackage;
 import org.eclipse.modisco.kdm.core.CoreModelPackage;
-import org.eclipse.modisco.kdm.source.SourceModelPackage;
 
 /**
  * The <b>Package</b> for the model '<em><b>action</b></em>'. It contains initialization code and access to the Factory
@@ -491,9 +490,7 @@ public class ActionModelPackage extends ModelPackage {
 
     KdmModelPackage.initialize();
     CodeModelPackage.initialize();
-    org.eclipse.modisco.kdm.kdm.KdmModelPackage.initialize();
     CoreModelPackage.initialize();
-    SourceModelPackage.initialize();
 
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();

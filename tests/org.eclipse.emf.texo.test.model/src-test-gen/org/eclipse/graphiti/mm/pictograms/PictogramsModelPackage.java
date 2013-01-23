@@ -481,8 +481,8 @@ public class PictogramsModelPackage extends ModelPackage {
     isInitialized = true;
 
     MmModelPackage.initialize();
-    AlgorithmsModelPackage.initialize();
     StylesModelPackage.initialize();
+    AlgorithmsModelPackage.initialize();
 
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();

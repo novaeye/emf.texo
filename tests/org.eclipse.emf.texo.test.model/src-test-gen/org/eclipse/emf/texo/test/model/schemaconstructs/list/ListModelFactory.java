@@ -343,6 +343,9 @@ public class ListModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
+   * @param <E>
+   *          the domain model java class
+   * 
    * @generated
    */
   public static class StatesByCountryModelObject<E extends StatesByCountry> extends
@@ -378,8 +381,9 @@ public class ListModelFactory implements ModelFactory {
         return getTarget().getAllStates();
       case ListModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
         return getTarget().getSixImportantStates();
+      default:
+        return super.eGet(eStructuralFeature);
       }
-      return super.eGet(eStructuralFeature);
     }
 
     /**
@@ -401,8 +405,9 @@ public class ListModelFactory implements ModelFactory {
       case ListModelPackage.STATESBYCOUNTRY_SIXIMPORTANTSTATES_FEATURE_ID:
         getTarget().setSixImportantStates((List<String>) value);
         return;
+      default:
+        super.eSet(eStructuralFeature, value);
       }
-      super.eSet(eStructuralFeature, value);
     }
 
     /**
@@ -413,8 +418,9 @@ public class ListModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eAddTo(eStructuralFeature, value);
       }
-      super.eAddTo(eStructuralFeature, value);
     }
 
     /**
@@ -425,8 +431,9 @@ public class ListModelFactory implements ModelFactory {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
 
+      default:
+        super.eRemoveFrom(eStructuralFeature, value);
       }
-      super.eRemoveFrom(eStructuralFeature, value);
     }
   }
 
