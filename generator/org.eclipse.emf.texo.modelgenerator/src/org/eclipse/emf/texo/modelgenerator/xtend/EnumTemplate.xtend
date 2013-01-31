@@ -82,7 +82,6 @@ public enum «eEnumModelGenAnnotation.simpleClassName»
       * @generated
       */
     «modelController.getJavaAnnotations(el, "type")»
-    /** ABC */
     «TemplateUtil::toUpperCase(TemplateUtil::format(el.name))»(«el.value», "«el.name»", "«el.literal»") {
 
          /**

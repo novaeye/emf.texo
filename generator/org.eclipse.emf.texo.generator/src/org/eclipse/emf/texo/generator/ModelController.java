@@ -210,7 +210,6 @@ public class ModelController implements AnnotationProvider {
         sb.append(eAnnotation.getDetails().get(identifier));
       }
     }
-    sb.append("\n\n\n/** */\n"); //$NON-NLS-1$
     return sb.toString();
   }
 

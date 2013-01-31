@@ -1,0 +1,32 @@
+SMAP
+DaoTemplate.java
+Xtend
+*S Xtend
+*F
++ 0 DaoTemplate.xtend
+src/org/eclipse/emf/texo/modelgenerator/xtend/DaoTemplate.xtend
+*L
+23:16
+25:17,3
+26:20
+25:21
+29:22,2
+30:24
+29:25
+33:26
+34:27,2
+36:29
+40:33,2
+41:35
+42:36
+43:37
+49:41
+50:42,4
+51:46,9
+54:55,13
+58:68,28
+64:96,6
+65:102,25
+73:127,13
+49:140
+*E

@@ -151,8 +151,6 @@ public class EnumTemplate extends BaseTemplate {
         String _javaAnnotations_1 = modelController.getJavaAnnotations(el, "type");
         _builder.append(_javaAnnotations_1, "");
         _builder.newLineIfNotEmpty();
-        _builder.append("/** ABC */");
-        _builder.newLine();
         String _name_2 = el.getName();
         String _format = TemplateUtil.format(_name_2);
         String _upperCase_1 = TemplateUtil.toUpperCase(_format);
