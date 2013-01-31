@@ -79,6 +79,8 @@ public class JSONEObjectStore extends EObjectStore {
     conn.setUseCaches(false);
     conn.setRequestProperty("Accept-Charset", UTF8);
 
+    beforeConnect(conn);
+
     if (content != null) {
       final byte[] bytes = content.getBytes(UTF8);
       conn.setRequestProperty("Content-Type", JSONWebServiceObjectResolver.JSON_CONTENT_TYPE);
@@ -89,8 +91,6 @@ public class JSONEObjectStore extends EObjectStore {
       os.flush();
       os.close();
     }
-
-    beforeConnect(conn);
 
     final BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
     final StringBuilder sb = new StringBuilder();
