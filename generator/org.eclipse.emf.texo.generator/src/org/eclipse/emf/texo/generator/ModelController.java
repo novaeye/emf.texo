@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.texo.annotations.AnnotationProvider;
@@ -151,6 +153,11 @@ public class ModelController implements AnnotationProvider {
    * @return java annotations to add
    */
   public String getJavaAnnotations(final ENamedElement eNamedElement, final String identifier) {
+
+    if (eNamedElement instanceof EEnumLiteral) {
+      return getEEnumLiteralAnnotations(eNamedElement);
+    }
+
     final List<ENamedElementAnnotation> annotations = getAnnotationManager().getAnnotations(eNamedElement);
     final StringBuilder sb = new StringBuilder();
     for (final ENamedElementAnnotation annotation : annotations) {
@@ -180,6 +187,30 @@ public class ModelController implements AnnotationProvider {
       }
     }
 
+    return sb.toString();
+  }
+
+  private String getEEnumLiteralAnnotations(ENamedElement eNamedElement) {
+    final String identifier = "type"; //$NON-NLS-1$
+    final StringBuilder sb = new StringBuilder();
+    for (EAnnotation eAnnotation : eNamedElement.getEAnnotations()) {
+      if (!ENamedElementAnnotation.TEXO_JAVA_ANNOTATION.equals(eAnnotation.getSource())) {
+        continue;
+      }
+      if (eAnnotation.getDetails().get(ENamedElementAnnotation.TEXO_JAVA_ANNOTATION_DETAIL_KEY) != null) {
+        if (sb.length() > 0) {
+          sb.append("\n"); //$NON-NLS-1$
+        }
+        sb.append(eAnnotation.getDetails().get(ENamedElementAnnotation.TEXO_JAVA_ANNOTATION_DETAIL_KEY));
+      }
+      if (eAnnotation.getDetails().get(identifier) != null) {
+        if (sb.length() > 0) {
+          sb.append("\n"); //$NON-NLS-1$
+        }
+        sb.append(eAnnotation.getDetails().get(identifier));
+      }
+    }
+    sb.append("\n\n\n/** */\n"); //$NON-NLS-1$
     return sb.toString();
   }
 
