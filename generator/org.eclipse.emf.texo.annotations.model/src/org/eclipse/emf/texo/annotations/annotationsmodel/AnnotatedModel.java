@@ -6,7 +6,6 @@
  */
 package org.eclipse.emf.texo.annotations.annotationsmodel;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -350,12 +349,14 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
 
     final URI uri = ePackage.eResource().getURI();
     for (String suffix : AnnotationModelSuffixHandler.getInstance().getSuffixes()) {
+      boolean resourcePresent = false;
       try {
         final URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
 
         final Resource res = resourceSet.getResource(annotationsModelURI, true);
 
         final TreeIterator<EObject> iterator = res.getAllContents();
+        resourcePresent = true;
         while (iterator.hasNext()) {
           final EObject eObject = iterator.next();
           if (eObject instanceof AnnotatedEPackage) {
@@ -363,9 +364,8 @@ public class AnnotatedModel extends EObjectImpl implements EObject {
           }
         }
       } catch (Exception e) {
-        // only ignore IOException, assume that the file is not there
-        final Throwable checkThrowable = e.getCause() != null ? e.getCause() : e;
-        if (!(checkThrowable instanceof IOException)) {
+        // rethrow if the exception occurred after resource loading
+        if (resourcePresent) {
           throw new IllegalStateException(e);
         }
       }
