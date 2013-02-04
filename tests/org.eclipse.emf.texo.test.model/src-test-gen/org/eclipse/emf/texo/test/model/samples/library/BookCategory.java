@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.samples.library;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
 /**
@@ -35,6 +36,9 @@ public enum BookCategory {
    * 
    * @generated
    */
+
+  /** */
+  /** ABC */
   SCIENCEFICTION(1, "ScienceFiction", "ScienceFiction") {
 
     /**
@@ -51,6 +55,9 @@ public enum BookCategory {
    * 
    * @generated
    */
+
+  /** */
+  /** ABC */
   BIOGRAPHY(2, "Biography", "Biography") {
 
     /**

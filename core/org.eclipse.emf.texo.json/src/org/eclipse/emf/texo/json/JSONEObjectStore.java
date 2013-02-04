@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -121,12 +122,17 @@ public class JSONEObjectStore extends EObjectStore {
   }
 
   @Override
-  public void persist(List<EObject> toInsert, List<EObject> toUpdate, List<EObject> toDelete) {
+  public void persist(List<EObject> eObjectsToInsert, List<EObject> eObjectsToUpdate, List<EObject> eObjectsToDelete) {
+
+    List<EObject> toInsert = removeMapEntries(eObjectsToInsert);
+    List<EObject> toUpdate = removeMapEntries(eObjectsToUpdate);
+    List<EObject> toDelete = removeMapEntries(eObjectsToDelete);
 
     // do some sensible things...
     toUpdate.removeAll(toDelete);
     toInsert.removeAll(toDelete);
     toUpdate.removeAll(toInsert);
+
 
     // create a temporary proxy uri for the to insert ones
     // do this before the copyAll below
@@ -176,7 +182,7 @@ public class JSONEObjectStore extends EObjectStore {
         // as now the correct uri can be computed
         addToCache(newUri.toString(), insertedEObject);
       }
-        
+
       // now the inserted objects can be converted safely
 
       // do some checks
@@ -229,6 +235,19 @@ public class JSONEObjectStore extends EObjectStore {
     } catch (JSONException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  // https://bugs.eclipse.org/bugs/show_bug.cgi?id=399086
+  protected List<EObject> removeMapEntries(List<EObject> list) {
+    final List<EObject> result = new ArrayList<EObject>(list);
+    final ListIterator<EObject> iterator = result.listIterator();
+    while (iterator.hasNext()) {
+      final EObject eObject = iterator.next();
+      if (eObject instanceof Map.Entry) {
+        iterator.remove();
+      }
+    }
+    return result;
   }
 
   protected JSONObject doRequest(EObject requestObject, String method) {

@@ -87,7 +87,11 @@
     <eAnnotations source="texo.java.annotation">
       <details key="type" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;enum&quot;)"/>
     </eAnnotations>
-    <eLiterals name="Mystery"/>
+    <eLiterals name="Mystery">
+      <eAnnotations source="texo.java.annotation">
+        <details key="type" value="@org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne(&quot;enum&quot;)"/>
+      </eAnnotations>
+    </eLiterals>
     <eLiterals name="ScienceFiction" value="1"/>
     <eLiterals name="Biography" value="2"/>
   </eClassifiers>

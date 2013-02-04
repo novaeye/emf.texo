@@ -10,11 +10,18 @@
     <orm:query>select e, e.name from library_Writer e where e.name like :name</orm:query>
   </orm:named-query>
   <orm:entity class="org.eclipse.emf.texo.test.model.samples.library.Book" name="library_Book">
+    <orm:multitenant>
+      <orm:tenant-discriminator column-name="test"/>
+    </orm:multitenant>
+    <orm:index unique="false">
+      <orm:column-name>title</orm:column-name>
+    </orm:index>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestObjectConverter" name="TexoTestObjectConverter"/>
     <orm:converter class="org.eclipse.emf.texo.test.TexoTestQNameConverter" name="TexoTestQNameConverter"/>
     <orm:attributes>
       <orm:basic name="title">
         <orm:column name="title" nullable="true"/>
+        <orm:index/>
       </orm:basic>
       <orm:basic name="pages">
         <orm:column name="pages" nullable="true"/>
