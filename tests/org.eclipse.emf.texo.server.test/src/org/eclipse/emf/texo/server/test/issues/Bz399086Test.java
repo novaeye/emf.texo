@@ -16,23 +16,38 @@
  */
 package org.eclipse.emf.texo.server.test.issues;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import junit.framework.Assert;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.texo.component.ComponentProvider;
+import org.eclipse.emf.texo.datagenerator.DataGeneratorUtils;
+import org.eclipse.emf.texo.datagenerator.ModelDataGenerator;
+import org.eclipse.emf.texo.json.EMFJSONConverter;
 import org.eclipse.emf.texo.json.JSONTexoResource;
 import org.eclipse.emf.texo.server.test.store.TexoResourceTest;
 import org.eclipse.emf.texo.store.TexoResource;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Factory;
+import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.TheMap;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.impl.Bz399086PackageImpl;
 import org.eclipse.emf.texo.test.model.issues.bz399086.Bz399086ModelPackage;
+import org.json.JSONArray;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -103,6 +118,50 @@ public class Bz399086Test extends TexoResourceTest {
       Assert.assertEquals("e1", m.getRefContent().get("e1").getName());
       Assert.assertEquals("e2", m.getRefContent().get("e2").getName());
     } catch (IOException e) {
+      throw new IllegalStateException(e);
+    }
+  }
+
+  // http://www.eclipse.org/forums/index.php/t/452843/
+  @Test
+  public void testGenData() {
+    final Bz399086Factory factory = Bz399086Factory.eINSTANCE;
+    final List<EPackage> ePackages = new ArrayList<EPackage>();
+    ePackages.add(Bz399086Package.eINSTANCE);
+
+    final List<EClass> eClasses = DataGeneratorUtils.getRootEClasses(ePackages);
+    final ModelDataGenerator modelDataGenerator = new ModelDataGenerator();
+    modelDataGenerator.setStartEClasses(eClasses);
+    modelDataGenerator.setEPackages(ePackages);
+    modelDataGenerator.setMaxDepth(5);
+    modelDataGenerator.setCollectionSize(2);
+    modelDataGenerator.setDataSize(5);
+    modelDataGenerator.setMaxObjects(1000);
+    modelDataGenerator.generateTestData();
+
+    final EMFJSONConverter conv = ComponentProvider.getInstance().newInstance(EMFJSONConverter.class);
+    final JSONArray array = ComponentProvider.getInstance().newInstance(JSONArray.class);
+
+    try {
+      URL url = new URL(getBaseURL());
+
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setRequestMethod("PUT");
+      connection.setDoInput(true);
+      connection.setDoOutput(true);
+      connection.setUseCaches(false);
+      for (EObject obj : modelDataGenerator.getResult()) {
+        obj.eSet(obj.eClass().getEStructuralFeature("db_version"), null);
+        array.put(conv.convert(obj));
+      }
+
+      OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream());
+      writer.write(array.toString());
+      writer.flush();
+
+      BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+      String json = reader.readLine();
+    } catch (Exception e) {
       throw new IllegalStateException(e);
     }
   }
