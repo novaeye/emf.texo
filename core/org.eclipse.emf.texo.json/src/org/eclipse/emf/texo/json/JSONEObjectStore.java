@@ -100,7 +100,18 @@ public class JSONEObjectStore extends EObjectStore {
       sb.append(line + "\n");
     }
     rd.close();
-    return sb.toString();
+
+    return afterRead(conn, sb.toString());
+  }
+
+  /**
+   * Is called after the read of information has finished but before it is returned. The default implementation returns
+   * the string unaltered.
+   * 
+   * @return the content
+   */
+  protected String afterRead(HttpURLConnection conn, String content) {
+    return content;
   }
 
   /**
@@ -133,7 +144,6 @@ public class JSONEObjectStore extends EObjectStore {
     toInsert.removeAll(toDelete);
     toUpdate.removeAll(toInsert);
 
-
     // create a temporary proxy uri for the to insert ones
     // do this before the copyAll below
     // this ensures that the references are handled correctly
@@ -158,8 +168,8 @@ public class JSONEObjectStore extends EObjectStore {
       // get the id of the inserted objects and link the previous eobject to them
       // don't convert the outer object, otherwise the inner objects
       // will have a change in container
-      final JSONArray insertedJsonArray = jsonObject.getJSONArray(ResponsePackage.eINSTANCE
-          .getResultType_Inserted().getName());
+      final JSONArray insertedJsonArray = jsonObject.getJSONArray(ResponsePackage.eINSTANCE.getResultType_Inserted()
+          .getName());
       int i = 0;
 
       for (EObject insertedEObject : toInsert) {
