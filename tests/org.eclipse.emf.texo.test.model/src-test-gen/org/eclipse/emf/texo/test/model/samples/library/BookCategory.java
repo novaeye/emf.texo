@@ -3,7 +3,6 @@ package org.eclipse.emf.texo.test.model.samples.library;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 import org.eclipse.emf.texo.test.models.annotations.TestAnnotationOne;
 
 /**

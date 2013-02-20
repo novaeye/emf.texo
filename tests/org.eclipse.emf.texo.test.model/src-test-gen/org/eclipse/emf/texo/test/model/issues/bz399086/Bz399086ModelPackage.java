@@ -154,7 +154,6 @@ public class Bz399086ModelPackage extends ModelPackage {
     isInitialized = true;
 
     IdentifiableModelPackage.initialize();
-    IdentifiableModelPackage.initialize();
 
     // force the initialization of the EFactory proxy
     modelPackage.getEPackage();
