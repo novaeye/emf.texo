@@ -60,7 +60,7 @@ public class RetrieveModelOperation extends ModelOperation {
       int maxResults = queryType.getMaxResults();
       int startRow = queryType.getFirstResult() == -1 ? 0 : queryType.getFirstResult();
 
-      if (!queryType.isDoCount() && maxResults != -1) {
+      if (!queryType.isDoCount() && maxResults != -1 && maxResults != Integer.MAX_VALUE) {
         // try to get one more than the requested result size
         // if we should not do count
         maxResults++;
@@ -81,7 +81,7 @@ public class RetrieveModelOperation extends ModelOperation {
       if (resultList.size() < maxResults) {
         // we did not get everything so we reached the end anyway
         cnt = resultList.size() + startRow;
-      } else if (maxResults == -1) {
+      } else if (maxResults == -1 || maxResults == Integer.MAX_VALUE) {
         // if there were no paging limitations then this is the size
         cnt = resultList.size() + startRow;
       } else if (queryType.isDoCount()) {

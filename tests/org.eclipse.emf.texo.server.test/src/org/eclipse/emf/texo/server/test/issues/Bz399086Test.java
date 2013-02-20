@@ -24,6 +24,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -97,6 +98,10 @@ public class Bz399086Test extends TexoResourceTest {
       m.getRefContent().put("e2", e2);
 
       final TexoResource resource = createResource();
+
+      // http: // www.eclipse.org/forums/index.php/m/1011919/
+      resource.query("select m from bz399086_MapElement m", new HashMap<String, Object>(), 0, Integer.MAX_VALUE);
+
       resource.getContents().add(m);
       resource.getContents().add(e1);
       resource.getContents().add(e2);
