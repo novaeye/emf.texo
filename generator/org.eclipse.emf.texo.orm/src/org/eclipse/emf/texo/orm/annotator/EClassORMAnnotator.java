@@ -80,16 +80,19 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
       return;
     }
 
+    // only add entity if not embeddable
+    final Embeddable embeddable = annotation.getEmbeddable();
+    if (embeddable == null && annotation.getEntity() == null) {
+      annotation.setEntity(OrmFactory.eINSTANCE.createEntity());
+    }
+
     // set the inheritance mapping, copy the annotation from epackage level
     if (isRoot(annotation) && annotation.getInheritance() == null && ePackageAnnotation.getInheritance() != null
         && ePackageAnnotation.getInheritance().isSetStrategy()) {
       annotation.setInheritance(EcoreUtil.copy(ePackageAnnotation.getInheritance()));
     }
-
-    // only add entity if not embeddable
-    final Embeddable embeddable = annotation.getEmbeddable();
-    if (embeddable == null && annotation.getEntity() == null) {
-      annotation.setEntity(OrmFactory.eINSTANCE.createEntity());
+    if (annotation.getInheritance() != null && annotation.getEntity() != null) {
+      annotation.getEntity().setInheritance(EcoreUtil.copy(annotation.getInheritance()));
     }
 
     if (ORMMappingOptions.getDefaultOptions().isTestRun()) {
