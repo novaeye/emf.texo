@@ -73,9 +73,11 @@ public class EClassDataGenerator extends DataGenerator {
    * @return an existing or new instance of {@link #getEClass()}
    */
   public EObject getCreateEObject(final EObject owner, final EReference eReference) {
-    final EObject eObject = findExistingObject(owner, eReference);
-    if (eObject != null) {
-      return eObject;
+    if (!eReference.isContainment()) {
+      final EObject eObject = findExistingObject(owner, eReference);
+      if (eObject != null) {
+        return eObject;
+      }
     }
 
     return createEObject();
