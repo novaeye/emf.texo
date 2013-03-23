@@ -91,7 +91,8 @@ public class EClassORMAnnotator extends ETypeElementORMAnnotator implements Anno
         && ePackageAnnotation.getInheritance().isSetStrategy()) {
       annotation.setInheritance(EcoreUtil.copy(ePackageAnnotation.getInheritance()));
     }
-    if (annotation.getInheritance() != null && annotation.getEntity() != null) {
+    if (annotation.getInheritance() == null && annotation.getEntity() != null
+        && annotation.getEntity().getInheritance() == null) {
       annotation.getEntity().setInheritance(EcoreUtil.copy(annotation.getInheritance()));
     }
 
