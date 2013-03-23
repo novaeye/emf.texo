@@ -69,7 +69,7 @@ public class EntityManagerProvider implements TexoComponent, TexoStaticSingleton
       if (!persistenceOptions.containsKey(ECLIPSELINK_CLASSLOADER_OPTION)) {
         persistenceOptions.put(ECLIPSELINK_CLASSLOADER_OPTION, EntityManagerProvider.class.getClassLoader());
       }
-      persistenceOptions.put(MULTITENANT_PROPERTY_DEFAULT, "texo");
+      persistenceOptions.put(MULTITENANT_PROPERTY_DEFAULT, "texo"); //$NON-NLS-1$
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName, persistenceOptions);
     } else {
       entityManagerFactory = Persistence.createEntityManagerFactory(persistenceUnitName);
