@@ -43,6 +43,8 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   private boolean useWebServiceUriFormat = false;
 
+  private int childLevels = -1;
+
   public void clearCache() {
     uriEObjectMap.clear();
   }
@@ -71,7 +73,7 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
         uri = URI.createURI("http://www.eclipse.org/texo"); //$NON-NLS-1$
       }
     }
-    return uri;
+    return appendParameters(uri);
   }
 
   /**
@@ -218,6 +220,13 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
         ModelUtils.getQualifiedNameFromEClass(eClass) + ModelConstants.FRAGMENTSEPARATOR + idString);
   }
 
+  protected URI appendParameters(URI localUri) {
+    if (getChildLevels() > 0) {
+      return localUri.appendQuery(ModelConstants.PARAM_CHILD_LEVELS + "=" + getChildLevels()); //$NON-NLS-1$
+    }
+    return localUri;
+  }
+
   /*
    * (non-Javadoc)
    * 
@@ -269,6 +278,14 @@ public class DefaultObjectResolver implements ObjectResolver, TexoComponent {
 
   public void setUseWebServiceUriFormat(boolean useWebServiceUriFormat) {
     this.useWebServiceUriFormat = useWebServiceUriFormat;
+  }
+
+  public int getChildLevels() {
+    return childLevels;
+  }
+
+  public void setChildLevels(int childLevels) {
+    this.childLevels = childLevels;
   }
 
 }

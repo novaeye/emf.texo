@@ -135,6 +135,7 @@ public abstract class BaseModelJSONConverter<T extends Object> extends BaseModel
     }
 
     // if there are cycles then use proxies
+    // to stop cycling
     if (hasConverted.contains(object)) {
       if (!getProxyObjects().contains(object)) {
         getProxyObjects().add(object);

@@ -57,7 +57,7 @@ public class JSONModelConverter extends BaseJSONModelConverter<Object> {
 
   @Override
   protected Object fromUri(String uriString) {
-    return getUriResolver().fromUri(URI.createURI(uriString));
+    return getObjectResolver().fromUri(URI.createURI(uriString));
   }
 
   @Override

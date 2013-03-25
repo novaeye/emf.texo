@@ -14,5 +14,6 @@ public class ModelConstants {
   public static final String FINDER_ANNOTATION_KEY = "finder"; //$NON-NLS-1$
   public static final String FRAGMENTSEPARATOR = "||"; //$NON-NLS-1$
   public static final int FRAGMENTSEPARATOR_LENGTH = FRAGMENTSEPARATOR.length();
+  public static final String PARAM_CHILD_LEVELS = "childLevels"; //$NON-NLS-1$
 
 }

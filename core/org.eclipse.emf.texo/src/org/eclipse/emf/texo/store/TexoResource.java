@@ -348,4 +348,24 @@ public abstract class TexoResource extends ResourceImpl implements TexoComponent
     final URI objectUri = getEObjectStore().toUri(internalEObject);
     getEObjectStore().removeFromCache(objectUri);
   }
+
+  /**
+   * Set the number of levels of children to retrieve when requesting an object from the server through a request.
+   * 
+   * The default for the child levels is 2 (one level).
+   * 
+   * @param childLevels
+   *          a number larger than 0.
+   */
+  public void setChildLevels(int childLevels) {
+    getEObjectStore().setChildLevels(childLevels);
+  }
+
+  /**
+   * Return the current child levels setting. If -1 is returned then the system will use the default system setting
+   * (which is 2, meaning one child level).
+   */
+  public int getChildLevels() {
+    return getEObjectStore().getChildLevels();
+  }
 }

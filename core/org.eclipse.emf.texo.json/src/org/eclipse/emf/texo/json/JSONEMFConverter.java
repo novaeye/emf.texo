@@ -18,6 +18,8 @@
 package org.eclipse.emf.texo.json;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -41,14 +43,22 @@ import org.json.JSONObject;
  */
 public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
+  // if an object is not proxied then keep it like that even if later
+  // a proxy reference is encountered
+  private Set<EObject> nonProxiedObjects = new HashSet<EObject>();
+  
   protected void convertContent(JSONObject source, EObject target) {
     final boolean deliver = target.eDeliver();
     ((InternalEObject) target).eSetDeliver(false);
     try {
-      if (source.has(ModelJSONConstants.PROXY_PROPERTY) && source.getBoolean(ModelJSONConstants.PROXY_PROPERTY)) {
+      if (source.has(ModelJSONConstants.PROXY_PROPERTY) && source.getBoolean(ModelJSONConstants.PROXY_PROPERTY)
+          && !nonProxiedObjects.contains(target)) {
         final String proxyUri = source.getString(ModelJSONConstants.URI_PROPERTY);
         final URI uri = ModelUtils.convertToEMFURI(URI.createURI(proxyUri));
         ((InternalEObject) target).eSetProxyURI(uri);
+      } else {
+        nonProxiedObjects.add(target);
+        ((InternalEObject) target).eSetProxyURI(null);
       }
       super.convertContent(source, target);
     } catch (JSONException e) {
@@ -65,12 +75,12 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
 
   @Override
   protected EObject fromUri(String uriString) {
-    return getUriResolver().getEObject(URI.createURI(uriString));
+    return getObjectResolver().getEObject(URI.createURI(uriString));
   }
 
   @Override
   protected EObject create(EClass eClass, String uriString) {
-    final DefaultObjectResolver resolver = (DefaultObjectResolver) getUriResolver();
+    final DefaultObjectResolver resolver = (DefaultObjectResolver) getObjectResolver();
     final EObject eObject = EcoreUtil.create(eClass);
     resolver.addToCache(uriString, eObject);
     return eObject;

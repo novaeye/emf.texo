@@ -115,10 +115,12 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
       if (jsonObject.has(ModelJSONConstants.URI_PROPERTY)) {
         uriString = jsonObject.getString(ModelJSONConstants.URI_PROPERTY);
         if (resolvedObjects.containsKey(uriString)) {
+          clearProxy(jsonObject);
           return resolvedObjects.get(uriString);
         }
         final T object = fromUri(uriString);
         if (object != null) {
+          clearProxy(jsonObject);
           resolvedObjects.put(uriString, object);
           return object;
         }
@@ -131,14 +133,16 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
         }
         if (hasValue(jsonObject, ModelJSONConstants.ID_PROPERTY)) {
           final String idString = jsonObject.getString(ModelJSONConstants.ID_PROPERTY);
-          final URI uri = getUriResolver().toURI(eClass, idString);
+          final URI uri = getObjectResolver().toURI(eClass, idString);
           uriString = uri.toString();
           if (resolvedObjects.containsKey(uriString)) {
+            clearProxy(jsonObject);
             return resolvedObjects.get(uriString);
           }
 
           final T object = fromUri(uriString);
           if (object != null) {
+            clearProxy(jsonObject);
             resolvedObjects.put(uriString, object);
             return object;
           }
@@ -153,6 +157,10 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
     } catch (JSONException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  protected void clearProxy(JSONObject source) {
+    source.remove(ModelJSONConstants.PROXY_PROPERTY);
   }
 
   protected abstract T fromUri(String uriString);

@@ -16,6 +16,8 @@
  */
 package org.eclipse.emf.texo.server.service;
 
+import org.eclipse.emf.texo.model.ModelConstants;
+
 /**
  * Contains constants used in the service package.
  * 
@@ -29,7 +31,7 @@ public class ServiceConstants {
   public static final String PARAM_ID = "id"; //$NON-NLS-1$
   public static final String PARAM_FIRST_RESULT = "firstResult"; //$NON-NLS-1$
   public static final String PARAM_MAX_RESULTS = "maxResults"; //$NON-NLS-1$
-  public static final String PARAM_CHILD_LEVELS = "childLevels"; //$NON-NLS-1$
+  public static final String PARAM_CHILD_LEVELS = ModelConstants.PARAM_CHILD_LEVELS;
   public static final String PARAM_RETRIEVAL = "retrieval"; //$NON-NLS-1$
   public static final String PARAM_QUERY = "query"; //$NON-NLS-1$
   public static final String PARAM_NAMEDQUERY = "namedQuery"; //$NON-NLS-1$

@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.impl.Bz403743PackageImpl;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 
 import org.eclipse.emf.texo.test.emfmodel.bz399086.impl.Bz399086PackageImpl;
@@ -93,15 +95,15 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		Bz399086PackageImpl theBz399086Package = (Bz399086PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bz399086Package.eNS_URI) instanceof Bz399086PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bz399086Package.eNS_URI) : Bz399086Package.eINSTANCE);
+		Bz403743PackageImpl theBz403743Package = (Bz403743PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bz403743Package.eNS_URI) instanceof Bz403743PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bz403743Package.eNS_URI) : Bz403743Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theIdentifiablePackage.createPackageContents();
-		theBz399086Package.createPackageContents();
+		theBz403743Package.createPackageContents();
 
 		// Initialize created meta-data
 		theIdentifiablePackage.initializePackageContents();
-		theBz399086Package.initializePackageContents();
+		theBz403743Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theIdentifiablePackage.freeze();
