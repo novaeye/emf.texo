@@ -1,6 +1,8 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.list;
 
+import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -159,15 +161,20 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertStateListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -176,15 +183,18 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createStateListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -223,15 +233,20 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertSixStatesListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -240,15 +255,18 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createSixStatesListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -257,15 +275,20 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertStringListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -274,15 +297,18 @@ public class ListModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createStringListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**

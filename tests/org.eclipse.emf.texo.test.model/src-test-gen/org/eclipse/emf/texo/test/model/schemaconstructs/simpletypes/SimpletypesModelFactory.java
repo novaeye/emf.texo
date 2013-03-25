@@ -3,6 +3,7 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -23,6 +24,8 @@ import org.eclipse.emf.texo.utils.ModelUtils;
  * @generated
  */
 public class SimpletypesModelFactory implements ModelFactory {
+
+  private static final String SEPARATOR = "::";
 
   /**
    * Creates an instance for an {@link EClass} <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -79,7 +82,7 @@ public class SimpletypesModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eFeature
+   * @param eStructuralFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -229,473 +232,6 @@ public class SimpletypesModelFactory implements ModelFactory {
     default:
       throw new IllegalArgumentException("The EDatatype '" + eDataType + "' is not defined in this EPackage.");
     }
-  }
-
-  /**
-   * Converts the EDataType: Byte to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertByteToString(Byte value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: Byte from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Byte createByteFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new Byte(value);
-  }
-
-  /**
-   * Converts the EDataType: Double to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertDoubleToString(Double value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: Double from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Double createDoubleFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new Double(value);
-  }
-
-  /**
-   * Converts the EDataType: Float to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertFloatToString(Float value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: Float from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Float createFloatFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new Float(value);
-  }
-
-  /**
-   * Converts the EDataType: Int to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertIntToString(Integer value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: Int from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Integer createIntFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new Integer(value);
-  }
-
-  /**
-   * Converts the EDataType: Long to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertLongToString(Long value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: Long from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Long createLongFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new Long(value);
-  }
-
-  /**
-   * Converts the EDataType: SimpleEnum to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSimpleEnumToString(SimpleEnum value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: SimpleEnum from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public SimpleEnum createSimpleEnumFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return SimpleEnum.get(value);
-  }
-
-  /**
-   * Converts the EDataType: Date to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertDateToString(Date value) {
-    if (value == null) {
-      return null;
-    }
-    return ModelUtils.convertToXML(value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public Date createDateFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return ModelUtils.createFromXML(value);
-  }
-
-  /**
-   * Converts the EDataType: LimitedString to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertLimitedStringToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: LimitedString from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createLimitedStringFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: IntArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertIntArrayToString(int[] value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getIntArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: IntArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public int[] createIntArrayFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getIntArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: DoubleArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertDoubleArrayToString(double[] value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getDoubleArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: DoubleArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public double[] createDoubleArrayFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getDoubleArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: StringArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertStringArrayToString(String[] value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getStringArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: StringArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String[] createStringArrayFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getStringArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: ByteArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertByteArrayToString(byte[] value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getByteArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: ByteArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public byte[] createByteArrayFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    EDataType eDataType = SimpletypesModelPackage.INSTANCE.getByteArrayEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
-  }
-
-  /**
-   * Converts the EDataType: LimitedDecimal to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertLimitedDecimalToString(BigDecimal value) {
-    if (value == null) {
-      return null;
-    }
-    return value.toString();
-  }
-
-  /**
-   * Creates an instance of the EDataType: LimitedDecimal from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public BigDecimal createLimitedDecimalFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return new BigDecimal(value);
-  }
-
-  /**
-   * Converts the EDataType: ExtraLimitedString to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertExtraLimitedStringToString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Creates an instance of the EDataType: ExtraLimitedString from a String. <!-- begin-user-doc --> <!-- end-user-doc
-   * -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public String createExtraLimitedStringFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return value;
-  }
-
-  /**
-   * Converts the EDataType: SimpleEnumObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the object to convert
-   * @return the String representing the value, if value == null then null is returned
-   * @generated
-   */
-  public String convertSimpleEnumObjectToString(SimpleEnum value) {
-    if (value == null) {
-      return null;
-    }
-    return convertSimpleEnumToString(value);
-  }
-
-  /**
-   * Creates an instance of the EDataType: SimpleEnumObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param value
-   *          the string value to convert to an object
-   * @return the instance of the data type, if value == null then null is returned
-   * @generated
-   */
-  public SimpleEnum createSimpleEnumObjectFromString(String value) {
-    if (value == null) {
-      return null;
-    }
-    return createSimpleEnumFromString(value);
   }
 
   /**
@@ -1120,9 +656,6 @@ public class SimpletypesModelFactory implements ModelFactory {
    * The adapter/wrapper for the EClass '<em><b>SimpleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
-   * @param <E>
-   *          the domain model java class
-   * 
    * @generated
    */
   public static class SimpleTypeObjectModelObject<E extends SimpleTypeObject> extends
@@ -1243,4 +776,508 @@ public class SimpletypesModelFactory implements ModelFactory {
       }
     }
   }
+
+  /**
+   * Converts the EDataType: Byte to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertByteToString(Byte value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: Byte from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Byte createByteFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new Byte(value);
+  }
+
+  /**
+   * Converts the EDataType: ByteArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertByteArrayToString(byte[] value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (byte b : value) {
+      if (sb.length() > 0) {
+        sb.append(SEPARATOR);
+      }
+      sb.append(Byte.toString(b));
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: ByteArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public byte[] createByteArrayFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(SEPARATOR);
+    final byte[] result = new byte[values.length];
+    int i = 0;
+    for (String strValue : values) {
+      result[i++] = Byte.parseByte(strValue);
+    }
+    return result;
+  }
+
+  /**
+   * Converts the EDataType: Date to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertDateToString(Date value) {
+    if (value == null) {
+      return null;
+    }
+    return ModelUtils.convertToXML(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: Date from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Date createDateFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return ModelUtils.createFromXML(value);
+  }
+
+  /**
+   * Converts the EDataType: Double to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertDoubleToString(Double value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: Double from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Double createDoubleFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new Double(value);
+  }
+
+  /**
+   * Converts the EDataType: DoubleArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertDoubleArrayToString(double[] value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (double v : value) {
+      if (sb.length() > 0) {
+        sb.append(SEPARATOR);
+      }
+      sb.append(Double.toString(v));
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: DoubleArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public double[] createDoubleArrayFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(SEPARATOR);
+    final double[] result = new double[values.length];
+    int i = 0;
+    for (String strValue : values) {
+      result[i++] = Double.parseDouble(strValue);
+    }
+    return result;
+  }
+
+  /**
+   * Converts the EDataType: ExtraLimitedString to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertExtraLimitedStringToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: ExtraLimitedString from a String. <!-- begin-user-doc --> <!-- end-user-doc
+   * -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createExtraLimitedStringFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: Float to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertFloatToString(Float value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: Float from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Float createFloatFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new Float(value);
+  }
+
+  /**
+   * Converts the EDataType: Int to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertIntToString(Integer value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: Int from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Integer createIntFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new Integer(value);
+  }
+
+  /**
+   * Converts the EDataType: IntArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertIntArrayToString(int[] value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (int v : value) {
+      if (sb.length() > 0) {
+        sb.append(SEPARATOR);
+      }
+      sb.append(Integer.toString(v));
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: IntArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public int[] createIntArrayFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(SEPARATOR);
+    final int[] result = new int[values.length];
+    int i = 0;
+    for (String strValue : values) {
+      result[i++] = Integer.parseInt(strValue);
+    }
+    return result;
+  }
+
+  /**
+   * Converts the EDataType: LimitedDecimal to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertLimitedDecimalToString(BigDecimal value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: LimitedDecimal from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public BigDecimal createLimitedDecimalFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new BigDecimal(value);
+  }
+
+  /**
+   * Converts the EDataType: LimitedString to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertLimitedStringToString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Creates an instance of the EDataType: LimitedString from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public String createLimitedStringFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return value;
+  }
+
+  /**
+   * Converts the EDataType: Long to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertLongToString(Long value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: Long from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public Long createLongFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return new Long(value);
+  }
+
+  /**
+   * Converts the EDataType: SimpleEnum to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertSimpleEnumToString(SimpleEnum value) {
+    if (value == null) {
+      return null;
+    }
+    return value.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: SimpleEnum from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public SimpleEnum createSimpleEnumFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return SimpleEnum.get(value);
+  }
+
+  /**
+   * Converts the EDataType: SimpleEnumObject to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generated
+   */
+  public String convertSimpleEnumObjectToString(SimpleEnum value) {
+    if (value == null) {
+      return null;
+    }
+    return convertSimpleEnumToString(value);
+  }
+
+  /**
+   * Creates an instance of the EDataType: SimpleEnumObject from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generated
+   */
+  public SimpleEnum createSimpleEnumObjectFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    return createSimpleEnumFromString(value);
+  }
+
+  /**
+   * Converts the EDataType: StringArray to a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the object to convert
+   * @return the String representing the value, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String convertStringArrayToString(String[] value) {
+    if (value == null) {
+      return null;
+    }
+    final StringBuilder sb = new StringBuilder();
+    for (String v : value) {
+      if (sb.length() > 0) {
+        sb.append(SEPARATOR);
+      }
+      sb.append(v);
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Creates an instance of the EDataType: StringArray from a String. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * 
+   * @param value
+   *          the string value to convert to an object
+   * @return the instance of the data type, if value == null then null is returned
+   * @generatedNOT
+   */
+  public String[] createStringArrayFromString(String value) {
+    if (value == null) {
+      return null;
+    }
+    final String[] values = value.split(SEPARATOR);
+    final String[] result = new String[values.length];
+    int i = 0;
+    for (String strValue : values) {
+      result[i++] = strValue;
+    }
+    return result;
+  }
+
 }

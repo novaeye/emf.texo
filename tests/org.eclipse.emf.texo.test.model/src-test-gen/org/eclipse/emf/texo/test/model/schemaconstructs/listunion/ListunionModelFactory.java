@@ -1,7 +1,9 @@
 package org.eclipse.emf.texo.test.model.schemaconstructs.listunion;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -169,7 +171,7 @@ public class ListunionModelFactory implements ModelFactory {
     case ListunionModelPackage.ZIPUNIONSTYPE_CLASSIFIER_ID:
       return convertZipUnionsTypeToString((String) value);
     case ListunionModelPackage.SIMPLEUNIONTYPE_CLASSIFIER_ID:
-      return convertSimpleUnionTypeToString((Object) value);
+      return convertSimpleUnionTypeToString(value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPE_CLASSIFIER_ID:
       return convertSimpleStringUnionTypeToString((String) value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPEMEMBER0_CLASSIFIER_ID:
@@ -197,15 +199,20 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertStateListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -214,15 +221,18 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createStateListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStateListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -261,15 +271,20 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertSixStatesListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -278,15 +293,18 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createSixStatesListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSixStatesListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -355,15 +373,13 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertSimpleUnionTypeToString(Object value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSimpleUnionTypeEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    return value.toString();
   }
 
   /**
@@ -372,15 +388,13 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public Object createSimpleUnionTypeFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getSimpleUnionTypeEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    return value;
   }
 
   /**
@@ -575,15 +589,20 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the object to convert
    * @return the String representing the value, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public String convertStringListToString(List<String> value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final StringBuilder sb = new StringBuilder();
+    for (String val : value) {
+      if (sb.length() > 0) {
+        sb.append(";");
+      }
+      sb.append(val);
+    }
+    return sb.toString();
   }
 
   /**
@@ -592,15 +611,18 @@ public class ListunionModelFactory implements ModelFactory {
    * @param value
    *          the string value to convert to an object
    * @return the instance of the data type, if value == null then null is returned
-   * @generated
+   * @generatedNOT
    */
   public List<String> createStringListFromString(String value) {
     if (value == null) {
       return null;
     }
-    EDataType eDataType = ListunionModelPackage.INSTANCE.getStringListEDataType();
-    throw new UnsupportedOperationException("Operation not support for EDataType " + eDataType.getName()
-        + " converting from value " + value);
+    final String[] values = value.split(";");
+    final List<String> valueList = new ArrayList<String>();
+    for (String val : values) {
+      valueList.add(val);
+    }
+    return valueList;
   }
 
   /**
@@ -713,7 +735,7 @@ public class ListunionModelFactory implements ModelFactory {
         getTarget().setZipUnions((List<String>) value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNION_FEATURE_ID:
-        getTarget().setSimpleUnion((Object) value);
+        getTarget().setSimpleUnion(value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
         getTarget().setSimpleUnions((List<Object>) value);
@@ -742,7 +764,7 @@ public class ListunionModelFactory implements ModelFactory {
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
-        getTarget().getSimpleUnions().add((Object) value);
+        getTarget().getSimpleUnions().add(value);
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:
