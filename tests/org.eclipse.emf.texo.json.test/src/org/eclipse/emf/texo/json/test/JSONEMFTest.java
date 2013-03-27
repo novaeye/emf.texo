@@ -51,6 +51,7 @@ public class JSONEMFTest extends BaseJSONTest {
 
   public void doRunTest() throws Exception {
     final MemoryObjectStore memObjectStore = ComponentProvider.getInstance().newInstance(MemoryObjectStore.class);
+    memObjectStore.setChildLevels(100);
 
     final ModelDataGenerator dataGenerator = TestUtils.generateTestSetModelGenerator(1, 3, 3, 10000, getEPackages(),
         getEClasses());

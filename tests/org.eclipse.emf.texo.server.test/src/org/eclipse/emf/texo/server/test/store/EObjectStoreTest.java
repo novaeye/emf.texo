@@ -139,8 +139,12 @@ public abstract class EObjectStoreTest extends BaseTest {
       for (EObject w : writers) {
         final Writer writer = (Writer) w;
         Assert.assertEquals("1_" + i++, writer.getName());
-        for (Book bk : writer.getBooks()) {
-          Assert.assertTrue(bk.eIsProxy());
+        // only check proxy in the first loop as refering objects
+        // will load books in a non-proxy way below
+        if (i == 1) {
+          for (Book bk : writer.getBooks()) {
+            Assert.assertTrue(bk.eIsProxy());
+          }
         }
         if (i == 1) {
           // only check once, after this the library is loaded below

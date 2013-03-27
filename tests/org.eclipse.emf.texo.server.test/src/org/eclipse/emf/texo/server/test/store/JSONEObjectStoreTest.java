@@ -49,6 +49,7 @@ public class JSONEObjectStoreTest extends EObjectStoreTest {
   protected JSONEObjectStore getEObjectStore() {
     final JSONEObjectStore jsonEObjectStore = ComponentProvider.getInstance().newInstance(JSONEObjectStore.class);
     jsonEObjectStore.setUri(URI.createURI(getBaseURL() + "/" + JSONWS));
+    jsonEObjectStore.setChildLevels(1);
     return jsonEObjectStore;
   }
 }

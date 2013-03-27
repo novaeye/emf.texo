@@ -67,7 +67,7 @@ public interface Writer extends Identifiable {
 	 * @return the value of the '<em>Books</em>' reference list.
 	 * @see org.eclipse.emf.texo.test.emfmodel.library.LibraryPackage#getWriter_Books()
 	 * @see org.eclipse.emf.texo.test.emfmodel.library.Book#getAuthor
-	 * @model opposite="author"
+	 * @model opposite="author" resolveProxies="false"
 	 * @generated
 	 */
 	EList<Book> getBooks();

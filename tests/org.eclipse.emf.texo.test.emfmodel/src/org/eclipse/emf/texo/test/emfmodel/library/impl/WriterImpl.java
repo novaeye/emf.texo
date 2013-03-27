@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -119,7 +120,7 @@ public class WriterImpl extends IdentifiableImpl implements Writer {
 	 */
 	public EList<Book> getBooks() {
 		if (books == null) {
-			books = new EObjectWithInverseResolvingEList<Book>(Book.class, this, LibraryPackage.WRITER__BOOKS, LibraryPackage.BOOK__AUTHOR);
+			books = new EObjectWithInverseEList<Book>(Book.class, this, LibraryPackage.WRITER__BOOKS, LibraryPackage.BOOK__AUTHOR);
 		}
 		return books;
 	}

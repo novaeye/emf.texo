@@ -25,6 +25,7 @@ import org.eclipse.emf.texo.server.test.issues.Bz399086Test;
 import org.eclipse.emf.texo.server.test.store.EPersistenceServiceTest;
 import org.eclipse.emf.texo.server.test.store.EPersistenceTexoResourceTest;
 import org.eclipse.emf.texo.server.test.store.JSONEObjectStoreTest;
+import org.eclipse.emf.texo.server.test.store.JSONProxyTest;
 import org.eclipse.emf.texo.server.test.store.JSONTexoResourceTest;
 import org.eclipse.emf.texo.server.test.ws.CurrentEMFilterTest;
 import org.eclipse.emf.texo.server.test.ws.WSMainJSONTest;
@@ -40,7 +41,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ Bz391624EPersistenceResourceTest.class, Bz391624JSONResourceTest.class, Bz399086Test.class,
-    JSONEObjectStoreTest.class, JSONTexoResourceTest.class, EPersistenceTexoResourceTest.class,
+    JSONEObjectStoreTest.class, JSONProxyTest.class, JSONTexoResourceTest.class, EPersistenceTexoResourceTest.class,
     EPersistenceServiceTest.class, CurrentEMFilterTest.class, LibraryDaoTest.class, WSMainJSONTest.class,
     WSMainTest.class, ResponseXMLTest.class, XMLReadTest.class, ReferersTest.class })
 public class AllServerTests extends TestSuite {

@@ -27,6 +27,7 @@ import java.util.Map;
 import junit.framework.Assert;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.texo.model.ModelConstants;
 import org.eclipse.emf.texo.store.TexoResource;
 import org.eclipse.emf.texo.test.emfmodel.library.Book;
@@ -107,7 +108,11 @@ public abstract class TexoLibraryResourceTest extends TexoResourceTest {
         Assert.assertTrue(w.eResource() == resource);
         Assert.assertEquals("1_" + i++, writer.getName());
         int j = 0;
+        // writer books ereference has proxy resolving to false
         for (Book bk : writer.getBooks()) {
+          // explicitly resolve proxies
+          EcoreUtil.resolve(bk, writer);
+
           Assert.assertTrue(bk.getTitle().equals(writer.getName() + "_" + j));
           Assert.assertTrue(bk.getAuthor() == writer);
           Assert.assertFalse(bk.eIsProxy());

@@ -71,6 +71,7 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
    */
   public List<T> convert(final JSONArray jsonArray) {
     resolvedObjects.clear();
+    doClearInternalDataStructures();
     return doConvert(jsonArray);
   }
 
@@ -100,7 +101,11 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
    */
   public T convert(final JSONObject jsonObject) {
     resolvedObjects.clear();
+    doClearInternalDataStructures();
     return doConvert(jsonObject);
+  }
+
+  protected void doClearInternalDataStructures() {
   }
 
   protected T doConvert(JSONObject source) {
@@ -115,12 +120,10 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
       if (jsonObject.has(ModelJSONConstants.URI_PROPERTY)) {
         uriString = jsonObject.getString(ModelJSONConstants.URI_PROPERTY);
         if (resolvedObjects.containsKey(uriString)) {
-          clearProxy(jsonObject);
           return resolvedObjects.get(uriString);
         }
         final T object = fromUri(uriString);
         if (object != null) {
-          clearProxy(jsonObject);
           resolvedObjects.put(uriString, object);
           return object;
         }
@@ -136,13 +139,11 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
           final URI uri = getObjectResolver().toURI(eClass, idString);
           uriString = uri.toString();
           if (resolvedObjects.containsKey(uriString)) {
-            clearProxy(jsonObject);
             return resolvedObjects.get(uriString);
           }
 
           final T object = fromUri(uriString);
           if (object != null) {
-            clearProxy(jsonObject);
             resolvedObjects.put(uriString, object);
             return object;
           }
@@ -157,10 +158,6 @@ public abstract class BaseJSONModelConverter<T extends Object> implements TexoCo
     } catch (JSONException e) {
       throw new RuntimeException(e);
     }
-  }
-
-  protected void clearProxy(JSONObject source) {
-    source.remove(ModelJSONConstants.PROXY_PROPERTY);
   }
 
   protected abstract T fromUri(String uriString);

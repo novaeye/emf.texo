@@ -47,6 +47,10 @@ public class JSONEMFConverter extends BaseJSONModelConverter<EObject> {
   // a proxy reference is encountered
   private Set<EObject> nonProxiedObjects = new HashSet<EObject>();
   
+  protected void doClearInternalDataStructures() {
+    nonProxiedObjects.clear();
+  }
+
   protected void convertContent(JSONObject source, EObject target) {
     final boolean deliver = target.eDeliver();
     ((InternalEObject) target).eSetDeliver(false);
