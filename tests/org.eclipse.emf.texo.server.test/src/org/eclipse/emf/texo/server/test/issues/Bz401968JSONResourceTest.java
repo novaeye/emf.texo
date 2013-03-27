@@ -130,6 +130,13 @@ public class Bz401968JSONResourceTest extends TexoResourceTest {
       resource2.refresh(o1);
       Assert.assertTrue(o2.getName().equals("3"));
 
+      // finally check using a new resource
+      final TexoResource resource3 = createResource(getBaseURL() + "?test=test");
+      Assert.assertTrue(resource3 != resource2);
+      resource3.query("select e from bz403743_Test403743_Main e", new HashMap<String, Object>(), 0, 100);
+      Test403743_Main o3 = (Test403743_Main) resource3.getContents().get(0);
+      Assert.assertTrue(o3.getName().equals("3"));
+      Assert.assertTrue(o3 != o1);
     } catch (IOException e) {
       throw new IllegalStateException(e);
     }
