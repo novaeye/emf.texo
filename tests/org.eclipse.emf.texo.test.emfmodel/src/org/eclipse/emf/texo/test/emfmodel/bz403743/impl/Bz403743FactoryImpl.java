@@ -5,12 +5,12 @@ package org.eclipse.emf.texo.test.emfmodel.bz403743.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.eclipse.emf.texo.test.emfmodel.bz403743.*;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Factory;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743_Main;
 
 /**
  * <!-- begin-user-doc -->

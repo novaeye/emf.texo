@@ -2,26 +2,20 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743.impl;
 
-import identifiable.impl.IdentifiableImpl;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743;
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743_Main;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiableImpl;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,14 +2,13 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743.util;
 
-import identifiable.Identifiable;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.eclipse.emf.texo.test.emfmodel.bz403743.*;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743_Main;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 
 /**
  * <!-- begin-user-doc -->

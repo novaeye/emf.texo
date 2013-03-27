@@ -5,11 +5,8 @@ package org.eclipse.emf.texo.test.emfmodel.bz399086.util;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
-
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 
 /**

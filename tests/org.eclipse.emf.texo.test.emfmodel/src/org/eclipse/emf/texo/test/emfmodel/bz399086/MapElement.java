@@ -2,8 +2,7 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz399086;
 
-import identifiable.Identifiable;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 
 /**
  * <!-- begin-user-doc -->

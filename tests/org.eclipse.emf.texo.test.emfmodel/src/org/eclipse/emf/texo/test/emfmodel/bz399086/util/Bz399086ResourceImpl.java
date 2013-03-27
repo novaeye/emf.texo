@@ -3,7 +3,6 @@
 package org.eclipse.emf.texo.test.emfmodel.bz399086.util;
 
 import org.eclipse.emf.common.util.URI;
-
 import org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl;
 
 /**

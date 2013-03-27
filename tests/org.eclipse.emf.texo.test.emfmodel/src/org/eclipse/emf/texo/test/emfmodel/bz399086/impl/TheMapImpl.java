@@ -2,8 +2,6 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz399086.impl;
 
-import identifiable.impl.IdentifiableImpl;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -14,6 +12,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.TheMap;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiableImpl;
 
 /**
  * <!-- begin-user-doc -->

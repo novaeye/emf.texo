@@ -2,9 +2,6 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz399086.impl;
 
-import identifiable.IdentifiablePackage;
-import identifiable.impl.IdentifiablePackageImpl;
-
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -17,6 +14,8 @@ import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Factory;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.TheMap;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiablePackageImpl;
 
 /**
  * <!-- begin-user-doc -->

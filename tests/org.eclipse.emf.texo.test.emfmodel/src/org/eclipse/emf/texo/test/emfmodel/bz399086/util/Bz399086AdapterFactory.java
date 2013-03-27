@@ -2,16 +2,16 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz399086.util;
 
-import identifiable.Identifiable;
 import java.util.Map;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.texo.test.emfmodel.bz399086.*;
+import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
+import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;
+import org.eclipse.emf.texo.test.emfmodel.bz399086.TheMap;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 
 /**
  * <!-- begin-user-doc -->

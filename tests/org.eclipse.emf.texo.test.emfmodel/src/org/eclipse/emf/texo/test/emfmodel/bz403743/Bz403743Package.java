@@ -2,12 +2,11 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743;
 
-import identifiable.IdentifiablePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage;
 
 /**
  * <!-- begin-user-doc -->

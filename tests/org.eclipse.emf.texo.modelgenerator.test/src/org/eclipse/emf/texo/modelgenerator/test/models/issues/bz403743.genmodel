@@ -15,7 +15,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bz403743.ecore#//Test403743/children"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Identifiable" ecorePackage="identifiable.ecore#/">
+  <genPackages prefix="Identifiable" basePackage="org.eclipse.emf.texo.test.emfmodel"
+      ecorePackage="identifiable.ecore#/">
     <genClasses image="false" ecoreClass="identifiable.ecore#//Identifiable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//Identifiable/db_Id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifiable.ecore#//Identifiable/db_version"/>

@@ -2,13 +2,12 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz399086.impl;
 
-import identifiable.impl.IdentifiableImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiableImpl;
 
 /**
  * <!-- begin-user-doc -->

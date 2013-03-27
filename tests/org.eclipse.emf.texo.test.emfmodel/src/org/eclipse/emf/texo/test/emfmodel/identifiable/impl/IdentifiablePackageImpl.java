@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.impl.Bz403743PackageImpl;
 import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiableFactory;
 import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiableInterface;
@@ -101,21 +103,15 @@ public class IdentifiablePackageImpl extends EPackageImpl implements Identifiabl
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		IdentifiablePackageImpl theIdentifiablePackage_1 = (IdentifiablePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) instanceof IdentifiablePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifiablePackage.eNS_URI) : IdentifiablePackage.eINSTANCE);
-		LibraryPackageImpl theLibraryPackage = (LibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) instanceof LibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI) : LibraryPackage.eINSTANCE);
-		SchoollibraryPackageImpl theSchoollibraryPackage = (SchoollibraryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) instanceof SchoollibraryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SchoollibraryPackage.eNS_URI) : SchoollibraryPackage.eINSTANCE);
+		Bz403743PackageImpl theBz403743Package = (Bz403743PackageImpl)(EPackage.Registry.INSTANCE.getEPackage(Bz403743Package.eNS_URI) instanceof Bz403743PackageImpl ? EPackage.Registry.INSTANCE.getEPackage(Bz403743Package.eNS_URI) : Bz403743Package.eINSTANCE);
 
 		// Create package meta-data objects
 		theIdentifiablePackage.createPackageContents();
-		theIdentifiablePackage_1.createPackageContents();
-		theLibraryPackage.createPackageContents();
-		theSchoollibraryPackage.createPackageContents();
+		theBz403743Package.createPackageContents();
 
 		// Initialize created meta-data
 		theIdentifiablePackage.initializePackageContents();
-		theIdentifiablePackage_1.initializePackageContents();
-		theLibraryPackage.initializePackageContents();
-		theSchoollibraryPackage.initializePackageContents();
+		theBz403743Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theIdentifiablePackage.freeze();

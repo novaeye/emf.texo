@@ -2,9 +2,8 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743;
 
-import identifiable.Identifiable;
-
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 
 /**
  * <!-- begin-user-doc -->

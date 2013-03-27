@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.emf.texo.test.emfmodel.bz399086.*;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Factory;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.Bz399086Package;
 import org.eclipse.emf.texo.test.emfmodel.bz399086.MapElement;

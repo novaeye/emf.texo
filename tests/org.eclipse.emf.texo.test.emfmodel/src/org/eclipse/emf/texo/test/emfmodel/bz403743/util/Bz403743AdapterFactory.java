@@ -2,16 +2,14 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743.util;
 
-import identifiable.Identifiable;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.emf.texo.test.emfmodel.bz403743.*;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743;
+import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743_Main;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable;
 
 /**
  * <!-- begin-user-doc -->
@@ -130,13 +128,13 @@ public class Bz403743AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link identifiable.Identifiable <em>Identifiable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable <em>Identifiable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see identifiable.Identifiable
+	 * @see org.eclipse.emf.texo.test.emfmodel.identifiable.Identifiable
 	 * @generated
 	 */
 	public Adapter createIdentifiableAdapter() {

@@ -2,21 +2,17 @@
  */
 package org.eclipse.emf.texo.test.emfmodel.bz403743.impl;
 
-import identifiable.IdentifiablePackage;
-
-import identifiable.impl.IdentifiablePackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Factory;
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Bz403743Package;
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743;
 import org.eclipse.emf.texo.test.emfmodel.bz403743.Test403743_Main;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.IdentifiablePackage;
+import org.eclipse.emf.texo.test.emfmodel.identifiable.impl.IdentifiablePackageImpl;
 
 /**
  * <!-- begin-user-doc -->
