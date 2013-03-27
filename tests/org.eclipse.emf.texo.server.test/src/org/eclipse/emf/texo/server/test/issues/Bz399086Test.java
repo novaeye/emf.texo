@@ -130,7 +130,6 @@ public class Bz399086Test extends TexoResourceTest {
   // http://www.eclipse.org/forums/index.php/t/452843/
   @Test
   public void testGenData() {
-    final Bz399086Factory factory = Bz399086Factory.eINSTANCE;
     final List<EPackage> ePackages = new ArrayList<EPackage>();
     ePackages.add(Bz399086Package.eINSTANCE);
 
@@ -165,7 +164,7 @@ public class Bz399086Test extends TexoResourceTest {
       writer.flush();
 
       BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-      String json = reader.readLine();
+      reader.readLine();
     } catch (Exception e) {
       throw new IllegalStateException(e);
     }
