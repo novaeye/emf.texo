@@ -3,6 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bz403161_2" nsURI="http://www.eclipse.org/emf/texo/test/model/issues/bz403161_2"
     nsPrefix="bz403161_2">
   <eClassifiers xsi:type="ecore:EClass" name="Test403161_2" eSuperTypes="bz403161_1.ecore#//Test403161_1">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

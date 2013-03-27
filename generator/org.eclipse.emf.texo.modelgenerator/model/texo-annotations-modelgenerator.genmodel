@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.emf.texo.modelgenerator/src"
-    modelPluginID="org.eclipse.emf.texo.modelgenerator" modelName="Texo-annotations-modelgenerator"
-    modelPluginClass="" nonNLSMarkers="true" suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" language="" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.genmodel#//annotationsmodel">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.emf.texo.modelgenerator/src" modelPluginID="org.eclipse.emf.texo.modelgenerator"
+    modelName="Texo-annotations-modelgenerator" modelPluginClass="" nonNLSMarkers="true"
+    suppressInterfaces="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" language="" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.emf.texo.annotations.model/model/texo-annotations-model.genmodel#//annotationsmodel">
   <foreignModel>texo-annotations-modelgenerator.ecore</foreignModel>
   <genPackages prefix="Modelcodegenerator" basePackage="org.eclipse.emf.texo.modelgenerator"
       disposableProviderFactory="true" ecorePackage="texo-annotations-modelgenerator.ecore#/">
@@ -60,6 +59,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference texo-annotations-modelgenerator.ecore#//EClassModelGenAnnotation/eStructuralFeatureModelGenAnnotations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-modelgenerator.ecore#//EClassModelGenAnnotation/daoQualifiedClassName"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference texo-annotations-modelgenerator.ecore#//EClassModelGenAnnotation/daoFinders"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference texo-annotations-modelgenerator.ecore#//EClassModelGenAnnotation/eAllStructuralFeatureModelGenAnnotations"/>
     </genClasses>
     <genClasses image="false" ecoreClass="texo-annotations-modelgenerator.ecore#//EDataTypeModelGenAnnotationDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute texo-annotations-modelgenerator.ecore#//EDataTypeModelGenAnnotationDefinition/instanceClassName"/>

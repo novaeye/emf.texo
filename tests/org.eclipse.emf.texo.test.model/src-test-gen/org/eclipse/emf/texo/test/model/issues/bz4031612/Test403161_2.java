@@ -24,31 +24,31 @@ public class Test403161_2 extends Test403161_1 {
    * @generated
    */
   @Basic()
-  private String name = null;
+  private String subName = null;
 
   /**
-   * Returns the value of '<em><b>name</b></em>' feature.
+   * Returns the value of '<em><b>subName</b></em>' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @return the value of '<em><b>name</b></em>' feature
+   * @return the value of '<em><b>subName</b></em>' feature
    * @generated
    */
-  public String getName() {
-    return name;
+  public String getSubName() {
+    return subName;
   }
 
   /**
-   * Sets the '{@link Test403161_2#getName() <em>name</em>}' feature.
+   * Sets the '{@link Test403161_2#getSubName() <em>subName</em>}' feature.
    * 
    * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
-   * @param newName
-   *          the new value of the '{@link Test403161_2#getName() name}' feature.
+   * @param newSubName
+   *          the new value of the '{@link Test403161_2#getSubName() subName}' feature.
    * @generated
    */
-  public void setName(String newName) {
-    name = newName;
+  public void setSubName(String newSubName) {
+    subName = newSubName;
   }
 
   /**
@@ -59,6 +59,6 @@ public class Test403161_2 extends Test403161_1 {
    */
   @Override
   public String toString() {
-    return "Test403161_2 " + " [name: " + getName() + "]";
+    return "Test403161_2 " + " [subName: " + getSubName() + "]";
   }
 }

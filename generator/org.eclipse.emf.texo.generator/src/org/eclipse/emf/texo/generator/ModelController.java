@@ -22,9 +22,15 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EAnnotation;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.ENamedElement;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.texo.annotations.AnnotationProvider;
 import org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation;
 
@@ -57,12 +63,14 @@ public class ModelController implements AnnotationProvider {
    */
   public void annotate(List<ModelAnnotator> modelAnnotators) {
 
+    final List<EPackage> allEPackages = collectEPackages();
+
     ExtensionPointUtils.readModelAnnotatorsFromExtensions();
 
     final ModelAnnotator codeGenAnnotator = ModelAnnotator.getCodeGenAnnotator();
     annotationManager.addAnnotators(codeGenAnnotator);
     // annotate with the code generation annotations
-    doAnnotate(codeGenAnnotator);
+    doAnnotate(codeGenAnnotator, allEPackages);
 
     // register all annotators so they can call each other
     for (ModelAnnotator modelAnnotator : ModelAnnotatorRegistry.getInstance().getModelAnnotators()) {
@@ -78,13 +86,82 @@ public class ModelController implements AnnotationProvider {
         continue;
       }
 
-      doAnnotate(modelAnnotator);
+      doAnnotate(modelAnnotator, allEPackages);
     }
   }
 
-  private void doAnnotate(ModelAnnotator modelAnnotator) {
-    modelAnnotator.annotate(ePackages, annotationManager);
-    modelAnnotator.postAnnotate(ePackages, annotationManager);
+  private List<EPackage> collectEPackages() {
+    final List<EPackage> collectedEPackages = new ArrayList<EPackage>(ePackages);
+    final List<EPackage> toCheckEPackages = new ArrayList<EPackage>(ePackages);
+    final List<EPackage> newFoundEPackages = new ArrayList<EPackage>();
+    int cnt = 0;
+    do {
+      cnt++;
+      if (!newFoundEPackages.isEmpty()) {
+        toCheckEPackages.clear();
+        toCheckEPackages.addAll(newFoundEPackages);
+        newFoundEPackages.clear();
+      }
+      for (EPackage ePackage : toCheckEPackages) {
+        final List<EPackage> newDependsOn = getNewDependsOn(ePackage, collectedEPackages);
+        newFoundEPackages.addAll(newDependsOn);
+      }
+      collectedEPackages.addAll(newFoundEPackages);
+      if (cnt > 1000) {
+        throw new IllegalStateException("More than a 1000 iterations, infinite cycle, illegal case, report on forum"); //$NON-NLS-1$
+      }
+    } while (!newFoundEPackages.isEmpty());
+
+    // remove ecore and xmltype epackages
+    for (EPackage toCheckEPackage : new ArrayList<EPackage>(collectedEPackages)) {
+      if (toCheckEPackage.getNsURI().equals(EcorePackage.eNS_URI)
+          || toCheckEPackage.getNsURI().equals(XMLTypePackage.eNS_URI)) {
+        collectedEPackages.remove(toCheckEPackage);
+      }
+    }
+    return collectedEPackages;
+  }
+
+  private List<EPackage> getNewDependsOn(EPackage ePackage, List<EPackage> collectedEPackages) {
+    final List<EPackage> epacks = new ArrayList<EPackage>();
+
+    // initialize the main package first
+    if (ePackage.getESuperPackage() != null && !collectedEPackages.contains(ePackage.getESuperPackage())) {
+      epacks.add(ePackage.getESuperPackage());
+    }
+
+    // get the epackage of the supertypes of each eclass
+    for (final EClassifier eClassifier : ePackage.getEClassifiers()) {
+      if (eClassifier instanceof EClass) {
+        final EClass eClass = (EClass) eClassifier;
+        for (final EClass superEClass : eClass.getESuperTypes()) {
+          if (superEClass.getEPackage() != ePackage && !epacks.contains(superEClass.getEPackage())) {
+            epacks.add(superEClass.getEPackage());
+          }
+        }
+
+        // now handle the efeatures
+        for (final EReference eref : eClass.getEReferences()) {
+          final EPackage refEPackage = eref.getEReferenceType().getEPackage();
+          if (refEPackage != ePackage && !epacks.contains(refEPackage)) {
+            epacks.add(refEPackage);
+          }
+        }
+        for (final EAttribute eattr : eClass.getEAttributes()) {
+          final EPackage refEPackage = eattr.getEType().getEPackage();
+          if (refEPackage != ePackage && !epacks.contains(refEPackage)) {
+            epacks.add(refEPackage);
+          }
+        }
+      }
+    }
+    epacks.removeAll(collectedEPackages);
+    return epacks;
+  }
+
+  private void doAnnotate(ModelAnnotator modelAnnotator, List<EPackage> toHandleEPackages) {
+    modelAnnotator.annotate(toHandleEPackages, annotationManager);
+    modelAnnotator.postAnnotate(toHandleEPackages, annotationManager);
   }
 
   public List<EPackage> getEPackages() {

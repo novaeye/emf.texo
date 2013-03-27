@@ -52,6 +52,9 @@ import org.eclipse.emf.texo.annotations.annotationsmodel.ENamedElementAnnotation
  * <em>Dao Qualified Class Name</em>}</li>
  * <li>{@link org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation#getDaoFinders <em>Dao
  * Finders</em>}</li>
+ * <li>
+ * {@link org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation#getEAllStructuralFeatureModelGenAnnotations
+ * <em>EAll Structural Feature Model Gen Annotations</em>}</li>
  * </ul>
  * </p>
  * 
@@ -1246,16 +1249,43 @@ public class EClassModelGenAnnotation extends EClassAnnotation implements EClass
     }
   }
 
+  /**
+   * Returns the value of the '<em><b>EAll Structural Feature Model Gen Annotations</b></em>' reference list. The list
+   * contents are of type
+   * {@link org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation}. <!--
+   * begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>EAll Structural Feature Model Gen Annotations</em>' reference list isn't clear, there
+   * really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * 
+   * @return the value of the '<em>EAll Structural Feature Model Gen Annotations</em>' reference list.
+   * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEClassModelGenAnnotation_EAllStructuralFeatureModelGenAnnotations()
+   * @model transient="true" changeable="false" volatile="true"
+   * @generatedNOT
+   */
+  public EList<EStructuralFeatureModelGenAnnotation> getEAllStructuralFeatureModelGenAnnotations() {
+    final EList<EStructuralFeatureModelGenAnnotation> result = new EObjectEList<EStructuralFeatureModelGenAnnotation>(
+        EStructuralFeatureModelGenAnnotation.class, this,
+        ModelcodegeneratorPackage.ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS);
+    if (getSuperEClass() != null) {
+      result.addAll(getSuperEClass().getEAllStructuralFeatureModelGenAnnotations());
+    }
+    result.addAll(getEStructuralFeatureModelGenAnnotations());
+    return result;
+  }
+
   public EList<EStructuralFeatureModelGenAnnotation> getTestEStructuralFeatureModelGenAnnotations() {
-    final EList<EStructuralFeatureModelGenAnnotation> eStructuralFeatureModelGenAnnotations = new EObjectEList<EStructuralFeatureModelGenAnnotation>(
+    final EList<EStructuralFeatureModelGenAnnotation> localEStructuralFeatureModelGenAnnotations = new EObjectEList<EStructuralFeatureModelGenAnnotation>(
         EStructuralFeatureModelGenAnnotation.class, this,
         ModelcodegeneratorPackage.ECLASS_MODEL_GEN_ANNOTATION__ESTRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS);
 
     for (AnnotatedEStructuralFeature aFeature : getAnnotatedEClass().getAnnotatedEStructuralFeatures()) {
       for (ENamedElementAnnotation featureAnnotation : aFeature.getAllAnnotations()) {
         if (featureAnnotation instanceof EStructuralFeatureModelGenAnnotation
-            && !eStructuralFeatureModelGenAnnotations.contains(featureAnnotation)) {
-          eStructuralFeatureModelGenAnnotations.add((EStructuralFeatureModelGenAnnotation) featureAnnotation);
+            && !localEStructuralFeatureModelGenAnnotations.contains(featureAnnotation)) {
+          localEStructuralFeatureModelGenAnnotations.add((EStructuralFeatureModelGenAnnotation) featureAnnotation);
         }
       }
     }
@@ -1269,15 +1299,15 @@ public class EClassModelGenAnnotation extends EClassAnnotation implements EClass
         for (AnnotatedEStructuralFeature aFeature : annotatedESuperClass.getAnnotatedEStructuralFeatures()) {
           for (ENamedElementAnnotation featureAnnotation : aFeature.getAllAnnotations()) {
             if (featureAnnotation instanceof EStructuralFeatureModelGenAnnotation
-                && !eStructuralFeatureModelGenAnnotations.contains(featureAnnotation)) {
-              eStructuralFeatureModelGenAnnotations.add((EStructuralFeatureModelGenAnnotation) featureAnnotation);
+                && !localEStructuralFeatureModelGenAnnotations.contains(featureAnnotation)) {
+              localEStructuralFeatureModelGenAnnotations.add((EStructuralFeatureModelGenAnnotation) featureAnnotation);
             }
           }
         }
 
       }
     }
-    return eStructuralFeatureModelGenAnnotations;
+    return localEStructuralFeatureModelGenAnnotations;
   }
 
   /**
@@ -1331,6 +1361,8 @@ public class EClassModelGenAnnotation extends EClassAnnotation implements EClass
         return getDaoFinders();
       }
       return basicGetDaoFinders();
+    case ModelcodegeneratorPackage.ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS:
+      return getEAllStructuralFeatureModelGenAnnotations();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -1497,6 +1529,8 @@ public class EClassModelGenAnnotation extends EClassAnnotation implements EClass
           : !DAO_QUALIFIED_CLASS_NAME_EDEFAULT.equals(daoQualifiedClassName);
     case ModelcodegeneratorPackage.ECLASS_MODEL_GEN_ANNOTATION__DAO_FINDERS:
       return daoFinders != null;
+    case ModelcodegeneratorPackage.ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS:
+      return !getEAllStructuralFeatureModelGenAnnotations().isEmpty();
     }
     return super.eIsSet(featureID);
   }

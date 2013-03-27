@@ -91,6 +91,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	public static final int EPACKAGE_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EPACKAGE_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.EPACKAGE_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EPackage</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -515,6 +524,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	public static final int ECLASS_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.ECLASS_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.ECLASS_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -693,13 +711,22 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
   public static final int ECLASS_MODEL_GEN_ANNOTATION__DAO_FINDERS = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 16;
 
   /**
+	 * The feature id for the '<em><b>EAll Structural Feature Model Gen Annotations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 17;
+
+		/**
 	 * The number of structural features of the '<em>EClass Model Gen Annotation</em>' class.
 	 * <!-- begin-user-doc --> <!--
    * end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  public static final int ECLASS_MODEL_GEN_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 17;
+  public static final int ECLASS_MODEL_GEN_ANNOTATION_FEATURE_COUNT = AnnotationsmodelPackage.ECLASS_ANNOTATION_FEATURE_COUNT + 18;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnnotationDefinition <em>EData Type Model Gen Annotation Definition</em>}' class.
@@ -734,6 +761,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EDATA_TYPE_MODEL_GEN_ANNOTATION_DEFINITION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_MODEL_GEN_ANNOTATION_DEFINITION__GENERATED = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -1090,6 +1126,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	public static final int EATTRIBUTE_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EATTRIBUTE_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.EATTRIBUTE_ANNOTATION__GENERATED;
+
+		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -1323,6 +1368,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EREFERENCE_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EREFERENCE_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.EREFERENCE_ANNOTATION__GENERATED;
 
 		/**
    * The feature id for the '<em><b>EStructural Feature</b></em>' reference. <!-- begin-user-doc --> <!-- end-user-doc
@@ -1571,6 +1625,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	public static final int EENUM_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EENUM_ANNOTATION__LAST_IDENTIFIER;
 
 		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EENUM_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.EENUM_ANNOTATION__GENERATED;
+
+		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -1772,6 +1835,15 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	 * @ordered
 	 */
 	public static final int EDATA_TYPE_MODEL_GEN_ANNOTATION__LAST_IDENTIFIER = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__LAST_IDENTIFIER;
+
+		/**
+	 * The feature id for the '<em><b>Generated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	public static final int EDATA_TYPE_MODEL_GEN_ANNOTATION__GENERATED = AnnotationsmodelPackage.EDATA_TYPE_ANNOTATION__GENERATED;
 
 		/**
 	 * The feature id for the '<em><b>EClassifier</b></em>' reference.
@@ -2673,6 +2745,19 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 	}
 
   /**
+	 * Returns the meta object for the reference list '{@link org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation#getEAllStructuralFeatureModelGenAnnotations <em>EAll Structural Feature Model Gen Annotations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>EAll Structural Feature Model Gen Annotations</em>'.
+	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EClassModelGenAnnotation#getEAllStructuralFeatureModelGenAnnotations()
+	 * @see #getEClassModelGenAnnotation()
+	 * @generated
+	 */
+	public EReference getEClassModelGenAnnotation_EAllStructuralFeatureModelGenAnnotations() {
+		return (EReference)eClassModelGenAnnotationEClass.getEStructuralFeatures().get(11);
+	}
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnnotationDefinition <em>EData Type Model Gen Annotation Definition</em>}'.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @return the meta object for class '<em>EData Type Model Gen Annotation Definition</em>'.
@@ -3178,6 +3263,7 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 		createEReference(eClassModelGenAnnotationEClass, ECLASS_MODEL_GEN_ANNOTATION__ESTRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS);
 		createEAttribute(eClassModelGenAnnotationEClass, ECLASS_MODEL_GEN_ANNOTATION__DAO_QUALIFIED_CLASS_NAME);
 		createEReference(eClassModelGenAnnotationEClass, ECLASS_MODEL_GEN_ANNOTATION__DAO_FINDERS);
+		createEReference(eClassModelGenAnnotationEClass, ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS);
 
 		eDataTypeModelGenAnnotationDefinitionEClass = createEClass(EDATA_TYPE_MODEL_GEN_ANNOTATION_DEFINITION);
 		createEAttribute(eDataTypeModelGenAnnotationDefinitionEClass, EDATA_TYPE_MODEL_GEN_ANNOTATION_DEFINITION__INSTANCE_CLASS_NAME);
@@ -3323,6 +3409,7 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
 		initEReference(getEClassModelGenAnnotation_EStructuralFeatureModelGenAnnotations(), this.getEStructuralFeatureModelGenAnnotation(), null, "eStructuralFeatureModelGenAnnotations", null, 0, -1, EClassModelGenAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		initEAttribute(getEClassModelGenAnnotation_DaoQualifiedClassName(), theEcorePackage.getEString(), "daoQualifiedClassName", null, 0, 1, EClassModelGenAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 		initEReference(getEClassModelGenAnnotation_DaoFinders(), this.getDaoFinderDefinition(), null, "daoFinders", null, 0, 1, EClassModelGenAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
+		initEReference(getEClassModelGenAnnotation_EAllStructuralFeatureModelGenAnnotations(), this.getEStructuralFeatureModelGenAnnotation(), null, "eAllStructuralFeatureModelGenAnnotations", null, 0, -1, EClassModelGenAnnotation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
 
 		initEClass(eDataTypeModelGenAnnotationDefinitionEClass, EDataTypeModelGenAnnotationDefinition.class, "EDataTypeModelGenAnnotationDefinition", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS); //$NON-NLS-1$
 		initEAttribute(getEDataTypeModelGenAnnotationDefinition_InstanceClassName(), theEcorePackage.getEString(), "instanceClassName", null, 0, 1, EDataTypeModelGenAnnotationDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED); //$NON-NLS-1$
@@ -3778,6 +3865,14 @@ public class ModelcodegeneratorPackage extends EPackageImpl {
     public static final EReference ECLASS_MODEL_GEN_ANNOTATION__DAO_FINDERS = eINSTANCE.getEClassModelGenAnnotation_DaoFinders();
 
     /**
+		 * The meta object literal for the '<em><b>EAll Structural Feature Model Gen Annotations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		public static final EReference ECLASS_MODEL_GEN_ANNOTATION__EALL_STRUCTURAL_FEATURE_MODEL_GEN_ANNOTATIONS = eINSTANCE.getEClassModelGenAnnotation_EAllStructuralFeatureModelGenAnnotations();
+
+				/**
 		 * The meta object literal for the '{@link org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnnotationDefinition <em>EData Type Model Gen Annotation Definition</em>}' class.
 		 * <!-- begin-user-doc --> <!-- end-user-doc -->
 		 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EDataTypeModelGenAnnotationDefinition

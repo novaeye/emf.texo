@@ -56,7 +56,7 @@ public class Bz403161_2ModelPackage extends ModelPackage {
    * 
    * @generated
    */
-  public static final int TEST403161_2_NAME_FEATURE_ID = 1;
+  public static final int TEST403161_2_SUBNAME_FEATURE_ID = 1;
 
   /**
    * The static member with the instance of this {@link ModelPackage}. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -149,14 +149,14 @@ public class Bz403161_2ModelPackage extends ModelPackage {
   }
 
   /**
-   * Returns the {@link EStructuralFeature} '<em><b>Test403161_2.name</b></em>'. <!-- begin-user-doc --> <!--
+   * Returns the {@link EStructuralFeature} '<em><b>Test403161_2.subName</b></em>'. <!-- begin-user-doc --> <!--
    * end-user-doc -->
    * 
-   * @return an instance of the {@link EStructuralFeature}: '<em><b>Test403161_2.name</b></em>'.
+   * @return an instance of the {@link EStructuralFeature}: '<em><b>Test403161_2.subName</b></em>'.
    * @generated
    */
-  public EAttribute getTest403161_2_Name() {
-    return (EAttribute) getTest403161_2EClass().getEAllStructuralFeatures().get(TEST403161_2_NAME_FEATURE_ID);
+  public EAttribute getTest403161_2_SubName() {
+    return (EAttribute) getTest403161_2EClass().getEAllStructuralFeatures().get(TEST403161_2_SUBNAME_FEATURE_ID);
   }
 
   /**
