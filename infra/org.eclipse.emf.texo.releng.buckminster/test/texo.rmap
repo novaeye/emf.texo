@@ -117,7 +117,7 @@
       		</uri>
     	</provider>
 		<provider readerType="p2" componentTypes="osgi.bundle" mutable="false" source="false">
-			<uri format="{0}/tools/orbit/downloads/drops/R20120526062928/repository/">
+			<uri format="{0}/tools/orbit/downloads/drops/S20130308121626/repository/">
 				<bc:propertyRef key="eclipse.download"/>
       		</uri>
 		</provider>
