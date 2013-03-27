@@ -3,7 +3,6 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.listunion;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -171,7 +170,7 @@ public class ListunionModelFactory implements ModelFactory {
     case ListunionModelPackage.ZIPUNIONSTYPE_CLASSIFIER_ID:
       return convertZipUnionsTypeToString((String) value);
     case ListunionModelPackage.SIMPLEUNIONTYPE_CLASSIFIER_ID:
-      return convertSimpleUnionTypeToString(value);
+      return convertSimpleUnionTypeToString((Object) value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPE_CLASSIFIER_ID:
       return convertSimpleStringUnionTypeToString((String) value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPEMEMBER0_CLASSIFIER_ID:
@@ -735,7 +734,7 @@ public class ListunionModelFactory implements ModelFactory {
         getTarget().setZipUnions((List<String>) value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNION_FEATURE_ID:
-        getTarget().setSimpleUnion(value);
+        getTarget().setSimpleUnion((Object) value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
         getTarget().setSimpleUnions((List<Object>) value);
@@ -764,7 +763,7 @@ public class ListunionModelFactory implements ModelFactory {
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
-        getTarget().getSimpleUnions().add(value);
+        getTarget().getSimpleUnions().add((Object) value);
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:

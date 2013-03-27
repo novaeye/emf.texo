@@ -3,7 +3,6 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.simpletypes;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;

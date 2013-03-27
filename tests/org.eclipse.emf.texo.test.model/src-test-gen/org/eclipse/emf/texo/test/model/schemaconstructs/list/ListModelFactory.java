@@ -2,7 +2,6 @@ package org.eclipse.emf.texo.test.model.schemaconstructs.list;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
