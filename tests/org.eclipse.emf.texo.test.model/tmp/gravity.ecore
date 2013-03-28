@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="db"
+    nsURI="com.remainsoftware" nsPrefix="gravity.core">
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;APPLICATION&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="lifeCycle" eType="#//LifeCycle"/>
+    </eOperations>
+    <eOperations name="removeLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="lifeCycle" eType="#//LifeCycle"/>
+    </eOperations>
+    <eOperations name="setLifeCycles">
+      <eParameters name="lifeCycles" upperBound="-1" eType="#//LifeCycle"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifeCycles" upperBound="-1"
+        eType="#//LifeCycle">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = LifeCycle.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE }) &#xD;&#xA;@JoinTable(name = &quot;APP_LIFECYCLE&quot;, joinColumns = @JoinColumn(name = APPLICATION_ID, referencedColumnName = APPLICATION_ID),inverseJoinColumns = @JoinColumn(name = LifeCycle.LIFECYCLE_ID, referencedColumnName = LifeCycle.LIFECYCLE_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeCycle">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;LIFECYCLE&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addApplication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="application" eType="#//Application"/>
+    </eOperations>
+    <eOperations name="removeApplication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="application" eType="#//Application"/>
+    </eOperations>
+    <eOperations name="addStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="removeStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="createSlave" eType="#//LifeCycle"/>
+    <eOperations name="unslave"/>
+    <eOperations name="setApplications">
+      <eParameters name="applications" upperBound="-1" eType="#//Application"/>
+    </eOperations>
+    <eOperations name="setStages">
+      <eParameters name="stages" upperBound="-1" eType="#//Stage"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Application.class, fetch = FetchType.LAZY, mappedBy = &quot;lifeCycles&quot;, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;APP_LIFECYCLE&quot;, joinColumns = @JoinColumn(name = LifeCycle.LIFECYCLE_ID, referencedColumnName = LifeCycle.LIFECYCLE_ID), inverseJoinColumns = @JoinColumn(name =Application.APPLICATION_ID , referencedColumnName = Application.APPLICATION_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stages" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Stage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;LIFECYCLE_STAGE&quot;, joinColumns = @JoinColumn(name = LIFECYCLE_ID, referencedColumnName = LIFECYCLE_ID), inverseJoinColumns = @JoinColumn(name = Stage.STAGE_ID, referencedColumnName = Stage.STAGE_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slaves" upperBound="-1"
+        eType="#//LifeCycle">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = LifeCycle.class, mappedBy = &quot;master&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="master" eType="#//LifeCycle">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = LifeCycle.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = &quot;MASTER_LIFECYCLE_ID&quot;, referencedColumnName = LIFECYCLE_ID, nullable = true)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stage">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;STAGE&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addNextStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="removeNextStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="addPrevStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="removePrevStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="addSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="subStage" lowerBound="1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="removeSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="subStage" lowerBound="1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="addLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="lifeCycle" lowerBound="1" eType="#//LifeCycle"/>
+    </eOperations>
+    <eOperations name="removeLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="lifeCycle" lowerBound="1" eType="#//LifeCycle"/>
+    </eOperations>
+    <eOperations name="createSlave" eType="#//Stage"/>
+    <eOperations name="createLinkedSlave" upperBound="-1" eType="#//Stage"/>
+    <eOperations name="createPeer" eType="#//Stage"/>
+    <eOperations name="unslave"/>
+    <eOperations name="unpeer"/>
+    <eOperations name="setLifeCycles">
+      <eParameters name="lifeCycles" upperBound="-1" eType="#//LifeCycle"/>
+    </eOperations>
+    <eOperations name="setSubStages">
+      <eParameters name="subStages" upperBound="-1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="setNextStages">
+      <eParameters name="nextStages" upperBound="-1" eType="#//Stage"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lifecycles" upperBound="-1"
+        eType="#//LifeCycle">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = LifeCycle.class, fetch = FetchType.LAZY, mappedBy = &quot;stages&quot;, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)&#xD;&#xA;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subStages" upperBound="-1"
+        eType="#//SubStage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = SubStage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;STAGE_SUBSTAGE&quot;, joinColumns = @JoinColumn(name = STAGE_ID, referencedColumnName = STAGE_ID), inverseJoinColumns = @JoinColumn(name = SubStage.SUBSTAGE_ID, referencedColumnName = SubStage.SUBSTAGE_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStages" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Stage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;PREV_NEXT_STAGE&quot;, joinColumns = @JoinColumn(name = &quot;PREV_STAGE_ID&quot;, referencedColumnName = STAGE_ID), inverseJoinColumns = @JoinColumn(name = &quot;NEXT_STAGE_ID&quot;, referencedColumnName = STAGE_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prevStages" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Stage.class, mappedBy = &quot;nextStages&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="slaves" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Stage.class, mappedBy = &quot;master&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;STAGE&quot;, joinColumns = @JoinColumn(name = &quot;MASTER_STAGE_ID&quot;, referencedColumnName = STAGE_ID, nullable = true))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="peers" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Stage.class, mappedBy = &quot;masterPeer&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="master" eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = Stage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = &quot;MASTER_STAGE_ID&quot;, referencedColumnName = STAGE_ID, nullable = true)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="masterPeer" eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = Stage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = &quot;MASTER_STAGE_ID&quot;, referencedColumnName = STAGE_ID, nullable = true)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubStage">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;SUBATAGE&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="route" lowerBound="1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="removeRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="route" lowerBound="1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="addStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="removeStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="stage" lowerBound="1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="hasNextSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="hasPreviousSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="setRoutes">
+      <eParameters name="routes" upperBound="-1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="setStages">
+      <eParameters name="stages" upperBound="-1" eType="#//Stage"/>
+    </eOperations>
+    <eOperations name="setSubstagePlatforms">
+      <eParameters name="platforms" upperBound="-1" eType="#//Platform"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stages" upperBound="-1"
+        eType="#//Stage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Stage.class, fetch = FetchType.LAZY,mappedBy = &quot;subStages&quot;, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="routes" upperBound="-1"
+        eType="#//Route">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Route.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;SUBSTAGE_ROUTE&quot;, joinColumns = @JoinColumn(name = SUBSTAGE_ID, referencedColumnName = SUBSTAGE_ID),&#x9;inverseJoinColumns = @JoinColumn(name = Route.ROUTE_ID, referencedColumnName = Route.ROUTE_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previousSubStage" eType="#//SubStage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToOne(targetEntity = SubStage.class,fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = &quot;PREV_SUBSTAGE_ID&quot;, unique = true, nullable = true, updatable = true)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextSubStage" eType="#//SubStage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToOne(targetEntity = SubStage.class, fetch = FetchType.LAZY,cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = &quot;NEXT_SUBSTAGE_ID&quot;, unique = true, nullable = true, updatable = true)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="substagePlatforms" upperBound="-1"
+        eType="#//Platform">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Platform.class, mappedBy = &quot;subStage&quot;,fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;uriString ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;ROUTE&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="location" lowerBound="1" eType="#//Location"/>
+    </eOperations>
+    <eOperations name="removeLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="location" lowerBound="1" eType="#//Location"/>
+    </eOperations>
+    <eOperations name="addSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="subStage" lowerBound="1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="removeSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="subStage" lowerBound="1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="setSubStages">
+      <eParameters name="subStages" upperBound="-1" eType="#//SubStage"/>
+    </eOperations>
+    <eOperations name="setLocations">
+      <eParameters name="locations" upperBound="-1" eType="#//Location"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subStages" upperBound="-1"
+        eType="#//SubStage">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = SubStage.class, mappedBy = &quot;routes&quot;,fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Location.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinTable(name = &quot;ROUTE_LOCATION&quot;, joinColumns = @JoinColumn(name = ROUTE_ID, referencedColumnName = ROUTE_ID),inverseJoinColumns = @JoinColumn(name = Location.LOCATION_ID, referencedColumnName = Location.LOCATION_ID))&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;LOCATION&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="component" lowerBound="1" eType="#//Component"/>
+    </eOperations>
+    <eOperations name="removeComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="component" lowerBound="1" eType="#//Component"/>
+    </eOperations>
+    <eOperations name="addRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="route" lowerBound="1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="removeRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="route" lowerBound="1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="setRoutes">
+      <eParameters name="routes" upperBound="-1" eType="#//Route"/>
+    </eOperations>
+    <eOperations name="setComponents">
+      <eParameters name="components" upperBound="-1" eType="#//Component"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =TYPE,length = 15)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Transient"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name = URI, length =500, nullable = false)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="routes" upperBound="-1"
+        eType="#//Route">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToMany(targetEntity = Route.class, mappedBy = &quot;locations&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;name ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Component.class, mappedBy = &quot;location&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;uriString ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platform" lowerBound="1"
+        eType="#//Platform" resolveProxies="false">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = Platform.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = Platform.PLATFORM_ID)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Platform">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;PLATFORM&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="addLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="location" lowerBound="1" eType="#//Location"/>
+    </eOperations>
+    <eOperations name="removeLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="location" lowerBound="1" eType="#//Location"/>
+    </eOperations>
+    <eOperations name="setLocations">
+      <eParameters name="locations" upperBound="-1" eType="#//Location"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Transient"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Transient"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platformType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformManager" eType="#//PlatformManager"
+        resolveProxies="false">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = PlatformManager.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = PlatformManager.PLATFORM_MANAGER_ID, nullable = false)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location" unsettable="true">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Location.class, mappedBy = &quot;platform&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;uriString ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subStage" eType="#//SubStage"
+        resolveProxies="false">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = SubStage.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = SubStage.SUBSTAGE_ID)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlatformManager">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;PLATFORMMANAGER&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eOperations name="manage">
+      <eParameters name="platform" lowerBound="1" eType="#//Platform"/>
+    </eOperations>
+    <eOperations name="unmanage">
+      <eParameters name="platform" lowerBound="1" eType="#//Platform"/>
+    </eOperations>
+    <eOperations name="setManagedPlatforms">
+      <eParameters name="managedPlatforms" upperBound="-1" eType="#//Platform"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uriString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name = URI, length =500, nullable = false)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Transient"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="managedPlatforms" upperBound="-1"
+        eType="#//Platform">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@OneToMany(targetEntity = Platform.class, mappedBy = &quot;platformManager&quot;, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@OrderBy(&quot;uriString ASC&quot;)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eAnnotations source="teneo.jpa">
+      <details key="value" value="@Table(name = &quot;COMPONENT&quot;)&#xD;&#xA;@Inheritance(strategy=SINGLE_TABLE)&#xD;&#xA;"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =NAME,length = 50)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Column(name =DESCRIPTION,length = 1000)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@Transient"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"
+        resolveProxies="false">
+      <eAnnotations source="teneo.jpa">
+        <details key="value" value="@ManyToOne(targetEntity = Location.class, fetch = FetchType.LAZY, cascade = { CascadeType.MERGE })&#xD;&#xA;@JoinColumn(name = Location.LOCATION_ID, nullable = false)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eSubpackages name="gravityInterfaces" nsURI="com.remainsoftware.interfaces" nsPrefix="gravity.core">
+    <eClassifiers xsi:type="ecore:EClass" name="IApplication" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setDescription">
+        <eParameters name="description" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getLifeCycles" upperBound="-1" eType="#//gravityInterfaces/ILifeCycle"/>
+      <eOperations name="setLifeCycles">
+        <eParameters name="lifeCycles" upperBound="-1" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+      <eOperations name="addLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="lifeCycle" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+      <eOperations name="removeLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="lifeCycle" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ILifeCycle" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setDescription">
+        <eParameters name="description" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setStages">
+        <eParameters name="stages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="getStages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="setApplications">
+        <eParameters name="applications" upperBound="-1" eType="#//gravityInterfaces/IApplication"/>
+      </eOperations>
+      <eOperations name="getApplications" upperBound="-1" eType="#//gravityInterfaces/IApplication"/>
+      <eOperations name="addStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="removeStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="addApplication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="application" lowerBound="1" eType="#//gravityInterfaces/IApplication"/>
+      </eOperations>
+      <eOperations name="removeApplication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="application" lowerBound="1" eType="#//gravityInterfaces/IApplication"/>
+      </eOperations>
+      <eOperations name="isMaster" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="getMaster" eType="#//gravityInterfaces/ILifeCycle"/>
+      <eOperations name="getSlaves" upperBound="-1" eType="#//gravityInterfaces/ILifeCycle"/>
+      <eOperations name="createSlave" eType="#//gravityInterfaces/ILifeCycle"/>
+      <eOperations name="unslave"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IStage" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setDescription">
+        <eParameters name="description" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setLifeCycles">
+        <eParameters name="lifeCycles" upperBound="-1" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+      <eOperations name="getLifeCycles" upperBound="-1" eType="#//gravityInterfaces/ILifeCycle"/>
+      <eOperations name="getSubStages" upperBound="-1" eType="#//gravityInterfaces/ISubStage"/>
+      <eOperations name="setNextStages">
+        <eParameters name="nextStages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="getNextStages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="addNextStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="removeNextStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="getPrevStages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="addPrevStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="removePrevStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="addSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="subStage" lowerBound="1" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="removeSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="subStage" lowerBound="1" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="addLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="lifeCycle" lowerBound="1" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+      <eOperations name="removeLifeCycle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="lifeCycle" lowerBound="1" eType="#//gravityInterfaces/ILifeCycle"/>
+      </eOperations>
+      <eOperations name="getType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EEnum"/>
+      <eOperations name="setType" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EEnum">
+        <eParameters name="type" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EEnum"/>
+      </eOperations>
+      <eOperations name="isMaster" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      <eOperations name="isMasterPeer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="getMaster" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="getSlaves" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="createSlave" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="createLinkedSlave" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="createPeer" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="unslave"/>
+      <eOperations name="unpeer"/>
+      <eOperations name="getMasterPeer" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="getPeers" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ISubStage" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setDescription">
+        <eParameters name="description" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setRoutes">
+        <eParameters name="routes" upperBound="-1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+      <eOperations name="getRoutes" upperBound="-1" eType="#//gravityInterfaces/IRoute"/>
+      <eOperations name="setStages">
+        <eParameters name="stages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="getStages" upperBound="-1" eType="#//gravityInterfaces/IStage"/>
+      <eOperations name="getNextSubStage" eType="#//gravityInterfaces/ISubStage"/>
+      <eOperations name="setNextSubStage">
+        <eParameters name="subStage" ordered="false" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="getPreviousSubStage" eType="#//gravityInterfaces/ISubStage"/>
+      <eOperations name="setPreviousSubStage">
+        <eParameters name="subStage" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="hasNextSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="hasPreviousSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="setSubstagePlatforms">
+        <eParameters name="substagePlatforms" upperBound="-1" eType="#//gravityInterfaces/IPlatform"/>
+      </eOperations>
+      <eOperations name="getSubstagePlatforms" upperBound="-1" eType="#//gravityInterfaces/IPlatform"/>
+      <eOperations name="addRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="route" lowerBound="1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+      <eOperations name="removeRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="route" lowerBound="1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+      <eOperations name="addStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+      <eOperations name="removeStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="stage" lowerBound="1" eType="#//gravityInterfaces/IStage"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IRoute" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setSubStages">
+        <eParameters name="subStages" upperBound="-1" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="getSubStages" upperBound="-1" eType="#//gravityInterfaces/ISubStage"/>
+      <eOperations name="setLocations">
+        <eParameters name="locations" upperBound="-1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+      <eOperations name="getLocations" upperBound="-1" eType="#//gravityInterfaces/ILocation"/>
+      <eOperations name="addLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="location" lowerBound="1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+      <eOperations name="removeLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="location" lowerBound="1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+      <eOperations name="addSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="subStage" lowerBound="1" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+      <eOperations name="removeSubStage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="subStage" lowerBound="1" eType="#//gravityInterfaces/ISubStage"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ILocation" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setUri">
+        <eParameters name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eOperations>
+      <eOperations name="getUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eOperations name="getType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setType">
+        <eParameters name="string" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getComponents" upperBound="-1" eType="#//gravityInterfaces/IComponent"/>
+      <eOperations name="setComponents">
+        <eParameters name="components" upperBound="-1" eType="#//gravityInterfaces/IComponent"/>
+      </eOperations>
+      <eOperations name="getPlatform" eType="#//gravityInterfaces/IPlatform"/>
+      <eOperations name="setPlatform">
+        <eParameters name="platform" lowerBound="1" eType="#//gravityInterfaces/IPlatform"/>
+      </eOperations>
+      <eOperations name="setRoutes">
+        <eParameters name="routes" upperBound="-1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+      <eOperations name="getRoutes" upperBound="-1" eType="#//gravityInterfaces/IRoute"/>
+      <eOperations name="addComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="component" lowerBound="1" eType="#//gravityInterfaces/IComponent"/>
+      </eOperations>
+      <eOperations name="removeComponent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="component" lowerBound="1" eType="#//gravityInterfaces/IComponent"/>
+      </eOperations>
+      <eOperations name="addRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="route" lowerBound="1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+      <eOperations name="removeRoute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="route" lowerBound="1" eType="#//gravityInterfaces/IRoute"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IPlatform" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setUri">
+        <eParameters name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eOperations>
+      <eOperations name="getUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eOperations name="getPlatformManager" eType="#//gravityInterfaces/IPlatformManager"/>
+      <eOperations name="setPlatformManager">
+        <eParameters name="platformManager" lowerBound="1" eType="#//gravityInterfaces/IPlatformManager"/>
+      </eOperations>
+      <eOperations name="getLocations" upperBound="-1" eType="#//gravityInterfaces/ILocation"/>
+      <eOperations name="setLocations">
+        <eParameters name="locations" upperBound="-1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+      <eOperations name="setPlatformType">
+        <eParameters name="type" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getPlatformType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="addLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="location" lowerBound="1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+      <eOperations name="removeLocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="location" lowerBound="1" eType="#//gravityInterfaces/ILocation"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IPlatformManager" abstract="true"
+        interface="true" eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="setUri">
+        <eParameters name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eOperations>
+      <eOperations name="getUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      <eOperations name="getManagedPlatforms" upperBound="-1" eType="#//gravityInterfaces/IPlatform"/>
+      <eOperations name="setManagedPlatforms">
+        <eParameters name="platforms" upperBound="-1" eType="#//gravityInterfaces/IPlatform"/>
+      </eOperations>
+      <eOperations name="manage">
+        <eParameters name="platform" lowerBound="1" eType="#//gravityInterfaces/IPlatform"/>
+      </eOperations>
+      <eOperations name="unmanage">
+        <eParameters name="platform" lowerBound="1" eType="#//gravityInterfaces/IPlatform"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IComponent" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getPreviousVersion" eType="#//gravityInterfaces/IComponent"/>
+      <eOperations name="getNextVersion" eType="#//gravityInterfaces/IComponent"/>
+      <eOperations name="setUri">
+        <eParameters name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eOperations>
+      <eOperations name="getUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IPersistable" abstract="true" interface="true">
+      <eOperations name="getStoreName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="getId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Persistable" abstract="true" interface="true"
+        eSuperTypes="#//gravityInterfaces/IPersistable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" defaultValueLiteral="" iD="true">
+        <eAnnotations source="teneo.jpa">
+          <details key="value" value="@Id&#xD;&#xA;@Column(name = APPLICATION_ID, length =36, nullable = false)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
