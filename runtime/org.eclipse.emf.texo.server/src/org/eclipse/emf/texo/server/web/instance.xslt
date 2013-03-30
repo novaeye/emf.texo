@@ -40,14 +40,7 @@
 						<xsl:call-template name="handleField" />
         			</xsl:for-each>
 					<xsl:for-each select="*">
-						<xsl:choose>
-							<xsl:when test="count(*)>0">
-								<xsl:call-template name="handleManyField" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:call-template name="handleField" />
-							</xsl:otherwise>
-						</xsl:choose>
+						<xsl:call-template name="handleField" />
 					</xsl:for-each>
 				</table>
 			</body>
