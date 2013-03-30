@@ -157,7 +157,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>PurchaseOrder</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -239,7 +241,9 @@ public class FeaturemaptestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Supplier</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

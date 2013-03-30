@@ -117,7 +117,7 @@ public class «this.simpleModelFactoryClassName» implements org.eclipse.emf.tex
 	«FOREACH eClassAnnotation.featureMapFeatures AS featureAnnotation-»
 	  if (eFeature == «this.qualifiedClassName».INSTANCE.get«toFirstUpper(eClassAnnotation.name)»_«toFirstUpper(featureAnnotation.name)»()) {
         final «featureAnnotation.featureMapSimpleClassName-»ModelFeatureMapEntry<«featureAnnotation.featureMapQualifiedClassName-»> entry = new «featureAnnotation.featureMapSimpleClassName-»ModelFeatureMapEntry<«featureAnnotation.featureMapQualifiedClassName-»>();
-        entry.setTarget((«featureAnnotation.featureMapQualifiedClassName-») adaptee);
+        entry.setTarget(«cast(featureAnnotation.featureMapQualifiedClassName)-»adaptee);
         return entry;
       }
 	«ENDFOREACH-»
@@ -170,12 +170,15 @@ public class «this.simpleModelFactoryClassName» implements org.eclipse.emf.tex
 	 *            the object to convert, if value == null then null is returned
 	 * @generated
 	 */
+	«IF this.addSuppressUnchecked-»
+	@SuppressWarnings("unchecked")
+	«ENDIF-»
 	public String convertToString(org.eclipse.emf.ecore.EDataType eDataType, Object value) {
 		switch (eDataType.getClassifierID()) {
 	«FOREACH this.EDataTypeModelGenAnnotations AS eDataTypeAnnotation-»
 		«IF eDataTypeAnnotation.generateCode-»
 			case «this.qualifiedClassName».«toUpperCase(eDataTypeAnnotation.name)»_CLASSIFIER_ID:
-				return convert«toFirstUpper(eDataTypeAnnotation.name)»ToString((«eDataTypeAnnotation.objectClassName»)value);
+				return convert«toFirstUpper(eDataTypeAnnotation.name)»ToString(«cast(eDataTypeAnnotation.objectClassName)»value);
 		«ENDIF-»
 	«ENDFOREACH-»
 		}

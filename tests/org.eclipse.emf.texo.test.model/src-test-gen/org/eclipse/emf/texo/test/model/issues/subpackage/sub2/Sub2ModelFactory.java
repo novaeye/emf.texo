@@ -133,7 +133,9 @@ public class Sub2ModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Sub2Type</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Sub2Type</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

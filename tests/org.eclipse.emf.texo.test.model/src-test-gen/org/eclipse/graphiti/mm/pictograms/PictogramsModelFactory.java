@@ -2,6 +2,7 @@ package org.eclipse.graphiti.mm.pictograms;
 
 import java.util.List;
 import java.util.Set;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -333,7 +334,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Shape</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Shape</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -512,7 +515,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>AnchorContainer</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>AnchorContainer</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -600,7 +605,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ContainerShape</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ContainerShape</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -688,7 +695,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Diagram</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Diagram</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -713,8 +722,9 @@ public class PictogramsModelFactory implements ModelFactory {
     }
 
     /**
-     * @generated
+     * @generatedNOT
      */
+    @SuppressWarnings("deprecation")
     @Override
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -749,9 +759,9 @@ public class PictogramsModelFactory implements ModelFactory {
     }
 
     /**
-     * @generated
+     * @generatedNOT
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "deprecation" })
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
@@ -863,7 +873,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Connection</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Connection</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -966,7 +978,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>PictogramLink</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>PictogramLink</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1035,7 +1049,7 @@ public class PictogramsModelFactory implements ModelFactory {
       switch (featureID) {
 
       case PictogramsModelPackage.PICTOGRAMLINK_BUSINESSOBJECTS_FEATURE_ID:
-        getTarget().getBusinessObjects().add((Object) value);
+        getTarget().getBusinessObjects().add(value);
         return;
       default:
         super.eAddTo(eStructuralFeature, value);
@@ -1060,7 +1074,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Anchor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Anchor</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1265,7 +1281,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>FixPointAnchor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>FixPointAnchor</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1346,7 +1364,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>AdvancedAnchor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>AdvancedAnchor</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1514,7 +1534,9 @@ public class PictogramsModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ChopboxAnchor</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ChopboxAnchor</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

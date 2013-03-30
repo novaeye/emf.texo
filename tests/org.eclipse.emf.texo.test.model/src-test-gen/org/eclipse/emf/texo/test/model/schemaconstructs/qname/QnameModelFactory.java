@@ -160,7 +160,9 @@ public class QnameModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -266,7 +268,9 @@ public class QnameModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Mytest</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Mytest</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

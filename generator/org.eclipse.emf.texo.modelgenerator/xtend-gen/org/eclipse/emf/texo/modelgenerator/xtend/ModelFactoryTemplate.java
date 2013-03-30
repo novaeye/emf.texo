@@ -649,6 +649,14 @@ public class ModelFactoryTemplate extends BaseTemplate {
     _builder.append("     ");
     _builder.append("*/");
     _builder.newLine();
+    {
+      boolean _addSuppressUnchecked = ePackageModelGenAnnotation.getAddSuppressUnchecked();
+      if (_addSuppressUnchecked) {
+        _builder.append("\t");
+        _builder.append("@SuppressWarnings(\"unchecked\")");
+        _builder.newLine();
+      }
+    }
     _builder.append("    ");
     _builder.append("public String convertToString(org.eclipse.emf.ecore.EDataType eDataType, Object value) {");
     _builder.newLine();
@@ -677,10 +685,11 @@ public class ModelFactoryTemplate extends BaseTemplate {
             String _name_13 = eDataTypeAnnotation_1.getName();
             String _firstUpper_7 = TemplateUtil.toFirstUpper(_name_13);
             _builder.append(_firstUpper_7, "        ");
-            _builder.append("ToString((");
+            _builder.append("ToString(");
             String _objectClassName = eDataTypeAnnotation_1.getObjectClassName();
-            _builder.append(_objectClassName, "        ");
-            _builder.append(")value);");
+            String _cast = TemplateUtil.cast(_objectClassName);
+            _builder.append(_cast, "        ");
+            _builder.append("value);");
             _builder.newLineIfNotEmpty();
           }
         }

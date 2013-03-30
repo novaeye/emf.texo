@@ -295,7 +295,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Accounting</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Accounting</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -425,7 +427,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -497,7 +501,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Account</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Account</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -578,7 +584,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>AccountGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>AccountGroup</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -672,7 +680,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Vat</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Vat</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -758,7 +768,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>BalanceAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>BalanceAccount</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -846,7 +858,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Report</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Report</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -937,7 +951,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>JournalGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>JournalGroup</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1044,7 +1060,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ReportGroup</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ReportGroup</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -1259,7 +1277,9 @@ public class AccountingModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>PLAccount</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>PLAccount</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

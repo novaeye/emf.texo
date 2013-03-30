@@ -137,6 +137,7 @@ public class ListModelFactory implements ModelFactory {
    *          the object to convert, if value == null then null is returned
    * @generated
    */
+  @SuppressWarnings("unchecked")
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
     case ListModelPackage.STATELIST_CLASSIFIER_ID:
@@ -341,7 +342,9 @@ public class ListModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -389,6 +392,7 @@ public class ListModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);

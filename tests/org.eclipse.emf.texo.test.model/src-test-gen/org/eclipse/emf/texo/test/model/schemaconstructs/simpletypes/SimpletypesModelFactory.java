@@ -81,7 +81,7 @@ public class SimpletypesModelFactory implements ModelFactory {
   /**
    * Creates a feature map entry instance for a certain EStructuralFeature.
    * 
-   * @param eStructuralFeature
+   * @param eFeature
    *          the feature map feature
    * @return the pojo feature map entry
    * @generated
@@ -264,7 +264,9 @@ public class SimpletypesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleList</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>SimpleList</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -510,7 +512,9 @@ public class SimpletypesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>SimpleType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>SimpleType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -654,6 +658,8 @@ public class SimpletypesModelFactory implements ModelFactory {
   /**
    * The adapter/wrapper for the EClass '<em><b>SimpleTypeObject</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
+   * 
+   * @param <E>
    * 
    * @generated
    */

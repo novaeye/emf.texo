@@ -1671,4 +1671,18 @@ public class EClassModelGenAnnotation extends EClassAnnotation implements EClass
   public String getJavaAnnotation(AnnotationProvider annotationProvider, String identifier) {
     return getJavaAnnotationFromEAnnotation(annotationProvider, identifier);
   }
+
+  public boolean getAddSuppressUnchecked() {
+    for (EStructuralFeatureModelGenAnnotation annotation : getEStructuralFeatureModelGenAnnotations()) {
+      if (!annotation.getEStructuralFeature().isChangeable() || annotation.getEStructuralFeature().isTransient()
+          || annotation.getEStructuralFeature().isVolatile()) {
+        continue;
+      }
+      if (annotation.getObjectType().contains("java.util.List")) { //$NON-NLS-1$
+        return true;
+      }
+    }
+    return false;
+  }
+
 } // EClassModelGenAnnotation

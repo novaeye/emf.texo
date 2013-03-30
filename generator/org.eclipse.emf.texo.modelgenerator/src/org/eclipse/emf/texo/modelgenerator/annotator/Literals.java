@@ -117,12 +117,12 @@ public class Literals {
     } else if (clz == Short.TYPE) {
       return literalValue;
     } else if (clz == Integer.class) {
-      return "new Integer((int)" + literalValue + //$NON-NLS-1$ 
+      return "new Integer(" + literalValue + //$NON-NLS-1$ 
           ")"; //$NON-NLS-1$
     } else if (clz == Integer.TYPE) {
       return literalValue;
     } else if (clz == Long.class) {
-      return "new Long((long)" + literalValue + //$NON-NLS-1$ 
+      return "new Long(" + literalValue + //$NON-NLS-1$ 
           ")"; //$NON-NLS-1$
     } else if (clz == Long.TYPE) {
       return literalValue;
@@ -132,7 +132,7 @@ public class Literals {
     } else if (clz == Float.TYPE) {
       return literalValue + "f"; //$NON-NLS-1$
     } else if (clz == Double.class) {
-      return "new Double((double)" + literalValue + //$NON-NLS-1$ 
+      return "new Double(" + literalValue + //$NON-NLS-1$ 
           ")"; //$NON-NLS-1$
     } else if (clz == Double.TYPE) {
       return literalValue;

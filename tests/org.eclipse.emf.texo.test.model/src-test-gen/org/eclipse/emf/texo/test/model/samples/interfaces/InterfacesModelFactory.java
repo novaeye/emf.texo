@@ -170,8 +170,9 @@ public class InterfacesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>DescribableIdentifiableConcrete</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>DescribableIdentifiableConcrete</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -263,7 +264,9 @@ public class InterfacesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Describable</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Describable</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -342,7 +345,9 @@ public class InterfacesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>IdentifiedType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>IdentifiedType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -509,8 +514,9 @@ public class InterfacesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>IdentifiableConcrete</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>IdentifiableConcrete</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class

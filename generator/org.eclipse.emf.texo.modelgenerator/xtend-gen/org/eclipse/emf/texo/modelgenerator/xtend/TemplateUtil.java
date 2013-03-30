@@ -98,4 +98,14 @@ public class TemplateUtil {
     String _documentation = ModelUtils.getDocumentation(eNamedElement);
     return _documentation;
   }
+  
+  public static String cast(final String value) {
+    String _cast = GenUtils.cast(value);
+    return _cast;
+  }
+  
+  public static String correctTypeDef(final String value) {
+    String _correctTypeDef = GenUtils.correctTypeDef(value);
+    return _correctTypeDef;
+  }
 }

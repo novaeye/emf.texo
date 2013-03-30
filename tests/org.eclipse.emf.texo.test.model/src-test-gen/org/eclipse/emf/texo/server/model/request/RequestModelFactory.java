@@ -204,7 +204,9 @@ public class RequestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ActionType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ActionType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -278,15 +280,15 @@ public class RequestModelFactory implements ModelFactory {
       switch (featureID) {
 
       case RequestModelPackage.ACTIONTYPE_UPDATE_FEATURE_ID:
-        getTarget().getUpdate().add((Object) value);
+        getTarget().getUpdate().add(value);
         return;
 
       case RequestModelPackage.ACTIONTYPE_INSERT_FEATURE_ID:
-        getTarget().getInsert().add((Object) value);
+        getTarget().getInsert().add(value);
         return;
 
       case RequestModelPackage.ACTIONTYPE_DELETE_FEATURE_ID:
-        getTarget().getDelete().add((Object) value);
+        getTarget().getDelete().add(value);
         return;
       default:
         super.eAddTo(eStructuralFeature, value);
@@ -319,7 +321,9 @@ public class RequestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -435,7 +439,9 @@ public class RequestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>QueryType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>QueryType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -556,8 +562,9 @@ public class RequestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>QueryReferingObjectsType</b></em>'. <!-- begin-user-doc --> <!--
-   * end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>QueryReferingObjectsType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -649,7 +656,9 @@ public class RequestModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Parameter</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>Parameter</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -703,7 +712,7 @@ public class RequestModelFactory implements ModelFactory {
         getTarget().setName((String) value);
         return;
       case RequestModelPackage.PARAMETER_VALUE_FEATURE_ID:
-        getTarget().setValue((Object) value);
+        getTarget().setValue(value);
         return;
       case RequestModelPackage.PARAMETER_TYPE_FEATURE_ID:
         getTarget().setType((String) value);

@@ -115,6 +115,26 @@ public class GenUtils {
     javaWords.add("while");//$NON-NLS-1$
   }
 
+  public static String cast(String type) {
+    if (type == null) {
+      return type;
+    }
+    if (type.equals(Object.class.getName())) {
+      return ""; //$NON-NLS-1$
+    }
+    return "(" + type + ")"; //$NON-NLS-1$ //$NON-NLS-2$
+  }
+
+  public static String correctTypeDef(String type) {
+    if (type == null) {
+      return null;
+    }
+    if (type.equals(Class.class.getName())) {
+      return Class.class.getName() + "<?>"; //$NON-NLS-1$
+    }
+    return type;
+  }
+
   /**
    * @return true if the epackage is not a generated EMF epackage.
    * 

@@ -44,13 +44,14 @@ class ModelObjectTemplate extends BaseTemplate {
         '''
 /**
  * The adapter/wrapper for the EClass '<em><b>«eClassModelGenAnnotation.name»</b></em>'.
+ *
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  *
  * @param <E> the domain model java class
  *
  * @generated
-*/
+ */
 public static class «eClassModelGenAnnotation.simpleClassName»ModelObject<E extends «eClassModelGenAnnotation.qualifiedClassName»>
 «IF eClassModelGenAnnotation.hasSuperEClass»
     «var eSuperClassAnnotation = eClassModelGenAnnotation.superEClass »
@@ -103,7 +104,7 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
     /**
      * @generated
      */
-    «IF eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations.exists(e|e.EStructuralFeature.many && e.EStructuralFeature.changeable)»
+    «IF eClassModelGenAnnotation.addSuppressUnchecked || eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations.exists(e|e.EStructuralFeature.many && e.EStructuralFeature.changeable)»
     @SuppressWarnings("unchecked")
     «ENDIF»
     @Override
@@ -113,7 +114,7 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
         «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
             «IF featureAnnotation.EStructuralFeature.changeable»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
-                getTarget().«featureAnnotation.setter»((«featureAnnotation.objectType»)value);
+                getTarget().«featureAnnotation.setter»(«TemplateUtil::cast(featureAnnotation.objectType)»value);
                 return;
             «ENDIF»
         «ENDFOR»
@@ -136,11 +137,11 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
             «IF featureAnnotation.EStructuralFeature.changeable && featureAnnotation.many && !featureAnnotation.itemType.contains(",")»
             «IF featureAnnotation.reference && featureAnnotation.featureMapFeature == null && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
-                getTarget().addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»((«featureAnnotation.itemType»)value);
+                getTarget().addTo«TemplateUtil::toFirstUpper(featureAnnotation.validJavaMemberName)»(«TemplateUtil::cast(featureAnnotation.itemType)»value);
                 return;
             «ELSE»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
-                getTarget().«featureAnnotation.getter»().add((«featureAnnotation.itemType»)value);
+                getTarget().«featureAnnotation.getter»().add(«TemplateUtil::cast(featureAnnotation.itemType)»value);
                 return;
             «ENDIF»
             «ENDIF»

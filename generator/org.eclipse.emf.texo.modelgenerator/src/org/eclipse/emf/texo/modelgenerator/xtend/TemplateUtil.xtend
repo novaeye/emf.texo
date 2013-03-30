@@ -75,4 +75,12 @@ class TemplateUtil {
     def static String getDocumentation(ENamedElement eNamedElement) {
         ModelUtils::getDocumentation(eNamedElement)
     }
+
+    def static String cast(String value) {
+        GenUtils::cast(value)
+    }
+
+    def static String correctTypeDef(String value) {
+        GenUtils::correctTypeDef(value)
+    }
 }

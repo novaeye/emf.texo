@@ -55,7 +55,7 @@ public abstract class AbstractText extends GraphicsAlgorithm {
    * @generated
    */
   @Basic()
-  private Integer angle = new Integer((int) 0);
+  private Integer angle = new Integer(0);
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->

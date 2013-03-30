@@ -157,6 +157,7 @@ public class ListunionModelFactory implements ModelFactory {
    *          the object to convert, if value == null then null is returned
    * @generated
    */
+  @SuppressWarnings("unchecked")
   public String convertToString(EDataType eDataType, Object value) {
     switch (eDataType.getClassifierID()) {
     case ListunionModelPackage.STATELIST_CLASSIFIER_ID:
@@ -170,7 +171,7 @@ public class ListunionModelFactory implements ModelFactory {
     case ListunionModelPackage.ZIPUNIONSTYPE_CLASSIFIER_ID:
       return convertZipUnionsTypeToString((String) value);
     case ListunionModelPackage.SIMPLEUNIONTYPE_CLASSIFIER_ID:
-      return convertSimpleUnionTypeToString((Object) value);
+      return convertSimpleUnionTypeToString(value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPE_CLASSIFIER_ID:
       return convertSimpleStringUnionTypeToString((String) value);
     case ListunionModelPackage.SIMPLESTRINGUNIONTYPEMEMBER0_CLASSIFIER_ID:
@@ -655,7 +656,9 @@ public class ListunionModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>statesByCountry</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -734,7 +737,7 @@ public class ListunionModelFactory implements ModelFactory {
         getTarget().setZipUnions((List<String>) value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNION_FEATURE_ID:
-        getTarget().setSimpleUnion((Object) value);
+        getTarget().setSimpleUnion(value);
         return;
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
         getTarget().setSimpleUnions((List<Object>) value);
@@ -763,7 +766,7 @@ public class ListunionModelFactory implements ModelFactory {
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLEUNIONS_FEATURE_ID:
-        getTarget().getSimpleUnions().add((Object) value);
+        getTarget().getSimpleUnions().add(value);
         return;
 
       case ListunionModelPackage.STATESBYCOUNTRY_SIMPLESTRINGUNIONS_FEATURE_ID:

@@ -179,11 +179,11 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
   protected String getObjectType(EStructuralFeature eStructuralFeature,
       EStructuralFeatureModelGenAnnotation genAnnotation) {
     if (getType(eStructuralFeature, genAnnotation).contains(GenConstants.DOT)) {
-      return getType(eStructuralFeature, genAnnotation);
+      return GenUtils.correctTypeDef(getType(eStructuralFeature, genAnnotation));
     }
     final EDataType eDataType = ((EAttribute) eStructuralFeature).getEAttributeType();
     final EDataTypeModelGenAnnotationDefinition annotation = getEDataTypeModelGenAnnotation(eDataType);
-    return annotation.getObjectClassName();
+    return GenUtils.correctTypeDef(annotation.getObjectClassName());
   }
 
   /*
@@ -195,12 +195,12 @@ public class ModelEAttributeAnnotator extends ModelEStructuralFeatureAnnotator i
   @Override
   protected String getItemType(EStructuralFeature eFeature) {
     if (FeatureMapUtil.isFeatureMap(eFeature)) {
-      return getFeatureMapQualifiedClassName(eFeature);
+      return GenUtils.correctTypeDef(getFeatureMapQualifiedClassName(eFeature));
     }
     final EAttribute eAttribute = (EAttribute) eFeature;
     final EDataType eDataType = eAttribute.getEAttributeType();
     final EDataTypeModelGenAnnotationDefinition annotation = getEDataTypeModelGenAnnotation(eDataType);
-    return annotation.getObjectClassName();
+    return GenUtils.correctTypeDef(annotation.getObjectClassName());
   }
 
   /** @return true if efeature isMany or {@link #isManyInstanceClass()} is true */

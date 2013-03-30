@@ -309,7 +309,9 @@ public class TypesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ManyTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ManyTypes</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -396,7 +398,7 @@ public class TypesModelFactory implements ModelFactory {
         getTarget().setFloatObject((List<Float>) value);
         return;
       case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
-        getTarget().setClazz((Set<Class>) value);
+        getTarget().setClazz((Set<Class<?>>) value);
         return;
       case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
         getTarget().setCharObject((List<Character>) value);
@@ -453,7 +455,7 @@ public class TypesModelFactory implements ModelFactory {
         return;
 
       case TypesModelPackage.MANYTYPES_CLAZZ_FEATURE_ID:
-        getTarget().getClazz().add((Class) value);
+        getTarget().getClazz().add((Class<?>) value);
         return;
 
       case TypesModelPackage.MANYTYPES_CHAROBJECT_FEATURE_ID:
@@ -554,7 +556,9 @@ public class TypesModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>SingleTypes</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -670,7 +674,7 @@ public class TypesModelFactory implements ModelFactory {
         getTarget().setFloatObject((Float) value);
         return;
       case TypesModelPackage.SINGLETYPES_CLAZZ_FEATURE_ID:
-        getTarget().setClazz((Class) value);
+        getTarget().setClazz((Class<?>) value);
         return;
       case TypesModelPackage.SINGLETYPES_CHAR__FEATURE_ID:
         getTarget().setChar_((Character) value);

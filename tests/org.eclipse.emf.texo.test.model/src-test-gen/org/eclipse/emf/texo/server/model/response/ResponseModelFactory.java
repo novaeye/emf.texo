@@ -189,7 +189,9 @@ public class ResponseModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>DocumentRoot</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -305,7 +307,9 @@ public class ResponseModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ErrorType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ErrorType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -402,7 +406,9 @@ public class ResponseModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ResponseType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ResponseType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -486,7 +492,7 @@ public class ResponseModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ResponseModelPackage.RESPONSETYPE_DATA_FEATURE_ID:
-        getTarget().getData().add((Object) value);
+        getTarget().getData().add(value);
         return;
       default:
         super.eAddTo(eStructuralFeature, value);
@@ -511,7 +517,9 @@ public class ResponseModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>ResultType</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>ResultType</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -585,15 +593,15 @@ public class ResponseModelFactory implements ModelFactory {
       switch (featureID) {
 
       case ResponseModelPackage.RESULTTYPE_UPDATED_FEATURE_ID:
-        getTarget().getUpdated().add((Object) value);
+        getTarget().getUpdated().add(value);
         return;
 
       case ResponseModelPackage.RESULTTYPE_INSERTED_FEATURE_ID:
-        getTarget().getInserted().add((Object) value);
+        getTarget().getInserted().add(value);
         return;
 
       case ResponseModelPackage.RESULTTYPE_DELETED_FEATURE_ID:
-        getTarget().getDeleted().add((Object) value);
+        getTarget().getDeleted().add(value);
         return;
       default:
         super.eAddTo(eStructuralFeature, value);

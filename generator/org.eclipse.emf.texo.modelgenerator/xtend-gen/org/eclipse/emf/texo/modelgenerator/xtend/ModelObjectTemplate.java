@@ -55,6 +55,9 @@ public class ModelObjectTemplate extends BaseTemplate {
     _builder.append("</b></em>\'.");
     _builder.newLineIfNotEmpty();
     _builder.append(" ");
+    _builder.append("*");
+    _builder.newLine();
+    _builder.append(" ");
     _builder.append("* <!-- begin-user-doc -->");
     _builder.newLine();
     _builder.append(" ");
@@ -72,6 +75,7 @@ public class ModelObjectTemplate extends BaseTemplate {
     _builder.append(" ");
     _builder.append("* @generated");
     _builder.newLine();
+    _builder.append(" ");
     _builder.append("*/");
     _builder.newLine();
     _builder.append("public static class ");
@@ -257,24 +261,31 @@ public class ModelObjectTemplate extends BaseTemplate {
     _builder.append("*/");
     _builder.newLine();
     {
-      EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_1 = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
-      final Function1<EStructuralFeatureModelGenAnnotation,Boolean> _function = new Function1<EStructuralFeatureModelGenAnnotation,Boolean>() {
-          public Boolean apply(final EStructuralFeatureModelGenAnnotation e) {
-            boolean _and = false;
-            EStructuralFeature _eStructuralFeature = e.getEStructuralFeature();
-            boolean _isMany = _eStructuralFeature.isMany();
-            if (!_isMany) {
-              _and = false;
-            } else {
-              EStructuralFeature _eStructuralFeature_1 = e.getEStructuralFeature();
-              boolean _isChangeable = _eStructuralFeature_1.isChangeable();
-              _and = (_isMany && _isChangeable);
+      boolean _or = false;
+      boolean _addSuppressUnchecked = eClassModelGenAnnotation.getAddSuppressUnchecked();
+      if (_addSuppressUnchecked) {
+        _or = true;
+      } else {
+        EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations_1 = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
+        final Function1<EStructuralFeatureModelGenAnnotation,Boolean> _function = new Function1<EStructuralFeatureModelGenAnnotation,Boolean>() {
+            public Boolean apply(final EStructuralFeatureModelGenAnnotation e) {
+              boolean _and = false;
+              EStructuralFeature _eStructuralFeature = e.getEStructuralFeature();
+              boolean _isMany = _eStructuralFeature.isMany();
+              if (!_isMany) {
+                _and = false;
+              } else {
+                EStructuralFeature _eStructuralFeature_1 = e.getEStructuralFeature();
+                boolean _isChangeable = _eStructuralFeature_1.isChangeable();
+                _and = (_isMany && _isChangeable);
+              }
+              return Boolean.valueOf(_and);
             }
-            return Boolean.valueOf(_and);
-          }
-        };
-      boolean _exists = IterableExtensions.<EStructuralFeatureModelGenAnnotation>exists(_eStructuralFeatureModelGenAnnotations_1, _function);
-      if (_exists) {
+          };
+        boolean _exists = IterableExtensions.<EStructuralFeatureModelGenAnnotation>exists(_eStructuralFeatureModelGenAnnotations_1, _function);
+        _or = (_addSuppressUnchecked || _exists);
+      }
+      if (_or) {
         _builder.append("    ");
         _builder.append("@SuppressWarnings(\"unchecked\")");
         _builder.newLine();
@@ -318,10 +329,11 @@ public class ModelObjectTemplate extends BaseTemplate {
             _builder.append("getTarget().");
             String _setter = featureAnnotation_1.getSetter();
             _builder.append(_setter, "            ");
-            _builder.append("((");
+            _builder.append("(");
             String _objectType = featureAnnotation_1.getObjectType();
-            _builder.append(_objectType, "            ");
-            _builder.append(")value);");
+            String _cast = TemplateUtil.cast(_objectType);
+            _builder.append(_cast, "            ");
+            _builder.append("value);");
             _builder.newLineIfNotEmpty();
             _builder.append("        ");
             _builder.append("    ");
@@ -428,10 +440,11 @@ public class ModelObjectTemplate extends BaseTemplate {
                 String _validJavaMemberName = featureAnnotation_2.getValidJavaMemberName();
                 String _firstUpper_1 = TemplateUtil.toFirstUpper(_validJavaMemberName);
                 _builder.append(_firstUpper_1, "            ");
-                _builder.append("((");
+                _builder.append("(");
                 String _itemType_1 = featureAnnotation_2.getItemType();
-                _builder.append(_itemType_1, "            ");
-                _builder.append(")value);");
+                String _cast_1 = TemplateUtil.cast(_itemType_1);
+                _builder.append(_cast_1, "            ");
+                _builder.append("value);");
                 _builder.newLineIfNotEmpty();
                 _builder.append("        ");
                 _builder.append("    ");
@@ -457,10 +470,11 @@ public class ModelObjectTemplate extends BaseTemplate {
                 _builder.append("getTarget().");
                 String _getter_1 = featureAnnotation_2.getGetter();
                 _builder.append(_getter_1, "            ");
-                _builder.append("().add((");
+                _builder.append("().add(");
                 String _itemType_2 = featureAnnotation_2.getItemType();
-                _builder.append(_itemType_2, "            ");
-                _builder.append(")value);");
+                String _cast_2 = TemplateUtil.cast(_itemType_2);
+                _builder.append(_cast_2, "            ");
+                _builder.append("value);");
                 _builder.newLineIfNotEmpty();
                 _builder.append("        ");
                 _builder.append("    ");

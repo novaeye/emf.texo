@@ -63,7 +63,7 @@ public abstract class AbstractModelObject<E extends Object> implements ModelObje
   /*
    * (non-Javadoc)
    * 
-   * @seeorg.eclipse.emf.texo.model.ModelObject#eSet(org.eclipse.emf.ecore. EStructuralFeature, java.lang.Object)
+   * @see org.eclipse.emf.texo.model.ModelObject#eSet(org.eclipse.emf.ecore. EStructuralFeature, java.lang.Object)
    */
   public void eSet(final EStructuralFeature eStructuralFeature, final Object value) {
     throw new IllegalArgumentException("EStructuralFeature: " + eStructuralFeature + " not found in EClass " //$NON-NLS-1$ //$NON-NLS-2$

@@ -196,7 +196,9 @@ public class AnytypeModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>A</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>A</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -292,7 +294,9 @@ public class AnytypeModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>B</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>B</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -373,7 +377,9 @@ public class AnytypeModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>C</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>C</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -447,7 +453,9 @@ public class AnytypeModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>TestAny</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc -->
+   * The adapter/wrapper for the EClass '<em><b>TestAny</b></em>'.
+   * 
+   * <!-- begin-user-doc --> <!-- end-user-doc -->
    * 
    * @param <E>
    *          the domain model java class
@@ -507,7 +515,7 @@ public class AnytypeModelFactory implements ModelFactory {
         getTarget().setName((String) value);
         return;
       case AnytypeModelPackage.TESTANY_SINGLEANYTYPE_FEATURE_ID:
-        getTarget().setSingleAnyType((Object) value);
+        getTarget().setSingleAnyType(value);
         return;
       case AnytypeModelPackage.TESTANY_MULTIANYTYPE_FEATURE_ID:
         getTarget().setMultiAnyType((List<Object>) value);
@@ -535,7 +543,7 @@ public class AnytypeModelFactory implements ModelFactory {
       switch (featureID) {
 
       case AnytypeModelPackage.TESTANY_MULTIANYTYPE_FEATURE_ID:
-        getTarget().getMultiAnyType().add((Object) value);
+        getTarget().getMultiAnyType().add(value);
         return;
 
       case AnytypeModelPackage.TESTANY_MYANY_FEATURE_ID:

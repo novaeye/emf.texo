@@ -16,3 +16,4 @@ boolean isDocumentRoot( EClass eClass ): JAVA org.eclipse.emf.texo.modelgenerato
 String format( String value ): JAVA org.eclipse.emf.texo.modelgenerator.annotator.GenUtils.formatIdentifier(java.lang.String);
 boolean isMixed( EStructuralFeature eStructuralFeature ): JAVA org.eclipse.emf.texo.utils.ModelUtils.isMixed(org.eclipse.emf.ecore.EStructuralFeature);
 String getDocumentation(ENamedElement eNamedElement): JAVA org.eclipse.emf.texo.utils.ModelUtils.getDocumentation(org.eclipse.emf.ecore.ENamedElement);
+String cast( String value ): JAVA org.eclipse.emf.texo.modelgenerator.annotator.GenUtils.cast(java.lang.String);

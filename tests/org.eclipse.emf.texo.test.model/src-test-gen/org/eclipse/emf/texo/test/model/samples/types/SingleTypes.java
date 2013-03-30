@@ -54,7 +54,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
-  private Integer integerObject = new Integer((int) 100);
+  private Integer integerObject = new Integer(100);
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -70,7 +70,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
-  private Long longObject = new Long((long) 100);
+  private Long longObject = new Long(100);
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -86,7 +86,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Basic()
-  private Double doubleObject = new Double((double) 100.0);
+  private Double doubleObject = new Double(100.0);
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -110,7 +110,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Transient()
-  private Class clazz = null;
+  private Class<?> clazz = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -447,7 +447,7 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>clazz</b></em>' feature
    * @generated
    */
-  public Class getClazz() {
+  public Class<?> getClazz() {
     return clazz;
   }
 
@@ -460,7 +460,7 @@ public class SingleTypes extends Identifiable {
    *          the new value of the '{@link SingleTypes#getClazz() clazz}' feature.
    * @generated
    */
-  public void setClazz(Class newClazz) {
+  public void setClazz(Class<?> newClazz) {
     clazz = newClazz;
   }
 

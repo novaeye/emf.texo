@@ -204,12 +204,15 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
      * @param value the object to convert, if value == null then null is returned
      * @generated
      */
+	«IF ePackageModelGenAnnotation.addSuppressUnchecked»
+	@SuppressWarnings("unchecked")
+	«ENDIF»
     public String convertToString(org.eclipse.emf.ecore.EDataType eDataType, Object value) {
         switch (eDataType.getClassifierID()) {
     «FOR eDataTypeAnnotation : ePackageModelGenAnnotation.EDataTypeModelGenAnnotations»
         «IF eDataTypeAnnotation.generateCode»
             case «ePackageModelGenAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eDataTypeAnnotation.name)»_CLASSIFIER_ID:
-                return convert«TemplateUtil::toFirstUpper(eDataTypeAnnotation.name)»ToString((«eDataTypeAnnotation.objectClassName»)value);
+                return convert«TemplateUtil::toFirstUpper(eDataTypeAnnotation.name)»ToString(«TemplateUtil::cast(eDataTypeAnnotation.objectClassName)»value);
         «ENDIF»
     «ENDFOR»
             default:
