@@ -281,6 +281,10 @@ public class ForumModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.FORUM_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ForumModelPackage.FORUM_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ForumModelPackage.FORUM_TITLE_FEATURE_ID:
         return getTarget().getTitle();
       case ForumModelPackage.FORUM_MEMBERS_FEATURE_ID:
@@ -300,6 +304,12 @@ public class ForumModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.FORUM_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ForumModelPackage.FORUM_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ForumModelPackage.FORUM_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
@@ -389,6 +399,10 @@ public class ForumModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.MEMBER_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ForumModelPackage.MEMBER_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ForumModelPackage.MEMBER_NICKNAME_FEATURE_ID:
         return getTarget().getNickname();
       case ForumModelPackage.MEMBER_POSTS_FEATURE_ID:
@@ -408,6 +422,12 @@ public class ForumModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.MEMBER_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ForumModelPackage.MEMBER_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ForumModelPackage.MEMBER_NICKNAME_FEATURE_ID:
         getTarget().setNickname((String) value);
         return;
@@ -497,6 +517,10 @@ public class ForumModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.TOPIC_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ForumModelPackage.TOPIC_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ForumModelPackage.TOPIC_TITLE_FEATURE_ID:
         return getTarget().getTitle();
       case ForumModelPackage.TOPIC_CATEGORY_FEATURE_ID:
@@ -518,6 +542,12 @@ public class ForumModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.TOPIC_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ForumModelPackage.TOPIC_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ForumModelPackage.TOPIC_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
@@ -602,6 +632,10 @@ public class ForumModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.POST_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ForumModelPackage.POST_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ForumModelPackage.POST_COMMENT_FEATURE_ID:
         return getTarget().getComment();
       case ForumModelPackage.POST_AUTHOR_FEATURE_ID:
@@ -620,6 +654,12 @@ public class ForumModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ForumModelPackage.POST_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ForumModelPackage.POST_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ForumModelPackage.POST_COMMENT_FEATURE_ID:
         getTarget().setComment((String) value);
         return;

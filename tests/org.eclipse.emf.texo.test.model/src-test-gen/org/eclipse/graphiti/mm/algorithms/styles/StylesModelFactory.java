@@ -1,6 +1,7 @@
 package org.eclipse.graphiti.mm.algorithms.styles;
 
 import java.util.List;
+import java.util.Set;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -409,6 +410,12 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.STYLE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.STYLE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case StylesModelPackage.STYLE_STYLES_FEATURE_ID:
+        return getTarget().getStyles();
       case StylesModelPackage.STYLE_ID_FEATURE_ID:
         return getTarget().getId();
       case StylesModelPackage.STYLE_DESCRIPTION_FEATURE_ID:
@@ -453,10 +460,20 @@ public class StylesModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.STYLE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.STYLE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case StylesModelPackage.STYLE_STYLES_FEATURE_ID:
+        getTarget().setStyles((Set<Style>) value);
+        return;
       case StylesModelPackage.STYLE_ID_FEATURE_ID:
         getTarget().setId((String) value);
         return;
@@ -578,6 +595,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.ABSTRACTSTYLE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.ABSTRACTSTYLE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.ABSTRACTSTYLE_BACKGROUND_FEATURE_ID:
         return getTarget().getBackground();
       case StylesModelPackage.ABSTRACTSTYLE_FOREGROUND_FEATURE_ID:
@@ -606,6 +627,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.ABSTRACTSTYLE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.ABSTRACTSTYLE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.ABSTRACTSTYLE_BACKGROUND_FEATURE_ID:
         getTarget().setBackground((Color) value);
         return;
@@ -696,6 +723,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.COLOR_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.COLOR_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.COLOR_RED_FEATURE_ID:
         return getTarget().getRed();
       case StylesModelPackage.COLOR_GREEN_FEATURE_ID:
@@ -714,6 +745,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.COLOR_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.COLOR_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.COLOR_RED_FEATURE_ID:
         getTarget().setRed((Integer) value);
         return;
@@ -789,6 +826,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.FONT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.FONT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.FONT_NAME_FEATURE_ID:
         return getTarget().getName();
       case StylesModelPackage.FONT_SIZE_FEATURE_ID:
@@ -809,6 +850,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.FONT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.FONT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.FONT_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -887,6 +934,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.POINT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.POINT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.POINT_X_FEATURE_ID:
         return getTarget().getX();
       case StylesModelPackage.POINT_Y_FEATURE_ID:
@@ -907,6 +958,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.POINT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.POINT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.POINT_X_FEATURE_ID:
         getTarget().setX((Integer) value);
         return;
@@ -986,6 +1043,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.PRECISIONPOINT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.PRECISIONPOINT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.PRECISIONPOINT_X_FEATURE_ID:
         return getTarget().getX();
       case StylesModelPackage.PRECISIONPOINT_Y_FEATURE_ID:
@@ -1002,6 +1063,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.PRECISIONPOINT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.PRECISIONPOINT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.PRECISIONPOINT_X_FEATURE_ID:
         getTarget().setX((Double) value);
         return;
@@ -1075,6 +1142,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.RENDERINGSTYLE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.RENDERINGSTYLE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.RENDERINGSTYLE_ADAPTEDGRADIENTCOLOREDAREAS_FEATURE_ID:
         return getTarget().getAdaptedGradientColoredAreas();
       default:
@@ -1089,6 +1160,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.RENDERINGSTYLE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.RENDERINGSTYLE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.RENDERINGSTYLE_ADAPTEDGRADIENTCOLOREDAREAS_FEATURE_ID:
         getTarget().setAdaptedGradientColoredAreas((AdaptedGradientColoredAreas) value);
         return;
@@ -1159,6 +1236,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DEFINEDSTYLEID_FEATURE_ID:
         return getTarget().getDefinedStyleId();
       case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_ADAPTEDGRADIENTCOLOREDAREAS_FEATURE_ID:
@@ -1178,6 +1259,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.ADAPTEDGRADIENTCOLOREDAREAS_DEFINEDSTYLEID_FEATURE_ID:
         getTarget().setDefinedStyleId((String) value);
         return;
@@ -1262,6 +1349,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDLOCATION_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.GRADIENTCOLOREDLOCATION_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.GRADIENTCOLOREDLOCATION_LOCATIONTYPE_FEATURE_ID:
         return getTarget().getLocationType();
       case StylesModelPackage.GRADIENTCOLOREDLOCATION_LOCATIONVALUE_FEATURE_ID:
@@ -1280,6 +1371,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDLOCATION_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.GRADIENTCOLOREDLOCATION_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.GRADIENTCOLOREDLOCATION_LOCATIONTYPE_FEATURE_ID:
         getTarget().setLocationType((LocationType) value);
         return;
@@ -1355,6 +1452,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDAREA_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.GRADIENTCOLOREDAREA_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.GRADIENTCOLOREDAREA_START_FEATURE_ID:
         return getTarget().getStart();
       case StylesModelPackage.GRADIENTCOLOREDAREA_END_FEATURE_ID:
@@ -1371,6 +1472,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDAREA_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.GRADIENTCOLOREDAREA_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.GRADIENTCOLOREDAREA_START_FEATURE_ID:
         getTarget().setStart((GradientColoredLocation) value);
         return;
@@ -1444,6 +1551,10 @@ public class StylesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDAREAS_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case StylesModelPackage.GRADIENTCOLOREDAREAS_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case StylesModelPackage.GRADIENTCOLOREDAREAS_GRADIENTCOLOR_FEATURE_ID:
         return getTarget().getGradientColor();
       case StylesModelPackage.GRADIENTCOLOREDAREAS_STYLEADAPTION_FEATURE_ID:
@@ -1461,6 +1572,12 @@ public class StylesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case StylesModelPackage.GRADIENTCOLOREDAREAS_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case StylesModelPackage.GRADIENTCOLOREDAREAS_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case StylesModelPackage.GRADIENTCOLOREDAREAS_GRADIENTCOLOR_FEATURE_ID:
         getTarget().setGradientColor((List<GradientColoredArea>) value);
         return;

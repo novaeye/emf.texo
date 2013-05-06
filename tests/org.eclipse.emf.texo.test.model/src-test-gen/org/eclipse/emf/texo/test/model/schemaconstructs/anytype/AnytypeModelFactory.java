@@ -229,6 +229,10 @@ public class AnytypeModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.A_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AnytypeModelPackage.A_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AnytypeModelPackage.A_NAME_FEATURE_ID:
         return getTarget().getName();
       case AnytypeModelPackage.A_DOUB_FEATURE_ID:
@@ -249,6 +253,12 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.A_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AnytypeModelPackage.A_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AnytypeModelPackage.A_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -327,6 +337,10 @@ public class AnytypeModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.B_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AnytypeModelPackage.B_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AnytypeModelPackage.B_NAME_FEATURE_ID:
         return getTarget().getName();
       default:
@@ -341,6 +355,12 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.B_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AnytypeModelPackage.B_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AnytypeModelPackage.B_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -410,6 +430,10 @@ public class AnytypeModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.C_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AnytypeModelPackage.C_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -422,6 +446,12 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.C_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AnytypeModelPackage.C_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -486,6 +516,10 @@ public class AnytypeModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.TESTANY_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AnytypeModelPackage.TESTANY_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AnytypeModelPackage.TESTANY_NAME_FEATURE_ID:
         return getTarget().getName();
       case AnytypeModelPackage.TESTANY_SINGLEANYTYPE_FEATURE_ID:
@@ -511,6 +545,12 @@ public class AnytypeModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AnytypeModelPackage.TESTANY_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AnytypeModelPackage.TESTANY_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AnytypeModelPackage.TESTANY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;

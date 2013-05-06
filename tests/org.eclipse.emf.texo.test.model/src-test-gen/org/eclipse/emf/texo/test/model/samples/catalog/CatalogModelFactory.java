@@ -228,6 +228,10 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.CATALOGTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CatalogModelPackage.CATALOGTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CatalogModelPackage.CATALOGTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       case CatalogModelPackage.CATALOGTYPE_DESCRIPTION_FEATURE_ID:
@@ -249,6 +253,12 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.CATALOGTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CatalogModelPackage.CATALOGTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CatalogModelPackage.CATALOGTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -342,6 +352,10 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.PRODUCTTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CatalogModelPackage.PRODUCTTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CatalogModelPackage.PRODUCTTYPE_CODE_FEATURE_ID:
         return getTarget().getCode();
       case CatalogModelPackage.PRODUCTTYPE_DESCRIPTION_FEATURE_ID:
@@ -363,6 +377,12 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.PRODUCTTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CatalogModelPackage.PRODUCTTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CatalogModelPackage.PRODUCTTYPE_CODE_FEATURE_ID:
         getTarget().setCode((String) value);
         return;
@@ -450,6 +470,10 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.PRICETYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CatalogModelPackage.PRICETYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
         return getTarget().getPrice();
       case CatalogModelPackage.PRICETYPE_QUANTITYTO_FEATURE_ID:
@@ -468,6 +492,12 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.PRICETYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CatalogModelPackage.PRICETYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CatalogModelPackage.PRICETYPE_PRICE_FEATURE_ID:
         getTarget().setPrice((Double) value);
         return;
@@ -544,6 +574,10 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.SUPPLIERTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CatalogModelPackage.SUPPLIERTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CatalogModelPackage.SUPPLIERTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       case CatalogModelPackage.SUPPLIERTYPE_NOOFEMPLOYEES_FEATURE_ID:
@@ -560,6 +594,12 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.SUPPLIERTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CatalogModelPackage.SUPPLIERTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CatalogModelPackage.SUPPLIERTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -633,6 +673,10 @@ public class CatalogModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.STRINGTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CatalogModelPackage.STRINGTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
         return getTarget().getValue();
       default:
@@ -647,6 +691,12 @@ public class CatalogModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CatalogModelPackage.STRINGTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CatalogModelPackage.STRINGTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CatalogModelPackage.STRINGTYPE_VALUE_FEATURE_ID:
         getTarget().setValue((String) value);
         return;

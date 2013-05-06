@@ -335,6 +335,16 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BOOK_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.BOOK_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.BOOK_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
+      case ExtlibraryModelPackage.BOOK_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.BOOK_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
       case ExtlibraryModelPackage.BOOK_TITLE_FEATURE_ID:
         return getTarget().getTitle();
       case ExtlibraryModelPackage.BOOK_PAGES_FEATURE_ID:
@@ -351,10 +361,26 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BOOK_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.BOOK_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BOOK_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
+      case ExtlibraryModelPackage.BOOK_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BOOK_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
       case ExtlibraryModelPackage.BOOK_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
@@ -433,6 +459,10 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.ITEM_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.ITEM_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
         return getTarget().getPublicationDate();
       default:
@@ -447,6 +477,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.ITEM_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.ITEM_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ExtlibraryModelPackage.ITEM_PUBLICATIONDATE_FEATURE_ID:
         getTarget().setPublicationDate((Date) value);
         return;
@@ -609,6 +645,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.CIRCULATINGITEM_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.CIRCULATINGITEM_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.CIRCULATINGITEM_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
       case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
         return getTarget().getCopies();
       case ExtlibraryModelPackage.CIRCULATINGITEM_BORROWERS_FEATURE_ID:
@@ -626,6 +668,15 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.CIRCULATINGITEM_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.CIRCULATINGITEM_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.CIRCULATINGITEM_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
       case ExtlibraryModelPackage.CIRCULATINGITEM_COPIES_FEATURE_ID:
         getTarget().setCopies((Integer) value);
         return;
@@ -704,6 +755,16 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.WRITER_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.WRITER_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.WRITER_FIRSTNAME_FEATURE_ID:
+        return getTarget().getFirstName();
+      case ExtlibraryModelPackage.WRITER_LASTNAME_FEATURE_ID:
+        return getTarget().getLastName();
+      case ExtlibraryModelPackage.WRITER_ADDRESS_FEATURE_ID:
+        return getTarget().getAddress();
       case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
         return getTarget().getName();
       case ExtlibraryModelPackage.WRITER_BOOKS_FEATURE_ID:
@@ -721,6 +782,21 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.WRITER_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.WRITER_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.WRITER_FIRSTNAME_FEATURE_ID:
+        getTarget().setFirstName((String) value);
+        return;
+      case ExtlibraryModelPackage.WRITER_LASTNAME_FEATURE_ID:
+        getTarget().setLastName((String) value);
+        return;
+      case ExtlibraryModelPackage.WRITER_ADDRESS_FEATURE_ID:
+        getTarget().setAddress((String) value);
+        return;
       case ExtlibraryModelPackage.WRITER_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -880,6 +956,10 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.PERSON_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.PERSON_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
         return getTarget().getFirstName();
       case ExtlibraryModelPackage.PERSON_LASTNAME_FEATURE_ID:
@@ -898,6 +978,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.PERSON_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.PERSON_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ExtlibraryModelPackage.PERSON_FIRSTNAME_FEATURE_ID:
         getTarget().setFirstName((String) value);
         return;
@@ -973,6 +1059,10 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.LIBRARY_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.LIBRARY_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case ExtlibraryModelPackage.LIBRARY_NAME_FEATURE_ID:
         return getTarget().getName();
       case ExtlibraryModelPackage.LIBRARY_WRITERS_FEATURE_ID:
@@ -1006,6 +1096,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.LIBRARY_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.LIBRARY_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case ExtlibraryModelPackage.LIBRARY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -1158,6 +1254,16 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.EMPLOYEE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.EMPLOYEE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.EMPLOYEE_FIRSTNAME_FEATURE_ID:
+        return getTarget().getFirstName();
+      case ExtlibraryModelPackage.EMPLOYEE_LASTNAME_FEATURE_ID:
+        return getTarget().getLastName();
+      case ExtlibraryModelPackage.EMPLOYEE_ADDRESS_FEATURE_ID:
+        return getTarget().getAddress();
       case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
         return getTarget().getManager();
       default:
@@ -1172,6 +1278,21 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.EMPLOYEE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.EMPLOYEE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.EMPLOYEE_FIRSTNAME_FEATURE_ID:
+        getTarget().setFirstName((String) value);
+        return;
+      case ExtlibraryModelPackage.EMPLOYEE_LASTNAME_FEATURE_ID:
+        getTarget().setLastName((String) value);
+        return;
+      case ExtlibraryModelPackage.EMPLOYEE_ADDRESS_FEATURE_ID:
+        getTarget().setAddress((String) value);
+        return;
       case ExtlibraryModelPackage.EMPLOYEE_MANAGER_FEATURE_ID:
         getTarget().setManager((Employee) value);
         return;
@@ -1241,6 +1362,16 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BORROWER_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.BORROWER_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.BORROWER_FIRSTNAME_FEATURE_ID:
+        return getTarget().getFirstName();
+      case ExtlibraryModelPackage.BORROWER_LASTNAME_FEATURE_ID:
+        return getTarget().getLastName();
+      case ExtlibraryModelPackage.BORROWER_ADDRESS_FEATURE_ID:
+        return getTarget().getAddress();
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         return getTarget().getBorrowed();
       default:
@@ -1256,6 +1387,21 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BORROWER_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.BORROWER_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BORROWER_FIRSTNAME_FEATURE_ID:
+        getTarget().setFirstName((String) value);
+        return;
+      case ExtlibraryModelPackage.BORROWER_LASTNAME_FEATURE_ID:
+        getTarget().setLastName((String) value);
+        return;
+      case ExtlibraryModelPackage.BORROWER_ADDRESS_FEATURE_ID:
+        getTarget().setAddress((String) value);
+        return;
       case ExtlibraryModelPackage.BORROWER_BORROWED_FEATURE_ID:
         getTarget().setBorrowed((List<Lendable>) value);
         return;
@@ -1331,6 +1477,12 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.PERIODICAL_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.PERIODICAL_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.PERIODICAL_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
       case ExtlibraryModelPackage.PERIODICAL_TITLE_FEATURE_ID:
         return getTarget().getTitle();
       case ExtlibraryModelPackage.PERIODICAL_ISSUESPERYEAR_FEATURE_ID:
@@ -1347,6 +1499,15 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.PERIODICAL_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.PERIODICAL_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.PERIODICAL_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
       case ExtlibraryModelPackage.PERIODICAL_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
@@ -1419,6 +1580,16 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
       case ExtlibraryModelPackage.AUDIOVISUALITEM_TITLE_FEATURE_ID:
         return getTarget().getTitle();
       case ExtlibraryModelPackage.AUDIOVISUALITEM_MINUTESLENGTH_FEATURE_ID:
@@ -1433,10 +1604,26 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.AUDIOVISUALITEM_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
       case ExtlibraryModelPackage.AUDIOVISUALITEM_TITLE_FEATURE_ID:
         getTarget().setTitle((String) value);
         return;
@@ -1512,6 +1699,22 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BOOKONTAPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.BOOKONTAPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.BOOKONTAPE_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
+      case ExtlibraryModelPackage.BOOKONTAPE_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.BOOKONTAPE_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
+      case ExtlibraryModelPackage.BOOKONTAPE_TITLE_FEATURE_ID:
+        return getTarget().getTitle();
+      case ExtlibraryModelPackage.BOOKONTAPE_MINUTESLENGTH_FEATURE_ID:
+        return getTarget().getMinutesLength();
+      case ExtlibraryModelPackage.BOOKONTAPE_DAMAGED_FEATURE_ID:
+        return getTarget().isDamaged();
       case ExtlibraryModelPackage.BOOKONTAPE_READER_FEATURE_ID:
         return getTarget().getReader();
       case ExtlibraryModelPackage.BOOKONTAPE_AUTHOR_FEATURE_ID:
@@ -1524,10 +1727,35 @@ public class ExtlibraryModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.BOOKONTAPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_TITLE_FEATURE_ID:
+        getTarget().setTitle((String) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_MINUTESLENGTH_FEATURE_ID:
+        getTarget().setMinutesLength((Integer) value);
+        return;
+      case ExtlibraryModelPackage.BOOKONTAPE_DAMAGED_FEATURE_ID:
+        getTarget().setDamaged((Boolean) value);
+        return;
       case ExtlibraryModelPackage.BOOKONTAPE_READER_FEATURE_ID:
         getTarget().setReader((Person) value);
         return;
@@ -1600,6 +1828,22 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_PUBLICATIONDATE_FEATURE_ID:
+        return getTarget().getPublicationDate();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_COPIES_FEATURE_ID:
+        return getTarget().getCopies();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_BORROWERS_FEATURE_ID:
+        return getTarget().getBorrowers();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_TITLE_FEATURE_ID:
+        return getTarget().getTitle();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_MINUTESLENGTH_FEATURE_ID:
+        return getTarget().getMinutesLength();
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DAMAGED_FEATURE_ID:
+        return getTarget().isDamaged();
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         return getTarget().getCast();
       default:
@@ -1615,6 +1859,30 @@ public class ExtlibraryModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_PUBLICATIONDATE_FEATURE_ID:
+        getTarget().setPublicationDate((Date) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_COPIES_FEATURE_ID:
+        getTarget().setCopies((Integer) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_BORROWERS_FEATURE_ID:
+        getTarget().setBorrowers((Set<Borrower>) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_TITLE_FEATURE_ID:
+        getTarget().setTitle((String) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_MINUTESLENGTH_FEATURE_ID:
+        getTarget().setMinutesLength((Integer) value);
+        return;
+      case ExtlibraryModelPackage.VIDEOCASSETTE_DAMAGED_FEATURE_ID:
+        getTarget().setDamaged((Boolean) value);
+        return;
       case ExtlibraryModelPackage.VIDEOCASSETTE_CAST_FEATURE_ID:
         getTarget().setCast((List<Person>) value);
         return;

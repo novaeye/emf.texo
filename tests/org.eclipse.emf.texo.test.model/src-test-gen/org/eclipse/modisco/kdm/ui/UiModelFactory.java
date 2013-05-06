@@ -15,7 +15,13 @@ import org.eclipse.modisco.kdm.action.ActionModelFactory;
 import org.eclipse.modisco.kdm.code.AbstractCodeElement;
 import org.eclipse.modisco.kdm.core.CoreModelFactory;
 import org.eclipse.modisco.kdm.core.KDMEntity;
+import org.eclipse.modisco.kdm.kdm.Annotation;
+import org.eclipse.modisco.kdm.kdm.Attribute;
+import org.eclipse.modisco.kdm.kdm.Audit;
+import org.eclipse.modisco.kdm.kdm.ExtendedValue;
+import org.eclipse.modisco.kdm.kdm.ExtensionFamily;
 import org.eclipse.modisco.kdm.kdm.KdmModelFactory;
+import org.eclipse.modisco.kdm.kdm.Stereotype;
 import org.eclipse.modisco.kdm.source.Image;
 import org.eclipse.modisco.kdm.source.SourceRef;
 
@@ -421,6 +427,40 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.ABSTRACTUIELEMENT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.ABSTRACTUIELEMENT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.ABSTRACTUIELEMENT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.ABSTRACTUIELEMENT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.ABSTRACTUIELEMENT_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.ABSTRACTUIELEMENT_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.ABSTRACTUIELEMENT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.ABSTRACTUIELEMENT_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.ABSTRACTUIELEMENT_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.ABSTRACTUIELEMENT_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.ABSTRACTUIELEMENT_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.ABSTRACTUIELEMENT_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.ABSTRACTUIELEMENT_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.ABSTRACTUIELEMENT_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.ABSTRACTUIELEMENT_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.ABSTRACTUIELEMENT_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.ABSTRACTUIELEMENT_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
       case UiModelPackage.ABSTRACTUIELEMENT_SOURCE_FEATURE_ID:
         return getTarget().getSource();
       case UiModelPackage.ABSTRACTUIELEMENT_UIRELATION_FEATURE_ID:
@@ -442,6 +482,27 @@ public class UiModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.ABSTRACTUIELEMENT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIELEMENT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
       case UiModelPackage.ABSTRACTUIELEMENT_SOURCE_FEATURE_ID:
         getTarget().setSource((Set<SourceRef>) value);
         return;
@@ -551,6 +612,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -559,10 +632,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.ABSTRACTUIRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -627,6 +719,48 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIRESOURCE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIRESOURCE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIRESOURCE_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIRESOURCE_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIRESOURCE_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIRESOURCE_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIRESOURCE_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIRESOURCE_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIRESOURCE_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIRESOURCE_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIRESOURCE_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIRESOURCE_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIRESOURCE_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIRESOURCE_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIRESOURCE_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIRESOURCE_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIRESOURCE_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIRESOURCE_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIRESOURCE_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIRESOURCE_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIRESOURCE_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
       case UiModelPackage.UIRESOURCE_UIELEMENT_FEATURE_ID:
         return getTarget().getUIElement();
       default:
@@ -642,6 +776,39 @@ public class UiModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIRESOURCE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIRESOURCE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIRESOURCE_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIRESOURCE_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIRESOURCE_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
       case UiModelPackage.UIRESOURCE_UIELEMENT_FEATURE_ID:
         getTarget().setUIElement((Set<AbstractUIElement>) value);
         return;
@@ -717,6 +884,50 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIDISPLAY_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIDISPLAY_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIDISPLAY_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIDISPLAY_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIDISPLAY_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIDISPLAY_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIDISPLAY_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIDISPLAY_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIDISPLAY_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIDISPLAY_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIDISPLAY_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIDISPLAY_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIDISPLAY_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIDISPLAY_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIDISPLAY_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIDISPLAY_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIDISPLAY_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIDISPLAY_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIDISPLAY_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIDISPLAY_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIDISPLAY_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
+      case UiModelPackage.UIDISPLAY_UIELEMENT_FEATURE_ID:
+        return getTarget().getUIElement();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -725,10 +936,47 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIDISPLAY_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIDISPLAY_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIDISPLAY_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIDISPLAY_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
+      case UiModelPackage.UIDISPLAY_UIELEMENT_FEATURE_ID:
+        getTarget().setUIElement((Set<AbstractUIElement>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -793,6 +1041,50 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.SCREEN_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.SCREEN_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.SCREEN_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.SCREEN_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.SCREEN_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.SCREEN_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.SCREEN_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.SCREEN_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.SCREEN_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.SCREEN_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.SCREEN_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.SCREEN_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.SCREEN_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.SCREEN_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.SCREEN_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.SCREEN_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.SCREEN_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.SCREEN_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.SCREEN_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.SCREEN_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.SCREEN_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
+      case UiModelPackage.SCREEN_UIELEMENT_FEATURE_ID:
+        return getTarget().getUIElement();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -801,10 +1093,47 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.SCREEN_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.SCREEN_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.SCREEN_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.SCREEN_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.SCREEN_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.SCREEN_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.SCREEN_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.SCREEN_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.SCREEN_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.SCREEN_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.SCREEN_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
+      case UiModelPackage.SCREEN_UIELEMENT_FEATURE_ID:
+        getTarget().setUIElement((Set<AbstractUIElement>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -869,6 +1198,50 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.REPORT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.REPORT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.REPORT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.REPORT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.REPORT_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.REPORT_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.REPORT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.REPORT_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.REPORT_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.REPORT_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.REPORT_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.REPORT_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.REPORT_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.REPORT_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.REPORT_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.REPORT_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.REPORT_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.REPORT_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.REPORT_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.REPORT_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.REPORT_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
+      case UiModelPackage.REPORT_UIELEMENT_FEATURE_ID:
+        return getTarget().getUIElement();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -877,10 +1250,47 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.REPORT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.REPORT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.REPORT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.REPORT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.REPORT_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.REPORT_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.REPORT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.REPORT_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.REPORT_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.REPORT_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.REPORT_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
+      case UiModelPackage.REPORT_UIELEMENT_FEATURE_ID:
+        getTarget().setUIElement((Set<AbstractUIElement>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -945,6 +1355,26 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIMODEL_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIMODEL_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIMODEL_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIMODEL_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIMODEL_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIMODEL_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIMODEL_AUDIT_FEATURE_ID:
+        return getTarget().getAudit();
+      case UiModelPackage.UIMODEL_EXTENSION_FEATURE_ID:
+        return getTarget().getExtension();
+      case UiModelPackage.UIMODEL_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIMODEL_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
       case UiModelPackage.UIMODEL_UIELEMENT_FEATURE_ID:
         return getTarget().getUIElement();
       default:
@@ -960,6 +1390,33 @@ public class UiModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIMODEL_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIMODEL_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIMODEL_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIMODEL_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIMODEL_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIMODEL_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIMODEL_AUDIT_FEATURE_ID:
+        getTarget().setAudit((Set<Audit>) value);
+        return;
+      case UiModelPackage.UIMODEL_EXTENSION_FEATURE_ID:
+        getTarget().setExtension((Set<ExtensionFamily>) value);
+        return;
+      case UiModelPackage.UIMODEL_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
       case UiModelPackage.UIMODEL_UIELEMENT_FEATURE_ID:
         getTarget().setUIElement((Set<AbstractUIElement>) value);
         return;
@@ -1035,6 +1492,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UILAYOUT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UILAYOUT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UILAYOUT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UILAYOUT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UILAYOUT_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UILAYOUT_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.UILAYOUT_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.UILAYOUT_FROM_FEATURE_ID:
@@ -1047,10 +1516,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UILAYOUT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UILAYOUT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UILAYOUT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UILAYOUT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UILAYOUT_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UILAYOUT_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.UILAYOUT_TO_FEATURE_ID:
         getTarget().setTo((UIResource) value);
         return;
@@ -1123,6 +1611,50 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIFIELD_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIFIELD_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIFIELD_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIFIELD_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIFIELD_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIFIELD_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIFIELD_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIFIELD_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIFIELD_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIFIELD_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIFIELD_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIFIELD_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIFIELD_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIFIELD_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIFIELD_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIFIELD_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIFIELD_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIFIELD_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIFIELD_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIFIELD_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIFIELD_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
+      case UiModelPackage.UIFIELD_UIELEMENT_FEATURE_ID:
+        return getTarget().getUIElement();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -1131,10 +1663,47 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIFIELD_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIFIELD_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIFIELD_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIFIELD_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIFIELD_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIFIELD_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIFIELD_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIFIELD_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIFIELD_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIFIELD_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIFIELD_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
+      case UiModelPackage.UIFIELD_UIELEMENT_FEATURE_ID:
+        getTarget().setUIElement((Set<AbstractUIElement>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -1199,6 +1768,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.DISPLAYSIMAGE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.DISPLAYSIMAGE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.DISPLAYSIMAGE_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.DISPLAYSIMAGE_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.DISPLAYSIMAGE_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.DISPLAYSIMAGE_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.DISPLAYSIMAGE_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.DISPLAYSIMAGE_FROM_FEATURE_ID:
@@ -1211,10 +1792,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.DISPLAYSIMAGE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.DISPLAYSIMAGE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.DISPLAYSIMAGE_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.DISPLAYSIMAGE_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.DISPLAYSIMAGE_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.DISPLAYSIMAGE_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.DISPLAYSIMAGE_TO_FEATURE_ID:
         getTarget().setTo((Image) value);
         return;
@@ -1287,6 +1887,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.DISPLAYS_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.DISPLAYS_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.DISPLAYS_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.DISPLAYS_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.DISPLAYS_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.DISPLAYS_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.DISPLAYS_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.DISPLAYS_FROM_FEATURE_ID:
@@ -1299,10 +1911,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.DISPLAYS_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.DISPLAYS_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.DISPLAYS_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.DISPLAYS_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.DISPLAYS_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.DISPLAYS_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.DISPLAYS_TO_FEATURE_ID:
         getTarget().setTo((UIResource) value);
         return;
@@ -1375,6 +2006,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIFLOW_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIFLOW_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIFLOW_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIFLOW_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIFLOW_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIFLOW_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.UIFLOW_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.UIFLOW_FROM_FEATURE_ID:
@@ -1387,10 +2030,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIFLOW_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIFLOW_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIFLOW_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIFLOW_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIFLOW_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIFLOW_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.UIFLOW_TO_FEATURE_ID:
         getTarget().setTo((AbstractUIElement) value);
         return;
@@ -1463,6 +2125,48 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIELEMENT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIELEMENT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIELEMENT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIELEMENT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIELEMENT_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIELEMENT_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIELEMENT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIELEMENT_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIELEMENT_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIELEMENT_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIELEMENT_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIELEMENT_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIELEMENT_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIELEMENT_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIELEMENT_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIELEMENT_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIELEMENT_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIELEMENT_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIELEMENT_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIELEMENT_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIELEMENT_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -1471,10 +2175,44 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIELEMENT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIELEMENT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIELEMENT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIELEMENT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIELEMENT_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIELEMENT_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIELEMENT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIELEMENT_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIELEMENT_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIELEMENT_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIELEMENT_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -1539,6 +2277,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIRELATIONSHIP_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.UIRELATIONSHIP_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.UIRELATIONSHIP_FROM_FEATURE_ID:
@@ -1551,10 +2301,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIRELATIONSHIP_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.UIRELATIONSHIP_TO_FEATURE_ID:
         getTarget().setTo((KDMEntity) value);
         return;
@@ -1627,6 +2396,48 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIACTION_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIACTION_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIACTION_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIACTION_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIACTION_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIACTION_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIACTION_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIACTION_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIACTION_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIACTION_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIACTION_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIACTION_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIACTION_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIACTION_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIACTION_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIACTION_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIACTION_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIACTION_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIACTION_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIACTION_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIACTION_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
       case UiModelPackage.UIACTION_KIND_FEATURE_ID:
         return getTarget().getKind();
       case UiModelPackage.UIACTION_UIELEMENT_FEATURE_ID:
@@ -1644,6 +2455,39 @@ public class UiModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIACTION_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIACTION_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIACTION_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIACTION_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIACTION_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIACTION_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIACTION_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIACTION_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIACTION_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIACTION_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIACTION_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
       case UiModelPackage.UIACTION_KIND_FEATURE_ID:
         getTarget().setKind((String) value);
         return;
@@ -1722,6 +2566,48 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIEVENT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.UIEVENT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.UIEVENT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.UIEVENT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.UIEVENT_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.UIEVENT_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
+      case UiModelPackage.UIEVENT_NAME_FEATURE_ID:
+        return getTarget().getName();
+      case UiModelPackage.UIEVENT_MODEL_FEATURE_ID:
+        return getTarget().getModel();
+      case UiModelPackage.UIEVENT_OWNER_FEATURE_ID:
+        return getTarget().getOwner();
+      case UiModelPackage.UIEVENT_OWNEDELEMENT_FEATURE_ID:
+        return getTarget().getOwnedElement();
+      case UiModelPackage.UIEVENT_OUTBOUND_FEATURE_ID:
+        return getTarget().getOutbound();
+      case UiModelPackage.UIEVENT_INBOUND_FEATURE_ID:
+        return getTarget().getInbound();
+      case UiModelPackage.UIEVENT_OWNEDRELATION_FEATURE_ID:
+        return getTarget().getOwnedRelation();
+      case UiModelPackage.UIEVENT_GROUP_FEATURE_ID:
+        return getTarget().getGroup();
+      case UiModelPackage.UIEVENT_GROUPEDELEMENT_FEATURE_ID:
+        return getTarget().getGroupedElement();
+      case UiModelPackage.UIEVENT_INAGGREGATED_FEATURE_ID:
+        return getTarget().getInAggregated();
+      case UiModelPackage.UIEVENT_OUTAGGREGATED_FEATURE_ID:
+        return getTarget().getOutAggregated();
+      case UiModelPackage.UIEVENT_SOURCE_FEATURE_ID:
+        return getTarget().getSource();
+      case UiModelPackage.UIEVENT_UIRELATION_FEATURE_ID:
+        return getTarget().getUIRelation();
+      case UiModelPackage.UIEVENT_IMPLEMENTATION_FEATURE_ID:
+        return getTarget().getImplementation();
+      case UiModelPackage.UIEVENT_ABSTRACTION_FEATURE_ID:
+        return getTarget().getAbstraction();
       case UiModelPackage.UIEVENT_KIND_FEATURE_ID:
         return getTarget().getKind();
       default:
@@ -1732,10 +2618,44 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.UIEVENT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.UIEVENT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.UIEVENT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.UIEVENT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.UIEVENT_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.UIEVENT_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
+      case UiModelPackage.UIEVENT_NAME_FEATURE_ID:
+        getTarget().setName((String) value);
+        return;
+      case UiModelPackage.UIEVENT_SOURCE_FEATURE_ID:
+        getTarget().setSource((Set<SourceRef>) value);
+        return;
+      case UiModelPackage.UIEVENT_UIRELATION_FEATURE_ID:
+        getTarget().setUIRelation((Set<AbstractUIRelationship>) value);
+        return;
+      case UiModelPackage.UIEVENT_IMPLEMENTATION_FEATURE_ID:
+        getTarget().setImplementation((Set<AbstractCodeElement>) value);
+        return;
+      case UiModelPackage.UIEVENT_ABSTRACTION_FEATURE_ID:
+        getTarget().setAbstraction((List<ActionElement>) value);
+        return;
       case UiModelPackage.UIEVENT_KIND_FEATURE_ID:
         getTarget().setKind((String) value);
         return;
@@ -1806,6 +2726,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.READSUI_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.READSUI_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.READSUI_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.READSUI_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.READSUI_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.READSUI_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.READSUI_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.READSUI_FROM_FEATURE_ID:
@@ -1818,10 +2750,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.READSUI_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.READSUI_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.READSUI_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.READSUI_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.READSUI_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.READSUI_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.READSUI_TO_FEATURE_ID:
         getTarget().setTo((UIResource) value);
         return;
@@ -1895,6 +2846,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.WRITESUI_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.WRITESUI_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.WRITESUI_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.WRITESUI_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.WRITESUI_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.WRITESUI_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.WRITESUI_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.WRITESUI_FROM_FEATURE_ID:
@@ -1907,10 +2870,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.WRITESUI_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.WRITESUI_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.WRITESUI_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.WRITESUI_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.WRITESUI_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.WRITESUI_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.WRITESUI_TO_FEATURE_ID:
         getTarget().setTo((UIResource) value);
         return;
@@ -1984,6 +2966,18 @@ public class UiModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.MANAGESUI_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case UiModelPackage.MANAGESUI_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case UiModelPackage.MANAGESUI_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case UiModelPackage.MANAGESUI_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case UiModelPackage.MANAGESUI_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case UiModelPackage.MANAGESUI_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case UiModelPackage.MANAGESUI_TO_FEATURE_ID:
         return getTarget().getTo();
       case UiModelPackage.MANAGESUI_FROM_FEATURE_ID:
@@ -1996,10 +2990,29 @@ public class UiModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case UiModelPackage.MANAGESUI_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case UiModelPackage.MANAGESUI_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case UiModelPackage.MANAGESUI_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case UiModelPackage.MANAGESUI_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case UiModelPackage.MANAGESUI_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case UiModelPackage.MANAGESUI_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case UiModelPackage.MANAGESUI_TO_FEATURE_ID:
         getTarget().setTo((UIResource) value);
         return;

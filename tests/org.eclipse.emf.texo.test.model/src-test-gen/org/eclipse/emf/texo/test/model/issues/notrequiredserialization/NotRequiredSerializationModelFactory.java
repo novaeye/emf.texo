@@ -166,6 +166,10 @@ public class NotRequiredSerializationModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_NAME_FEATURE_ID:
         return getTarget().getName();
       default:
@@ -180,6 +184,12 @@ public class NotRequiredSerializationModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case NotRequiredSerializationModelPackage.SERIALIZATIONTEST_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;

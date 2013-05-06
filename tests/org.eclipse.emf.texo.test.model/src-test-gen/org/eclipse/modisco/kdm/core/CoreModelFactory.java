@@ -288,6 +288,10 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.ELEMENT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CoreModelPackage.ELEMENT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case CoreModelPackage.ELEMENT_ATTRIBUTE_FEATURE_ID:
         return getTarget().getAttribute();
       case CoreModelPackage.ELEMENT_ANNOTATION_FEATURE_ID:
@@ -305,6 +309,12 @@ public class CoreModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.ELEMENT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CoreModelPackage.ELEMENT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case CoreModelPackage.ELEMENT_ATTRIBUTE_FEATURE_ID:
         getTarget().setAttribute((Set<Attribute>) value);
         return;
@@ -391,6 +401,14 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.MODELELEMENT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CoreModelPackage.MODELELEMENT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case CoreModelPackage.MODELELEMENT_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case CoreModelPackage.MODELELEMENT_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
       case CoreModelPackage.MODELELEMENT_STEREOTYPE_FEATURE_ID:
         return getTarget().getStereotype();
       case CoreModelPackage.MODELELEMENT_TAGGEDVALUE_FEATURE_ID:
@@ -408,6 +426,18 @@ public class CoreModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.MODELELEMENT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CoreModelPackage.MODELELEMENT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case CoreModelPackage.MODELELEMENT_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case CoreModelPackage.MODELELEMENT_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
       case CoreModelPackage.MODELELEMENT_STEREOTYPE_FEATURE_ID:
         getTarget().setStereotype((Set<Stereotype>) value);
         return;
@@ -494,6 +524,18 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.KDMENTITY_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CoreModelPackage.KDMENTITY_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case CoreModelPackage.KDMENTITY_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case CoreModelPackage.KDMENTITY_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case CoreModelPackage.KDMENTITY_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case CoreModelPackage.KDMENTITY_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case CoreModelPackage.KDMENTITY_NAME_FEATURE_ID:
         return getTarget().getName();
       case CoreModelPackage.KDMENTITY_MODEL_FEATURE_ID:
@@ -524,10 +566,29 @@ public class CoreModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.KDMENTITY_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CoreModelPackage.KDMENTITY_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case CoreModelPackage.KDMENTITY_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case CoreModelPackage.KDMENTITY_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case CoreModelPackage.KDMENTITY_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case CoreModelPackage.KDMENTITY_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case CoreModelPackage.KDMENTITY_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -597,6 +658,18 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.KDMRELATIONSHIP_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CoreModelPackage.KDMRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case CoreModelPackage.KDMRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case CoreModelPackage.KDMRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case CoreModelPackage.KDMRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case CoreModelPackage.KDMRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -605,10 +678,29 @@ public class CoreModelFactory implements ModelFactory {
     /**
      * @generated
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.KDMRELATIONSHIP_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CoreModelPackage.KDMRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case CoreModelPackage.KDMRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case CoreModelPackage.KDMRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case CoreModelPackage.KDMRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case CoreModelPackage.KDMRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -674,6 +766,18 @@ public class CoreModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        return getTarget().getAttribute();
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        return getTarget().getAnnotation();
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        return getTarget().getStereotype();
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        return getTarget().getTaggedValue();
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_FROM_FEATURE_ID:
         return getTarget().getFrom();
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_TO_FEATURE_ID:
@@ -695,6 +799,24 @@ public class CoreModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_ATTRIBUTE_FEATURE_ID:
+        getTarget().setAttribute((Set<Attribute>) value);
+        return;
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_ANNOTATION_FEATURE_ID:
+        getTarget().setAnnotation((Set<Annotation>) value);
+        return;
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_STEREOTYPE_FEATURE_ID:
+        getTarget().setStereotype((Set<Stereotype>) value);
+        return;
+      case CoreModelPackage.AGGREGATEDRELATIONSHIP_TAGGEDVALUE_FEATURE_ID:
+        getTarget().setTaggedValue((Set<ExtendedValue>) value);
+        return;
       case CoreModelPackage.AGGREGATEDRELATIONSHIP_FROM_FEATURE_ID:
         getTarget().setFrom((KDMEntity) value);
         return;

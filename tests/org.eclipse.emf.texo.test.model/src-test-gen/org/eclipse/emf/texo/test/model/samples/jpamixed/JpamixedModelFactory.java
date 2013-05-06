@@ -226,6 +226,10 @@ public class JpamixedModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case JpamixedModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case JpamixedModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         return getTarget().getMixed();
       case JpamixedModelPackage.DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID:
@@ -247,6 +251,12 @@ public class JpamixedModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case JpamixedModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case JpamixedModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         getTarget().setMixed((List<DocumentRootMixedFeatureGroup>) value);
         return;
@@ -334,6 +344,10 @@ public class JpamixedModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.LETTERBODYTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case JpamixedModelPackage.LETTERBODYTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case JpamixedModelPackage.LETTERBODYTYPE_MIXED_FEATURE_ID:
         return getTarget().getMixed();
       case JpamixedModelPackage.LETTERBODYTYPE_SALUTATION_FEATURE_ID:
@@ -357,6 +371,12 @@ public class JpamixedModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.LETTERBODYTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case JpamixedModelPackage.LETTERBODYTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case JpamixedModelPackage.LETTERBODYTYPE_MIXED_FEATURE_ID:
         getTarget().setMixed((List<LetterBodyTypeMixedFeatureGroup>) value);
         return;
@@ -447,6 +467,10 @@ public class JpamixedModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.SALUTATIONTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case JpamixedModelPackage.SALUTATIONTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case JpamixedModelPackage.SALUTATIONTYPE_MIXED_FEATURE_ID:
         return getTarget().getMixed();
       case JpamixedModelPackage.SALUTATIONTYPE_NAME_FEATURE_ID:
@@ -464,6 +488,12 @@ public class JpamixedModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case JpamixedModelPackage.SALUTATIONTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case JpamixedModelPackage.SALUTATIONTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case JpamixedModelPackage.SALUTATIONTYPE_MIXED_FEATURE_ID:
         getTarget().setMixed((List<SalutationTypeMixedFeatureGroup>) value);
         return;

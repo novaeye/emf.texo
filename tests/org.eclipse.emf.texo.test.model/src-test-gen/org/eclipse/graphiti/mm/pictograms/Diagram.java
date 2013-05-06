@@ -2,13 +2,11 @@ package org.eclipse.graphiti.mm.pictograms;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-
 import org.eclipse.emf.texo.test.TexoTestObjectConverter;
 import org.eclipse.emf.texo.test.TexoTestQNameConverter;
 import org.eclipse.graphiti.mm.algorithms.styles.Color;
@@ -302,7 +300,6 @@ public class Diagram extends ContainerShape {
    * @return the value of '<em><b>showGuides</b></em>' feature
    * @generated
    */
-  @Deprecated
   public boolean isShowGuides() {
     return showGuides;
   }
@@ -319,7 +316,6 @@ public class Diagram extends ContainerShape {
    *          the new value of the '{@link Diagram#isShowGuides() showGuides}' feature.
    * @generated
    */
-  @Deprecated
   public void setShowGuides(boolean newShowGuides) {
     showGuides = newShowGuides;
   }

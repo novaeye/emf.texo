@@ -183,6 +183,10 @@ public class Bz403743ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz403743ModelPackage.TEST403743_MAIN_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case Bz403743ModelPackage.TEST403743_MAIN_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case Bz403743ModelPackage.TEST403743_MAIN_NAME_FEATURE_ID:
         return getTarget().getName();
       case Bz403743ModelPackage.TEST403743_MAIN_CHILDREN_FEATURE_ID:
@@ -200,6 +204,12 @@ public class Bz403743ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz403743ModelPackage.TEST403743_MAIN_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case Bz403743ModelPackage.TEST403743_MAIN_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case Bz403743ModelPackage.TEST403743_MAIN_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -279,6 +289,10 @@ public class Bz403743ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz403743ModelPackage.TEST403743_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case Bz403743ModelPackage.TEST403743_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case Bz403743ModelPackage.TEST403743_NAME_FEATURE_ID:
         return getTarget().getName();
       case Bz403743ModelPackage.TEST403743_CHILDREN_FEATURE_ID:
@@ -296,6 +310,12 @@ public class Bz403743ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz403743ModelPackage.TEST403743_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case Bz403743ModelPackage.TEST403743_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case Bz403743ModelPackage.TEST403743_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;

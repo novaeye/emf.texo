@@ -19,11 +19,9 @@ package org.eclipse.emf.texo.test;
 
 import junit.framework.TestCase;
 
-import org.eclipse.emf.texo.test.model.samples.rental.RentalCar;
-import org.eclipse.emf.texo.test.model.samples.rental.RentalCarDriver;
-import org.eclipse.emf.texo.test.model.samples.rental.RentalContract;
-import org.eclipse.emf.texo.test.model.samples.rental.RentalContractLine;
-import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz371509.Bz371509ModelPackage;
+import org.eclipse.emf.texo.test.model.issues.bz371509.EClass0;
+import org.eclipse.emf.texo.test.model.issues.bz371509.EClass1;
 
 /**
  * Tests support of bi-directional associations.
@@ -35,49 +33,44 @@ import org.eclipse.emf.texo.test.model.samples.rental.RentalModelPackage;
 public class TestBidirectionalAssociationSupport extends TestCase {
 
   public void testManyBidirectionalAssociations() {
-    final RentalContract rentalContract1 = RentalModelPackage.INSTANCE.getModelFactory().createRentalContract();
-    final RentalContract rentalContract2 = RentalModelPackage.INSTANCE.getModelFactory().createRentalContract();
-    final RentalContractLine rentalContractLine1 = RentalModelPackage.INSTANCE.getModelFactory()
-        .createRentalContractLine();
-    final RentalContractLine rentalContractLine2 = RentalModelPackage.INSTANCE.getModelFactory()
-        .createRentalContractLine();
+    final EClass0 c0_0 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass0();
+    final EClass1 c1_0 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass1();
+    final EClass0 c0_1 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass0();
+    final EClass1 c1_1 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass1();
+    final EClass0 c0_2 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass0();
+    final EClass1 c1_2 = Bz371509ModelPackage.INSTANCE.getModelFactory().createEClass1();
 
-    // add to a list
-    rentalContract1.addToRentalContractLines(rentalContractLine1);
-    rentalContract1.addToRentalContractLines(rentalContractLine2);
-    assertTrue(rentalContractLine1.getRentalContract() == rentalContract1);
-    assertTrue(rentalContract1.getRentalContractLines().contains(rentalContractLine1));
+    // set one, check many
+    c0_0.setToClass1(c1_0);
+    assertTrue(c1_0.getToClass0().contains(c0_0));
 
-    // move to another list
-    rentalContract2.addToRentalContractLines(rentalContractLine1);
-    assertTrue(rentalContractLine1.getRentalContract() == rentalContract2);
-    assertFalse(rentalContract1.getRentalContractLines().contains(rentalContractLine1));
-    assertTrue(rentalContract2.getRentalContractLines().contains(rentalContractLine1));
+    // add to many, check one
+    c1_0.addToToClass0(c0_1);
+    assertTrue(c0_1.getToClass1() == c1_0);
 
-    // remove from a list
-    rentalContract1.removeFromRentalContractLines(rentalContractLine2);
-    assertNull(rentalContractLine2.getRentalContract());
-    assertFalse(rentalContract1.getRentalContractLines().contains(rentalContractLine2));
+    // clear one, check many
+    c0_0.setToClass1(null);
+    assertFalse(c1_0.getToClass0().contains(c0_0));
+    assertTrue(c1_0.getToClass0().size() == 1);
 
-    // and add it again to the other
-    rentalContract2.addToRentalContractLines(rentalContractLine2);
-    assertTrue(rentalContractLine2.getRentalContract() == rentalContract2);
-    assertTrue(rentalContract2.getRentalContractLines().contains(rentalContractLine2));
-  }
+    // replace one, check many
+    assertTrue(c1_0.getToClass0().contains(c0_1));
+    c0_1.setToClass1(c1_1);
+    assertFalse(c1_0.getToClass0().contains(c0_1));
+    assertTrue(c1_1.getToClass0().contains(c0_1));
 
-  public void testSingleBidirectionalAssociations() {
-    final RentalCar rentalCar1 = RentalModelPackage.INSTANCE.getModelFactory().createRentalCar();
-    final RentalCar rentalCar2 = RentalModelPackage.INSTANCE.getModelFactory().createRentalCar();
-    final RentalCarDriver rentalCarDriver1 = RentalModelPackage.INSTANCE.getModelFactory().createRentalCarDriver();
+    // and back
+    c1_0.addToToClass0(c0_1);
+    assertTrue(c1_0.getToClass0().contains(c0_1));
+    assertFalse(c1_1.getToClass0().contains(c0_1));
 
-    rentalCar1.setCurrentDriver(rentalCarDriver1);
-    assertTrue(rentalCar1.getCurrentDriver() == rentalCarDriver1);
-    assertTrue(rentalCarDriver1.getCurrentRentalCar() == rentalCar1);
-    rentalCar2.setCurrentDriver(rentalCarDriver1);
-    assertTrue(rentalCar1.getCurrentDriver() == null);
-    assertTrue(rentalCar2.getCurrentDriver() == rentalCarDriver1);
-    assertTrue(rentalCarDriver1.getCurrentRentalCar() == rentalCar2);
-    rentalCar2.setCurrentDriver(null);
-    assertTrue(rentalCarDriver1.getCurrentRentalCar() == null);
+    // many-to-many
+    c0_2.addToMany(c1_2);
+    c0_1.addToMany(c1_2);
+    assertTrue(c1_2.getMany().contains(c0_2));
+    assertTrue(c1_2.getMany().contains(c0_1));
+    c0_1.removeFromMany(c1_2);
+    assertFalse(c1_2.getMany().contains(c0_1));
+
   }
 }

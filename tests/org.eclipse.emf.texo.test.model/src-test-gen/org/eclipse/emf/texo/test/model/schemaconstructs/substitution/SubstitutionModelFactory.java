@@ -449,6 +449,10 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.COMPLEXNUMBER_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.COMPLEXNUMBER_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case SubstitutionModelPackage.COMPLEXNUMBER_VALUE_FEATURE_ID:
         return getTarget().getValue();
       case SubstitutionModelPackage.COMPLEXNUMBER_UNIT_FEATURE_ID:
@@ -465,6 +469,12 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.COMPLEXNUMBER_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.COMPLEXNUMBER_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case SubstitutionModelPackage.COMPLEXNUMBER_VALUE_FEATURE_ID:
         getTarget().setValue((BigInteger) value);
         return;
@@ -538,6 +548,10 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case SubstitutionModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         return getTarget().getMixed();
       case SubstitutionModelPackage.DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID:
@@ -573,6 +587,12 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case SubstitutionModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         getTarget().setMixed((List<DocumentRootMixedFeatureGroup>) value);
         return;
@@ -675,6 +695,14 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_VALUE_FEATURE_ID:
+        return getTarget().getValue();
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_UNIT_FEATURE_ID:
+        return getTarget().getUnit();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -687,6 +715,18 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_VALUE_FEATURE_ID:
+        getTarget().setValue((BigInteger) value);
+        return;
+      case SubstitutionModelPackage.EVENCOMPLEXNUMBERTYPE_UNIT_FEATURE_ID:
+        getTarget().setUnit((String) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }
@@ -752,6 +792,10 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.MULTINUMBERTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.MULTINUMBERTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case SubstitutionModelPackage.MULTINUMBERTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       case SubstitutionModelPackage.MULTINUMBERTYPE_MYCOMPLEXABSTRACTGROUP_FEATURE_ID:
@@ -771,6 +815,12 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.MULTINUMBERTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.MULTINUMBERTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case SubstitutionModelPackage.MULTINUMBERTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -852,6 +902,10 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.NUMBERTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.NUMBERTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case SubstitutionModelPackage.NUMBERTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       case SubstitutionModelPackage.NUMBERTYPE_MYSIMPLEABSTRACTGROUP_FEATURE_ID:
@@ -875,6 +929,12 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.NUMBERTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.NUMBERTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case SubstitutionModelPackage.NUMBERTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -967,6 +1027,14 @@ public class SubstitutionModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_VALUE_FEATURE_ID:
+        return getTarget().getValue();
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_UNIT_FEATURE_ID:
+        return getTarget().getUnit();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -979,6 +1047,18 @@ public class SubstitutionModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_VALUE_FEATURE_ID:
+        getTarget().setValue((BigInteger) value);
+        return;
+      case SubstitutionModelPackage.ODDCOMPLEXNUMBERTYPE_UNIT_FEATURE_ID:
+        getTarget().setUnit((String) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }

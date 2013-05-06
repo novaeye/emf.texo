@@ -16,12 +16,11 @@
 package org.eclipse.emf.texo.server.store;
 
 import org.eclipse.emf.texo.component.ComponentProvider;
-import org.eclipse.emf.texo.json.JSONEObjectStore;
 import org.eclipse.emf.texo.store.EObjectStore;
 import org.eclipse.emf.texo.store.TexoResource;
 
 /**
- * A TexoResource which uses the {@link JSONEObjectStore} for querying and persisting.
+ * A TexoResource which uses the {@link EPersistenceService} for querying and persisting.
  * 
  * @author <a href="mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.1 $

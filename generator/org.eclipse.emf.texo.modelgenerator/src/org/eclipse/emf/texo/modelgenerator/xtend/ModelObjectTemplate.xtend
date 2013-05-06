@@ -55,7 +55,7 @@ class ModelObjectTemplate extends BaseTemplate {
 public static class «eClassModelGenAnnotation.simpleClassName»ModelObject<E extends «eClassModelGenAnnotation.qualifiedClassName»>
 «IF eClassModelGenAnnotation.hasSuperEClass»
     «var eSuperClassAnnotation = eClassModelGenAnnotation.superEClass »
-    «var eSuperPackageAnnotation = eClassModelGenAnnotation.superEClass.ownerEPackageAnnotation as EPackageModelGenAnnotation»
+    «var eSuperPackageAnnotation = eClassModelGenAnnotation.superEClass.ownerEPackageAnnotation»
     «IF eSuperPackageAnnotation.EPackage != eClassModelGenAnnotation.EClass.EPackage»
      extends «eSuperPackageAnnotation.modelClassesPackagePath».«eSuperPackageAnnotation.simpleModelFactoryClassName».«eSuperClassAnnotation.simpleClassName»ModelObject<E>
     «ELSE»
@@ -92,7 +92,7 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
     public Object eGet(org.eclipse.emf.ecore.EStructuralFeature eStructuralFeature) {
         final int featureID = eClass().getFeatureID(eStructuralFeature);
         switch (featureID) {
-        «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+        «FOR featureAnnotation : eClassModelGenAnnotation.EAllStructuralFeatureModelGenAnnotations»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
                 return getTarget().«featureAnnotation.getter»();
         «ENDFOR»
@@ -104,14 +104,14 @@ extends org.eclipse.emf.texo.model.AbstractModelObject<E>
     /**
      * @generated
      */
-    «IF eClassModelGenAnnotation.addSuppressUnchecked || eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations.exists(e|e.EStructuralFeature.many && e.EStructuralFeature.changeable)»
+    «IF eClassModelGenAnnotation.addSuppressUnchecked || eClassModelGenAnnotation.EAllStructuralFeatureModelGenAnnotations.exists(e|e.EStructuralFeature.many && e.EStructuralFeature.changeable)»
     @SuppressWarnings("unchecked")
     «ENDIF»
     @Override
     public void eSet(org.eclipse.emf.ecore.EStructuralFeature eStructuralFeature, Object value) {
         final int featureID = eClass().getFeatureID(eStructuralFeature);
         switch (featureID) {
-        «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+        «FOR featureAnnotation : eClassModelGenAnnotation.EAllStructuralFeatureModelGenAnnotations»
             «IF featureAnnotation.EStructuralFeature.changeable»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassModelGenAnnotation.name)»_«TemplateUtil::toUpperCase(featureAnnotation.name)»_FEATURE_ID:
                 getTarget().«featureAnnotation.setter»(«TemplateUtil::cast(featureAnnotation.objectType)»value);

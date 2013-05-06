@@ -244,6 +244,10 @@ public class Bz306546ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz306546ModelPackage.MYSERIALIZABLECLASS_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case Bz306546ModelPackage.MYSERIALIZABLECLASS_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case Bz306546ModelPackage.MYSERIALIZABLECLASS_SOMETHINGINTERESTING_FEATURE_ID:
         return getTarget().getSomethingInteresting();
       case Bz306546ModelPackage.MYSERIALIZABLECLASS_NONEMF_FEATURE_ID:
@@ -263,6 +267,12 @@ public class Bz306546ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz306546ModelPackage.MYSERIALIZABLECLASS_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case Bz306546ModelPackage.MYSERIALIZABLECLASS_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case Bz306546ModelPackage.MYSERIALIZABLECLASS_SOMETHINGINTERESTING_FEATURE_ID:
         getTarget().setSomethingInteresting((String) value);
         return;
@@ -344,6 +354,10 @@ public class Bz306546ModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz306546ModelPackage.NONEMF_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case Bz306546ModelPackage.NONEMF_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       default:
         return super.eGet(eStructuralFeature);
       }
@@ -356,6 +370,12 @@ public class Bz306546ModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case Bz306546ModelPackage.NONEMF_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case Bz306546ModelPackage.NONEMF_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       default:
         super.eSet(eStructuralFeature, value);
       }

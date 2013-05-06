@@ -208,6 +208,10 @@ public class AttributesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.ATYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AttributesModelPackage.ATYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AttributesModelPackage.ATYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       case AttributesModelPackage.ATYPE_B_FEATURE_ID:
@@ -232,6 +236,12 @@ public class AttributesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.ATYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AttributesModelPackage.ATYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AttributesModelPackage.ATYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;
@@ -317,6 +327,10 @@ public class AttributesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AttributesModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AttributesModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         return getTarget().getMixed();
       case AttributesModelPackage.DOCUMENTROOT_XMLNSPREFIXMAP_FEATURE_ID:
@@ -340,6 +354,12 @@ public class AttributesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.DOCUMENTROOT_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AttributesModelPackage.DOCUMENTROOT_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AttributesModelPackage.DOCUMENTROOT_MIXED_FEATURE_ID:
         getTarget().setMixed((List<DocumentRootMixedFeatureGroup>) value);
         return;
@@ -429,6 +449,10 @@ public class AttributesModelFactory implements ModelFactory {
     public Object eGet(EStructuralFeature eStructuralFeature) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.RTYPE_DB_ID_FEATURE_ID:
+        return getTarget().getDb_Id();
+      case AttributesModelPackage.RTYPE_DB_VERSION_FEATURE_ID:
+        return getTarget().getDb_version();
       case AttributesModelPackage.RTYPE_NAME_FEATURE_ID:
         return getTarget().getName();
       default:
@@ -443,6 +467,12 @@ public class AttributesModelFactory implements ModelFactory {
     public void eSet(EStructuralFeature eStructuralFeature, Object value) {
       final int featureID = eClass().getFeatureID(eStructuralFeature);
       switch (featureID) {
+      case AttributesModelPackage.RTYPE_DB_ID_FEATURE_ID:
+        getTarget().setDb_Id((Long) value);
+        return;
+      case AttributesModelPackage.RTYPE_DB_VERSION_FEATURE_ID:
+        getTarget().setDb_version((Integer) value);
+        return;
       case AttributesModelPackage.RTYPE_NAME_FEATURE_ID:
         getTarget().setName((String) value);
         return;

@@ -120,6 +120,7 @@ public class TestModel {
     urls.add("issues/bz403161_2.ecore"); //$NON-NLS-1$
     urls.add("issues/bz403743.ecore"); //$NON-NLS-1$
     urls.add("issues/bz404132.ecore"); //$NON-NLS-1$
+    urls.add("issues/interface_abstract_class_wrong_featureid.ecore"); //$NON-NLS-1$
 
     urls.add("texo/TexoDataRequest.xsd");//$NON-NLS-1$
     urls.add("texo/TexoDataResponse.xsd");//$NON-NLS-1$

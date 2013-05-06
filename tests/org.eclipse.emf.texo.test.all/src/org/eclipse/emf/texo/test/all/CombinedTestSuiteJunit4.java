@@ -18,11 +18,8 @@ package org.eclipse.emf.texo.test.all;
 
 import org.eclipse.emf.texo.json.test.ModelJSONTestSuite;
 import org.eclipse.emf.texo.server.test.AllServerTests;
+import org.eclipse.emf.texo.test.AllTestsTests;
 import org.eclipse.emf.texo.test.TestBz325427;
-import org.eclipse.emf.texo.test.TestBz363802;
-import org.eclipse.emf.texo.test.TestBz379796;
-import org.eclipse.emf.texo.test.TestBz380279;
-import org.eclipse.emf.texo.test.TestBz393240;
 import org.eclipse.emf.texo.test.copycompare.CopyCompareTestSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -35,7 +32,7 @@ import org.junit.runners.Suite;
  * @author mtaal
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ AllServerTests.class, CopyCompareTestSuite.class, ModelJSONTestSuite.class, TestBz363802.class,
-    TestBz325427.class, TestBz379796.class, TestBz380279.class, TestBz393240.class, CombinedTestSuite.class })
+@Suite.SuiteClasses({ AllTestsTests.class, AllServerTests.class, CopyCompareTestSuite.class, ModelJSONTestSuite.class,
+    TestBz325427.class, CombinedTestSuite.class })
 public class CombinedTestSuiteJunit4 {
 }
