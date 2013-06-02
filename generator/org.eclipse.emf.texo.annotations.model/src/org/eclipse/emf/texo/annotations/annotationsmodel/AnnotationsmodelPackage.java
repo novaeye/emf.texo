@@ -2556,8 +2556,8 @@ public class AnnotationsmodelPackage extends EPackageImpl {
 		initEClass(eNamedElementAnnotationEClass, ENamedElementAnnotation.class, "ENamedElementAnnotation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getENamedElementAnnotation_ENamedElement(), theEcorePackage.getENamedElement(), null, "eNamedElement", null, 0, 1, ENamedElementAnnotation.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getENamedElementAnnotation_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getENamedElementAnnotation_LastIdentifier(), theEcorePackage.getEString(), "lastIdentifier", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getENamedElementAnnotation_Generated(), theEcorePackage.getEBoolean(), "generated", null, 0, 1, ENamedElementAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getENamedElementAnnotation_LastIdentifier(), theEcorePackage.getEString(), "lastIdentifier", null, 0, 1, ENamedElementAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getENamedElementAnnotation_Generated(), theEcorePackage.getEBoolean(), "generated", null, 0, 1, ENamedElementAnnotation.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(eNamedElementAnnotationEClass, theEcorePackage.getEString(), "getJavaAnnotation", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "identifier", 1, 1, IS_UNIQUE, IS_ORDERED);

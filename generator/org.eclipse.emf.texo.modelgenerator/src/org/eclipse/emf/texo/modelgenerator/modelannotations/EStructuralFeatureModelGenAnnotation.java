@@ -76,7 +76,7 @@ public interface EStructuralFeatureModelGenAnnotation extends ENamedElementModel
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_Type()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   String getType();
@@ -101,7 +101,7 @@ public interface EStructuralFeatureModelGenAnnotation extends ENamedElementModel
 	 * @return the value of the '<em>Object Type</em>' attribute.
 	 * @see #setObjectType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_ObjectType()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   String getObjectType();
@@ -128,7 +128,7 @@ public interface EStructuralFeatureModelGenAnnotation extends ENamedElementModel
 	 * @see #unsetItemType()
 	 * @see #setItemType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_ItemType()
-	 * @model unique="false" unsettable="true"
+	 * @model unique="false" unsettable="true" transient="true"
 	 * @generated
 	 */
   String getItemType();
@@ -352,7 +352,7 @@ public interface EStructuralFeatureModelGenAnnotation extends ENamedElementModel
 	 * @return the value of the '<em>Feature Map Feature</em>' reference.
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_FeatureMapFeature()
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation#getMemberFeatureMapFeatures
-	 * @model opposite="memberFeatureMapFeatures" changeable="false"
+	 * @model opposite="memberFeatureMapFeatures" transient="true" changeable="false"
 	 * @generated
 	 */
   EStructuralFeatureModelGenAnnotation getFeatureMapFeature();
@@ -370,7 +370,7 @@ public interface EStructuralFeatureModelGenAnnotation extends ENamedElementModel
 	 * @return the value of the '<em>Member Feature Map Features</em>' reference list.
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_MemberFeatureMapFeatures()
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation#getFeatureMapFeature
-	 * @model opposite="featureMapFeature" changeable="false"
+	 * @model opposite="featureMapFeature" transient="true" changeable="false"
 	 * @generated
 	 */
   EList<EStructuralFeatureModelGenAnnotation> getMemberFeatureMapFeatures();

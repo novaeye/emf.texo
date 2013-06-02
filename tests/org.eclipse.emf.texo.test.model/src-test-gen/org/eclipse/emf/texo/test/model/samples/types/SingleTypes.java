@@ -110,7 +110,7 @@ public class SingleTypes extends Identifiable {
    * @generated
    */
   @Transient()
-  private Class<?> clazz = null;
+  private Class clazz = null;
 
   /**
    * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -447,7 +447,7 @@ public class SingleTypes extends Identifiable {
    * @return the value of '<em><b>clazz</b></em>' feature
    * @generated
    */
-  public Class<?> getClazz() {
+  public Class getClazz() {
     return clazz;
   }
 
@@ -460,7 +460,7 @@ public class SingleTypes extends Identifiable {
    *          the new value of the '{@link SingleTypes#getClazz() clazz}' feature.
    * @generated
    */
-  public void setClazz(Class<?> newClazz) {
+  public void setClazz(Class newClazz) {
     clazz = newClazz;
   }
 

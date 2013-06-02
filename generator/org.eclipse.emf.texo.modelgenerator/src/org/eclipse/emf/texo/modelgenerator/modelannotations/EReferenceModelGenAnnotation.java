@@ -584,7 +584,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_Type()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   public String getType() {
@@ -616,7 +616,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @return the value of the '<em>Object Type</em>' attribute.
 	 * @see #setObjectType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_ObjectType()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   public String getObjectType() {
@@ -650,7 +650,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @see #unsetItemType()
 	 * @see #setItemType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_ItemType()
-	 * @model unique="false" unsettable="true"
+	 * @model unique="false" unsettable="true" transient="true"
 	 * @generated
 	 */
   public String getItemType() {
@@ -945,7 +945,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @return the value of the '<em>Feature Map Feature</em>' reference.
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_FeatureMapFeature()
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation#getMemberFeatureMapFeatures
-	 * @model opposite="memberFeatureMapFeatures" changeable="false"
+	 * @model opposite="memberFeatureMapFeatures" transient="true" changeable="false"
 	 * @generated
 	 */
   public EStructuralFeatureModelGenAnnotation getFeatureMapFeature() {
@@ -996,7 +996,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @return the value of the '<em>Member Feature Map Features</em>' reference list.
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEStructuralFeatureModelGenAnnotation_MemberFeatureMapFeatures()
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.EStructuralFeatureModelGenAnnotation#getFeatureMapFeature
-	 * @model opposite="featureMapFeature" changeable="false"
+	 * @model opposite="featureMapFeature" transient="true" changeable="false"
 	 * @generated
 	 */
   public EList<EStructuralFeatureModelGenAnnotation> getMemberFeatureMapFeatures() {
@@ -1271,7 +1271,7 @@ public class EReferenceModelGenAnnotation extends EReferenceAnnotation implement
 	 * @return the value of the '<em>Opposite Model Gen Annotation</em>' reference.
 	 * @see #setOppositeModelGenAnnotation(EReferenceModelGenAnnotation)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEReferenceModelGenAnnotation_OppositeModelGenAnnotation()
-	 * @model
+	 * @model transient="true"
 	 * @generated
 	 */
   public EReferenceModelGenAnnotation getOppositeModelGenAnnotation() {

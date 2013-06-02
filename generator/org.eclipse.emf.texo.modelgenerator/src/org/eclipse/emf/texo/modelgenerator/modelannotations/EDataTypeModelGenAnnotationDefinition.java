@@ -41,7 +41,7 @@ public interface EDataTypeModelGenAnnotationDefinition extends EClassifierModelG
 	 * @return the value of the '<em>Instance Class Name</em>' attribute.
 	 * @see #setInstanceClassName(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEDataTypeModelGenAnnotationDefinition_InstanceClassName()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   String getInstanceClassName();
@@ -66,7 +66,7 @@ public interface EDataTypeModelGenAnnotationDefinition extends EClassifierModelG
 	 * @return the value of the '<em>Object Class Name</em>' attribute.
 	 * @see #setObjectClassName(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEDataTypeModelGenAnnotationDefinition_ObjectClassName()
-	 * @model unique="false"
+	 * @model unique="false" transient="true"
 	 * @generated
 	 */
   String getObjectClassName();
@@ -243,7 +243,7 @@ public interface EDataTypeModelGenAnnotationDefinition extends EClassifierModelG
 	 * @return the value of the '<em>Base Type Annotation</em>' reference.
 	 * @see #setBaseTypeAnnotation(EDataTypeModelGenAnnotationDefinition)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEDataTypeModelGenAnnotationDefinition_BaseTypeAnnotation()
-	 * @model
+	 * @model transient="true"
 	 * @generated
 	 */
   EDataTypeModelGenAnnotationDefinition getBaseTypeAnnotation();
@@ -270,7 +270,7 @@ public interface EDataTypeModelGenAnnotationDefinition extends EClassifierModelG
 	 * @see #unsetItemType()
 	 * @see #setItemType(String)
 	 * @see org.eclipse.emf.texo.modelgenerator.modelannotations.ModelcodegeneratorPackage#getEDataTypeModelGenAnnotationDefinition_ItemType()
-	 * @model unique="false" unsettable="true" required="true"
+	 * @model unique="false" unsettable="true" required="true" transient="true"
 	 * @generated
 	 */
   String getItemType();
