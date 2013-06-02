@@ -15,28 +15,30 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         /** 
- *          * PinnedPartitioning pins requests to a single connection pool.
- *          * 
- *          * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *          * 
- *          * @see org.eclipse.persistence.descriptors.partitioning.PinnedPartitioningPolicy
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface PinnedPartitioning {
- *             String name();
- *             
- *             /**
- *              * The connection pool name to pin queries to.
- *              **
- *             String connectionPool();
- *         }
  * 
- *       
+ * 				/**
+ * 				* PinnedPartitioning pins requests to a single connection pool.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.PinnedPartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface PinnedPartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* The connection pool name to pin queries to.
+ * 				**
+ * 				String connectionPool();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

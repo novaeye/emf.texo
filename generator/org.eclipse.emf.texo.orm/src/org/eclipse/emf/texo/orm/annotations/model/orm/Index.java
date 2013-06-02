@@ -18,39 +18,40 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * Allow a database INDEX to be define when generating DDL.
- *          * The @Index can be defined on a Entity class, or on an attribute.
- *          * The column is defaulted when defined on a attribute.
- *          * 
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({METHOD, FIELD, TYPE})
- *         @Retention(RUNTIME)
- *         public @interface Index {
- *             /** The name of the INDEX, defaults to INDEX_(table-name) **
- *             String name() default "";
- *     
- *             /** The schema of the INDEX **
- *             String schema() default "";
- *             
- *             /** The catalog of the INDEX **
- *             String catalog() default "";
- *             
- *             /** The table to define the index on, defaults to entities primary table. **
- *             String table() default "";
- *             
- *             boolean unique() default false;
- *             
- *             /**
- *              * Specify the set of columns to define the index on.
- *              * Not required when annotated on a field/method.
- *              **
- *             String[] columnNames() default {};
- *         }
+ * 				/**
+ * 				* Allow a database INDEX to be define when generating DDL.
+ * 				* The @Index can be defined on a Entity class, or on an attribute.
+ * 				* The column is defaulted when defined on a attribute.
+ * 				*
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({METHOD, FIELD, TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Index {
+ * 				/** The name of the INDEX, defaults to INDEX_(table-name) **
+ * 				String name() default "";
  * 
- *       
+ * 				/** The schema of the INDEX **
+ * 				String schema() default "";
+ * 
+ * 				/** The catalog of the INDEX **
+ * 				String catalog() default "";
+ * 
+ * 				/** The table to define the index on, defaults to entities primary
+ * 				table. **
+ * 				String table() default "";
+ * 
+ * 				boolean unique() default false;
+ * 
+ * 				/**
+ * 				* Specify the set of columns to define the index on.
+ * 				* Not required when annotated on a field/method.
+ * 				**
+ * 				String[] columnNames() default {};
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

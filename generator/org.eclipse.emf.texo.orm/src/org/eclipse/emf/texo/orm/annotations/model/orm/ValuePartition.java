@@ -15,28 +15,30 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         /** 
- *          * Represent a specific value partition.
- *          * The value will be routed to the connection pool.
- *          * 
- *          * @see ValuePartitioningPolicy
- *          * @see org.eclipse.persistence.descriptors.partitioning.ValuePartitioningPolicy
- *          * @see org.eclipse.persistence.descriptors.partitioning.ValuePartition
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface ValuePartition {
- *             /** The String representation of the range start value. **
- *             String value() default "";
- *             
- *             /** The connection pool to route queries to for this value. **
- *             String connectionPool();
- *         }
  * 
- *       
+ * 				/**
+ * 				* Represent a specific value partition.
+ * 				* The value will be routed to the connection pool.
+ * 				*
+ * 				* @see ValuePartitioningPolicy
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.ValuePartitioningPolicy
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.ValuePartition
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ValuePartition {
+ * 				/** The String representation of the range start value. **
+ * 				String value() default "";
+ * 
+ * 				/** The connection pool to route queries to for this value. **
+ * 				String connectionPool();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

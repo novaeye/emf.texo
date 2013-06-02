@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         This element contains the entity field or property mappings.
- *         It may be sparsely populated to include only a subset of the
- *         fields or properties. If metadata-complete for the entity is true
- *         then the remainder of the attributes will be defaulted according
- *         to the default rules.
+ * 				This element contains the entity field or property mappings.
+ * 				It may be sparsely populated to include only a subset of the
+ * 				fields or properties. If metadata-complete for the entity is true
+ * 				then the remainder of the attributes will be defaulted according
+ * 				to the default rules.
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

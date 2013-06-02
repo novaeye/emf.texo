@@ -15,25 +15,26 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * The ChangeTracking annotation is used to specify the 
- *          * org.eclipse.persistence.descriptors.changetracking.ObjectChangePolicy 
- *          * which computes changes sets for EclipseLink's UnitOfWork commit 
- *          * process. An ObjectChangePolicy is stored on an Entity's descriptor.
- *          *
- *          * A ChangeTracking annotation may be specified on an Entity, 
- *          * MappedSuperclass or Embeddable.
- *          ** 
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface ChangeTracking {
- *           /**
- *            * (Optional) The type of change tracking to use.
- *            ** 
- *           ChangeTrackingType value() default AUTO;
- *         }
+ * 				/**
+ * 				* The ChangeTracking annotation is used to specify the
+ * 				*
+ * 				org.eclipse.persistence.descriptors.changetracking.ObjectChangePolicy
+ * 				* which computes changes sets for EclipseLink's UnitOfWork commit
+ * 				* process. An ObjectChangePolicy is stored on an Entity's descriptor.
+ * 				*
+ * 				* A ChangeTracking annotation may be specified on an Entity,
+ * 				* MappedSuperclass or Embeddable.
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ChangeTracking {
+ * 				/**
+ * 				* (Optional) The type of change tracking to use.
+ * 				**
+ * 				ChangeTrackingType value() default AUTO;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

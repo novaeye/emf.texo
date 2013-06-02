@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface IdClass {
- *           Class value();
- *         }
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface IdClass {
+ * 				Class value();
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

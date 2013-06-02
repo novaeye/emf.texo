@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface GeneratedValue {
- *           GenerationType strategy() default AUTO;
- *           String generator() default "";
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface GeneratedValue {
+ * 				GenerationType strategy() default AUTO;
+ * 				String generator() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

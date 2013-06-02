@@ -105,6 +105,15 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
 
 		/**
+	 * This is true if the Creation Suffix attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean creationSuffixESet;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -218,8 +227,33 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 	public void setCreationSuffix(String newCreationSuffix) {
 		String oldCreationSuffix = creationSuffix;
 		creationSuffix = newCreationSuffix;
+		boolean oldCreationSuffixESet = creationSuffixESet;
+		creationSuffixESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix, !oldCreationSuffixESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreationSuffix() {
+		String oldCreationSuffix = creationSuffix;
+		boolean oldCreationSuffixESet = creationSuffixESet;
+		creationSuffix = CREATION_SUFFIX_EDEFAULT;
+		creationSuffixESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX, oldCreationSuffix, CREATION_SUFFIX_EDEFAULT, oldCreationSuffixESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreationSuffix() {
+		return creationSuffixESet;
 	}
 
 		/**
@@ -347,7 +381,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 				setCatalog(CATALOG_EDEFAULT);
 				return;
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX:
-				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				unsetCreationSuffix();
 				return;
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
 				setName(NAME_EDEFAULT);
@@ -373,7 +407,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__CREATION_SUFFIX:
-				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
+				return isSetCreationSuffix();
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.ECLIPSELINK_COLLECTION_TABLE__SCHEMA:
@@ -394,7 +428,7 @@ public class EclipselinkCollectionTableImpl extends BaseOrmAnnotationImpl implem
 		result.append(" (catalog: ");
 		result.append(catalog);
 		result.append(", creationSuffix: ");
-		result.append(creationSuffix);
+		if (creationSuffixESet) result.append(creationSuffix); else result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(", schema: ");

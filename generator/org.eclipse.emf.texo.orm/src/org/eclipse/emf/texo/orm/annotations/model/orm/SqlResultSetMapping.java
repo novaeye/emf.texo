@@ -18,14 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface SqlResultSetMapping {
- *           String name();
- *           EntityResult[] entities() default {};
- *           ColumnResult[] columns() default {};
- *         }
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface SqlResultSetMapping {
+ * 				String name();
+ * 				EntityResult[] entities() default {};
+ * 				ColumnResult[] columns() default {};
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

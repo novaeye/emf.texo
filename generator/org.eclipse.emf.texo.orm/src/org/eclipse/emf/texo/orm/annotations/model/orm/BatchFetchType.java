@@ -19,30 +19,36 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
  * 
- *             public enum BatchFetchType {
- *                 /**
- *                  * This is the default form of batch reading.
- *                  * The original query's selection criteria is joined with the batch query.
- *                  **
- *                 JOIN,
- *             
- *                 /**
- *                  * This uses an SQL EXISTS and a sub-select in the batch query instead of a join.
- *                  * This has the advantage of not requiring an SQL DISTINCT which can have issues
- *                  * with LOBs, or may be more efficient for some types of queries or on some databases.
- *                  **
- *                 EXISTS,
- *             
- *                 /**
- *                  * This uses an SQL IN clause in the batch query passing in the source object Ids.
- *                  * This has the advantage of only selecting the objects not already contained in the cache,
- *                  * and can work better with cursors, or if joins cannot be used.
- *                  * This may only work for singleton Ids on some databases.
- *                  **
- *                 IN    
- *             }
+ * 				public enum BatchFetchType {
+ * 				/**
+ * 				* This is the default form of batch reading.
+ * 				* The original query's selection criteria is joined with the batch
+ * 				query.
+ * 				**
+ * 				JOIN,
  * 
- *       
+ * 				/**
+ * 				* This uses an SQL EXISTS and a sub-select in the batch query instead
+ * 				of a join.
+ * 				* This has the advantage of not requiring an SQL DISTINCT which can
+ * 				have issues
+ * 				* with LOBs, or may be more efficient for some types of queries or on
+ * 				some databases.
+ * 				**
+ * 				EXISTS,
+ * 
+ * 				/**
+ * 				* This uses an SQL IN clause in the batch query passing in the source
+ * 				object Ids.
+ * 				* This has the advantage of only selecting the objects not already
+ * 				contained in the cache,
+ * 				* and can work better with cursors, or if joins cannot be used.
+ * 				* This may only work for singleton Ids on some databases.
+ * 				**
+ * 				IN
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getBatchFetchType()
  * @model extendedMetaData="name='batch-fetch-type'"

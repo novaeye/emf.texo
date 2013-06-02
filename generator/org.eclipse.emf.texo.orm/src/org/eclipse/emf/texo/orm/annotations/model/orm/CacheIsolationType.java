@@ -19,43 +19,55 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
  * 
- *         /**
- *          * Options for how Entity instances should be shared within an EclipseLink Persistence Unit / ServerSession
- *          * @see ClassDescriptor#setCacheIsolationType(CacheIsolationType)
- *          * @author Gordon Yorke
- *          * @since EclipseLink 2.2
- *          **
- *         public enum CacheIsolationType {
- *         
- *          /**
- *           * Entity instances will be cached within the EntityManagerFactory/ServerSession level.
- *           * Any user queries for shared cache instances (ie Read-Only query hint) will return an Entity
- *           * instance that may be shared by multiple clients. 
- *           * 
- *           * This setting is the default isolation level.
- *           **
- *          SHARED,
- *     
- *          /**
- *           * Entity state information will be cached in the shared cache but Entity
- *           * instances will not be shared. Any user queries for shared cache instances
- *           * (ie Read-Only query hint) will return a new Entity instance with the cached state.
- *           * This will ensure the instance is <i>protected</i> from any concurrent
- *           * state change.
- *           **
- *          PROTECTED,
- *     
- *          /**
- *           * The Entity and its data is not stored in the shared cache but is
- *           * <i>isolated</i> to the Persistence Context/UnitOfWork or
- *           * IsolatedClientSession. This setting effectively disables second level
- *           * caching for this entity and should be used when users do not want caching for
- *           * a particular Entity.
- *           **
- *          ISOLATED;
- *         
- *         }
- *       
+ * 				/**
+ * 				* Options for how Entity instances should be shared within an
+ * 				EclipseLink Persistence Unit / ServerSession
+ * 				* @see ClassDescriptor#setCacheIsolationType(CacheIsolationType)
+ * 				* @author Gordon Yorke
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				public enum CacheIsolationType {
+ * 
+ * 				/**
+ * 				* Entity instances will be cached within the
+ * 				EntityManagerFactory/ServerSession level.
+ * 				* Any user queries for shared cache instances (ie Read-Only query
+ * 				hint) will return an Entity
+ * 				* instance that may be shared by multiple clients.
+ * 				*
+ * 				* This setting is the default isolation level.
+ * 				**
+ * 				SHARED,
+ * 
+ * 				/**
+ * 				* Entity state information will be cached in the shared cache but
+ * 				Entity
+ * 				* instances will not be shared. Any user queries for shared cache
+ * 				instances
+ * 				* (ie Read-Only query hint) will return a new Entity instance with
+ * 				the cached state.
+ * 				* This will ensure the instance is
+ * 				<i>protected</i>
+ * 				from any concurrent
+ * 				* state change.
+ * 				**
+ * 				PROTECTED,
+ * 
+ * 				/**
+ * 				* The Entity and its data is not stored in the shared cache but is
+ * 				*
+ * 				<i>isolated</i>
+ * 				to the Persistence Context/UnitOfWork or
+ * 				* IsolatedClientSession. This setting effectively disables second
+ * 				level
+ * 				* caching for this entity and should be used when users do not want
+ * 				caching for
+ * 				* a particular Entity.
+ * 				**
+ * 				ISOLATED;
+ * 
+ * 				}
+ * 			
  * <!-- end-model-doc -->
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCacheIsolationType()
  * @model extendedMetaData="name='cache-isolation-type'"

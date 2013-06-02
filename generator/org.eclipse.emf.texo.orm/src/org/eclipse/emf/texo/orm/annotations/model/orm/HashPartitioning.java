@@ -17,48 +17,57 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *             /** 
- *              * HashPartitioning partitions access to a database cluster by the hash of a field value from the object,
- *              * such as the object's location, or tenant.
- *              * The hash indexes into the list of connection pools.
- *              * All write or read request for object's with that hash value are sent to the server.
- *              * If a query does not include the field as a parameter, then it can either be sent
- *              * to all server's and unioned, or left to the sesion's default behavior.
- *              * 
- *              * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *              * 
- *              * @see org.eclipse.persistence.descriptors.partitioning.HashPartitioningPolicy
- *              * @author James Sutherland
- *              * @since EclipseLink 2.2
- *              ** 
- *             @Target({TYPE, METHOD, FIELD})
- *             @Retention(RUNTIME)
- *             public @interface HashPartitioning {
- *                 String name();
- *                 
- *                 /**
- *                  * The database column or query parameter to partition queries by.
- *                  * This is the table column name, not the class attribute name.
- *                  * The column value must be included in the query and should normally be part of the object's Id.
- *                  * This can also be the name of a query parameter.
- *                  * If a query does not contain the field the query will not be partitioned.
- *                  **
- *                 Column partitionColumn();
- *             
- *                 /**
- *                  * List of connection pool names to partition across.
- *                  **
- *                 String[] connectionPools();
- *                         
- *                 /**
- *                  * Defines if queries that do not contain the partition field should be sent
- *                  * to every database and have the result unioned.
- *                  **
- *                 boolean unionUnpartitionableQueries() default false;
- *             }
  * 
- *       
+ * 				/**
+ * 				* HashPartitioning partitions access to a database cluster by the
+ * 				hash of a field value from the object,
+ * 				* such as the object's location, or tenant.
+ * 				* The hash indexes into the list of connection pools.
+ * 				* All write or read request for object's with that hash value are
+ * 				sent to the server.
+ * 				* If a query does not include the field as a parameter, then it can
+ * 				either be sent
+ * 				* to all server's and unioned, or left to the sesion's default
+ * 				behavior.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.HashPartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface HashPartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* The database column or query parameter to partition queries by.
+ * 				* This is the table column name, not the class attribute name.
+ * 				* The column value must be included in the query and should normally
+ * 				be part of the object's Id.
+ * 				* This can also be the name of a query parameter.
+ * 				* If a query does not contain the field the query will not be
+ * 				partitioned.
+ * 				**
+ * 				Column partitionColumn();
+ * 
+ * 				/**
+ * 				* List of connection pool names to partition across.
+ * 				**
+ * 				String[] connectionPools();
+ * 
+ * 				/**
+ * 				* Defines if queries that do not contain the partition field should
+ * 				be sent
+ * 				* to every database and have the result unioned.
+ * 				**
+ * 				boolean unionUnpartitionableQueries() default false;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

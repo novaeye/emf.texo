@@ -16,16 +16,16 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface FetchAttribute {
- *           /**
- *            * (Required) The fetch attribute name.
- *            **
- *           String name(); 
- *         }
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface FetchAttribute {
+ * 				/**
+ * 				* (Required) The fetch attribute name.
+ * 				**
+ * 				String name();
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

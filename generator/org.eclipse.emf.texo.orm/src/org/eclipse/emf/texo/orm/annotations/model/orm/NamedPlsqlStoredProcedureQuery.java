@@ -18,53 +18,56 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *             /** 
- *              * A PLSQLNamedStoredProcedureQuery annotation allows the definition of queries that 
- *              * call PLSQL stored procedures as named queries.
- *              * The PLSQL support adds support for complex PLSQL types such as RECORD and TABLE types,
- *              * that are not accessible from JDBC.
- *              * 
- *              * A PLSQLNamedStoredProcedureQuery annotation may be defined on an Entity or
- *              * MappedSuperclass.
- *              * 
- *              * @author James Sutherland
- *              * @since EclipseLink 2.3
- *              ** 
- *             @Target({TYPE})
- *             @Retention(RUNTIME)
- *             public @interface NamedPLSQLStoredProcedureQuery {
- *                 /**
- *                  * (Required) Unique name that references this stored procedure query.
- *                  **
- *                 String name();
- *             
- *                 /**
- *                  * (Optional) Query hints.
- *                  **
- *                 QueryHint[] hints() default {};
- *             
- *                 /**
- *                  * (Optional) Refers to the class of the result.
- *                  **
- *                 Class resultClass() default void.class;
- *             
- *                 /**
- *                  * (Optional) The name of the SQLResultMapping.
- *                  **
- *                 String resultSetMapping() default "";
- *             
- *                 /**
- *                  * (Required) The name of the stored procedure.
- *                  **
- *                 String procedureName();
- *                 
- *                 /**
- *                  * (Optional) Defines the parameters to the stored procedure.
- *                  **
- *                 PLSQLParameter[] parameters() default {};
- *             }
+ * 				/**
+ * 				* A PLSQLNamedStoredProcedureQuery annotation allows the definition
+ * 				of queries that
+ * 				* call PLSQL stored procedures as named queries.
+ * 				* The PLSQL support adds support for complex PLSQL types such as
+ * 				RECORD and TABLE types,
+ * 				* that are not accessible from JDBC.
+ * 				*
+ * 				* A PLSQLNamedStoredProcedureQuery annotation may be defined on an
+ * 				Entity or
+ * 				* MappedSuperclass.
+ * 				*
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface NamedPLSQLStoredProcedureQuery {
+ * 				/**
+ * 				* (Required) Unique name that references this stored procedure query.
+ * 				**
+ * 				String name();
  * 
- *       
+ * 				/**
+ * 				* (Optional) Query hints.
+ * 				**
+ * 				QueryHint[] hints() default {};
+ * 
+ * 				/**
+ * 				* (Optional) Refers to the class of the result.
+ * 				**
+ * 				Class resultClass() default void.class;
+ * 
+ * 				/**
+ * 				* (Optional) The name of the SQLResultMapping.
+ * 				**
+ * 				String resultSetMapping() default "";
+ * 
+ * 				/**
+ * 				* (Required) The name of the stored procedure.
+ * 				**
+ * 				String procedureName();
+ * 
+ * 				/**
+ * 				* (Optional) Defines the parameters to the stored procedure.
+ * 				**
+ * 				PLSQLParameter[] parameters() default {};
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

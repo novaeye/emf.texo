@@ -15,32 +15,32 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         A user defined mapping's property.
- *         @Target({METHOD, FIELD, TYPE})
- *         @Retention(RUNTIME)
- *         public @interface Property {
- *           /**
- *            * Property name.
- *            ** 
- *           String name();
+ * 				A user defined mapping's property.
+ * 				@Target({METHOD, FIELD, TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Property {
+ * 				/**
+ * 				* Property name.
+ * 				**
+ * 				String name();
  * 
- *           /**
- *            * String representation of Property value,
- *            * converted to an instance of valueType.
- *            ** 
- *           String value();
+ * 				/**
+ * 				* String representation of Property value,
+ * 				* converted to an instance of valueType.
+ * 				**
+ * 				String value();
  * 
- *           /**
- *            * Property value type.
- *            * The value converted to valueType by ConversionManager.
- *            * If specified must be a simple type that could be handled by 
- *            * ConversionManager: 
- *            * numerical, boolean, temporal.  
- *            ** 
- *           Class valueType() default String.class;
- *         }
+ * 				/**
+ * 				* Property value type.
+ * 				* The value converted to valueType by ConversionManager.
+ * 				* If specified must be a simple type that could be handled by
+ * 				* ConversionManager:
+ * 				* numerical, boolean, temporal.
+ * 				**
+ * 				Class valueType() default String.class;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

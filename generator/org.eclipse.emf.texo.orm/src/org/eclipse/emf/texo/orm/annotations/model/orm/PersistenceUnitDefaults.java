@@ -17,26 +17,26 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         These defaults are applied to the persistence unit as a whole 
- *         unless they are overridden by local annotation or XML 
- *         element settings. 
- *         
- *         schema - Used as the schema for all tables, secondary tables, join
- *             tables, collection tables, sequence generators, and table 
- *             generators that apply to the persistence unit
- *         catalog - Used as the catalog for all tables, secondary tables, join
- *             tables, collection tables, sequence generators, and table 
- *             generators that apply to the persistence unit
- *         delimited-identifiers - Used to treat database identifiers as
- *             delimited identifiers.
- *         access - Used as the access type for all managed classes in
- *             the persistence unit
- *         cascade-persist - Adds cascade-persist to the set of cascade options
- *             in all entity relationships of the persistence unit
- *         entity-listeners - List of default entity listeners to be invoked 
- *             on each entity in the persistence unit. 
+ * 				These defaults are applied to the persistence unit as a whole
+ * 				unless they are overridden by local annotation or XML
+ * 				element settings.
  * 
- *       
+ * 				schema - Used as the schema for all tables, secondary tables, join
+ * 				tables, collection tables, sequence generators, and table
+ * 				generators that apply to the persistence unit
+ * 				catalog - Used as the catalog for all tables, secondary tables, join
+ * 				tables, collection tables, sequence generators, and table
+ * 				generators that apply to the persistence unit
+ * 				delimited-identifiers - Used to treat database identifiers as
+ * 				delimited identifiers.
+ * 				access - Used as the access type for all managed classes in
+ * 				the persistence unit
+ * 				cascade-persist - Adds cascade-persist to the set of cascade options
+ * 				in all entity relationships of the persistence unit
+ * 				entity-listeners - List of default entity listeners to be invoked
+ * 				on each entity in the persistence unit.
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

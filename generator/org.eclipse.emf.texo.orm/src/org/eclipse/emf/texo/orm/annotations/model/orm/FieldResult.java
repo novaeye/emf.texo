@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({}) @Retention(RUNTIME)
- *         public @interface FieldResult {
- *           String name();
- *           String column();
- *         }
+ * 				@Target({}) @Retention(RUNTIME)
+ * 				public @interface FieldResult {
+ * 				String name();
+ * 				String column();
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

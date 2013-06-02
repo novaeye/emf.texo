@@ -18,53 +18,56 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *             /** 
- *              * A NamedPLSQLStoredFunctionQuery annotation allows the definition of queries that 
- *              * call PLSQL stored functions as named queries.
- *              * The PLSQL support adds support for complex PLSQL types such as RECORD and TABLE types,
- *              * that are not accessible from JDBC.
- *              * 
- *              * A NamedPLSQLStoredFunctionQuery annotation may be defined on an Entity or
- *              * MappedSuperclass.
- *              * 
- *              * @author James Sutherland
- *              * @since EclipseLink 2.3
- *              ** 
- *             @Target({TYPE})
- *             @Retention(RUNTIME)
- *             public @interface NamedPLSQLStoredFunctionQuery {
- *                 /**
- *                  * (Required) Unique name that references this stored procedure query.
- *                  **
- *                 String name();
- *             
- *                 /**
- *                  * (Optional) Query hints.
- *                  **
- *                 QueryHint[] hints() default {};
- *             
- *                 /**
- *                  * (Optional) The name of the SQLResultMapping.
- *                  **
- *                 String resultSetMapping() default "";
- *             
- *                 /**
- *                  * (Required) The name of the stored procedure.
- *                  **
- *                 String functionName();
- *                 
- *                 /**
- *                  * (Optional) Defines the parameters to the stored procedure.
- *                  **
- *                 PLSQLParameter[] parameters() default {};
- *                 
- *                 /**
- *                  * (Required) Defines the return value of the stored function.
- *                  **
- *                 PLSQLParameter returnParameter();
- *             }
+ * 				/**
+ * 				* A NamedPLSQLStoredFunctionQuery annotation allows the definition of
+ * 				queries that
+ * 				* call PLSQL stored functions as named queries.
+ * 				* The PLSQL support adds support for complex PLSQL types such as
+ * 				RECORD and TABLE types,
+ * 				* that are not accessible from JDBC.
+ * 				*
+ * 				* A NamedPLSQLStoredFunctionQuery annotation may be defined on an
+ * 				Entity or
+ * 				* MappedSuperclass.
+ * 				*
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface NamedPLSQLStoredFunctionQuery {
+ * 				/**
+ * 				* (Required) Unique name that references this stored procedure query.
+ * 				**
+ * 				String name();
  * 
- *       
+ * 				/**
+ * 				* (Optional) Query hints.
+ * 				**
+ * 				QueryHint[] hints() default {};
+ * 
+ * 				/**
+ * 				* (Optional) The name of the SQLResultMapping.
+ * 				**
+ * 				String resultSetMapping() default "";
+ * 
+ * 				/**
+ * 				* (Required) The name of the stored procedure.
+ * 				**
+ * 				String functionName();
+ * 
+ * 				/**
+ * 				* (Optional) Defines the parameters to the stored procedure.
+ * 				**
+ * 				PLSQLParameter[] parameters() default {};
+ * 
+ * 				/**
+ * 				* (Required) Defines the return value of the stored function.
+ * 				**
+ * 				PLSQLParameter returnParameter();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

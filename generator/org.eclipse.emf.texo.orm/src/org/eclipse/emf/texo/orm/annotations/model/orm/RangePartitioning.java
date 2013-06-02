@@ -17,56 +17,67 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         /** 
- *          * RangePartitioningPolicy partitions access to a database cluster by a field value from the object,
- *          * such as the object's id, location, or tenant.
- *          * Each server is assigned a range of values.
- *          * All write or read request for object's with that value are sent to the server.
- *          * If a query does not include the field as a parameter, then it can either be sent
- *          * to all server's and unioned, or left to the sesion's default behavior.
- *          * 
- *          * If multiple partitions are used to process a single transaction, JTA should be used for proper XA transaction support.
- *          * 
- *          * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *          * Partition policies are globally named to allow reuse,
- *          * the partitioning policy must also be set using the @Partitioned annotation to be used.
- *          * 
- *          * @see Partitioned
- *          * @see org.eclipse.persistence.descriptors.partitioning.RangePartitioningPolicy
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface RangePartitioning {
- *             String name();
- *             
- *             /**
- *              * The database column or query parameter to partition queries by.
- *              * This is the table column name, not the class attribute name.
- *              * The column value must be included in the query and should normally be part of the object's Id.
- *              * This can also be the name of a query parameter.
- *              * If a query does not contain the field the query will not be partitioned.
- *              **
- *             Column partitionColumn();
- *             
- *             /**
- *              * (Required) List of connection pool names to load balance across.
- *              **
- *             RangePartition[] partitions();
- *             
- *             /**
- *              * Defines if queries that do not contain the partition field should be sent
- *              * to every database and have the result unioned.
- *              **
- *             boolean unionUnpartitionableQueries() default false;
- *             
- *             /** The type of the start and end values. **
- *             Class partitionValueType() default String.class;
- *         }
  * 
- *       
+ * 				/**
+ * 				* RangePartitioningPolicy partitions access to a database cluster by
+ * 				a field value from the object,
+ * 				* such as the object's id, location, or tenant.
+ * 				* Each server is assigned a range of values.
+ * 				* All write or read request for object's with that value are sent to
+ * 				the server.
+ * 				* If a query does not include the field as a parameter, then it can
+ * 				either be sent
+ * 				* to all server's and unioned, or left to the sesion's default
+ * 				behavior.
+ * 				*
+ * 				* If multiple partitions are used to process a single transaction,
+ * 				JTA should be used for proper XA transaction support.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				* Partition policies are globally named to allow reuse,
+ * 				* the partitioning policy must also be set using the @Partitioned
+ * 				annotation to be used.
+ * 				*
+ * 				* @see Partitioned
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.RangePartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface RangePartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* The database column or query parameter to partition queries by.
+ * 				* This is the table column name, not the class attribute name.
+ * 				* The column value must be included in the query and should normally
+ * 				be part of the object's Id.
+ * 				* This can also be the name of a query parameter.
+ * 				* If a query does not contain the field the query will not be
+ * 				partitioned.
+ * 				**
+ * 				Column partitionColumn();
+ * 
+ * 				/**
+ * 				* (Required) List of connection pool names to load balance across.
+ * 				**
+ * 				RangePartition[] partitions();
+ * 
+ * 				/**
+ * 				* Defines if queries that do not contain the partition field should
+ * 				be sent
+ * 				* to every database and have the result unioned.
+ * 				**
+ * 				boolean unionUnpartitionableQueries() default false;
+ * 
+ * 				/** The type of the start and end values. **
+ * 				Class partitionValueType() default String.class;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

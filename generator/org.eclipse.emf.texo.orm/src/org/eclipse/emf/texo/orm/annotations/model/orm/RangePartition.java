@@ -15,29 +15,32 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         /** 
- *          * Represent a specific range partition.
- *          * Values = startValue and = endValue will be routed to the connection pool.
- *          * 
- *          * @see RangePartitioningPolicy
- *          * @see org.eclipse.persistence.descriptors.partitioning.RangePartitioningPolicy
- *          * @see org.eclipse.persistence.descriptors.partitioning.RangePartition
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface RangePartition {
- *             /** The String representation of the range start value. **
- *             String startValue() default "";
- *             /** The String representation of the range start value. **
- *             String endValue() default "";
- *             /** The connection pool to route queries to for this range. **
- *             String connectionPool();
- *         }
  * 
- *       
+ * 				/**
+ * 				* Represent a specific range partition.
+ * 				* Values = startValue and = endValue will be routed to the connection
+ * 				pool.
+ * 				*
+ * 				* @see RangePartitioningPolicy
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.RangePartitioningPolicy
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.RangePartition
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface RangePartition {
+ * 				/** The String representation of the range start value. **
+ * 				String startValue() default "";
+ * 				/** The String representation of the range start value. **
+ * 				String endValue() default "";
+ * 				/** The connection pool to route queries to for this range. **
+ * 				String connectionPool();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

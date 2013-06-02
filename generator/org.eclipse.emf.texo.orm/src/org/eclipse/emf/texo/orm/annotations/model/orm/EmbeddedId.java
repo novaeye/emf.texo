@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface EmbeddedId {}
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface EmbeddedId {}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

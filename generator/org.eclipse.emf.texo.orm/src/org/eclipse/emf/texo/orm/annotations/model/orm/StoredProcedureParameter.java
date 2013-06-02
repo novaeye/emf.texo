@@ -18,53 +18,54 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * A StoredProcedureParameter annotation is used within a 
- *          * NamedStoredProcedureQuery annotation. 
- *          ** 
- *         @Target({})
- *         @Retention(RUNTIME)
- *         public @interface StoredProcedureParameter {
- *           /**
- *            * (Optional) The direction of the stored procedure parameter.
- *            **
- *           Direction direction() default IN;
+ * 				/**
+ * 				* A StoredProcedureParameter annotation is used within a
+ * 				* NamedStoredProcedureQuery annotation.
+ * 				**
+ * 				@Target({})
+ * 				@Retention(RUNTIME)
+ * 				public @interface StoredProcedureParameter {
+ * 				/**
+ * 				* (Optional) The direction of the stored procedure parameter.
+ * 				**
+ * 				Direction direction() default IN;
  * 
- *           /**
- *            * (Optional) Stored procedure parameter name.
- *            **
- *           String name() default "";
+ * 				/**
+ * 				* (Optional) Stored procedure parameter name.
+ * 				**
+ * 				String name() default "";
  * 
- *           /**
- *            * (Required) The query parameter name.
- *            **
- *           String queryParameter();
- *     
- *           /**
- *            * (Optional) Define if the parameter is required, or optional and defaulted by the procedure.
- *            **
- *           boolean optional() default false;
+ * 				/**
+ * 				* (Required) The query parameter name.
+ * 				**
+ * 				String queryParameter();
  * 
- *           /**
- *            * (Optional) The type of Java class desired back from the procedure, 
- *            * this is dependent on the type returned from the procedure.
- *            **
- *           Class type() default void.class;
+ * 				/**
+ * 				* (Optional) Define if the parameter is required, or optional and
+ * 				defaulted by the procedure.
+ * 				**
+ * 				boolean optional() default false;
  * 
- *           /**
- *            * (Optional) The JDBC type code, this dependent on the type returned 
- *            * from the procedure.
- *            **
- *           int jdbcType() default -1;
+ * 				/**
+ * 				* (Optional) The type of Java class desired back from the procedure,
+ * 				* this is dependent on the type returned from the procedure.
+ * 				**
+ * 				Class type() default void.class;
  * 
- *           /**
- *            * (Optional) The JDBC type name, this may be required for ARRAY or 
- *            * STRUCT types.
- *            **
- *           String jdbcTypeName() default "";
- *         }
+ * 				/**
+ * 				* (Optional) The JDBC type code, this dependent on the type returned
+ * 				* from the procedure.
+ * 				**
+ * 				int jdbcType() default -1;
  * 
- *       
+ * 				/**
+ * 				* (Optional) The JDBC type name, this may be required for ARRAY or
+ * 				* STRUCT types.
+ * 				**
+ * 				String jdbcTypeName() default "";
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

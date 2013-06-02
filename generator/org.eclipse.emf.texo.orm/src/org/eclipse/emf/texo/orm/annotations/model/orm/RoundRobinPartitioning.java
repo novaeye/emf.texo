@@ -17,37 +17,44 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *             /** 
- *              * RoundRobinPartitioning sends requests in a round robin fashion to the set of connection pools.
- *              * It is for load-balancing read queries across a cluster of database machines.
- *              * It requires that the full database be replicated on each machine, so does not support partitioning.
- *              * The data should either be read-only, or writes should be replicated on the database.
- *              * 
- *              * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *              * 
- *              * @see org.eclipse.persistence.descriptors.partitioning.RoundRobinPolicy
- *              * @author James Sutherland
- *              * @since EclipseLink 2.2
- *              ** 
- *             @Target({TYPE, METHOD, FIELD})
- *             @Retention(RUNTIME)
- *             public @interface RoundRobinPartitioning {
- *                 String name();
- *                 
- *                 /**
- *                  * (Required) List of connection pool names to load balance across.
- *                  **
- *                 String[] connectionPools();
- *                 
- *                 /**
- *                  * This allows for a set of database to be written to and kept in synch,
- *                  * and have reads load-balanced across the databases.
- *                  **
- *                 boolean replicateWrites() default false;
- *             }
  * 
- *       
+ * 				/**
+ * 				* RoundRobinPartitioning sends requests in a round robin fashion to
+ * 				the set of connection pools.
+ * 				* It is for load-balancing read queries across a cluster of database
+ * 				machines.
+ * 				* It requires that the full database be replicated on each machine,
+ * 				so does not support partitioning.
+ * 				* The data should either be read-only, or writes should be replicated
+ * 				on the database.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.RoundRobinPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface RoundRobinPartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* (Required) List of connection pool names to load balance across.
+ * 				**
+ * 				String[] connectionPools();
+ * 
+ * 				/**
+ * 				* This allows for a set of database to be written to and kept in
+ * 				synch,
+ * 				* and have reads load-balanced across the databases.
+ * 				**
+ * 				boolean replicateWrites() default false;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

@@ -16,54 +16,57 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({}) 
- *         @Retention(RUNTIME)
- *         public @interface TenantDiscriminator {
- *             /**
- *              * (Optional) The name of column to be used for the discriminator.
- *              **
- *             String name() default "eclipselink.tenant-id";
+ * 				@Target({})
+ * 				@Retention(RUNTIME)
+ * 				public @interface TenantDiscriminator {
+ * 				/**
+ * 				* (Optional) The name of column to be used for the discriminator.
+ * 				**
+ * 				String name() default "eclipselink.tenant-id";
  * 
- *             /**
- *              * (Optional) The name of the context property to apply to the 
- *              * tenant discriminator column.
- *              **
- *             String contextProperty() default "TENANT_ID";
+ * 				/**
+ * 				* (Optional) The name of the context property to apply to the
+ * 				* tenant discriminator column.
+ * 				**
+ * 				String contextProperty() default "TENANT_ID";
  * 
- *             /**
- *              * (Optional) The type of object/column to use as a class discriminator.
- *              * Defaults to {@link DiscriminatorType#STRING DiscriminatorType.STRING}.
- *              **
- *             DiscriminatorType discriminatorType() default DiscriminatorType.STRING;
+ * 				/**
+ * 				* (Optional) The type of object/column to use as a class
+ * 				discriminator.
+ * 				* Defaults to {@link DiscriminatorType#STRING
+ * 				DiscriminatorType.STRING}.
+ * 				**
+ * 				DiscriminatorType discriminatorType() default DiscriminatorType.STRING;
  * 
- *             /**
- *              * (Optional) The SQL fragment that is used when generating the DDL
- *              * for the discriminator column.
- *              * Defaults to the provider-generated SQL to create a column
- *              * of the specified discriminator type.
- *              **
- *             String columnDefinition() default "";
+ * 				/**
+ * 				* (Optional) The SQL fragment that is used when generating the DDL
+ * 				* for the discriminator column.
+ * 				* Defaults to the provider-generated SQL to create a column
+ * 				* of the specified discriminator type.
+ * 				**
+ * 				String columnDefinition() default "";
  * 
- *             /**
- *              * (Optional) The column length for String-based discriminator types.
- *              * Ignored for other discriminator types.
- *              **
- *             int length() default 31;
+ * 				/**
+ * 				* (Optional) The column length for String-based discriminator types.
+ * 				* Ignored for other discriminator types.
+ * 				**
+ * 				int length() default 31;
  * 
- *             /**
- *              * (Optional) The name of the table that contains the column.
- *              * If absent the column is assumed to be in the primary table.
- *              **
- *             String table() default "";
+ * 				/**
+ * 				* (Optional) The name of the table that contains the column.
+ * 				* If absent the column is assumed to be in the primary table.
+ * 				**
+ * 				String table() default "";
  * 
- *             /**
- *              * Specifies that the tenant discriminator column is part of the primary 
- *              * key of the tables.
- *              **
- *             boolean primaryKey() default false; 
- *         }
+ * 				/**
+ * 				* Specifies that the tenant discriminator column is part of the
+ * 				primary
+ * 				* key of the tables.
+ * 				**
+ * 				boolean primaryKey() default false;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

@@ -17,15 +17,15 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface OneToMany {
- *           Class targetEntity() default void.class;
- *           CascadeType[] cascade() default {};
- *           FetchType fetch() default LAZY;
- *           String mappedBy() default "";
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface OneToMany {
+ * 				Class targetEntity() default void.class;
+ * 				CascadeType[] cascade() default {};
+ * 				FetchType fetch() default LAZY;
+ * 				String mappedBy() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

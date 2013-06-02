@@ -15,20 +15,20 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         @Target({METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface ReturnInsert {
- *             /**
- *              * A ReturnInsert annotation allows for INSERT operations to return 
- *              * values back into the object being written. This allows for table 
- *              * default values, trigger or stored procedures computed values to 
- *              * be set back into the object.
- *              **
- *             boolean returnOnly() default false;
- *         }
  * 
- *       
+ * 				@Target({METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ReturnInsert {
+ * 				/**
+ * 				* A ReturnInsert annotation allows for INSERT operations to return
+ * 				* values back into the object being written. This allows for table
+ * 				* default values, trigger or stored procedures computed values to
+ * 				* be set back into the object.
+ * 				**
+ * 				boolean returnOnly() default false;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

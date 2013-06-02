@@ -17,15 +17,15 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface NamedQuery {
- *           String name();
- *           String query();
- *           LockModeType lockMode() default NONE;
- *           QueryHint[] hints() default {};
- *         }
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface NamedQuery {
+ * 				String name();
+ * 				String query();
+ * 				LockModeType lockMode() default NONE;
+ * 				QueryHint[] hints() default {};
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

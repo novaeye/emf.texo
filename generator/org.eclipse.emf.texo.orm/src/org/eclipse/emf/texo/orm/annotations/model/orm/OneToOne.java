@@ -17,17 +17,17 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface OneToOne {
- *           Class targetEntity() default void.class;
- *           CascadeType[] cascade() default {};
- *           FetchType fetch() default EAGER;
- *           boolean optional() default true;
- *           String mappedBy() default "";
- *           boolean orphanRemoval() default false;
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface OneToOne {
+ * 				Class targetEntity() default void.class;
+ * 				CascadeType[] cascade() default {};
+ * 				FetchType fetch() default EAGER;
+ * 				boolean optional() default true;
+ * 				String mappedBy() default "";
+ * 				boolean orphanRemoval() default false;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

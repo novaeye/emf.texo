@@ -207,6 +207,16 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
       annotation.setOneToMany(oneToMany);
     }
 
+    // copy any join columns/jointable over
+    if (oneToMany.getJoinColumn().isEmpty()) {
+      for (JoinColumn jc : annotation.getJoinColumn()) {
+        oneToMany.getJoinColumn().add(EcoreUtil.copy(jc));
+      }
+    }
+    if (oneToMany.getJoinTable() == null) {
+      oneToMany.setJoinTable(EcoreUtil.copy(annotation.getJoinTable()));
+    }
+
     // make the access field if not changeable, as there won't be a setter
     if (!eReference.isChangeable()) {
       oneToMany.setAccess(AccessType.FIELD);
@@ -313,9 +323,6 @@ public class EReferenceORMAnnotator extends EStructuralFeatureORMAnnotator imple
     // if (GeneratorUtils.isEmptyOrNull(oneToMany.getTargetEntity())) {
     // oneToMany.setTargetEntity(getTargetEntity(eReference));
     // }
-
-    // copy any join columns over
-    oneToMany.getJoinColumn().addAll(annotation.getJoinColumn());
 
     // now work on jointable or joincolumn
     if (isOwner && oneToMany.getJoinColumn().isEmpty() && oneToMany.getJoinTable() == null) {

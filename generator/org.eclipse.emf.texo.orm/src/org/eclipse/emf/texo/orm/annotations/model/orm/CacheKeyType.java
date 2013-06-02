@@ -19,37 +19,40 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
  * 
- *             
- *             /**
- *              * Configures what type of Id value is used to store the object in the cache.
- *              * This can either be the basic Id value for simple singleton Ids,
- *              * or an optimized CacheKey type.
- *              * 
- *              * @see PrimaryKey#cacheKeyType()
- *              * @see ClassDescriptor#setCacheKeyType(CacheKeyType)
- *              * @author James Sutherland
- *              * @since EclipseLink 2.1
- *              **
- *             public enum CacheKeyType {
- *                 /**
- *                  * This can only be used for simple singleton Ids, such as long/int/String.
- *                  * This is the default for simple singleton Ids.
- *                  **
- *                 ID_VALUE,
- *             
- *                 /**
- *                  * Optimized cache key type that allows composite and complex values.
- *                  * This is the default for composite or complex Ids.
- *                  **
- *                 CACHE_KEY,
- *             
- *                 /**
- *                  * The cache key type is automatically configured depending on what is optimal for the class.
- *                  **
- *                 AUTO
- *             }
  * 
- *       
+ * 				/**
+ * 				* Configures what type of Id value is used to store the object in the
+ * 				cache.
+ * 				* This can either be the basic Id value for simple singleton Ids,
+ * 				* or an optimized CacheKey type.
+ * 				*
+ * 				* @see PrimaryKey#cacheKeyType()
+ * 				* @see ClassDescriptor#setCacheKeyType(CacheKeyType)
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.1
+ * 				**
+ * 				public enum CacheKeyType {
+ * 				/**
+ * 				* This can only be used for simple singleton Ids, such as
+ * 				long/int/String.
+ * 				* This is the default for simple singleton Ids.
+ * 				**
+ * 				ID_VALUE,
+ * 
+ * 				/**
+ * 				* Optimized cache key type that allows composite and complex values.
+ * 				* This is the default for composite or complex Ids.
+ * 				**
+ * 				CACHE_KEY,
+ * 
+ * 				/**
+ * 				* The cache key type is automatically configured depending on what is
+ * 				optimal for the class.
+ * 				**
+ * 				AUTO
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getCacheKeyType()
  * @model extendedMetaData="name='cache-key-type'"

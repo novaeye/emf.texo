@@ -17,30 +17,33 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *             /** 
- *              * ReplicationPartitioning sends requests to a set of connection pools.
- *              * It is for replicating data across a cluster of database machines.
- *              * Only modification queries are replicated.
- *              * 
- *              * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *              * 
- *              * @see org.eclipse.persistence.descriptors.partitioning.ReplicationPolicy
- *              * @author James Sutherland
- *              * @since EclipseLink 2.2
- *              ** 
- *             @Target({TYPE, METHOD, FIELD})
- *             @Retention(RUNTIME)
- *             public @interface ReplicationPartitioning {
- *                 String name();
- *                 
- *                 /**
- *                  * (Required) List of connection pool names to load balance across.
- *                  **
- *                 String[] connectionPools();
- *             }
  * 
- *       
+ * 				/**
+ * 				* ReplicationPartitioning sends requests to a set of connection
+ * 				pools.
+ * 				* It is for replicating data across a cluster of database machines.
+ * 				* Only modification queries are replicated.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.ReplicationPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ReplicationPartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* (Required) List of connection pool names to load balance across.
+ * 				**
+ * 				String[] connectionPools();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

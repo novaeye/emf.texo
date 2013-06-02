@@ -18,27 +18,27 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface FetchGroup {
- *           /**
- *            * (Required) The fetch group name.
- *            **
- *           String name(); 
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface FetchGroup {
+ * 				/**
+ * 				* (Required) The fetch group name.
+ * 				**
+ * 				String name();
  * 
- *           /**
- *            * (Optional) Indicates whether all relationship attributes
- *            * specified in the fetch group should be loaded.
- *            **
- *           boolean load() default true; 
+ * 				/**
+ * 				* (Optional) Indicates whether all relationship attributes
+ * 				* specified in the fetch group should be loaded.
+ * 				**
+ * 				boolean load() default true;
  * 
- *           /**
- *            * (Required) The list of attributes to fetch.
- *            **
- *           FetchAttribute[] attributes();
- *         }
+ * 				/**
+ * 				* (Required) The list of attributes to fetch.
+ * 				**
+ * 				FetchAttribute[] attributes();
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

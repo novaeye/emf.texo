@@ -19,42 +19,47 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *         
- *         /** 
- *          * Array types are extended object-relational data-types supported by some databases.
- *          * Array types are user define types in the database such as VARRAY types on Oracle.
- *          * Arrays can contains basic types (VARCHAR) or other Struct types, and can be stored in
- *          * a column or in a Struct type.
- *          * This annotation can be defined on a collection attribute that is
- *          * persisted to an Array type.  The collection can be of basic types, or embeddable
- *          * class mapped using a Struct.
- *          * 
- *          * @see org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
- *          * @see org.eclipse.persistence.mappings.structures.ArrayMapping
- *          * @see org.eclipse.persistence.mappings.structures.ObjectArrayMapping
- *          * @author James Sutherland
- *          * @since EclipseLink 2.3
- *          **
- *         @Target({METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface Array {
- *             /**
- *              * (Optional) The basic or embeddable class that is the element
- *              * type of the collection.  This element is optional only if the
- *              * collection field or property is defined using Java generics,
- *              * and must be specified otherwise.  It defaults to the
- *              * paramterized type of the collection when defined using
- *              * generics.
- *              **
- *             Class targetClass() default void.class;
- *             
- *             /**
- *              * (Required) The database name of the database array structure type.
- *              **
- *             String databaseType();
- *         }
  * 
- *       
+ * 				/**
+ * 				* Array types are extended object-relational data-types supported by
+ * 				some databases.
+ * 				* Array types are user define types in the database such as VARRAY
+ * 				types on Oracle.
+ * 				* Arrays can contains basic types (VARCHAR) or other Struct types,
+ * 				and can be stored in
+ * 				* a column or in a Struct type.
+ * 				* This annotation can be defined on a collection attribute that is
+ * 				* persisted to an Array type. The collection can be of basic types,
+ * 				or embeddable
+ * 				* class mapped using a Struct.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
+ * 				* @see org.eclipse.persistence.mappings.structures.ArrayMapping
+ * 				* @see org.eclipse.persistence.mappings.structures.ObjectArrayMapping
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Array {
+ * 				/**
+ * 				* (Optional) The basic or embeddable class that is the element
+ * 				* type of the collection. This element is optional only if the
+ * 				* collection field or property is defined using Java generics,
+ * 				* and must be specified otherwise. It defaults to the
+ * 				* paramterized type of the collection when defined using
+ * 				* generics.
+ * 				**
+ * 				Class targetClass() default void.class;
+ * 
+ * 				/**
+ * 				* (Required) The database name of the database array structure type.
+ * 				**
+ * 				String databaseType();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

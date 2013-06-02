@@ -15,19 +15,19 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface JoinColumn {
- *           String name() default "";
- *           String referencedColumnName() default "";
- *           boolean unique() default false;
- *           boolean nullable() default true;
- *           boolean insertable() default true;
- *           boolean updatable() default true;
- *           String columnDefinition() default "";
- *           String table() default "";
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface JoinColumn {
+ * 				String name() default "";
+ * 				String referencedColumnName() default "";
+ * 				boolean unique() default false;
+ * 				boolean nullable() default true;
+ * 				boolean insertable() default true;
+ * 				boolean updatable() default true;
+ * 				String columnDefinition() default "";
+ * 				String table() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

@@ -17,21 +17,21 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface TableGenerator {
- *           String name();
- *           String table() default "";
- *           String catalog() default "";
- *           String schema() default "";
- *           String pkColumnName() default "";
- *           String valueColumnName() default "";
- *           String pkColumnValue() default "";
- *           int initialValue() default 0;
- *           int allocationSize() default 50;
- *           UniqueConstraint[] uniqueConstraints() default {};
- *         }
+ * 				@Target({TYPE, METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface TableGenerator {
+ * 				String name();
+ * 				String table() default "";
+ * 				String catalog() default "";
+ * 				String schema() default "";
+ * 				String pkColumnName() default "";
+ * 				String valueColumnName() default "";
+ * 				String pkColumnValue() default "";
+ * 				int initialValue() default 0;
+ * 				int allocationSize() default 50;
+ * 				UniqueConstraint[] uniqueConstraints() default {};
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>
@@ -187,9 +187,11 @@ public interface TableGenerator extends BaseOrmAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #isSetCreationSuffix()
+	 * @see #unsetCreationSuffix()
 	 * @see #setCreationSuffix(String)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getTableGenerator_CreationSuffix()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='attribute' name='creation-suffix'"
 	 * @generated
 	 */
@@ -200,10 +202,35 @@ public interface TableGenerator extends BaseOrmAnnotation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #isSetCreationSuffix()
+	 * @see #unsetCreationSuffix()
 	 * @see #getCreationSuffix()
 	 * @generated
 	 */
 	void setCreationSuffix(String value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCreationSuffix()
+	 * @see #getCreationSuffix()
+	 * @see #setCreationSuffix(String)
+	 * @generated
+	 */
+	void unsetCreationSuffix();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.TableGenerator#getCreationSuffix <em>Creation Suffix</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Creation Suffix</em>' attribute is set.
+	 * @see #unsetCreationSuffix()
+	 * @see #getCreationSuffix()
+	 * @see #setCreationSuffix(String)
+	 * @generated
+	 */
+	boolean isSetCreationSuffix();
 
 		/**
 	 * Returns the value of the '<em><b>Initial Value</b></em>' attribute.

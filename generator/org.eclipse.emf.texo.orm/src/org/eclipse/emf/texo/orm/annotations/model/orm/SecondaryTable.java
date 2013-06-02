@@ -17,16 +17,16 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface SecondaryTable {
- *           String name();
- *           String catalog() default "";
- *           String schema() default "";
- *           PrimaryKeyJoinColumn[] pkJoinColumns() default {};
- *           UniqueConstraint[] uniqueConstraints() default {};
- *          }
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface SecondaryTable {
+ * 				String name();
+ * 				String catalog() default "";
+ * 				String schema() default "";
+ * 				PrimaryKeyJoinColumn[] pkJoinColumns() default {};
+ * 				UniqueConstraint[] uniqueConstraints() default {};
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>
@@ -116,9 +116,11 @@ public interface SecondaryTable extends BaseOrmAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #isSetCreationSuffix()
+	 * @see #unsetCreationSuffix()
 	 * @see #setCreationSuffix(String)
 	 * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getSecondaryTable_CreationSuffix()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 *        extendedMetaData="kind='attribute' name='creation-suffix'"
 	 * @generated
 	 */
@@ -129,10 +131,35 @@ public interface SecondaryTable extends BaseOrmAnnotation {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Creation Suffix</em>' attribute.
+	 * @see #isSetCreationSuffix()
+	 * @see #unsetCreationSuffix()
 	 * @see #getCreationSuffix()
 	 * @generated
 	 */
 	void setCreationSuffix(String value);
+
+		/**
+	 * Unsets the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getCreationSuffix <em>Creation Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCreationSuffix()
+	 * @see #getCreationSuffix()
+	 * @see #setCreationSuffix(String)
+	 * @generated
+	 */
+	void unsetCreationSuffix();
+
+		/**
+	 * Returns whether the value of the '{@link org.eclipse.emf.texo.orm.annotations.model.orm.SecondaryTable#getCreationSuffix <em>Creation Suffix</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Creation Suffix</em>' attribute is set.
+	 * @see #unsetCreationSuffix()
+	 * @see #getCreationSuffix()
+	 * @see #setCreationSuffix(String)
+	 * @generated
+	 */
+	boolean isSetCreationSuffix();
 
 		/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

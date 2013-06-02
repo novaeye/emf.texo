@@ -1171,7 +1171,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>
@@ -1488,7 +1489,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>
@@ -3660,7 +3662,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>
@@ -6595,7 +6598,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>
@@ -6865,7 +6869,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>
@@ -6917,7 +6922,8 @@
         <details key="name" value="catalog"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationSuffix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="creation-suffix"/>

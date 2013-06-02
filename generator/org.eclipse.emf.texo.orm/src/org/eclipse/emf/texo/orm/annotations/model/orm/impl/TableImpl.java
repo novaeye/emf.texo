@@ -93,6 +93,15 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 	protected String creationSuffix = CREATION_SUFFIX_EDEFAULT;
 
 		/**
+	 * This is true if the Creation Suffix attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean creationSuffixESet;
+
+		/**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -195,8 +204,33 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 	public void setCreationSuffix(String newCreationSuffix) {
 		String oldCreationSuffix = creationSuffix;
 		creationSuffix = newCreationSuffix;
+		boolean oldCreationSuffixESet = creationSuffixESet;
+		creationSuffixESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix));
+			eNotify(new ENotificationImpl(this, Notification.SET, OrmPackage.TABLE__CREATION_SUFFIX, oldCreationSuffix, creationSuffix, !oldCreationSuffixESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreationSuffix() {
+		String oldCreationSuffix = creationSuffix;
+		boolean oldCreationSuffixESet = creationSuffixESet;
+		creationSuffix = CREATION_SUFFIX_EDEFAULT;
+		creationSuffixESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, OrmPackage.TABLE__CREATION_SUFFIX, oldCreationSuffix, CREATION_SUFFIX_EDEFAULT, oldCreationSuffixESet));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreationSuffix() {
+		return creationSuffixESet;
 	}
 
 		/**
@@ -313,7 +347,7 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 				setCatalog(CATALOG_EDEFAULT);
 				return;
 			case OrmPackage.TABLE__CREATION_SUFFIX:
-				setCreationSuffix(CREATION_SUFFIX_EDEFAULT);
+				unsetCreationSuffix();
 				return;
 			case OrmPackage.TABLE__NAME:
 				setName(NAME_EDEFAULT);
@@ -337,7 +371,7 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 			case OrmPackage.TABLE__CATALOG:
 				return CATALOG_EDEFAULT == null ? catalog != null : !CATALOG_EDEFAULT.equals(catalog);
 			case OrmPackage.TABLE__CREATION_SUFFIX:
-				return CREATION_SUFFIX_EDEFAULT == null ? creationSuffix != null : !CREATION_SUFFIX_EDEFAULT.equals(creationSuffix);
+				return isSetCreationSuffix();
 			case OrmPackage.TABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OrmPackage.TABLE__SCHEMA:
@@ -358,7 +392,7 @@ public class TableImpl extends BaseOrmAnnotationImpl implements Table {
 		result.append(" (catalog: ");
 		result.append(catalog);
 		result.append(", creationSuffix: ");
-		result.append(creationSuffix);
+		if (creationSuffixESet) result.append(creationSuffix); else result.append("<unset>");
 		result.append(", name: ");
 		result.append(name);
 		result.append(", schema: ");

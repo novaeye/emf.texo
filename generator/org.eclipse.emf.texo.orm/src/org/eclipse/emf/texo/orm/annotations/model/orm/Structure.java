@@ -18,26 +18,31 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * Struct types are extended object-relational data-types supported by some databases.
- *          * Struct types are user define types in the database such as OBJECT types on Oracle.
- *          * Structs can normally contains Arrays (VARRAY) or other Struct types, and can be stored in
- *          * a column or a table.
- *          * This annotation can be defined on a field/method to define an StructureMapping to an embedded Struct type.
- *          * The target Embeddable must be mapped using the Struct annotation.
- *          * 
- *          * @see Struct
- *          * @see org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
- *          * @see org.eclipse.persistence.mappings.structures.StructureMapping
- *          * @author James Sutherland
- *          * @since EclipseLink 2.3
- *          **
- *         @Target({METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface Structure {
- *         }
+ * 				/**
+ * 				* Struct types are extended object-relational data-types supported by
+ * 				some databases.
+ * 				* Struct types are user define types in the database such as OBJECT
+ * 				types on Oracle.
+ * 				* Structs can normally contains Arrays (VARRAY) or other Struct
+ * 				types, and can be stored in
+ * 				* a column or a table.
+ * 				* This annotation can be defined on a field/method to define an
+ * 				StructureMapping to an embedded Struct type.
+ * 				* The target Embeddable must be mapped using the Struct annotation.
+ * 				*
+ * 				* @see Struct
+ * 				* @see
+ * 				org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
+ * 				* @see org.eclipse.persistence.mappings.structures.StructureMapping
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Structure {
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

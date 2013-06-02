@@ -16,43 +16,53 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /**
- *          * An additional criteria can be specified at the Entity or MappedSuperclass 
- *          * level. When specified at the mapped superclass level, it applies to all 
- *          * inheriting entities unless those entities define their own additional 
- *          * criteria, at which point the additional criteria from the mapped superclass 
- *          * is ignored.  
- *          *
- *          * The additional criteria supports any valid JPQL string and must use 'this' 
- *          * as an alias to form your additional criteria. E.G.,
- *          * 
- *          * @Entity
- *          * @AdditionalCriteria("this.nut.size = :NUT_SIZE and this.nut.color = :NUT_COLOR")
- *          * public class Bolt {...}
- *          * 
- *          * Additional criteria parameters are also accepted and are set through 
- *          * properties on the entity manager factory, or on an entity manager. When set 
- *          * on the entity manager, the properties must be set before any query execution
- *          * and should not be changed for the life span of that entity manager.
- *          * 
- *          * Properties set on the entity manager will override those similarly named 
- *          * properties set on the entity manager factory.
- *          *
- *          * Additional criteria is not supported with any native queries.
- *          * 
- *          * @author Guy Pelletier
- *          * @since EclipseLink 2.2
- *          **
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface AdditionalCriteria {
- *             /**
- *              * (Required) The JPQL fragment to use as the additional criteria.
- *              **
- *             String value();
- *         }
+ * 				/**
+ * 				* An additional criteria can be specified at the Entity or
+ * 				MappedSuperclass
+ * 				* level. When specified at the mapped superclass level, it applies to
+ * 				all
+ * 				* inheriting entities unless those entities define their own
+ * 				additional
+ * 				* criteria, at which point the additional criteria from the mapped
+ * 				superclass
+ * 				* is ignored.
+ * 				*
+ * 				* The additional criteria supports any valid JPQL string and must use
+ * 				'this'
+ * 				* as an alias to form your additional criteria. E.G.,
+ * 				*
+ * 				* @Entity
+ * 				* @AdditionalCriteria("this.nut.size = :NUT_SIZE and this.nut.color =
+ * 				:NUT_COLOR")
+ * 				* public class Bolt {...}
+ * 				*
+ * 				* Additional criteria parameters are also accepted and are set
+ * 				through
+ * 				* properties on the entity manager factory, or on an entity manager.
+ * 				When set
+ * 				* on the entity manager, the properties must be set before any query
+ * 				execution
+ * 				* and should not be changed for the life span of that entity manager.
+ * 				*
+ * 				* Properties set on the entity manager will override those similarly
+ * 				named
+ * 				* properties set on the entity manager factory.
+ * 				*
+ * 				* Additional criteria is not supported with any native queries.
+ * 				*
+ * 				* @author Guy Pelletier
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface AdditionalCriteria {
+ * 				/**
+ * 				* (Required) The JPQL fragment to use as the additional criteria.
+ * 				**
+ * 				String value();
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

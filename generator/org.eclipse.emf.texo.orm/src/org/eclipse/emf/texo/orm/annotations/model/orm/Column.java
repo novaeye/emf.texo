@@ -15,21 +15,21 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface Column {
- *           String name() default "";
- *           boolean unique() default false;
- *           boolean nullable() default true;
- *           boolean insertable() default true;
- *           boolean updatable() default true;
- *           String columnDefinition() default "";
- *           String table() default "";
- *           int length() default 255;
- *           int precision() default 0; // decimal precision
- *           int scale() default 0; // decimal scale
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface Column {
+ * 				String name() default "";
+ * 				boolean unique() default false;
+ * 				boolean nullable() default true;
+ * 				boolean insertable() default true;
+ * 				boolean updatable() default true;
+ * 				String columnDefinition() default "";
+ * 				String table() default "";
+ * 				int length() default 255;
+ * 				int precision() default 0; // decimal precision
+ * 				int scale() default 0; // decimal scale
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

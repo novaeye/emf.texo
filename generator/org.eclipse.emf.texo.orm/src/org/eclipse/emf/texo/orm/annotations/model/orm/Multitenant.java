@@ -17,17 +17,17 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *  
- *         @Target({TYPE}) 
- *         @Retention(RUNTIME)
- *         public @interface Multitenant {
- *             /**
- *              * (Optional) Specify the multi-tenant strategy to use.
- *              **
- *             MultitenantType value() default MultitenantType.SINGLE_TABLE;
- *         }
- *  
- *       
+ * 
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Multitenant {
+ * 				/**
+ * 				* (Optional) Specify the multi-tenant strategy to use.
+ * 				**
+ * 				MultitenantType value() default MultitenantType.SINGLE_TABLE;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

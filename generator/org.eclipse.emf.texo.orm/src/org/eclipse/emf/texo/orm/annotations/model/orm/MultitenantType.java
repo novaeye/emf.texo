@@ -20,22 +20,25 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * 
  * 
- *         public enum MultitenantType {
- *             /**
- *              * Specifies that table(s) the entity maps to includes rows for multiple 
- *              * tenants. The tenant discriminator column(s) are used with application 
- *              * context values to limit what a persistence context can access.
- *              **
- *             SINGLE_TABLE, 
+ * 				public enum MultitenantType {
+ * 				/**
+ * 				* Specifies that table(s) the entity maps to includes rows for
+ * 				multiple
+ * 				* tenants. The tenant discriminator column(s) are used with
+ * 				application
+ * 				* context values to limit what a persistence context can access.
+ * 				**
+ * 				SINGLE_TABLE,
  * 
- *             /**
- *              * Specifies that different tables are used for each tenant. The table scan 
- *              * be uniquely identified by name, schema/tablespace.
- *              **
- *             TABLE_PER_TENANT 
- *         }
+ * 				/**
+ * 				* Specifies that different tables are used for each tenant. The table
+ * 				scan
+ * 				* be uniquely identified by name, schema/tablespace.
+ * 				**
+ * 				TABLE_PER_TENANT
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  * @see org.eclipse.emf.texo.orm.annotations.model.orm.OrmPackage#getMultitenantType()
  * @model extendedMetaData="name='multitenant-type'"

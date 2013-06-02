@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         public enum CascadeType { ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH};
+ * 				public enum CascadeType { ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH};
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

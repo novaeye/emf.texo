@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

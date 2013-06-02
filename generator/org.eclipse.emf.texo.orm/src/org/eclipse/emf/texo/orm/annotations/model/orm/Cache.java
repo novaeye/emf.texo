@@ -17,92 +17,94 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * The Cache annotation is used to set an 
- *          * org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy 
- *          * which sets objects in EclipseLink's identity maps to be invalid 
- *          * following given rules. By default in EclipseLink, objects do not 
- *          * expire in the cache. Several different policies are available to 
- *          * allow objects to expire.
- *          * 
- *          * @see org.eclipse.persistence.annotations.CacheType
- *          * 
- *          * A Cache anotation may be defined on an Entity or MappedSuperclass. 
- *          * In the case of inheritance, a Cache annotation should only be defined 
- *          * on the root of the inheritance hierarchy.
- *          **
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface Cache {
- *           /**
- *            * (Optional) The type of cache to use.
- *            ** 
- *           CacheType type() default SOFT_WEAK;
+ * 				/**
+ * 				* The Cache annotation is used to set an
+ * 				*
+ * 				org.eclipse.persistence.descriptors.invalidation.CacheInvalidationPolicy
+ * 				* which sets objects in EclipseLink's identity maps to be invalid
+ * 				* following given rules. By default in EclipseLink, objects do not
+ * 				* expire in the cache. Several different policies are available to
+ * 				* allow objects to expire.
+ * 				*
+ * 				* @see org.eclipse.persistence.annotations.CacheType
+ * 				*
+ * 				* A Cache anotation may be defined on an Entity or MappedSuperclass.
+ * 				* In the case of inheritance, a Cache annotation should only be
+ * 				defined
+ * 				* on the root of the inheritance hierarchy.
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Cache {
+ * 				/**
+ * 				* (Optional) The type of cache to use.
+ * 				**
+ * 				CacheType type() default SOFT_WEAK;
  * 
- *           /**
- *            * (Optional) The size of cache to use.
- *            ** 
- *           int size() default 100;
+ * 				/**
+ * 				* (Optional) The size of cache to use.
+ * 				**
+ * 				int size() default 100;
  * 
- *          /**
- *           * (Optional) Cached instances in the shared cache,
- *           * or only a per EntityManager isolated cache.
- *           * The default is shared.
- *           * @deprecated  As of Eclipselink 2.2.  See the attribute 'isolation'
- *           ** 
- *           @Deprecated
- *           boolean shared() default true;
- *     
- *          /**
- *           * (Optional) Controls the level of caching this Entity will use.
- *           * The default is CacheIsolationType.SHARED which has EclipseLink
- *           * Caching all Entities in the Shared Cache.
- *           * @see org.eclipse.persistence.config.CacheIsolationType
- *           **
- *           CacheIsolationType isolation() default SHARED;
+ * 				/**
+ * 				* (Optional) Cached instances in the shared cache,
+ * 				* or only a per EntityManager isolated cache.
+ * 				* The default is shared.
+ * 				* @deprecated As of Eclipselink 2.2. See the attribute 'isolation'
+ * 				**
+ * 				@Deprecated
+ * 				boolean shared() default true;
  * 
- *           /**
- *            * (Optional) Expire cached instance after a fix period of time (ms). 
- *            * Queries executed against the cache after this will be forced back 
- *            * to the database for a refreshed copy
- *            ** 
- *           int expiry() default -1; // minus one is no expiry.
+ * 				/**
+ * 				* (Optional) Controls the level of caching this Entity will use.
+ * 				* The default is CacheIsolationType.SHARED which has EclipseLink
+ * 				* Caching all Entities in the Shared Cache.
+ * 				* @see org.eclipse.persistence.config.CacheIsolationType
+ * 				**
+ * 				CacheIsolationType isolation() default SHARED;
  * 
- *           /**
- *            * (Optional) Expire cached instance a specific time of day. Queries 
- *            * executed against the cache after this will be forced back to the 
- *            * database for a refreshed copy
- *            ** 
- *           TimeOfDay expiryTimeOfDay() default @TimeOfDay(specified=false);
+ * 				/**
+ * 				* (Optional) Expire cached instance after a fix period of time (ms).
+ * 				* Queries executed against the cache after this will be forced back
+ * 				* to the database for a refreshed copy
+ * 				**
+ * 				int expiry() default -1; // minus one is no expiry.
  * 
- *           /**
- *            * (Optional) Force all queries that go to the database to always 
- *            * refresh the cache.
- *            ** 
- *           boolean alwaysRefresh() default false;
+ * 				/**
+ * 				* (Optional) Expire cached instance a specific time of day. Queries
+ * 				* executed against the cache after this will be forced back to the
+ * 				* database for a refreshed copy
+ * 				**
+ * 				TimeOfDay expiryTimeOfDay() default @TimeOfDay(specified=false);
  * 
- *           /**
- *            * (Optional) For all queries that go to the database, refresh the
- *            * cache only if the data received from the database by a query is 
- *            * newer than the data in the cache (as determined by the optimistic 
- *            * locking field)
- *            ** 
- *           boolean refreshOnlyIfNewer() default false;
+ * 				/**
+ * 				* (Optional) Force all queries that go to the database to always
+ * 				* refresh the cache.
+ * 				**
+ * 				boolean alwaysRefresh() default false;
  * 
- *           /**
- *            * (Optional) Setting to true will force all queries to bypass the 
- *            * cache for hits but still resolve against the cache for identity. 
- *            * This forces all queries to hit the database.
- *            ** 
- *           boolean disableHits() default false;
+ * 				/**
+ * 				* (Optional) For all queries that go to the database, refresh the
+ * 				* cache only if the data received from the database by a query is
+ * 				* newer than the data in the cache (as determined by the optimistic
+ * 				* locking field)
+ * 				**
+ * 				boolean refreshOnlyIfNewer() default false;
  * 
- *           /**
- *            * (Optional) The cache coordination mode.
- *            ** 
- *           CacheCoordinationType coordinationType() default SEND_OBJECT_CHANGES;
- *         }
+ * 				/**
+ * 				* (Optional) Setting to true will force all queries to bypass the
+ * 				* cache for hits but still resolve against the cache for identity.
+ * 				* This forces all queries to hit the database.
+ * 				**
+ * 				boolean disableHits() default false;
  * 
- *       
+ * 				/**
+ * 				* (Optional) The cache coordination mode.
+ * 				**
+ * 				CacheCoordinationType coordinationType() default SEND_OBJECT_CHANGES;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

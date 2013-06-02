@@ -17,17 +17,17 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         Defines the settings and mappings for embeddable objects. Is 
- *         allowed to be sparsely populated and used in conjunction with 
- *         the annotations. Alternatively, the metadata-complete attribute 
- *         can be used to indicate that no annotations are to be processed 
- *         in the class. If this is the case then the defaulting rules will 
- *         be recursively applied.
+ * 				Defines the settings and mappings for embeddable objects. Is
+ * 				allowed to be sparsely populated and used in conjunction with
+ * 				the annotations. Alternatively, the metadata-complete attribute
+ * 				can be used to indicate that no annotations are to be processed
+ * 				in the class. If this is the case then the defaulting rules will
+ * 				be recursively applied.
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface Embeddable {}
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface Embeddable {}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

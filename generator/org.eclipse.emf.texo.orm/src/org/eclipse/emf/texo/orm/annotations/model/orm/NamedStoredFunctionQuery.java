@@ -18,54 +18,58 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * A NamedStoredFunctionQuery annotation allows the definition of 
- *          * queries that call stored function as named queries.
- *          * A NamedStoredFunctionQuery annotation may be defined on an Entity or
- *          * MappedSuperclass. 
- *          ** 
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface NamedStoredFunctionQuery {
- *           /**
- *            * (Required) Unique name that references this stored procedure query.
- *            **
- *           String name();
+ * 				/**
+ * 				* A NamedStoredFunctionQuery annotation allows the definition of
+ * 				* queries that call stored function as named queries.
+ * 				* A NamedStoredFunctionQuery annotation may be defined on an Entity
+ * 				or
+ * 				* MappedSuperclass.
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface NamedStoredFunctionQuery {
+ * 				/**
+ * 				* (Required) Unique name that references this stored procedure query.
+ * 				**
+ * 				String name();
  * 
- *           /**
- *            * (Optional) Query hints.
- *            **
- *           QueryHint[] hints() default {};
+ * 				/**
+ * 				* (Optional) Query hints.
+ * 				**
+ * 				QueryHint[] hints() default {};
  * 
- *           /**
- *            * (Optional) The name of the SQLResultMapping.
- *            **
- *           String resultSetMapping() default "";
+ * 				/**
+ * 				* (Optional) The name of the SQLResultMapping.
+ * 				**
+ * 				String resultSetMapping() default "";
  * 
- *           /**
- *            * (Required) The name of the stored procedure.
- *            **
- *           String functionName();
- *           
- *           /**
- *            * (Optional) Defines if the stored procedure should be called by index or by name.
- *            * By index requires that the StoredProcedureParameter are defined in the same order as the procedure on the database.
- *            * By name requires the database platform support naming procedure parameters.
- *            **
- *           boolean callByIndex() default false;
- *     
- *           /**
- *            * (Optional) Defines arguments to the stored procedure.
- *            **
- *           StoredProcedureParameter[] parameters() default {};
- *           
- *           /**
- *            * (Required) Defines return of the stored function.
- *            **
- *           StoredProcedureParameter[] returnParameter();
- *         }
+ * 				/**
+ * 				* (Required) The name of the stored procedure.
+ * 				**
+ * 				String functionName();
  * 
- *       
+ * 				/**
+ * 				* (Optional) Defines if the stored procedure should be called by
+ * 				index or by name.
+ * 				* By index requires that the StoredProcedureParameter are defined in
+ * 				the same order as the procedure on the database.
+ * 				* By name requires the database platform support naming procedure
+ * 				parameters.
+ * 				**
+ * 				boolean callByIndex() default false;
+ * 
+ * 				/**
+ * 				* (Optional) Defines arguments to the stored procedure.
+ * 				**
+ * 				StoredProcedureParameter[] parameters() default {};
+ * 
+ * 				/**
+ * 				* (Required) Defines return of the stored function.
+ * 				**
+ * 				StoredProcedureParameter[] returnParameter();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

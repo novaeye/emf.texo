@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE}) @Retention(RUNTIME)
- *         public @interface Inheritance {
- *           InheritanceType strategy() default SINGLE_TABLE;
- *         }
+ * 				@Target({TYPE}) @Retention(RUNTIME)
+ * 				public @interface Inheritance {
+ * 				InheritanceType strategy() default SINGLE_TABLE;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

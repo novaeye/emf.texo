@@ -15,36 +15,43 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *             /** 
- *              * A Partitioning is used to partition the data for a class across multiple difference databases
- *              * or across a database cluster such as Oracle RAC.
- *              * Partitioning can provide improved scalability by allowing multiple database machines to service requests.
- *              * This annotation configures a custom PartitioningPolicy.
- *              * 
- *              * If multiple partitions are used to process a single transaction, JTA should be used for proper XA transaction support.
- *              * 
- *              * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *              * Partition policies are globally named to allow reuse,
- *              * the partitioning policy must also be set using the @Partitioned annotation to be used.
- *              * 
- *              * @see Partitioned
- *              * @see org.eclipse.persistence.descriptors.partitioning.PartitioningPolicy
- *              * @author James Sutherland
- *              * @since EclipseLink 2.2
- *              **
- *             @Target({TYPE, METHOD, FIELD})
- *             @Retention(RUNTIME)
- *             public @interface Partitioning {
- *                 String name();
- *                 
- *                 /**
- *                  * (Required) Full package.class name of a subclass of PartitioningPolicy.
- *                  **
- *                 Class partitioningClass();
- *             }
  * 
- *       
+ * 				/**
+ * 				* A Partitioning is used to partition the data for a class across
+ * 				multiple difference databases
+ * 				* or across a database cluster such as Oracle RAC.
+ * 				* Partitioning can provide improved scalability by allowing multiple
+ * 				database machines to service requests.
+ * 				* This annotation configures a custom PartitioningPolicy.
+ * 				*
+ * 				* If multiple partitions are used to process a single transaction,
+ * 				JTA should be used for proper XA transaction support.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				* Partition policies are globally named to allow reuse,
+ * 				* the partitioning policy must also be set using the @Partitioned
+ * 				annotation to be used.
+ * 				*
+ * 				* @see Partitioned
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.PartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Partitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* (Required) Full package.class name of a subclass of
+ * 				PartitioningPolicy.
+ * 				**
+ * 				Class partitioningClass();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

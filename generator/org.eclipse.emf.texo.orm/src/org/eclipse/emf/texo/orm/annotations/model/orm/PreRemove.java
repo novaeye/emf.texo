@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD}) @Retention(RUNTIME)
- *         public @interface PreRemove {}
+ * 				@Target({METHOD}) @Retention(RUNTIME)
+ * 				public @interface PreRemove {}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

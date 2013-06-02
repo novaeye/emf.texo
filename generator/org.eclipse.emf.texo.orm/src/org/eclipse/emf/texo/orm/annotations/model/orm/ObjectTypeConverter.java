@@ -18,43 +18,43 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface ObjectTypeConverter {
- *           /**
- *            * (Required) Name this converter. The name should be unique
- *            * across the whole persistence unit.
- *            **
- *           String name();
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ObjectTypeConverter {
+ * 				/**
+ * 				* (Required) Name this converter. The name should be unique
+ * 				* across the whole persistence unit.
+ * 				**
+ * 				String name();
  * 
- *           /**
- *            * (Optional) Specify the type stored on the database. The
- *            * default is inferred from the type of the persistence
- *            * field or property.
- *            **
- *           Class dataType() default void.class;
+ * 				/**
+ * 				* (Optional) Specify the type stored on the database. The
+ * 				* default is inferred from the type of the persistence
+ * 				* field or property.
+ * 				**
+ * 				Class dataType() default void.class;
  * 
- *           /**
- *            * (Optional) Specify the type stored on the entity. The
- *            * default is inferred from the type of the persistent 
- *            * field or property.
- *            **
- *           Class objectType() default void.class;
+ * 				/**
+ * 				* (Optional) Specify the type stored on the entity. The
+ * 				* default is inferred from the type of the persistent
+ * 				* field or property.
+ * 				**
+ * 				Class objectType() default void.class;
  * 
- *           /**
- *            * (Required) Specify the conversion values to be used 
- *            * with the object converter.
- *            **
- *           ConversionValue[] conversionValues();
+ * 				/**
+ * 				* (Required) Specify the conversion values to be used
+ * 				* with the object converter.
+ * 				**
+ * 				ConversionValue[] conversionValues();
  * 
- *            /**
- *             * (Optional) Specify a default object value. Used for 
- *             * legacy data if the data value is missing.
- *             **
- *            String defaultObjectValue() default "";
- *          }
+ * 				/**
+ * 				* (Optional) Specify a default object value. Used for
+ * 				* legacy data if the data value is missing.
+ * 				**
+ * 				String defaultObjectValue() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

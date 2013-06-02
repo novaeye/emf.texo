@@ -18,42 +18,45 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * A PLSQLRecord annotation is used to define a database PLSQL RECORD type.
- *          * This type can be used within PLSQL procedure calls.
- *          * 
- *          * @see NamedPLSQLStoredProcedureQuery
- *          * @author James Sutherland
- *          * @since EclipseLink 2.3
- *          **
- *         @Target({TYPE})
- *         @Retention(RUNTIME)
- *         public @interface PLSQLRecord {
- *         
- *             /**
- *              * (Required) The name of the record type in the database.
- *              **
- *             String name();
- *         
- *             /**
- *              * (Required) The name of the database OBJECT TYPE that mirrors the record's structure.
- *              * The record will be converted to/from this type so it can be passed through JDBC.
- *              **
- *             String compatibleType();
- *             
- *             /**
- *              * (Optional) The Java class to map the object-type to.
- *              * This class must be mapped using a @Struct annotation.
- *              **
- *             Class javaType() default void.class;
- *             
- *             /**
- *              * (Required) Defines the fields in the record type.
- *              **
- *             PLSQLParameter[] fields();
- *         }
+ * 				/**
+ * 				* A PLSQLRecord annotation is used to define a database PLSQL RECORD
+ * 				type.
+ * 				* This type can be used within PLSQL procedure calls.
+ * 				*
+ * 				* @see NamedPLSQLStoredProcedureQuery
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({TYPE})
+ * 				@Retention(RUNTIME)
+ * 				public @interface PLSQLRecord {
  * 
- *       
+ * 				/**
+ * 				* (Required) The name of the record type in the database.
+ * 				**
+ * 				String name();
+ * 
+ * 				/**
+ * 				* (Required) The name of the database OBJECT TYPE that mirrors the
+ * 				record's structure.
+ * 				* The record will be converted to/from this type so it can be passed
+ * 				through JDBC.
+ * 				**
+ * 				String compatibleType();
+ * 
+ * 				/**
+ * 				* (Optional) The Java class to map the object-type to.
+ * 				* This class must be mapped using a @Struct annotation.
+ * 				**
+ * 				Class javaType() default void.class;
+ * 
+ * 				/**
+ * 				* (Required) Defines the fields in the record type.
+ * 				**
+ * 				PLSQLParameter[] fields();
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

@@ -18,65 +18,67 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *             /** 
- *              * A PLSQLParameter annotation is used within a 
- *              * NamedPLSQLStoredProcedureQuery or PLSQLRecord annotation.
- *              * 
- *              * @see NamedPLSQLStoredProcedureQuery
- *              * @see PLSQLRecord
- *              * @author James Sutherland
- *              * @since EclipseLink 2.3
- *              ** 
- *             @Target({})
- *             @Retention(RUNTIME)
- *             public @interface PLSQLParameter {
- *                 /**
- *                  * (Optional) The direction of the stored procedure parameter.
- *                  **
- *                 Direction direction() default IN;
- *             
- *                 /**
- *                  * (Required) Stored procedure parameter name.
- *                  **
- *                 String name() default "";
- *             
- *                 /**
- *                  * (Optional) The query parameter name.
- *                  **
- *                 String queryParameter();
- *                 
- *                 /**
- *                  * (Optional) Define if the parameter is required, or optional and defaulted by the procedure.
- *                  **
- *                 boolean optional() default false;
- *                 
- *                 /**
- *                  * (Optional) The database data-type for the paramter.
- *                  * This either one of the type constants defined in OraclePLSQLTypes, or JDBCTypes,
- *                  * or a custom record or table type name.
- *                  * @see PLSQLRecord
- *                  * @see OraclePLSQLTypes
- *                  * @see JDBCTypes
- *                  **
- *                 String databaseType() default "VARCHAR";
- *                 
- *                 /**
- *                  * (Optional) The max length of the field value.
- *                  **
- *                 int length() default 255;
- *                 
- *                 /**
- *                  * (Optional) If a numeric, the max scale value.
- *                  **
- *                 int scale() default 0;
- *             
- *                 /**
- *                  * (Optional) If a numeric, the max precision value.
- *                  **
- *                 int precision() default 0;
- *             }
+ * 				/**
+ * 				* A PLSQLParameter annotation is used within a
+ * 				* NamedPLSQLStoredProcedureQuery or PLSQLRecord annotation.
+ * 				*
+ * 				* @see NamedPLSQLStoredProcedureQuery
+ * 				* @see PLSQLRecord
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({})
+ * 				@Retention(RUNTIME)
+ * 				public @interface PLSQLParameter {
+ * 				/**
+ * 				* (Optional) The direction of the stored procedure parameter.
+ * 				**
+ * 				Direction direction() default IN;
  * 
- *       
+ * 				/**
+ * 				* (Required) Stored procedure parameter name.
+ * 				**
+ * 				String name() default "";
+ * 
+ * 				/**
+ * 				* (Optional) The query parameter name.
+ * 				**
+ * 				String queryParameter();
+ * 
+ * 				/**
+ * 				* (Optional) Define if the parameter is required, or optional and
+ * 				defaulted by the procedure.
+ * 				**
+ * 				boolean optional() default false;
+ * 
+ * 				/**
+ * 				* (Optional) The database data-type for the paramter.
+ * 				* This either one of the type constants defined in OraclePLSQLTypes,
+ * 				or JDBCTypes,
+ * 				* or a custom record or table type name.
+ * 				* @see PLSQLRecord
+ * 				* @see OraclePLSQLTypes
+ * 				* @see JDBCTypes
+ * 				**
+ * 				String databaseType() default "VARCHAR";
+ * 
+ * 				/**
+ * 				* (Optional) The max length of the field value.
+ * 				**
+ * 				int length() default 255;
+ * 
+ * 				/**
+ * 				* (Optional) If a numeric, the max scale value.
+ * 				**
+ * 				int scale() default 0;
+ * 
+ * 				/**
+ * 				* (Optional) If a numeric, the max precision value.
+ * 				**
+ * 				int precision() default 0;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

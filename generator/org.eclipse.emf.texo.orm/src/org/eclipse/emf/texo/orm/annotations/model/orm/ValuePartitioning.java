@@ -17,52 +17,62 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *         /** 
- *          * ValuePartitioning partitions access to a database cluster by a field value from the object,
- *          * such as the object's location, or tenant.
- *          * Each value is assigned a specific server.
- *          * All write or read request for object's with that value are sent to the server.
- *          * If a query does not include the field as a parameter, then it can either be sent
- *          * to all server's and unioned, or left to the sesion's default behavior.
- *          * 
- *          * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *          * 
- *          * @see org.eclipse.persistence.descriptors.partitioning.ValuePartitioningPolicy
- *          * @author James Sutherland
- *          * @since EclipseLink 2.2
- *          ** 
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface ValuePartitioning {
- *             String name();
- *             
- *             /**
- *              * The database column or query parameter to partition queries by.
- *              * This is the table column name, not the class attribute name.
- *              * The column value must be included in the query and should normally be part of the object's Id.
- *              * This can also be the name of a query parameter.
- *              * If a query does not contain the field the query will not be partitioned.
- *              **
- *             Column partitionColumn();
- *             
- *             /** Store the value partitions. Each partition maps a value to a connectionPool. **
- *             ValuePartition[] partitions();
- *     
- *             /** The type of the start and end values. **
- *             Class partitionValueType() default String.class;
- *             
- *             /** The default connection pool is used for any unmapped values. **
- *             String defaultConnectionPool();
- *                 
- *             /**
- *              * Defines if queries that do not contain the partition field should be sent
- *              * to every database and have the result unioned.
- *              **
- *             boolean unionUnpartitionableQueries() default false;
- *         }
  * 
- *       
+ * 				/**
+ * 				* ValuePartitioning partitions access to a database cluster by a
+ * 				field value from the object,
+ * 				* such as the object's location, or tenant.
+ * 				* Each value is assigned a specific server.
+ * 				* All write or read request for object's with that value are sent to
+ * 				the server.
+ * 				* If a query does not include the field as a parameter, then it can
+ * 				either be sent
+ * 				* to all server's and unioned, or left to the sesion's default
+ * 				behavior.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.ValuePartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface ValuePartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* The database column or query parameter to partition queries by.
+ * 				* This is the table column name, not the class attribute name.
+ * 				* The column value must be included in the query and should normally
+ * 				be part of the object's Id.
+ * 				* This can also be the name of a query parameter.
+ * 				* If a query does not contain the field the query will not be
+ * 				partitioned.
+ * 				**
+ * 				Column partitionColumn();
+ * 
+ * 				/** Store the value partitions. Each partition maps a value to a
+ * 				connectionPool. **
+ * 				ValuePartition[] partitions();
+ * 
+ * 				/** The type of the start and end values. **
+ * 				Class partitionValueType() default String.class;
+ * 
+ * 				/** The default connection pool is used for any unmapped values. **
+ * 				String defaultConnectionPool();
+ * 
+ * 				/**
+ * 				* Defines if queries that do not contain the partition field should
+ * 				be sent
+ * 				* to every database and have the result unioned.
+ * 				**
+ * 				boolean unionUnpartitionableQueries() default false;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

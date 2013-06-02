@@ -17,37 +17,42 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  *
  * <!-- begin-model-doc -->
  * 
- *       
- *             /** 
- *              * UnionPartitioning sends queries to all connection pools and unions the results.
- *              * This is for queries or relationships that span partitions when partitioning is used,
- *              * such as on a ManyToMany cross partition relationship.
- *              * 
- *              * Partitioning can be enabled on an Entity, relationship, query, or session/persistence unit.
- *              * 
- *              * @see org.eclipse.persistence.descriptors.partitioning.UnionPartitioningPolicy
- *              * @author James Sutherland
- *              * @since EclipseLink 2.2
- *              ** 
- *             @Target({TYPE, METHOD, FIELD})
- *             @Retention(RUNTIME)
- *             public @interface UnionPartitioning {
- *                 String name();
- *                 
- *                 /**
- *                  * (Required) List of connection pool names to load balance across.
- *                  **
- *                 String[] connectionPools();
- *                 
- *                 /**
- *                  * Defines if write queries should be replicated.
- *                  * Writes are normally not replicated when unioning,
- *                  * but can be for ManyToMany relationships, when the join table needs to be replicated.
- *                  **
- *                 boolean replicateWrites() default false;
- *             }
  * 
- *       
+ * 				/**
+ * 				* UnionPartitioning sends queries to all connection pools and unions
+ * 				the results.
+ * 				* This is for queries or relationships that span partitions when
+ * 				partitioning is used,
+ * 				* such as on a ManyToMany cross partition relationship.
+ * 				*
+ * 				* Partitioning can be enabled on an Entity, relationship, query, or
+ * 				session/persistence unit.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.descriptors.partitioning.UnionPartitioningPolicy
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.2
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface UnionPartitioning {
+ * 				String name();
+ * 
+ * 				/**
+ * 				* (Required) List of connection pool names to load balance across.
+ * 				**
+ * 				String[] connectionPools();
+ * 
+ * 				/**
+ * 				* Defines if write queries should be replicated.
+ * 				* Writes are normally not replicated when unioning,
+ * 				* but can be for ManyToMany relationships, when the join table needs
+ * 				to be replicated.
+ * 				**
+ * 				boolean replicateWrites() default false;
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

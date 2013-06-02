@@ -37,7 +37,7 @@
 <!-- Java Persistence API object-relational mapping file schema -->
 <xsd:schema targetNamespace="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
 	xmlns:orm="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" version="2.3">
 
 	<xsd:annotation>
@@ -1554,7 +1554,7 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 	</xsd:complexType>
 
 	<!-- **************************************************** -->
@@ -1617,7 +1617,7 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 	</xsd:complexType>
 
 
@@ -3239,7 +3239,7 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 	</xsd:complexType>
 
 	<!-- **************************************************** -->
@@ -4977,7 +4977,7 @@
 		<xsd:attribute name="name" type="xsd:string" use="required" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 	</xsd:complexType>
 
 	<!-- **************************************************** -->
@@ -5322,7 +5322,7 @@
 		<xsd:attribute name="name" type="xsd:string" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 	</xsd:complexType>
 
 	<!-- **************************************************** -->
@@ -5409,7 +5409,7 @@
 		<xsd:attribute name="table" type="xsd:string" />
 		<xsd:attribute name="catalog" type="xsd:string" />
 		<xsd:attribute name="schema" type="xsd:string" />
-		<xsd:attribute name="creation-suffix" type="xsd:string" />
+		<xsd:attribute name="creation-suffix" ecore:unsettable="true" type="xsd:string" />
 		<xsd:attribute name="pk-column-name" type="xsd:string" />
 		<xsd:attribute name="value-column-name" type="xsd:string" />
 		<xsd:attribute name="pk-column-value" type="xsd:string" />

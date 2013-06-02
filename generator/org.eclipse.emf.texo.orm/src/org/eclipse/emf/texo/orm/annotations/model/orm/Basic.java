@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface Basic {
- *           FetchType fetch() default EAGER;
- *           boolean optional() default true;
- *         }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface Basic {
+ * 				FetchType fetch() default EAGER;
+ * 				boolean optional() default true;
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

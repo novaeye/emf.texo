@@ -17,20 +17,20 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         Defines the settings and mappings for an entity. Is allowed to be
- *         sparsely populated and used in conjunction with the annotations.
- *         Alternatively, the metadata-complete attribute can be used to 
- *         indicate that no annotations on the entity class (and its fields
- *         or properties) are to be processed. If this is the case then 
- *         the defaulting rules for the entity and its subelements will 
- *         be recursively applied.
+ * 				Defines the settings and mappings for an entity. Is allowed to be
+ * 				sparsely populated and used in conjunction with the annotations.
+ * 				Alternatively, the metadata-complete attribute can be used to
+ * 				indicate that no annotations on the entity class (and its fields
+ * 				or properties) are to be processed. If this is the case then
+ * 				the defaulting rules for the entity and its subelements will
+ * 				be recursively applied.
  * 
- *         @Target(TYPE) @Retention(RUNTIME)
- *           public @interface Entity {
- *           String name() default "";
- *         }
+ * 				@Target(TYPE) @Retention(RUNTIME)
+ * 				public @interface Entity {
+ * 				String name() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

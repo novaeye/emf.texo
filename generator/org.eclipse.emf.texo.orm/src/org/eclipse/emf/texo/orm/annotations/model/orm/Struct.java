@@ -18,34 +18,40 @@ import org.eclipse.emf.texo.orm.annotator.BaseOrmAnnotation;
  * <!-- begin-model-doc -->
  * 
  * 
- *         /** 
- *          * Struct types are extended object-relational data-types supported by some databases.
- *          * Struct types are user define types in the database such as OBJECT types on Oracle.
- *          * Structs can normally contains Arrays (VARRAY) or other Struct types, and can be stored in
- *          * a column or a table.
- *          * This annotation define a class to map to a database Struct type.
- *          * The class should normally be an Embeddable, but could also be an Entity if stored in a object table.
- *          * 
- *          * @see org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
- *          * @see org.eclipse.persistence.mappings.structures.StructureMapping
- *          * @author James Sutherland
- *          * @since EclipseLink 2.3
- *          **
- *         @Target({TYPE, METHOD, FIELD})
- *         @Retention(RUNTIME)
- *         public @interface Struct {
- *             /**
- *              * (Required) The database name of the database structure type.
- *              **
- *             String name();
- *         
- *             /**
- *              * (Optional) Defines the order of the fields contained in the database structure type.
- *              **
- *             String[] fields() default {}; 
- *         }
+ * 				/**
+ * 				* Struct types are extended object-relational data-types supported by
+ * 				some databases.
+ * 				* Struct types are user define types in the database such as OBJECT
+ * 				types on Oracle.
+ * 				* Structs can normally contains Arrays (VARRAY) or other Struct
+ * 				types, and can be stored in
+ * 				* a column or a table.
+ * 				* This annotation define a class to map to a database Struct type.
+ * 				* The class should normally be an Embeddable, but could also be an
+ * 				Entity if stored in a object table.
+ * 				*
+ * 				* @see
+ * 				org.eclipse.persistence.mappings.structures.ObjectRelationalDataTypeDescriptor
+ * 				* @see org.eclipse.persistence.mappings.structures.StructureMapping
+ * 				* @author James Sutherland
+ * 				* @since EclipseLink 2.3
+ * 				**
+ * 				@Target({TYPE, METHOD, FIELD})
+ * 				@Retention(RUNTIME)
+ * 				public @interface Struct {
+ * 				/**
+ * 				* (Required) The database name of the database structure type.
+ * 				**
+ * 				String name();
  * 
- *       
+ * 				/**
+ * 				* (Optional) Defines the order of the fields contained in the
+ * 				database structure type.
+ * 				**
+ * 				String[] fields() default {};
+ * 				}
+ * 
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

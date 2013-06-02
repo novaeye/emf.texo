@@ -15,16 +15,16 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- begin-model-doc -->
  * 
  * 
- *         @Target({METHOD, FIELD}) @Retention(RUNTIME)
- *         public @interface OrderColumn {
- *           String name() default "";
- *           boolean nullable() default true;
- *           boolean insertable() default true;
- *           boolean updatable() default true;
- *           String columnDefinition() default "";
- *          }
+ * 				@Target({METHOD, FIELD}) @Retention(RUNTIME)
+ * 				public @interface OrderColumn {
+ * 				String name() default "";
+ * 				boolean nullable() default true;
+ * 				boolean insertable() default true;
+ * 				boolean updatable() default true;
+ * 				String columnDefinition() default "";
+ * 				}
  * 
- *       
+ * 			
  * <!-- end-model-doc -->
  *
  * <p>

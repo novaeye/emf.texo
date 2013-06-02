@@ -21,11 +21,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.annotations.annotationsmodel.AnnotatedModel;
 import org.eclipse.emf.texo.generator.AnnotationManager;
 import org.eclipse.emf.texo.generator.ModelController;
@@ -47,6 +53,12 @@ public class StandardORMGenerator extends ORMGenerator {
   private static final String STANDARD_ORM_NS = "http://java.sun.com/xml/ns/persistence/orm"; //$NON-NLS-1$
   private static final String ECLIPSELINK_ORM_NS = "http://www.eclipse.org/eclipselink/xsds/persistence/orm"; //$NON-NLS-1$
 
+  private static final List<String> eclipseLinkSpecificFeatureNames = new ArrayList<String>();
+
+  static {
+    eclipseLinkSpecificFeatureNames.add("creationSuffix");
+  }
+
   @Override
   public ModelController generateStoreORM(List<EPackage> ePackages, URI ormUri) {
     try {
@@ -65,6 +77,9 @@ public class StandardORMGenerator extends ORMGenerator {
     } else {
       entityMappings.setVersion(SupportedVersionsType._23);
     }
+
+    unsetEclipseLinkFeatures(entityMappings);
+
     final OrmannotationsResourceImpl ormResource = (OrmannotationsResourceImpl) new OrmannotationsResourceFactoryImpl()
         .createResource(fileUri);
     try {
@@ -91,4 +106,48 @@ public class StandardORMGenerator extends ORMGenerator {
     }
   }
 
+  protected void unsetEclipseLinkFeatures(EObject eObject) {
+    if (eObject == null) {
+      return;
+    }
+    for (EStructuralFeature eFeature : eObject.eClass().getEAllStructuralFeatures()) {
+      final Object value = eObject.eGet(eFeature);
+      if (eFeature instanceof EReference) {
+        final EReference eReference = (EReference) eFeature;
+        // visit the children
+        if (eReference.isContainment()) {
+          if (value instanceof Collection<?>) {
+            final Collection<?> coll = (Collection<?>) value;
+            for (Object o : coll) {
+              unsetEclipseLinkFeatures((EObject) o);
+            }
+          } else {
+            unsetEclipseLinkFeatures((EObject) value);
+          }
+        }
+
+        // unset
+        if (eclipseLinkSpecificFeatureNames.contains(eReference.getName())) {
+          if (value instanceof Collection<?>) {
+            final Collection<?> coll = (Collection<?>) value;
+            coll.clear();
+          } else {
+            eObject.eSet(eReference, null);
+          }
+          eObject.eUnset(eReference);
+        }
+      } else {
+        final EAttribute eAttribute = (EAttribute) eFeature;
+        if (eclipseLinkSpecificFeatureNames.contains(eAttribute.getName())) {
+          if (value instanceof Collection<?>) {
+            final Collection<?> coll = (Collection<?>) eObject.eGet(eAttribute);
+            coll.clear();
+          } else {
+            eObject.eSet(eAttribute, null);
+          }
+          eObject.eUnset(eAttribute);
+        }
+      }
+    }
+  }
 }
