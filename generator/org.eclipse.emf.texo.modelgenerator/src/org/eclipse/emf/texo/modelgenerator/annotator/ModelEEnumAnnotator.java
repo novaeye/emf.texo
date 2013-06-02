@@ -90,7 +90,8 @@ public class ModelEEnumAnnotator extends ModelEClassifierAnnotator implements An
         }
       }
       if (GeneratorUtils.isEmptyOrNull(annotation.getQualifiedClassName())) {
-        annotation.setQualifiedClassName(getInstanceClassNameForEnum((EEnum) eDataType));
+        annotation.setQualifiedClassName(getQualifiedClassName(annotation.getEClassifier(),
+            annotation.getSimpleClassName()));
       }
     }
     annotation.setDateType(false);
