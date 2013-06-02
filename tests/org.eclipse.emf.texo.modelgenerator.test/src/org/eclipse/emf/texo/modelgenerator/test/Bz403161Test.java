@@ -54,7 +54,7 @@ public class Bz403161Test extends TestCase {
 
     final EPackage.Registry packageRegistry = GeneratorUtils.createEPackageRegistry();
     final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(url.toURI()),
-        packageRegistry);
+        packageRegistry, false);
     final ModelController modelController = new ModelController();
     modelController.setEPackages(ePackages);
     modelController.getAnnotationManager().getAnnotatedModel().setGeneratingSources(true);

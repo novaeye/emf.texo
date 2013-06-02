@@ -117,7 +117,7 @@ public class ORMGeneratorTest extends TestCase {
 
       final URL url = TestModel.getModelUrl(modelFilePath);
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(url.toURI()),
-          useSharedEPackageRegistry() ? SHARED_REGISTRY : GeneratorUtils.createEPackageRegistry());
+          useSharedEPackageRegistry() ? SHARED_REGISTRY : GeneratorUtils.createEPackageRegistry(), false);
 
       // create the uri to store the mapping file
       final String ormFileName = ePackages.get(0).getName() + ORM_SUFFIX;

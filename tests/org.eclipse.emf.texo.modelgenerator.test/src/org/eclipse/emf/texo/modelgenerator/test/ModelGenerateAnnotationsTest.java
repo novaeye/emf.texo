@@ -50,7 +50,8 @@ public class ModelGenerateAnnotationsTest extends TestCase {
     EcorePackage.eINSTANCE.getEPackage();
 
     final URL url = TestModel.getModelUrl("samples/library.ecore"); //$NON-NLS-1$
-    final List<EPackage> ePackages = GeneratorUtils.readEPackage(url.toURI(), GeneratorUtils.createEPackageRegistry());
+    final List<EPackage> ePackages = GeneratorUtils.readEPackage(url.toURI(), GeneratorUtils.createEPackageRegistry(),
+        false);
 
     final ModelController modelController = new ModelController();
     modelController.setEPackages(ePackages);
@@ -62,8 +63,8 @@ public class ModelGenerateAnnotationsTest extends TestCase {
   public void testBasicGenerationAllModels() throws Exception {
     for (String modelFileName : TestModel.getAllModelRelativePaths()) {
       final URL url = TestModel.getModelUrl(modelFileName);
-      final List<EPackage> ePackages = GeneratorUtils
-          .readEPackage(url.toURI(), GeneratorUtils.createEPackageRegistry());
+      final List<EPackage> ePackages = GeneratorUtils.readEPackage(url.toURI(),
+          GeneratorUtils.createEPackageRegistry(), false);
 
       final ModelController modelController = new ModelController();
       modelController.setEPackages(ePackages);

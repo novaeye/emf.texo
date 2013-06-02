@@ -123,7 +123,7 @@ public class EclipseModelGeneratorTest extends TestCase {
 
       final EPackage.Registry packageRegistry = useSharedEPackageRegistry() ? SHARED_REGISTRY : GeneratorUtils
           .createEPackageRegistry();
-      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, packageRegistry);
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(uris, packageRegistry, false);
 
       if (true || !isGenerateTexoModels()) {
         addSuperType(ePackages, packageRegistry);
@@ -170,7 +170,7 @@ public class EclipseModelGeneratorTest extends TestCase {
 
   protected void addSuperType(final List<EPackage> ePackages, final EPackage.Registry packageRegistry) throws Exception {
     final List<EPackage> identifiableEPackages = GeneratorUtils.readEPackages(
-        Collections.singletonList(TestModel.getModelUrl("base/identifiable.ecore").toURI()), packageRegistry); //$NON-NLS-1$
+        Collections.singletonList(TestModel.getModelUrl("base/identifiable.ecore").toURI()), packageRegistry, false); //$NON-NLS-1$
 
     EClass identifiableEClass = null;
     for (EPackage ePackage : identifiableEPackages) {

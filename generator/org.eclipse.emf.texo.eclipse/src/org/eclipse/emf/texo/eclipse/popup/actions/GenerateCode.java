@@ -67,7 +67,7 @@ public class GenerateCode extends BaseGenerateAction {
     try {
       // always start with a fresh epackage registry
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
-          GeneratorUtils.createEPackageRegistry());
+          GeneratorUtils.createEPackageRegistry(), true);
 
       validateEPackages(ePackages);
 

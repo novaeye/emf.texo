@@ -228,10 +228,10 @@ public class GeneratorUtils {
    *          the epackage registry to use
    * @return the EPackages
    */
-  public static List<EPackage> readEPackage(final java.net.URI uri, EPackage.Registry registry) {
+  public static List<EPackage> readEPackage(final java.net.URI uri, EPackage.Registry registry, boolean useWsUris) {
     final List<java.net.URI> list = new ArrayList<java.net.URI>();
     list.add(uri);
-    return readEPackages(list, registry);
+    return readEPackages(list, registry, useWsUris);
   }
 
   /**
@@ -243,11 +243,16 @@ public class GeneratorUtils {
    *          the registry to use when reading epackages
    * @return the EPackages
    */
-  public static List<EPackage> readEPackages(final List<java.net.URI> uris, EPackage.Registry registry) {
+  public static List<EPackage> readEPackages(final List<java.net.URI> uris, EPackage.Registry registry,
+      boolean useWsUris) {
     final List<URI> emfUris = new ArrayList<URI>();
     for (final java.net.URI uri : uris) {
       final String uriStr = uri.toString();
-      emfUris.add(URI.createURI(uriStr));
+      if (useWsUris) {
+        emfUris.add(URI.createPlatformResourceURI(uriStr, true));
+      } else {
+        emfUris.add(URI.createURI(uriStr));
+      }
     }
     return readEPackagesUsingEMFURI(emfUris, registry);
   }

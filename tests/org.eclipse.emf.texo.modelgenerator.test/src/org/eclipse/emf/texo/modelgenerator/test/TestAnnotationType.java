@@ -25,7 +25,7 @@ public class TestAnnotationType extends TestCase {
     final List<URI> uris = new ArrayList<URI>();
     final URL url = TestModel.getModelUrl(ecoreFileName);
     uris.add(url.toURI());
-    return GeneratorUtils.readEPackages(uris, registry);
+    return GeneratorUtils.readEPackages(uris, registry, false);
   }
 
 }

@@ -19,6 +19,8 @@ Require-Bundle: org.eclipse.emf.texo.annotations.model;bundle-version="[0.1.0,1.
  org.junit;bundle-version="[4.0.0,5.1.0)"
 Export-Package: org.eclipse.emf.texo.modelgenerator.test;version="0.1.0";uses:="junit.framework",
  org.eclipse.emf.texo.modelgenerator.test.models;version="0.1.0",
+ org.eclipse.emf.texo.modelgenerator.test.models.base,
  org.eclipse.emf.texo.modelgenerator.test.models.issues;version="0.1.0",
  org.eclipse.emf.texo.modelgenerator.test.models.samples;version="0.1.0",
- org.eclipse.emf.texo.modelgenerator.test.models.schemaconstructs;version="0.1.0"
+ org.eclipse.emf.texo.modelgenerator.test.models.schemaconstructs;version="0.1.0",
+ org.eclipse.emf.texo.modelgenerator.test.models.texo

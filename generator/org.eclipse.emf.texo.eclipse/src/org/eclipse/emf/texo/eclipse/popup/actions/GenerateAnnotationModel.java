@@ -78,7 +78,7 @@ public class GenerateAnnotationModel extends BaseGenerateAction {
 
     // always start with a fresh epackage registry
     final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
-        GeneratorUtils.createEPackageRegistry());
+        GeneratorUtils.createEPackageRegistry(), true);
 
     // get rid of the epackages which are subpackages
     final ListIterator<EPackage> iterator = ePackages.listIterator();
