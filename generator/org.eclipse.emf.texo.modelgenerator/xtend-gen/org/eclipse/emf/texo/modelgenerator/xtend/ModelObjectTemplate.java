@@ -223,27 +223,30 @@ public class ModelObjectTemplate extends BaseTemplate {
     {
       EList<EStructuralFeatureModelGenAnnotation> _eAllStructuralFeatureModelGenAnnotations = eClassModelGenAnnotation.getEAllStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _eAllStructuralFeatureModelGenAnnotations) {
-        _builder.append("        ");
-        _builder.append("case ");
-        String _qualifiedClassName_3 = ePackageAnnotation.getQualifiedClassName();
-        _builder.append(_qualifiedClassName_3, "        ");
-        _builder.append(".");
-        String _name_2 = eClassModelGenAnnotation.getName();
-        String _upperCase = TemplateUtil.toUpperCase(_name_2);
-        _builder.append(_upperCase, "        ");
-        _builder.append("_");
-        String _name_3 = featureAnnotation.getName();
-        String _upperCase_1 = TemplateUtil.toUpperCase(_name_3);
-        _builder.append(_upperCase_1, "        ");
-        _builder.append("_FEATURE_ID:");
-        _builder.newLineIfNotEmpty();
-        _builder.append("        ");
-        _builder.append("    ");
-        _builder.append("return getTarget().");
-        String _getter = featureAnnotation.getGetter();
-        _builder.append(_getter, "            ");
-        _builder.append("();");
-        _builder.newLineIfNotEmpty();
+        {
+          boolean _isGenerateCode = featureAnnotation.isGenerateCode();
+          if (_isGenerateCode) {
+            _builder.append("case ");
+            String _qualifiedClassName_3 = ePackageAnnotation.getQualifiedClassName();
+            _builder.append(_qualifiedClassName_3, "");
+            _builder.append(".");
+            String _name_2 = eClassModelGenAnnotation.getName();
+            String _upperCase = TemplateUtil.toUpperCase(_name_2);
+            _builder.append(_upperCase, "");
+            _builder.append("_");
+            String _name_3 = featureAnnotation.getName();
+            String _upperCase_1 = TemplateUtil.toUpperCase(_name_3);
+            _builder.append(_upperCase_1, "");
+            _builder.append("_FEATURE_ID:");
+            _builder.newLineIfNotEmpty();
+            _builder.append("    ");
+            _builder.append("return getTarget().");
+            String _getter = featureAnnotation.getGetter();
+            _builder.append(_getter, "    ");
+            _builder.append("();");
+            _builder.newLineIfNotEmpty();
+          }
+        }
       }
     }
     _builder.append("            ");
@@ -315,9 +318,16 @@ public class ModelObjectTemplate extends BaseTemplate {
       EList<EStructuralFeatureModelGenAnnotation> _eAllStructuralFeatureModelGenAnnotations_2 = eClassModelGenAnnotation.getEAllStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation_1 : _eAllStructuralFeatureModelGenAnnotations_2) {
         {
-          EStructuralFeature _eStructuralFeature = featureAnnotation_1.getEStructuralFeature();
-          boolean _isChangeable = _eStructuralFeature.isChangeable();
-          if (_isChangeable) {
+          boolean _and = false;
+          boolean _isGenerateCode_1 = featureAnnotation_1.isGenerateCode();
+          if (!_isGenerateCode_1) {
+            _and = false;
+          } else {
+            EStructuralFeature _eStructuralFeature = featureAnnotation_1.getEStructuralFeature();
+            boolean _isChangeable = _eStructuralFeature.isChangeable();
+            _and = (_isGenerateCode_1 && _isChangeable);
+          }
+          if (_and) {
             _builder.append("        ");
             _builder.append("case ");
             String _qualifiedClassName_4 = ePackageAnnotation.getQualifiedClassName();
@@ -391,43 +401,43 @@ public class ModelObjectTemplate extends BaseTemplate {
         _builder.append("        ");
         _builder.newLine();
         {
-          boolean _and = false;
           boolean _and_1 = false;
+          boolean _and_2 = false;
           EStructuralFeature _eStructuralFeature_1 = featureAnnotation_2.getEStructuralFeature();
           boolean _isChangeable_1 = _eStructuralFeature_1.isChangeable();
           if (!_isChangeable_1) {
-            _and_1 = false;
+            _and_2 = false;
           } else {
             boolean _isMany = featureAnnotation_2.isMany();
-            _and_1 = (_isChangeable_1 && _isMany);
+            _and_2 = (_isChangeable_1 && _isMany);
           }
-          if (!_and_1) {
-            _and = false;
+          if (!_and_2) {
+            _and_1 = false;
           } else {
             String _itemType = featureAnnotation_2.getItemType();
             boolean _contains = _itemType.contains(",");
             boolean _not = (!_contains);
-            _and = (_and_1 && _not);
+            _and_1 = (_and_2 && _not);
           }
-          if (_and) {
+          if (_and_1) {
             {
-              boolean _and_2 = false;
               boolean _and_3 = false;
+              boolean _and_4 = false;
               boolean _isReference = featureAnnotation_2.isReference();
               if (!_isReference) {
-                _and_3 = false;
+                _and_4 = false;
               } else {
                 EStructuralFeatureModelGenAnnotation _featureMapFeature = featureAnnotation_2.getFeatureMapFeature();
                 boolean _equals = Objects.equal(_featureMapFeature, null);
-                _and_3 = (_isReference && _equals);
+                _and_4 = (_isReference && _equals);
               }
-              if (!_and_3) {
-                _and_2 = false;
+              if (!_and_4) {
+                _and_3 = false;
               } else {
                 boolean _isGenerateSafeManyAccess = ((EReferenceModelGenAnnotation) featureAnnotation_2).isGenerateSafeManyAccess();
-                _and_2 = (_and_3 && _isGenerateSafeManyAccess);
+                _and_3 = (_and_4 && _isGenerateSafeManyAccess);
               }
-              if (_and_2) {
+              if (_and_3) {
                 _builder.append("        ");
                 _builder.append("case ");
                 String _qualifiedClassName_5 = ePackageAnnotation.getQualifiedClassName();
@@ -534,43 +544,43 @@ public class ModelObjectTemplate extends BaseTemplate {
         _builder.append("        ");
         _builder.newLine();
         {
-          boolean _and_4 = false;
           boolean _and_5 = false;
+          boolean _and_6 = false;
           EStructuralFeature _eStructuralFeature_2 = featureAnnotation_3.getEStructuralFeature();
           boolean _isChangeable_2 = _eStructuralFeature_2.isChangeable();
           if (!_isChangeable_2) {
-            _and_5 = false;
+            _and_6 = false;
           } else {
             boolean _isMany_1 = featureAnnotation_3.isMany();
-            _and_5 = (_isChangeable_2 && _isMany_1);
+            _and_6 = (_isChangeable_2 && _isMany_1);
           }
-          if (!_and_5) {
-            _and_4 = false;
+          if (!_and_6) {
+            _and_5 = false;
           } else {
             String _itemType_3 = featureAnnotation_3.getItemType();
             boolean _contains_1 = _itemType_3.contains(",");
             boolean _not_1 = (!_contains_1);
-            _and_4 = (_and_5 && _not_1);
+            _and_5 = (_and_6 && _not_1);
           }
-          if (_and_4) {
+          if (_and_5) {
             {
-              boolean _and_6 = false;
               boolean _and_7 = false;
+              boolean _and_8 = false;
               boolean _isReference_1 = featureAnnotation_3.isReference();
               if (!_isReference_1) {
-                _and_7 = false;
+                _and_8 = false;
               } else {
                 EStructuralFeatureModelGenAnnotation _featureMapFeature_1 = featureAnnotation_3.getFeatureMapFeature();
                 boolean _equals_1 = Objects.equal(_featureMapFeature_1, null);
-                _and_7 = (_isReference_1 && _equals_1);
+                _and_8 = (_isReference_1 && _equals_1);
               }
-              if (!_and_7) {
-                _and_6 = false;
+              if (!_and_8) {
+                _and_7 = false;
               } else {
                 boolean _isGenerateSafeManyAccess_1 = ((EReferenceModelGenAnnotation) featureAnnotation_3).isGenerateSafeManyAccess();
-                _and_6 = (_and_7 && _isGenerateSafeManyAccess_1);
+                _and_7 = (_and_8 && _isGenerateSafeManyAccess_1);
               }
-              if (_and_6) {
+              if (_and_7) {
                 _builder.append("        ");
                 _builder.append("case ");
                 String _qualifiedClassName_7 = ePackageAnnotation.getQualifiedClassName();

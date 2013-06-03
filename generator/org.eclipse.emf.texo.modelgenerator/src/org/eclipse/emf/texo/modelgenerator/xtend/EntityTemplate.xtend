@@ -79,7 +79,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
     «/* a document root has almost only volatile features, but they need to be generated also */»
-    «IF !featureAnnotation.EStructuralFeature.volatile»
+    «IF featureAnnotation.generateCode && !featureAnnotation.EStructuralFeature.volatile»
 
         /**
           * <!-- begin-user-doc -->
@@ -99,6 +99,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
 «executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::entity_addition", eClassModelGenAnnotation)»
 
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+	«IF featureAnnotation.generateCode»
         /**
          * Returns the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</b></em>' feature.
             «IF !featureAnnotation.EStructuralFeature.volatile && featureAnnotation.many && featureAnnotation.reference && (featureAnnotation as EReferenceModelGenAnnotation).generateSafeManyAccess»
@@ -300,6 +301,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
             «ENDIF»
             }
         «ENDIF»
+      «ENDIF»
     «ENDFOR»
 
     /**
@@ -312,7 +314,7 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
      public String toString() {
          return  "«eClassModelGenAnnotation.name» "
          «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
-            «IF !featureAnnotation.reference && !featureAnnotation.EStructuralFeature.many»
+            «IF featureAnnotation.generateCode && !featureAnnotation.reference && !featureAnnotation.EStructuralFeature.many»
                  + " [«featureAnnotation.name»: " +  «featureAnnotation.getter»() + "]"
               «ENDIF»
          «ENDFOR»;
@@ -324,10 +326,12 @@ public«IF eClassModelGenAnnotation.abstractValue» abstract«ENDIF» class «eC
         EClassModelGenAnnotation eClassModelGenAnnotation) {
         /* Create the feature map entries if any«ENDREM */
         for (featureAnnotation : eClassModelGenAnnotation.featureMapFeatures) {
-            var FeatureGroupTemplate template = new FeatureGroupTemplate();
-            template.setArtifactGenerator(getArtifactGenerator())
-            template.generate(featureAnnotation)
-            addFiles(template.getFiles())
+        	if (featureAnnotation.generateCode) {
+	            var FeatureGroupTemplate template = new FeatureGroupTemplate();
+	            template.setArtifactGenerator(getArtifactGenerator())
+	            template.generate(featureAnnotation)
+	            addFiles(template.getFiles())
+        	}
         }
     }
 }

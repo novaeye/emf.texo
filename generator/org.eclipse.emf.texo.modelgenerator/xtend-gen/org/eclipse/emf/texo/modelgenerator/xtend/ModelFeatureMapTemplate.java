@@ -249,35 +249,37 @@ public class ModelFeatureMapTemplate extends BaseTemplate {
     {
       List<EStructuralFeatureModelGenAnnotation> _allMemberFeatureMapFeatures_1 = eStructuralFeatureModelGenAnnotation.getAllMemberFeatureMapFeatures();
       for(final EStructuralFeatureModelGenAnnotation memberFeatureAnnotation_1 : _allMemberFeatureMapFeatures_1) {
-        _builder.append("    ");
-        _builder.append("case ");
-        String _qualifiedClassName_2 = ePackageAnnotation.getQualifiedClassName();
-        _builder.append(_qualifiedClassName_2, "    ");
-        _builder.append(".");
-        String _name_6 = eClassAnnotation.getName();
-        String _upperCase_1 = TemplateUtil.toUpperCase(_name_6);
-        _builder.append(_upperCase_1, "    ");
-        _builder.append("_");
-        String _name_7 = memberFeatureAnnotation_1.getName();
-        String _upperCase_2 = TemplateUtil.toUpperCase(_name_7);
-        _builder.append(_upperCase_2, "    ");
-        _builder.append("_FEATURE_ID:");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("    ");
-        _builder.append("getTarget().setFeature(");
-        String _featureMapQualifiedClassName_5 = eStructuralFeatureModelGenAnnotation.getFeatureMapQualifiedClassName();
-        _builder.append(_featureMapQualifiedClassName_5, "        ");
-        _builder.append(".Feature.");
-        String _name_8 = memberFeatureAnnotation_1.getName();
-        String _upperCase_3 = TemplateUtil.toUpperCase(_name_8);
-        _builder.append(_upperCase_3, "        ");
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("    ");
-        _builder.append("return;");
-        _builder.newLine();
+        {
+          boolean _isGenerateCode = memberFeatureAnnotation_1.isGenerateCode();
+          if (_isGenerateCode) {
+            _builder.append("case ");
+            String _qualifiedClassName_2 = ePackageAnnotation.getQualifiedClassName();
+            _builder.append(_qualifiedClassName_2, "");
+            _builder.append(".");
+            String _name_6 = eClassAnnotation.getName();
+            String _upperCase_1 = TemplateUtil.toUpperCase(_name_6);
+            _builder.append(_upperCase_1, "");
+            _builder.append("_");
+            String _name_7 = memberFeatureAnnotation_1.getName();
+            String _upperCase_2 = TemplateUtil.toUpperCase(_name_7);
+            _builder.append(_upperCase_2, "");
+            _builder.append("_FEATURE_ID:");
+            _builder.newLineIfNotEmpty();
+            _builder.append("    ");
+            _builder.append("getTarget().setFeature(");
+            String _featureMapQualifiedClassName_5 = eStructuralFeatureModelGenAnnotation.getFeatureMapQualifiedClassName();
+            _builder.append(_featureMapQualifiedClassName_5, "    ");
+            _builder.append(".Feature.");
+            String _name_8 = memberFeatureAnnotation_1.getName();
+            String _upperCase_3 = TemplateUtil.toUpperCase(_name_8);
+            _builder.append(_upperCase_3, "    ");
+            _builder.append(");");
+            _builder.newLineIfNotEmpty();
+            _builder.append("    ");
+            _builder.append("return;");
+            _builder.newLine();
+          }
+        }
       }
     }
     _builder.append("            ");

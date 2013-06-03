@@ -118,199 +118,17 @@ public class InterfaceTemplate extends BaseTemplate {
     {
       EList<EStructuralFeatureModelGenAnnotation> _eStructuralFeatureModelGenAnnotations = eClassModelGenAnnotation.getEStructuralFeatureModelGenAnnotations();
       for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _eStructuralFeatureModelGenAnnotations) {
-        _builder.append("/**");
-        _builder.newLine();
-        _builder.append(" ");
-        _builder.append("* Returns the value of \'<em><b>");
-        EStructuralFeature _eStructuralFeature = featureAnnotation.getEStructuralFeature();
-        String _name_1 = _eStructuralFeature.getName();
-        _builder.append(_name_1, " ");
-        _builder.append("</em></b>\' feature.");
-        _builder.newLineIfNotEmpty();
-        _builder.append(" ");
-        _builder.append("*");
-        _builder.newLine();
-        _builder.append(" ");
-        _builder.append("* <!-- begin-user-doc -->");
-        _builder.newLine();
-        _builder.append(" ");
-        _builder.append("* <!-- end-user-doc -->");
-        _builder.newLine();
-        _builder.append(" ");
-        _builder.append("* @return the value of \'<em><b>");
-        EStructuralFeature _eStructuralFeature_1 = featureAnnotation.getEStructuralFeature();
-        String _name_2 = _eStructuralFeature_1.getName();
-        _builder.append(_name_2, " ");
-        _builder.append("</b></em>\' feature");
-        _builder.newLineIfNotEmpty();
-        _builder.append(" ");
-        _builder.append("* @generated");
-        _builder.newLine();
-        _builder.append(" ");
-        _builder.append("*/");
-        _builder.newLine();
-        EStructuralFeature _eStructuralFeature_2 = featureAnnotation.getEStructuralFeature();
-        String _javaAnnotations_1 = modelController.getJavaAnnotations(_eStructuralFeature_2, "getter");
-        _builder.append(_javaAnnotations_1, "");
-        _builder.newLineIfNotEmpty();
-        _builder.append("public ");
-        String _type = featureAnnotation.getType();
-        _builder.append(_type, "");
-        _builder.append(" ");
-        String _getter = featureAnnotation.getGetter();
-        _builder.append(_getter, "");
-        _builder.append("();");
-        _builder.newLineIfNotEmpty();
-        _builder.newLine();
         {
-          boolean _or = false;
-          EStructuralFeature _eStructuralFeature_3 = featureAnnotation.getEStructuralFeature();
-          boolean _isChangeable = _eStructuralFeature_3.isChangeable();
-          if (_isChangeable) {
-            _or = true;
-          } else {
-            boolean _and = false;
-            boolean _isReference = featureAnnotation.isReference();
-            if (!_isReference) {
-              _and = false;
-            } else {
-              EReferenceModelGenAnnotation _oppositeModelGenAnnotation = ((EReferenceModelGenAnnotation) featureAnnotation).getOppositeModelGenAnnotation();
-              boolean _notEquals_1 = (!Objects.equal(_oppositeModelGenAnnotation, null));
-              _and = (_isReference && _notEquals_1);
-            }
-            _or = (_isChangeable || _and);
-          }
-          if (_or) {
-            {
-              boolean _and_1 = false;
-              boolean _and_2 = false;
-              boolean _and_3 = false;
-              EStructuralFeatureModelGenAnnotation _featureMapFeature = featureAnnotation.getFeatureMapFeature();
-              boolean _equals = Objects.equal(_featureMapFeature, null);
-              if (!_equals) {
-                _and_3 = false;
-              } else {
-                boolean _isMany = featureAnnotation.isMany();
-                _and_3 = (_equals && _isMany);
-              }
-              if (!_and_3) {
-                _and_2 = false;
-              } else {
-                boolean _isReference_1 = featureAnnotation.isReference();
-                _and_2 = (_and_3 && _isReference_1);
-              }
-              if (!_and_2) {
-                _and_1 = false;
-              } else {
-                boolean _isGenerateSafeManyAccess = ((EReferenceModelGenAnnotation) featureAnnotation).isGenerateSafeManyAccess();
-                _and_1 = (_and_2 && _isGenerateSafeManyAccess);
-              }
-              if (_and_1) {
-                _builder.append("/**");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* Adds to the <em>");
-                EStructuralFeature _eStructuralFeature_4 = featureAnnotation.getEStructuralFeature();
-                String _name_3 = _eStructuralFeature_4.getName();
-                _builder.append(_name_3, " ");
-                _builder.append("</em> feature.");
-                _builder.newLineIfNotEmpty();
-                _builder.append(" ");
-                _builder.append("*");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* @param value the value to add");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("*");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* @generated");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("*/");
-                _builder.newLine();
-                _builder.append("public void addTo");
-                String _validJavaMemberName = featureAnnotation.getValidJavaMemberName();
-                String _firstUpper = TemplateUtil.toFirstUpper(_validJavaMemberName);
-                _builder.append(_firstUpper, "");
-                _builder.append("(");
-                String _itemType = featureAnnotation.getItemType();
-                _builder.append(_itemType, "");
-                _builder.append(" value);");
-                _builder.newLineIfNotEmpty();
-                _builder.newLine();
-                _builder.append("/**");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* Removes from the <em>");
-                EStructuralFeature _eStructuralFeature_5 = featureAnnotation.getEStructuralFeature();
-                String _name_4 = _eStructuralFeature_5.getName();
-                _builder.append(_name_4, " ");
-                _builder.append("</em> feature.");
-                _builder.newLineIfNotEmpty();
-                _builder.append(" ");
-                _builder.append("*");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* @param value the value to remove");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("*");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* @generated");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("*/");
-                _builder.newLine();
-                _builder.append("public void removeFrom");
-                String _validJavaMemberName_1 = featureAnnotation.getValidJavaMemberName();
-                String _firstUpper_1 = TemplateUtil.toFirstUpper(_validJavaMemberName_1);
-                _builder.append(_firstUpper_1, "");
-                _builder.append("(");
-                String _itemType_1 = featureAnnotation.getItemType();
-                _builder.append(_itemType_1, "");
-                _builder.append(" value);");
-                _builder.newLineIfNotEmpty();
-                _builder.newLine();
-                _builder.append("/**");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("* Clears the <em>");
-                EStructuralFeature _eStructuralFeature_6 = featureAnnotation.getEStructuralFeature();
-                String _name_5 = _eStructuralFeature_6.getName();
-                _builder.append(_name_5, " ");
-                _builder.append("</em> feature.");
-                _builder.newLineIfNotEmpty();
-                _builder.append(" ");
-                _builder.append("* @generated");
-                _builder.newLine();
-                _builder.append(" ");
-                _builder.append("*/");
-                _builder.newLine();
-                _builder.append("public void clear");
-                String _validJavaMemberName_2 = featureAnnotation.getValidJavaMemberName();
-                String _firstUpper_2 = TemplateUtil.toFirstUpper(_validJavaMemberName_2);
-                _builder.append(_firstUpper_2, "");
-                _builder.append("();");
-                _builder.newLineIfNotEmpty();
-              }
-            }
+          boolean _isGenerateCode = featureAnnotation.isGenerateCode();
+          if (_isGenerateCode) {
             _builder.append("/**");
             _builder.newLine();
             _builder.append(" ");
-            _builder.append("* Sets the \'{@link ");
-            String _simpleClassName_1 = eClassModelGenAnnotation.getSimpleClassName();
-            _builder.append(_simpleClassName_1, " ");
-            _builder.append("#");
-            String _getter_1 = featureAnnotation.getGetter();
-            _builder.append(_getter_1, " ");
-            _builder.append("() <em>");
-            EStructuralFeature _eStructuralFeature_7 = featureAnnotation.getEStructuralFeature();
-            String _name_6 = _eStructuralFeature_7.getName();
-            _builder.append(_name_6, " ");
-            _builder.append("</em>}\' feature.");
+            _builder.append("* Returns the value of \'<em><b>");
+            EStructuralFeature _eStructuralFeature = featureAnnotation.getEStructuralFeature();
+            String _name_1 = _eStructuralFeature.getName();
+            _builder.append(_name_1, " ");
+            _builder.append("</em></b>\' feature.");
             _builder.newLineIfNotEmpty();
             _builder.append(" ");
             _builder.append("*");
@@ -322,21 +140,11 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.append("* <!-- end-user-doc -->");
             _builder.newLine();
             _builder.append(" ");
-            _builder.append("* @param new");
-            String _name_7 = featureAnnotation.getName();
-            String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_7);
-            _builder.append(_firstUpper_3, " ");
-            _builder.append(" the new value of the \'{@link ");
-            String _simpleClassName_2 = eClassModelGenAnnotation.getSimpleClassName();
-            _builder.append(_simpleClassName_2, " ");
-            _builder.append("#");
-            String _getter_2 = featureAnnotation.getGetter();
-            _builder.append(_getter_2, " ");
-            _builder.append("() <em>");
-            EStructuralFeature _eStructuralFeature_8 = featureAnnotation.getEStructuralFeature();
-            String _name_8 = _eStructuralFeature_8.getName();
-            _builder.append(_name_8, " ");
-            _builder.append("</em>}\' feature.");
+            _builder.append("* @return the value of \'<em><b>");
+            EStructuralFeature _eStructuralFeature_1 = featureAnnotation.getEStructuralFeature();
+            String _name_2 = _eStructuralFeature_1.getName();
+            _builder.append(_name_2, " ");
+            _builder.append("</b></em>\' feature");
             _builder.newLineIfNotEmpty();
             _builder.append(" ");
             _builder.append("* @generated");
@@ -344,22 +152,219 @@ public class InterfaceTemplate extends BaseTemplate {
             _builder.append(" ");
             _builder.append("*/");
             _builder.newLine();
-            EStructuralFeature _eStructuralFeature_9 = featureAnnotation.getEStructuralFeature();
-            String _javaAnnotations_2 = modelController.getJavaAnnotations(_eStructuralFeature_9, "getter");
-            _builder.append(_javaAnnotations_2, "");
+            EStructuralFeature _eStructuralFeature_2 = featureAnnotation.getEStructuralFeature();
+            String _javaAnnotations_1 = modelController.getJavaAnnotations(_eStructuralFeature_2, "getter");
+            _builder.append(_javaAnnotations_1, "");
             _builder.newLineIfNotEmpty();
-            _builder.append("public void ");
-            String _setter = featureAnnotation.getSetter();
-            _builder.append(_setter, "");
-            _builder.append("(");
-            String _type_1 = featureAnnotation.getType();
-            _builder.append(_type_1, "");
-            _builder.append(" new");
-            String _name_9 = featureAnnotation.getName();
-            String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_9);
-            _builder.append(_firstUpper_4, "");
-            _builder.append(");");
+            _builder.append("public ");
+            String _type = featureAnnotation.getType();
+            _builder.append(_type, "");
+            _builder.append(" ");
+            String _getter = featureAnnotation.getGetter();
+            _builder.append(_getter, "");
+            _builder.append("();");
             _builder.newLineIfNotEmpty();
+            _builder.newLine();
+            {
+              boolean _or = false;
+              EStructuralFeature _eStructuralFeature_3 = featureAnnotation.getEStructuralFeature();
+              boolean _isChangeable = _eStructuralFeature_3.isChangeable();
+              if (_isChangeable) {
+                _or = true;
+              } else {
+                boolean _and = false;
+                boolean _isReference = featureAnnotation.isReference();
+                if (!_isReference) {
+                  _and = false;
+                } else {
+                  EReferenceModelGenAnnotation _oppositeModelGenAnnotation = ((EReferenceModelGenAnnotation) featureAnnotation).getOppositeModelGenAnnotation();
+                  boolean _notEquals_1 = (!Objects.equal(_oppositeModelGenAnnotation, null));
+                  _and = (_isReference && _notEquals_1);
+                }
+                _or = (_isChangeable || _and);
+              }
+              if (_or) {
+                {
+                  boolean _and_1 = false;
+                  boolean _and_2 = false;
+                  boolean _and_3 = false;
+                  EStructuralFeatureModelGenAnnotation _featureMapFeature = featureAnnotation.getFeatureMapFeature();
+                  boolean _equals = Objects.equal(_featureMapFeature, null);
+                  if (!_equals) {
+                    _and_3 = false;
+                  } else {
+                    boolean _isMany = featureAnnotation.isMany();
+                    _and_3 = (_equals && _isMany);
+                  }
+                  if (!_and_3) {
+                    _and_2 = false;
+                  } else {
+                    boolean _isReference_1 = featureAnnotation.isReference();
+                    _and_2 = (_and_3 && _isReference_1);
+                  }
+                  if (!_and_2) {
+                    _and_1 = false;
+                  } else {
+                    boolean _isGenerateSafeManyAccess = ((EReferenceModelGenAnnotation) featureAnnotation).isGenerateSafeManyAccess();
+                    _and_1 = (_and_2 && _isGenerateSafeManyAccess);
+                  }
+                  if (_and_1) {
+                    _builder.append("/**");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* Adds to the <em>");
+                    EStructuralFeature _eStructuralFeature_4 = featureAnnotation.getEStructuralFeature();
+                    String _name_3 = _eStructuralFeature_4.getName();
+                    _builder.append(_name_3, " ");
+                    _builder.append("</em> feature.");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append(" ");
+                    _builder.append("*");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* @param value the value to add");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("*");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* @generated");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("*/");
+                    _builder.newLine();
+                    _builder.append("public void addTo");
+                    String _validJavaMemberName = featureAnnotation.getValidJavaMemberName();
+                    String _firstUpper = TemplateUtil.toFirstUpper(_validJavaMemberName);
+                    _builder.append(_firstUpper, "");
+                    _builder.append("(");
+                    String _itemType = featureAnnotation.getItemType();
+                    _builder.append(_itemType, "");
+                    _builder.append(" value);");
+                    _builder.newLineIfNotEmpty();
+                    _builder.newLine();
+                    _builder.append("/**");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* Removes from the <em>");
+                    EStructuralFeature _eStructuralFeature_5 = featureAnnotation.getEStructuralFeature();
+                    String _name_4 = _eStructuralFeature_5.getName();
+                    _builder.append(_name_4, " ");
+                    _builder.append("</em> feature.");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append(" ");
+                    _builder.append("*");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* @param value the value to remove");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("*");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* @generated");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("*/");
+                    _builder.newLine();
+                    _builder.append("public void removeFrom");
+                    String _validJavaMemberName_1 = featureAnnotation.getValidJavaMemberName();
+                    String _firstUpper_1 = TemplateUtil.toFirstUpper(_validJavaMemberName_1);
+                    _builder.append(_firstUpper_1, "");
+                    _builder.append("(");
+                    String _itemType_1 = featureAnnotation.getItemType();
+                    _builder.append(_itemType_1, "");
+                    _builder.append(" value);");
+                    _builder.newLineIfNotEmpty();
+                    _builder.newLine();
+                    _builder.append("/**");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("* Clears the <em>");
+                    EStructuralFeature _eStructuralFeature_6 = featureAnnotation.getEStructuralFeature();
+                    String _name_5 = _eStructuralFeature_6.getName();
+                    _builder.append(_name_5, " ");
+                    _builder.append("</em> feature.");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append(" ");
+                    _builder.append("* @generated");
+                    _builder.newLine();
+                    _builder.append(" ");
+                    _builder.append("*/");
+                    _builder.newLine();
+                    _builder.append("public void clear");
+                    String _validJavaMemberName_2 = featureAnnotation.getValidJavaMemberName();
+                    String _firstUpper_2 = TemplateUtil.toFirstUpper(_validJavaMemberName_2);
+                    _builder.append(_firstUpper_2, "");
+                    _builder.append("();");
+                    _builder.newLineIfNotEmpty();
+                  }
+                }
+                _builder.append("/**");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* Sets the \'{@link ");
+                String _simpleClassName_1 = eClassModelGenAnnotation.getSimpleClassName();
+                _builder.append(_simpleClassName_1, " ");
+                _builder.append("#");
+                String _getter_1 = featureAnnotation.getGetter();
+                _builder.append(_getter_1, " ");
+                _builder.append("() <em>");
+                EStructuralFeature _eStructuralFeature_7 = featureAnnotation.getEStructuralFeature();
+                String _name_6 = _eStructuralFeature_7.getName();
+                _builder.append(_name_6, " ");
+                _builder.append("</em>}\' feature.");
+                _builder.newLineIfNotEmpty();
+                _builder.append(" ");
+                _builder.append("*");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* <!-- begin-user-doc -->");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* <!-- end-user-doc -->");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("* @param new");
+                String _name_7 = featureAnnotation.getName();
+                String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_7);
+                _builder.append(_firstUpper_3, " ");
+                _builder.append(" the new value of the \'{@link ");
+                String _simpleClassName_2 = eClassModelGenAnnotation.getSimpleClassName();
+                _builder.append(_simpleClassName_2, " ");
+                _builder.append("#");
+                String _getter_2 = featureAnnotation.getGetter();
+                _builder.append(_getter_2, " ");
+                _builder.append("() <em>");
+                EStructuralFeature _eStructuralFeature_8 = featureAnnotation.getEStructuralFeature();
+                String _name_8 = _eStructuralFeature_8.getName();
+                _builder.append(_name_8, " ");
+                _builder.append("</em>}\' feature.");
+                _builder.newLineIfNotEmpty();
+                _builder.append(" ");
+                _builder.append("* @generated");
+                _builder.newLine();
+                _builder.append(" ");
+                _builder.append("*/");
+                _builder.newLine();
+                EStructuralFeature _eStructuralFeature_9 = featureAnnotation.getEStructuralFeature();
+                String _javaAnnotations_2 = modelController.getJavaAnnotations(_eStructuralFeature_9, "getter");
+                _builder.append(_javaAnnotations_2, "");
+                _builder.newLineIfNotEmpty();
+                _builder.append("public void ");
+                String _setter = featureAnnotation.getSetter();
+                _builder.append(_setter, "");
+                _builder.append("(");
+                String _type_1 = featureAnnotation.getType();
+                _builder.append(_type_1, "");
+                _builder.append(" new");
+                String _name_9 = featureAnnotation.getName();
+                String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_9);
+                _builder.append(_firstUpper_4, "");
+                _builder.append(");");
+                _builder.newLineIfNotEmpty();
+              }
+            }
           }
         }
       }

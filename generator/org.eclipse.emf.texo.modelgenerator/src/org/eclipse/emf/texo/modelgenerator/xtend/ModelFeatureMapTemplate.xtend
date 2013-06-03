@@ -94,9 +94,11 @@ public static class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClass
         final org.eclipse.emf.ecore.EClass eClass = «ePackageAnnotation.qualifiedClassName».INSTANCE.get«TemplateUtil::toFirstUpper(eClassAnnotation.name)»EClass();
         switch (eClass.getFeatureID(eStructuralFeature)) {
     «FOR memberFeatureAnnotation : eStructuralFeatureModelGenAnnotation.allMemberFeatureMapFeatures»
+    	«IF memberFeatureAnnotation.generateCode»
             case «ePackageAnnotation.qualifiedClassName».«TemplateUtil::toUpperCase(eClassAnnotation.name)»_«TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»_FEATURE_ID:
                 getTarget().setFeature(«eStructuralFeatureModelGenAnnotation.featureMapQualifiedClassName».Feature.«TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»);
                 return;
+	    «ENDIF»
     «ENDFOR»
             default:
                 throw new IllegalArgumentException("EStructuralFeature " + eStructuralFeature + " not supported here");

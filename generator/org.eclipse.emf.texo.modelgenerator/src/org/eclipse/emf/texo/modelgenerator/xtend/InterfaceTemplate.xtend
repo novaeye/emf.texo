@@ -66,6 +66,7 @@ public interface «eClassModelGenAnnotation.simpleClassName»
 «IF eClassModelGenAnnotation.classExtends.size > 0» extends «eClassModelGenAnnotation.classExtends.get(0)»«ENDIF»
 {
 «FOR featureAnnotation : eClassModelGenAnnotation.EStructuralFeatureModelGenAnnotations»
+	«IF featureAnnotation.generateCode»
         /**
          * Returns the value of '<em><b>«featureAnnotation.EStructuralFeature.name»</em></b>' feature.
          *
@@ -114,6 +115,7 @@ public interface «eClassModelGenAnnotation.simpleClassName»
             «modelController.getJavaAnnotations(featureAnnotation.EStructuralFeature, "getter")»
             public void «featureAnnotation.setter»(«featureAnnotation.type» new«TemplateUtil::toFirstUpper(featureAnnotation.name)»);
         «ENDIF»
+    «ENDIF»
 «ENDFOR»
 
 «executeXPandTemplate("org::eclipse::emf::texo::modelgenerator::templates::interface_addition", eClassModelGenAnnotation)»

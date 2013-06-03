@@ -1,12 +1,10 @@
 package org.eclipse.emf.texo.test.model.issues.instanceclassset;
 
-import java.io.Serializable;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -137,80 +135,6 @@ public class Bz306546ModelFactory implements ModelFactory {
   }
 
   /**
-   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param <E>
-   *          the domain model java class
-   * 
-   * @generated
-   */
-  public static class SerializableModelObject<E extends Serializable> extends AbstractModelObject<E> {
-    /**
-     * @generated
-     */
-    public EClass eClass() {
-      return Bz306546ModelPackage.INSTANCE.getSerializableEClass();
-    }
-
-    /**
-     * @generated
-     */
-    public ModelPackage getModelPackage() {
-      return Bz306546ModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        return super.eGet(eStructuralFeature);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eSet(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eAddTo(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eRemoveFrom(eStructuralFeature, value);
-      }
-    }
-  }
-
-  /**
    * The adapter/wrapper for the EClass '<em><b>MySerializableClass</b></em>'. <!-- begin-user-doc --> <!-- end-user-doc
    * -->
    * 
@@ -314,92 +238,6 @@ public class Bz306546ModelFactory implements ModelFactory {
       case Bz306546ModelPackage.MYSERIALIZABLECLASS_NONEMFS_FEATURE_ID:
         getTarget().getNonEMFs().remove(value);
         return;
-      default:
-        super.eRemoveFrom(eStructuralFeature, value);
-      }
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>NonEMF</b></em>'.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param <E>
-   *          the domain model java class
-   * 
-   * @generated
-   */
-  public static class NonEMFModelObject<E extends NonEMF> extends IdentifiableModelFactory.IdentifiableModelObject<E> {
-    /**
-     * @generated
-     */
-    @Override
-    public EClass eClass() {
-      return Bz306546ModelPackage.INSTANCE.getNonEMFEClass();
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public ModelPackage getModelPackage() {
-      return Bz306546ModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Bz306546ModelPackage.NONEMF_DB_ID_FEATURE_ID:
-        return getTarget().getDb_Id();
-      case Bz306546ModelPackage.NONEMF_DB_VERSION_FEATURE_ID:
-        return getTarget().getDb_version();
-      default:
-        return super.eGet(eStructuralFeature);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      case Bz306546ModelPackage.NONEMF_DB_ID_FEATURE_ID:
-        getTarget().setDb_Id((Long) value);
-        return;
-      case Bz306546ModelPackage.NONEMF_DB_VERSION_FEATURE_ID:
-        getTarget().setDb_version((Integer) value);
-        return;
-      default:
-        super.eSet(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eAddTo(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
       default:
         super.eRemoveFrom(eStructuralFeature, value);
       }

@@ -128,9 +128,11 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
     public Object createFeatureMapEntry(org.eclipse.emf.ecore.EStructuralFeature eFeature) {
     «FOR eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations»
     «FOR featureAnnotation : eClassAnnotation.featureMapFeatures»
+   	  «IF featureAnnotation.generateCode»
       if (eFeature == «ePackageModelGenAnnotation.qualifiedClassName».INSTANCE.get«TemplateUtil::toFirstUpper(eClassAnnotation.name)»_«TemplateUtil::toFirstUpper(featureAnnotation.name)»()) {
         return new «featureAnnotation.featureMapQualifiedClassName»();
       }
+      «ENDIF»
     «ENDFOR»
     «ENDFOR»
       throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
@@ -152,11 +154,13 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
         Object adaptee) {
     «FOR eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations»
     «FOR featureAnnotation : eClassAnnotation.featureMapFeatures»
+   	  «IF featureAnnotation.generateCode»
       if (eFeature == «ePackageModelGenAnnotation.qualifiedClassName».INSTANCE.get«TemplateUtil::toFirstUpper(eClassAnnotation.name)»_«TemplateUtil::toFirstUpper(featureAnnotation.name)»()) {
         final «featureAnnotation.featureMapSimpleClassName»ModelFeatureMapEntry<«featureAnnotation.featureMapQualifiedClassName»> entry = new «featureAnnotation.featureMapSimpleClassName»ModelFeatureMapEntry<«featureAnnotation.featureMapQualifiedClassName»>();
         entry.setTarget((«featureAnnotation.featureMapQualifiedClassName») adaptee);
         return entry;
       }
+      «ENDIF»
     «ENDFOR»
     «ENDFOR»
       throw new IllegalArgumentException("The EStructuralFeature '" + eFeature
@@ -284,7 +288,7 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
         var result = ""
         /* Create the ModelObject wrappers as inner classes */
         for (eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations) {
-            if (eClassAnnotation.qualifiedClassName != null) {
+            if (eClassAnnotation.qualifiedClassName != null && eClassAnnotation.generateCode) {
                 var ModelObjectTemplate template = new ModelObjectTemplate();
                 template.setArtifactGenerator(getArtifactGenerator())
                 result = result + "\n\n" + template.generateContent(eClassAnnotation)
@@ -297,10 +301,14 @@ public class «ePackageModelGenAnnotation.simpleModelFactoryClassName» implemen
         EPackageModelGenAnnotation ePackageModelGenAnnotation) {
         var result = ""
         for (eClassAnnotation : ePackageModelGenAnnotation.EClassModelGenAnnotations) {
-            for (featureAnnotation : eClassAnnotation.featureMapFeatures) {
-                var ModelFeatureMapTemplate template = new ModelFeatureMapTemplate()
-                template.setArtifactGenerator(getArtifactGenerator())
-                result = result + "\n\n" + template.generateContent(featureAnnotation)
+        	if (eClassAnnotation.generateCode) {
+	            for (featureAnnotation : eClassAnnotation.featureMapFeatures) {            	
+    		    	if (featureAnnotation.generateCode) {
+		                var ModelFeatureMapTemplate template = new ModelFeatureMapTemplate()
+	        	        template.setArtifactGenerator(getArtifactGenerator())
+	            	    result = result + "\n\n" + template.generateContent(featureAnnotation)
+	            	}
+	            }
             }
         }
         result

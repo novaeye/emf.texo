@@ -74,7 +74,9 @@ public class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClassName»
     public static enum Feature {
     «IF TemplateUtil::isMixed(eStructuralFeatureModelGenAnnotation.EStructuralFeature)»TEXT, CDATA, COMMENT«IF eStructuralFeatureModelGenAnnotation.allMemberFeatureMapFeatures.size > 0»,«ENDIF»«ENDIF»
     «FOR memberFeatureAnnotation : eStructuralFeatureModelGenAnnotation.allMemberFeatureMapFeatures SEPARATOR ","»
+    	«IF memberFeatureAnnotation.generateCode»
            «TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»
+    	«ENDIF»
     «ENDFOR»
     }
 
@@ -199,7 +201,7 @@ public class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClassName»
 «ENDIF»
     «FOR memberFeatureAnnotation : eStructuralFeatureModelGenAnnotation.memberFeatureMapFeatures»
 
-    «IF memberFeatureAnnotation.featureMapFeature == eStructuralFeatureModelGenAnnotation»
+    «IF memberFeatureAnnotation.generateCode && memberFeatureAnnotation.featureMapFeature == eStructuralFeatureModelGenAnnotation»
     /**
      * <!-- begin-user-doc -->
       * <!-- end-user-doc -->
@@ -304,6 +306,7 @@ public class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClassName»
 «ENDIF»
     «FOR memberFeatureAnnotation : eStructuralFeatureModelGenAnnotation.allMemberFeatureMapFeatures»
 
+	  «IF memberFeatureAnnotation.generateCode»
         /**
          * Returns the value of '<em><b>«memberFeatureAnnotation.EStructuralFeature.name»</b></em>' feature.
          *
@@ -344,6 +347,7 @@ public class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClassName»
                 «memberFeatureAnnotation.featureMapFeature.getter»().«memberFeatureAnnotation.setter»(new«TemplateUtil::toFirstUpper(memberFeatureAnnotation.name)»);
             «ENDIF»
         }
+      «ENDIF»
     «ENDFOR»
 
     /**
@@ -394,9 +398,11 @@ public class «eStructuralFeatureModelGenAnnotation.featureMapSimpleClassName»
             break;
 «ENDIF»
     «FOR memberFeatureAnnotation : eStructuralFeatureModelGenAnnotation.allMemberFeatureMapFeatures»
+    	«IF memberFeatureAnnotation.generateCode»
             case «TemplateUtil::toUpperCase(memberFeatureAnnotation.name)»:
                 «memberFeatureAnnotation.setter»((«memberFeatureAnnotation.itemType»)value);
                 break;
+    	«ENDIF»
     «ENDFOR»
             default:
             throw new IllegalStateException("Feature kind " + getFeature() + " is not supported for this object " + this);

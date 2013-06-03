@@ -352,30 +352,32 @@ public class ModelFactoryTemplate extends BaseTemplate {
         {
           EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassAnnotation_2.getFeatureMapFeatures();
           for(final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
-            _builder.append("    ");
-            _builder.append("if (eFeature == ");
-            String _qualifiedClassName_2 = ePackageModelGenAnnotation.getQualifiedClassName();
-            _builder.append(_qualifiedClassName_2, "    ");
-            _builder.append(".INSTANCE.get");
-            String _name_4 = eClassAnnotation_2.getName();
-            String _firstUpper_1 = TemplateUtil.toFirstUpper(_name_4);
-            _builder.append(_firstUpper_1, "    ");
-            _builder.append("_");
-            String _name_5 = featureAnnotation.getName();
-            String _firstUpper_2 = TemplateUtil.toFirstUpper(_name_5);
-            _builder.append(_firstUpper_2, "    ");
-            _builder.append("()) {");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("  ");
-            _builder.append("return new ");
-            String _featureMapQualifiedClassName = featureAnnotation.getFeatureMapQualifiedClassName();
-            _builder.append(_featureMapQualifiedClassName, "      ");
-            _builder.append("();");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("}");
-            _builder.newLine();
+            {
+              boolean _isGenerateCode_2 = featureAnnotation.isGenerateCode();
+              if (_isGenerateCode_2) {
+                _builder.append("if (eFeature == ");
+                String _qualifiedClassName_2 = ePackageModelGenAnnotation.getQualifiedClassName();
+                _builder.append(_qualifiedClassName_2, "");
+                _builder.append(".INSTANCE.get");
+                String _name_4 = eClassAnnotation_2.getName();
+                String _firstUpper_1 = TemplateUtil.toFirstUpper(_name_4);
+                _builder.append(_firstUpper_1, "");
+                _builder.append("_");
+                String _name_5 = featureAnnotation.getName();
+                String _firstUpper_2 = TemplateUtil.toFirstUpper(_name_5);
+                _builder.append(_firstUpper_2, "");
+                _builder.append("()) {");
+                _builder.newLineIfNotEmpty();
+                _builder.append("  ");
+                _builder.append("return new ");
+                String _featureMapQualifiedClassName = featureAnnotation.getFeatureMapQualifiedClassName();
+                _builder.append(_featureMapQualifiedClassName, "  ");
+                _builder.append("();");
+                _builder.newLineIfNotEmpty();
+                _builder.append("}");
+                _builder.newLine();
+              }
+            }
           }
         }
       }
@@ -435,50 +437,50 @@ public class ModelFactoryTemplate extends BaseTemplate {
         {
           EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures_1 = eClassAnnotation_3.getFeatureMapFeatures();
           for(final EStructuralFeatureModelGenAnnotation featureAnnotation_1 : _featureMapFeatures_1) {
-            _builder.append("    ");
-            _builder.append("if (eFeature == ");
-            String _qualifiedClassName_3 = ePackageModelGenAnnotation.getQualifiedClassName();
-            _builder.append(_qualifiedClassName_3, "    ");
-            _builder.append(".INSTANCE.get");
-            String _name_6 = eClassAnnotation_3.getName();
-            String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_6);
-            _builder.append(_firstUpper_3, "    ");
-            _builder.append("_");
-            String _name_7 = featureAnnotation_1.getName();
-            String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_7);
-            _builder.append(_firstUpper_4, "    ");
-            _builder.append("()) {");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("  ");
-            _builder.append("final ");
-            String _featureMapSimpleClassName = featureAnnotation_1.getFeatureMapSimpleClassName();
-            _builder.append(_featureMapSimpleClassName, "      ");
-            _builder.append("ModelFeatureMapEntry<");
-            String _featureMapQualifiedClassName_1 = featureAnnotation_1.getFeatureMapQualifiedClassName();
-            _builder.append(_featureMapQualifiedClassName_1, "      ");
-            _builder.append("> entry = new ");
-            String _featureMapSimpleClassName_1 = featureAnnotation_1.getFeatureMapSimpleClassName();
-            _builder.append(_featureMapSimpleClassName_1, "      ");
-            _builder.append("ModelFeatureMapEntry<");
-            String _featureMapQualifiedClassName_2 = featureAnnotation_1.getFeatureMapQualifiedClassName();
-            _builder.append(_featureMapQualifiedClassName_2, "      ");
-            _builder.append(">();");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("  ");
-            _builder.append("entry.setTarget((");
-            String _featureMapQualifiedClassName_3 = featureAnnotation_1.getFeatureMapQualifiedClassName();
-            _builder.append(_featureMapQualifiedClassName_3, "      ");
-            _builder.append(") adaptee);");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("  ");
-            _builder.append("return entry;");
-            _builder.newLine();
-            _builder.append("    ");
-            _builder.append("}");
-            _builder.newLine();
+            {
+              boolean _isGenerateCode_3 = featureAnnotation_1.isGenerateCode();
+              if (_isGenerateCode_3) {
+                _builder.append("if (eFeature == ");
+                String _qualifiedClassName_3 = ePackageModelGenAnnotation.getQualifiedClassName();
+                _builder.append(_qualifiedClassName_3, "");
+                _builder.append(".INSTANCE.get");
+                String _name_6 = eClassAnnotation_3.getName();
+                String _firstUpper_3 = TemplateUtil.toFirstUpper(_name_6);
+                _builder.append(_firstUpper_3, "");
+                _builder.append("_");
+                String _name_7 = featureAnnotation_1.getName();
+                String _firstUpper_4 = TemplateUtil.toFirstUpper(_name_7);
+                _builder.append(_firstUpper_4, "");
+                _builder.append("()) {");
+                _builder.newLineIfNotEmpty();
+                _builder.append("  ");
+                _builder.append("final ");
+                String _featureMapSimpleClassName = featureAnnotation_1.getFeatureMapSimpleClassName();
+                _builder.append(_featureMapSimpleClassName, "  ");
+                _builder.append("ModelFeatureMapEntry<");
+                String _featureMapQualifiedClassName_1 = featureAnnotation_1.getFeatureMapQualifiedClassName();
+                _builder.append(_featureMapQualifiedClassName_1, "  ");
+                _builder.append("> entry = new ");
+                String _featureMapSimpleClassName_1 = featureAnnotation_1.getFeatureMapSimpleClassName();
+                _builder.append(_featureMapSimpleClassName_1, "  ");
+                _builder.append("ModelFeatureMapEntry<");
+                String _featureMapQualifiedClassName_2 = featureAnnotation_1.getFeatureMapQualifiedClassName();
+                _builder.append(_featureMapQualifiedClassName_2, "  ");
+                _builder.append(">();");
+                _builder.newLineIfNotEmpty();
+                _builder.append("  ");
+                _builder.append("entry.setTarget((");
+                String _featureMapQualifiedClassName_3 = featureAnnotation_1.getFeatureMapQualifiedClassName();
+                _builder.append(_featureMapQualifiedClassName_3, "  ");
+                _builder.append(") adaptee);");
+                _builder.newLineIfNotEmpty();
+                _builder.append("  ");
+                _builder.append("return entry;");
+                _builder.newLine();
+                _builder.append("}");
+                _builder.newLine();
+              }
+            }
           }
         }
       }
@@ -513,8 +515,8 @@ public class ModelFactoryTemplate extends BaseTemplate {
           if (!_and_3) {
             _and_2 = false;
           } else {
-            boolean _isGenerateCode_2 = eClassAnnotation_4.isGenerateCode();
-            _and_2 = (_and_3 && _isGenerateCode_2);
+            boolean _isGenerateCode_4 = eClassAnnotation_4.isGenerateCode();
+            _and_2 = (_and_3 && _isGenerateCode_4);
           }
           if (_and_2) {
             _builder.append("    ");
@@ -676,8 +678,8 @@ public class ModelFactoryTemplate extends BaseTemplate {
       EList<EDataTypeModelGenAnnotationDefinition> _eDataTypeModelGenAnnotations_1 = ePackageModelGenAnnotation.getEDataTypeModelGenAnnotations();
       for(final EDataTypeModelGenAnnotationDefinition eDataTypeAnnotation_1 : _eDataTypeModelGenAnnotations_1) {
         {
-          boolean _isGenerateCode_3 = eDataTypeAnnotation_1.isGenerateCode();
-          if (_isGenerateCode_3) {
+          boolean _isGenerateCode_5 = eDataTypeAnnotation_1.isGenerateCode();
+          if (_isGenerateCode_5) {
             _builder.append("    ");
             _builder.append("case ");
             String _qualifiedClassName_7 = ePackageModelGenAnnotation.getQualifiedClassName();
@@ -986,9 +988,16 @@ public class ModelFactoryTemplate extends BaseTemplate {
       String result = "";
       EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for (final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
+        boolean _and = false;
         String _qualifiedClassName = eClassAnnotation.getQualifiedClassName();
         boolean _notEquals = (!Objects.equal(_qualifiedClassName, null));
-        if (_notEquals) {
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          boolean _isGenerateCode = eClassAnnotation.isGenerateCode();
+          _and = (_notEquals && _isGenerateCode);
+        }
+        if (_and) {
           ModelObjectTemplate _modelObjectTemplate = new ModelObjectTemplate();
           ModelObjectTemplate template = _modelObjectTemplate;
           ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
@@ -1010,17 +1019,21 @@ public class ModelFactoryTemplate extends BaseTemplate {
       String result = "";
       EList<EClassModelGenAnnotation> _eClassModelGenAnnotations = ePackageModelGenAnnotation.getEClassModelGenAnnotations();
       for (final EClassModelGenAnnotation eClassAnnotation : _eClassModelGenAnnotations) {
-        EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassAnnotation.getFeatureMapFeatures();
-        for (final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
-          {
-            ModelFeatureMapTemplate _modelFeatureMapTemplate = new ModelFeatureMapTemplate();
-            ModelFeatureMapTemplate template = _modelFeatureMapTemplate;
-            ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
-            template.setArtifactGenerator(_artifactGenerator);
-            String _plus = (result + "\n\n");
-            String _generateContent = template.generateContent(featureAnnotation);
-            String _plus_1 = (_plus + _generateContent);
-            result = _plus_1;
+        boolean _isGenerateCode = eClassAnnotation.isGenerateCode();
+        if (_isGenerateCode) {
+          EList<EStructuralFeatureModelGenAnnotation> _featureMapFeatures = eClassAnnotation.getFeatureMapFeatures();
+          for (final EStructuralFeatureModelGenAnnotation featureAnnotation : _featureMapFeatures) {
+            boolean _isGenerateCode_1 = featureAnnotation.isGenerateCode();
+            if (_isGenerateCode_1) {
+              ModelFeatureMapTemplate _modelFeatureMapTemplate = new ModelFeatureMapTemplate();
+              ModelFeatureMapTemplate template = _modelFeatureMapTemplate;
+              ArtifactGenerator _artifactGenerator = this.getArtifactGenerator();
+              template.setArtifactGenerator(_artifactGenerator);
+              String _plus = (result + "\n\n");
+              String _generateContent = template.generateContent(featureAnnotation);
+              String _plus_1 = (_plus + _generateContent);
+              result = _plus_1;
+            }
           }
         }
       }

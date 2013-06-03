@@ -1,13 +1,11 @@
 package org.eclipse.emf.texo.test.model.samples.accounting;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.texo.model.AbstractModelFeatureMapEntry;
-import org.eclipse.emf.texo.model.AbstractModelObject;
 import org.eclipse.emf.texo.model.ModelFactory;
 import org.eclipse.emf.texo.model.ModelFeatureMapEntry;
 import org.eclipse.emf.texo.model.ModelObject;
@@ -430,80 +428,6 @@ public class AccountingModelFactory implements ModelFactory {
       case AccountingModelPackage.ACCOUNTING_JOURNALGROUP_FEATURE_ID:
         getTarget().getJournalGroup().remove(value);
         return;
-      default:
-        super.eRemoveFrom(eStructuralFeature, value);
-      }
-    }
-  }
-
-  /**
-   * The adapter/wrapper for the EClass '<em><b>Serializable</b></em>'.
-   * 
-   * <!-- begin-user-doc --> <!-- end-user-doc -->
-   * 
-   * @param <E>
-   *          the domain model java class
-   * 
-   * @generated
-   */
-  public static class SerializableModelObject<E extends Serializable> extends AbstractModelObject<E> {
-    /**
-     * @generated
-     */
-    public EClass eClass() {
-      return AccountingModelPackage.INSTANCE.getSerializableEClass();
-    }
-
-    /**
-     * @generated
-     */
-    public ModelPackage getModelPackage() {
-      return AccountingModelPackage.INSTANCE;
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public Object eGet(EStructuralFeature eStructuralFeature) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        return super.eGet(eStructuralFeature);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eSet(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eSet(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eAddTo(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
-      default:
-        super.eAddTo(eStructuralFeature, value);
-      }
-    }
-
-    /**
-     * @generated
-     */
-    @Override
-    public void eRemoveFrom(EStructuralFeature eStructuralFeature, Object value) {
-      final int featureID = eClass().getFeatureID(eStructuralFeature);
-      switch (featureID) {
       default:
         super.eRemoveFrom(eStructuralFeature, value);
       }
