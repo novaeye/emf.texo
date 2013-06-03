@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -60,21 +61,17 @@ public class AnnotationModelGenerator {
   private boolean createOnlyInitialModel = false;
   private AnnotatedModel aModel;
 
-  public void createStoreAnnotationModel(EPackage ePackage, String suffix, EPackage annotationEPackage) {
+  public void createStoreAnnotationModel(EPackage ePackage, String suffix, EPackage annotationEPackage, IFile modelFile) {
     try {
       final URI uri = ePackage.eResource().getURI();
       final ResourceSet resourceSet = ePackage.eResource().getResourceSet();
       URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
       final Resource resource;
-      if (annotationsModelURI != null) {
-        final File file = new File(annotationsModelURI.toFileString());
-        if (file.exists()) {
-          resource = resourceSet.getResource(annotationsModelURI, true);
-        } else {
-          resource = resourceSet.createResource(annotationsModelURI);
-          final String encoding = ((XMLResource) resourceSet.getResource(uri, true)).getEncoding();
-          ((XMLResource) resource).setEncoding(encoding);
-        }
+      final URI fileUri = URI.createURI(modelFile.getParent().getLocation().toOSString());
+      final File file = new File(AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(fileUri, suffix)
+          .toFileString());
+      if (file.exists()) {
+        resource = resourceSet.getResource(annotationsModelURI, true);
       } else {
         resource = resourceSet.createResource(annotationsModelURI);
         final String encoding = ((XMLResource) resourceSet.getResource(uri, true)).getEncoding();

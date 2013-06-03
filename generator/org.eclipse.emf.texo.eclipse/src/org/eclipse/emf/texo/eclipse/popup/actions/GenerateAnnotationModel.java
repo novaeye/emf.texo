@@ -101,7 +101,8 @@ public class GenerateAnnotationModel extends BaseGenerateAction {
       final AnnotationModelGenerator generator = new AnnotationModelGenerator();
       generator.setCreateOnlyInitialModel(doOnlyInitialModel());
       generator.setModelAnnotators(getModelAnnotators());
-      generator.createStoreAnnotationModel(ePackages.get(0), getModelAnnotatorSuffix(), getAnnotationEPackage());
+      generator.createStoreAnnotationModel(ePackages.get(0), getModelAnnotatorSuffix(), getAnnotationEPackage(),
+          modelFile);
     } catch (Exception e) {
       throw new IllegalStateException(e);
     }
