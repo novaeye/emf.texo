@@ -16,9 +16,9 @@
  */
 package org.eclipse.emf.texo.orm.annotator;
 
-import java.net.URI;
 import java.util.List;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode;
@@ -31,11 +31,11 @@ import org.eclipse.emf.texo.eclipse.popup.actions.GenerateCode;
 public class GenerateModelJPACode extends GenerateCode {
 
   @Override
-  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
+  protected void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles) {
     try {
       setDoJpa(true);
       ORMUtils.setORMMappingOptionsFromProjectProperties(project);
-      super.generateFromUris(monitor, project, uris);
+      super.generateFromModelFiles(monitor, project, modelFiles);
     } finally {
       setDoJpa(false);
       ORMMappingOptions.setDefaultOptions(null);

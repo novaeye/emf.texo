@@ -83,7 +83,8 @@ public class StandardORMGenerator extends ORMGenerator {
     final OrmannotationsResourceImpl ormResource = (OrmannotationsResourceImpl) new OrmannotationsResourceFactoryImpl()
         .createResource(fileUri);
     try {
-      final File file = new File(fileUri.toFileString());
+      String fileUriStr = fileUri.toFileString();
+      final File file = new File(fileUriStr);
       if (file.exists()) {
         file.delete();
       }

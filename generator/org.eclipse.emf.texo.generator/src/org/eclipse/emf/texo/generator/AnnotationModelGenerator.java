@@ -64,11 +64,17 @@ public class AnnotationModelGenerator {
     try {
       final URI uri = ePackage.eResource().getURI();
       final ResourceSet resourceSet = ePackage.eResource().getResourceSet();
-      final URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
+      URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
       final Resource resource;
-      final File file = new File(annotationsModelURI.toFileString());
-      if (file.exists()) {
-        resource = resourceSet.getResource(annotationsModelURI, true);
+      if (annotationsModelURI != null) {
+        final File file = new File(annotationsModelURI.toFileString());
+        if (file.exists()) {
+          resource = resourceSet.getResource(annotationsModelURI, true);
+        } else {
+          resource = resourceSet.createResource(annotationsModelURI);
+          final String encoding = ((XMLResource) resourceSet.getResource(uri, true)).getEncoding();
+          ((XMLResource) resource).setEncoding(encoding);
+        }
       } else {
         resource = resourceSet.createResource(annotationsModelURI);
         final String encoding = ((XMLResource) resourceSet.getResource(uri, true)).getEncoding();

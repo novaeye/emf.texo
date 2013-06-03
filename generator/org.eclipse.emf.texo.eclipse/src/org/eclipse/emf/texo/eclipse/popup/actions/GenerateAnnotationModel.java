@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EPackage;
@@ -42,9 +43,9 @@ import org.eclipse.swt.widgets.Shell;
 public class GenerateAnnotationModel extends BaseGenerateAction {
 
   @Override
-  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
-    for (URI uri : uris) {
-      generateFromURI(monitor, project, uri);
+  protected void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles) {
+    for (IFile modelFile : modelFiles) {
+      generateFromModelFile(monitor, project, modelFile);
     }
   }
 
@@ -73,31 +74,36 @@ public class GenerateAnnotationModel extends BaseGenerateAction {
     return null;
   }
 
-  protected void generateFromURI(IProgressMonitor monitor, IProject project, URI uri) {
+  protected void generateFromModelFile(IProgressMonitor monitor, IProject project, IFile modelFile) {
     ExtensionPointUtils.readAnnotationsModelsFromExtensions();
 
-    // always start with a fresh epackage registry
-    final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
-        GeneratorUtils.createEPackageRegistry(), true);
+    try {
+      // always start with a fresh epackage registry
+      final URI platformUri = new URI(modelFile.getFullPath().toString());
+      final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(platformUri),
+          GeneratorUtils.createEPackageRegistry(), true);
 
-    // get rid of the epackages which are subpackages
-    final ListIterator<EPackage> iterator = ePackages.listIterator();
-    while (iterator.hasNext()) {
-      final EPackage ePackage = iterator.next();
-      if (ePackage.eContainer() instanceof EPackage) {
-        iterator.remove();
+      // get rid of the epackages which are subpackages
+      final ListIterator<EPackage> iterator = ePackages.listIterator();
+      while (iterator.hasNext()) {
+        final EPackage ePackage = iterator.next();
+        if (ePackage.eContainer() instanceof EPackage) {
+          iterator.remove();
+        }
       }
-    }
 
-    if (ePackages.size() != 1) {
-      Shell shell = new Shell();
-      MessageDialog.openInformation(shell, Messages.getString("incorrect.number.of.epackages.message"), Messages //$NON-NLS-1$
-          .formatMessage("incorrect.number.of.epackages.message", uri.toString(), ePackages.size())); //$NON-NLS-1$
-      return;
+      if (ePackages.size() != 1) {
+        Shell shell = new Shell();
+        MessageDialog.openInformation(shell, Messages.getString("incorrect.number.of.epackages.message"), Messages //$NON-NLS-1$
+            .formatMessage("incorrect.number.of.epackages.message", platformUri.toString(), ePackages.size())); //$NON-NLS-1$
+        return;
+      }
+      final AnnotationModelGenerator generator = new AnnotationModelGenerator();
+      generator.setCreateOnlyInitialModel(doOnlyInitialModel());
+      generator.setModelAnnotators(getModelAnnotators());
+      generator.createStoreAnnotationModel(ePackages.get(0), getModelAnnotatorSuffix(), getAnnotationEPackage());
+    } catch (Exception e) {
+      throw new IllegalStateException(e);
     }
-    final AnnotationModelGenerator generator = new AnnotationModelGenerator();
-    generator.setCreateOnlyInitialModel(doOnlyInitialModel());
-    generator.setModelAnnotators(getModelAnnotators());
-    generator.createStoreAnnotationModel(ePackages.get(0), getModelAnnotatorSuffix(), getAnnotationEPackage());
   }
 }

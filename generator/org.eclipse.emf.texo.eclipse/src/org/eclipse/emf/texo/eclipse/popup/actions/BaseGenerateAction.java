@@ -17,7 +17,6 @@
 package org.eclipse.emf.texo.eclipse.popup.actions;
 
 import java.lang.reflect.InvocationTargetException;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -121,14 +120,14 @@ public abstract class BaseGenerateAction implements IObjectActionDelegate {
 
   protected void generate(IProgressMonitor monitor, IProject project, List<IFile> projectModelFiles) {
     monitor.subTask(Messages.getString("generate.Reading")); //$NON-NLS-1$
-    final List<URI> uris = new ArrayList<URI>();
+    final List<IFile> localModelFiles = new ArrayList<IFile>();
     for (final IFile modelFile : modelFiles) {
-      uris.add(URI.create(modelFile.getFullPath().toString()));
+      localModelFiles.add(modelFile);
     }
-    generateFromUris(monitor, project, uris);
+    generateFromModelFiles(monitor, project, localModelFiles);
   }
 
-  protected abstract void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris);
+  protected abstract void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles);
 
   public static void showError(Throwable e) {
 

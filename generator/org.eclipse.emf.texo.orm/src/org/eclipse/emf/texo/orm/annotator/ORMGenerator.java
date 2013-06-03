@@ -18,12 +18,14 @@
 package org.eclipse.emf.texo.orm.annotator;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.URI;
@@ -170,24 +172,27 @@ public class ORMGenerator extends BaseGenerateAction {
   }
 
   @Override
-  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<java.net.URI> uris) {
-    for (java.net.URI uri : uris) {
-      generateFromURI(monitor, project, uri);
+  protected void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles) {
+    for (IFile modelFile : modelFiles) {
+      generateFromModelFile(monitor, project, modelFile);
     }
   }
 
-  protected void generateFromURI(IProgressMonitor monitor, IProject project, java.net.URI uri) {
+  protected void generateFromModelFile(IProgressMonitor monitor, IProject project, IFile modelFile) {
 
     ORMUtils.setORMMappingOptionsFromProjectProperties(project);
 
     try {
       // always start with a fresh epackage registry
+      final java.net.URI uri = new java.net.URI(modelFile.getFullPath().toString());
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
           GeneratorUtils.createEPackageRegistry(), true);
 
-      final URI parentUri = URI.createURI(uri.toString()).trimSegments(1);
+      final URI parentUri = URI.createURI(modelFile.getLocation().toString()).trimSegments(1);
       final URI ormUri = parentUri.appendSegment(ORM_FILE_NAME);
       generateStoreORM(ePackages, ormUri);
+    } catch (Exception e) {
+      throw new IllegalStateException(e);
     } finally {
       ORMMappingOptions.setDefaultOptions(null);
     }
@@ -211,18 +216,29 @@ public class ORMGenerator extends BaseGenerateAction {
       EntityMappingsType entityMappings) {
 
     final Resource ormResource = new OrmannotationsResourceFactoryImpl().createResource(fileUri);
+    FileOutputStream fos = null;
     try {
       final File file = new File(fileUri.toFileString());
       if (file.exists()) {
         file.delete();
       }
+      file.createNewFile();
+      fos = new FileOutputStream(file);
       ormResource.getContents().clear();
       final DocumentRoot docRoot = OrmFactory.eINSTANCE.createDocumentRoot();
       docRoot.setEntityMappings(entityMappings);
       ormResource.getContents().add(docRoot);
-      ormResource.save(Collections.emptyMap());
+      ormResource.save(fos, Collections.emptyMap());
     } catch (IOException e) {
       throw new IllegalStateException(e);
+    } finally {
+      if (fos != null) {
+        try {
+          fos.close();
+        } catch (Exception ignore) {
+
+        }
+      }
     }
   }
 

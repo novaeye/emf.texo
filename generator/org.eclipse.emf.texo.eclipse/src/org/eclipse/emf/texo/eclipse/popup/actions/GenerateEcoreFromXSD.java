@@ -17,12 +17,12 @@
 package org.eclipse.emf.texo.eclipse.popup.actions;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URI;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
@@ -42,50 +42,52 @@ import org.eclipse.xsd.ecore.XSDEcoreBuilder;
 public class GenerateEcoreFromXSD extends BaseGenerateAction {
 
   @Override
-  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
+  protected void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles) {
 
-    final ResourceSet resourceSet = new ResourceSetImpl();
-    resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl()); //$NON-NLS-1$
-    resourceSet.setPackageRegistry(EPackage.Registry.INSTANCE);
+    try {
+      final ResourceSet resourceSet = new ResourceSetImpl();
+      resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl()); //$NON-NLS-1$
+      resourceSet.setPackageRegistry(EPackage.Registry.INSTANCE);
 
-    final XSDEcoreBuilder ecoreBuilder = new XSDEcoreBuilder(new BasicExtendedMetaData(EPackage.Registry.INSTANCE));
-    for (URI uri : uris) {
-      if (uri.toString().endsWith("xsd")) { //$NON-NLS-1$
-        final org.eclipse.emf.common.util.URI emfURI = org.eclipse.emf.common.util.URI.createURI(uri.toString());
-        final Collection<EObject> eObjects = ecoreBuilder.generate(emfURI);
-        final boolean multipleFiles = eObjects.size() > 1;
-        for (final EObject eObject : eObjects) {
-          final EPackage ePackage = (EPackage) eObject;
+      final XSDEcoreBuilder ecoreBuilder = new XSDEcoreBuilder(new BasicExtendedMetaData(EPackage.Registry.INSTANCE));
+      for (IFile modelFile : modelFiles) {
+        final URI uri = new URI(modelFile.getFullPath().toString());
 
-          // create the new URI
-          org.eclipse.emf.common.util.URI ecoreURI = emfURI.trimFileExtension().appendFileExtension("ecore"); //$NON-NLS-1$
-          if (multipleFiles) {
-            String strUri = ecoreURI.toString();
-            final int lastDot = strUri.lastIndexOf(".");
-            strUri = strUri.substring(0, lastDot) + "_" + ePackage.getName() + strUri.substring(lastDot);
-            ecoreURI = org.eclipse.emf.common.util.URI.createURI(strUri);
+        if (uri.toString().endsWith("xsd")) { //$NON-NLS-1$
+          final org.eclipse.emf.common.util.URI emfURI = org.eclipse.emf.common.util.URI.createURI(uri.toString());
+          final Collection<EObject> eObjects = ecoreBuilder.generate(emfURI);
+          final boolean multipleFiles = eObjects.size() > 1;
+          for (final EObject eObject : eObjects) {
+            final EPackage ePackage = (EPackage) eObject;
+
+            // create the new URI
+            org.eclipse.emf.common.util.URI ecoreURI = emfURI.trimFileExtension().appendFileExtension("ecore"); //$NON-NLS-1$
+            if (multipleFiles) {
+              String strUri = ecoreURI.toString();
+              final int lastDot = strUri.lastIndexOf(".");
+              strUri = strUri.substring(0, lastDot) + "_" + ePackage.getName() + strUri.substring(lastDot);
+              ecoreURI = org.eclipse.emf.common.util.URI.createURI(strUri);
+            }
+
+            // save the EPackage in the file
+            final Resource resource;
+            final File file = new File(ecoreURI.toFileString());
+            if (file.exists()) {
+              resource = resourceSet.getResource(ecoreURI, true);
+            } else {
+              resource = resourceSet.createResource(ecoreURI);
+            }
+            resource.getContents().clear();
+            resource.getContents().add(ePackage);
           }
 
-          // save the EPackage in the file
-          final Resource resource;
-          final File file = new File(ecoreURI.toFileString());
-          if (file.exists()) {
-            resource = resourceSet.getResource(ecoreURI, true);
-          } else {
-            resource = resourceSet.createResource(ecoreURI);
-          }
-          resource.getContents().clear();
-          resource.getContents().add(ePackage);
-        }
-
-        try {
           for (Resource resource : resourceSet.getResources()) {
             resource.save(Collections.emptyMap());
           }
-        } catch (IOException e) {
-          throw new IllegalStateException(e);
         }
       }
+    } catch (Exception e) {
+      throw new IllegalStateException(e);
     }
   }
 }

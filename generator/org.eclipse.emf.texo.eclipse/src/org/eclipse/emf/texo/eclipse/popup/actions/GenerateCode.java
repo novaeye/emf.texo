@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -52,20 +53,21 @@ public class GenerateCode extends BaseGenerateAction {
   private boolean doJpa = false;
 
   @Override
-  protected void generateFromUris(IProgressMonitor monitor, IProject project, List<URI> uris) {
+  protected void generateFromModelFiles(IProgressMonitor monitor, IProject project, List<IFile> modelFiles) {
     // generate for individual uri's to prevent name clashes in types
     // so each run uses its own package registry
-    for (URI uri : uris) {
-      generateFromUri(monitor, project, uri);
+    for (IFile modelFile : modelFiles) {
+      generateFromModelFile(monitor, project, modelFile);
     }
   }
 
-  protected void generateFromUri(IProgressMonitor monitor, IProject project, URI uri) {
+  protected void generateFromModelFile(IProgressMonitor monitor, IProject project, IFile modelFile) {
     if (isDoJpa()) {
       AnnotationManager.enableAnnotationSystem(AnnotationManager.JPA_ANNOTATION_SYSTEM_ID);
     }
     try {
       // always start with a fresh epackage registry
+      final URI uri = new URI(modelFile.getFullPath().toString());
       final List<EPackage> ePackages = GeneratorUtils.readEPackages(Collections.singletonList(uri),
           GeneratorUtils.createEPackageRegistry(), true);
 
