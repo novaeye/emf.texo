@@ -92,7 +92,8 @@ public class AnnotationModelGenerator {
       }
       resource.save(Collections.emptyMap());
     } catch (Exception e) {
-      throw new IllegalStateException(e);
+      throw new IllegalStateException("Exception for modelFile: " + modelFile.getFullPath().toString() + " epackage " //$NON-NLS-1$ //$NON-NLS-2$
+          + ePackage.getName() + " epackage uri : " + ePackage.eResource().getURI(), e); //$NON-NLS-1$
     }
   }
 
