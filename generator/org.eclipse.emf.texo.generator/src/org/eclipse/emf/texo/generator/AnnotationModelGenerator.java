@@ -63,18 +63,16 @@ public class AnnotationModelGenerator {
 
   public void createStoreAnnotationModel(EPackage ePackage, String suffix, EPackage annotationEPackage, IFile modelFile) {
     try {
-      final URI uri = ePackage.eResource().getURI();
       final ResourceSet resourceSet = ePackage.eResource().getResourceSet();
-      URI annotationsModelURI = AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(uri, suffix);
-      final Resource resource;
-      final URI fileUri = URI.createURI(modelFile.getParent().getLocation().toOSString());
+      final URI fileUri = URI.createURI(modelFile.getLocation().toOSString());
       final File file = new File(AnnotationModelSuffixHandler.createAnnotationsModelURIWithSuffix(fileUri, suffix)
           .toFileString());
+      final Resource resource;
       if (file.exists()) {
-        resource = resourceSet.getResource(annotationsModelURI, true);
+        resource = resourceSet.getResource(fileUri, true);
       } else {
-        resource = resourceSet.createResource(annotationsModelURI);
-        final String encoding = ((XMLResource) resourceSet.getResource(uri, true)).getEncoding();
+        resource = resourceSet.createResource(fileUri);
+        final String encoding = ((XMLResource) ePackage.eResource()).getEncoding();
         ((XMLResource) resource).setEncoding(encoding);
       }
 
